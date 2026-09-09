@@ -1,0 +1,8 @@
+{
+  "selected_label": "multiplicative_narrow_gelu_s17_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 0.8959097663561503,
+    "0.003": 0.9236330290635427
+  }
+}

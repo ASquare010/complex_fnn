@@ -1,0 +1,8 @@
+{
+  "selected_label": "piecewise_narrow_swiglu_s17_lr3000",
+  "selected_rate": 0.003,
+  "selection_mse_by_rate": {
+    "0.001": 0.7765301167964935,
+    "0.003": 0.694696972767512
+  }
+}

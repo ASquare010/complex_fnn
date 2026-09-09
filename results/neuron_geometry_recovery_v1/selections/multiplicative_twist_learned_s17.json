@@ -1,0 +1,8 @@
+{
+  "selected_label": "multiplicative_twist_learned_s17_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 0.8885551244020462,
+    "0.003": 0.9338996907075247
+  }
+}

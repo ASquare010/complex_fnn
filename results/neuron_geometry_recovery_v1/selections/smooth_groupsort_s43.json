@@ -1,0 +1,8 @@
+{
+  "selected_label": "smooth_groupsort_s43_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 0.5599534784754118,
+    "0.003": 0.5973165407776833
+  }
+}

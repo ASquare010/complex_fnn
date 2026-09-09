@@ -55,3 +55,7 @@ wheels/
 
 # Known damaged H079 payload: keep its inventory hash and failure report, not invalid JSON.
 /results/blast_operator_v1/result.json
+
+# H090: retain PNG figures publicly; identical vector exports remain local.
+/results/neuron_geometry_recovery_v1/plots/*.svg
+!/results/neuron_geometry_recovery_v1/qualification_preservation.json

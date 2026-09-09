@@ -5,6 +5,29 @@ The latest completed longer-budget language experiment is matched-budget BlockSh
 2,801,664 FFN / 9,099,648 total weights: 70.3125% FFN and 42.1700% total reduction.
 This fixed duration recipe is closed. Further training needs a distinct, justified hypothesis.
 
+## Latest completed geometry study (H088?H090)
+
+**All four learned geometry recipes are rejected at the fixed fitting budget.**
+The two pair-twist initializations finish 0.715% and 1.298% above narrow GELU in
+aggregate held-out MSE. Bezier1P and four-group Bump2P finish 6.676% and 6.460%
+above it. Pairwise coupling is mathematically valid but does not earn practical
+promotion: native updates are about 2.25 times slower than narrow GELU.
+
+The fresh grid completes 336 runs: four synthetic task families, three seeds,
+two rates, 600 updates and batch 256. It takes 13.29 minutes including data,
+checkpoint and plotting work. All 27 recovery qualification checks pass, and an
+independent audit exactly reproduces all 336 selection and 336 reporting scores.
+The original BF16 failure remains preserved; the explicit precision correction
+changes BF16 rounding without changing the planned FP32 fitting arithmetic.
+
+Learned curves move away from initialization, but they do not replace the
+removed width successfully. The four-shift GELU control lowers aggregate MSE by
+3.227% versus narrow GELU while remaining 11.18% worse than full GELU. Keep it as
+a comparator, not a promoted new architecture. No new active model folder is added.
+[Results and curves](neuron_geometry_results.md),
+[precision failure/recovery](neuron_geometry_precision_results.md),
+[independent audit](../results/neuron_geometry_audit_v1/result.json).
+
 ## Current direction and retirement (September10)
 
 H087 archives native rational BlockShuffle after repeated memory failures.
@@ -16,8 +39,8 @@ H086 passes16 native sparse-operator checks, but the first accelerated inference
 case stops with CUTLASS unsupported. It has no earned training allocation.
 [Complete partial-result report](compact_sparse_operator_results.md).
 
-The next mechanism under investigation couples feature pairs with a bounded,
-input-dependent rational rotation. It is a hypothesis, not a trained winner.
+The coupled feature-pair mechanism was tested in H090 and its fixed recipes
+are now closed after failing the promotion gates.
 See [direction, equations and prior work](research_direction_2026_09_10.md).
 The historical source-preservation and108-test statements below describe their
 original rounds; H087 intentionally changes the active tree and records a source

@@ -1,0 +1,8 @@
+{
+  "selected_label": "smooth_narrow_gelu_s29_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 0.5349512274066607,
+    "0.003": 0.5823662132024765
+  }
+}

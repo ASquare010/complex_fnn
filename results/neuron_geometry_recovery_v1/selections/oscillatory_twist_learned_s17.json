@@ -1,0 +1,8 @@
+{
+  "selected_label": "oscillatory_twist_learned_s17_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 1.0160148789485295,
+    "0.003": 1.0259838302930195
+  }
+}

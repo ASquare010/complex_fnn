@@ -1,0 +1,8 @@
+{
+  "selected_label": "multiplicative_twist_identity_s17_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 0.8850065867106119,
+    "0.003": 0.9339930216471354
+  }
+}

@@ -1073,3 +1073,25 @@ frozen old receipts must be reproduced against recorded source snapshots.
 The next proposed mechanism is a coupled feature-pair activation using a bounded
 rational rotation. No learning claim or novelty conclusion is established.
 [Equations, potential failure modes and prior work](research_direction_2026_09_10.md).
+
+## H088?H090 - Coupled pairs and shared local curves (CLOSED AT THIS BUDGET)
+
+H088 fails its first BF16 independent-gradient qualification after 21 CPU checks;
+zero fitting updates occur. H089's 32-evaluation diagnostic identifies the
+residual-rounding boundary. H090 makes one explicit FP32-region recovery,
+retains tolerances, passes all 27 checks and preserves H088's evidence.
+
+The unchanged fresh FP32 grid completes 336 runs, 600 updates each, batch 256,
+four analytic tasks, three seeds and two rates. Independent audit reproduces
+all 672 scores exactly and verifies every selection, initialization and summary.
+Learned/identity-start pair twists finish +1.298%/+0.715% MSE versus narrow
+GELU; Bezier1P/grouped Bump2P finish +6.676%/+6.460%. All four fail the quality
+and task-regression gates. Their fixed recipes are rejected, with no automatic
+longer run, language allocation or new active model folder.
+
+The learned twists beat fixed twist but take about 2.25 times narrow GELU's
+native update time. A simple four-shift GELU control wins this small-model
+comparison (-3.227% versus narrow GELU) while still losing to full GELU by
+11.18%; retain it as a control. Learnable geometry is not demonstrated to
+replace width. [Full result](neuron_geometry_results.md),
+[precision investigation](neuron_geometry_precision_results.md).

@@ -1,0 +1,8 @@
+{
+  "selected_label": "piecewise_twist_identity_s29_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 0.4990435093641281,
+    "0.003": 0.5418541803956032
+  }
+}

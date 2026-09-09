@@ -1,0 +1,8 @@
+{
+  "selected_label": "oscillatory_bump_2p_s43_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 1.0120126157999039,
+    "0.003": 1.0172678083181381
+  }
+}

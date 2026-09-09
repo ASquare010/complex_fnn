@@ -1,0 +1,15 @@
+{
+  "sha256": "a6a478797d54d040933c5cf1a11e3c43500aafd9ab781a852732dde7c9e40e06",
+  "input_seed": 9814,
+  "train_rows": 65536,
+  "selection_rows": 4096,
+  "reporting_rows": 4096,
+  "width": 384,
+  "batch": 256,
+  "steps": 600,
+  "streams": {
+    "17": "43f073ce28031829e4e858799c7b59008c4dbd6cddf35c759a76bcf649349404",
+    "29": "5640bc2df9007943481aab84a066750943a1137bc1b7112c2e3eccafda190cec",
+    "43": "82c0bae25dab7baebb10124409c5bec21c70ca1fd94f32acd263b1a8e35c6b86"
+  }
+}

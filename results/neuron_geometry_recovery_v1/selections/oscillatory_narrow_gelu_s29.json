@@ -1,0 +1,8 @@
+{
+  "selected_label": "oscillatory_narrow_gelu_s29_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 1.0084881484508514,
+    "0.003": 1.0172507266203563
+  }
+}

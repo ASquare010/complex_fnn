@@ -1,0 +1,6105 @@
+{
+  "description": "All selected learned/fixed shape trajectories; derived from audited histories.",
+  "audit_sha256": "3cb67858ff07126cf57ac91cd76c841d41fb6515d3dc510e2c056f7c38bcf4a1",
+  "training_result_sha256": "d1c6a41557091c47da97e7636c7abd606e4ef3181c731761e574346e414db4b1",
+  "export_source_sha256": "1bcf85ca58ab9f6e211bcd29e04d3bd7b43c1cd8f554ea582f0b46d1a73d083a",
+  "new_optimizer_updates": 0,
+  "rows": [
+    {
+      "label": "smooth_gelu_offset_s17_lr1000",
+      "reporting_mse": 0.46748199065526325,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.04065229743719101,
+              -0.03465692326426506,
+              -0.04137952998280525,
+              -0.03950200229883194
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0943140909075737,
+              0.09974116832017899,
+              0.09351883828639984,
+              0.09474653750658035
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.3631748557090759,
+              0.370128870010376,
+              0.362907737493515,
+              0.3606468737125397
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.66803377866745,
+              0.6774075031280518,
+              0.6652948260307312,
+              0.6669155359268188
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 3.252270460128784,
+      "raw_training_sha256": "4feb8c9b2ea3abd2fd16c5be452408c925a9ab5afdd69ea5e0b53d651fd135ab"
+    },
+    {
+      "label": "smooth_twist_fixed_s17_lr1000",
+      "reporting_mse": 0.4807884593804677,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 2.9035027027130127,
+      "raw_training_sha256": "17a64ddf5c1482791accba3f5d26c21d07632bfa223883ed445e6468e6ea8746"
+    },
+    {
+      "label": "smooth_twist_learned_s17_lr1000",
+      "reporting_mse": 0.466347170372804,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.960944414138794,
+              0.9557886123657227,
+              0.9592986702919006,
+              0.9576545357704163
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.8650641441345215,
+              0.8536999225616455,
+              0.8644770383834839,
+              0.8589786291122437
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.6781507730484009,
+              0.656182050704956,
+              0.6775252223014832,
+              0.6704390645027161
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.36121049523353577,
+              0.33128243684768677,
+              0.3621080815792084,
+              0.3485246002674103
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 2.9595110416412354,
+      "raw_training_sha256": "50930e6824cfc68cfa4f607a8abb12297cb4d41fa3c2bec8291d027318930fa1"
+    },
+    {
+      "label": "smooth_twist_identity_s17_lr1000",
+      "reporting_mse": 0.4643116444349289,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.10289347916841507,
+              -0.10012434422969818,
+              0.09790848940610886,
+              0.10143879055976868
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.13151490688323975,
+              -0.1298609972000122,
+              0.12821005284786224,
+              0.13126374781131744
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.14488033950328827,
+              -0.14421693980693817,
+              0.14258110523223877,
+              0.14611878991127014
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.15898600220680237,
+              -0.1584855020046234,
+              0.15789207816123962,
+              0.15992911159992218
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 10.220772743225098,
+      "raw_training_sha256": "6cf4de58a7734f261ade83b4a85529ab8c9d7b8fa06620cb577110b956d0c445"
+    },
+    {
+      "label": "smooth_bezier_1p_s17_lr1000",
+      "reporting_mse": 0.5530509750048319,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.013319524005055428
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.07080858200788498
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.21614553034305573
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.47259172797203064
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.2346136569976807,
+      "raw_training_sha256": "8b2dc30ac3d68302cec49f4ba219280afdffecab9725a05f05bc0fb1b7744f0b"
+    },
+    {
+      "label": "smooth_bump_2p_s17_lr1000",
+      "reporting_mse": 0.5593782862027487,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.027980990707874298,
+                -0.08383358269929886
+              ],
+              [
+                -0.023892812430858612,
+                -0.08302590250968933
+              ],
+              [
+                -0.029835006222128868,
+                -0.08313508331775665
+              ],
+              [
+                -0.027650343254208565,
+                -0.08238136023283005
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.14002402126789093,
+                -0.2779613733291626
+              ],
+              [
+                0.14334069192409515,
+                -0.27622100710868835
+              ],
+              [
+                0.13829226791858673,
+                -0.2772662341594696
+              ],
+              [
+                0.13956806063652039,
+                -0.2765537202358246
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.431622177362442,
+                -0.5643242597579956
+              ],
+              [
+                0.4350871443748474,
+                -0.5623680353164673
+              ],
+              [
+                0.4298867881298065,
+                -0.5644490122795105
+              ],
+              [
+                0.43104061484336853,
+                -0.5634943842887878
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.9467131495475769,
+                -1.056123971939087
+              ],
+              [
+                0.95018070936203,
+                -1.054200291633606
+              ],
+              [
+                0.9457430243492126,
+                -1.0559625625610352
+              ],
+              [
+                0.9459973573684692,
+                -1.0551942586898804
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.2335057258605957,
+      "raw_training_sha256": "2992f3f04481023e34b2514e478f145134e08c7b7e450782778c7c58f638b941"
+    },
+    {
+      "label": "smooth_gelu_offset_s29_lr1000",
+      "reporting_mse": 0.46652265389760333,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.040591150522232056,
+              -0.039195284247398376,
+              -0.039564941078424454,
+              -0.039111167192459106
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.09499596804380417,
+              0.09589607268571854,
+              0.09589880704879761,
+              0.09634089469909668
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.3666515052318573,
+              0.3651590645313263,
+              0.36442995071411133,
+              0.36867809295654297
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.677737832069397,
+              0.6677901744842529,
+              0.6755373477935791,
+              0.676893413066864
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 3.3083608150482178,
+      "raw_training_sha256": "6883dea524fcb1d92ecb55b1620cca2f6f39205338a604167445fbe40a346719"
+    },
+    {
+      "label": "smooth_twist_fixed_s29_lr1000",
+      "reporting_mse": 0.48071548342704773,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 3.1241235733032227,
+      "raw_training_sha256": "3921aa4e8f275e400d6272cdd4b5bc2850c9e046d413803a8a07b7bb3a205a5b"
+    },
+    {
+      "label": "smooth_twist_learned_s29_lr1000",
+      "reporting_mse": 0.4661434416969617,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9580836296081543,
+              0.9595010876655579,
+              0.9600955247879028,
+              0.9597151875495911
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.8603203296661377,
+              0.8643242120742798,
+              0.8615888357162476,
+              0.8633765578269958
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.6674658060073853,
+              0.667756974697113,
+              0.6681357622146606,
+              0.6777344346046448
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.3511304259300232,
+              0.35028374195098877,
+              0.33521997928619385,
+              0.3544643223285675
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 3.2592906951904297,
+      "raw_training_sha256": "c4bcce9be744c7d3785b1aa128b758b7ff954fe2e38f008a911e62dd92d59a62"
+    },
+    {
+      "label": "smooth_twist_identity_s29_lr1000",
+      "reporting_mse": 0.463449127972126,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.09599196910858154,
+              0.10080575942993164,
+              -0.09965020418167114,
+              -0.0936102643609047
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.12966932356357574,
+              0.13633745908737183,
+              -0.1358364224433899,
+              -0.1263878047466278
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.13862617313861847,
+              0.14946450293064117,
+              -0.149800106883049,
+              -0.13411560654640198
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.14962293207645416,
+              0.16799886524677277,
+              -0.17066408693790436,
+              -0.14484721422195435
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 10.039111137390137,
+      "raw_training_sha256": "d0e6da9063e82a92dd3ea9fbb15c985d1c7c2319bbe4cde51946a33485c0f930"
+    },
+    {
+      "label": "smooth_bezier_1p_s29_lr1000",
+      "reporting_mse": 0.5524587705731392,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.013915695250034332
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.06927511841058731
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.21484652161598206
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.4716310203075409
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.2574260234832764,
+      "raw_training_sha256": "d154e4d951f979a19f13186117fdf393e6c493c303339c19362117c996626d79"
+    },
+    {
+      "label": "smooth_bump_2p_s29_lr1000",
+      "reporting_mse": 0.5589327290654182,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.029399454593658447,
+                -0.08057188242673874
+              ],
+              [
+                -0.028135815635323524,
+                -0.08029492944478989
+              ],
+              [
+                -0.028740152716636658,
+                -0.0790412500500679
+              ],
+              [
+                -0.02786163240671158,
+                -0.08538714051246643
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.13709527254104614,
+                -0.27527135610580444
+              ],
+              [
+                0.13708336651325226,
+                -0.2737882435321808
+              ],
+              [
+                0.13686446845531464,
+                -0.27436211705207825
+              ],
+              [
+                0.1376277357339859,
+                -0.2799118161201477
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.4289763271808624,
+                -0.5624538660049438
+              ],
+              [
+                0.42941856384277344,
+                -0.5606073141098022
+              ],
+              [
+                0.4288009703159332,
+                -0.5611451864242554
+              ],
+              [
+                0.42965197563171387,
+                -0.5665810108184814
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.9452292919158936,
+                -1.0539332628250122
+              ],
+              [
+                0.944947361946106,
+                -1.0531734228134155
+              ],
+              [
+                0.9452122449874878,
+                -1.0534117221832275
+              ],
+              [
+                0.9456965923309326,
+                -1.0573886632919312
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.2557661533355713,
+      "raw_training_sha256": "788831f0fc84f581d4104a35d4b4bc8bf22dd2345e4e8c07a47f87411f42b355"
+    },
+    {
+      "label": "smooth_gelu_offset_s43_lr1000",
+      "reporting_mse": 0.4683115482330322,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.03736678138375282,
+              -0.03964218497276306,
+              -0.03882531821727753,
+              -0.0386824868619442
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.09643238037824631,
+              0.09604359418153763,
+              0.09730582684278488,
+              0.09591706097126007
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.36837732791900635,
+              0.3694022297859192,
+              0.3684719204902649,
+              0.36840835213661194
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.6762770414352417,
+              0.6839392781257629,
+              0.6745172142982483,
+              0.6806852221488953
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 3.4502182006835938,
+      "raw_training_sha256": "9b7441bc1e09d6f656699de35effdf643ec3aa263c9eef2611b2be4e4ee2e850"
+    },
+    {
+      "label": "smooth_twist_fixed_s43_lr1000",
+      "reporting_mse": 0.4817163770397504,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 3.0696959495544434,
+      "raw_training_sha256": "39648684a2ff3932331ccd51865e4d671206e3d6ac067c9ed955d7b087b8d929"
+    },
+    {
+      "label": "smooth_twist_learned_s43_lr1000",
+      "reporting_mse": 0.4659966503580411,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9566031694412231,
+              0.9564143419265747,
+              0.9568845629692078,
+              0.9569467902183533
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.8606454730033875,
+              0.8581753373146057,
+              0.859700620174408,
+              0.8616745471954346
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.6585817337036133,
+              0.6584265232086182,
+              0.6566720008850098,
+              0.6642604470252991
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.3317052125930786,
+              0.3308064043521881,
+              0.3260900378227234,
+              0.34501883387565613
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 3.151317596435547,
+      "raw_training_sha256": "c0105806ae516e94ebf6dd59d420ed7bff2b7d7b841a759815c19b3b265dcde6"
+    },
+    {
+      "label": "smooth_twist_identity_s43_lr1000",
+      "reporting_mse": 0.4635429804523786,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.0967378243803978,
+              -0.10122762620449066,
+              0.09517288208007812,
+              -0.10040385276079178
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.1296292245388031,
+              -0.1344527304172516,
+              0.12441593408584595,
+              -0.13345015048980713
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.14408303797245026,
+              -0.14783091843128204,
+              0.1332462728023529,
+              -0.148307204246521
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.16050536930561066,
+              -0.16309678554534912,
+              0.14408449828624725,
+              -0.16666819155216217
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 10.200504302978516,
+      "raw_training_sha256": "c4d67181e8a0af4989c76d6d84e2a5767c6e3d14395fa94d36b240769af69968"
+    },
+    {
+      "label": "smooth_bezier_1p_s43_lr1000",
+      "reporting_mse": 0.553188237051169,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.012816798873245716
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.07104989886283875
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.2164720892906189
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.4728797972202301
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.238694190979004,
+      "raw_training_sha256": "1813e70de6520e1de4fb2c2692f085aca55001f13b7bc8c7a9df1650d6dbd41d"
+    },
+    {
+      "label": "smooth_bump_2p_s43_lr1000",
+      "reporting_mse": 0.5591092382868131,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.025338439270853996,
+                -0.08358483761548996
+              ],
+              [
+                -0.026701493188738823,
+                -0.08528171479701996
+              ],
+              [
+                -0.026555776596069336,
+                -0.0825888141989708
+              ],
+              [
+                -0.02659984491765499,
+                -0.08231638371944427
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.1412743628025055,
+                -0.27771511673927307
+              ],
+              [
+                0.1414577066898346,
+                -0.2803664803504944
+              ],
+              [
+                0.14140275120735168,
+                -0.27767860889434814
+              ],
+              [
+                0.13928493857383728,
+                -0.27646681666374207
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.4328983724117279,
+                -0.5642221570014954
+              ],
+              [
+                0.4334956109523773,
+                -0.5666019320487976
+              ],
+              [
+                0.4328939616680145,
+                -0.5639461874961853
+              ],
+              [
+                0.4310164451599121,
+                -0.5636166334152222
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.9488459229469299,
+                -1.0557721853256226
+              ],
+              [
+                0.9488767385482788,
+                -1.057276725769043
+              ],
+              [
+                0.9474939703941345,
+                -1.0556997060775757
+              ],
+              [
+                0.9465605616569519,
+                -1.0541863441467285
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.2379285097122192,
+      "raw_training_sha256": "cf126446f95bf748e74fd8e311decedd6fe7ee5a15ef7ed2e93fca4d311796ba"
+    },
+    {
+      "label": "oscillatory_gelu_offset_s17_lr1000",
+      "reporting_mse": 1.0171082119146984,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.07474371045827866,
+              -0.07437252998352051,
+              -0.07431516796350479,
+              -0.07456231862306595
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.21721065044403076,
+              -0.21704044938087463,
+              -0.21692967414855957,
+              -0.21643592417240143
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.4678686261177063,
+              -0.4685578942298889,
+              -0.4690564274787903,
+              -0.46849289536476135
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.6464674472808838,
+              -0.6544281244277954,
+              -0.6523337364196777,
+              -0.6456440091133118
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.7217407822608948,
+      "raw_training_sha256": "4f4d2890b870d5e5b961a8ae9eb6b5193d427890d992d580fe868fc43f7e5b59"
+    },
+    {
+      "label": "oscillatory_twist_fixed_s17_lr1000",
+      "reporting_mse": 1.0290007591247559,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.6010279655456543,
+      "raw_training_sha256": "12d844caa5bb123ceabd9f85722c1b815a3f2652ef7c259bf7911f8d964cf240"
+    },
+    {
+      "label": "oscillatory_twist_learned_s17_lr1000",
+      "reporting_mse": 1.0181377778450649,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9551109075546265,
+              0.9521355628967285,
+              0.9535140991210938,
+              0.9525896310806274
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.8370915055274963,
+              0.8336500525474548,
+              0.8333285450935364,
+              0.8351215124130249
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.5925628542900085,
+              0.5880273580551147,
+              0.5855725407600403,
+              0.5892873406410217
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.07540151476860046,
+              0.06953927874565125,
+              0.06905008107423782,
+              0.07137861102819443
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.7118474245071411,
+      "raw_training_sha256": "7f78a91ac8ff2b2aacc87e822e8d73cbc307c58996bc346f6c94bfe978488139"
+    },
+    {
+      "label": "oscillatory_twist_identity_s17_lr1000",
+      "reporting_mse": 1.012892911831538,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0019262965070083737,
+              0.0010441314661875367,
+              -0.0044297948479652405,
+              4.922210064250976e-05
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.0025252962950617075,
+              -0.0021406514570116997,
+              -0.001718084211461246,
+              0.0038493957836180925
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              5.1539962441893294e-05,
+              -0.0013849633978679776,
+              -0.005910125561058521,
+              0.0013596023200079799
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.0037641539238393307,
+              0.0007049681153148413,
+              -0.007215461693704128,
+              -0.006017106119543314
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.3553479015827179,
+      "raw_training_sha256": "55661ef402c800f2d3e5f3048692abb70514beed52463e693f8b2bd4f3c9326c"
+    },
+    {
+      "label": "oscillatory_bezier_1p_s17_lr1000",
+      "reporting_mse": 1.0139974405368168,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.030304541811347008
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.1006198525428772
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.24911664426326752
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.5029672384262085
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.38535547256469727,
+      "raw_training_sha256": "8daca1b63a6835d9d37c5fcdaeae2f26c684c0e44361e062d871c7e275f7ae08"
+    },
+    {
+      "label": "oscillatory_bump_2p_s17_lr1000",
+      "reporting_mse": 1.0152954757213593,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.06266582012176514,
+                -0.09268321841955185
+              ],
+              [
+                -0.061223726719617844,
+                -0.09182857722043991
+              ],
+              [
+                -0.0631336122751236,
+                -0.09201770275831223
+              ],
+              [
+                -0.06341864913702011,
+                -0.09193278104066849
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.2033580243587494,
+                -0.25297603011131287
+              ],
+              [
+                -0.2016228586435318,
+                -0.2519245147705078
+              ],
+              [
+                -0.20563861727714539,
+                -0.2513180375099182
+              ],
+              [
+                -0.20335888862609863,
+                -0.2529435455799103
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.493761271238327,
+                -0.4790835976600647
+              ],
+              [
+                -0.4944581091403961,
+                -0.48188939690589905
+              ],
+              [
+                -0.4972541332244873,
+                -0.47420427203178406
+              ],
+              [
+                -0.49601396918296814,
+                -0.4840478301048279
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.9990531802177429,
+                -0.2092020958662033
+              ],
+              [
+                -0.9995740652084351,
+                -0.2805476188659668
+              ],
+              [
+                -1.0017268657684326,
+                -0.25289061665534973
+              ],
+              [
+                -1.0007236003875732,
+                -0.27427616715431213
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.3819963335990906,
+      "raw_training_sha256": "a2ead56dd405c919a96c7990ec1d894f902cf63a982074e3bae1932273688a47"
+    },
+    {
+      "label": "oscillatory_gelu_offset_s29_lr1000",
+      "reporting_mse": 1.0162602762381236,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.0747026726603508,
+              -0.07446854561567307,
+              -0.074278824031353,
+              -0.07483717799186707
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.21611595153808594,
+              -0.21624304354190826,
+              -0.21610401570796967,
+              -0.21648210287094116
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.4657894968986511,
+              -0.4671667814254761,
+              -0.46923455595970154,
+              -0.46951279044151306
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.6503790616989136,
+              -0.6527475118637085,
+              -0.6566701531410217,
+              -0.6550645232200623
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.7397626042366028,
+      "raw_training_sha256": "03704866eecefc6555521b5cf8ce45e01c4cda82d0058eaa74e7feebd2f80859"
+    },
+    {
+      "label": "oscillatory_twist_fixed_s29_lr1000",
+      "reporting_mse": 1.0335597495237987,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.7401682138442993,
+      "raw_training_sha256": "138acc62785d3ddd563af517ef166b96f89ad1283d51af2a77823f7385172d86"
+    },
+    {
+      "label": "oscillatory_twist_learned_s29_lr1000",
+      "reporting_mse": 1.0181575119495392,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9535977840423584,
+              0.9529705047607422,
+              0.9531230926513672,
+              0.9547220468521118
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.8372547626495361,
+              0.8351106643676758,
+              0.8336287140846252,
+              0.8382094502449036
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.5941497087478638,
+              0.5912119150161743,
+              0.587581992149353,
+              0.5929964184761047
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.06915542483329773,
+              0.06905867904424667,
+              0.06675659120082855,
+              0.07292380183935165
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.9057921171188354,
+      "raw_training_sha256": "4bea4ac69e4b3b8a925d6fa05ea403b50620ad9a95636b4eff3691bbdc5fd59b"
+    },
+    {
+      "label": "oscillatory_twist_identity_s29_lr1000",
+      "reporting_mse": 1.0125729938348134,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.0010375697165727615,
+              0.0034503305796533823,
+              0.004907981958240271,
+              0.0015681423246860504
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.0006432997761294246,
+              0.006078521255403757,
+              0.002447265200316906,
+              -0.0029682975728064775
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.0018124721245840192,
+              0.002320408122614026,
+              -0.004534585401415825,
+              -0.010205114260315895
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.009198588319122791,
+              -0.0050883046351373196,
+              0.002486554207280278,
+              -0.002062579384073615
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.35307949781417847,
+      "raw_training_sha256": "eea9ac418c13198a56c6d7f561b45417accca3739014882cff87772a592a1521"
+    },
+    {
+      "label": "oscillatory_bezier_1p_s29_lr1000",
+      "reporting_mse": 1.01315771540006,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.030475342646241188
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.10165216028690338
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.24970649182796478
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.5039302110671997
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.39307376742362976,
+      "raw_training_sha256": "3744a651cdb48eda5872e7159567ceafe1e1cf6b58a5bafb9d90d0dd75f22bff"
+    },
+    {
+      "label": "oscillatory_bump_2p_s29_lr1000",
+      "reporting_mse": 1.0146458943684895,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.06266545504331589,
+                -0.09199978411197662
+              ],
+              [
+                -0.061860524117946625,
+                -0.09196887910366058
+              ],
+              [
+                -0.06264422833919525,
+                -0.09301988780498505
+              ],
+              [
+                -0.06338097900152206,
+                -0.09264864027500153
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.19800645112991333,
+                -0.25018611550331116
+              ],
+              [
+                -0.20483426749706268,
+                -0.251333624124527
+              ],
+              [
+                -0.20526538789272308,
+                -0.25348353385925293
+              ],
+              [
+                -0.20776984095573425,
+                -0.25056102871894836
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.4894382059574127,
+                -0.4803523123264313
+              ],
+              [
+                -0.4960806369781494,
+                -0.4784533977508545
+              ],
+              [
+                -0.49688565731048584,
+                -0.4797595143318176
+              ],
+              [
+                -0.4985702633857727,
+                -0.47940829396247864
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.9964984655380249,
+                -0.21492592990398407
+              ],
+              [
+                -1.002248764038086,
+                -0.23486962914466858
+              ],
+              [
+                -1.002236008644104,
+                -0.24569308757781982
+              ],
+              [
+                -1.003635048866272,
+                -0.21543949842453003
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.3894924521446228,
+      "raw_training_sha256": "00ea3b459859f5363c407fa23a8e0bff48aeca32ad709f4c3d4b62e18894ff69"
+    },
+    {
+      "label": "oscillatory_gelu_offset_s43_lr1000",
+      "reporting_mse": 1.0164723694324493,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.07424808293581009,
+              -0.074068084359169,
+              -0.07422664016485214,
+              -0.07461431622505188
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.21641726791858673,
+              -0.2166447937488556,
+              -0.2161913365125656,
+              -0.21787385642528534
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.470416396856308,
+              -0.4694015383720398,
+              -0.4689984917640686,
+              -0.4708041548728943
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.6480045914649963,
+              -0.6448661684989929,
+              -0.6522302031517029,
+              -0.6590366959571838
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.7190186381340027,
+      "raw_training_sha256": "f3e11e936842c014fcd1d7c2b0d0292f18f4f5b98cc935e985377ee673168b35"
+    },
+    {
+      "label": "oscillatory_twist_fixed_s43_lr1000",
+      "reporting_mse": 1.0313111941019695,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.6804977655410767,
+      "raw_training_sha256": "a256e50959889eb2ebba02e14af87e2752aed128da26e3d42c728e1442a6b125"
+    },
+    {
+      "label": "oscillatory_twist_learned_s43_lr1000",
+      "reporting_mse": 1.0180033097664516,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9528278112411499,
+              0.9545210003852844,
+              0.9518443942070007,
+              0.9529745578765869
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.835271954536438,
+              0.8427272439002991,
+              0.8358890414237976,
+              0.836772084236145
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.5948981642723083,
+              0.5981070399284363,
+              0.592079222202301,
+              0.6009299159049988
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.07273101061582565,
+              0.0731905922293663,
+              0.06993936002254486,
+              0.07737307250499725
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.81764554977417,
+      "raw_training_sha256": "f97dcb283d5192ecf6079480b0b20da4d9603b54c488e430f347324290a09934"
+    },
+    {
+      "label": "oscillatory_twist_identity_s43_lr1000",
+      "reporting_mse": 1.012376457452774,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0015659857308492064,
+              -0.0037677853833884,
+              -0.0007844520732760429,
+              0.002659374848008156
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0013883974170312285,
+              -0.0022305718157440424,
+              -0.0009905921760946512,
+              0.0011480379616841674
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.00361585128121078,
+              0.002374727977439761,
+              0.004933970980346203,
+              0.0034156993497163057
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.007215404883027077,
+              -0.0006760118994861841,
+              -0.0076298643834888935,
+              0.008966946043074131
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.36015596985816956,
+      "raw_training_sha256": "1498d453942e37bb0c7bc4806e846c89a507aa7af86d09addfbaa04a4ace5406"
+    },
+    {
+      "label": "oscillatory_bezier_1p_s43_lr1000",
+      "reporting_mse": 1.0129050314426422,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.03018851764500141
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.10238521546125412
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.2509262263774872
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.504941999912262
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.3844403028488159,
+      "raw_training_sha256": "e058efac64abf1b143fb002709024180d6ee7a1f86575dc1bdf4751c51c03427"
+    },
+    {
+      "label": "oscillatory_bump_2p_s43_lr1000",
+      "reporting_mse": 1.0141658137242,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.06163853779435158,
+                -0.09164859354496002
+              ],
+              [
+                -0.06130553036928177,
+                -0.09190433472394943
+              ],
+              [
+                -0.06298410892486572,
+                -0.09222767502069473
+              ],
+              [
+                -0.06252879649400711,
+                -0.09197439253330231
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.20640049874782562,
+                -0.2493719458580017
+              ],
+              [
+                -0.20494583249092102,
+                -0.25206995010375977
+              ],
+              [
+                -0.2044740468263626,
+                -0.25278326869010925
+              ],
+              [
+                -0.2051026076078415,
+                -0.2528485953807831
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.500352680683136,
+                -0.47848600149154663
+              ],
+              [
+                -0.49673181772232056,
+                -0.48568621277809143
+              ],
+              [
+                -0.4972957372665405,
+                -0.47695791721343994
+              ],
+              [
+                -0.4958997964859009,
+                -0.4748047888278961
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -1.0052058696746826,
+                -0.2597443163394928
+              ],
+              [
+                -1.0035494565963745,
+                -0.28859448432922363
+              ],
+              [
+                -1.001590609550476,
+                -0.2739625871181488
+              ],
+              [
+                -1.0015438795089722,
+                -0.22698181867599487
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.3814902901649475,
+      "raw_training_sha256": "d704edb636cbb65d70bd221bf42a7c67c296b5848e7b355a8797e5f77d44b123"
+    },
+    {
+      "label": "multiplicative_gelu_offset_s17_lr1000",
+      "reporting_mse": 0.9025354931751887,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.06393728405237198,
+              -0.06317786127328873,
+              -0.06386135518550873,
+              -0.06401525437831879
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.03120708093047142,
+              -0.030340921133756638,
+              -0.033324290066957474,
+              -0.029175812378525734
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.06585627049207687,
+              0.07034295052289963,
+              0.0637197196483612,
+              0.06740667670965195
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.04603290930390358,
+              0.05241033062338829,
+              0.047848429530858994,
+              0.046980030834674835
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.7222099900245667,
+      "raw_training_sha256": "d034696eeff0fc6f44eeb992256ebbd66cdeed9a6bf389d58b94bd7a658feb27"
+    },
+    {
+      "label": "multiplicative_twist_fixed_s17_lr1000",
+      "reporting_mse": 0.9076273888349533,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.6026158332824707,
+      "raw_training_sha256": "87880dcbdad0abb63f6920592919742aeeed349508fffb2c57df3bf31693ec96"
+    },
+    {
+      "label": "multiplicative_twist_learned_s17_lr1000",
+      "reporting_mse": 0.896714856227239,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9549626708030701,
+              0.9522053003311157,
+              0.9535034894943237,
+              0.9527186751365662
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.8399456143379211,
+              0.8374847769737244,
+              0.8381887674331665,
+              0.8389449119567871
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.6160102486610413,
+              0.6069681644439697,
+              0.6093086004257202,
+              0.6104704737663269
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.20241402089595795,
+              0.20728172361850739,
+              0.19089378416538239,
+              0.21147401630878448
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.717858076095581,
+      "raw_training_sha256": "c6005372109a498d2496270cfaafa56193c5ff03276d5496a627ae13d4a217bc"
+    },
+    {
+      "label": "multiplicative_twist_identity_s17_lr1000",
+      "reporting_mse": 0.8931635767221451,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0014279892202466726,
+              -0.002568762982264161,
+              0.0006114689167588949,
+              -0.00013545237015932798
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0004563736729323864,
+              0.000258636282524094,
+              0.0011292254785075784,
+              0.0017112692585214972
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.004048285074532032,
+              -0.002590409480035305,
+              -0.001293229404836893,
+              0.0057258447632193565
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0024907521437853575,
+              0.004757358692586422,
+              0.002030655974522233,
+              0.0022616765927523375
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.3538605570793152,
+      "raw_training_sha256": "1a0ca20b6b31aa5da889ef264716ebfcb53b8eb03dda5140e5f6f90c58d84295"
+    },
+    {
+      "label": "multiplicative_bezier_1p_s17_lr1000",
+      "reporting_mse": 0.9165293226639429,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.0189919825643301
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.06827554851770401
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.21175572276115417
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.4284438192844391
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.39011067152023315,
+      "raw_training_sha256": "97a8d910000b5a9f26af12f8c96b90d29657272e8ec5737562633280c62c4eb8"
+    },
+    {
+      "label": "multiplicative_bump_2p_s17_lr1000",
+      "reporting_mse": 0.9174102594455084,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.04086645692586899,
+                -0.09257393330335617
+              ],
+              [
+                -0.03843287378549576,
+                -0.0915282815694809
+              ],
+              [
+                -0.04126191884279251,
+                -0.09118060767650604
+              ],
+              [
+                -0.043407704681158066,
+                -0.09226665645837784
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.12704434990882874,
+                -0.26817193627357483
+              ],
+              [
+                0.12828265130519867,
+                -0.2669624090194702
+              ],
+              [
+                0.12719768285751343,
+                -0.2669057548046112
+              ],
+              [
+                0.12347637861967087,
+                -0.26822859048843384
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.40822669863700867,
+                -0.5502144694328308
+              ],
+              [
+                0.40571990609169006,
+                -0.547614574432373
+              ],
+              [
+                0.40513911843299866,
+                -0.5490347743034363
+              ],
+              [
+                0.40132009983062744,
+                -0.5500604510307312
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.8668919205665588,
+                -1.039110779762268
+              ],
+              [
+                0.8648454546928406,
+                -1.0358420610427856
+              ],
+              [
+                0.8650241494178772,
+                -1.0374369621276855
+              ],
+              [
+                0.8600635528564453,
+                -1.0373221635818481
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.38687169551849365,
+      "raw_training_sha256": "420b2655bcf70ede063fadd42f5ca1bd801ff52119fe97c125382114931161c0"
+    },
+    {
+      "label": "multiplicative_gelu_offset_s29_lr1000",
+      "reporting_mse": 0.9027138302723566,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.06372468173503876,
+              -0.06356833875179291,
+              -0.06325266510248184,
+              -0.06380455195903778
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.02741183340549469,
+              -0.027403227984905243,
+              -0.030411360785365105,
+              -0.029641812667250633
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.061081670224666595,
+              0.056323129683732986,
+              0.056612249463796616,
+              0.05972808599472046
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.057247940450906754,
+              0.05437730997800827,
+              0.050328392535448074,
+              0.05266702547669411
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.7332003116607666,
+      "raw_training_sha256": "dc7cd60aec38a8a0edb42c8610dcb245f15e23db4b48008048bb2f2b15c2603f"
+    },
+    {
+      "label": "multiplicative_twist_fixed_s29_lr1000",
+      "reporting_mse": 0.9075640042622884,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.7486615180969238,
+      "raw_training_sha256": "75646b1a2b0840488f90f5fbaaa629deafabdc222196cfcc1395f781b25eacc7"
+    },
+    {
+      "label": "multiplicative_twist_learned_s29_lr1000",
+      "reporting_mse": 0.8973642438650131,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9534379839897156,
+              0.9523488283157349,
+              0.9522282481193542,
+              0.954133152961731
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.8393585085868835,
+              0.8359062075614929,
+              0.8398861289024353,
+              0.8400088548660278
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.6116093397140503,
+              0.6047402024269104,
+              0.6159706711769104,
+              0.6129207015037537
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.20343473553657532,
+              0.19710418581962585,
+              0.20345863699913025,
+              0.20333623886108398
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.9181630611419678,
+      "raw_training_sha256": "fe57220ed94a002e06524061d49b5999afc82dfe1950ea596f7770af1c8996be"
+    },
+    {
+      "label": "multiplicative_twist_identity_s29_lr1000",
+      "reporting_mse": 0.8939180572827657,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.0013426569057628512,
+              0.0023052275646477938,
+              -0.001645967597141862,
+              0.0018153423443436623
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.004243733361363411,
+              -0.002092677168548107,
+              0.003746242495253682,
+              0.00039716874016448855
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.001063179923221469,
+              -0.0031204239930957556,
+              -0.004548329394310713,
+              -0.0011444275733083487
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.0008520471164956689,
+              0.003706932533532381,
+              1.610766412341036e-05,
+              -0.002502763643860817
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.3558589518070221,
+      "raw_training_sha256": "248e801e9b1bb94fbaf481dd66fb15dd26a3d21cd5fee4bc546928613d3e52ce"
+    },
+    {
+      "label": "multiplicative_bezier_1p_s29_lr1000",
+      "reporting_mse": 0.9178081353505453,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.01850218139588833
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.06967391073703766
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.2116510570049286
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.42924538254737854
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.39329877495765686,
+      "raw_training_sha256": "e2e889fc0c4244bb6c9895f9a83e77de8676174eb8eeb5732c6eb2acec22b4df"
+    },
+    {
+      "label": "multiplicative_bump_2p_s29_lr1000",
+      "reporting_mse": 0.9183336695035299,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.041826967149972916,
+                -0.09277206659317017
+              ],
+              [
+                -0.03898864611983299,
+                -0.09161997586488724
+              ],
+              [
+                -0.03770817816257477,
+                -0.09193488955497742
+              ],
+              [
+                -0.04236006364226341,
+                -0.09222356975078583
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.12734968960285187,
+                -0.27071648836135864
+              ],
+              [
+                0.13117417693138123,
+                -0.2685583233833313
+              ],
+              [
+                0.12908510863780975,
+                -0.26888301968574524
+              ],
+              [
+                0.12804211676120758,
+                -0.26849833130836487
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.4070815145969391,
+                -0.5519236326217651
+              ],
+              [
+                0.4061298370361328,
+                -0.5492892265319824
+              ],
+              [
+                0.40767502784729004,
+                -0.5493512153625488
+              ],
+              [
+                0.40832170844078064,
+                -0.5465717911720276
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.8667172789573669,
+                -1.0404409170150757
+              ],
+              [
+                0.8606963157653809,
+                -1.0395346879959106
+              ],
+              [
+                0.8638086318969727,
+                -1.0395212173461914
+              ],
+              [
+                0.8647539019584656,
+                -1.0361833572387695
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.3898462653160095,
+      "raw_training_sha256": "dc26a16df0143e78fce19259c174bb1e998f39064acc3826cc71595b22790b03"
+    },
+    {
+      "label": "multiplicative_twist_fixed_s43_lr1000",
+      "reporting_mse": 0.9114563912153244,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.682981014251709,
+      "raw_training_sha256": "2d5de3bfc3b597d73505eb9e504ae85dad2357f6ee8874c2798ef28030ebf040"
+    },
+    {
+      "label": "multiplicative_twist_learned_s43_lr1000",
+      "reporting_mse": 0.8968456288178762,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9539209604263306,
+              0.9554057121276855,
+              0.9513949155807495,
+              0.9521991014480591
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.8400766253471375,
+              0.8391655683517456,
+              0.8358259201049805,
+              0.836073100566864
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.6071674823760986,
+              0.6133928298950195,
+              0.6063486337661743,
+              0.6116365194320679
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.1974533051252365,
+              0.2069530487060547,
+              0.19974000751972198,
+              0.20075500011444092
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.8145086765289307,
+      "raw_training_sha256": "4ef90a9cb5e0452bc7728335b328f026cecb7dad8c84b03d58e915d59f076b1e"
+    },
+    {
+      "label": "multiplicative_twist_identity_s43_lr1000",
+      "reporting_mse": 0.8934234281380972,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.003995497245341539,
+              0.00020822453370783478,
+              -0.0004978065844625235,
+              -0.0013034316943958402
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0030008566100150347,
+              0.0013070792192593217,
+              -0.0010828051017597318,
+              0.0028756277170032263
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.00017324481450486928,
+              -0.0013124324614182115,
+              -0.0009103859774768353,
+              -0.0021353350020945072
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0022700768895447254,
+              -0.0007098992937244475,
+              -0.0008901639957912266,
+              -0.0018789226887747645
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.3664640784263611,
+      "raw_training_sha256": "290c8b278a990ba5c0ee90bdb4f388989e4974081532a6659b3ad490dd47de93"
+    },
+    {
+      "label": "multiplicative_bezier_1p_s43_lr1000",
+      "reporting_mse": 0.9172218690315882,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.017734259366989136
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.07123375684022903
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.21358364820480347
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.4372127056121826
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.37666571140289307,
+      "raw_training_sha256": "9a0322949a7ab703e2c8adc9df3b79e42e920b785310879037232f956b6016f8"
+    },
+    {
+      "label": "multiplicative_bump_2p_s43_lr1000",
+      "reporting_mse": 0.9179388880729675,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.039449293166399,
+                -0.09094482660293579
+              ],
+              [
+                -0.03909545764327049,
+                -0.09168797731399536
+              ],
+              [
+                -0.037759698927402496,
+                -0.09168793261051178
+              ],
+              [
+                -0.037280257791280746,
+                -0.09150421619415283
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.13086868822574615,
+                -0.2675735652446747
+              ],
+              [
+                0.12968546152114868,
+                -0.26732397079467773
+              ],
+              [
+                0.13376128673553467,
+                -0.2685193121433258
+              ],
+              [
+                0.13373196125030518,
+                -0.2681005597114563
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.4104069769382477,
+                -0.5474058389663696
+              ],
+              [
+                0.40576258301734924,
+                -0.5474478006362915
+              ],
+              [
+                0.41021808981895447,
+                -0.5488229393959045
+              ],
+              [
+                0.41275420784950256,
+                -0.5477756857872009
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.879619836807251,
+                -1.0361546277999878
+              ],
+              [
+                0.8652555346488953,
+                -1.0383394956588745
+              ],
+              [
+                0.8760946989059448,
+                -1.0374782085418701
+              ],
+              [
+                0.8736190795898438,
+                -1.036755084991455
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.3737551271915436,
+      "raw_training_sha256": "4ee352872de409bbdc28f4b3a1103afefc3c443cb737bcf58b8884adf832064f"
+    },
+    {
+      "label": "multiplicative_gelu_offset_s43_lr1000",
+      "reporting_mse": 0.902804359793663,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.06399065256118774,
+              -0.06406022608280182,
+              -0.06347380578517914,
+              -0.06343227624893188
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.0337335541844368,
+              -0.031006336212158203,
+              -0.032249804586172104,
+              -0.033137399703264236
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.06502117961645126,
+              0.06763506680727005,
+              0.06214391067624092,
+              0.06568489223718643
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.049356427043676376,
+              0.05334395542740822,
+              0.049751605838537216,
+              0.05328929051756859
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.7112995982170105,
+      "raw_training_sha256": "ade4f2098fe3f072d63a21dd38618b20ea835b560a5491aa7484f3bdfa1ac5c9"
+    },
+    {
+      "label": "piecewise_twist_learned_s17_lr1000",
+      "reporting_mse": 0.5048681969443957,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9528791904449463,
+              0.9539008140563965,
+              0.9547231793403625,
+              0.9550328850746155
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.840486466884613,
+              0.8423544764518738,
+              0.8411844968795776,
+              0.8422104716300964
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.6308936476707458,
+              0.6216573715209961,
+              0.6250719428062439,
+              0.6303371787071228
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.2363390028476715,
+              0.23516462743282318,
+              0.2388726770877838,
+              0.24445022642612457
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.7353194952011108,
+      "raw_training_sha256": "345f055b67505f9ab3998591325c726d1db70c8c99ef5120ed1d3c33f9d6ac05"
+    },
+    {
+      "label": "piecewise_twist_identity_s17_lr1000",
+      "reporting_mse": 0.5006678029894829,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.07645481079816818,
+              0.07127044349908829,
+              -0.044665634632110596,
+              -0.06187410280108452
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.06659562885761261,
+              0.06426996737718582,
+              -0.03940891474485397,
+              -0.05523403733968735
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.06305407732725143,
+              0.06031058728694916,
+              -0.03535483032464981,
+              -0.05263526365160942
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.064517542719841,
+              0.056100621819496155,
+              -0.03242937847971916,
+              -0.052767861634492874
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.373812735080719,
+      "raw_training_sha256": "50bc189e02dce14903991583324a8a3312683fb892b863b250af8b663f07b6b1"
+    },
+    {
+      "label": "piecewise_bezier_1p_s17_lr3000",
+      "reporting_mse": 0.5176439881324768,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.04412057250738144
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.18763478100299835
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.4990302622318268
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.18010446429252625
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.2301781177520752,
+      "raw_training_sha256": "2d402125d01b99707d342953cee3eea8af5361915682d0f80d69ab7e8b3d1401"
+    },
+    {
+      "label": "piecewise_bump_2p_s17_lr3000",
+      "reporting_mse": 0.5030149867137274,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.09054868668317795,
+                -0.19526240229606628
+              ],
+              [
+                -0.09138977527618408,
+                -0.2066422551870346
+              ],
+              [
+                -0.09074172377586365,
+                -0.20858706533908844
+              ],
+              [
+                -0.09053274244070053,
+                -0.20626194775104523
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.36939486861228943,
+                -0.7673434019088745
+              ],
+              [
+                0.3642595112323761,
+                -0.7765555381774902
+              ],
+              [
+                0.36329182982444763,
+                -0.780600905418396
+              ],
+              [
+                0.3648912012577057,
+                -0.7772479057312012
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                1.0480409860610962,
+                -1.3690264225006104
+              ],
+              [
+                1.037482738494873,
+                -1.3738081455230713
+              ],
+              [
+                1.0487403869628906,
+                -1.3772261142730713
+              ],
+              [
+                1.0510674715042114,
+                -1.3748029470443726
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.6396026611328125,
+                -1.855308175086975
+              ],
+              [
+                0.6419553756713867,
+                -1.8580456972122192
+              ],
+              [
+                0.720004677772522,
+                -1.859352946281433
+              ],
+              [
+                0.6621743440628052,
+                -1.8586792945861816
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.1441442966461182,
+      "raw_training_sha256": "2f426cf59e527a982f6c248ce95e20025b67d1d54fa23f902494eb4fd9ea4b6d"
+    },
+    {
+      "label": "piecewise_gelu_offset_s17_lr3000",
+      "reporting_mse": 0.4193792939186096,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.0719146728515625,
+              -0.07276800274848938,
+              -0.07221512496471405,
+              -0.0738883763551712
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.15014201402664185,
+              0.15020760893821716,
+              0.15285490453243256,
+              0.14174938201904297
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.06744427978992462,
+              0.055645640939474106,
+              0.06784472614526749,
+              0.05472628027200699
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.13968682289123535,
+              -0.1943543553352356,
+              -0.14121684432029724,
+              -0.2071274071931839
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 2.0826416015625,
+      "raw_training_sha256": "f9abac8a263cd2a6dd77e0b6c92db3b05077905dfe85f0f3543ae887f68bd38e"
+    },
+    {
+      "label": "piecewise_twist_fixed_s17_lr1000",
+      "reporting_mse": 0.520199274023374,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.6259130239486694,
+      "raw_training_sha256": "05d004b3c559fdb113ed9863e340dc430ed4c3a4377d83925e092207f8cae96f"
+    },
+    {
+      "label": "piecewise_twist_identity_s29_lr1000",
+      "reporting_mse": 0.5004121586680412,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.02972613461315632,
+              -0.067293182015419,
+              0.07565699517726898,
+              -0.07269128412008286
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.024084333330392838,
+              -0.057102710008621216,
+              0.07110412418842316,
+              -0.0653427466750145
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.02064710482954979,
+              -0.05337613448500633,
+              0.06852607429027557,
+              -0.057183101773262024
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.018671201542019844,
+              -0.0536683164536953,
+              0.06998207420110703,
+              -0.05927102267742157
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.37021711468696594,
+      "raw_training_sha256": "fe55cb1d7a085c7d5cf820e911063e42e0ef6761a18deeea83fa22f5150dbae1"
+    },
+    {
+      "label": "piecewise_bezier_1p_s29_lr3000",
+      "reporting_mse": 0.5131224915385246,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.04370170459151268
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.1899256557226181
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.4962068796157837
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.1506856083869934
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.2021411657333374,
+      "raw_training_sha256": "856d38dd8ef976073e093e7a8ac68183cd7c1a6f79fa03dc716ff86a3df53852"
+    },
+    {
+      "label": "piecewise_bump_2p_s29_lr3000",
+      "reporting_mse": 0.5048852115869522,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.09000108391046524,
+                -0.18165379762649536
+              ],
+              [
+                -0.09159698337316513,
+                -0.19655640423297882
+              ],
+              [
+                -0.09008284658193588,
+                -0.20458658039569855
+              ],
+              [
+                -0.0896061509847641,
+                -0.22194714844226837
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.3714289963245392,
+                -0.75417160987854
+              ],
+              [
+                0.3676548898220062,
+                -0.7685099244117737
+              ],
+              [
+                0.3701530396938324,
+                -0.7754196524620056
+              ],
+              [
+                0.37092986702919006,
+                -0.7904808521270752
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                1.0537569522857666,
+                -1.3618061542510986
+              ],
+              [
+                1.0472285747528076,
+                -1.3704315423965454
+              ],
+              [
+                1.0464847087860107,
+                -1.373244047164917
+              ],
+              [
+                1.045016884803772,
+                -1.3829951286315918
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.6710667014122009,
+                -1.8556091785430908
+              ],
+              [
+                0.6409966945648193,
+                -1.8556736707687378
+              ],
+              [
+                0.6466348767280579,
+                -1.8587651252746582
+              ],
+              [
+                0.6251726746559143,
+                -1.8618372678756714
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.1217085123062134,
+      "raw_training_sha256": "4ea38f8f23d3654f9adf043bace5abca2c525de991846aa17ae0a6ba61ec4b7c"
+    },
+    {
+      "label": "piecewise_gelu_offset_s29_lr3000",
+      "reporting_mse": 0.41761349389950436,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.07500988245010376,
+              -0.07569174468517303,
+              -0.07488695532083511,
+              -0.07491505891084671
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.15619269013404846,
+              0.15120190382003784,
+              0.14497010409832,
+              0.1579577624797821
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0628419741988182,
+              0.05480804666876793,
+              0.05627043917775154,
+              0.06598902493715286
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.16042961180210114,
+              -0.2055385708808899,
+              -0.16812005639076233,
+              -0.14838826656341553
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 2.049363374710083,
+      "raw_training_sha256": "6165a3d7b5dca26b873599e60bbe5d6e86ced7f214db8544a3f95f5f8323ad7d"
+    },
+    {
+      "label": "piecewise_twist_fixed_s29_lr1000",
+      "reporting_mse": 0.5198078627387682,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.765817642211914,
+      "raw_training_sha256": "01a96c62908ec45b8fce5e8f6109bc18a48a20eecfb3fc7a17ac5c78699143b8"
+    },
+    {
+      "label": "piecewise_twist_learned_s29_lr1000",
+      "reporting_mse": 0.5049089615543684,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9546912312507629,
+              0.954267144203186,
+              0.9549239277839661,
+              0.9565963745117188
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.8412609100341797,
+              0.8413973450660706,
+              0.8410627841949463,
+              0.8460491895675659
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.6255353689193726,
+              0.6271894574165344,
+              0.6246699094772339,
+              0.630225658416748
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.23429599404335022,
+              0.24453379213809967,
+              0.23450469970703125,
+              0.24002136290073395
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.9279284477233887,
+      "raw_training_sha256": "ab728f569cb796d2d35450fe6101984269ca388b2da455b9c46bd046caf54fbb"
+    },
+    {
+      "label": "piecewise_bezier_1p_s43_lr3000",
+      "reporting_mse": 0.5122404918074608,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                -0.04501356557011604
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.18651723861694336
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.49426645040512085
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bezier",
+            "coefficients": [
+              [
+                0.1522960662841797
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.2496706247329712,
+      "raw_training_sha256": "1afcb2bbca4846aab001647727bd64cdb334e02ad6c9823a6e57de625beb8e3d"
+    },
+    {
+      "label": "piecewise_bump_2p_s43_lr3000",
+      "reporting_mse": 0.5023646925886472,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                -0.09292355924844742,
+                -0.18760298192501068
+              ],
+              [
+                -0.0953538566827774,
+                -0.20275461673736572
+              ],
+              [
+                -0.09067502617835999,
+                -0.1791565865278244
+              ],
+              [
+                -0.09171557426452637,
+                -0.18101848661899567
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.36229413747787476,
+                -0.7601175904273987
+              ],
+              [
+                0.36273807287216187,
+                -0.7726442813873291
+              ],
+              [
+                0.3619137406349182,
+                -0.7517908811569214
+              ],
+              [
+                0.3680744469165802,
+                -0.7544344067573547
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                1.0370268821716309,
+                -1.3651105165481567
+              ],
+              [
+                1.0425854921340942,
+                -1.3724652528762817
+              ],
+              [
+                1.0421857833862305,
+                -1.3616327047348022
+              ],
+              [
+                1.0492125749588013,
+                -1.3621516227722168
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "bump",
+            "coefficients": [
+              [
+                0.6181983351707458,
+                -1.8567262887954712
+              ],
+              [
+                0.6453874707221985,
+                -1.855851411819458
+              ],
+              [
+                0.655525267124176,
+                -1.8558435440063477
+              ],
+              [
+                0.6248409748077393,
+                -1.851755142211914
+              ]
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.1613316535949707,
+      "raw_training_sha256": "73e51175d9b9d0e8939c403061637759630358880ce9bdda79d8981d151a101f"
+    },
+    {
+      "label": "piecewise_gelu_offset_s43_lr3000",
+      "reporting_mse": 0.41486312200625736,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.07514064759016037,
+              -0.07558654248714447,
+              -0.07360295206308365,
+              -0.07399546355009079
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.14319652318954468,
+              0.14743539690971375,
+              0.1492426097393036,
+              0.154890775680542
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              0.05195523798465729,
+              0.052855901420116425,
+              0.05980830267071724,
+              0.06353045254945755
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "gelu_offset",
+            "offset": [
+              -0.21685782074928284,
+              -0.20147807896137238,
+              -0.13072632253170013,
+              -0.1423063427209854
+            ]
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 2.243691921234131,
+      "raw_training_sha256": "231976ee18b10181b0d8fe04fd4df9730bb5c6ebbe28b99ec3d2f26d0d84222c"
+    },
+    {
+      "label": "piecewise_twist_fixed_s43_lr1000",
+      "reporting_mse": 0.5191932693123817,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.692915678024292,
+      "raw_training_sha256": "6ecf77bc3d0dacd25b36e0af392e16a72866ac2814abcce82e6ffd5bb4ed7b29"
+    },
+    {
+      "label": "piecewise_twist_learned_s43_lr1000",
+      "reporting_mse": 0.5046490579843521,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552,
+              0.9999999403953552
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.9544817209243774,
+              0.9572306275367737,
+              0.9521765112876892,
+              0.9541419148445129
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.841345489025116,
+              0.8483473658561707,
+              0.839851438999176,
+              0.8422415852546692
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.625191330909729,
+              0.6327518820762634,
+              0.6214985251426697,
+              0.628093957901001
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.23245635628700256,
+              0.24073834717273712,
+              0.23045966029167175,
+              0.2467373013496399
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 1.826372504234314,
+      "raw_training_sha256": "273615ad32d72a0e2b7532a69a2d7436383edb551c40ae0cc06be4634e05c7df"
+    },
+    {
+      "label": "piecewise_twist_identity_s43_lr1000",
+      "reporting_mse": 0.5003141239285469,
+      "diagnostics": [
+        {
+          "step": 0,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 50,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.06559564918279648,
+              0.07961785793304443,
+              0.024194147437810898,
+              0.07820087671279907
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 150,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.0564243346452713,
+              0.06997641175985336,
+              0.01952509954571724,
+              0.06748805940151215
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 300,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.049542851746082306,
+              0.06340155005455017,
+              0.017930608242750168,
+              0.06175224483013153
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        },
+        {
+          "step": 600,
+          "shape": {
+            "family": "pair_twist",
+            "amplitude": [
+              -0.04992842674255371,
+              0.06266861408948898,
+              0.022076241672039032,
+              0.06684786826372147
+            ],
+            "center": 1.0
+          },
+          "control_saturation_fraction": 0.0
+        }
+      ],
+      "maximum_preclip_gradient_norm": 0.37325701117515564,
+      "raw_training_sha256": "b830081b7c17369d21dc1b8734406b4d717a6129cec4d6fc1476e8d6a1992494"
+    }
+  ]
+}

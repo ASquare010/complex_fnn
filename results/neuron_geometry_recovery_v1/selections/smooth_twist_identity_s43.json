@@ -1,0 +1,8 @@
+{
+  "selected_label": "smooth_twist_identity_s43_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 0.4633047009507815,
+    "0.003": 0.5129134878516197
+  }
+}

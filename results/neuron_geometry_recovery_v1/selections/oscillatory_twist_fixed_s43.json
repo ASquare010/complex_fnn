@@ -1,0 +1,8 @@
+{
+  "selected_label": "oscillatory_twist_fixed_s43_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 1.0298509647448857,
+    "0.003": 1.051704188187917
+  }
+}

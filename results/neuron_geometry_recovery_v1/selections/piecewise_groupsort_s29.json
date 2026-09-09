@@ -1,0 +1,8 @@
+{
+  "selected_label": "piecewise_groupsort_s29_lr3000",
+  "selected_rate": 0.003,
+  "selection_mse_by_rate": {
+    "0.001": 0.5098557298382124,
+    "0.003": 0.3854994128147761
+  }
+}

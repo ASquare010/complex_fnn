@@ -1,0 +1,8 @@
+{
+  "selected_label": "oscillatory_twist_learned_s29_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 1.0152538468440373,
+    "0.003": 1.0248790979385376
+  }
+}

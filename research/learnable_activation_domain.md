@@ -4,10 +4,17 @@
 [three-seed comparison](affine_rate_replication_results.md) finds only
 0.101% lower mean NLL with affine and wins in 2/3 seeds. This fails the frozen
 material-benefit gate. The earlier 1.755% advantage compared different rates.
-Only native rational BlockShuffle remains an active learned-activation candidate,
-with memory still unresolved. The affine and shifted implementations and their
-proofs are [historical alternatives](archive/README.md); they have not earned
-promotion over the stronger plain control. See the [current rational notes](../src/rational_blockshuffle_ffn/model.md).
+Rational BlockShuffle was retired after repeated memory failures; its
+[archived notes](archive/h087_retired/src/rational_blockshuffle_ffn/model.md)
+preserve the implementation and limitations. Affine and shifted alternatives
+also remain [historical](archive/README.md). None earned a dependable combined
+quality/resource win.
+
+The latest investigation tests one-parameter local Bezier, grouped residual
+bumps and a coupled feature-pair rotation against full and narrow controls.
+The pair transformation learns a relation between two projected coordinates,
+extending the design space beyond scalar activation curves. See the
+[geometry study](neuron_geometry_results.md) for its outcome and scope.
 
 A conventional FFN learns its projections while keeping an activation such as
 GELU or SiLU fixed. A learnable activation also trains the shape of that scalar

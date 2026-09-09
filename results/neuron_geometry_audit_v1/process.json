@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-09-09T21:12:01.414656+00:00",
+  "coordinator_pid": 29304,
+  "before_sha256": "a9752b534d315de859d529020d918813eaa1a7c65903a2bc4761089b82bec3b0",
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "results.neuron_geometry_audit_v1.source.audit"
+  ],
+  "pid": 27316,
+  "returncode": 0,
+  "elapsed_seconds": 20.606216700001823,
+  "finished_utc": "2026-09-09T21:12:22.029674+00:00",
+  "log_sha256": "2b79d79a3115b240b8284dc8284c16c09016bb0c6bd068144a07b5ad528b912b"
+}

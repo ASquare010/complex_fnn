@@ -1,0 +1,846 @@
+{
+  "status": "COMPLETE",
+  "evaluations": 32,
+  "optimizer_updates": 0,
+  "training_examples": 0,
+  "original_h088_preserved": true,
+  "fp32_native_island_exact": true,
+  "island_reference_all_pass": true,
+  "earns_explicit_qualification_recovery": true,
+  "rows": [
+    {
+      "form": "twist_learned",
+      "precision": "fp32",
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "original_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 7.152557373046875e-07,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 5.960464477539062e-07,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 2.86102294921875e-06,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 2.384185791015625e-06,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 5.7220458984375e-06,
+          "exact": false
+        }
+      },
+      "island_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 7.152557373046875e-07,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 5.960464477539062e-07,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 2.86102294921875e-06,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 2.384185791015625e-06,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 5.7220458984375e-06,
+          "exact": false
+        }
+      },
+      "native_vs_island": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        }
+      },
+      "tensor_file": "results/neuron_precision_v1/twist_learned_fp32.pt",
+      "tensor_sha256": "882e376eae74c2a65cbfe14103d6e9d4c9a8feca13609f7375d1490848520381"
+    },
+    {
+      "form": "twist_learned",
+      "precision": "bf16",
+      "atol": 0.02,
+      "rtol": 0.02,
+      "original_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.015625,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.015625,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 55,
+          "max_abs": 0.09375,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 88,
+          "max_abs": 0.09375,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 1.9073486328125e-05,
+          "exact": false
+        }
+      },
+      "island_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 1.9073486328125e-05,
+          "exact": false
+        }
+      },
+      "native_vs_island": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 1105,
+          "max_abs": 0.015625,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 1172,
+          "max_abs": 0.015625,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 57699,
+          "max_abs": 0.09375,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 58757,
+          "max_abs": 0.09375,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        }
+      },
+      "tensor_file": "results/neuron_precision_v1/twist_learned_bf16.pt",
+      "tensor_sha256": "c19dbd5912081f9e4351185314347fe0c2c482a1ebe2d9440850b9c6cb7729c3"
+    },
+    {
+      "form": "twist_identity",
+      "precision": "fp32",
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "original_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 7.152557373046875e-07,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 5.960464477539062e-07,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 2.86102294921875e-06,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 2.384185791015625e-06,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 5.7220458984375e-06,
+          "exact": false
+        }
+      },
+      "island_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 7.152557373046875e-07,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 5.960464477539062e-07,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 2.86102294921875e-06,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 2.384185791015625e-06,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 5.7220458984375e-06,
+          "exact": false
+        }
+      },
+      "native_vs_island": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        }
+      },
+      "tensor_file": "results/neuron_precision_v1/twist_identity_fp32.pt",
+      "tensor_sha256": "882e376eae74c2a65cbfe14103d6e9d4c9a8feca13609f7375d1490848520381"
+    },
+    {
+      "form": "twist_identity",
+      "precision": "bf16",
+      "atol": 0.02,
+      "rtol": 0.02,
+      "original_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.015625,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.015625,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 55,
+          "max_abs": 0.09375,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 88,
+          "max_abs": 0.09375,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 1.9073486328125e-05,
+          "exact": false
+        }
+      },
+      "island_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 1.9073486328125e-05,
+          "exact": false
+        }
+      },
+      "native_vs_island": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 1105,
+          "max_abs": 0.015625,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 1172,
+          "max_abs": 0.015625,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 57699,
+          "max_abs": 0.09375,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 58757,
+          "max_abs": 0.09375,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 4,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        }
+      },
+      "tensor_file": "results/neuron_precision_v1/twist_identity_bf16.pt",
+      "tensor_sha256": "c19dbd5912081f9e4351185314347fe0c2c482a1ebe2d9440850b9c6cb7729c3"
+    },
+    {
+      "form": "bezier_1p",
+      "precision": "fp32",
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "original_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 2.384185791015625e-07,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 2.384185791015625e-07,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 9.5367431640625e-07,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 9.5367431640625e-07,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 1,
+          "mismatches": 0,
+          "max_abs": 4.76837158203125e-07,
+          "exact": false
+        }
+      },
+      "island_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 2.384185791015625e-07,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 2.384185791015625e-07,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 9.5367431640625e-07,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 9.5367431640625e-07,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 1,
+          "mismatches": 0,
+          "max_abs": 4.76837158203125e-07,
+          "exact": false
+        }
+      },
+      "native_vs_island": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "curve.theta": {
+          "elements": 1,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        }
+      },
+      "tensor_file": "results/neuron_precision_v1/bezier_1p_fp32.pt",
+      "tensor_sha256": "71b85946151bf249c5522836cb9fcab163bb9ceb291f1141d0c5ed9dee39f492"
+    },
+    {
+      "form": "bezier_1p",
+      "precision": "bf16",
+      "atol": 0.02,
+      "rtol": 0.02,
+      "original_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "curve.theta": {
+          "elements": 1,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        }
+      },
+      "island_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "curve.theta": {
+          "elements": 1,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        }
+      },
+      "native_vs_island": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 295,
+          "max_abs": 0.0078125,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 729,
+          "max_abs": 0.015625,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 12733,
+          "max_abs": 0.0625,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 7483,
+          "max_abs": 0.03125,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 1,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        }
+      },
+      "tensor_file": "results/neuron_precision_v1/bezier_1p_bf16.pt",
+      "tensor_sha256": "fa965eb1808a167e1858b43fdd61974a9371994a271aa09c698372e668946431"
+    },
+    {
+      "form": "bump_2p",
+      "precision": "fp32",
+      "atol": 1e-05,
+      "rtol": 1e-05,
+      "original_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 2.980232238769531e-07,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 4.76837158203125e-07,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 9.5367431640625e-06,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 9.5367431640625e-07,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 8,
+          "mismatches": 0,
+          "max_abs": 4.06801700592041e-06,
+          "exact": false
+        }
+      },
+      "island_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 2.980232238769531e-07,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 4.76837158203125e-07,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 9.5367431640625e-06,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 9.5367431640625e-07,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 8,
+          "mismatches": 0,
+          "max_abs": 4.06801700592041e-06,
+          "exact": false
+        }
+      },
+      "native_vs_island": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "curve.theta": {
+          "elements": 8,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        }
+      },
+      "tensor_file": "results/neuron_precision_v1/bump_2p_fp32.pt",
+      "tensor_sha256": "1e9fba7d24cba694934344136cdd15cc455fa75aaeb178de27aef51d6dc78e8a"
+    },
+    {
+      "form": "bump_2p",
+      "precision": "bf16",
+      "atol": 0.02,
+      "rtol": 0.02,
+      "original_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "curve.theta": {
+          "elements": 8,
+          "mismatches": 0,
+          "max_abs": 2.8759241104125977e-06,
+          "exact": false
+        }
+      },
+      "island_reference": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        },
+        "curve.theta": {
+          "elements": 8,
+          "mismatches": 0,
+          "max_abs": 2.8759241104125977e-06,
+          "exact": false
+        }
+      },
+      "native_vs_island": {
+        "output": {
+          "elements": 2304,
+          "mismatches": 195,
+          "max_abs": 0.0078125,
+          "exact": false
+        },
+        "input_gradient": {
+          "elements": 2304,
+          "mismatches": 535,
+          "max_abs": 0.0078125,
+          "exact": false
+        },
+        "up.weight": {
+          "elements": 175104,
+          "mismatches": 3763,
+          "max_abs": 0.0625,
+          "exact": false
+        },
+        "down.weight": {
+          "elements": 175104,
+          "mismatches": 2142,
+          "max_abs": 0.03125,
+          "exact": false
+        },
+        "curve.theta": {
+          "elements": 8,
+          "mismatches": 0,
+          "max_abs": 0.0,
+          "exact": true
+        }
+      },
+      "tensor_file": "results/neuron_precision_v1/bump_2p_bf16.pt",
+      "tensor_sha256": "b7f88cae247a70ef6ed0e6c4a6ee4476942fee1167c2f6587abc5a8df9133f6c"
+    }
+  ],
+  "research_goal_achieved": false,
+  "before_sha256": "b36db70694224e933e39371428dd70d69cb3af993da473c2e9d52f3cf963042d"
+}

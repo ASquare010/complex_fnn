@@ -1,0 +1,8 @@
+{
+  "selected_label": "smooth_bezier_1p_s17_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 0.5521256327629089,
+    "0.003": 0.583144706984361
+  }
+}

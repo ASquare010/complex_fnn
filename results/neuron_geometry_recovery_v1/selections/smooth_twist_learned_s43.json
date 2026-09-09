@@ -1,0 +1,8 @@
+{
+  "selected_label": "smooth_twist_learned_s43_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 0.4658825571338336,
+    "0.003": 0.511607882877191
+  }
+}

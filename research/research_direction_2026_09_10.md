@@ -21,15 +21,15 @@ each projected coordinate separately. Neither difference proves better learning.
 
 ## Candidate: centered rational twist
 
-For a feature pair x=(x 1,x 2), fixed center c=(1,0), q=x-c and r 2=q 1^2+q 2^2, set
+For a feature pair x=(x1,x2), fixed center c=(1,0), q=x-c and r2=q1^2+q2^2, set
 
     a = 2 tanh(theta)
-    t = a r 2 / (1+r 2)
+    t = a r2 / (1+r2)
     f(x) = c + 1/(1+t^2) * [[1-t^2, -2t], [2t, 1-t^2]] q.
 
 Share theta across one or four contiguous groups of feature pairs. The online
 formula uses products, sums and reciprocals. Tanh is applied only to the few
-shared controls. Implement t=a*(1-1/(1+r 2)) to avoid an inf/inf radius ratio.
+shared controls. Implement t=a*(1-1/(1+r2)) to avoid an inf/inf radius ratio.
 
 At theta=0, f(x)=x exactly in the real formula; a residual implementation can
 preserve floating-point identity too. This initializes an ungated FFN as a linear

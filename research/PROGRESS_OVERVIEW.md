@@ -5,6 +5,26 @@ unmet: at least 70% fewer FFN weights, within 1% relative validation loss of BOT
 full GELU and SwiGLU, while beating calibrated narrow controls. Consistent
 multi-seed, longer-training, scale and broader-data evidence is still required.
 
+## Latest completed experiment: learned neuron geometry
+
+We tested a different mechanism: input-dependent rotations of feature pairs,
+using four shared learned parameters, alongside one-parameter Bezier and
+eight-parameter grouped residual bumps. All four recipes fail their frozen
+promotion gates. Their aggregate held-out errors are 0.72?6.68% above narrow
+GELU. The best simple control is a four-shift GELU, 3.23% below narrow GELU but
+11.18% above full GELU. No new architecture is promoted.
+
+This was synthetic regression, not a new language run: four target families,
+384-dimensional inputs, 65,536 training examples plus 4,096 selection and 4,096
+reporting examples per task. Each batch contains 256 examples. Fourteen forms,
+three optimization seeds and two rates complete 336 runs of 600 updates:
+51,609,600 total training example presentations, taking 13.29 minutes.
+All 672 independent checkpoint scores reproduce exactly.
+
+The activations did learn: curves bend and twist amplitudes change. Their
+learning does not establish a useful quality/compute gain. Pair twists cost
+about 2.25 times narrow GELU's native update time. [Report and learned shapes](neuron_geometry_results.md).
+
 ## Latest longer-budget language results
 
 Six fresh WikiText-2 runs, seed 17, 3,200 updates. NLL is validation loss:

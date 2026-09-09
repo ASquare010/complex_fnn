@@ -1,0 +1,8 @@
+{
+  "selected_label": "piecewise_twist_fixed_s17_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 0.518944355348746,
+    "0.003": 0.5624711314837137
+  }
+}

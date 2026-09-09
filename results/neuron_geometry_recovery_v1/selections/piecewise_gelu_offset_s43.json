@@ -1,0 +1,8 @@
+{
+  "selected_label": "piecewise_gelu_offset_s43_lr3000",
+  "selected_rate": 0.003,
+  "selection_mse_by_rate": {
+    "0.001": 0.5040212795138359,
+    "0.003": 0.41390075782934826
+  }
+}

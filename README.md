@@ -10,11 +10,15 @@ validation loss is 4.1443 versus 4.1054 for full SwiGLU. Earlier three-seed evid
 misses the 1% loss allowance, and native updates are slower. These are promising
 compression measurements, not a completed breakthrough.
 
-The latest activation tests improve synthetic fitting but lose to narrow GELU:
-internal tanh/sine curves reduce error by 5.76%/7.07%; the strongest learned-offset
-recipe improves 14.53% over plain but remains 7.14% worse than narrow GELU.
-The fixed 2:4 sparse comparator passes 16 native checks; its first accelerated
-inference call fails with CUTLASS unsupported in this build. It is unpromoted.
+The latest [coupled-neuron study](research/neuron_geometry_results.md) completes
+336 synthetic fitting runs, three seeds and four task families. Learned pair
+rotations, one-parameter Bezier and grouped residual bumps all miss the promotion
+gates; their errors are 0.72?6.68% above narrow GELU and native updates are slower.
+All 672 checkpoint evaluation scores reproduce exactly. These fixed recipes are
+closed, and their source, proofs, learned shapes and negative results are retained.
+A simple four-shift GELU control improves error by 3.23% over narrow GELU but
+still misses the full-reference objective.
+
 
 ## Start here
 

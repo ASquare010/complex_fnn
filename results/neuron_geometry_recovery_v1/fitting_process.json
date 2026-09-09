@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "results.neuron_geometry_recovery_v1.source.recovery"
+  ],
+  "coordinator_pid": 27288,
+  "started_utc": "2026-09-09T20:58:02.461466+00:00",
+  "protocol_sha256": "bdf33110739141ac94d6764aa7f16245d6e258323b764469b9bf1066e34e7c53",
+  "pid": 28792,
+  "returncode": 0,
+  "elapsed_seconds": 797.489357800001,
+  "finished_utc": "2026-09-09T21:11:19.968759+00:00",
+  "log_sha256": "6fe6e3c5056c66b465fbecffb19c7aff4e5affeccb09295ba77aa357309948be"
+}

@@ -1,0 +1,8 @@
+{
+  "selected_label": "piecewise_narrow_relu_s17_lr3000",
+  "selected_rate": 0.003,
+  "selection_mse_by_rate": {
+    "0.001": 0.5642773732542992,
+    "0.003": 0.47434352586666745
+  }
+}

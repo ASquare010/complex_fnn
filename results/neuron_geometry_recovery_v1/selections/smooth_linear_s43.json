@@ -1,0 +1,8 @@
+{
+  "selected_label": "smooth_linear_s43_lr1000",
+  "selected_rate": 0.001,
+  "selection_mse_by_rate": {
+    "0.001": 2.277747263511022,
+    "0.003": 2.4053600132465363
+  }
+}
