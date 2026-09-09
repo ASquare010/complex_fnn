@@ -1148,3 +1148,24 @@ preserve the piecewise observation, and assign no kernel/longer-training budget.
 The next assay must distinguish nonlinear residual learning from affine fitting
 and include both representable positive controls and stronger established
 nonlinear activations. [Full diagnostic](affine_falsification_results.md).
+
+## H099 - Shared parity mixture on nonlinear residuals (REJECTED AT THIS BUDGET)
+
+A single feature bank mixes bounded-slope even/odd rational bases using four
+learned scalars, with no raw-input matrix or duplicated readout. Biases and
+zero-output initialization strengthen full/narrow GELU, SwiGLU, squared-ReLU
+and StarReLU controls. Gaussian targets have no population affine component.
+
+The 264-run, three-seed, two-rate screen completes 79,200 updates. Twenty-five
+qualification checks, 163 saved pairs, 264 initializations, 528 checkpoint scores
+and 132 selections pass independent verification. Three of four tasks show
+nonlinear learning beyond affine fits. Cubic remains unresolved for ordinary
+models; a privileged known-feature readout learns all four tasks.
+
+Learned mixing improves aggregate MSE 12.39% versus narrow GELU, but only 0.060%
+versus StarReLU and 1.819% versus fixed mixing. It loses one seed to both controls,
+fails the per-task cap, and takes 1.405 times narrow GELU's native update time.
+Close this fixed learned recipe. Preserve fixed mixing's piecewise observation
+without promoting it from post-selection results. No new active model, kernel
+optimization or automatic longer run. The distinct next question is task-blind
+feature discovery, not another scalar-shape refinement. [Results](nonlinear_residual_results.md).

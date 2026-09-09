@@ -97,3 +97,12 @@ wheels/
 # Preserve H090's full repeated endpoint record losslessly; plain copy stays local.
 /results/neuron_geometry_recovery_v1/result.json
 !/results/neuron_geometry_recovery_v1/result.json.gz
+
+# H099: retain all endpoints/diagnostics losslessly; redundant selections stay local.
+/results/nonlinear_residual_v1/selections/
+/results/nonlinear_residual_v1/metrics.csv
+!/results/nonlinear_residual_v1/metrics.csv.gz
+!/results/nonlinear_residual_v1/diagnostics.json.gz
+
+# Historical inventory is losslessly packed; plain local copy remains unchanged.
+/research/evidence/local_artifacts.csv

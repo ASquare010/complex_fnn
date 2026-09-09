@@ -10,17 +10,17 @@ validation loss is 4.1443 versus 4.1054 for full SwiGLU. Earlier three-seed evid
 misses the 1% loss allowance, and native updates are slower. These are promising
 compression measurements, not a completed breakthrough.
 
-The latest [affine-control diagnostic](research/affine_falsification_results.md)
-changes the interpretation of the nonlinear lead. It improves aggregate error
-only **1.724% over ordinary affine least squares**, missing the preset 2% gate,
-while requiring more coefficients and retaining a native inference speed deficit.
-Its 12.60% improvement on piecewise targets survives as a specific observation.
+The latest [nonlinear-residual study](research/nonlinear_residual_results.md)
+tests a new four-parameter rational mixture in 264 runs. It reduces aggregate
+synthetic error 12.39% versus narrow GELU, but only 0.060% versus StarReLU and
+costs 40.49% more native update time than narrow GELU. It fails the frozen gates
+and is rejected at this budget. All 528 checkpoint scores reproduce exactly.
 
-The prior 12.92% advantage over narrow GELU remains a correct synthetic measurement;
-a stronger control was needed. All 24 affine/linear fits and 168 neural parity
-evaluations were independently checked. The general lead is closed at this
-budget. Future candidates must demonstrate nonlinear learning beyond affine
-structure before earning refinement or a larger experiment.
+The new data isolates nonlinear structure: three tasks are learned, while cubic
+remains unresolved for ordinary models. Known-feature controls learn all four.
+This narrows the next question to feature discovery and optimization, without
+promoting another small activation improvement. The earlier
+[affine-control finding](research/affine_falsification_results.md) is preserved.
 
 ## Start here
 

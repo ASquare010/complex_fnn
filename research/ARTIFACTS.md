@@ -12,7 +12,7 @@ weights or data, and cannot independently rescore historical checkpoints without
 those artifacts. Reports and audit receipts describe measurements already made;
 they do not substitute for the missing raw artifacts in a new verification.
 
-The [local artifact inventory](evidence/local_artifacts.csv) records relative
+The [local artifact inventory](evidence/local_artifacts.csv.gz) records relative
 paths, byte sizes and SHA256 hashes at release time. It is an inventory, not a
 backup or a download service. Keep the local workspace or a separate backup if
 you need the excluded tensors. File links to raw results in historical reports
@@ -88,3 +88,20 @@ The H096-H098 inventory is
 98 local files, 1,042,485,397 bytes. Its
 [release receipt](evidence/affine_falsification_release.json) records source
 preservation and independent checks. This inventory is not a tensor backup.
+
+H099 retains source, frozen metadata, all 264 endpoints in metrics.csv.gz,
+learned-shape/gradient diagnostics in diagnostics.json.gz, figures and the audited
+summary. Raw datasets, checkpoints, training histories and repeated source ZIP
+stay local. Per-run selection JSON duplicates the selected flags in the endpoint
+table and is excluded. The release source verifies the entire frozen source tree.
+
+The original H087 inventory is now stored losslessly as local_artifacts.csv.gz;
+its original CSV remains unchanged locally. Decompress with the exclusive-open
+procedure above when following a historical plain-CSV reference. Both hashes and
+sizes are recorded in evidence/nonlinear_residual_packing.json. This repacks
+tracked files without erasing historical research or rewriting Git history.
+
+The [H099 inventory](evidence/nonlinear_residual_artifacts.csv.gz) indexes 1,002
+local files and 1,284,582,078 bytes. Its [release receipt](evidence/nonlinear_residual_release.json)
+records exact score checks, frozen-source preservation and the rejected decision.
+The inventory hashes the local artifacts; it does not contain or back them up.

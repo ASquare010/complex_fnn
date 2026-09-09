@@ -6,7 +6,35 @@ The latest completed longer-budget language experiment is matched-budget BlockSh
 This fixed duration recipe is closed. Further training needs a distinct, justified hypothesis.
 
 
-## Latest result: the stronger affine control closes the general lead
+## Latest result: nonlinear residual learning, but no activation promotion
+
+H099 completes 264 fresh runs: eleven forms, four Gaussian nonlinear-residual
+tasks, three seeds and two rates, each with 300 updates and batch 256. The study
+takes 5.76 minutes. All 25 qualification checks and 163 saved tensor comparisons
+pass; independent audit reproduces 528 checkpoint scores and 132 selections.
+
+A four-parameter learned rational mixture uses 351,052 parameters, 70.29% fewer
+than full GELU. Aggregate MSE improves 12.39% versus narrow GELU and 13.79%
+versus narrow SwiGLU, but only 0.060% versus established StarReLU. It loses one
+seed to StarReLU, regresses on individual tasks and costs 40.49% more native
+update time than narrow GELU. Its fixed recipe is rejected at this budget.
+
+Nonlinear learning beyond affine structure is demonstrated on three tasks.
+Cubic remains near zero-predictor error for every ordinary model, although the
+privileged known-feature readout learns it. This exposes a feature-discovery or
+optimization question, not evidence that a new activation solved cubic learning.
+All full and narrow models have biases and start with zero output; this is a
+changed, explicitly documented assay, not a direct continuation of H094 scores.
+
+Learned curves and gradients are recorded. No active model is added and no
+kernel or longer run is allocated to the rejected mixture. The full parameter,
+language NLL, compute, convergence, scale and broader-data goal remains unmet.
+
+[Complete findings](nonlinear_residual_results.md),
+[frozen plan](nonlinear_residual_plan.md),
+[audited result](../results/nonlinear_residual_v1/result.json).
+
+## Previous result: the affine control closes the older general lead
 
 H096-H098 fits ordinary linear and affine controls to exactly the training
 samples seen by each H094 run. The even-feature recipe is only **1.724% better

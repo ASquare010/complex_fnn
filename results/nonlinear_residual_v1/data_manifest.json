@@ -1,0 +1,11 @@
+{
+  "sha256": "530824ffb514862f7e82cb2a1745363857b58e69f6f840e697a6d7b64770c7c4",
+  "input_seed": 9860,
+  "train_rows": 65536,
+  "selection_rows": 4096,
+  "reporting_rows": 4096,
+  "input_width": 384,
+  "latent_width": 16,
+  "batch": 256,
+  "updates_per_run": 300
+}

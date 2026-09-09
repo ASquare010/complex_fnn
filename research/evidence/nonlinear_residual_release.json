@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "research_goal_achieved": false,
+  "base_commit": "021bd1f7f018e843e424b4a7ee42caf91a917374",
+  "verdict": "REJECTED_AT_THIS_BUDGET",
+  "qualification_checks": 25,
+  "saved_pairs_rechecked": 163,
+  "runs": 264,
+  "updates": 79200,
+  "presentations": 20275200,
+  "affine_fits": 12,
+  "exact_initializations": 264,
+  "exact_checkpoint_scores": 528,
+  "rate_selections_verified": 132,
+  "frozen_sources_unchanged": 82,
+  "frozen_anchors_unchanged": 2,
+  "maintained_sources_unchanged": 53,
+  "active_tests_rerun": false,
+  "reason": "Maintained numerical source unchanged",
+  "scoped_lint": "PASS",
+  "document_local_links_checked": 28,
+  "figures_visually_reviewed": [
+    "results/nonlinear_residual_v1/plots/comparison.png",
+    "results/nonlinear_residual_v1/plots/learned_shapes.png",
+    "results/nonlinear_residual_v1/plots/training.png"
+  ],
+  "local_artifact_files": 1002,
+  "local_artifact_bytes": 1284582078,
+  "inventory": {
+    "path": "research/evidence/nonlinear_residual_artifacts.csv.gz",
+    "sha256": "6fe67c3f83ef0a01b266acc1ac469dba557210ff7f6f17b0959cd29d8cbac7ac"
+  },
+  "post_audit_sources": {
+    "results/nonlinear_residual_v1/source/report.py": "688b002960a8ac147a9a90326894ddf96ad4424451ed48d36e8c3a0809df4f41",
+    "results/nonlinear_residual_v1/source/release.py": "1f6ce915916cbfbf6ddb779a570732dd3dd1bfd2636e3ec87d155206875d8cf1"
+  },
+  "anchors": {
+    "results/nonlinear_residual_v1/result.json": "d26956efea4944f3eee03d1d4a4bc516ea3c7dd3d6a6d46f01a1beddf4a34d35",
+    "results/nonlinear_residual_v1/study_process.json": "7dedad4148a97e3e00a392acdd957cbeb56a0ba2dbc6dee655f93b7de887d5ec",
+    "results/nonlinear_residual_v1/audit_process.json": "a67dbde7e50ec7d6c5d12c3a3a82ead7b3a64c3413171b85e23a4ac47afa0110",
+    "research/evidence/nonlinear_residual_packing.json": "8fdcb8e465f15a36b739a226a33e2f3c4041c5cf22422cd76f54ae886086579d",
+    "research/nonlinear_residual_results.md": "96eee5bb05066a906b568c57c576cbcc5816f66aab9d81301465b76993289566"
+  }
+}
