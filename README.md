@@ -10,15 +10,16 @@ validation loss is 4.1443 versus 4.1054 for full SwiGLU. Earlier three-seed evid
 misses the 1% loss allowance, and native updates are slower. These are promising
 compression measurements, not a completed breakthrough.
 
-The latest [coupled-neuron study](research/neuron_geometry_results.md) completes
-336 synthetic fitting runs, three seeds and four task families. Learned pair
-rotations, one-parameter Bezier and grouped residual bumps all miss the promotion
-gates; their errors are 0.72?6.68% above narrow GELU and native updates are slower.
-All 672 checkpoint evaluation scores reproduce exactly. These fixed recipes are
-closed, and their source, proofs, learned shapes and negative results are retained.
-A simple four-shift GELU control improves error by 3.23% over narrow GELU but
-still misses the full-reference objective.
+The latest [direct-input basis study](research/input_basis_results.md) completes
+336 synthetic runs with three seeds. Three richer bases are rejected because a
+simpler even-feature control performs better. That control lowers aggregate error
+12.92% versus narrow GELU at300 updates. Its redundant readout folds to282,624
+stored weights (76.04% fewer than full), preserving measured MSE within1e-8.
 
+Training used350,208 weights. Native inference remains about2.02 times slower than
+narrow GELU, and language quality is untested. Keep the folded even-feature source
+as an unvalidated lead; no new active architecture or breakthrough is claimed.
+The earlier pair rotations, Bezier and grouped-bump recipes remain closed.
 
 ## Start here
 

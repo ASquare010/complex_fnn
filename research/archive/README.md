@@ -111,3 +111,15 @@ Use that snapshot for the former active source paths. The readable retired tree
 is intentionally historical and does not participate in active tests or imports.
 No data, checkpoint or completed result was deleted. Large raw artifacts remain
 local under the [artifact policy](../ARTIFACTS.md).
+
+## H091 unrun partial-feature draft
+
+The [partial-GELU plan](h091_unrun_partial_feature_lift.md) and
+[prototype](h091_unrun_partial_feature_lift.py) were superseded before freezing,
+qualification or training. They are preserved verbatim for provenance, not
+reported as a failed experiment. H092 instead tests direct-input nonlinear bases
+without a fixed GELU/ReLU/SwiGLU base in the three candidates.
+
+Active model equations now live in each model's README. The redundant model.md
+files were consolidated, while frozen historical snapshots retain their original
+documentation and paths.

@@ -59,3 +59,37 @@ wheels/
 # H090: retain PNG figures publicly; identical vector exports remain local.
 /results/neuron_geometry_recovery_v1/plots/*.svg
 !/results/neuron_geometry_recovery_v1/qualification_preservation.json
+
+# H094: all-rate CSV includes selected flags; keep compact compressed public tables.
+# Detailed selections and figures remain local and are indexed, not deleted.
+/results/input_basis_fit_v1/selections/
+/results/input_basis_fit_v1/metrics.csv
+!/results/input_basis_fit_v1/metrics.csv.gz
+/results/input_basis_fit_v1/plots/
+
+# H092-H095: preserve repetitive frozen metadata losslessly in gzip form.
+/results/input_basis_lift_v1/before.json
+!/results/input_basis_lift_v1/before.json.gz
+/results/input_basis_lift_v1/protocol.json
+!/results/input_basis_lift_v1/protocol.json.gz
+/results/input_basis_recovery_v1/before.json
+!/results/input_basis_recovery_v1/before.json.gz
+/results/input_basis_recovery_v1/protocol.json
+!/results/input_basis_recovery_v1/protocol.json.gz
+/results/input_basis_fit_v1/before.json
+!/results/input_basis_fit_v1/before.json.gz
+/results/input_basis_fit_v1/protocol.json
+!/results/input_basis_fit_v1/protocol.json.gz
+/results/input_basis_fold_v1/before.json
+!/results/input_basis_fold_v1/before.json.gz
+/results/input_basis_fold_v1/protocol.json
+!/results/input_basis_fold_v1/protocol.json.gz
+/results/input_basis_fit_v1/artifact_inventory.csv
+/results/input_basis_fold_v1/result.json
+!/results/input_basis_fold_v1/result.json.gz
+
+# Final compact exports retain the exact full audit and original DLL failure.
+/results/input_basis_fit_v1/result.json
+!/results/input_basis_fit_v1/result.json.gz
+/results/input_basis_lift_v1/coordinator_status.json
+!/results/input_basis_lift_v1/coordinator_status.json.gz

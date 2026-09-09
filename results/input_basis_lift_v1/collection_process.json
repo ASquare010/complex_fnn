@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "pid": 24964,
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-p",
+    "no:anyio",
+    "-q",
+    "-x",
+    "--tb=short",
+    "results\\input_basis_lift_v1\\source\\test_qualification.py",
+    "--collect-only"
+  ],
+  "started_utc": "2026-09-09T22:12:02.746186+00:00",
+  "returncode": 0,
+  "finished_utc": "2026-09-09T22:12:05.234251+00:00",
+  "log_sha256": "41f8ac7c1177535f6ad969a6628739c412565420c23b0766c4051e7acd0aca58"
+}

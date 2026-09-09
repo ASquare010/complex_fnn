@@ -5,7 +5,26 @@ unmet: at least 70% fewer FFN weights, within 1% relative validation loss of BOT
 full GELU and SwiGLU, while beating calibrated narrow controls. Consistent
 multi-seed, longer-training, scale and broader-data evidence is still required.
 
-## Latest completed experiment: learned neuron geometry
+## Latest completed experiment: direct-input nonlinear bases
+
+H094 tests rational, Hermite and trigonometric feature pairs without a fixed
+ReLU/GELU/SwiGLU candidate base. The336-run grid uses the same four synthetic
+families with fresh input seed9844:65,536 train /4,096 selection /4,096 reporting
+samples, batch256, three optimization seeds, two rates and300 updates per run.
+It completes100,800 updates in5.82 minutes. All672 independent checkpoint scores
+and336 initializations reproduce exactly.
+
+All three richer recipes fail their full promotion gates. The simpler even-feature
+control is the useful finding:12.92% lower aggregate MSE than narrow GELU and
+8.89% lower than full GELU at this short budget. Post-training folding reduces
+stored weights from350,208 to282,624 (76.04% fewer than full) with less than1e-8
+MSE change across12 checkpoints. Training still used350,208 weights.
+
+The folded model's native batch256 inference is0.261 ms versus0.129 ms for narrow
+GELU. It remains an unvalidated synthetic lead with a speed deficit, not a
+breakthrough or an earned language-model promotion. [Full report](input_basis_results.md).
+
+## Previous experiment: learned neuron geometry
 
 We tested a different mechanism: input-dependent rotations of feature pairs,
 using four shared learned parameters, alongside one-parameter Bezier and

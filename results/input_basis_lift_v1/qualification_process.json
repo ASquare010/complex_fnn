@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "pid": 14640,
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-p",
+    "no:anyio",
+    "-q",
+    "-x",
+    "--tb=short",
+    "results\\input_basis_lift_v1\\source\\test_qualification.py"
+  ],
+  "started_utc": "2026-09-09T22:12:05.252136+00:00",
+  "returncode": 2,
+  "finished_utc": "2026-09-09T22:12:21.570199+00:00",
+  "log_sha256": "3738e8b5e49b4871c67757bd105bc15bd426106dbf653cfc501471866eda0ad6"
+}

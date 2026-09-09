@@ -5,6 +5,49 @@ The latest completed longer-budget language experiment is matched-budget BlockSh
 2,801,664 FFN / 9,099,648 total weights: 70.3125% FFN and 42.1700% total reduction.
 This fixed duration recipe is closed. Further training needs a distinct, justified hypothesis.
 
+
+## H094-H095: broader bases eliminated; simpler even-feature lead retained
+
+The three richer rational/Hermite/trigonometric pair recipes are closed at the
+fixed budget. They reduce aggregate reporting MSE by7.21-9.31% versus narrow
+GELU, but a simpler duplicated-even control is stronger. The additional odd
+basis does not earn its parameter allocation in this experiment.
+
+The even control lowers aggregate MSE by12.92% versus narrow GELU and
+8.89% versus full GELU at300 updates. This is a post-selection
+synthetic lead, not a validated language architecture. A direct-GELU control
+already improves7.58% versus narrow GELU, so gains cannot be assigned entirely
+to a new nonlinearity. Core-linear is slightly better on the multiplicative
+task, and the oscillatory task remains near the zero-predictor error.
+
+The duplicate control folds exactly in real arithmetic:
+A*x + V*E(U*x) + W*E(U*x) = A*x + (V+W)*E(U*x),
+where E(z)=z^2/(1+abs(z)). Twelve selected checkpoints pass FP32 output/input-gradient
+checks and reporting rescoring after folding; maximum absolute MSE change is
+below1e-8. One FP64 function/Jacobian check and26 saved tensor-pair rechecks pass.
+
+**Training used350,208 weights (70.31% fewer than full). Folding reduces stored
+and inference weights to282,624 (76.04% fewer).** It is not evidence that training
+from scratch with282,624 weights reproduces these results or AdamW trajectories.
+
+Native FP32 batch256 inference is0.261 ms for folded even versus
+0.297 ms for duplicate,0.129 ms for narrow GELU,
+0.177 ms for full GELU and0.226 ms for full SwiGLU.
+Folding lowers its own inference time by12.11%,
+but it remains2.02 times narrow GELU. The compute
+target is therefore unmet. This is a native inference measurement, separate
+from the H094 training-time gate.
+
+Keep the folded even-feature source as an unvalidated research lead. Do not
+register a new model or automatically allocate refinement/longer training.
+The three richer fixed recipes remain rejected. No test of a language corpus,
+convergence, larger scale or broader real data occurred in these rounds.
+
+[Detailed fitting results](input_basis_results.md),
+[folding plan](input_basis_fold_plan.md),
+[folded summary](../results/input_basis_fold_v1/summary.json),
+[compact release receipt](evidence/input_basis_release.json).
+
 ## Latest completed geometry study (H088?H090)
 
 **All four learned geometry recipes are rejected at the fixed fitting budget.**

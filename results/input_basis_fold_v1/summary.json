@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "optimizer_updates": 0,
+  "folded_parameters": 282624,
+  "ffn_reduction_percent": 76.04166666666666,
+  "checkpoint_checks": 12,
+  "saved_tensor_pairs_rechecked": 26,
+  "mean_median_gpu_event_ms": {
+    "folded": 0.2612647995352745,
+    "duplicate": 0.29726800123850505,
+    "narrow_gelu": 0.12917933389544486,
+    "full_gelu": 0.17705826659997304,
+    "full_swiglu": 0.22569026549657187
+  },
+  "protocol_sha256": "0ecc30fc0b9d7ecc3b96227acb69ae6689fd22f54592a50b6ee06aed465092b7",
+  "research_goal_achieved": false,
+  "raw_result_sha256": "da3bff4597030f2313b21c74fa140bff947dbf3e5a867160b9e9ac68954dd5af",
+  "per_checkpoint": [
+    {
+      "task": "smooth",
+      "seed": 17,
+      "folded_mse": 0.4471354807416598,
+      "original_mse": 0.44713548570871353
+    },
+    {
+      "task": "smooth",
+      "seed": 29,
+      "folded_mse": 0.44788648436466855,
+      "original_mse": 0.44788648188114166
+    },
+    {
+      "task": "smooth",
+      "seed": 43,
+      "folded_mse": 0.4480654572447141,
+      "original_mse": 0.44806545972824097
+    },
+    {
+      "task": "oscillatory",
+      "seed": 17,
+      "folded_mse": 1.0131368935108185,
+      "original_mse": 1.013136903444926
+    },
+    {
+      "task": "oscillatory",
+      "seed": 29,
+      "folded_mse": 1.0133147835731506,
+      "original_mse": 1.013314773639043
+    },
+    {
+      "task": "oscillatory",
+      "seed": 43,
+      "folded_mse": 1.0139546791712444,
+      "original_mse": 1.0139546791712444
+    },
+    {
+      "task": "multiplicative",
+      "seed": 17,
+      "folded_mse": 0.8756665736436844,
+      "original_mse": 0.8756665786107382
+    },
+    {
+      "task": "multiplicative",
+      "seed": 29,
+      "folded_mse": 0.8754372348388036,
+      "original_mse": 0.8754372298717499
+    },
+    {
+      "task": "multiplicative",
+      "seed": 43,
+      "folded_mse": 0.8757890462875366,
+      "original_mse": 0.8757890512545904
+    },
+    {
+      "task": "piecewise",
+      "seed": 17,
+      "folded_mse": 0.41250549505154294,
+      "original_mse": 0.41250549008448917
+    },
+    {
+      "task": "piecewise",
+      "seed": 29,
+      "folded_mse": 0.4144271637002627,
+      "original_mse": 0.41442715873320896
+    },
+    {
+      "task": "piecewise",
+      "seed": 43,
+      "folded_mse": 0.4117456053694089,
+      "original_mse": 0.4117456153035164
+    }
+  ],
+  "mean_median_wall_ms": {
+    "folded": 0.2630291666662288,
+    "duplicate": 0.299122916669603,
+    "narrow_gelu": 0.1309004166652509,
+    "full_gelu": 0.17893208333248367,
+    "full_swiglu": 0.22753791666711246
+  },
+  "max_peak_bytes": {
+    "folded": 19890176,
+    "duplicate": 20127744,
+    "narrow_gelu": 19767296,
+    "full_gelu": 25739264,
+    "full_swiglu": 26345472
+  }
+}

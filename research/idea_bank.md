@@ -1095,3 +1095,36 @@ comparison (-3.227% versus narrow GELU) while still losing to full GELU by
 11.18%; retain it as a control. Learnable geometry is not demonstrated to
 replace width. [Full result](neuron_geometry_results.md),
 [precision investigation](neuron_geometry_precision_results.md).
+
+## H091-H094 - Direct-input nonlinear pairs (CLOSED AT THIS BUDGET)
+
+H091's partial-GELU draft was superseded without execution; its exact source and
+plan remain in the archive. H092/H093 qualify direct input plus rational, Hermite
+or trigonometric even/odd feature pairs at 350,208 weights. All25 unchanged checks
+pass in an explicit single-process recovery after a Windows DLL import failure.
+No numerical test or optimizer update ran in the failed launch.
+
+The direct feature map preserves input distances before the final readout, but
+the readout can remove directions. Transformer residual connections already
+preserve an input route; this theorem is not evidence of language-model advantage.
+
+H094 allocates a fixed300-step, batch256 screen:14 forms, four fresh synthetic
+tasks, three seeds and two rates. Simple duplicate/linear/antipodal and direct-GELU
+controls test whether the nonlinear basis earns its cost. No automatic larger
+allocation follows. [Qualification](input_basis_lift_plan.md),
+[frozen fitting plan](input_basis_fit_plan.md).
+
+H094 completes336 runs in5.82 minutes and its independent audit reproduces672
+scores exactly. Rational/Hermite/trig lower aggregate MSE7.21-9.31% versus
+narrow GELU but lose4.15-6.56% to duplicated-even; all fail the frozen gates.
+These fixed richer recipes are eliminated without a larger allocation.
+
+## H095 - Fold the stronger even-feature control (UNVALIDATED LEAD)
+
+The observed duplicated-even control is12.92% below narrow GELU and8.89% below
+full GELU at300 updates. Folding V/W into V+W reduces inference weights to282,624
+(76.04% below full); training used350,208 (70.31% below full). All12 checkpoint
+output/Jacobian/MSE checks pass, maximum MSE change below1e-8, zero training updates.
+Native inference improves from0.297 to0.261 ms but narrow GELU takes0.129 ms.
+Retain this simpler mechanism for a distinct future hypothesis, not automatic
+refinement or promotion. [Report](input_basis_results.md), [fold plan](input_basis_fold_plan.md).
