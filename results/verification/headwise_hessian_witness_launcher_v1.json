@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "results/verification/headwise_hessian_witness_v1.py"
+  ],
+  "compute_device": "cpu",
+  "returncode": 0,
+  "seconds": 1.9822502999995777
+}

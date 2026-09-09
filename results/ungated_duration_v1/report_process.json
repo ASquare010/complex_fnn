@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "source_sha256": "6cba2f489ed3c37dc3a75b7d0d64b4ec5575b7d79731d4dd44e9ff4d3d001b68",
+  "coordinator_pid": 26052,
+  "started_utc": "2026-09-08T10:46:47.826102+00:00",
+  "scientific_reruns": 0,
+  "scientific_result_sha256": "32d51f788b31d6c16b9f6eacc1965259a40c35dcd52ffe6fa3d88cd04378ae35",
+  "scientific_finish_process_sha256": "b6286ab6a9191a3c1973150bcea6fee78bd5fbbee9fad116f32efeb79562cf9b",
+  "pid": 14248,
+  "returncode": 0,
+  "finished_utc": "2026-09-08T10:46:50.250630+00:00",
+  "elapsed_seconds": 2.421666400000504,
+  "source_unchanged": true,
+  "scientific_source_unchanged": true,
+  "log_sha256": "d5680fc9e10ec61fab43062d59b4e6e678ca5fc06814b5138cf17db62ff82f51"
+}

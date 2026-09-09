@@ -1,0 +1,104 @@
+{
+  "model": {
+    "variant": "gelu",
+    "vocab_size": 4096,
+    "width": 192,
+    "layers": 4,
+    "heads": 6,
+    "context": 128,
+    "hidden": 0,
+    "groups": 8
+  },
+  "training": {
+    "steps": 800,
+    "batch_size": 16,
+    "learning_rate": 0.0006,
+    "weight_decay": 0.1,
+    "seed": 17,
+    "eval_batches": 16,
+    "log_every": 50,
+    "precision": "auto",
+    "device": "cuda"
+  },
+  "precision": "bf16",
+  "environment": {
+    "python": "3.12.12",
+    "torch": "2.14.0+cu132",
+    "cuda": "13.2",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "vram_bytes": 8585216000,
+    "bf16_supported": true,
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "provenance": {
+    "git_commit": "55aa0775d8639173179a48ee90749add29770cf6",
+    "git_status": "M .gitignore\n M README.md\n M doc/RESEARCH_GOAL.md\n M doc/RESEARCH_RULES.md\n M main.py\n M pyproject.toml\n M uv.lock\n?? configs/\n?? research/\n?? results/\n?? src/\n?? tests/",
+    "source_files": {
+      "configs/screening.json": "7d7396a15342cd0cb4cb38b67d699aa27586af3b50bd983b4667d626970e9866",
+      "configs/structured_screening.json": "ea384ed4f679d3583f85115dca4749fc5318629c2bda0a8e5f95559e3b7b9341",
+      "main.py": "6dc7e5986518261ac2332505f507c59956ed11376ad232e497bba654952c8297",
+      "pyproject.toml": "4b3557ea82725990b2824cb75f9ca5566228d0e5b9616aca4a77a28ae1c5f163",
+      "src/__init__.py": "8a10c2346264d6b5663dc204a9d7e203f76ac9f9ef2866ef73cc7c0e9c4862ea",
+      "src/core/__init__.py": "8153e37e4466ca8acc572a6c00f3321dcbd435278bed0e0bebeeef9278ef4a14",
+      "src/core/analysis.py": "d4b835a568f6ba695e915e7cd4287bceb2936095605f7d31dd857286f9c56e91",
+      "src/core/benchmark.py": "8e313faa821aad1774f1b3f891eadb795941622ab73ebb7b49a32384ebb0690c",
+      "src/core/cli.py": "6a968c15b16aeb6820b02ac9d82d10917b26a36c0b20d318b1263b98e01a04c2",
+      "src/core/config.py": "e62e69d20b52f79fee2563a7f4edc8c797e9cb3e4161982e11492afc83797b0c",
+      "src/core/data.py": "89e105d33d3c15cac5e2961c94a5cc3d6e89d99c5a31552a72b6eb6d53aef5a9",
+      "src/core/diagnostics.py": "c0be67a9d26936f2edda4aa661903a3d420b921a095dcd8b7065b68107dd39cf",
+      "src/core/functions.py": "77e23b4c19de3767d27ee55ae2059adb1bc0183f60071c00b7ff22f809502554",
+      "src/core/plots.py": "fb975db08bb93ad37ca0c449ad8db6f5d4a0bbcc6f793f813a0b913f22f16a4d",
+      "src/core/report.py": "9020c05566a8e633b7a28268a03872244a70a5960cf55c09a36d879993f9b3ca",
+      "src/core/reproducibility.py": "3dda7f1e322456417359948e5e0f41dcfad2827bacfb9b91da25305bba69748c",
+      "src/core/stability.py": "c1404938144192fbcd353284796c7d8c7d9a6d4451de1877ef1606aa90f49859",
+      "src/core/trainer.py": "282c2381c2b3663c50be6a39b2fc3b8d95db1af9ad797cc6e5a8826a0e0bf1c1",
+      "src/core/transformer.py": "eb7bf7fab1602f142b65d3e24236870e2993b257700bd9d5028fc0df6f924c2c",
+      "src/model_name_1/__init__.py": "a4fe296953ea8fa78765cd87938472c522701b167e2984cd0bf336811f152abb",
+      "src/model_name_2/__init__.py": "2283ef5aa37784794712783beadca67f872e311ae0f563e0172fa115c19230ce",
+      "src/model_name_3/__init__.py": "cece142c23ddc8249689f3e339bbd46bedb49882562d67e7ff8f9223c92effbb",
+      "src/model_name_4/__init__.py": "10e287fc98e26a348ab9e2ef9ddb74fa8f1d8d8791e784d20f3450696f1517da",
+      "tests/test_baselines.py": "9ce924f74667a5261cd60c2c37af1c619d33717dacbacda655c7c39cc687280a",
+      "tests/test_bezier.py": "4258c94ceb390f45be62ba1aad0165042ece0b77fcf7d59043d5341548eddb99",
+      "tests/test_data.py": "fbd70d87f7626620b001e11e1f7540740bf82b4fccf20e73111695a554de659f",
+      "tests/test_reporting.py": "e1496fbb6bef4246a6d8cdf7bc541deebe4a1ec6fe765c866787f7c05bafde3b",
+      "tests/test_sharing.py": "9882e33245b0562d2a215afa0f5a29c4b73a38abdd9d17664dfec0e4685a5810",
+      "tests/test_structured.py": "c55d02445baf72bb856407ff70ac54160bde3fb82d0e3a9421253fc4668926dd",
+      "uv.lock": "9c6acbda0418bc25409e14e4c7134cbb2711d3f3136bc9bad1854ff4db5b3524"
+    },
+    "source_hash": "271e9b8040e7535779b05347e6de73005b02e5deed4614fef08022c7dd287ef0"
+  },
+  "data": {
+    "dataset": "roneneldan/TinyStories",
+    "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+    "source_template": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+    "selection": "first N complete stories from each V2-GPT4 official split",
+    "requested_stories": {
+      "train": 12000,
+      "valid": 1000
+    },
+    "tokenizer": "train-only byte-level BPE",
+    "vocab_size": 4096,
+    "splits": {
+      "valid": {
+        "stories": 1000,
+        "tokens": 200803,
+        "removed_duplicates": 0
+      },
+      "train": {
+        "stories": 12000,
+        "tokens": 2457760,
+        "removed_duplicates": 0
+      }
+    },
+    "files": {
+      "tokenizer.json": "c98c93a080cdcac74e0ecb95358343bd30d7f2f2e4fad4ca0496dc739b760056",
+      "train.json": "acd2119f599ee962090a5e906c4867c7e279f1b98269d14e7cd81e15a25391bf",
+      "train.npy": "2675dff5f643827dfaba423d2e2dd1017f1ae3f8320b3bc8b42a3860a67f718a",
+      "valid.json": "406aa4a11829985dd350321ebd4094bf4fedf751e83062aeb29a84fd59d36008",
+      "valid.npy": "38ed43f90d50a193237784c3be7dafffc44b58738bf0b0eca146140635f7ad63"
+    }
+  },
+  "started_utc": "2026-09-06T06:04:04.804323+00:00",
+  "protocol": "micro_v1"
+}

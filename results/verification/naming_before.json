@@ -1,0 +1,62 @@
+{
+  "gelu": {
+    "parameters_sha256": "a2671ec555370b5d6238c0fce9502d70c7a2270e0c5eb04ee02535a2ca800e7e",
+    "logits_sha256": "134c0b6e381adde9d642dabe197bbbcde6c4032e2eb060347d09f92b97a004a0"
+  },
+  "relu": {
+    "parameters_sha256": "a2671ec555370b5d6238c0fce9502d70c7a2270e0c5eb04ee02535a2ca800e7e",
+    "logits_sha256": "b9ed936c130d6bcebde64716711bdbb13cfd7bf6de70d618178c906ac4dcd7ac"
+  },
+  "silu": {
+    "parameters_sha256": "a2671ec555370b5d6238c0fce9502d70c7a2270e0c5eb04ee02535a2ca800e7e",
+    "logits_sha256": "16fbbcfdd08c31439d02038fd93a400e480b7499b54e29eee63fcb9ffc3ada63"
+  },
+  "swiglu": {
+    "parameters_sha256": "e1f7c3624a67569ef3602f7364bf1cd24f482e42b2d9e5ceaa488232a9489fbf",
+    "logits_sha256": "b5f57b50e179f4b7b1cb8c578bbf704acf778e9dd39c49a1282240ba9f3c3abc"
+  },
+  "gelu_narrow": {
+    "parameters_sha256": "010ffb7d441814ee321024e3c7a535be6a772413bd25cd8467f96f6dba996b28",
+    "logits_sha256": "ccd80671254d222b3bf133577a1add70ce0db766c79eca8f49a15420cf16ec15"
+  },
+  "bezier_shared": {
+    "parameters_sha256": "e392e12289d95f801a6ef7ee6105477806fa7c1bbbed8a399eba49db7b953d88",
+    "logits_sha256": "ccd80671254d222b3bf133577a1add70ce0db766c79eca8f49a15420cf16ec15"
+  },
+  "bezier_grouped": {
+    "parameters_sha256": "9c45f3451cf849db29e47314db47d0a3c84b77b647995093bfdf4285fca8e627",
+    "logits_sha256": "ccd80671254d222b3bf133577a1add70ce0db766c79eca8f49a15420cf16ec15"
+  },
+  "swiglu_narrow": {
+    "parameters_sha256": "e53bfca1e7374bc61e82cc65344736bcaf5ca677488071cc9f9561f18a5a29a9",
+    "logits_sha256": "4db2d36d898e16dd8e1d5e5fe0792e3fc36703f1bac996e18a77db25b1b9dd0d"
+  },
+  "structured_gelu": {
+    "parameters_sha256": "77993faadb1863d9b541c90cdc318d5c0fb4f84fe527a1a7da0485f92303d9f0",
+    "logits_sha256": "4fdeccd2b4c5fc7d37966f8f6be46028b281866fe556c89c6f2170df2eed5044"
+  },
+  "structured_swiglu": {
+    "parameters_sha256": "fd9bed518fc9e1ec871a6404297709a5b992c6f245061e84412374121f649ec6",
+    "logits_sha256": "a8d1485992083786bdf14a0c41f8de1cbc5c9c6ea847de8d1815f6124e1b182c"
+  },
+  "structured_swiglu_coupled": {
+    "parameters_sha256": "fd9bed518fc9e1ec871a6404297709a5b992c6f245061e84412374121f649ec6",
+    "logits_sha256": "a616dca28297074fb7cc5ce4cccae2b605daef1fea5c5dae3db72a26d08170e3"
+  },
+  "structured_swiglu_adaptive": {
+    "parameters_sha256": "2e0e39de30ebec4c248eee82de8302c5692eeed903fe360c1d7ddb27642c7966",
+    "logits_sha256": "a8d1485992083786bdf14a0c41f8de1cbc5c9c6ea847de8d1815f6124e1b182c"
+  },
+  "shared_gelu": {
+    "parameters_sha256": "70a7cc7073868b191eb1a8648bf90f9a896ed1b18bd6f290f348a39baa3e6e25",
+    "logits_sha256": "ab2bfdd8ec1f4e2442ac073476b66005c250eadad0ccfd72ee015d0994e2049d"
+  },
+  "shared_swiglu": {
+    "parameters_sha256": "daf9693479ca89865018f95743522b143835a234831bf48b572c01b605be8c3e",
+    "logits_sha256": "bfa69c9162acb074c17633aacc20dc01bd926ae406eb56ec3fcad7dc95670cda"
+  },
+  "shared_swiglu_affine": {
+    "parameters_sha256": "5bb196ecf9d0d6518bda68ec60423ee01b02025c86d9cfa83089e25b6e31ae38",
+    "logits_sha256": "bfa69c9162acb074c17633aacc20dc01bd926ae406eb56ec3fcad7dc95670cda"
+  }
+}

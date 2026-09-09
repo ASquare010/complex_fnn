@@ -1,0 +1,8 @@
+{
+  "selected_cell": "smooth_full_swiglu_s43_lr1000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "smooth_full_swiglu_s43_lr1000": 1.2075764536857605,
+    "smooth_full_swiglu_s43_lr3000": 1.3558621406555176
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-08T04:53:17.895386+00:00",
+  "python": "3.12.12 (main, Feb  3 2026, 22:54:57) [MSC v.1944 64 bit (AMD64)]",
+  "files": {
+    ".venv\\Lib\\site-packages\\torch\\_functorch\\config.py": {
+      "sha256": "e5e4058571e6523b4a48eb08b9bbfce84138eeec759f49e46cdd554575d4e844",
+      "status": "PASS",
+      "ast_top_level_nodes": 72,
+      "tokens": 1184
+    },
+    ".venv\\Lib\\site-packages\\torch\\utils\\_config_module.py": {
+      "sha256": "0fd0944b9d721f31c5b38097eec97e92f0cab359ae0dd8df77921fcddc4c25c3",
+      "status": "PASS",
+      "ast_top_level_nodes": 37,
+      "tokens": 6741
+    },
+    "C:\\Users\\Cuebric\\AppData\\Roaming\\uv\\python\\cpython-3.12-windows-x86_64-none\\Lib\\tokenize.py": {
+      "sha256": "026f566ac63e60d69c8185a3880831b657accc5eac984fadf271fc99a5e5825d",
+      "status": "PASS",
+      "ast_top_level_nodes": 75,
+      "tokens": 3385
+    }
+  },
+  "torch_imported": false,
+  "optimizer_updates": 0,
+  "scientific_worker_retries": 0,
+  "interpretation": "A standalone file parse/tokenization probe only; does not reproduce the original import state or establish its failure cause."
+}

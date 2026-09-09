@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "full_tests_passed": 225,
+  "full_test_record": "results/verification/optimizer_lower_tests_v1.json",
+  "all_tested_sources_still_exact": true,
+  "previous_computation_unchanged": true,
+  "registered_variants": 31,
+  "plans_unchanged": {
+    "activation_correction_repeat_v1": "activation_correction_repeat_plan.md",
+    "affine_activation_screen_v1": "affine_activation_plan.md",
+    "affine_activation_shapes_v1": "affine_activation_plan.md",
+    "activation_correction_execution_v1": "activation_correction_execution_plan.md",
+    "activation_screen_v1": "learnable_activation_plan.md",
+    "activation_shapes_v1": "learnable_activation_plan.md",
+    "activation_execution_v1": "activation_execution_plan.md",
+    "activation_training_repeat_v1": "activation_training_repeat_plan.md",
+    "affine_longer_v2": "affine_activation_longer_plan.md",
+    "affine_replication_v1": "affine_activation_replication_plan.md",
+    "affine_removal_v1": "affine_activation_removal_plan.md",
+    "affine_rate_control_v1": "affine_activation_rate_control_plan.md",
+    "affine_rate_replication_v1": "affine_rate_replication_plan.md",
+    "multihead_integration_v1": "multihead_integration_plan.md",
+    "multihead_screen_v2": "multihead_screen_plan.md",
+    "headwise_screen_v1": "headwise_screen_plan.md",
+    "optimizer_bracket_v1": "optimizer_bracket_plan.md",
+    "optimizer_lower_v1": "optimizer_lower_plan.md"
+  },
+  "local_links_checked": 124,
+  "retained_lm_profile_runs": 152,
+  "step_counts": {
+    "200": 83,
+    "20": 3,
+    "800": 66
+  },
+  "new_completed_trials": 3,
+  "retained_rate_cells": 13,
+  "numerical_failures": 0,
+  "infrastructure_failures": 0,
+  "result_sha256": "ea75bf272c4c3b207865257ded177865d1b38be3406aa0ec390854626ad6baa4",
+  "summary_sha256": "e59a0edd952d6a37dd339e245f182c95af242c51afe207476f68f6d2fe627596",
+  "documents": {
+    "README.md": "25c1e4e4fbf6658ae6111e7e979ee6377c7cccedac314e7cd7f414093901817f",
+    "research/CURRENT_STATE.md": "c5f5209302afec952895eb5b3c1010bdb136f3b0703e91c7160425aa54642b10",
+    "research/idea_bank.md": "e20f7e193f2ee64ce5de869eb28bd87d174d75492d3de351f34db78198cae59e",
+    "research/optimizer_lower_plan.md": "171c7f2290c32df0ed17f0f9b386bb5e1f4110287c1e99112f0939e625dbeb69",
+    "research/optimizer_lower_results.md": "9019e76becafee4d530682a078080c548a1bd5ff0750092a74a1f82ff0ab383d",
+    "research/optimizer_bracket_results.md": "238bd5b1d90ac6dfb767a660dd4afbbeb589e39d089665414c8de716c15926a3",
+    "research/optimizer_rate_geometry.md": "1eddd84dbb5518665f1b16551a7b9ca6147c3abee90ea16488c81b2d3739e558"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-u",
+    "results\\verification\\activation_final_check_v1.py"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"status\": \"complete\",\n  \"original_variants_exact\": 22,\n  \"plans_unchanged\": {\n    \"results/activation_screen_v1/protocol.json\": \"research/learnable_activation_plan.md\",\n    \"results/activation_shapes_v1/protocol.json\": \"research/learnable_activation_plan.md\",\n    \"results/activation_execution_v1/protocol.json\": \"research/activation_execution_plan.md\",\n    \"results/activation_training_repeat_v1/protocol.json\": \"research/activation_training_repeat_plan.md\"\n  },\n  \"local_markdown_links_checked\": 115,\n  \"retained_lm_profile_runs\": 106,\n  \"training_loop_source_check\": {\n    \"training_step_loop_ast_identical_to_native\": true\n  },\n  \"full_test_record\": \"results/verification/activation_tests_v2.json\",\n  \"full_tests_returncode\": 0,\n  \"verification_script_sha256\": \"ee7971f6f23a88e206e6c8922b2b21fe1c0f533554ceed2a70e3c4626ea6f566\"\n}\n",
+  "stderr": "",
+  "earlier_attempt_note": "First launcher lacked repository import path and was corrected. The next attempt produced no final artifact or captured output; a trailing rg returned 1, masking its Python exit status. This launch records the child status directly."
+}

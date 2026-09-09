@@ -1,0 +1,8 @@
+{
+  "selected_cell": "cross_teacher_narrow_s17_lr1000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "cross_teacher_narrow_s17_lr1000": 1.3004912535349529,
+    "cross_teacher_narrow_s17_lr3000": 1.49623703956604
+  }
+}

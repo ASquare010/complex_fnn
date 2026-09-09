@@ -1,0 +1,10 @@
+{
+  "task": "pure_product",
+  "seed": 17,
+  "variant": "swiglu_budget",
+  "train_target_mean": 0.007392885163426399,
+  "train_target_std": 0.3307247757911682,
+  "inputs_sha256": "20bf7f199db31fa6321b568492a2d1cb1bd96b27c438f0e0a48dca9d0feb7f09",
+  "protocol": "../protocol.json",
+  "population_additive_unnormalized_mse_floor": 0.1111111111111111
+}

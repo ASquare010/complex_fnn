@@ -1,0 +1,8 @@
+{
+  "selected_cell": "multiplicative_latent_affine_s29_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "multiplicative_latent_affine_s29_lr1000": 0.921379620830218,
+    "multiplicative_latent_affine_s29_lr3000": 0.9178346743186315
+  }
+}

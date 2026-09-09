@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "inputs": {
+    "results\\residual_geometry_v1\\cpu.json": "aba56ebb714ac9449e55b62cd25dc467c8ab1950413473bb7f389633e3315bb7",
+    "results\\residual_geometry_v1\\gpu.json": "aaf3408633a8e27058f57ada2e708dca9aab621d643657926bb880d9f84c8d05",
+    "results\\residual_geometry_v1\\result.json": "5ccfb940cd0a48961605ed171422e67d9c832fdc9b5dc23111edb0681e6f091c"
+  },
+  "outputs": {
+    "results/plots/residual_geometry.png": "8c897b8fde848d7100e57d83cca963be05ad5fac2cd43a646da301eee601145b",
+    "results/plots/residual_geometry.svg": "4c7e7ae54873f0de49e0af119e9e972f48010b9d81d6637fc2c958f9562b791a"
+  },
+  "optimizer_updates": 0
+}

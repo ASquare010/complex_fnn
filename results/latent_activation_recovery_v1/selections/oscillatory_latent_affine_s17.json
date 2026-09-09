@@ -1,0 +1,8 @@
+{
+  "selected_cell": "oscillatory_latent_affine_s17_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "oscillatory_latent_affine_s17_lr1000": 1.0100451062122981,
+    "oscillatory_latent_affine_s17_lr3000": 1.0040968904892604
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "rows": [
+    {
+      "step": 1,
+      "losses": [
+        8.373016357421875,
+        8.373016357421875
+      ],
+      "gradient_differences": []
+    },
+    {
+      "step": 2,
+      "losses": [
+        8.168368339538574,
+        8.168368339538574
+      ],
+      "gradient_differences": []
+    },
+    {
+      "step": 3,
+      "losses": [
+        7.906848907470703,
+        7.906848907470703
+      ],
+      "gradient_differences": []
+    },
+    {
+      "step": 4,
+      "losses": [
+        7.821697235107422,
+        7.821697235107422
+      ],
+      "gradient_differences": []
+    },
+    {
+      "step": 5,
+      "losses": [
+        7.704473495483398,
+        7.704473495483398
+      ],
+      "gradient_differences": []
+    }
+  ],
+  "note": "Full-size BF16 paired runs isolate finite-precision differences; changes after the first step must not be described as bitwise identical training."
+}

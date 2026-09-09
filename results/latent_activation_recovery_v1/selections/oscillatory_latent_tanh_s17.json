@@ -1,0 +1,8 @@
+{
+  "selected_cell": "oscillatory_latent_tanh_s17_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "oscillatory_latent_tanh_s17_lr1000": 1.010071764389674,
+    "oscillatory_latent_tanh_s17_lr3000": 1.005306343237559
+  }
+}

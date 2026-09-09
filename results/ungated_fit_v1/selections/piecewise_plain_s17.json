@@ -1,0 +1,8 @@
+{
+  "selected_cell": "piecewise_plain_s17_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "piecewise_plain_s17_lr1000": 0.7344390054543813,
+    "piecewise_plain_s17_lr3000": 0.7210140377283096
+  }
+}

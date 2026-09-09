@@ -1,0 +1,8 @@
+{
+  "selected_cell": "multiplicative_narrow_swiglu_s17_lr1000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "multiplicative_narrow_swiglu_s17_lr1000": 1.0003470132748287,
+    "multiplicative_narrow_swiglu_s17_lr3000": 1.009873941540718
+  }
+}

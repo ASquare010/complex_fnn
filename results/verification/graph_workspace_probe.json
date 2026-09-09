@@ -1,0 +1,27 @@
+{
+  "rows": [
+    {
+      "iteration": 0,
+      "before_model": 16384,
+      "with_model": 6996992,
+      "after_capture": 40829952,
+      "after_delete_sync_empty": 17055744
+    },
+    {
+      "iteration": 1,
+      "before_model": 17055744,
+      "with_model": 24036352,
+      "after_capture": 57869312,
+      "after_delete_sync_empty": 25575424
+    },
+    {
+      "iteration": 2,
+      "before_model": 25575424,
+      "with_model": 32556032,
+      "after_capture": 66388992,
+      "after_delete_sync_empty": 34095104
+    }
+  ],
+  "input_bytes": 16384,
+  "interpretation": "Fresh warmup stream per capture; measure persistent allocated memory after deleting every graph/model/output. This diagnoses context workspaces, not live model memory."
+}

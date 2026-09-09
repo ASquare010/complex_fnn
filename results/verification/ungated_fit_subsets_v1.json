@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "post_hoc_descriptive_subsets": true,
+  "decision_gates_changed": false,
+  "optimizer_updates": 0,
+  "corpus_targets": 0,
+  "subsets": {
+    "all_tasks": [
+      "linear",
+      "plain_teacher",
+      "gelu_teacher",
+      "smooth",
+      "oscillatory",
+      "multiplicative",
+      "piecewise"
+    ],
+    "without_linear": [
+      "plain_teacher",
+      "gelu_teacher",
+      "smooth",
+      "oscillatory",
+      "multiplicative",
+      "piecewise"
+    ],
+    "generic_only": [
+      "smooth",
+      "oscillatory",
+      "multiplicative",
+      "piecewise"
+    ]
+  },
+  "ratios": {
+    "all_tasks": {
+      "gelu_same": {
+        "plain": 0.5510686536988921,
+        "gelu_same": 1.0,
+        "narrow_gelu": 0.7971734815423378,
+        "narrow_swiglu": 0.4901434558068029,
+        "full_gelu": 0.9063280011714612,
+        "full_swiglu": 0.5871266671893085
+      },
+      "gelu_matched": {
+        "plain": 0.49729177188245843,
+        "gelu_same": 0.9024134625414245,
+        "narrow_gelu": 0.7193800817248235,
+        "narrow_swiglu": 0.44231205309663674,
+        "full_gelu": 0.8178825897353865,
+        "full_swiglu": 0.5298310086887105
+      }
+    },
+    "without_linear": {
+      "gelu_same": {
+        "plain": 0.7794487782125405,
+        "gelu_same": 1.0,
+        "narrow_gelu": 0.9632290340096525,
+        "narrow_swiglu": 0.7325869410783346,
+        "full_gelu": 1.0203056894760067,
+        "full_swiglu": 0.819912088501573
+      },
+      "gelu_matched": {
+        "plain": 0.7652980230404948,
+        "gelu_same": 0.9818451762738062,
+        "narrow_gelu": 0.9457417806892554,
+        "narrow_swiglu": 0.7192869542989457,
+        "full_gelu": 1.0017822195367372,
+        "full_swiglu": 0.8050267290638515
+      }
+    },
+    "generic_only": {
+      "gelu_same": {
+        "plain": 0.8163629209863833,
+        "gelu_same": 1.0,
+        "narrow_gelu": 0.966714431832318,
+        "narrow_swiglu": 0.7643719716691847,
+        "full_gelu": 1.0118887914856394,
+        "full_swiglu": 0.8373689241211097
+      },
+      "gelu_matched": {
+        "plain": 0.8055798972561317,
+        "gelu_same": 0.9867913847468441,
+        "narrow_gelu": 0.9539454728425717,
+        "narrow_swiglu": 0.7542756763851103,
+        "full_gelu": 0.9985231417599247,
+        "full_swiglu": 0.826308440177445
+      }
+    }
+  },
+  "result_sha256": "ffe78ba472c08de05ad840ee31ee391a020bf91b5eca4588eb21b24ca364daaa"
+}

@@ -1,0 +1,8 @@
+{
+  "selected_cell": "piecewise_gelu_same_s29_lr1000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "piecewise_gelu_same_s29_lr1000": 0.5232639486591021,
+    "piecewise_gelu_same_s29_lr3000": 0.5602267881234487
+  }
+}

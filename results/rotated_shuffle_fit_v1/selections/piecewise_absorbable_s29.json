@@ -1,0 +1,8 @@
+{
+  "selected_cell": "piecewise_absorbable_s29_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "piecewise_absorbable_s29_lr1000": 1.049094597498576,
+    "piecewise_absorbable_s29_lr3000": 0.9899246295293173
+  }
+}

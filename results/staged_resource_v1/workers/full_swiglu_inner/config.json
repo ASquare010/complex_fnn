@@ -1,0 +1,58 @@
+{
+  "cell": "full_swiglu_inner",
+  "recipe": "full_swiglu",
+  "scope": "block",
+  "mode": "inner",
+  "model": {
+    "variant": "swiglu",
+    "vocab_size": 4096,
+    "width": 384,
+    "layers": 8,
+    "heads": 6,
+    "context": 128,
+    "hidden": 1024,
+    "groups": 8
+  },
+  "training": {
+    "steps": 200,
+    "batch_size": 16,
+    "learning_rate": 0.0012,
+    "weight_decay": 0.1,
+    "seed": 17,
+    "eval_batches": 158,
+    "log_every": 50,
+    "precision": "bf16",
+    "device": "cuda",
+    "ffn_lr_mode": "uniform",
+    "ffn_decay_mode": "parameter",
+    "recompute_gate": false,
+    "gate_recompute_method": "checkpoint",
+    "ffn_width_init_mode": "none",
+    "ffn_width_lr_mode": "none",
+    "activation_backend": "eager"
+  },
+  "peak_lr_held_constant": 0.0012,
+  "protocol_sha256": "3ffba961af9b119f6b950f41a772c68ffa5b4f20ca446f848fe6046021d3bc68",
+  "input_checkpoint": {
+    "run": "wikitext2_full_swiglu_lr1200_s17_200",
+    "files": {
+      "metrics.json": "91cf59b88dff11496469ddad24c3bf742e6a4edad875ee20ea83351233b8601d",
+      "checkpoint.pt": "cb14ebde2fc1d5cbdef801c8a11808155ee67fb3adf32b4cd167b8969442a8f5",
+      "source.zip": "60c4e981037bed19f38dc351496d4d02756b4cf0723c8713ffcc685945366742"
+    }
+  },
+  "environment": {
+    "python": "3.12.12",
+    "torch": "2.14.0+cu132",
+    "cuda": "13.2",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "vram_bytes": 8585216000,
+    "bf16_supported": true,
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "synthetic": true,
+  "start_step": 200,
+  "updates": 20,
+  "corpus_scoring": false
+}

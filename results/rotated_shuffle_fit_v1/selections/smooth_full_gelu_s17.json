@@ -1,0 +1,8 @@
+{
+  "selected_cell": "smooth_full_gelu_s17_lr1000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "smooth_full_gelu_s17_lr1000": 0.6368971467018127,
+    "smooth_full_gelu_s17_lr3000": 0.772318700949351
+  }
+}

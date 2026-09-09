@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "full_tests_passed": 223,
+  "full_test_record": "results/verification/optimizer_bracket_tests_v1.json",
+  "all_tested_sources_still_exact": true,
+  "previous_model_computation_unchanged": true,
+  "prior_variants_exact": 30,
+  "registered_variants": 31,
+  "plans_unchanged": {
+    "activation_correction_repeat_v1": "activation_correction_repeat_plan.md",
+    "affine_activation_screen_v1": "affine_activation_plan.md",
+    "affine_activation_shapes_v1": "affine_activation_plan.md",
+    "activation_correction_execution_v1": "activation_correction_execution_plan.md",
+    "activation_screen_v1": "learnable_activation_plan.md",
+    "activation_shapes_v1": "learnable_activation_plan.md",
+    "activation_execution_v1": "activation_execution_plan.md",
+    "activation_training_repeat_v1": "activation_training_repeat_plan.md",
+    "affine_longer_v2": "affine_activation_longer_plan.md",
+    "affine_replication_v1": "affine_activation_replication_plan.md",
+    "affine_removal_v1": "affine_activation_removal_plan.md",
+    "affine_rate_control_v1": "affine_activation_rate_control_plan.md",
+    "affine_rate_replication_v1": "affine_rate_replication_plan.md",
+    "multihead_integration_v1": "multihead_integration_plan.md",
+    "multihead_screen_v2": "multihead_screen_plan.md",
+    "headwise_screen_v1": "headwise_screen_plan.md",
+    "optimizer_bracket_v1": "optimizer_bracket_plan.md"
+  },
+  "local_links_checked": 113,
+  "retained_lm_profile_runs": 149,
+  "step_counts": {
+    "200": 83,
+    "20": 3,
+    "800": 63
+  },
+  "new_completed_trials": 8,
+  "numerical_failures": 0,
+  "infrastructure_failures": 0,
+  "result_sha256": "5936c0f14d1179ecaf494ee69d05e6bef642798d1819abd08b4b226ae3dc93ed",
+  "summary_sha256": "97ca6321801844d85dd8d80332590b89be5f4912475d6b78d4c595d1c5a045db",
+  "documents": {
+    "README.md": "720f48bc0cbca0b1331360bf3d614eca2ffec0326dbfa65693ec18470332d502",
+    "research/CURRENT_STATE.md": "21ff1d1e72b853e68a8007d32a87fcb1d2067083f37e083a548ed9e761790030",
+    "research/idea_bank.md": "1d88141758c6881999d85fc9148e0468dd869d5a510e5b08ffc6bc35d69ff6b4",
+    "research/optimizer_bracket_plan.md": "0f9881b3aca7582afb7d9d731fb03e6eeaf2946b1e237b262f103356fb2d69ba",
+    "research/optimizer_bracket_results.md": "238bd5b1d90ac6dfb767a660dd4afbbeb589e39d089665414c8de716c15926a3",
+    "research/optimizer_rate_geometry.md": "1eddd84dbb5518665f1b16551a7b9ca6147c3abee90ea16488c81b2d3739e558"
+  }
+}

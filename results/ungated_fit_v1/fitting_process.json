@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "results.ungated_fit_v1.source.study"
+  ],
+  "status": "PASS",
+  "started_utc": "2026-09-08T03:59:39.512764+00:00",
+  "coordinator_pid": 11900,
+  "protocol_sha256": "97f334185c55aa89a66728ed12b58d8ff8c61d065f4cec19ac325b33f2b332b7",
+  "source_zip_sha256": "cce7e744d2128730e9a6a6b453c00f3d45674da86725c21b2d11947728068143",
+  "pid": 28708,
+  "returncode": 0,
+  "finished_utc": "2026-09-08T04:07:12.643493+00:00",
+  "elapsed_seconds": 453.1290816999972,
+  "log_sha256": "ed6aad80e76a8993f6d8f602d5d2704d671b95ea7b179c81cfa59d6bb38a70a3",
+  "source_unchanged": true
+}

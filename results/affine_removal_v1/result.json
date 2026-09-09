@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "cases": [
+    {
+      "seed": 17,
+      "original_nll": 4.749981964736267,
+      "reset_nll": 4.7508111715033055,
+      "relative_reset_cost_percent": 0.017457050851876765,
+      "passes": true,
+      "result_sha256": "058383c4a2cdae9dd14ac0e5485e130f9495bc339010c17f2ee404f7df9a2147"
+    },
+    {
+      "seed": 29,
+      "original_nll": 4.7577938102909805,
+      "reset_nll": 4.758068840544359,
+      "relative_reset_cost_percent": 0.005780625734219669,
+      "passes": true,
+      "result_sha256": "3f47a2570c829e2fda78ad923d2caf34879f865423af6f87753293a47529723c"
+    },
+    {
+      "seed": 43,
+      "original_nll": 4.754844168829852,
+      "reset_nll": 4.755788750139696,
+      "relative_reset_cost_percent": 0.019865662812601492,
+      "passes": true,
+      "result_sha256": "f61f027f58f48240038609fcf26befc0f04fca27abcc802d1993850c2fd0fb54"
+    }
+  ],
+  "earns_fused_inference_audit": true,
+  "plan_sha256": "bbf7503334fc2daa7e0e26a1b2b02554797f506f15c317fcd521c7550f466fa3"
+}

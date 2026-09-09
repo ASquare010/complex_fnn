@@ -1,0 +1,10 @@
+{
+  "task": "constructed_polynomial",
+  "seed": 17,
+  "variant": "paired_duplicate_swiglu",
+  "train_target_mean": 0.34070292115211487,
+  "train_target_std": 0.3472702205181122,
+  "inputs_sha256": "20bf7f199db31fa6321b568492a2d1cb1bd96b27c438f0e0a48dca9d0feb7f09",
+  "protocol": "../protocol.json",
+  "population_additive_unnormalized_mse_floor": 0.027777777777777776
+}

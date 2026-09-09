@@ -1,0 +1,17 @@
+{
+  "task": "additive_control",
+  "seed": 17,
+  "variant": "gelu",
+  "train_target_mean": 0.5000524520874023,
+  "train_target_std": 0.33729809522628784,
+  "inputs_sha256": "20bf7f199db31fa6321b568492a2d1cb1bd96b27c438f0e0a48dca9d0feb7f09",
+  "protocol": "../protocol.json",
+  "population_additive_unnormalized_mse_floor": 0,
+  "parameters": 49,
+  "heldout_normalized_mse": 0.10570715367794037,
+  "training_normalized_mse": 0.10699862986803055,
+  "max_gradient_norm": 2.0860419273376465,
+  "timed_training_seconds": 0.8614172000034159,
+  "training_examples_per_second": 86183.55890700303,
+  "peak_allocated_vram_bytes": 17369600
+}

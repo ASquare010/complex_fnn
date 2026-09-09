@@ -1,0 +1,14 @@
+{
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "results.token_activation_fit_v1.source.study"
+  ],
+  "status": "RUNNING",
+  "started_utc": "2026-09-07T21:09:01.446650+00:00",
+  "protocol_sha256": "23f35e314584c4deab3e267b965eb859dbfb42fe25cd08030cb8ba638ce5698d",
+  "source_zip_sha256": "c5078926048432563304700d3191ac2579cd794f4ca6fbbd1a66e84a4d788757",
+  "pid": 13892
+}

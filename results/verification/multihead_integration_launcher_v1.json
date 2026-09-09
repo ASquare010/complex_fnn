@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "src.core.multihead_integration",
+    "audit",
+    "--output",
+    "results/multihead_integration_v1"
+  ],
+  "full_test_record": "results/verification/multihead_tests_v2.json",
+  "returncode": 0,
+  "seconds": 16.465432700000065
+}

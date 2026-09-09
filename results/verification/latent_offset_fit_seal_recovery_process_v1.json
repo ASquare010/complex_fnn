@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "coordinator_pid": 6752,
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "results.verification.latent_offset_fit_final_recovery_v1"
+  ],
+  "started_utc": "2026-09-09T19:32:14.866101+00:00",
+  "administrative_repetition": 1,
+  "scientific_retries": 0,
+  "optimizer_updates": 0,
+  "source_sha256": "3410aa391d349d74dc8caad351eaf3bafe6b450c1b3a4715de3b8dfe16f211d0",
+  "recovery_plan_sha256": "10ff8ce4d86af9742bf8003e2202648cd37fdc362477263f8e5a8b836fdfc169",
+  "pid": 16856,
+  "returncode": 0,
+  "finished_utc": "2026-09-09T19:32:17.929617+00:00",
+  "elapsed_seconds": 3.0529984000004333,
+  "log_sha256": "cb07d3243b845d216277cd838638280ba49a1fa1aa7e526cd3a09e189cf3c667",
+  "source_unchanged": true
+}

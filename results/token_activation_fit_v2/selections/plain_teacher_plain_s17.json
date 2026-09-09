@@ -1,0 +1,8 @@
+{
+  "selected_cell": "plain_teacher_plain_s17_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "plain_teacher_plain_s17_lr1000": 0.8378662467002869,
+    "plain_teacher_plain_s17_lr3000": 0.6160574456055959
+  }
+}

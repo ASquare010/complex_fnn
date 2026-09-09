@@ -1,0 +1,8 @@
+{
+  "selected_cell": "cross_teacher_absorbable_s17_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "cross_teacher_absorbable_s17_lr1000": 1.337065875530243,
+    "cross_teacher_absorbable_s17_lr3000": 1.2774750192960103
+  }
+}

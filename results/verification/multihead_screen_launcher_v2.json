@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "src.core.multihead_screen",
+    "audit",
+    "--output",
+    "results/multihead_screen_v2"
+  ],
+  "qualification": "results\\multihead_screen_v1\\continuation_qualification.json",
+  "returncode": 0,
+  "seconds": 352.3815737
+}

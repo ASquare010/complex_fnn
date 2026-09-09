@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "cell": "rational_native",
+  "recipe": "rational",
+  "scope": "block",
+  "mode": "native",
+  "initial_signature_sha256": "d4d03232cb57c948f27b327c736a6de4d384ae1f86e07e2fedb40af4f8ab4f8e",
+  "final": {
+    "weights": "f71afb96c2feb49a68b7404bf23ef8d8a02b029ff5a004a90d17757cd7a3ba1c",
+    "optimizer": "3c79b04609a6c20b799b10a3079c7578eb9defe137052dc3163d2f6b5712802e"
+  },
+  "token_record": {
+    "shape": [
+      20,
+      16,
+      129
+    ],
+    "dtype": "torch.int64",
+    "sha256": "39882d8892d8d70791eb1ee3914fe8a0c6c00a2830d062bbcb6aaebe1379eecd"
+  },
+  "cpu_rng": {
+    "shape": [
+      5056
+    ],
+    "dtype": "torch.uint8",
+    "sha256": "e42467e0f79ea4792ccb384ef7609376c4e85b3cbdc2bed7a8616337945590e8"
+  },
+  "cuda_rng": {
+    "shape": [
+      16
+    ],
+    "dtype": "torch.uint8",
+    "sha256": "8b47fb8c37b46edd9f7329da45697f422f78543f594538e47b07768e1629457e"
+  },
+  "rng_unchanged": true,
+  "ffn_parameters": 2801984,
+  "total_parameters": 9099968,
+  "ffn_reduction_percent": 70.30910915798611,
+  "peak_allocated_bytes": 482693632,
+  "peak_reserved_bytes": 555745280,
+  "step_seconds": [
+    0.2088283999983105,
+    0.21049069999935455,
+    0.20989339999869117,
+    0.20804950000092504,
+    0.20728990000134218,
+    0.20781780000106664,
+    0.20690660000036587,
+    0.20827160000044387,
+    0.20797189999939292,
+    0.20804019999923185
+  ],
+  "median_step_ms": 208.04485000007844,
+  "training_tokens_per_second": 9829.33056883824,
+  "clipped_step_fraction": 0.2,
+  "checkpoint_sha256": "69bf2a53bedb81b0ac5f7776b7adc873d8e9eab625d5c4aea36b6a47d04ef18e",
+  "history_sha256": "2ed8645d6f76223323edbd002ccdb1e82301fd59612b91cf70a85c7370fac187",
+  "updates": 20,
+  "synthetic_target_exposures": 40960,
+  "all_finite": true,
+  "corpus_scoring": false
+}

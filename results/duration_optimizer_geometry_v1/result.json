@@ -1,0 +1,927 @@
+{
+  "status": "PASS",
+  "seed": 17,
+  "layers": [
+    0,
+    7
+  ],
+  "records": [
+    {
+      "recipe": "full_swiglu",
+      "steps": 800,
+      "metrics_sha256": "e8affa87f9d6856e2cabfde83ed0d697f55b160ae365d4c44dbdf67cd3f57640",
+      "checkpoint_sha256": "45ae76fbba3e695d64f1948d410b1d7746b40ff7f621d5013b915ab4091c4a72",
+      "sum_global_lr": 0.5237999999999999,
+      "clipped_step_fraction": 0.08875,
+      "validation_loss": 4.880372197984562,
+      "layers": {
+        "0": {
+          "mean": -0.009951646439731121,
+          "std": 1.8821452856063843,
+          "abs_max": 14.4375,
+          "near_zero_fraction": 0.0,
+          "finite": true,
+          "input_rms": 1.0622581243515015,
+          "output_rms": 1.882171630859375
+        },
+        "7": {
+          "mean": -0.022032057866454124,
+          "std": 1.3818210363388062,
+          "abs_max": 16.0,
+          "near_zero_fraction": 0.0,
+          "finite": true,
+          "input_rms": 0.9965877532958984,
+          "output_rms": 1.3819966316223145
+        }
+      },
+      "projections": [
+        {
+          "layer": 0,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 12.538088269322458,
+          "trained_map_frobenius_norm": 18.906627410126074,
+          "trained_to_initial_norm_ratio": 1.507935420775895
+        },
+        {
+          "layer": 0,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 12.5480301205309,
+          "trained_map_frobenius_norm": 18.647373919350297,
+          "trained_to_initial_norm_ratio": 1.4860797862478623
+        },
+        {
+          "layer": 0,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 3.1346508970609164,
+          "trained_map_frobenius_norm": 14.434922160402046,
+          "trained_to_initial_norm_ratio": 4.60495367249233
+        },
+        {
+          "layer": 7,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 12.55535275711205,
+          "trained_map_frobenius_norm": 17.771865457829243,
+          "trained_to_initial_norm_ratio": 1.415481173777636
+        },
+        {
+          "layer": 7,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 12.54987230380193,
+          "trained_map_frobenius_norm": 17.17122173166653,
+          "trained_to_initial_norm_ratio": 1.3682387610003477
+        },
+        {
+          "layer": 7,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 3.135608422947978,
+          "trained_map_frobenius_norm": 12.427899851646828,
+          "trained_to_initial_norm_ratio": 3.963473168617973
+        }
+      ]
+    },
+    {
+      "recipe": "full_swiglu",
+      "steps": 3200,
+      "metrics_sha256": "e4c96952dd88a402b69dff756ea6f9f42ae9089d67bc629265981c1079b312e9",
+      "checkpoint_sha256": "b9c4dc150d88a0b08a9deac67846a48e71ad48e68a609887b45b1d0f39f730da",
+      "sum_global_lr": 2.0934,
+      "clipped_step_fraction": 0.0940625,
+      "validation_loss": 4.1054171553115815,
+      "layers": {
+        "0": {
+          "mean": -0.012066414579749107,
+          "std": 2.1094717979431152,
+          "abs_max": 17.375,
+          "near_zero_fraction": 0.0,
+          "finite": true,
+          "input_rms": 1.0848197937011719,
+          "output_rms": 2.109506368637085
+        },
+        "7": {
+          "mean": -0.018452521413564682,
+          "std": 2.834685802459717,
+          "abs_max": 54.75,
+          "near_zero_fraction": 2.543131586207892e-06,
+          "finite": true,
+          "input_rms": 1.094523549079895,
+          "output_rms": 2.8347458839416504
+        }
+      },
+      "projections": [
+        {
+          "layer": 0,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 12.538088269322458,
+          "trained_map_frobenius_norm": 26.16323411371372,
+          "trained_to_initial_norm_ratio": 2.086700424476079
+        },
+        {
+          "layer": 0,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 12.5480301205309,
+          "trained_map_frobenius_norm": 25.984326556276546,
+          "trained_to_initial_norm_ratio": 2.070789303714005
+        },
+        {
+          "layer": 0,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 3.1346508970609164,
+          "trained_map_frobenius_norm": 24.023664217348394,
+          "trained_to_initial_norm_ratio": 7.663904213344219
+        },
+        {
+          "layer": 7,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 12.55535275711205,
+          "trained_map_frobenius_norm": 28.690486775533895,
+          "trained_to_initial_norm_ratio": 2.2851199269795113
+        },
+        {
+          "layer": 7,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 12.54987230380193,
+          "trained_map_frobenius_norm": 29.03895278370708,
+          "trained_to_initial_norm_ratio": 2.313884323341669
+        },
+        {
+          "layer": 7,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 3.135608422947978,
+          "trained_map_frobenius_norm": 25.778706802411204,
+          "trained_to_initial_norm_ratio": 8.22127744451428
+        }
+      ]
+    },
+    {
+      "recipe": "calibrated_narrow",
+      "steps": 800,
+      "metrics_sha256": "94d04fd77447b698b3ad4d1c78bd985eb3d2e87aef5f9e020b1c8d51e18bf8e5",
+      "checkpoint_sha256": "6d085ac8080c1998d1e50e954d3b515c928275db77eb566f64a99b9579fd98d6",
+      "sum_global_lr": 0.5237999999999999,
+      "clipped_step_fraction": 0.09875,
+      "validation_loss": 4.8944348903082515,
+      "layers": {
+        "0": {
+          "mean": -0.05839528888463974,
+          "std": 2.6131579875946045,
+          "abs_max": 17.5,
+          "near_zero_fraction": 0.0,
+          "finite": true,
+          "input_rms": 1.047033429145813,
+          "output_rms": 2.6138105392456055
+        },
+        "7": {
+          "mean": -0.009804321452975273,
+          "std": 1.5424816608428955,
+          "abs_max": 13.6875,
+          "near_zero_fraction": 0.0,
+          "finite": true,
+          "input_rms": 0.9933989644050598,
+          "output_rms": 1.5425128936767578
+        }
+      },
+      "projections": [
+        {
+          "layer": 0,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 6.821859726935693,
+          "trained_map_frobenius_norm": 10.403981399382902,
+          "trained_to_initial_norm_ratio": 1.5250945952909911
+        },
+        {
+          "layer": 0,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 6.822002495607288,
+          "trained_map_frobenius_norm": 10.282372063819196,
+          "trained_to_initial_norm_ratio": 1.5072366318306174
+        },
+        {
+          "layer": 0,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              3.3684210526315788,
+              0.029687500000000002
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 3.1300824060502785,
+          "trained_map_frobenius_norm": 25.925645860045396,
+          "trained_to_initial_norm_ratio": 8.282735882586522
+        },
+        {
+          "layer": 7,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 6.860728366210868,
+          "trained_map_frobenius_norm": 9.618446883251242,
+          "trained_to_initial_norm_ratio": 1.4019571056948057
+        },
+        {
+          "layer": 7,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 6.832815417600081,
+          "trained_map_frobenius_norm": 9.371618460934835,
+          "trained_to_initial_norm_ratio": 1.371560314185462
+        },
+        {
+          "layer": 7,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              3.3684210526315788,
+              0.029687500000000002
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 3.1299969750724657,
+          "trained_map_frobenius_norm": 22.555254730136824,
+          "trained_to_initial_norm_ratio": 7.206158635221883
+        }
+      ]
+    },
+    {
+      "recipe": "calibrated_narrow",
+      "steps": 3200,
+      "metrics_sha256": "a97e32a25f432fc191c3ebe0cbdf603aea19f93bdef074a589aa6bceb8e21e0a",
+      "checkpoint_sha256": "72d7b34deea235e910440d4cb886655602a28c8c90ae6d6da52cbe210dcf211b",
+      "sum_global_lr": 2.0934,
+      "clipped_step_fraction": 0.1140625,
+      "validation_loss": 4.1530476405194054,
+      "layers": {
+        "0": {
+          "mean": 0.00692326482385397,
+          "std": 3.4951436519622803,
+          "abs_max": 32.75,
+          "near_zero_fraction": 0.0,
+          "finite": true,
+          "input_rms": 1.0264841318130493,
+          "output_rms": 3.495150566101074
+        },
+        "7": {
+          "mean": -0.07369744032621384,
+          "std": 3.937715530395508,
+          "abs_max": 61.0,
+          "near_zero_fraction": 1.271565793103946e-06,
+          "finite": true,
+          "input_rms": 1.0255982875823975,
+          "output_rms": 3.9384050369262695
+        }
+      },
+      "projections": [
+        {
+          "layer": 0,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 6.821859726935693,
+          "trained_map_frobenius_norm": 13.900660740641278,
+          "trained_to_initial_norm_ratio": 2.0376644048770713
+        },
+        {
+          "layer": 0,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 6.822002495607288,
+          "trained_map_frobenius_norm": 13.665365433359279,
+          "trained_to_initial_norm_ratio": 2.0031311102800764
+        },
+        {
+          "layer": 0,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              3.3684210526315788,
+              0.029687500000000002
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 3.1300824060502785,
+          "trained_map_frobenius_norm": 42.65609571677172,
+          "trained_to_initial_norm_ratio": 13.627786806609251
+        },
+        {
+          "layer": 7,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 6.860728366210868,
+          "trained_map_frobenius_norm": 14.753927413389365,
+          "trained_to_initial_norm_ratio": 2.1504899517742975
+        },
+        {
+          "layer": 7,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 6.832815417600081,
+          "trained_map_frobenius_norm": 15.096987305421848,
+          "trained_to_initial_norm_ratio": 2.209482677745805
+        },
+        {
+          "layer": 7,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              3.3684210526315788,
+              0.029687500000000002
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 3.1299969750724657,
+          "trained_map_frobenius_norm": 45.405956824762846,
+          "trained_to_initial_norm_ratio": 14.506709490897066
+        }
+      ]
+    },
+    {
+      "recipe": "blockshuffle",
+      "steps": 800,
+      "metrics_sha256": "87cfa6cf075c95e7aac1293d7a7f1cfc9d6b816ad27e54abd18eb5996cde03c7",
+      "checkpoint_sha256": "2aa5646af509bc823579ab3dff6e9780ffd408378408906a2db73aa39e60f7dd",
+      "sum_global_lr": 0.5237999999999999,
+      "clipped_step_fraction": 0.125,
+      "validation_loss": 4.75089975161857,
+      "layers": {
+        "0": {
+          "mean": -0.045365117490291595,
+          "std": 3.1195101737976074,
+          "abs_max": 30.75,
+          "near_zero_fraction": 0.0,
+          "finite": true,
+          "input_rms": 1.0400933027267456,
+          "output_rms": 3.119839906692505
+        },
+        "7": {
+          "mean": -0.004462427459657192,
+          "std": 1.2716702222824097,
+          "abs_max": 14.8125,
+          "near_zero_fraction": 1.271565793103946e-06,
+          "finite": true,
+          "input_rms": 0.9797588586807251,
+          "output_rms": 1.2716779708862305
+        }
+      },
+      "projections": [
+        {
+          "layer": 0,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              4.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.6576296950731976,
+          "initial_map_frobenius_norm": 17.73620109661784,
+          "trained_map_frobenius_norm": 32.77667973592101,
+          "trained_to_initial_norm_ratio": 1.848010154901281
+        },
+        {
+          "layer": 0,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              4.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.6576296950731976,
+          "initial_map_frobenius_norm": 17.73620102614964,
+          "trained_map_frobenius_norm": 31.434474653820654,
+          "trained_to_initial_norm_ratio": 1.772334143454664
+        },
+        {
+          "layer": 0,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              21.333333333333332,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.26499613858516446,
+          "initial_map_frobenius_norm": 4.434050216853557,
+          "trained_map_frobenius_norm": 62.6459018022876,
+          "trained_to_initial_norm_ratio": 14.128369941362934
+        },
+        {
+          "layer": 7,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              4.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.6576296950731976,
+          "initial_map_frobenius_norm": 17.736201456922025,
+          "trained_map_frobenius_norm": 23.70835101229667,
+          "trained_to_initial_norm_ratio": 1.3367208908784611
+        },
+        {
+          "layer": 7,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              4.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.6576296950731976,
+          "initial_map_frobenius_norm": 17.736200982265075,
+          "trained_map_frobenius_norm": 22.304160428311764,
+          "trained_to_initial_norm_ratio": 1.2575500497888088
+        },
+        {
+          "layer": 7,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              21.333333333333332,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.26499613858516446,
+          "initial_map_frobenius_norm": 4.434050274597932,
+          "trained_map_frobenius_norm": 46.48315581890943,
+          "trained_to_initial_norm_ratio": 10.483227058837171
+        }
+      ]
+    },
+    {
+      "recipe": "blockshuffle",
+      "steps": 3200,
+      "metrics_sha256": "01bad8c84f7dbf93968497eaa8c794b0de7d87e0fbe5564dea93cafee137bebc",
+      "checkpoint_sha256": "f6862aba75948f20fa5706c93b3430366a3ae2d0a03ff8566c5e458b28d0be86",
+      "sum_global_lr": 2.0934,
+      "clipped_step_fraction": 0.3046875,
+      "validation_loss": 4.145726323837044,
+      "layers": {
+        "0": {
+          "mean": -0.031241003423929214,
+          "std": 3.1013922691345215,
+          "abs_max": 64.0,
+          "near_zero_fraction": 0.0,
+          "finite": true,
+          "input_rms": 1.1051244735717773,
+          "output_rms": 3.1015496253967285
+        },
+        "7": {
+          "mean": 0.003521204460412264,
+          "std": 2.324005365371704,
+          "abs_max": 49.0,
+          "near_zero_fraction": 0.0,
+          "finite": true,
+          "input_rms": 0.9884803891181946,
+          "output_rms": 2.3240082263946533
+        }
+      },
+      "projections": [
+        {
+          "layer": 0,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              4.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.18730580058195906,
+          "initial_map_frobenius_norm": 17.73620109661784,
+          "trained_map_frobenius_norm": 37.78375219563643,
+          "trained_to_initial_norm_ratio": 2.130318211313104
+        },
+        {
+          "layer": 0,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              4.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.18730580058195906,
+          "initial_map_frobenius_norm": 17.73620102614964,
+          "trained_map_frobenius_norm": 37.266885192469175,
+          "trained_to_initial_norm_ratio": 2.1011762968588465
+        },
+        {
+          "layer": 0,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              21.333333333333332,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.0049538315974483,
+          "initial_map_frobenius_norm": 4.434050216853557,
+          "trained_map_frobenius_norm": 56.01971628968779,
+          "trained_to_initial_norm_ratio": 12.633983277131195
+        },
+        {
+          "layer": 7,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              4.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.18730580058195906,
+          "initial_map_frobenius_norm": 17.736201456922025,
+          "trained_map_frobenius_norm": 36.811332532776994,
+          "trained_to_initial_norm_ratio": 2.0754913402503323
+        },
+        {
+          "layer": 7,
+          "projection": "gate",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              4.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.18730580058195906,
+          "initial_map_frobenius_norm": 17.736200982265075,
+          "trained_map_frobenius_norm": 35.50476978046416,
+          "trained_to_initial_norm_ratio": 2.0018249576651943
+        },
+        {
+          "layer": 7,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              4.0,
+              0.1
+            ],
+            [
+              21.333333333333332,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.0049538315974483,
+          "initial_map_frobenius_norm": 4.434050274597932,
+          "trained_map_frobenius_norm": 66.93657903847276,
+          "trained_to_initial_norm_ratio": 15.096035203286545
+        }
+      ]
+    },
+    {
+      "recipe": "full_gelu",
+      "steps": 800,
+      "metrics_sha256": "0edb5ca322cc18d07809382f5dc88ac60a7c510a89e90c9311dda8f7f3381a19",
+      "checkpoint_sha256": "20967770cc314ab6dd470ced1a39e74b8f595239b5ea8529f5604328d39318b4",
+      "sum_global_lr": 0.5237999999999999,
+      "clipped_step_fraction": 0.06125,
+      "validation_loss": 4.863754941092177,
+      "layers": {
+        "0": {
+          "mean": 0.0036794214975088835,
+          "std": 3.362445831298828,
+          "abs_max": 22.125,
+          "near_zero_fraction": 0.0,
+          "finite": true,
+          "input_rms": 1.0364514589309692,
+          "output_rms": 3.36244797706604
+        },
+        "7": {
+          "mean": -0.0315425843000412,
+          "std": 1.0007150173187256,
+          "abs_max": 9.1875,
+          "near_zero_fraction": 0.0,
+          "finite": true,
+          "input_rms": 0.9979823231697083,
+          "output_rms": 1.0012120008468628
+        }
+      },
+      "projections": [
+        {
+          "layer": 0,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 15.363982879073562,
+          "trained_map_frobenius_norm": 22.76202979127237,
+          "trained_to_initial_norm_ratio": 1.481518820375365
+        },
+        {
+          "layer": 0,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 3.843362574022931,
+          "trained_map_frobenius_norm": 16.444152194603994,
+          "trained_to_initial_norm_ratio": 4.278584671076594
+        },
+        {
+          "layer": 7,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 15.356357867018236,
+          "trained_map_frobenius_norm": 21.173281842634584,
+          "trained_to_initial_norm_ratio": 1.3787958073124684
+        },
+        {
+          "layer": 7,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.948966017713712,
+          "initial_map_frobenius_norm": 3.838350018723535,
+          "trained_map_frobenius_norm": 14.573250199002384,
+          "trained_to_initial_norm_ratio": 3.7967486362405274
+        }
+      ]
+    },
+    {
+      "recipe": "full_gelu",
+      "steps": 3200,
+      "metrics_sha256": "b5f0884e8df7bc375028dc63ac43b467a52d169f743772ea290ee0bb079b8f82",
+      "checkpoint_sha256": "52f66d0b9af7ce51a421fb46235108dd88c7b1612acc3d62a0f4ff984b55d85a",
+      "sum_global_lr": 2.0934,
+      "clipped_step_fraction": 0.2753125,
+      "validation_loss": 4.127880964237563,
+      "layers": {
+        "0": {
+          "mean": 0.04313986748456955,
+          "std": 2.2445600032806396,
+          "abs_max": 35.0,
+          "near_zero_fraction": 1.271565793103946e-06,
+          "finite": true,
+          "input_rms": 1.0339298248291016,
+          "output_rms": 2.244974374771118
+        },
+        "7": {
+          "mean": -0.026284661144018173,
+          "std": 1.4260244369506836,
+          "abs_max": 30.25,
+          "near_zero_fraction": 1.271565793103946e-06,
+          "finite": true,
+          "input_rms": 1.048111081123352,
+          "output_rms": 1.4262666702270508
+        }
+      },
+      "projections": [
+        {
+          "layer": 0,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 15.363982879073562,
+          "trained_map_frobenius_norm": 31.19693707473258,
+          "trained_to_initial_norm_ratio": 2.0305240718032964
+        },
+        {
+          "layer": 0,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 3.843362574022931,
+          "trained_map_frobenius_norm": 27.742575500648634,
+          "trained_to_initial_norm_ratio": 7.218308178405838
+        },
+        {
+          "layer": 7,
+          "projection": "up",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 15.356357867018236,
+          "trained_map_frobenius_norm": 33.68810240542373,
+          "trained_to_initial_norm_ratio": 2.1937560127963462
+        },
+        {
+          "layer": 7,
+          "projection": "down",
+          "factor_treatments": [
+            [
+              1.0,
+              0.1
+            ]
+          ],
+          "decay_only_map_multiplier": 0.8111119904286102,
+          "initial_map_frobenius_norm": 3.838350018723535,
+          "trained_map_frobenius_norm": 32.61725711850065,
+          "trained_to_initial_norm_ratio": 8.497728700976497
+        }
+      ]
+    }
+  ],
+  "optimizer_updates": 0,
+  "validation_targets_scored": 0,
+  "compute_device": "cpu",
+  "scope": "Decay-only scalar products assume zero gradients and Adam moments. Trained Frobenius norms are separate observed checkpoint properties, not spectral norms or causal explanations. Initializers and actual optimizer metadata checked. Dense map materialization used only offline on CPU.",
+  "script_sha256": "2120ec633f6e653e16011b0a0de294872fbb3315a20684156c0c36bb80ca47ca"
+}

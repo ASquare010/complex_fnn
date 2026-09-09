@@ -1,0 +1,120 @@
+{
+  "status": "PASS",
+  "recipe": "blockshuffle",
+  "seed": 17,
+  "model": {
+    "variant": "blockshuffle_swiglu",
+    "vocab_size": 4096,
+    "width": 384,
+    "layers": 8,
+    "heads": 6,
+    "context": 128,
+    "hidden": 2048,
+    "groups": 8
+  },
+  "training": {
+    "steps": 20,
+    "batch_size": 16,
+    "learning_rate": 0.0006,
+    "weight_decay": 0.1,
+    "seed": 17,
+    "eval_batches": 1,
+    "log_every": 20,
+    "precision": "bf16",
+    "device": "cuda",
+    "ffn_lr_mode": "fan_in",
+    "ffn_decay_mode": "parameter",
+    "recompute_gate": true,
+    "gate_recompute_method": "native",
+    "ffn_width_init_mode": "none",
+    "ffn_width_lr_mode": "none",
+    "activation_backend": "eager"
+  },
+  "environment": {
+    "python": "3.12.12",
+    "torch": "2.14.0+cu132",
+    "cuda": "13.2",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "vram_bytes": 8585216000,
+    "bf16_supported": true,
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "initial_common_hashes": {
+    "embedding.weight": "e490c635fe248ae947455b0afa2aa1b9e385ddecb7ce9195f07ca4723de58a46",
+    "blocks.0.attn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.0.attn.qkv.weight": "1b681c25217664ee3cd4c8d303b144b04941cacb3b560de8dcc1769c9d5386cf",
+    "blocks.0.attn.out.weight": "8fcd0952ee143e2a19db209f258228762200c61a8d2e4524accb25ef22c9652b",
+    "blocks.0.ffn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.1.attn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.1.attn.qkv.weight": "6bb797ec1d3635f925f405983ed7c6e2bccbfc1a13f5ca005dff532fc232af27",
+    "blocks.1.attn.out.weight": "32d76a47d928a543f88797297ef46f170457cecaedb3f45ba25c7aa5d3c21af4",
+    "blocks.1.ffn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.2.attn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.2.attn.qkv.weight": "72cc07ceeb751f27729364dae8b4123af7d7a01a095453f8b28ad27caa2f8435",
+    "blocks.2.attn.out.weight": "5f10e34658068a9d81dc38f2c4e0e39592323fe9ce11b2e90b667d7dee8ed415",
+    "blocks.2.ffn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.3.attn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.3.attn.qkv.weight": "ab036241c1aca4e01e8f16ee32ecb6f3e1aa23c777623673a93672e32bbe9693",
+    "blocks.3.attn.out.weight": "3609c605b91aaccc65c1eafa99b49dcc93642e68b2fcec617457643fd4fffa2f",
+    "blocks.3.ffn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.4.attn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.4.attn.qkv.weight": "3d1853c6f40416852db417a7244700e35d68ac2f1a2b16c85104ee55f00d8339",
+    "blocks.4.attn.out.weight": "e7c93deb00e83ffbc2062f4b2a559f0ede089a120e85e05cb558c2803be91297",
+    "blocks.4.ffn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.5.attn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.5.attn.qkv.weight": "cadd01870f017b7f9642cafd4612a594af6df828cf3b4c5fc2f95e1399ae746e",
+    "blocks.5.attn.out.weight": "55fee92cd4ce53ec10abd01c37ca07db2944b488f087057381942e7efb7ec11d",
+    "blocks.5.ffn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.6.attn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.6.attn.qkv.weight": "e5b6a5a040f7fd95a32f0faec9c35e9bb7e2c143486b00d0d51deed1ea0566f6",
+    "blocks.6.attn.out.weight": "2953246c8e5a70bd6b024b82e4683f68c42f67803d616cac16aeea58e8357b35",
+    "blocks.6.ffn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.7.attn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "blocks.7.attn.qkv.weight": "e64c7f1cc021308fb3405b9a900b7111421f197a6707b4604009ea018644e116",
+    "blocks.7.attn.out.weight": "82e910b4e4617e338994ff608c33906e19ed6ce0adb451fde843f7d7086d9c63",
+    "blocks.7.ffn_norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78",
+    "norm.weight": "702cc37cfd91cac6b67c8bd7cc3c9da19f7a52986a8435bc2d1269721a65ce78"
+  },
+  "synthetic_tokens_sha256": "39882d8892d8d70791eb1ee3914fe8a0c6c00a2830d062bbcb6aaebe1379eecd",
+  "optimizer_groups": [
+    {
+      "weight_decay": 0.1,
+      "lr_scale": 1.0,
+      "parameter_count": 6291456
+    },
+    {
+      "weight_decay": 0.0,
+      "lr_scale": 1.0,
+      "parameter_count": 6528
+    },
+    {
+      "weight_decay": 0.1,
+      "lr_scale": 4.0,
+      "parameter_count": 2654208
+    },
+    {
+      "weight_decay": 0.1,
+      "lr_scale": 21.333333333333332,
+      "parameter_count": 147456
+    }
+  ],
+  "ffn_parameters": 2801664,
+  "total_parameters": 9099648,
+  "peak_allocated_bytes": 721224192,
+  "median_training_step_seconds_after_warmup": 0.07707555000160937,
+  "training_tokens_per_second_after_warmup": 23986.098369205705,
+  "timed_updates": 10,
+  "clipped_step_fraction": 0.8,
+  "all_weights_and_moments_finite": true,
+  "synthetic_training_targets": 40960,
+  "corpus_validation_or_test_targets": 0,
+  "matrix_work": {
+    "ffn_matrix_forward_flops_per_token": 5603328,
+    "model_matrix_forward_flops_per_token": 19759104,
+    "training_matrix_flops_per_token_estimate": 59277312,
+    "flop_limitations": "Dense attention upper estimate; excludes norms, softmax, nonlinearities, loss and optimizer"
+  },
+  "limitation": "Twenty synthetic next-token updates on one GPU; resource and finite-update qualification only, no language-quality ranking or convergence claim.",
+  "checkpoint_sha256": "7754e03dc54bb502a1bc72a64daf88927161ff104af8669183e7278b4147b34e"
+}

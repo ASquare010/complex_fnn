@@ -1,0 +1,8 @@
+{
+  "selected_cell": "plain_teacher_gelu_same_s17_lr1000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "plain_teacher_gelu_same_s17_lr1000": 0.9183743347724279,
+    "plain_teacher_gelu_same_s17_lr3000": 0.9538503785928091
+  }
+}

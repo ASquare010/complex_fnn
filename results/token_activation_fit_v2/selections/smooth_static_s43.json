@@ -1,0 +1,8 @@
+{
+  "selected_cell": "smooth_static_s43_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "smooth_static_s43_lr1000": 0.7639460563659668,
+    "smooth_static_s43_lr3000": 0.6370080510775248
+  }
+}

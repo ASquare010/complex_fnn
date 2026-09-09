@@ -1,0 +1,29 @@
+{
+  "data_sha256": "89be5676151df281f21c4a7b40fb22fd3b4ad687a072cbe23a3f020692a8f54c",
+  "x_sha256": "3df88765929b803ee8558b297bd7706331f056a60b2226ca7da5bccd8a548d37",
+  "targets": {
+    "linear": "5efee67a1b229801cc43e39c69fc4cb39fd82144c287d493087a9674f3e18e8a",
+    "plain_teacher": "0d3949de11580995091058c9dfc815d6d6326ccc6d93396930381dfa2f0c4296",
+    "gelu_teacher": "573dc662987660cc59a063c160094691863690f067b0f064e07469ef606bd207",
+    "smooth": "db566c2c9f0380fd59a5d45651e30c66d084b98e4eaba2e0dbb70ff79604711d",
+    "oscillatory": "dcc6046c194e3133dce89cb1546ad8f0b93896eef1145eaa12515db2aeeb97f4",
+    "multiplicative": "435cdd1dc295760b32989c798f6926f05ee43a8838786fdc4f2e71f03432c721",
+    "piecewise": "bcafd58e12f50dfd0866eace801574c5ce3ec2a26cc9a382197826832bb5d1b7"
+  },
+  "streams": {
+    "17": "5b10c71261728c22203287a68afef807d820a488d1583e76c4ceb586b2f45bff",
+    "29": "a5d93a727441e22a9983928567d39cf79b9d7e02ade92ab0c730f56a705631ae",
+    "43": "73b127f7b03931531a09db9961be3ff0b6543d60b85069d8904eac5ae7ec8408"
+  },
+  "environment": {
+    "python": "3.12.12",
+    "torch": "2.14.0+cu132",
+    "cuda": "13.2",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "vram_bytes": 8585216000,
+    "bf16_supported": true,
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "protocol_sha256": "97f334185c55aa89a66728ed12b58d8ff8c61d065f4cec19ac325b33f2b332b7"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "script_sha256": "11106ea1bf286e8b1ec044785d05eccf42d3460ffbeb9c46a536d2740d07b45c",
+  "histories": {
+    "full_swiglu": "e61ff0c3be418cf58774b14fb66dea778fedd910c81a838b45076b8da1e1c920",
+    "full_gelu": "069210fdbdfba8f698bf4377ba113b65f162afd9858829f805a3528ceb096cdf",
+    "calibrated_narrow": "987337707a6c56f54ff1321d71bd4ded7e4eeddad3890c9ae486c4129e5a165b",
+    "blockshuffle": "d60a9e743d3f0a974d4b011509bdd8a6e8350582dfd569e18d2d8880f2aaba24",
+    "product_decay": "cda38626e0a79010c625aabf59b07ee1415aff43fffdc4b46c1ec8595d6c4c1c"
+  },
+  "figures": {
+    "results/plots/duration_decay.png": "a0d8df674a5308ec1e7a9adf1eb863e4d5867f15631b78060e33c8f072b6ddc6",
+    "results/plots/duration_decay.svg": "aaefdf84fc90c45ae4bd5ca9697677903d14f00542a6bc75981faaada126a5b0"
+  },
+  "plotted_steps": [
+    800,
+    1600,
+    2400,
+    3200
+  ]
+}

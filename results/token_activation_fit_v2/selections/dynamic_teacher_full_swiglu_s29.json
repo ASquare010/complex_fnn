@@ -1,0 +1,8 @@
+{
+  "selected_cell": "dynamic_teacher_full_swiglu_s29_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "dynamic_teacher_full_swiglu_s29_lr1000": 0.7693096796671549,
+    "dynamic_teacher_full_swiglu_s29_lr3000": 0.5428331196308136
+  }
+}

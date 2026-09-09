@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "command": [
+    "C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "pytest",
+    "-p",
+    "no:anyio",
+    "-q",
+    "-x",
+    "--tb=short",
+    "results\\blast_operator_v1\\source\\test_harness.py"
+  ],
+  "coordinator_pid": 13388,
+  "started_utc": "2026-09-08T11:02:50.131378+00:00",
+  "protocol_sha256": "3176595043350e7ebba0291fdb33c1d766ab3983a845ffb4940f1d018a094fd5",
+  "source_archive_sha256": "450aaf3666ab56665a87b096116b831d11d929b2fe5e0ff62063d4e89f07e8d1",
+  "scientific_attempts": 1,
+  "scientific_retries": 0,
+  "optimizer_updates": 0,
+  "pid": 15644,
+  "returncode": 0,
+  "finished_utc": "2026-09-08T11:03:03.982202+00:00",
+  "elapsed_seconds": 13.82592029999978,
+  "source_unchanged": true,
+  "log_sha256": "aab4106b1c2751039238e394734999013f7b48141e01f61d6201c8de7f175b91"
+}

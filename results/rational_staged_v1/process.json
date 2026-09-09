@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "results.rational_staged_v1.source.qualification"
+  ],
+  "protocol_sha256": "f73cb04e4a8eaff5e474f7e18ec29b91b91c42b30f27606a2ba86b78ac3f16eb",
+  "source_archive_sha256": "0565e056d40940534ab2c4c64370aefac11ecd27d7a663d8c6bfef9921d74d69",
+  "started_utc": "2026-09-07T19:04:07.001214+00:00",
+  "pid": 27868,
+  "returncode": 0,
+  "elapsed_seconds": 8.714500199999748,
+  "source_unchanged": true,
+  "log_sha256": "8fc2193d694b2d141b455fa908564fa11cf3a0ecc342e09f1223544d1795f691"
+}

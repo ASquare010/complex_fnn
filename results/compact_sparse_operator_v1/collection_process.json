@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "pytest",
+    "-p",
+    "no:anyio",
+    "-q",
+    "-x",
+    "--tb=short",
+    "--collect-only",
+    "results\\compact_sparse_operator_v1\\source\\test_qualification.py"
+  ],
+  "coordinator_pid": 29356,
+  "started_utc": "2026-09-09T19:54:15.002416+00:00",
+  "optimizer_updates": 0,
+  "pid": 16036,
+  "returncode": 0,
+  "elapsed_seconds": 3.188527599999361,
+  "finished_utc": "2026-09-09T19:54:18.208332+00:00",
+  "log_sha256": "ea11e67423f641268fc55075e7a0dab8de9bd065c485ba5fba2c5dc4b8965d0a"
+}

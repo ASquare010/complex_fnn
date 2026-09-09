@@ -1,0 +1,8 @@
+{
+  "selected_cell": "multiplicative_cross_s29_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "multiplicative_cross_s29_lr1000": 1.3409137328465779,
+    "multiplicative_cross_s29_lr3000": 1.276759147644043
+  }
+}

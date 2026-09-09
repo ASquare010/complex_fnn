@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "command": [
+    "C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "pytest",
+    "-p",
+    "no:anyio",
+    "-q",
+    "-x",
+    "--tb=short",
+    "results\\blast_operator_recovery_v1\\source\\test_recovery.py"
+  ],
+  "coordinator_pid": 8880,
+  "started_utc": "2026-09-09T16:45:22.211142+00:00",
+  "optimizer_updates": 0,
+  "protocol_sha256": "be23628024e4a0916ff5c0faba4e758de8607d4f11beace1f1399a6afae08698",
+  "source_archive_sha256": "39acb590bbfd4ed5a4fb12191473616169545a889ba3b9cb98081181d05bcbc5",
+  "pid": 14120,
+  "returncode": 0,
+  "elapsed_seconds": 15.67955219999999,
+  "finished_utc": "2026-09-09T16:45:37.904564+00:00",
+  "log_sha256": "43560a4f945e91e3b95c6c223dba87aeb43c3d22f5422db6c120ab79549ae638",
+  "source_unchanged": true
+}

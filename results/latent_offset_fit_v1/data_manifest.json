@@ -1,0 +1,26 @@
+{
+  "data_sha256": "ea911377e56e35f90fd6b2ffe6553605d45526ea766f22b6acda160dd678a803",
+  "x_sha256": "d848b55a3043adb5a819990b7545141199dbe4808c118515bc38166ff65c08f1",
+  "targets": {
+    "smooth": "a0cf0ce9852111ff743348e97c301ccf4e81e4a338127e22c161f5b28738e02a",
+    "oscillatory": "8bf0816da9c3e625cc543b714f5cf169bc33c17ed2a62b80fe032564128c2917",
+    "multiplicative": "28dbd7cefeb7bc4a49fb155cd3121147060f437b6a88b8d9524840adf4f93ff6",
+    "piecewise": "ad7f2f5296a9ce238955805b0a006681dc3f044857b925568c3be96fa3258662"
+  },
+  "streams": {
+    "17": "43f073ce28031829e4e858799c7b59008c4dbd6cddf35c759a76bcf649349404",
+    "29": "5640bc2df9007943481aab84a066750943a1137bc1b7112c2e3eccafda190cec",
+    "43": "82c0bae25dab7baebb10124409c5bec21c70ca1fd94f32acd263b1a8e35c6b86"
+  },
+  "environment": {
+    "python": "3.12.12",
+    "torch": "2.14.0+cu132",
+    "cuda": "13.2",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "vram_bytes": 8585216000,
+    "bf16_supported": true,
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "protocol_sha256": "100383ef5305b0b869f13b8e544fd53d9efa96230a921643f4ad87b6dab0687e"
+}

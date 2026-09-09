@@ -1,0 +1,8 @@
+{
+  "selected_cell": "piecewise_latent_gain_s29_lr1000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "piecewise_latent_gain_s29_lr1000": 0.7123939692974091,
+    "piecewise_latent_gain_s29_lr3000": 0.7169895420471827
+  }
+}

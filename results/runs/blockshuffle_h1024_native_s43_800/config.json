@@ -1,0 +1,147 @@
+{
+  "model": {
+    "variant": "blockshuffle_swiglu",
+    "vocab_size": 4096,
+    "width": 192,
+    "layers": 4,
+    "heads": 6,
+    "context": 128,
+    "hidden": 1024,
+    "groups": 8
+  },
+  "training": {
+    "steps": 800,
+    "batch_size": 16,
+    "learning_rate": 0.0006,
+    "weight_decay": 0.1,
+    "seed": 43,
+    "eval_batches": 16,
+    "log_every": 50,
+    "precision": "auto",
+    "device": "cuda",
+    "ffn_lr_mode": "fan_in",
+    "ffn_decay_mode": "parameter",
+    "recompute_gate": true,
+    "gate_recompute_method": "native"
+  },
+  "precision": "bf16",
+  "environment": {
+    "python": "3.12.12",
+    "torch": "2.14.0+cu132",
+    "cuda": "13.2",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "vram_bytes": 8585216000,
+    "bf16_supported": true,
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "provenance": {
+    "git_commit": "55aa0775d8639173179a48ee90749add29770cf6",
+    "git_status": "M .gitignore\n M README.md\n M doc/RESEARCH_GOAL.md\n M doc/RESEARCH_RULES.md\n M main.py\n M pyproject.toml\n M uv.lock\n?? configs/\n?? research/\n?? results/\n?? src/\n?? tests/",
+    "source_files": {
+      "configs/blockshuffle_70.json": "d4597e3855cf07a9c5d0f9b425832f7cb9425fd49175fd982ce7d50ed59e10b4",
+      "configs/screening.json": "168538df1a4df336d4b95576d3b3a33bcd7504580abde9a0f4f0274ab8c71547",
+      "configs/structured_screening.json": "afddffbd5cf34e724e91e05443fcdd287c7ff8ef8069595102e175c67363c0e0",
+      "main.py": "4ab29a0820127d571b1c594a3b4858db709700a6ce0688f3228fea9843ef7c9b",
+      "pyproject.toml": "4b3557ea82725990b2824cb75f9ca5566228d0e5b9616aca4a77a28ae1c5f163",
+      "src/__init__.py": "d22482bb1aa7596dbf12aa0d1b8a3b07fa89e5d194ef1ea84cc63b1d3c3351a3",
+      "src/adaptive_cross_group_ffn/__init__.py": "37aeaddc6615951de936f0f7efbe0802cf48e7f5a771dc783fd6c2a3c929c74c",
+      "src/affine_shared_ffn/__init__.py": "2f25d3861ca6a78c1ad69587f5068dcf303eac5a3d1c37c3426c1cc0b8c26869",
+      "src/bezier_ffn/__init__.py": "ab62b6c12b01df7d7e8a8c2e99dfb16611de7b28f21da898a8cd1bed9ec13e16",
+      "src/blockshuffle_ffn/__init__.py": "41ac7896f0280b84505403fa6e7e1b57124ef72cdcc18e805d5d69601b098367",
+      "src/core/__init__.py": "cbd0a03c524fed4c67bcc31b8c7e97b640589a5d881e2a0879c38f4dd2813bb8",
+      "src/core/analysis.py": "c009b60c54105d765847e5956ab1086828070ef1c01a886f8c6b192fba5d63b7",
+      "src/core/benchmark.py": "b47a8d4d1ca35e3adb26e1e0be020af5b906a570887ad7db5b42456fc945a437",
+      "src/core/cli.py": "93f32a3353dafc8da65c01f3e2a4b6f074d5689bd8c20f4f0a2ee34b9dcb5cc8",
+      "src/core/config.py": "4cff452800913c98b23bbe6508aa3be4982556f7def441b94a3b0077d462fe18",
+      "src/core/data.py": "89e105d33d3c15cac5e2961c94a5cc3d6e89d99c5a31552a72b6eb6d53aef5a9",
+      "src/core/diagnostics.py": "e1a0937867dbfbaf00c6c77955e4a9336bd23e92ae9498aa3c714ab131c3a09a",
+      "src/core/functions.py": "26fed905f189a77bd9e60680d6535034ee02e89e0b9eae3fc3a0c5b1c9b9a234",
+      "src/core/interaction_report.py": "814aa344172d5234f0539521436a3aa39fdd17d58cb183298384c70ad0515ba9",
+      "src/core/interactions.py": "ee9ef8ef96dfad40b4b6bb4e8b3785f908f53902ab61a4b0bbf8da06170cb4ae",
+      "src/core/model_audit.py": "55ca9b22c9e625bee492f13ae43d65fab43af3840b641bb90f33f3539ba41e6d",
+      "src/core/optimization.py": "8b25b9846010f98c902ddcd283e2b9a2879025dfa7b024ac6c46b35b0fcd2c37",
+      "src/core/plots.py": "58587950d5014f030e00d6ac212fdad9f89a40bf2a841fb937e03be220e35a13",
+      "src/core/report.py": "b4896043e76f46a5c10250ba2e491977608f4f6a8ab9c1fd84f48da30da24380",
+      "src/core/reproducibility.py": "3dda7f1e322456417359948e5e0f41dcfad2827bacfb9b91da25305bba69748c",
+      "src/core/serving.py": "cfd319ee4e4077018a71b33397c92cb29cd3b08c35d3a3acb0cae2f909f2ceae",
+      "src/core/stability.py": "92d40eae6a25521ea05cb8e8183b0886b8eecd65424bebedf18487403fc71453",
+      "src/core/trainer.py": "782fccae7b3f3f5367d5fd66d66c713a187b0c9ff7cfa2442cb7839e9f5d8c46",
+      "src/core/transformer.py": "43732db219f2881f6424b987069caeb30315678bab2b1c6bca71c787fc92b56a",
+      "src/cross_group_ffn/__init__.py": "6e811ca424e7308bdf4aa2337b93b89fad3fed10d4fae5f90213bfa2bca3fe0d",
+      "src/dense_ffn/__init__.py": "32960cd304ea155119a835071f117cf800e1b80b3cf4e6c7ff85814311b48913",
+      "src/grouped_ffn/__init__.py": "88cf9f0bc82340ca9b17412d807e514c29a1ff1f5b958f64ebb2f7be304c3da0",
+      "src/shared_ffn/__init__.py": "67b9dab75ba3088f43acb4c61f9fc15c7e239505c86e193c4e377ae45519100b",
+      "tests/test_adaptive_coupling.py": "d59217b8a4688f528f74acdbf2354612af701d0b83a2b5e93a3bbb6d810c5950",
+      "tests/test_affine_shared.py": "aa48475c10777a3c9a289c3851d26b8d794dc24cd23d6660a9bfff969b000b0b",
+      "tests/test_baselines.py": "f2141abe02315ff4cdaac6226a0a5c05a4a1e443f3fac5cb716e4a10bc4b5257",
+      "tests/test_bezier.py": "3afa40a7288402d802c45e2409ec93830c9c52f92440cc4ffd768bbef88bd71c",
+      "tests/test_blockshuffle.py": "c9beb4071ea9c1d5d5a821ff915d97e861880c8a63bd2a57633ff6c64727905f",
+      "tests/test_coupled.py": "648595241bfbbdcdad376ddf0f6a1c1d79520fb52402b77fe182a39430efdf35",
+      "tests/test_data.py": "a6619ad200c3c4848400afe8103ea5529f73536041747778d9c197edc78f2828",
+      "tests/test_model_audit.py": "412f21ffd8e4f52c1f82e4bff0f14cc2b19a34d082b2db297a9d5536f832fb61",
+      "tests/test_optimization.py": "9c6ba0c1104680d9186feeb680c8c3d14d60c527fd5c0e056e021a11bce715bd",
+      "tests/test_reporting.py": "f443125df4340d2925d285d7354a86718665eb6b9b6ed32664e228e159871051",
+      "tests/test_serving.py": "09881fe4a5f39bb8cb12baf6cb944e480d82f886a8ad3ccbdb61510c083cb0b5",
+      "tests/test_sharing.py": "3596612fde6bdd052c48cbe994669116893077376a2663029e4ff71b06c87314",
+      "tests/test_structured.py": "0610a0bdb93d2ffb8985644708d7503d4d758fcbffff9ff5969d4d71b28e1919",
+      "uv.lock": "9c6acbda0418bc25409e14e4c7134cbb2711d3f3136bc9bad1854ff4db5b3524"
+    },
+    "source_hash": "2a09369f26a78c48e9899ea0f14f8284f8b01fb04d7e291e2503e7d5bfe9bebe"
+  },
+  "data": {
+    "dataset": "roneneldan/TinyStories",
+    "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+    "source_template": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+    "selection": "first N complete stories from each V2-GPT4 official split",
+    "requested_stories": {
+      "train": 12000,
+      "valid": 1000
+    },
+    "tokenizer": "train-only byte-level BPE",
+    "vocab_size": 4096,
+    "splits": {
+      "valid": {
+        "stories": 1000,
+        "tokens": 200803,
+        "removed_duplicates": 0
+      },
+      "train": {
+        "stories": 12000,
+        "tokens": 2457760,
+        "removed_duplicates": 0
+      }
+    },
+    "files": {
+      "tokenizer.json": "c98c93a080cdcac74e0ecb95358343bd30d7f2f2e4fad4ca0496dc739b760056",
+      "train.json": "acd2119f599ee962090a5e906c4867c7e279f1b98269d14e7cd81e15a25391bf",
+      "train.npy": "2675dff5f643827dfaba423d2e2dd1017f1ae3f8320b3bc8b42a3860a67f718a",
+      "valid.json": "406aa4a11829985dd350321ebd4094bf4fedf751e83062aeb29a84fd59d36008",
+      "valid.npy": "38ed43f90d50a193237784c3be7dafffc44b58738bf0b0eca146140635f7ad63"
+    }
+  },
+  "started_utc": "2026-09-06T13:21:11.046007+00:00",
+  "protocol": "micro_v1",
+  "optimizer_parameter_groups": [
+    {
+      "weight_decay": 0.1,
+      "lr_scale": 1.0,
+      "parameter_count": 1376256
+    },
+    {
+      "weight_decay": 0.0,
+      "lr_scale": 1.0,
+      "parameter_count": 1728
+    },
+    {
+      "weight_decay": 0.1,
+      "lr_scale": 4.0,
+      "parameter_count": 331776
+    },
+    {
+      "weight_decay": 0.1,
+      "lr_scale": 21.333333333333332,
+      "parameter_count": 18432
+    }
+  ]
+}

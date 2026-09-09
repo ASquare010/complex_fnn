@@ -1,0 +1,8 @@
+{
+  "selected_cell": "multiplicative_latent_gain_s29_lr1000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "multiplicative_latent_gain_s29_lr1000": 0.9802669684092203,
+    "multiplicative_latent_gain_s29_lr3000": 1.0045199344555538
+  }
+}

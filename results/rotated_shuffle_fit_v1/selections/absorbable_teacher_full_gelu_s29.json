@@ -1,0 +1,8 @@
+{
+  "selected_cell": "absorbable_teacher_full_gelu_s29_lr1000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "absorbable_teacher_full_gelu_s29_lr1000": 1.1761408646901448,
+    "absorbable_teacher_full_gelu_s29_lr3000": 1.4683947563171387
+  }
+}

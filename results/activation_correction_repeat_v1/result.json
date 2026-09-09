@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "run": "wikitext2_blockshuffle_rational_correction_compiled_lr1200_s17_200",
+  "validation_nll": 5.949104036900884,
+  "native_rational_nll": 5.898002605975408,
+  "relative_native_nll_percent": 0.8664192666463899,
+  "peak_allocated_vram_bytes": 749421568,
+  "gates": {
+    "at_least_70_percent_fewer_ffn_weights": true,
+    "beats_calibrated_narrow": false,
+    "within_one_percent_full_swiglu": true,
+    "memory_within_ten_percent_full_swiglu": true,
+    "within_one_percent_full_gelu": false,
+    "memory_within_ten_percent_full_gelu": true,
+    "at_least_point_two_percent_better_than_own_base": true,
+    "within_point_two_percent_native_rational_nll": false
+  },
+  "repeat_passes": false,
+  "sampling_rng_matches_native": true,
+  "initial_validation_nll_matches_native": true,
+  "warmup_parameters_unchanged": true,
+  "config_matches": true,
+  "all_source_archive_hashes_match": true,
+  "metrics_sha256": "47a0891b7db43a7dcfed04f34cb994d0f1b57b74a7f9c2ed6e13a24ae3e9332a",
+  "checkpoint_sha256": "e3b1bbe31ebc9512e54c25bcac9fe8a0d98517487abe3f2f24793ace0df47b5d"
+}

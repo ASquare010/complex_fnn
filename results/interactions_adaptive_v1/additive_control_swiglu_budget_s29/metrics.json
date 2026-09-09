@@ -1,0 +1,17 @@
+{
+  "task": "additive_control",
+  "seed": 29,
+  "variant": "swiglu_budget",
+  "train_target_mean": 0.5000524520874023,
+  "train_target_std": 0.33729809522628784,
+  "inputs_sha256": "20bf7f199db31fa6321b568492a2d1cb1bd96b27c438f0e0a48dca9d0feb7f09",
+  "protocol": "../protocol.json",
+  "population_additive_unnormalized_mse_floor": 0,
+  "parameters": 61,
+  "heldout_normalized_mse": 0.0035363133065402508,
+  "training_normalized_mse": 0.0032952341716736555,
+  "max_gradient_norm": 0.6423810720443726,
+  "timed_training_seconds": 7.26571590000367,
+  "training_examples_per_second": 34881.628113187304,
+  "peak_allocated_vram_bytes": 17503232
+}

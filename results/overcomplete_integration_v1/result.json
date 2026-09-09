@@ -1,0 +1,35 @@
+{
+  "status": "complete",
+  "plan_sha256": "636e9e20e9a6af5c51f59c9386365e93d5cc14fedb960851677759ae83eab7ef",
+  "old_variants_exact": 31,
+  "gates": {
+    "at_least_70_percent_fewer_ffn_weights": true,
+    "memory_within_ten_percent_swiglu": true,
+    "memory_within_ten_percent_gelu": false
+  },
+  "earns_separate_quality_screen": false,
+  "quality_measured": false,
+  "training_token_exposures": 122880,
+  "validation_targets_scored": 0,
+  "numerical_failures": 0,
+  "trials": {
+    "swiglu": {
+      "result_sha256": "accc85a30a09354d4d6aa932aa03281873fb41ce5da44863dda144c9656d28cd",
+      "peak_mib": 706.73291015625,
+      "precision_relative_l2": 0.007528615336473896,
+      "clipped_step_fraction": 0.55
+    },
+    "overcomplete_headwise_swiglu": {
+      "result_sha256": "ca63084177f71edc9e669bb380abcbc840da0937438b344637c389ddefe7e9e5",
+      "peak_mib": 730.38916015625,
+      "precision_relative_l2": 0.00838391019451679,
+      "clipped_step_fraction": 0.65
+    },
+    "gelu": {
+      "result_sha256": "d4b9d1f7bd64074fc74ac60d74de2e03f315afd43941969fdae4c8e03567c6b2",
+      "peak_mib": 660.10791015625,
+      "precision_relative_l2": 0.0076740621530162305,
+      "clipped_step_fraction": 0.5
+    }
+  }
+}

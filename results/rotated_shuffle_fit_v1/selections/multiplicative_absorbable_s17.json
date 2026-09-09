@@ -1,0 +1,8 @@
+{
+  "selected_cell": "multiplicative_absorbable_s17_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "multiplicative_absorbable_s17_lr1000": 1.3452409704526265,
+    "multiplicative_absorbable_s17_lr3000": 1.292416274547577
+  }
+}

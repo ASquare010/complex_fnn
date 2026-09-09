@@ -1,0 +1,8 @@
+{
+  "selected_cell": "smooth_plain_s29_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "smooth_plain_s29_lr1000": 0.7884943783283234,
+    "smooth_plain_s29_lr3000": 0.7724670469760895
+  }
+}

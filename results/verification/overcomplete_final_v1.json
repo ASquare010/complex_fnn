@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "research_target_passes": false,
+  "full_tests_passed": 238,
+  "full_test_record": "results/verification/overcomplete_tests_v1.json",
+  "all_prior_235_tested_sources_exact": true,
+  "post_test_style_equivalence": {
+    "status": "PASS",
+    "reason": "Post-qualification E731 style-only lambda-to-local-function rewrite; body and all other AST exact.",
+    "prior_sha256": "3f5ebff6b51d656712fa861e3df8db633ccde1f004cc4418f9e5884df616b956",
+    "current_sha256": "9addac708f76bb193676bfcc93bba7d6d81e5be973ba1e8d7c9b6a36acfaa614",
+    "file": "src/core/overcomplete_qualification.py",
+    "source_archive_sha256": "ebb8b4189cb210d3dd4827594da84ff9caade62dc0634922db2d54038e4461e6",
+    "model_and_witness_and_cpu_calibration_unchanged": true,
+    "all_other_ast_exact": true,
+    "new_gpu_runs": 0,
+    "prior_normalized_text_sha256": "74590b844b40be9cfaba336b574e85ed88545a28109ce3a4d9233672c1810541",
+    "metadata_correction": "Prior hash now identifies exact archived file bytes; the initial entry hashed newline-normalized read_text content. Backup equals archived source byte for byte. No source or numerical change."
+  },
+  "registered_variants": 31,
+  "standalone_unregistered_candidates_added": 1,
+  "retained_lm_profile_runs": 165,
+  "new_language_training_tokens": 0,
+  "new_validation_targets_scored": 0,
+  "synthetic_cuda_updates": 10,
+  "new_cpu_gaussian_inputs": 12288,
+  "phases": {
+    "focused_tests": {
+      "sha256": "f0a722719f01f6ad46dc6fbecc780aa07a25a06a3d393f4195606228327ba02e",
+      "seconds": 3.6736147000010533
+    },
+    "cpu": {
+      "sha256": "1851d8ac9fbc7584a7bc86fa55323383b37cc7d4ecc5e691dbae96ccded53fef",
+      "seconds": 2.964065300000584
+    },
+    "cuda": {
+      "sha256": "c1d1857521638b5346d53601b24ea7cb10499f0d6cf9dafd63b8209283e8b0b5",
+      "seconds": 4.18125179999879
+    },
+    "tests": {
+      "sha256": "33f3deaeee8bfb035a6b9e285d23e50f0bd8b10c34eddeba4ab43e667f1858f9",
+      "seconds": 34.940716499999326
+    }
+  },
+  "plans_unchanged": {
+    "activation_correction_repeat_v1": "activation_correction_repeat_plan.md",
+    "affine_activation_screen_v1": "affine_activation_plan.md",
+    "affine_activation_shapes_v1": "affine_activation_plan.md",
+    "activation_correction_execution_v1": "activation_correction_execution_plan.md",
+    "activation_screen_v1": "learnable_activation_plan.md",
+    "activation_shapes_v1": "learnable_activation_plan.md",
+    "activation_execution_v1": "activation_execution_plan.md",
+    "activation_training_repeat_v1": "activation_training_repeat_plan.md",
+    "affine_longer_v2": "affine_activation_longer_plan.md",
+    "affine_replication_v1": "affine_activation_replication_plan.md",
+    "affine_removal_v1": "affine_activation_removal_plan.md",
+    "affine_rate_control_v1": "affine_activation_rate_control_plan.md",
+    "affine_rate_replication_v1": "affine_rate_replication_plan.md",
+    "multihead_integration_v1": "multihead_integration_plan.md",
+    "multihead_screen_v2": "multihead_screen_plan.md",
+    "headwise_screen_v1": "headwise_screen_plan.md",
+    "optimizer_bracket_v1": "optimizer_bracket_plan.md",
+    "optimizer_lower_v1": "optimizer_lower_plan.md",
+    "long_duration_v1": "long_duration_plan.md",
+    "long_duration_replication_v1": "long_duration_replication_plan.md",
+    "duration_decay_v1": "duration_decay_plan.md",
+    "overcomplete_qualification_v1": "overcomplete_qualification_plan.md"
+  },
+  "local_links_checked": 145,
+  "all_immutable_data_hashes_exact": true,
+  "cpu_result_sha256": "3a34d12ff0e6cb965199f65d74057ffa749c69319556b3d392ade7b3877ecfc4",
+  "cuda_result_sha256": "d6df8d629c1e280f87f9a447c15924556299f6f83ba6bc704c62bc6273306868",
+  "source_archive_sha256": "ebb8b4189cb210d3dd4827594da84ff9caade62dc0634922db2d54038e4461e6",
+  "witness_weights_sha256": "64765936321b4f48406520f0528f4390b3348818cce50561356bf37ed7f1dbe7",
+  "ffn_weights_per_layer": 350208,
+  "isolated_memory_cost_percent": 20.37316341575015,
+  "earns_separate_integration_and_memory_qualification": true,
+  "earns_language_training": false,
+  "documents": {
+    "README.md": "ee67e4d67e2e9fde178ec852fdadac5256cb9a5e1843e831ddf2f5ef2d838094",
+    "research/CURRENT_STATE.md": "0369dc707d131852e529be1b90d02da8cf9aa42cf0e97ed9eaf3890d6454a5a1",
+    "research/idea_bank.md": "918b3471451d2cd7c634594026a7dd59e8eb879898fcafca8fd119a5f095a520",
+    "research/overcomplete_qualification_plan.md": "85f0631490a61fcd4204a09011fa347cf7cbdd924bc0a71e3af07e2a6538fac6",
+    "research/overcomplete_qualification_results.md": "5f9b23f84a2c461d450885aaa4e1f3885b953027548b85444a0ff97f57652753",
+    "src/multihead_ffn/overcomplete.md": "88cec86ef7b4179530d7b2d861d3e25419c57a6ff58f3dc78ea1edf87e4861fb",
+    "research/headwise_hessian_obstruction.md": "c60726a0226cda4af5160a53ebaab91d512b0b046ffedb4bdbc806dffbffe8db",
+    "research/structured_headwise_budget.md": "ab6fc94bc15ad7ef3b35ca5f2a3f5e869ff4d7f1857eccb56d5e8b9fe9ade9a6"
+  },
+  "numerical_failures": 0,
+  "process_failures": 0
+}

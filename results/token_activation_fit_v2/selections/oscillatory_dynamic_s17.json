@@ -1,0 +1,8 @@
+{
+  "selected_cell": "oscillatory_dynamic_s17_lr1000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "oscillatory_dynamic_s17_lr1000": 1.0233887036641438,
+    "oscillatory_dynamic_s17_lr3000": 1.0328927238782246
+  }
+}

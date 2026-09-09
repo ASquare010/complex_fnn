@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "dev",
+    "-X",
+    "faulthandler",
+    "results/verification/long_duration_replication_plot_v1.py"
+  ],
+  "qualification": "Development-mode full report imported Matplotlib, then crashed inside torch.profiler dataclass construction before verification. The full audit and tests already passed. Separate plotting from Torch/report imports; verify recorded metrics/histories and preserve old figures. No source, experiment or score change.",
+  "returncode": 0,
+  "seconds": 0.945621900000333
+}

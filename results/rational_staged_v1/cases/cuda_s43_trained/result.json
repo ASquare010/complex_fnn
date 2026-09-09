@@ -1,0 +1,204 @@
+{
+  "case": "cuda_s43_trained",
+  "seed": 43,
+  "coefficient_source_layer": 7,
+  "device": "cuda",
+  "dtype": "torch.bfloat16",
+  "shape": [
+    16,
+    128,
+    2048
+  ],
+  "state": "trained",
+  "input_fp32_hashes": [
+    {
+      "shape": [
+        16,
+        128,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "0974872047505895f97981369e548f06e6afe6e1ee77bfe600a81c2d7ad44c82"
+    },
+    {
+      "shape": [
+        16,
+        128,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "b02d5c9f9fa898d06a71c1ad27fbdf770ba9eb694f85bfb96711a8c1679453ff"
+    },
+    {
+      "shape": [
+        16,
+        128,
+        2048
+      ],
+      "dtype": "torch.float32",
+      "sha256": "727777d08d091855fefda102578c330c4c866c1aa9ce9f6fae463140db210710"
+    }
+  ],
+  "input_cast_hashes": [
+    {
+      "shape": [
+        16,
+        128,
+        2048
+      ],
+      "dtype": "torch.bfloat16",
+      "sha256": "a268a9e877ef692dd372e743caa1b5558467e92f432ee735241aa08deddebb78"
+    },
+    {
+      "shape": [
+        16,
+        128,
+        2048
+      ],
+      "dtype": "torch.bfloat16",
+      "sha256": "fedd602dbb19ffc1a253c0f714012c626109cbfa8836785a44117f207194f130"
+    },
+    {
+      "shape": [
+        16,
+        128,
+        2048
+      ],
+      "dtype": "torch.bfloat16",
+      "sha256": "67507e07933a2b7785c680f31020d2148940f7cf80797e0cc3ef244a37f66c19"
+    }
+  ],
+  "state_hash": "891c65fa639b01a8669ad7f7eb4ec5e4d0c267eb2020a244f84d5f295138311d",
+  "comparisons": {
+    "output": {
+      "exact": true,
+      "finite": true,
+      "elements": 4194304,
+      "mismatched_elements": 0,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0,
+      "reference": {
+        "shape": [
+          16,
+          128,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "sha256": "e07442ecefb8305ba02d1d2e925ee9bd29beaa37b6b8bdc9928d1b95752babe3"
+      },
+      "candidate": {
+        "shape": [
+          16,
+          128,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "sha256": "e07442ecefb8305ba02d1d2e925ee9bd29beaa37b6b8bdc9928d1b95752babe3"
+      }
+    },
+    "u": {
+      "exact": true,
+      "finite": true,
+      "elements": 4194304,
+      "mismatched_elements": 0,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0,
+      "reference": {
+        "shape": [
+          16,
+          128,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "sha256": "6bca7cc20502636ce86bcc0443f5cedd76636ea38cc82eaef110091ada421584"
+      },
+      "candidate": {
+        "shape": [
+          16,
+          128,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "sha256": "6bca7cc20502636ce86bcc0443f5cedd76636ea38cc82eaef110091ada421584"
+      }
+    },
+    "v": {
+      "exact": true,
+      "finite": true,
+      "elements": 4194304,
+      "mismatched_elements": 0,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0,
+      "reference": {
+        "shape": [
+          16,
+          128,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "sha256": "ba791ac88b2c7f132a7ce4a5aa75f6099f66d8af0394fb391172fff62008245c"
+      },
+      "candidate": {
+        "shape": [
+          16,
+          128,
+          2048
+        ],
+        "dtype": "torch.bfloat16",
+        "sha256": "ba791ac88b2c7f132a7ce4a5aa75f6099f66d8af0394fb391172fff62008245c"
+      }
+    },
+    "theta_coefficients": {
+      "exact": true,
+      "finite": true,
+      "elements": 32,
+      "mismatched_elements": 0,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0,
+      "reference": {
+        "shape": [
+          8,
+          4
+        ],
+        "dtype": "torch.float32",
+        "sha256": "47cc9ba56c93afcfc5526d0344983578935cd075f3fcb1307e655c1bf7279931"
+      },
+      "candidate": {
+        "shape": [
+          8,
+          4
+        ],
+        "dtype": "torch.float32",
+        "sha256": "47cc9ba56c93afcfc5526d0344983578935cd075f3fcb1307e655c1bf7279931"
+      }
+    },
+    "theta_denominator": {
+      "exact": true,
+      "finite": true,
+      "elements": 8,
+      "mismatched_elements": 0,
+      "max_abs_error": 0.0,
+      "relative_l2_error": 0.0,
+      "reference": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "18c2266ab6c6e966ce2124d66824a6a0c76d21c813e558188b31d4ff8016c3de"
+      },
+      "candidate": {
+        "shape": [
+          8
+        ],
+        "dtype": "torch.float32",
+        "sha256": "18c2266ab6c6e966ce2124d66824a6a0c76d21c813e558188b31d4ff8016c3de"
+      }
+    }
+  },
+  "exact": true,
+  "finite": true,
+  "rng_unchanged": true,
+  "parameters_unchanged": true,
+  "optimizer_updates": 0,
+  "tensors_sha256": "3005ec67cecc9e0404287c209492078fb08142285888cc2b5ea03a0ef4838b84"
+}

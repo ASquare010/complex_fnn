@@ -1,0 +1,10 @@
+{
+  "failure_record_sha256": "896d743bdaf2129ca25ba285b9c7db3c99f7ba0d8e780ce64238b79ba02fba8d",
+  "failure_log_sha256": "2bf96b9eaea5f5b79782fd29be8bce1d62d2dd455f9aa9d07a65be10af6bbd92",
+  "plan_sha256": "a8c8d9c06baa220ffd34e0a87e10b4ea678f73c087c5ed6f223cc1d4addf0eea",
+  "source_identical_to_failed_launch": true,
+  "no_live_worker_verified": true,
+  "no_audit_directory_or_new_trial_created": true,
+  "diagnosis": "Access violation inside inspect.cleandoc while importing Matplotlib figure through retained report verifier imports; before audit function or new sampling/training. Root cause of intermittent native/import crashes unresolved.",
+  "action": "One explicitly qualified source-identical fresh launch. No dependency, NN, trainer, optimizer, data, score, or protocol change. First launcher and fatal traceback retained."
+}

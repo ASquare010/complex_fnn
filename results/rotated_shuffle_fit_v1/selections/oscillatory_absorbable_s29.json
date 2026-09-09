@@ -1,0 +1,8 @@
+{
+  "selected_cell": "oscillatory_absorbable_s29_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "oscillatory_absorbable_s29_lr1000": 1.4023658831914265,
+    "oscillatory_absorbable_s29_lr3000": 1.3186309933662415
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "model": {
+    "variant": "swiglu",
+    "vocab_size": 4096,
+    "width": 384,
+    "layers": 8,
+    "heads": 6,
+    "context": 128,
+    "hidden": 0,
+    "groups": 8
+  },
+  "training": {
+    "steps": 20,
+    "batch_size": 16,
+    "learning_rate": 0.0006,
+    "weight_decay": 0.1,
+    "seed": 17,
+    "eval_batches": 1,
+    "log_every": 20,
+    "precision": "bf16",
+    "device": "cuda",
+    "ffn_lr_mode": "uniform",
+    "ffn_decay_mode": "parameter",
+    "recompute_gate": false,
+    "gate_recompute_method": "checkpoint",
+    "ffn_width_init_mode": "none",
+    "ffn_width_lr_mode": "none",
+    "activation_backend": "eager"
+  },
+  "protocol_sha256": "f3a22b17af3dd75487f270cd6d52592ec2230bae4a4530c3460b76d93b45de79"
+}

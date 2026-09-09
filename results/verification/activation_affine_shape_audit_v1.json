@@ -1,0 +1,54 @@
+{
+  "blockshuffle_rational": {
+    "run": "wikitext2_blockshuffle_rational_lr1200_s17_200",
+    "uniform_grid": [
+      -6,
+      6,
+      257
+    ],
+    "affine_energy_fraction": 0.9976839414060069,
+    "affine_residual_rms": 0.0008332885696226642,
+    "correction_rms": 0.017314926539987,
+    "source_sha256": "f71baed746f34c86308e20072e292992b5ec06c610a7617bc9bd9a4eaef18f8d",
+    "interpretation": "Post-hoc uniform-grid least-squares fit to each learned correction; not data-weighted, not a trained affine control."
+  },
+  "blockshuffle_shifted": {
+    "run": "wikitext2_blockshuffle_shifted_lr600_s17_200",
+    "uniform_grid": [
+      -6,
+      6,
+      257
+    ],
+    "affine_energy_fraction": 0.9561369845795449,
+    "affine_residual_rms": 0.00029546756117696736,
+    "correction_rms": 0.0014107841286840645,
+    "source_sha256": "4107a8d43d1440c56d98aa00a66ae02400a43b2f23775883b703681f42903f67",
+    "interpretation": "Post-hoc uniform-grid least-squares fit to each learned correction; not data-weighted, not a trained affine control."
+  },
+  "calibrated_narrow_rational": {
+    "run": "wikitext2_calibrated_narrow_rational_lr1200_s17_200",
+    "uniform_grid": [
+      -6,
+      6,
+      257
+    ],
+    "affine_energy_fraction": 0.997661138947932,
+    "affine_residual_rms": 0.0009924470187565302,
+    "correction_rms": 0.02052131186995826,
+    "source_sha256": "03a50928c985e4154928b901a052e3e8625161555b8dba2d9bc0b91f43a690a6",
+    "interpretation": "Post-hoc uniform-grid least-squares fit to each learned correction; not data-weighted, not a trained affine control."
+  },
+  "calibrated_narrow_shifted": {
+    "run": "wikitext2_calibrated_narrow_shifted_lr1200_s17_200",
+    "uniform_grid": [
+      -6,
+      6,
+      257
+    ],
+    "affine_energy_fraction": 0.925545007482967,
+    "affine_residual_rms": 0.0005066678055782171,
+    "correction_rms": 0.0018568481841818813,
+    "source_sha256": "6742a95a19d0050079e1aba207e281e3eadbbe3f2ed29c03aac5207b64b166c6",
+    "interpretation": "Post-hoc uniform-grid least-squares fit to each learned correction; not data-weighted, not a trained affine control."
+  }
+}

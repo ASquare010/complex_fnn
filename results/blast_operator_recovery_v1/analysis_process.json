@@ -1,0 +1,16 @@
+{
+  "status": "FAIL",
+  "source_sha256": "d7ca241e829f28361e1c6966369facd95bf41b4bf253d9a958b7c94e5564aef3",
+  "coordinator_pid": 24356,
+  "started_utc": "2026-09-09T16:49:14.160837+00:00",
+  "optimizer_updates": 0,
+  "qualification_repetitions": 0,
+  "result_sha256": "bcfbc307f618418d4774d4e0bf82df3b1b5ad8b4379a3cc8f5ecf2848d557521",
+  "pid": 4944,
+  "returncode": 1,
+  "finished_utc": "2026-09-09T16:49:17.096993+00:00",
+  "elapsed_seconds": 2.9264694000000873,
+  "log_sha256": "5363e151ef3ea147ff8d21ec21d5103ea2c5d1b5c15a73f7a61e4890ff444200",
+  "source_unchanged": true,
+  "scientific_source_unchanged": true
+}

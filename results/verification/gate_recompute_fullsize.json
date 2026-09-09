@@ -1,0 +1,6 @@
+{
+  "loss_off": 8.373016357421875,
+  "loss_on": 8.373016357421875,
+  "gradient_differences": [],
+  "interpretation": "Full production-size BF16 backward equivalence audit; no optimizer update."
+}

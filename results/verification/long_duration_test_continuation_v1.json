@@ -1,0 +1,6 @@
+{
+  "failure_record_sha256": "5c1fa9862f94c45ac2b3f4402f7054d5b87c9557aa73ec3e534fa242c0433936",
+  "failure_log_sha256": "15676deff23681163c58690ed3976466451e90d5536b99dfe4d07138f56379c2",
+  "diagnosis": "Optional compiled rational activation test failed before numerical comparisons because ptxas returned 3221225477 (Windows access violation) with Internal error. Other 226 tests passed. Source unchanged; native training completed and verified independently. Underlying intermittent toolchain failure cause unresolved.",
+  "action": "One fresh-process targeted reproduction, then full suite only if it passes. Preserve every result; no code, settings, dependency, or cache deletion changes."
+}

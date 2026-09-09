@@ -1,0 +1,8 @@
+{
+  "selected_cell": "piecewise_latent_tanh_s43_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "piecewise_latent_tanh_s43_lr1000": 0.7069029758373896,
+    "piecewise_latent_tanh_s43_lr3000": 0.6063436220089594
+  }
+}

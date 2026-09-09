@@ -1,0 +1,95 @@
+{
+  "status": "complete",
+  "trials": [
+    {
+      "seed": 29,
+      "run": "wikitext2_blockshuffle_lr1200_s29_800",
+      "nll": 4.755465253673343,
+      "metrics_sha256": "58150320307466b8cd3c09aa0109c8893d48b6db7046906ed33b8ca89914fd45",
+      "checkpoint_sha256": "a1d506bb1dc46158b089f93a5498a1ccd5eea65ed41af59721f9df9d2a0e533b"
+    },
+    {
+      "seed": 43,
+      "run": "wikitext2_blockshuffle_lr1200_s43_800",
+      "nll": 4.770721936216434,
+      "metrics_sha256": "c714e32439c2ddc0c414447a6c56ed3d0793821fce01442cd5597e1b0c6d53cf",
+      "checkpoint_sha256": "4828b9e46fa4315296d82e58e472f87588ecdf6d4f39608ce95d9339001fa078"
+    }
+  ],
+  "plain_nlls": {
+    "17": 4.75089975161857,
+    "29": 4.755465253673343,
+    "43": 4.770721936216434
+  },
+  "affine_nlls": {
+    "17": 4.749981964736267,
+    "29": 4.7577938102909805,
+    "43": 4.754844168829852
+  },
+  "plain_mean_nll": 4.759028980502782,
+  "plain_sample_sd_nll": 0.010380503949428667,
+  "affine_mean_nll": 4.754206647952366,
+  "affine_sample_sd_nll": 0.003944750612471834,
+  "relative_mean_affine_change_percent": -0.10133017828157787,
+  "paired_statistics": {
+    "differences": [
+      -0.0009177868823027069,
+      0.002328556617637645,
+      -0.01587776738658242
+    ],
+    "mean": -0.004822332550415827,
+    "sample_sd": 0.009710904494044086,
+    "min": -0.01587776738658242,
+    "max": 0.002328556617637645,
+    "student_t_95_interval": [
+      -0.028945556620183718,
+      0.019300891519352065
+    ],
+    "student_t_df": 2,
+    "strict_wins": 2,
+    "nonzero_pairs": 3,
+    "one_sided_sign_p": 0.5,
+    "interpretation": "Exploratory paired mean interval assumes approximately normal independent differences; selected seed17 and three samples limit confirmatory interpretation. Sign test concerns the paired median and excludes exact ties."
+  },
+  "plain_reference_gates": {
+    "17": {
+      "at_least_70_percent_fewer_ffn_weights": true,
+      "beats_calibrated_narrow": true,
+      "within_one_percent_full_swiglu": true,
+      "memory_within_ten_percent_full_swiglu": true,
+      "within_one_percent_full_gelu": true,
+      "memory_within_ten_percent_full_gelu": true
+    },
+    "29": {
+      "at_least_70_percent_fewer_ffn_weights": true,
+      "beats_calibrated_narrow": true,
+      "within_one_percent_full_swiglu": true,
+      "memory_within_ten_percent_full_swiglu": true,
+      "within_one_percent_full_gelu": true,
+      "memory_within_ten_percent_full_gelu": true
+    },
+    "43": {
+      "at_least_70_percent_fewer_ffn_weights": true,
+      "beats_calibrated_narrow": true,
+      "within_one_percent_full_swiglu": true,
+      "memory_within_ten_percent_full_swiglu": true,
+      "within_one_percent_full_gelu": true,
+      "memory_within_ten_percent_full_gelu": true
+    }
+  },
+  "plain_passes_all_seeds": true,
+  "material_activation_benefit": false,
+  "plain_relative_to_reference_means_percent": {
+    "full_swiglu": -2.887135999865975,
+    "full_gelu": -2.196851873846861,
+    "calibrated_narrow": -2.4341556396007324,
+    "blockshuffle": -1.6556881532501677
+  },
+  "final_sampling_rng_matches_each_seed": true,
+  "sampling_rng_hashes": {
+    "17": "41fd2c08a367f65ec085a4362c50dbc0e9157d8935735659c02d786810f67064",
+    "29": "11efa87fc3dc79c6c7463c33b5a90c39445bb3dec2f10ae96af6a7c75af55b07",
+    "43": "37c47ab13cab33aa6563cb4197180e89cd4f25bdc480450fc970c808d6c36376"
+  },
+  "plan_sha256": "c3afc1454b54a4f8e63ca04066a4bd1d2b0338df137937b6acd9c7d6e0d379d2"
+}

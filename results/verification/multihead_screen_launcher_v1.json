@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "src.core.multihead_screen",
+    "audit",
+    "--output",
+    "results/multihead_screen_v1"
+  ],
+  "scope": "Frozen six-trial200-step validation screen; controller verifies213-test computation snapshot, archives and four current initial GPU losses before training.",
+  "returncode": 1,
+  "seconds": 22.529843899999833
+}

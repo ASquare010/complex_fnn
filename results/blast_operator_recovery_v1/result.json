@@ -1,0 +1,2603 @@
+{
+  "status": "LOCALLY_QUALIFIED",
+  "checks_passed": 34,
+  "optimizer_updates": 0,
+  "corpus_targets": 0,
+  "full_transformer_runs": 0,
+  "observations": {
+    "counts": {
+      "status": "PASS",
+      "kind": "counts",
+      "optimizer_updates": 0,
+      "counts": {
+        "gelu": {
+          "hidden": 3200,
+          "ffn_weights_per_layer": 350208,
+          "ffn_weights_8_layers": 2801664,
+          "total_weights_8_layers": 9099648
+        },
+        "swiglu": {
+          "hidden": 1984,
+          "ffn_weights_per_layer": 350208,
+          "ffn_weights_8_layers": 2801664,
+          "total_weights_8_layers": 9099648
+        }
+      }
+    },
+    "embedding_1984_384": {
+      "status": "PASS",
+      "kind": "embedding",
+      "optimizer_updates": 0,
+      "n": 1984,
+      "m": 384,
+      "canonical_matrix_exact": true,
+      "permuted_output_exact": true,
+      "added_same_width_weights": 3072,
+      "canonical_block_rank_bound": 6,
+      "tensor_file": "embedding_1984_384.pt",
+      "tensor_sha256": "6926e15c4d038558f300e48ae5736d035239a0bb8f0d5dc815b68effe19d4b1a",
+      "tensor_payload_readback_exact": true
+    },
+    "embedding_3200_384": {
+      "status": "PASS",
+      "kind": "embedding",
+      "optimizer_updates": 0,
+      "n": 3200,
+      "m": 384,
+      "canonical_matrix_exact": true,
+      "permuted_output_exact": true,
+      "added_same_width_weights": 3072,
+      "canonical_block_rank_bound": 6,
+      "tensor_file": "embedding_3200_384.pt",
+      "tensor_sha256": "1650a259ac17c79a0610d2689a73833fd6b80885ae5a90a8d9f250c7fdf63791",
+      "tensor_payload_readback_exact": true
+    },
+    "embedding_384_1984": {
+      "status": "PASS",
+      "kind": "embedding",
+      "optimizer_updates": 0,
+      "n": 384,
+      "m": 1984,
+      "canonical_matrix_exact": true,
+      "permuted_output_exact": true,
+      "added_same_width_weights": 3072,
+      "canonical_block_rank_bound": 6,
+      "tensor_file": "embedding_384_1984.pt",
+      "tensor_sha256": "7635c74c3faca7980020d0114bb4d048f3b6069278b7096ed46b91d5e04ad895",
+      "tensor_payload_readback_exact": true
+    },
+    "embedding_384_3200": {
+      "status": "PASS",
+      "kind": "embedding",
+      "optimizer_updates": 0,
+      "n": 384,
+      "m": 3200,
+      "canonical_matrix_exact": true,
+      "permuted_output_exact": true,
+      "added_same_width_weights": 3072,
+      "canonical_block_rank_bound": 6,
+      "tensor_file": "embedding_384_3200.pt",
+      "tensor_sha256": "6d24aa7c4c7f7181acdec5c84b7aa0c10d4799478df4e8f874aae7cf905a00e7",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cpu_gelu_seed17": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "gelu",
+      "device": "cpu",
+      "seed": 17,
+      "input_shape": [
+        2,
+        7,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 4.494208091242285,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 4.6031449179562625,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            400,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 88.73051328466057,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 30.30191438456522,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 12.427939875673994,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 47.428266869278474,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            400
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 138.61448490678345,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 19.631939033593685,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cpu_gelu_seed17.pt",
+      "tensor_sha256": "b4ff410cb6eccaadf83c5c15c4d19bfcfb0a9ceaf81e1d3e6879b8f3e86a0b41",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cpu_gelu_seed29": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "gelu",
+      "device": "cpu",
+      "seed": 29,
+      "input_shape": [
+        2,
+        7,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 4.4316884659685,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 4.531183991765334,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            400,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 85.90447264233298,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 29.894697231595273,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 11.961490851785495,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 45.87489551774402,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            400
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 133.18664009176018,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 19.16712465224087,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cpu_gelu_seed29.pt",
+      "tensor_sha256": "2b0a9b815a8e58e7207eee19fbd2f32a34d268ddf49bbad40fa070effb5ff8a5",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cpu_gelu_seed43": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "gelu",
+      "device": "cpu",
+      "seed": 43,
+      "input_shape": [
+        2,
+        7,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 4.533833388286566,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 4.580152412385129,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            400,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 88.97497985232422,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 30.77349731017092,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 12.340455567770263,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 47.97583783773506,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            400
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 137.97074917875796,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 19.556860303744017,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cpu_gelu_seed43.pt",
+      "tensor_sha256": "7e241293ac2087a088c2b5734005299a046845dad293f8694d2277905863f453",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cpu_swiglu_seed17": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "swiglu",
+      "device": "cpu",
+      "seed": 17,
+      "input_shape": [
+        2,
+        7,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1.3097360586583202,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1.876018656861141,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 21.651131444146184,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 9.46090306395745,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 3.9341629486672893,
+          "exact": true
+        },
+        "gate.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 21.865913442883777,
+          "exact": true
+        },
+        "gate.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 9.68363629440559,
+          "exact": true
+        },
+        "gate.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 3.9466077557337957,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 15.022929350476318,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            248
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 34.42907265296409,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 6.15384950817174,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cpu_swiglu_seed17.pt",
+      "tensor_sha256": "3f4b9a34efae49e335eb2fd2a935409d732dbc84c3d1611e650ed8f416424936",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cpu_swiglu_seed29": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "swiglu",
+      "device": "cpu",
+      "seed": 29,
+      "input_shape": [
+        2,
+        7,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1.2744572976170248,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1.792788016028509,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 21.337740893719893,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 9.249962533651157,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 3.6960644607619106,
+          "exact": true
+        },
+        "gate.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 20.556430623375736,
+          "exact": true
+        },
+        "gate.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 9.058674821131472,
+          "exact": true
+        },
+        "gate.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 3.760436171385357,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 14.330277987716375,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            248
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 32.75364741499085,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 5.819331970056185,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cpu_swiglu_seed29.pt",
+      "tensor_sha256": "2f7114bfc3602c41b310d9a5d09eb457be5ef80af8d1abab7aef930ebd7d5a10",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cpu_swiglu_seed43": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "swiglu",
+      "device": "cpu",
+      "seed": 43,
+      "input_shape": [
+        2,
+        7,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1.3224416046200071,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1.8682021089771816,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 22.020956169004357,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 9.574961617726839,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 3.895260715204741,
+          "exact": true
+        },
+        "gate.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 21.798874085751493,
+          "exact": true
+        },
+        "gate.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 9.501476165472672,
+          "exact": true
+        },
+        "gate.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 3.8988649583954746,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 15.1495533135624,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            248
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 34.402927277776186,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 6.129722914434192,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cpu_swiglu_seed43.pt",
+      "tensor_sha256": "20fa78a79ba566d4b7e00b9dcb10ee0e7c0bc65fcf9a87cd13307da243929077",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cuda_gelu_seed17": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "gelu",
+      "device": "cuda",
+      "seed": 17,
+      "input_shape": [
+        16,
+        128,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.bfloat16",
+          "max_absolute_error": 0.0,
+          "norm": 54.57019727508158,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 56.15688497375788,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            400,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1078.6530183480945,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 375.7056669860055,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 152.06344925884204,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 577.9955588729905,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            400
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1668.5790601113758,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 233.35435588776056,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cuda_gelu_seed17.pt",
+      "tensor_sha256": "0a8eeeeafc886e66483a976460014f0103921fea0820f3daabd2f91d8dbe8a17",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cuda_gelu_seed29": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "gelu",
+      "device": "cuda",
+      "seed": 29,
+      "input_shape": [
+        16,
+        128,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.bfloat16",
+          "max_absolute_error": 0.0,
+          "norm": 54.72574528614018,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 56.21216335690095,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            400,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1081.3730197265747,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 373.94972113755057,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 152.6881542648991,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 579.5018270905739,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            400
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1666.933385833869,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 237.33980914943987,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cuda_gelu_seed29.pt",
+      "tensor_sha256": "efa453f096dae37299e8e61afce09a5784236e8833c42fa77180d764ee4585bf",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cuda_gelu_seed43": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "gelu",
+      "device": "cuda",
+      "seed": 43,
+      "input_shape": [
+        16,
+        128,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.bfloat16",
+          "max_absolute_error": 0.0,
+          "norm": 54.45207755175865,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 55.99175692560248,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            400,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1077.180962241228,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 376.9288868532974,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 153.17608311236967,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 573.2975350754485,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            400
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 1663.854521520435,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 234.5622992014803,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cuda_gelu_seed43.pt",
+      "tensor_sha256": "1b9976cd4e1af1b10210e7f947f138b72fdbb40d9c01e99116204c189a2d232e",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cuda_swiglu_seed17": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "swiglu",
+      "device": "cuda",
+      "seed": 17,
+      "input_shape": [
+        16,
+        128,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.bfloat16",
+          "max_absolute_error": 0.0,
+          "norm": 15.978811500834281,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 22.785300583516296,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 264.65407409321193,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 117.28695482986554,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 47.16936181668953,
+          "exact": true
+        },
+        "gate.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 261.9682800488692,
+          "exact": true
+        },
+        "gate.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 117.25909277023413,
+          "exact": true
+        },
+        "gate.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 47.01173615235781,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 181.62319585255784,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            248
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 413.6653268148948,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 73.7740669791568,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cuda_swiglu_seed17.pt",
+      "tensor_sha256": "679374e3bc3ed3634e90de97538559744b47ad2bebaff988e7634a0a801310b2",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cuda_swiglu_seed29": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "swiglu",
+      "device": "cuda",
+      "seed": 29,
+      "input_shape": [
+        16,
+        128,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.bfloat16",
+          "max_absolute_error": 0.0,
+          "norm": 15.955666901244545,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 22.704780781190028,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 266.21749273427247,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 116.00201197762772,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 47.62864539656722,
+          "exact": true
+        },
+        "gate.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 262.82025455174255,
+          "exact": true
+        },
+        "gate.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 115.59079738782874,
+          "exact": true
+        },
+        "gate.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 47.71546549051389,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 182.33253855765136,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            248
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 414.8587027430933,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 73.72137528467566,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cuda_swiglu_seed29.pt",
+      "tensor_sha256": "391abb3f74d7f896db7ff5c72be57aae2e32b3334b78b1b9fc6d17b8a8cd3097",
+      "tensor_payload_readback_exact": true
+    },
+    "ffn_cuda_swiglu_seed43": {
+      "status": "PASS",
+      "kind": "ffn_checkpoint",
+      "optimizer_updates": 0,
+      "form": "swiglu",
+      "device": "cuda",
+      "seed": 43,
+      "input_shape": [
+        16,
+        128,
+        384
+      ],
+      "comparisons": {
+        "output": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.bfloat16",
+          "max_absolute_error": 0.0,
+          "norm": 16.025081175411742,
+          "exact": true
+        },
+        "input": {
+          "shape": [
+            16,
+            128,
+            384
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 22.749281038605346,
+          "exact": true
+        },
+        "up.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 266.1428311607436,
+          "exact": true
+        },
+        "up.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 116.85633105631858,
+          "exact": true
+        },
+        "up.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 47.89680486293336,
+          "exact": true
+        },
+        "gate.row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 262.98337652150866,
+          "exact": true
+        },
+        "gate.column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 116.17728718792556,
+          "exact": true
+        },
+        "gate.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 46.79448256933767,
+          "exact": true
+        },
+        "down.row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 184.1707623513569,
+          "exact": true
+        },
+        "down.column": {
+          "shape": [
+            8,
+            48,
+            248
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 415.35511434829965,
+          "exact": true
+        },
+        "down.mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float32",
+          "max_absolute_error": 0.0,
+          "norm": 77.30507802645926,
+          "exact": true
+        }
+      },
+      "parameter_count": 350208,
+      "tensor_file": "ffn_cuda_swiglu_seed43.pt",
+      "tensor_sha256": "070573fb61467fc489193664a6ce0c3ef989e32b1d1eca10cdcac63479ad0d1c",
+      "tensor_payload_readback_exact": true
+    },
+    "gradcheck": {
+      "status": "PASS",
+      "kind": "gradcheck",
+      "optimizer_updates": 0,
+      "finite_difference_forward_calls": 10,
+      "eps": 1e-06,
+      "atol": 1e-05,
+      "rtol": 0.001
+    },
+    "projection_1984_384_seed17": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 1984,
+      "m": 384,
+      "seed": 17,
+      "gain": 0.22271057451320087,
+      "mean_row_squared_norm": 0.04960000000000001,
+      "target_mean_row_squared_norm": 0.049600000000000005,
+      "gram_max_absolute_error": 4.85722573273506e-17,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 6.106226635438361e-16,
+          "norm": 16.072241020737007,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            1984
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.469446951953614e-16,
+          "norm": 16.371977499868677,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 4.440892098500626e-15,
+          "norm": 183.96882084569677,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            248
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 4.440892098500626e-15,
+          "norm": 425.06770845975416,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.9968028886505635e-15,
+          "norm": 75.49120935252449,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_1984_384_seed17.pt",
+      "tensor_sha256": "1202803225fc3badc1a4a87844bb6cb0e329eb467ffc928236299dc8c780f63b",
+      "tensor_payload_readback_exact": true
+    },
+    "projection_1984_384_seed29": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 1984,
+      "m": 384,
+      "seed": 29,
+      "gain": 0.22271057451320087,
+      "mean_row_squared_norm": 0.04960000000000001,
+      "target_mean_row_squared_norm": 0.049600000000000005,
+      "gram_max_absolute_error": 4.163336342344337e-17,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 6.661338147750939e-16,
+          "norm": 16.5209267346827,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            1984
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.608224830031759e-16,
+          "norm": 16.309292967441074,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.9968028886505635e-15,
+          "norm": 189.42182674413812,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            248
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.552713678800501e-15,
+          "norm": 423.98164082940156,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.774758283725532e-15,
+          "norm": 76.87011401896844,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_1984_384_seed29.pt",
+      "tensor_sha256": "26b337e2d7befd34e83b4d96e7de22e14238e6ad9124512be0c874b9e7477993",
+      "tensor_payload_readback_exact": true
+    },
+    "projection_1984_384_seed43": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 1984,
+      "m": 384,
+      "seed": 43,
+      "gain": 0.22271057451320087,
+      "mean_row_squared_norm": 0.04960000000000001,
+      "target_mean_row_squared_norm": 0.049600000000000005,
+      "gram_max_absolute_error": 4.85722573273506e-17,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 6.106226635438361e-16,
+          "norm": 16.163391355887846,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            1984
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.885780586188048e-16,
+          "norm": 16.343554329901902,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 4.884981308350689e-15,
+          "norm": 185.1177382283312,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            248
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 4.440892098500626e-15,
+          "norm": 425.64512260258914,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 2.886579864025407e-15,
+          "norm": 74.72947906358478,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_1984_384_seed43.pt",
+      "tensor_sha256": "417fbdbc02318bbc07bf000ccf3e6dd359f1da684c7d9f7efda7c264309853bb",
+      "tensor_payload_readback_exact": true
+    },
+    "projection_3200_384_seed17": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 3200,
+      "m": 384,
+      "seed": 17,
+      "gain": 0.282842712474619,
+      "mean_row_squared_norm": 0.08000000000000002,
+      "target_mean_row_squared_norm": 0.08,
+      "gram_max_absolute_error": 6.938893903907228e-17,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 9.992007221626409e-16,
+          "norm": 20.639863637056195,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            3200
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.885780586188048e-16,
+          "norm": 20.404158846547997,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 4.6074255521944e-15,
+          "norm": 213.93493662362877,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            400
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 5.329070518200751e-15,
+          "norm": 622.0562530606878,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 4.440892098500626e-15,
+          "norm": 88.07752435739998,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_3200_384_seed17.pt",
+      "tensor_sha256": "ecd37b78b233149d7e973f69755f3e397af52632e22f95b316e11b4334d78f07",
+      "tensor_payload_readback_exact": true
+    },
+    "projection_3200_384_seed29": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 3200,
+      "m": 384,
+      "seed": 29,
+      "gain": 0.282842712474619,
+      "mean_row_squared_norm": 0.08000000000000002,
+      "target_mean_row_squared_norm": 0.08,
+      "gram_max_absolute_error": 6.938893903907228e-17,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 9.992007221626409e-16,
+          "norm": 20.870780376126156,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            3200
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.885780586188048e-16,
+          "norm": 20.555134668292975,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 5.773159728050814e-15,
+          "norm": 219.1303290425979,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            400
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 4.440892098500626e-15,
+          "norm": 623.9431573076031,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 4.440892098500626e-15,
+          "norm": 90.13063446900756,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_3200_384_seed29.pt",
+      "tensor_sha256": "1214eb36cc488c916344f4f36b802974e257d1ddbbb3c2887e43d93e92365cf4",
+      "tensor_payload_readback_exact": true
+    },
+    "projection_3200_384_seed43": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 3200,
+      "m": 384,
+      "seed": 43,
+      "gain": 0.282842712474619,
+      "mean_row_squared_norm": 0.08000000000000002,
+      "target_mean_row_squared_norm": 0.08,
+      "gram_max_absolute_error": 8.326672684688674e-17,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 8.881784197001252e-16,
+          "norm": 20.842356770672804,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            3200
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.885780586188048e-16,
+          "norm": 21.07648460887978,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 4.6629367034256575e-15,
+          "norm": 223.74938051651282,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            400
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 5.329070518200751e-15,
+          "norm": 641.5247561509635,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 5.329070518200751e-15,
+          "norm": 89.50672425757904,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_3200_384_seed43.pt",
+      "tensor_sha256": "e216d5dce4169bff2dfc44ae368ede4c19762b6e69a92db75aa099c9e9af5429",
+      "tensor_payload_readback_exact": true
+    },
+    "projection_384_1984_seed17": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 384,
+      "m": 1984,
+      "seed": 17,
+      "gain": 0.8908422980528035,
+      "mean_row_squared_norm": 0.15359999999999996,
+      "target_mean_row_squared_norm": 0.15360000000000001,
+      "gram_max_absolute_error": 7.771561172376096e-16,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            1984
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.3322676295501878e-15,
+          "norm": 66.17821009262666,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 2.886579864025407e-15,
+          "norm": 64.54969709878445,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 8.881784197001252e-15,
+          "norm": 1072.6214227382861,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.0658141036401503e-14,
+          "norm": 474.5524537940038,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.0658141036401503e-14,
+          "norm": 196.2668433297837,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_384_1984_seed17.pt",
+      "tensor_sha256": "2966056b08ff484688ac6eb8931396d78f306bda3beb30c2a6d96a339cfbde01",
+      "tensor_payload_readback_exact": true
+    },
+    "projection_384_1984_seed29": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 384,
+      "m": 1984,
+      "seed": 29,
+      "gain": 0.8908422980528035,
+      "mean_row_squared_norm": 0.1536,
+      "target_mean_row_squared_norm": 0.15360000000000001,
+      "gram_max_absolute_error": 8.881784197001252e-16,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            1984
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.7763568394002505e-15,
+          "norm": 66.34636424462839,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.552713678800501e-15,
+          "norm": 65.4561234382459,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 8.881784197001252e-15,
+          "norm": 1080.2697733137877,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.199040866595169e-14,
+          "norm": 475.4881181404405,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.1546319456101628e-14,
+          "norm": 197.87603665136362,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_384_1984_seed29.pt",
+      "tensor_sha256": "a177689f53f2567ca92bd4605f7f8839b0fbe72911de002bee0c5a10dcda1ca1",
+      "tensor_payload_readback_exact": true
+    },
+    "projection_384_1984_seed43": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 384,
+      "m": 1984,
+      "seed": 43,
+      "gain": 0.8908422980528035,
+      "mean_row_squared_norm": 0.1536,
+      "target_mean_row_squared_norm": 0.15360000000000001,
+      "gram_max_absolute_error": 9.992007221626409e-16,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            1984
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.4432899320127035e-15,
+          "norm": 64.69477980173261,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 2.7755575615628914e-15,
+          "norm": 65.27474599423556,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            248,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 8.881784197001252e-15,
+          "norm": 1069.540093170894,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.1546319456101628e-14,
+          "norm": 467.8282498659801,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.2434497875801753e-14,
+          "norm": 191.10104987860362,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_384_1984_seed43.pt",
+      "tensor_sha256": "13baf7077065694e401fcdc5493de1e0fbc27c94524e85b1c5d2da408be92031",
+      "tensor_payload_readback_exact": true
+    },
+    "projection_384_3200_seed17": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 384,
+      "m": 3200,
+      "seed": 17,
+      "gain": 1.131370849898476,
+      "mean_row_squared_norm": 0.1536000000000001,
+      "target_mean_row_squared_norm": 0.15360000000000001,
+      "gram_max_absolute_error": 1.9984014443252818e-15,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            3200
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.5543122344752192e-15,
+          "norm": 84.04641086408867,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.9968028886505635e-15,
+          "norm": 82.1962704743949,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            400,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.2434497875801753e-14,
+          "norm": 1608.3793086423652,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.1546319456101628e-14,
+          "norm": 555.2923253333124,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.1102230246251565e-14,
+          "norm": 224.0867359079618,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_384_3200_seed17.pt",
+      "tensor_sha256": "2f04ddc04a65de79bb8bab304c97b52f57aa73351d2664f52a32a791641a76cd",
+      "tensor_payload_readback_exact": true
+    },
+    "projection_384_3200_seed29": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 384,
+      "m": 3200,
+      "seed": 29,
+      "gain": 1.131370849898476,
+      "mean_row_squared_norm": 0.1536000000000001,
+      "target_mean_row_squared_norm": 0.15360000000000001,
+      "gram_max_absolute_error": 1.7763568394002505e-15,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            3200
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.5543122344752192e-15,
+          "norm": 84.25996685068698,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.9968028886505635e-15,
+          "norm": 80.91809721219805,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            400,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.2434497875801753e-14,
+          "norm": 1605.3407702561508,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.2434497875801753e-14,
+          "norm": 549.8020680133558,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.1546319456101628e-14,
+          "norm": 225.01963733233413,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_384_3200_seed29.pt",
+      "tensor_sha256": "d5e0b1762d4c94e60a2cb1a4af3294f0128d9e0ddd6f10cf1043849802c9eb71",
+      "tensor_payload_readback_exact": true
+    },
+    "projection_384_3200_seed43": {
+      "status": "PASS",
+      "kind": "projection",
+      "optimizer_updates": 0,
+      "n": 384,
+      "m": 3200,
+      "seed": 43,
+      "gain": 1.131370849898476,
+      "mean_row_squared_norm": 0.1536000000000001,
+      "target_mean_row_squared_norm": 0.15360000000000001,
+      "gram_max_absolute_error": 1.7763568394002505e-15,
+      "comparisons": {
+        "output": {
+          "shape": [
+            2,
+            7,
+            3200
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.4432899320127035e-15,
+          "norm": 82.16245251069415,
+          "exact": false
+        },
+        "input": {
+          "shape": [
+            2,
+            7,
+            384
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 3.774758283725532e-15,
+          "norm": 81.94896133987945,
+          "exact": false
+        },
+        "row": {
+          "shape": [
+            8,
+            400,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.509903313490213e-14,
+          "norm": 1582.2817589785273,
+          "exact": false
+        },
+        "column": {
+          "shape": [
+            8,
+            48,
+            48
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.5765166949677223e-14,
+          "norm": 534.1676867101374,
+          "exact": false
+        },
+        "mix": {
+          "shape": [
+            48,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "max_absolute_error": 1.2434497875801753e-14,
+          "norm": 222.98239649879733,
+          "exact": false
+        }
+      },
+      "name_local_rng_preserved": true,
+      "tensor_file": "projection_384_3200_seed43.pt",
+      "tensor_sha256": "ffd466d11ef50c1ff67cf43a45ec9367951f99fe6d0ef6d3159e19a22bfefef4",
+      "tensor_payload_readback_exact": true
+    },
+    "witness_1984_384": {
+      "status": "PASS",
+      "kind": "witness",
+      "optimizer_updates": 0,
+      "n": 1984,
+      "m": 384,
+      "global_rank": 384,
+      "all_64_block_ranks": 48,
+      "nonzero_squared_singular_value": 8,
+      "target_squared_frobenius_norm": 3072,
+      "rank6_block_squared_error_lower_bound": 2688,
+      "relative_squared_bound": [
+        7,
+        8
+      ],
+      "all_ones_global_rank": 48,
+      "tensor_file": "witness_1984_384.pt",
+      "tensor_sha256": "d5c47a8b3267fbc99822c99863ec40675c05eb7c18ecfed141426895dde4ec88",
+      "tensor_payload_readback_exact": true
+    },
+    "witness_3200_384": {
+      "status": "PASS",
+      "kind": "witness",
+      "optimizer_updates": 0,
+      "n": 3200,
+      "m": 384,
+      "global_rank": 384,
+      "all_64_block_ranks": 48,
+      "nonzero_squared_singular_value": 8,
+      "target_squared_frobenius_norm": 3072,
+      "rank6_block_squared_error_lower_bound": 2688,
+      "relative_squared_bound": [
+        7,
+        8
+      ],
+      "all_ones_global_rank": 48,
+      "tensor_file": "witness_3200_384.pt",
+      "tensor_sha256": "e45b2ef448ca5cb699cfabc2a4daabf8bb2e0f2e354ece64c973ec3516492539",
+      "tensor_payload_readback_exact": true
+    },
+    "witness_384_1984": {
+      "status": "PASS",
+      "kind": "witness",
+      "optimizer_updates": 0,
+      "n": 384,
+      "m": 1984,
+      "global_rank": 384,
+      "all_64_block_ranks": 48,
+      "nonzero_squared_singular_value": 8,
+      "target_squared_frobenius_norm": 3072,
+      "rank6_block_squared_error_lower_bound": 2688,
+      "relative_squared_bound": [
+        7,
+        8
+      ],
+      "all_ones_global_rank": 48,
+      "tensor_file": "witness_384_1984.pt",
+      "tensor_sha256": "b3a9d84ba4c202352c8a4ece9f064f441d96909b7d4d10ea3ff68fd7abc8f675",
+      "tensor_payload_readback_exact": true
+    },
+    "witness_384_3200": {
+      "status": "PASS",
+      "kind": "witness",
+      "optimizer_updates": 0,
+      "n": 384,
+      "m": 3200,
+      "global_rank": 384,
+      "all_64_block_ranks": 48,
+      "nonzero_squared_singular_value": 8,
+      "target_squared_frobenius_norm": 3072,
+      "rank6_block_squared_error_lower_bound": 2688,
+      "relative_squared_bound": [
+        7,
+        8
+      ],
+      "all_ones_global_rank": 48,
+      "tensor_file": "witness_384_3200.pt",
+      "tensor_sha256": "f35a5469e0ed1824ef76349d29415f5181a12e9d50d5601b6028a523b903f08f",
+      "tensor_payload_readback_exact": true
+    }
+  },
+  "observation_hashes": {
+    "results/blast_operator_recovery_v1/observations/counts.json": "5d6c57adfeb2871ed66db3bd80b6df895deb4d231590133cd30ad37884f9a8aa",
+    "results/blast_operator_recovery_v1/observations/embedding_1984_384.json": "c4b1143b5d13fc889ba615f1b5db0febf014196e4c90614d1527a74cfd0becba",
+    "results/blast_operator_recovery_v1/observations/embedding_1984_384.pt": "6926e15c4d038558f300e48ae5736d035239a0bb8f0d5dc815b68effe19d4b1a",
+    "results/blast_operator_recovery_v1/observations/embedding_3200_384.json": "f8f0f375bc41f3fed123d00d5741b9e5e2d7f6adcff5597273c989e08a8a3839",
+    "results/blast_operator_recovery_v1/observations/embedding_3200_384.pt": "1650a259ac17c79a0610d2689a73833fd6b80885ae5a90a8d9f250c7fdf63791",
+    "results/blast_operator_recovery_v1/observations/embedding_384_1984.json": "097700d1d9485b105bdc54a90d135af79acac483feb091a64b60ef15bb227d2e",
+    "results/blast_operator_recovery_v1/observations/embedding_384_1984.pt": "7635c74c3faca7980020d0114bb4d048f3b6069278b7096ed46b91d5e04ad895",
+    "results/blast_operator_recovery_v1/observations/embedding_384_3200.json": "87841ccb7e821fbcef6633fb67c0c4c9293f26d5b7b333dcded9c155619aa2a7",
+    "results/blast_operator_recovery_v1/observations/embedding_384_3200.pt": "6d24aa7c4c7f7181acdec5c84b7aa0c10d4799478df4e8f874aae7cf905a00e7",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_gelu_seed17.json": "8e85144d959c494664275cb05b24f2fdafaf76889dce2164f29553a5db3fa4f2",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_gelu_seed17.pt": "b4ff410cb6eccaadf83c5c15c4d19bfcfb0a9ceaf81e1d3e6879b8f3e86a0b41",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_gelu_seed29.json": "733ac4fb01d492006c0825499b1e118834f0a86df27706bd8faf1d7075a680d6",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_gelu_seed29.pt": "2b0a9b815a8e58e7207eee19fbd2f32a34d268ddf49bbad40fa070effb5ff8a5",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_gelu_seed43.json": "527ce243f524839a9f1a342b8c499632392baca0169bc1a6dd608f986dd70f9f",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_gelu_seed43.pt": "7e241293ac2087a088c2b5734005299a046845dad293f8694d2277905863f453",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_swiglu_seed17.json": "514aa42f3fcd367e612fd1dd8888ecf494fb17c9b0eed9efc4409630c580084a",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_swiglu_seed17.pt": "3f4b9a34efae49e335eb2fd2a935409d732dbc84c3d1611e650ed8f416424936",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_swiglu_seed29.json": "0ccdb8f0891851869e9284ad125b4c754c7f73e4b816c583eb78e4497772eda5",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_swiglu_seed29.pt": "2f7114bfc3602c41b310d9a5d09eb457be5ef80af8d1abab7aef930ebd7d5a10",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_swiglu_seed43.json": "57d78af946e8562ce820d434310e204b8bc66183ce602a4fd27ec2a7613e5196",
+    "results/blast_operator_recovery_v1/observations/ffn_cpu_swiglu_seed43.pt": "20fa78a79ba566d4b7e00b9dcb10ee0e7c0bc65fcf9a87cd13307da243929077",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_gelu_seed17.json": "fc2d7a7ef10ad7d566c8de445ec09a44c6470a70b02214983e52d9d037b08fa0",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_gelu_seed17.pt": "0a8eeeeafc886e66483a976460014f0103921fea0820f3daabd2f91d8dbe8a17",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_gelu_seed29.json": "ac329b831f41cc4885a7f4f90300ead7ee81f1ea5d292ca83392a31a5a2256d9",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_gelu_seed29.pt": "efa453f096dae37299e8e61afce09a5784236e8833c42fa77180d764ee4585bf",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_gelu_seed43.json": "fc0690336cdb43dbe6f961ddce47d22041dfaddda2f52a93daf90d66cb2efa44",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_gelu_seed43.pt": "1b9976cd4e1af1b10210e7f947f138b72fdbb40d9c01e99116204c189a2d232e",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_swiglu_seed17.json": "a1dae153e103fe79485a2c0ae818dcb487b2178a409fc740139728ef0bb82f91",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_swiglu_seed17.pt": "679374e3bc3ed3634e90de97538559744b47ad2bebaff988e7634a0a801310b2",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_swiglu_seed29.json": "be1ef0a75e4d50a172cb8e481fe8b4f5afd4c38a088b07581bd7c33dc6e62666",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_swiglu_seed29.pt": "391abb3f74d7f896db7ff5c72be57aae2e32b3334b78b1b9fc6d17b8a8cd3097",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_swiglu_seed43.json": "f2137503865f40a466408880aedbeacb145f98fa979fa3c2c408b803a9fa456a",
+    "results/blast_operator_recovery_v1/observations/ffn_cuda_swiglu_seed43.pt": "070573fb61467fc489193664a6ce0c3ef989e32b1d1eca10cdcac63479ad0d1c",
+    "results/blast_operator_recovery_v1/observations/gradcheck.json": "62f79ec37899a0a177c7d3478d4703bfb40d95d9aa69615105fd5822c768bf76",
+    "results/blast_operator_recovery_v1/observations/projection_1984_384_seed17.json": "f5dc12bfe421993db8b6864c1b881a7ca5733a7d8e02a8dd1f3a7281c5871ac2",
+    "results/blast_operator_recovery_v1/observations/projection_1984_384_seed17.pt": "1202803225fc3badc1a4a87844bb6cb0e329eb467ffc928236299dc8c780f63b",
+    "results/blast_operator_recovery_v1/observations/projection_1984_384_seed29.json": "f50d0c56a7f795ec2fd321f7705c9f5aa98c7b84012c325a1aab84f63288b36a",
+    "results/blast_operator_recovery_v1/observations/projection_1984_384_seed29.pt": "26b337e2d7befd34e83b4d96e7de22e14238e6ad9124512be0c874b9e7477993",
+    "results/blast_operator_recovery_v1/observations/projection_1984_384_seed43.json": "4366968afa7756a0d4db29396528e691b5202af9b6d959c484d8ac536bbdfbb4",
+    "results/blast_operator_recovery_v1/observations/projection_1984_384_seed43.pt": "417fbdbc02318bbc07bf000ccf3e6dd359f1da684c7d9f7efda7c264309853bb",
+    "results/blast_operator_recovery_v1/observations/projection_3200_384_seed17.json": "760eb0a004155eb91bca878c03e323cbbbfaf347212ba8aeb1d523bfd29b8a7b",
+    "results/blast_operator_recovery_v1/observations/projection_3200_384_seed17.pt": "ecd37b78b233149d7e973f69755f3e397af52632e22f95b316e11b4334d78f07",
+    "results/blast_operator_recovery_v1/observations/projection_3200_384_seed29.json": "2ad674963bd466c3dfcfade982b9b92c948987c57e5f98233c3517aec60cc947",
+    "results/blast_operator_recovery_v1/observations/projection_3200_384_seed29.pt": "1214eb36cc488c916344f4f36b802974e257d1ddbbb3c2887e43d93e92365cf4",
+    "results/blast_operator_recovery_v1/observations/projection_3200_384_seed43.json": "f01a9c1ea437e7d59742adc6725ff27bd332dc3abaa2cd7d0ba1ba7f92de56bf",
+    "results/blast_operator_recovery_v1/observations/projection_3200_384_seed43.pt": "e216d5dce4169bff2dfc44ae368ede4c19762b6e69a92db75aa099c9e9af5429",
+    "results/blast_operator_recovery_v1/observations/projection_384_1984_seed17.json": "3d00ad921d9a6a482ea7eb6bc5182c361788ac665aa02a56a0b29f2a76b29709",
+    "results/blast_operator_recovery_v1/observations/projection_384_1984_seed17.pt": "2966056b08ff484688ac6eb8931396d78f306bda3beb30c2a6d96a339cfbde01",
+    "results/blast_operator_recovery_v1/observations/projection_384_1984_seed29.json": "e473370a8f0ceceef7eb2e9856d7d373a031306aaa8737ab32712b1086fe8959",
+    "results/blast_operator_recovery_v1/observations/projection_384_1984_seed29.pt": "a177689f53f2567ca92bd4605f7f8839b0fbe72911de002bee0c5a10dcda1ca1",
+    "results/blast_operator_recovery_v1/observations/projection_384_1984_seed43.json": "9b1c7db60c0723e983c67abc2d1f32d5714f9f8859059d937dfb89c7aef462fe",
+    "results/blast_operator_recovery_v1/observations/projection_384_1984_seed43.pt": "13baf7077065694e401fcdc5493de1e0fbc27c94524e85b1c5d2da408be92031",
+    "results/blast_operator_recovery_v1/observations/projection_384_3200_seed17.json": "1d33b65eed6ff1f652f8fc072aa0151a37a0b12baedebcc96f446add3d50eb96",
+    "results/blast_operator_recovery_v1/observations/projection_384_3200_seed17.pt": "2f04ddc04a65de79bb8bab304c97b52f57aa73351d2664f52a32a791641a76cd",
+    "results/blast_operator_recovery_v1/observations/projection_384_3200_seed29.json": "ce003f0089adb904e3969f3cf7bc90ac66681daca686658a0ce97fbeaadc55e4",
+    "results/blast_operator_recovery_v1/observations/projection_384_3200_seed29.pt": "d5e0b1762d4c94e60a2cb1a4af3294f0128d9e0ddd6f10cf1043849802c9eb71",
+    "results/blast_operator_recovery_v1/observations/projection_384_3200_seed43.json": "de46c88775c9a7c30860ca37531487354bc3d8eedb8568318117df48eabddb54",
+    "results/blast_operator_recovery_v1/observations/projection_384_3200_seed43.pt": "ffd466d11ef50c1ff67cf43a45ec9367951f99fe6d0ef6d3159e19a22bfefef4",
+    "results/blast_operator_recovery_v1/observations/witness_1984_384.json": "9ded4a7f1de44dcd53e2ea0e59e1fdacc5d596adba4300c76c8cb2b8f5c2ebba",
+    "results/blast_operator_recovery_v1/observations/witness_1984_384.pt": "d5c47a8b3267fbc99822c99863ec40675c05eb7c18ecfed141426895dde4ec88",
+    "results/blast_operator_recovery_v1/observations/witness_3200_384.json": "ed6f7015723dc1fbec4d968b041eb753457d0fdf1cf8e2a9e549f6c9ef6a790f",
+    "results/blast_operator_recovery_v1/observations/witness_3200_384.pt": "e45b2ef448ca5cb699cfabc2a4daabf8bb2e0f2e354ece64c973ec3516492539",
+    "results/blast_operator_recovery_v1/observations/witness_384_1984.json": "d6ba0384ef1b4a5e749927c9256f4b0ebdd09656b8cb0cc6a93bf8e4a34fb1ad",
+    "results/blast_operator_recovery_v1/observations/witness_384_1984.pt": "b3a9d84ba4c202352c8a4ece9f064f441d96909b7d4d10ea3ff68fd7abc8f675",
+    "results/blast_operator_recovery_v1/observations/witness_384_3200.json": "fc7053c4b536450466508df236f0e5dfe71f58ec5aec3b93ded4721a7592c7e1",
+    "results/blast_operator_recovery_v1/observations/witness_384_3200.pt": "f35a5469e0ed1824ef76349d29415f5181a12e9d50d5601b6028a523b903f08f"
+  },
+  "research_goal_achieved": false,
+  "explicit_qualification_repetitions": 1,
+  "total_h079_h080_attempts": 2,
+  "original_h079_evidence_status": "INCOMPLETE_ARTIFACT_INTEGRITY"
+}

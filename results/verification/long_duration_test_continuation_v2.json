@@ -1,0 +1,6 @@
+{
+  "previous_record_sha256": "9b08956cbe2f4ea2e74dfee087f452fd58dc54ce7e3d88506621ad80d109799d",
+  "previous_log_sha256": "5e33e6815a1302e72d087c07a7d5f230d2313f4bc249b96d151ad128172a58b0",
+  "diagnosis": "Fresh process crashed in Python garbage collection / pytest assertion _read_pyc while auto-loading anyio pytest plugin, before test collection or compiler reproduction. No live research workers and about 21 GiB physical memory free. Underlying cause unresolved.",
+  "change": "Use -p no:anyio for this verification only. Repository has no anyio/async tests or explicit plugin dependency. All test selection, assertions and GPU checks remain enabled; no source, dependency, cache or NN change."
+}

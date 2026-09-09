@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "command": [
+    "C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "results.verification.rotated_shuffle_fit_analysis_v1"
+  ],
+  "coordinator_pid": 33512,
+  "started_utc": "2026-09-08T03:17:52.039508+00:00",
+  "source_sha256": "841cbd59dc89dfc6d5f32af4f6e47bc7f9c205f2bbae9abf95b3cc6d3e72b814",
+  "scientific_fitting_process_sha256": "474116738b14e563dd9fa9181c2f5b8bc005a65d20670c129f6b401989ed54bf",
+  "scientific_reruns": 0,
+  "pid": 30732,
+  "returncode": 0,
+  "finished_utc": "2026-09-08T03:18:13.217262+00:00",
+  "elapsed_seconds": 21.17684449999797,
+  "log_sha256": "2a7538ba85108b06a3a993fddd4eef66ac57a1df1497944e771f7918ff7ad003",
+  "postprocess_source_unchanged": true,
+  "scientific_source_unchanged": true
+}

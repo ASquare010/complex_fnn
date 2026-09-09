@@ -1,0 +1,8 @@
+{
+  "selected_cell": "multiplicative_full_swiglu_s29_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "multiplicative_full_swiglu_s29_lr1000": 0.9741803805033366,
+    "multiplicative_full_swiglu_s29_lr3000": 0.9111964702606201
+  }
+}

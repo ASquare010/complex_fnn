@@ -1,0 +1,8 @@
+{
+  "selected_cell": "multiplicative_dynamic_s43_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "multiplicative_dynamic_s43_lr1000": 0.9316724340120951,
+    "multiplicative_dynamic_s43_lr3000": 0.8140661120414734
+  }
+}

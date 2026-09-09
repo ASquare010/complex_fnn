@@ -1,0 +1,8 @@
+{
+  "selected_cell": "piecewise_latent_affine_s17_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "piecewise_latent_affine_s17_lr1000": 0.5763184701402982,
+    "piecewise_latent_affine_s17_lr3000": 0.5481803566217422
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "selected_cell": "multiplicative_static_s29_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "multiplicative_static_s29_lr1000": 0.937099834283193,
+    "multiplicative_static_s29_lr3000": 0.8192490537961324
+  }
+}

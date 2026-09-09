@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "same_minibatches_all_cases": true,
+  "gates": {
+    "memory_within_ten_percent_full_gelu": true,
+    "memory_within_ten_percent_full_swiglu": true
+  },
+  "execution_passes": true,
+  "compiled_vs_native_memory_ratio": 0.8071655461010999,
+  "result_hashes": {
+    "full_gelu": "32e4ee0c4166c9ad516efc665403f290be396d82e33c797b8b6d9999e5a58aea",
+    "full_swiglu": "a649924b65209e11be9baeb9868ee51cc673c79a35486fc8576071ee5b857d78",
+    "rational_native": "f85470d16c97546030732ca87ad1359f979913d0e5e44068ebebcf36e5e25260",
+    "rational_compiled": "8c2879920df4b83386b85b52fb84379f94aa39d5b160c374e5e3b1cb6834e59b"
+  }
+}

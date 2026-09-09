@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "command": [
+    "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+    "-X",
+    "faulthandler",
+    "-m",
+    "pytest",
+    "-p",
+    "no:anyio",
+    "-q",
+    "--tb=short",
+    "results\\token_activation_v1\\source\\test_qualification.py"
+  ],
+  "protocol_sha256": "47bfa6ec43e7050f951ae73bc2370ac6b7c69b0c7c477cb17939391fca1324fa",
+  "source_archive_sha256": "eb8205c770a1547598de125d81f248a17a4a39c6620fe51d0369a0f5f2de54e1",
+  "started_utc": "2026-09-07T19:37:11.623448+00:00",
+  "pid": 16812,
+  "returncode": 0,
+  "elapsed_seconds": 6.173673100001906,
+  "source_unchanged": true,
+  "log_sha256": "8ea6ae8bd129b77b0e1d7a1a9045e909a0452353c35fddc8c471f45ac0324334"
+}

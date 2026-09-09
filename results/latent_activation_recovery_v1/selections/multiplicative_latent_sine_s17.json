@@ -1,0 +1,8 @@
+{
+  "selected_cell": "multiplicative_latent_sine_s17_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "multiplicative_latent_sine_s17_lr1000": 0.9783107489347458,
+    "multiplicative_latent_sine_s17_lr3000": 0.96196182568868
+  }
+}

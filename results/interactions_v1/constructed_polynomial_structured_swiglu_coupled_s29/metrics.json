@@ -1,0 +1,17 @@
+{
+  "task": "constructed_polynomial",
+  "seed": 29,
+  "variant": "structured_swiglu_coupled",
+  "train_target_mean": 0.34070292115211487,
+  "train_target_std": 0.3472702205181122,
+  "inputs_sha256": "20bf7f199db31fa6321b568492a2d1cb1bd96b27c438f0e0a48dca9d0feb7f09",
+  "protocol": "../protocol.json",
+  "population_additive_unnormalized_mse_floor": 0.027777777777777776,
+  "parameters": 49,
+  "heldout_normalized_mse": 2.5685825676191598e-05,
+  "training_normalized_mse": 2.3935162971611135e-05,
+  "max_gradient_norm": 0.7398810386657715,
+  "timed_training_seconds": 9.127881200026422,
+  "training_examples_per_second": 27765.4796821048,
+  "peak_allocated_vram_bytes": 18027008
+}

@@ -1,10 +1,57 @@
-# Python-generated files
+# Python, environments and local caches
 __pycache__/
-*.py[oc]
+*.py[cod]
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+.cache/
+.env
+.env.*
+/data/
 
-# Virtual environments
-.venv
+# Local raw evidence stays on disk; publish compact records and reproducible source.
+/results/**
+!/results/**/
+!/results/**/*.py
+!/results/**/*.md
+!/results/**/result.json
+!/results/**/protocol.json
+!/results/**/metrics.json
+!/results/**/summary.json
+!/results/**/config.json
+!/results/**/data_manifest.json
+!/results/**/before.json
+!/results/**/*process*.json
+!/results/**/coordinator_status.json
+!/results/**/selections/*.json
+!/results/verification/*.json
+!/results/**/*.png
+!/results/**/*.svg
+!/results/**/*.csv
+!/results/**/source/**/*.json
+
+# Never stage data, tensors, allocator captures or repeated source bundles.
+*.pt
+*.pth
+*.safetensors
+*.npy
+*.npz
+*.pickle
+/results/**/*.zip
+/results/**/*.jsonl
+/results/**/*.log
+/results/reproductions/
+/results/**/__pycache__/
+
+# Dense sampled curve/spectrum grids: reports and plots are retained; raw grids stay local.
+/results/activation_shapes_v1/**/result.json
+/results/affine_activation_shapes_v1/**/result.json
+/results/conditioning_scale384_v1/result.json
+/results/joint_conditioning_scale384_v1/result.json
+
+# Known damaged H079 payload: keep its inventory hash and failure report, not invalid JSON.
+/results/blast_operator_v1/result.json

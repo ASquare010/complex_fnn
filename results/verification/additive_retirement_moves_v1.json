@@ -1,0 +1,22 @@
+{
+  "destination": "research/archive/h061_retired",
+  "directories": [
+    "src/additive_block_lowrank_ffn"
+  ],
+  "files": [
+    "src/core/additive_qualification.py",
+    "src/core/additive_screen.py",
+    "tests/test_additive_block_lowrank.py",
+    "tests/test_additive_screen.py",
+    "configs/wikitext2_additive_block_lowrank_screen.json"
+  ],
+  "restore_shared_files": [
+    "src/core/benchmark.py",
+    "src/core/cli.py",
+    "src/core/config.py",
+    "src/core/model_audit.py",
+    "src/core/optimization.py",
+    "src/core/trainer.py",
+    "src/core/transformer.py"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "scope": "Plot-only regeneration after full report and 233 tests passed. Same recorded data, fixed recipe colors/order, no Torch/report verifier import or new score.",
+  "inputs": {
+    "wikitext2_full_swiglu_lr1200_s17_3200": {
+      "metrics_sha256": "e4c96952dd88a402b69dff756ea6f9f42ae9089d67bc629265981c1079b312e9",
+      "history_sha256": "e61ff0c3be418cf58774b14fb66dea778fedd910c81a838b45076b8da1e1c920"
+    },
+    "wikitext2_calibrated_narrow_lr1200_s17_3200": {
+      "metrics_sha256": "a97e32a25f432fc191c3ebe0cbdf603aea19f93bdef074a589aa6bceb8e21e0a",
+      "history_sha256": "987337707a6c56f54ff1321d71bd4ded7e4eeddad3890c9ae486c4129e5a165b"
+    },
+    "wikitext2_blockshuffle_lr1200_s17_3200": {
+      "metrics_sha256": "01bad8c84f7dbf93968497eaa8c794b0de7d87e0fbe5564dea93cafee137bebc",
+      "history_sha256": "d60a9e743d3f0a974d4b011509bdd8a6e8350582dfd569e18d2d8880f2aaba24"
+    },
+    "wikitext2_full_gelu_lr1200_s17_3200": {
+      "metrics_sha256": "b5f0884e8df7bc375028dc63ac43b467a52d169f743772ea290ee0bb079b8f82",
+      "history_sha256": "069210fdbdfba8f698bf4377ba113b65f162afd9858829f805a3528ceb096cdf"
+    },
+    "wikitext2_full_swiglu_lr1200_s29_3200": {
+      "metrics_sha256": "6e9de2df2f22a35fd84763dfa8c73ab5e8d2c0895f6092d2e4db5f7f82700486",
+      "history_sha256": "39d23a7d930ccb0102de89ca490ba737c6e50f1aed37f26a94e1c328ff51db36"
+    },
+    "wikitext2_calibrated_narrow_lr1200_s29_3200": {
+      "metrics_sha256": "0d7b78881769e87f5d424063915b0701623f4dc6a38000ce8a238959df883d61",
+      "history_sha256": "f13b3d7bcbb81c4532e4029829e079a71993eaec0c8e59a677cfec618f72cf64"
+    },
+    "wikitext2_blockshuffle_lr1200_s29_3200": {
+      "metrics_sha256": "16a997440776fc9af4621d343379b87f6c07a38d8adbe86360386eed398b6d96",
+      "history_sha256": "f3edcbff934555a9846221fb4e943d29096d41d2ccae10cf2a07ba1988fbb8f9"
+    },
+    "wikitext2_full_gelu_lr1200_s29_3200": {
+      "metrics_sha256": "aa4a88bb6367d13abfb0c6c9463ed2bec8d7c9f57d7a3ec2f39b51533953d691",
+      "history_sha256": "8806412569528af8f654960b2f7ddff865b730a13e56bc74ba9e94137fa988c8"
+    },
+    "wikitext2_full_swiglu_lr1200_s43_3200": {
+      "metrics_sha256": "744bcbef938b72f5ca79069c72d517777ef2b9e97dff15b8780407afe66308d9",
+      "history_sha256": "31e8ce92422f65d5f49e7edc426c83d74cfcde4d1c53ef67d19f0571e4b0d2bb"
+    },
+    "wikitext2_calibrated_narrow_lr1200_s43_3200": {
+      "metrics_sha256": "54486f9cbb3e900964598faff37e967b0749b6dd9718bea5ec2cc1ea795c05df",
+      "history_sha256": "8f08f2f9de88b5df6b571375170fbc49426fe930d544d087d4a7c5a2effeeb57"
+    },
+    "wikitext2_blockshuffle_lr1200_s43_3200": {
+      "metrics_sha256": "29d01e6db79f48513ffe311d2f5b82b9af52dff10e02805efa83d73d939f617d",
+      "history_sha256": "ee373a274fc66530dc977bc7303019909352c1c8a28e77101eda0680accfc1c1"
+    },
+    "wikitext2_full_gelu_lr1200_s43_3200": {
+      "metrics_sha256": "5aef55da51e5d77f633cdd7feb277e826e62de6a1da3b36089511d2144109668",
+      "history_sha256": "a2ee6d1fd767b99df0157d8a45d5644893a8c2329668017870d06cb5c722b7ab"
+    }
+  },
+  "outputs": {
+    "png": {
+      "before_sha256": "25365b3c5a4b04d659fc72f6b5052c7ebfbea0f9b92fbdbc0366e5efd74b0834",
+      "after_sha256": "e8f2d8afb4e7880f19228329034be82b16993e43365db57059e9aa95d9bdd763"
+    },
+    "svg": {
+      "before_sha256": "8da012885e7ceaa9637533ec567f5c37bad8133b6dc89b22902116d42c020299",
+      "after_sha256": "b6a0215ae33f057efe4f19375efeb16d95e8df625c5959698b39741e68f1c114"
+    }
+  },
+  "script_sha256": "0d986b7483a3812d42886d8d8b9a49f95dc8e1b72e72ec34386a7b24954f094c"
+}

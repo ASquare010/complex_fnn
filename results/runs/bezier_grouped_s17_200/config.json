@@ -1,0 +1,95 @@
+{
+  "model": {
+    "variant": "bezier_grouped",
+    "vocab_size": 4096,
+    "width": 192,
+    "layers": 4,
+    "heads": 6,
+    "context": 128,
+    "hidden": 0,
+    "groups": 8
+  },
+  "training": {
+    "steps": 200,
+    "batch_size": 16,
+    "learning_rate": 0.0006,
+    "weight_decay": 0.1,
+    "seed": 17,
+    "eval_batches": 16,
+    "log_every": 50,
+    "precision": "auto",
+    "device": "cuda"
+  },
+  "precision": "bf16",
+  "environment": {
+    "python": "3.12.12",
+    "torch": "2.14.0+cu132",
+    "cuda": "13.2",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "vram_bytes": 8585216000,
+    "bf16_supported": true,
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "provenance": {
+    "git_commit": "55aa0775d8639173179a48ee90749add29770cf6",
+    "git_status": "M .gitignore\n M README.md\n M doc/RESEARCH_GOAL.md\n M doc/RESEARCH_RULES.md\n M pyproject.toml\n M uv.lock\n?? configs/\n?? research/\n?? results/\n?? src/\n?? tests/",
+    "source_files": {
+      "configs/screening.json": "7d7396a15342cd0cb4cb38b67d699aa27586af3b50bd983b4667d626970e9866",
+      "pyproject.toml": "4b3557ea82725990b2824cb75f9ca5566228d0e5b9616aca4a77a28ae1c5f163",
+      "src/__init__.py": "8a10c2346264d6b5663dc204a9d7e203f76ac9f9ef2866ef73cc7c0e9c4862ea",
+      "src/core/__init__.py": "8153e37e4466ca8acc572a6c00f3321dcbd435278bed0e0bebeeef9278ef4a14",
+      "src/core/benchmark.py": "84d322da0275bb42a9c6585d484e692d94944f9c6bfe9d2ab70faedcd143f537",
+      "src/core/cli.py": "977599a7c0e0298de50a4bfe9764addb42ffd8811a1ec6c751749c42371d7324",
+      "src/core/config.py": "ef77f5111e71a21dd7e2d7d509176d667f9258f71d69bd05625799866e73f18f",
+      "src/core/data.py": "95910696142226792246c23c5a9a759141d275efc14624d925eab77552b95616",
+      "src/core/diagnostics.py": "9396616690916c2809be8eec5b0ca98915a9bddebe200db7dcbc4ba6a5829c03",
+      "src/core/functions.py": "ec0ed50964ff338d35fdbc34f2b70547958f5e2f7a7944091b4ccdff305d739b",
+      "src/core/plots.py": "d343b9ea0e57241317676dcfd72944d278b396cbc818032cd0654e9e8cd62b10",
+      "src/core/report.py": "5123ac10abe992a97e1d47852f4e00a356e1f959f186e2bc978f9ce0a4d40b1d",
+      "src/core/reproducibility.py": "506834a30f2172d1fcec5d12632c2beb6abe62e4f465704f1f2b7cd8e76724da",
+      "src/core/trainer.py": "e52dc537ce43b934fbbcc1f9df1d03ce770093d656bb075574591c2088117df0",
+      "src/core/transformer.py": "7b5fed51a4d8784e348c9a05c97890c2bb87b026d1f01dc444753615e0b0548e",
+      "src/model_name_1/__init__.py": "a4fe296953ea8fa78765cd87938472c522701b167e2984cd0bf336811f152abb",
+      "src/model_name_2/__init__.py": "2283ef5aa37784794712783beadca67f872e311ae0f563e0172fa115c19230ce",
+      "tests/test_baselines.py": "9ce924f74667a5261cd60c2c37af1c619d33717dacbacda655c7c39cc687280a",
+      "tests/test_bezier.py": "4258c94ceb390f45be62ba1aad0165042ece0b77fcf7d59043d5341548eddb99",
+      "tests/test_data.py": "fbd70d87f7626620b001e11e1f7540740bf82b4fccf20e73111695a554de659f",
+      "uv.lock": "9c6acbda0418bc25409e14e4c7134cbb2711d3f3136bc9bad1854ff4db5b3524"
+    },
+    "source_hash": "df22137e1f5647db5fb7f8dfa3be401e1c83ca223c8c7e057583910cd149ab46"
+  },
+  "data": {
+    "dataset": "roneneldan/TinyStories",
+    "revision": "f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+    "source_template": "https://huggingface.co/datasets/roneneldan/TinyStories/resolve/f54c09fd23315a6f9c86f9dc80f725de7d8f9c64",
+    "selection": "first N complete stories from each V2-GPT4 official split",
+    "requested_stories": {
+      "train": 12000,
+      "valid": 1000
+    },
+    "tokenizer": "train-only byte-level BPE",
+    "vocab_size": 4096,
+    "splits": {
+      "valid": {
+        "stories": 1000,
+        "tokens": 200803,
+        "removed_duplicates": 0
+      },
+      "train": {
+        "stories": 12000,
+        "tokens": 2457760,
+        "removed_duplicates": 0
+      }
+    },
+    "files": {
+      "tokenizer.json": "c98c93a080cdcac74e0ecb95358343bd30d7f2f2e4fad4ca0496dc739b760056",
+      "train.json": "acd2119f599ee962090a5e906c4867c7e279f1b98269d14e7cd81e15a25391bf",
+      "train.npy": "2675dff5f643827dfaba423d2e2dd1017f1ae3f8320b3bc8b42a3860a67f718a",
+      "valid.json": "406aa4a11829985dd350321ebd4094bf4fedf751e83062aeb29a84fd59d36008",
+      "valid.npy": "38ed43f90d50a193237784c3be7dafffc44b58738bf0b0eca146140635f7ad63"
+    }
+  },
+  "started_utc": "2026-09-06T05:06:27.857793+00:00",
+  "protocol": "micro_v1"
+}

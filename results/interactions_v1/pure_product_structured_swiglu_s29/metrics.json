@@ -1,0 +1,17 @@
+{
+  "task": "pure_product",
+  "seed": 29,
+  "variant": "structured_swiglu",
+  "train_target_mean": 0.007392885163426399,
+  "train_target_std": 0.3307247757911682,
+  "inputs_sha256": "20bf7f199db31fa6321b568492a2d1cb1bd96b27c438f0e0a48dca9d0feb7f09",
+  "protocol": "../protocol.json",
+  "population_additive_unnormalized_mse_floor": 0.1111111111111111,
+  "parameters": 49,
+  "heldout_normalized_mse": 0.9937155246734619,
+  "training_normalized_mse": 0.9947768449783325,
+  "max_gradient_norm": 0.8520086407661438,
+  "timed_training_seconds": 8.016609999974207,
+  "training_examples_per_second": 31614.360683732328,
+  "peak_allocated_vram_bytes": 18223616
+}

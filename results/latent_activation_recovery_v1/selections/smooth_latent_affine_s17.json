@@ -1,0 +1,8 @@
+{
+  "selected_cell": "smooth_latent_affine_s17_lr3000",
+  "criterion": "final selection MSE, then smaller rate",
+  "values": {
+    "smooth_latent_affine_s17_lr1000": 0.5692543213566145,
+    "smooth_latent_affine_s17_lr3000": 0.5191787381966909
+  }
+}

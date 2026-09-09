@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "research_target_passes": false,
+  "full_tests_passed": 233,
+  "full_test_record": "results/verification/long_duration_replication_tests_v1.json",
+  "all_tested_sources_exact_except_report_palette": true,
+  "post_test_change": {
+    "file": "src/core/long_duration_replication_report.py",
+    "prior_sha256": "c7f8202446782eddb167a6d4fe653850b35c15c57b0ca8e692bf34fb509b1877",
+    "current_sha256": "923d9c7db690ed6dc343256e61a76aecdaea49a947624e8f78ae7e6026a2cb19",
+    "verifier_and_all_nonplot_statements_ast_exact": true,
+    "plot_regeneration_record": "results/verification/long_duration_replication_plot_verification_v1.json"
+  },
+  "plans_unchanged": {
+    "activation_correction_repeat_v1": "activation_correction_repeat_plan.md",
+    "affine_activation_screen_v1": "affine_activation_plan.md",
+    "affine_activation_shapes_v1": "affine_activation_plan.md",
+    "activation_correction_execution_v1": "activation_correction_execution_plan.md",
+    "activation_screen_v1": "learnable_activation_plan.md",
+    "activation_shapes_v1": "learnable_activation_plan.md",
+    "activation_execution_v1": "activation_execution_plan.md",
+    "activation_training_repeat_v1": "activation_training_repeat_plan.md",
+    "affine_longer_v2": "affine_activation_longer_plan.md",
+    "affine_replication_v1": "affine_activation_replication_plan.md",
+    "affine_removal_v1": "affine_activation_removal_plan.md",
+    "affine_rate_control_v1": "affine_activation_rate_control_plan.md",
+    "affine_rate_replication_v1": "affine_rate_replication_plan.md",
+    "multihead_integration_v1": "multihead_integration_plan.md",
+    "multihead_screen_v2": "multihead_screen_plan.md",
+    "headwise_screen_v1": "headwise_screen_plan.md",
+    "optimizer_bracket_v1": "optimizer_bracket_plan.md",
+    "optimizer_lower_v1": "optimizer_lower_plan.md",
+    "long_duration_v1": "long_duration_plan.md",
+    "long_duration_replication_v1": "long_duration_replication_plan.md"
+  },
+  "twelve_longer_cells_and_twelve_short_references_reverified": true,
+  "all_immutable_data_hashes_exact": true,
+  "registered_variants": 31,
+  "previous_models_preserved": 30,
+  "retained_lm_profile_runs": 164,
+  "step_counts": {
+    "200": 83,
+    "20": 3,
+    "800": 66,
+    "3200": 12
+  },
+  "local_links_checked": 152,
+  "new_completed_trials": 8,
+  "numerical_failures": 0,
+  "audit_failures": 1,
+  "failed_experiment_launchers": 2,
+  "failed_palette_report_attempts": 3,
+  "cpu_diagnoses_verified": [
+    "duration_optimizer_geometry_v1",
+    "headwise_hessian_witness_v1"
+  ],
+  "result_sha256": "534c963ad93252ece0b8688896485f140d52556ee41c10a60691866076c01485",
+  "summary_sha256": "ec6cce3b6d478003286cf8907c6f8f90d23f054e237b5483b45b88637442cc1e",
+  "documents": {
+    "README.md": "e27018f45c702b597ed03c3eaf3e835b12c4c43aa7f5b53a67ef2625d998d2ba",
+    "research/CURRENT_STATE.md": "5feb2626af40f65b4b5f7304001231ee8b0cdeb28de0632a41f0448e8661c89a",
+    "research/idea_bank.md": "f8d6cd794b1cb4ff325608bb8f5002f4f395ac892575962e95096d9e4e00492a",
+    "research/long_duration_replication_plan.md": "a8c8d9c06baa220ffd34e0a87e10b4ea678f73c087c5ed6f223cc1d4addf0eea",
+    "research/long_duration_replication_results.md": "a334687343b5413e0ac8a7bf4e9d9e5014010e9711a4527226c2c3fcb484a2bf",
+    "research/duration_optimizer_geometry.md": "fefd133cfd34df665e2ee5213b5d7e1a5ca9cac87606f8ab252e3ea3f1a3e45b",
+    "research/headwise_hessian_obstruction.md": "1de9b431077b5a9197b3213e969f8a6093012ac0aebce742f119eff10eb795d1",
+    "research/structured_headwise_budget.md": "d59dd3469402e2d5cce62de229b6a8c62446aa4a463a7080bcc4f1bb005674f7",
+    "research/learnable_activation_domain.md": "9f9e1e246bc6fb5e8c0d8752e3f34c81d395d3ef9b6a4efa9abde8a737c70b62",
+    "research/current_comparator_audit.md": "70be684ecd5389cb06b74a4634b87f5a07c6e9908334691d0e1f173b4cae4228"
+  },
+  "global_report_returncode": 0
+}
