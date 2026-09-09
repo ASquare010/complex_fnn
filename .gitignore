@@ -93,3 +93,7 @@ wheels/
 !/results/input_basis_fit_v1/result.json.gz
 /results/input_basis_lift_v1/coordinator_status.json
 !/results/input_basis_lift_v1/coordinator_status.json.gz
+
+# Preserve H090's full repeated endpoint record losslessly; plain copy stays local.
+/results/neuron_geometry_recovery_v1/result.json
+!/results/neuron_geometry_recovery_v1/result.json.gz

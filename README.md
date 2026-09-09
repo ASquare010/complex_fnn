@@ -10,16 +10,17 @@ validation loss is 4.1443 versus 4.1054 for full SwiGLU. Earlier three-seed evid
 misses the 1% loss allowance, and native updates are slower. These are promising
 compression measurements, not a completed breakthrough.
 
-The latest [direct-input basis study](research/input_basis_results.md) completes
-336 synthetic runs with three seeds. Three richer bases are rejected because a
-simpler even-feature control performs better. That control lowers aggregate error
-12.92% versus narrow GELU at300 updates. Its redundant readout folds to282,624
-stored weights (76.04% fewer than full), preserving measured MSE within1e-8.
+The latest [affine-control diagnostic](research/affine_falsification_results.md)
+changes the interpretation of the nonlinear lead. It improves aggregate error
+only **1.724% over ordinary affine least squares**, missing the preset 2% gate,
+while requiring more coefficients and retaining a native inference speed deficit.
+Its 12.60% improvement on piecewise targets survives as a specific observation.
 
-Training used350,208 weights. Native inference remains about2.02 times slower than
-narrow GELU, and language quality is untested. Keep the folded even-feature source
-as an unvalidated lead; no new active architecture or breakthrough is claimed.
-The earlier pair rotations, Bezier and grouped-bump recipes remain closed.
+The prior 12.92% advantage over narrow GELU remains a correct synthetic measurement;
+a stronger control was needed. All 24 affine/linear fits and 168 neural parity
+evaluations were independently checked. The general lead is closed at this
+budget. Future candidates must demonstrate nonlinear learning beyond affine
+structure before earning refinement or a larger experiment.
 
 ## Start here
 

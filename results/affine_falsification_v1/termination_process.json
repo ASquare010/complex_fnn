@@ -1,0 +1,11 @@
+{
+  "status": "TERMINATED_NATIVE_FAILURE",
+  "pid": 4760,
+  "observed_exit_code": -1073741819,
+  "observed_exit_hex": "0xC0000005",
+  "handle_terminal": true,
+  "pid_absent_at_verification": true,
+  "completed_fit_records": 0,
+  "original_worker_status_preserved": "RUNNING",
+  "run_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

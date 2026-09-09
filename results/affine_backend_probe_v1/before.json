@@ -1,0 +1,7 @@
+{
+  "source_sha256": "26559bd330e381c62f3c1645e86f2781355e037dab52e594c2ab934835e42131",
+  "reason": "H096 native access violation before any fit record; root cause unknown",
+  "dimension": 385,
+  "repetitions": 1,
+  "optimizer_updates": 0
+}

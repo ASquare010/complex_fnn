@@ -1,5 +1,11 @@
 # H094: direct-input nonlinear basis results
 
+**Later evidence:** the matched-sample affine diagnostic limits the apparent
+general advantage to 1.724%, below its 2% threshold. The general lead is closed;
+the 12.60% piecewise improvement remains a scoped result. See the
+[updated interpretation](affine_falsification_results.md). The measurements below
+are preserved as the historical H094-H095 result.
+
 The original gold objective remains unmet. This is a fixed300-update synthetic
 screen of learned projections/readouts with fixed nonlinear bases. None of the
 three candidates uses a GELU/ReLU/SwiGLU base. Their basis functions have zero

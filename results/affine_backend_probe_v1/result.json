@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "phase_records": [
+    {
+      "phase": "before_import",
+      "pid": 1460
+    },
+    {
+      "phase": "after_import",
+      "pid": 1460
+    },
+    {
+      "phase": "cpu_before_eigvalsh",
+      "pid": 1460
+    },
+    {
+      "phase": "cpu_after_eigvalsh",
+      "pid": 1460,
+      "minimum": 146.15455348193237,
+      "maximum": 2624.5775014993333
+    },
+    {
+      "phase": "cpu_before_cholesky",
+      "pid": 1460
+    },
+    {
+      "phase": "cpu_after_cholesky",
+      "pid": 1460
+    },
+    {
+      "phase": "cpu_after_solve",
+      "pid": 1460,
+      "relative_residual": 9.985055895565753e-16
+    },
+    {
+      "phase": "cuda_before_eigvalsh",
+      "pid": 1460
+    },
+    {
+      "phase": "cuda_after_eigvalsh",
+      "pid": 1460,
+      "minimum": 146.15455348193154,
+      "maximum": 2624.577501499342
+    },
+    {
+      "phase": "cuda_before_cholesky",
+      "pid": 1460
+    },
+    {
+      "phase": "cuda_after_cholesky",
+      "pid": 1460
+    },
+    {
+      "phase": "cuda_after_solve",
+      "pid": 1460,
+      "relative_residual": 1.2426758181278608e-15
+    },
+    {
+      "phase": "PASS",
+      "pid": 1460
+    }
+  ],
+  "source_sha256": "26559bd330e381c62f3c1645e86f2781355e037dab52e594c2ab934835e42131",
+  "phase_log_sha256": "1de8db6bc7fef9daacd4bbf07c725695758de7929dd615db155a1476049c5825",
+  "run_log_sha256": "ce63e68188240c085dc774738b433131686d5314b01b1d97cf4082bfcf133afe",
+  "optimizer_updates": 0,
+  "root_cause": "not determined"
+}

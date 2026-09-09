@@ -176,7 +176,7 @@ model folder is justified solely by this synthetic screen.
 
 Sources: [frozen fitting plan](neuron_geometry_plan.md),
 [recovery plan](neuron_geometry_recovery_plan.md),
-[complete endpoint results](../results/neuron_geometry_recovery_v1/result.json),
+[complete endpoint results](../results/neuron_geometry_recovery_v1/result.json.gz),
 [independent audit](../results/neuron_geometry_audit_v1/result.json).
 Raw tensors, datasets and histories stay local under the
 [artifact policy](ARTIFACTS.md); the compact clone preserves source and conclusions.

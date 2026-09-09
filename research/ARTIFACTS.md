@@ -74,3 +74,17 @@ The H092 DLL failure is preserved; H093 is an explicit separate execution.
 The full H094 audit result and original H092 DLL-failure record also have
 lossless .json.gz exports. Their final packaging hashes are in the release
 receipt; they were added after the local artifact inventory snapshot.
+
+H096-H098 adds matched-sample affine fits, antithetic parity diagnostics and an
+explicit native-crash recovery. Their data and tensor outputs remain local.
+The H090 full endpoint result is now losslessly stored as result.json.gz;
+its original JSON remains unchanged locally. Restore it with the same exclusive
+gzip procedure before following historical source references that require JSON.
+The packing receipt is evidence/h090_compact_result.json. No result was erased
+or recomputed during compression, and the tracked-file limit remains 48 MiB.
+
+The H096-H098 inventory is
+[evidence/affine_falsification_artifacts.csv.gz](evidence/affine_falsification_artifacts.csv.gz):
+98 local files, 1,042,485,397 bytes. Its
+[release receipt](evidence/affine_falsification_release.json) records source
+preservation and independent checks. This inventory is not a tensor backup.

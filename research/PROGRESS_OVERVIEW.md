@@ -5,7 +5,38 @@ unmet: at least 70% fewer FFN weights, within 1% relative validation loss of BOT
 full GELU and SwiGLU, while beating calibrated narrow controls. Consistent
 multi-seed, longer-training, scale and broader-data evidence is still required.
 
-## Latest completed experiment: direct-input nonlinear bases
+## Latest result: the stronger affine control closes the general lead
+
+H096-H098 fits ordinary linear and affine controls to exactly the training
+samples seen by each H094 run. The even-feature recipe is only **1.724% better
+than affine least squares** in aggregate, missing the frozen 2% material-benefit
+gate. It wins on piecewise targets by 12.60% but loses on smooth, oscillatory and
+multiplicative targets. Its three small aggregate seed wins remain recorded.
+
+The affine control needs 147,840 coefficients, versus 350,208 used in the neural
+training and 282,624 after folding. The previously measured native speed deficit
+also stands. Close the general nonlinear-benefit claim for this fixed recipe;
+retain the piecewise result as scoped evidence, without kernel refinement or
+automatic longer training. The original 12.92% advantage over narrow GELU is
+numerically correct but does not survive as a sufficiently strong general claim.
+
+All 24 least-squares fits are independently verified, including reconstructed
+sample counts/statistics, 96 CPU score checks, 168 recomputed parity evaluations
+and 12 saved odd-linearity pairs. H096's native access violation is preserved;
+H097 did not reproduce it, and H098's explicit CPU-solver recovery passed the
+unchanged mathematical/statistical checks. No new neural optimizer update ran.
+
+The next assay must measure nonlinear residual learning beyond affine structure,
+include a representable positive control and stronger conventional activations,
+and separate representational limits from short-budget optimization. The full
+parameter, NLL, compute, duration, scale and broader-data goal remains unmet.
+
+[Complete findings](affine_falsification_results.md),
+[frozen diagnostic](affine_falsification_plan.md),
+[recovery](affine_falsification_recovery_plan.md),
+[audited result](../results/affine_falsification_recovery_v1/result.json).
+
+## Previous experiment: direct-input nonlinear bases
 
 H094 tests rational, Hermite and trigonometric feature pairs without a fixed
 ReLU/GELU/SwiGLU candidate base. The336-run grid uses the same four synthetic
@@ -21,8 +52,8 @@ stored weights from350,208 to282,624 (76.04% fewer than full) with less than1e-8
 MSE change across12 checkpoints. Training still used350,208 weights.
 
 The folded model's native batch256 inference is0.261 ms versus0.129 ms for narrow
-GELU. It remains an unvalidated synthetic lead with a speed deficit, not a
-breakthrough or an earned language-model promotion. [Full report](input_basis_results.md).
+GELU. H098's stronger affine control subsequently closes its general-benefit claim;
+the piecewise gain remains a scoped observation. [Full report](input_basis_results.md).
 
 ## Previous experiment: learned neuron geometry
 

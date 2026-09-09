@@ -1,0 +1,10 @@
+{
+  "original": "results/neuron_geometry_recovery_v1/result.json",
+  "original_bytes": 719336,
+  "original_sha256": "d1c6a41557091c47da97e7636c7abd606e4ef3181c731761e574346e414db4b1",
+  "compressed": "results/neuron_geometry_recovery_v1/result.json.gz",
+  "compressed_bytes": 95846,
+  "compressed_sha256": "0eb052e57bbcab436c01f669a98a8c6bb0eb51175267656ad78a7f877eb3fca5",
+  "lossless_readback": true,
+  "plain_local_file_preserved": true
+}

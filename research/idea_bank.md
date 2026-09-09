@@ -1119,7 +1119,7 @@ scores exactly. Rational/Hermite/trig lower aggregate MSE7.21-9.31% versus
 narrow GELU but lose4.15-6.56% to duplicated-even; all fail the frozen gates.
 These fixed richer recipes are eliminated without a larger allocation.
 
-## H095 - Fold the stronger even-feature control (UNVALIDATED LEAD)
+## H095 - Fold the stronger even-feature control (GENERAL LEAD CLOSED BY H098)
 
 The observed duplicated-even control is12.92% below narrow GELU and8.89% below
 full GELU at300 updates. Folding V/W into V+W reduces inference weights to282,624
@@ -1128,3 +1128,23 @@ output/Jacobian/MSE checks pass, maximum MSE change below1e-8, zero training upd
 Native inference improves from0.297 to0.261 ms but narrow GELU takes0.129 ms.
 Retain this simpler mechanism for a distinct future hypothesis, not automatic
 refinement or promotion. [Report](input_basis_results.md), [fold plan](input_basis_fold_plan.md).
+
+## H096-H098 - Matched-sample affine falsification (COMPLETE; GENERAL LEAD CLOSED)
+
+H096 has a native access violation before completed fits; its terminal receipt
+and original stale status remain intact. H097's isolated CPU/CUDA solve passes
+without reproducing the failure. H098 uses CPU small-matrix linalg with identical
+data, tolerances and decisions; all original H096 files remain hash-identical.
+
+Twenty-four least-squares fits use exactly the 76,800 sampled training indices
+per H094 seed, including duplicates. Independent audit reconstructs statistics,
+checks all coefficients and 96 CPU scores, recomputes 168 parity evaluations and
+rechecks 12 odd-linearity pairs. No new neural optimizer update occurs.
+
+The even-feature model improves aggregate MSE only 1.724% versus affine, missing
+the 2% material threshold. Piecewise improves 12.60%, but three other tasks lose.
+It uses more weights and remains slower. Close the general claim at this budget,
+preserve the piecewise observation, and assign no kernel/longer-training budget.
+The next assay must distinguish nonlinear residual learning from affine fitting
+and include both representable positive controls and stronger established
+nonlinear activations. [Full diagnostic](affine_falsification_results.md).

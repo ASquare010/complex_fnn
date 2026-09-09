@@ -6,7 +6,38 @@ The latest completed longer-budget language experiment is matched-budget BlockSh
 This fixed duration recipe is closed. Further training needs a distinct, justified hypothesis.
 
 
-## H094-H095: broader bases eliminated; simpler even-feature lead retained
+## Latest result: the stronger affine control closes the general lead
+
+H096-H098 fits ordinary linear and affine controls to exactly the training
+samples seen by each H094 run. The even-feature recipe is only **1.724% better
+than affine least squares** in aggregate, missing the frozen 2% material-benefit
+gate. It wins on piecewise targets by 12.60% but loses on smooth, oscillatory and
+multiplicative targets. Its three small aggregate seed wins remain recorded.
+
+The affine control needs 147,840 coefficients, versus 350,208 used in the neural
+training and 282,624 after folding. The previously measured native speed deficit
+also stands. Close the general nonlinear-benefit claim for this fixed recipe;
+retain the piecewise result as scoped evidence, without kernel refinement or
+automatic longer training. The original 12.92% advantage over narrow GELU is
+numerically correct but does not survive as a sufficiently strong general claim.
+
+All 24 least-squares fits are independently verified, including reconstructed
+sample counts/statistics, 96 CPU score checks, 168 recomputed parity evaluations
+and 12 saved odd-linearity pairs. H096's native access violation is preserved;
+H097 did not reproduce it, and H098's explicit CPU-solver recovery passed the
+unchanged mathematical/statistical checks. No new neural optimizer update ran.
+
+The next assay must measure nonlinear residual learning beyond affine structure,
+include a representable positive control and stronger conventional activations,
+and separate representational limits from short-budget optimization. The full
+parameter, NLL, compute, duration, scale and broader-data goal remains unmet.
+
+[Complete findings](affine_falsification_results.md),
+[frozen diagnostic](affine_falsification_plan.md),
+[recovery](affine_falsification_recovery_plan.md),
+[audited result](../results/affine_falsification_recovery_v1/result.json).
+
+## Historical H094-H095 interpretation: superseded by the affine check
 
 The three richer rational/Hermite/trigonometric pair recipes are closed at the
 fixed budget. They reduce aggregate reporting MSE by7.21-9.31% versus narrow
@@ -38,8 +69,8 @@ but it remains2.02 times narrow GELU. The compute
 target is therefore unmet. This is a native inference measurement, separate
 from the H094 training-time gate.
 
-Keep the folded even-feature source as an unvalidated research lead. Do not
-register a new model or automatically allocate refinement/longer training.
+H095 retained the folded even-feature source as an unvalidated lead. H098 now
+closes its general nonlinear-benefit claim; source and scoped results remain archived.
 The three richer fixed recipes remain rejected. No test of a language corpus,
 convergence, larger scale or broader real data occurred in these rounds.
 
