@@ -10,17 +10,15 @@ validation loss is 4.1443 versus 4.1054 for full SwiGLU. Earlier three-seed evid
 misses the 1% loss allowance, and native updates are slower. These are promising
 compression measurements, not a completed breakthrough.
 
-The latest [nonlinear-residual study](research/nonlinear_residual_results.md)
-tests a new four-parameter rational mixture in 264 runs. It reduces aggregate
-synthetic error 12.39% versus narrow GELU, but only 0.060% versus StarReLU and
-costs 40.49% more native update time than narrow GELU. It fails the frozen gates
-and is rejected at this budget. All 528 checkpoint scores reproduce exactly.
+The latest [three-way interaction study](research/triadic_interaction_results.md)
+tests raw and bounded products of learned projections in 312 fresh runs. Both
+recipes are rejected: their aggregate errors are 2.08 and 4.54 times narrow GELU,
+and updates are slower. All624 checkpoint scores reproduce exactly.
 
-The new data isolates nonlinear structure: three tasks are learned, while cubic
-remains unresolved for ordinary models. Known-feature controls learn all four.
-This narrows the next question to feature discovery and optimization, without
-promoting another small activation improvement. The earlier
-[affine-control finding](research/affine_falsification_results.md) is preserved.
+The raw model can represent the cubic target, yet training fails to discover a
+good solution at this budget. Final projection diagnostics motivate investigating
+feature discovery, with no promotion of these rejected products. The earlier
+[learned-activation study](research/nonlinear_residual_results.md) remains documented.
 
 ## Start here
 

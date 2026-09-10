@@ -1,0 +1,11 @@
+{
+  "status": "FAIL",
+  "phase": "post-audit reporting recovery",
+  "native_exit_code": -1073741819,
+  "windows_code": "0xC0000005",
+  "source_sha256": "179ed15d04334e249adef3859c5556fa49f743f21d4fcd1928c0b96f0f608f11",
+  "log_sha256": "1c9de3ce3d2a3fd972980c9a0714ba7d660aa2c5c7c99c5d972f38711b0424ec",
+  "recorded_utc": "2026-09-10T00:03:20.632376+00:00",
+  "changes": "Torch import first; OMP/MKL four threads; faulthandler and phase logs",
+  "numerical_study_retries": 0
+}

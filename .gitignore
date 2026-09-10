@@ -106,3 +106,19 @@ wheels/
 
 # Historical inventory is losslessly packed; plain local copy remains unchanged.
 /research/evidence/local_artifacts.csv
+
+# H100: keep endpoints and diagnostics losslessly; duplicated selections stay local.
+/results/triadic_interaction_v1/selections/
+/results/triadic_interaction_v1/metrics.csv
+!/results/triadic_interaction_v1/metrics.csv.gz
+!/results/triadic_interaction_v1/diagnostics.json.gz
+
+# Historical H081 endpoint packing; original JSON stays unchanged locally.
+/results/blast_learning_screen_v1/result.json
+!/results/blast_learning_screen_v1/result.json.gz
+
+# H100 post-audit failure/recovery receipts and compressed original traces.
+!/results/triadic_interaction_v1/reader_validation.json
+!/results/triadic_interaction_v1/report_hash_correction.json
+!/results/triadic_interaction_v1/report_runtime_recovery_before.json
+!/results/triadic_interaction_v1/*.log.gz

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "saved_pairs": 177,
+  "oracle_tasks": 4,
+  "stream_hashes": 3,
+  "basis_orthogonality_tolerance": 1e-12,
+  "scope": "Limited dense ZIP tensor decoder; BF16 decoded exactly to FP32"
+}

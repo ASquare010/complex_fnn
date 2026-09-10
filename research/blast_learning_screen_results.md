@@ -139,6 +139,6 @@ use fresh H081 controls; no older score is substituted and no run is repeated.
 | BLAST GELU | 0.0006 | 5.951733 | 280.95 | 125.34 |
 | BLAST GELU | 0.0012 | 5.979738 | 280.95 | 125.37 |
 
-[Measurements](../results/blast_learning_screen_v1/result.json),
+[Measurements](../results/blast_learning_screen_v1/result.json.gz),
 [independent audit](../results/verification/blast_learning_screen_analysis_v1.json),
 [frozen protocol](../results/blast_learning_screen_v1/protocol.json).

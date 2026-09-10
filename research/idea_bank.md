@@ -1108,7 +1108,7 @@ The direct feature map preserves input distances before the final readout, but
 the readout can remove directions. Transformer residual connections already
 preserve an input route; this theorem is not evidence of language-model advantage.
 
-H094 allocates a fixed300-step, batch256 screen:14 forms, four fresh synthetic
+H094 allocates a fixed300-step, batch 256 screen:14 forms, four fresh synthetic
 tasks, three seeds and two rates. Simple duplicate/linear/antipodal and direct-GELU
 controls test whether the nonlinear basis earns its cost. No automatic larger
 allocation follows. [Qualification](input_basis_lift_plan.md),
@@ -1122,7 +1122,7 @@ These fixed richer recipes are eliminated without a larger allocation.
 ## H095 - Fold the stronger even-feature control (GENERAL LEAD CLOSED BY H098)
 
 The observed duplicated-even control is12.92% below narrow GELU and8.89% below
-full GELU at300 updates. Folding V/W into V+W reduces inference weights to282,624
+full GELU at300 updates. Folding V/W into V+W reduces inference weights to282, 624
 (76.04% below full); training used350,208 (70.31% below full). All12 checkpoint
 output/Jacobian/MSE checks pass, maximum MSE change below1e-8, zero training updates.
 Native inference improves from0.297 to0.261 ms but narrow GELU takes0.129 ms.
@@ -1169,3 +1169,27 @@ Close this fixed learned recipe. Preserve fixed mixing's piecewise observation
 without promoting it from post-selection results. No new active model, kernel
 optimization or automatic longer run. The distinct next question is task-blind
 feature discovery, not another scalar-shape refinement. [Results](nonlinear_residual_results.md).
+
+## H100 - Raw/bounded three-way interactions (REJECTED AT THIS BUDGET)
+
+Three affine projections form uvw or4uvw/(1+u^2+v^2+w^2), each with 351,276
+trained parameters. A privileged 16-feature construction verifies exact raw-model
+capacity for quadratic/cubic/product targets. The rational feature's partial
+derivatives are bounded by 2, without a whole-network or nonvanishing-gradient claim.
+
+Fresh rotated Gaussian data, 312 runs, three seeds, two rates and 300 batch 256
+updates complete in 6.97 minutes. All 30 qualification checks, 177 saved pairs and
+624 independent checkpoint scores pass. Raw/bounded MSE is 2.079/4.543 times
+narrow GELU; native update cost is 1.562/1.881 times. Both fail every quality,
+cubic-learning and time gate and receive no further refinement allocation.
+
+A cubic-ridge control partly learns cubic, with mean error 0.840187 versus
+zero-predictor 1.024837, but misses the 50% gate. Final cubic subspace alignment
+is weak: raw 0.0584, bounded 0.0441, isotropic expectation 0.0417. These are
+descriptive post-audit measurements, not causal proof or initial-state measurements.
+
+Post-audit Torch/Matplotlib import failures and a corrected checksum-header bug
+are preserved. Unchanged corrected NumPy diagnostics pass using Python 3.12.9;
+original training/audit are not repeated. Keep active models unchanged. The next
+distinct question is feature discovery with task-blind inputs and fair controls.
+[Full result](triadic_interaction_results.md).

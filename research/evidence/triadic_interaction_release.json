@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "research_goal_achieved": false,
+  "base_commit": "3fa93f20fe47f08d7398980da1c2cd29d832462f",
+  "verdicts": {
+    "cp3": "REJECTED_AT_THIS_BUDGET",
+    "bounded_cp3": "REJECTED_AT_THIS_BUDGET"
+  },
+  "qualification_checks": 30,
+  "saved_pairs_rechecked": 177,
+  "runs": 312,
+  "updates": 93600,
+  "presentations": 23961600,
+  "affine_fits": 12,
+  "exact_initializations": 312,
+  "exact_checkpoint_scores": 624,
+  "rate_selections_verified": 156,
+  "frozen_sources_unchanged": 89,
+  "frozen_anchors_unchanged": 2,
+  "maintained_sources_unchanged": 53,
+  "active_tests_rerun": false,
+  "reason": "Maintained numerical source unchanged",
+  "scoped_lint": "PASS",
+  "report_recovery_lint_exception": "E402: deliberate imports after phase output",
+  "post_audit_reader_saved_pairs": 177,
+  "post_audit_projection_records": 228,
+  "post_audit_runtime_recovery": "Python 3.12.9; initial/final diagnostic replaced by final-only",
+  "preserved_reporting_failures": 4,
+  "document_local_links_checked": 30,
+  "figures_visually_reviewed": [
+    "results/triadic_interaction_v1/plots/alignment.png",
+    "results/triadic_interaction_v1/plots/comparison.png",
+    "results/triadic_interaction_v1/plots/training.png"
+  ],
+  "local_artifact_files": 1198,
+  "local_artifact_bytes": 1360666321,
+  "inventory": {
+    "path": "research/evidence/triadic_interaction_artifacts.csv.gz",
+    "sha256": "89e23f9325fa8b86f670d78f81a13026b391397891f29f08560bd96b72dd4a16"
+  },
+  "post_audit_sources": {
+    "results/triadic_interaction_v1/source/report.py": "5ea9c4efeab35edd23bb87e070529cc3f4497fb934fdda3b68cc1afdd4862ede",
+    "results/triadic_interaction_v1/source/report_recovery.py": "179ed15d04334e249adef3859c5556fa49f743f21d4fcd1928c0b96f0f608f11",
+    "results/triadic_interaction_v1/source/report_numpy.py": "5f17c87fd6d59b8277930b69bdde31e3c524c1c41513f7490678e4698b48fe19",
+    "results/triadic_interaction_v1/source/report_numpy_v2.py": "3f39e6d6443915fbf9cc062eb649f0de4400aec0e8c78f76162baa308f3f5d49",
+    "results/triadic_interaction_v1/source/tensor_reader.py": "fdd77ae5e850009e51dfbc5b2f4ba35b889753c45e09b0bd41e7fa51e398e6b3",
+    "results/triadic_interaction_v1/source/release.py": "4c751ae20dc42a692c724f4e4f3a1743a6e3965eceef071a8b1d3331c54c3ba1"
+  },
+  "anchors": {
+    "results/triadic_interaction_v1/result.json": "e70772a36103fbf18b82b3b66ad981e73c9d6a00dbce54451a0dc3c876a6f45a",
+    "results/triadic_interaction_v1/study_process.json": "35fbb75f3560baa6ff2ba565669bfed1f6c1bbd4219204ce09907776c3b7baa4",
+    "results/triadic_interaction_v1/audit_process.json": "5e64d55a6efb124e98520f1d272c25f730485dbc5de6bf8cbe9119f4087517a5",
+    "results/triadic_interaction_v1/reader_validation.json": "7389241e5cfef06e957d4d7876b6815f09113030b189afcbbeaab4355bb9dd14",
+    "results/triadic_interaction_v1/report_runtime_recovery_process.json": "b0cb0232fac0cd4e0698837778d5b062f77f3ddd239d3e26c0e19c89929ac629",
+    "results/triadic_interaction_v1/report_hash_correction.json": "7195c453ec84b61c9b820d75f0bf9c0d38ce304c729aa0769985db3d608c8f28",
+    "research/evidence/triadic_interaction_packing.json": "662d072e31a137c518c329249a9e153519fd6a9224980e695f9f7f9ee23a00f0",
+    "research/triadic_interaction_results.md": "4add9d254705553e7200ff6833fbd3fa2679b646d6515197b9b29029f9dc0cd5"
+  }
+}

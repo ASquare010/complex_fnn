@@ -105,3 +105,24 @@ The [H099 inventory](evidence/nonlinear_residual_artifacts.csv.gz) indexes 1,002
 local files and 1,284,582,078 bytes. Its [release receipt](evidence/nonlinear_residual_release.json)
 records exact score checks, frozen-source preservation and the rejected decision.
 The inventory hashes the local artifacts; it does not contain or back them up.
+
+H100 keeps its fresh rotated-data protocol, all endpoints and post-audit feature
+alignment diagnostics. The target input basis is used only in the privileged
+positive control and post-training diagnostics, never in candidate fitting.
+
+The large historical H081 BLAST endpoint result is now retained losslessly as
+results/blast_learning_screen_v1/result.json.gz. Its original JSON remains unchanged
+locally; restore it with the exclusive gzip procedure above for historical source
+checks. The exact original/packed hashes are in evidence/h081_compact_result.json.
+This saves tracked space without deleting the old research or rewriting history.
+
+The [H100 inventory](evidence/triadic_interaction_artifacts.csv.gz) covers1,198
+local files and1,360,666,321 bytes. The [release receipt](evidence/triadic_interaction_release.json)
+records89 unchanged frozen sources,53 unchanged maintained sources and all624
+exact checkpoint scores. Endpoints and diagnostics use lossless gzip exports;
+original reporting-failure traces are also kept as small .log.gz files.
+
+Successful final-only alignment uses report_numpy_v2.py under Python3.12.9 with
+the existing package directory. Earlier reporting attempts remain preserved as
+failed sources/receipts. Do not infer that the import crash's root cause was
+proved or that the original experiment was rerun under the reporting runtime.

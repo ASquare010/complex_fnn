@@ -5,7 +5,33 @@ unmet: at least 70% fewer FFN weights, within 1% relative validation loss of BOT
 full GELU and SwiGLU, while beating calibrated narrow controls. Consistent
 multi-seed, longer-training, scale and broader-data evidence is still required.
 
-## Latest result: nonlinear residual learning, but no activation promotion
+## Latest result: three-way interactions fail despite representational capacity
+
+H100 tests raw and bounded products of three learned projections on fresh
+Gaussian tasks with hidden rotated directions. Both have 351,276 parameters,
+70.27% fewer than full GELU. Both are rejected: aggregate MSE is 2.079/4.543 times
+narrow GELU and native update time is 1.562/1.881 times its cost.
+
+The 312-run screen uses four tasks, three seeds, two rates, batch 256 and 300 updates,
+taking 6.97 minutes. All 30 qualification checks and 177 saved pairs pass. Independent
+audit reproduces 624 checkpoint scores and 156 rate selections exactly.
+
+A privileged construction proves raw products can represent the cubic target;
+randomly initialized training does not find it adequately. A plain cubic ridge
+partially learns cubic (18.02% less error than zero prediction) but misses the
+50% reduction gate. Low final cubic feature alignment motivates a distinct
+feature-discovery investigation, not further refinement of rejected products.
+
+Post-audit report imports fail separately; preserved traces and a checksum-checker
+correction lead to successful NumPy diagnostics under Python 3.12.9. Original
+training and the independent Torch audit are unchanged. No active model is added.
+The language, convergence, compute, scale and broader-data goal remains unmet.
+
+[Full results and failure record](triadic_interaction_results.md),
+[frozen plan](triadic_interaction_plan.md),
+[audited result](../results/triadic_interaction_v1/result.json).
+
+## Previous result: nonlinear residual learning, but no activation promotion
 
 H099 completes 264 fresh runs: eleven forms, four Gaussian nonlinear-residual
 tasks, three seeds and two rates, each with 300 updates and batch 256. The study
@@ -42,7 +68,7 @@ gate. It wins on piecewise targets by 12.60% but loses on smooth, oscillatory an
 multiplicative targets. Its three small aggregate seed wins remain recorded.
 
 The affine control needs 147,840 coefficients, versus 350,208 used in the neural
-training and 282,624 after folding. The previously measured native speed deficit
+training and 282, 624 after folding. The previously measured native speed deficit
 also stands. Close the general nonlinear-benefit claim for this fixed recipe;
 retain the piecewise result as scoped evidence, without kernel refinement or
 automatic longer training. The original 12.92% advantage over narrow GELU is
@@ -69,17 +95,17 @@ parameter, NLL, compute, duration, scale and broader-data goal remains unmet.
 H094 tests rational, Hermite and trigonometric feature pairs without a fixed
 ReLU/GELU/SwiGLU candidate base. The336-run grid uses the same four synthetic
 families with fresh input seed9844:65,536 train /4,096 selection /4,096 reporting
-samples, batch256, three optimization seeds, two rates and300 updates per run.
+samples, batch 256, three optimization seeds, two rates and 300 updates per run.
 It completes100,800 updates in5.82 minutes. All672 independent checkpoint scores
 and336 initializations reproduce exactly.
 
 All three richer recipes fail their full promotion gates. The simpler even-feature
 control is the useful finding:12.92% lower aggregate MSE than narrow GELU and
 8.89% lower than full GELU at this short budget. Post-training folding reduces
-stored weights from350,208 to282,624 (76.04% fewer than full) with less than1e-8
+stored weights from350,208 to282, 624 (76.04% fewer than full) with less than1e-8
 MSE change across12 checkpoints. Training still used350,208 weights.
 
-The folded model's native batch256 inference is0.261 ms versus0.129 ms for narrow
+The folded model's native batch 256 inference is0.261 ms versus0.129 ms for narrow
 GELU. H098's stronger affine control subsequently closes its general-benefit claim;
 the piecewise gain remains a scoped observation. [Full report](input_basis_results.md).
 

@@ -6,7 +6,33 @@ The latest completed longer-budget language experiment is matched-budget BlockSh
 This fixed duration recipe is closed. Further training needs a distinct, justified hypothesis.
 
 
-## Latest result: nonlinear residual learning, but no activation promotion
+## Latest result: three-way interactions fail despite representational capacity
+
+H100 tests raw and bounded products of three learned projections on fresh
+Gaussian tasks with hidden rotated directions. Both have 351,276 parameters,
+70.27% fewer than full GELU. Both are rejected: aggregate MSE is 2.079/4.543 times
+narrow GELU and native update time is 1.562/1.881 times its cost.
+
+The 312-run screen uses four tasks, three seeds, two rates, batch 256 and 300 updates,
+taking 6.97 minutes. All 30 qualification checks and 177 saved pairs pass. Independent
+audit reproduces 624 checkpoint scores and 156 rate selections exactly.
+
+A privileged construction proves raw products can represent the cubic target;
+randomly initialized training does not find it adequately. A plain cubic ridge
+partially learns cubic (18.02% less error than zero prediction) but misses the
+50% reduction gate. Low final cubic feature alignment motivates a distinct
+feature-discovery investigation, not further refinement of rejected products.
+
+Post-audit report imports fail separately; preserved traces and a checksum-checker
+correction lead to successful NumPy diagnostics under Python 3.12.9. Original
+training and the independent Torch audit are unchanged. No active model is added.
+The language, convergence, compute, scale and broader-data goal remains unmet.
+
+[Full results and failure record](triadic_interaction_results.md),
+[frozen plan](triadic_interaction_plan.md),
+[audited result](../results/triadic_interaction_v1/result.json).
+
+## Previous result: nonlinear residual learning, but no activation promotion
 
 H099 completes 264 fresh runs: eleven forms, four Gaussian nonlinear-residual
 tasks, three seeds and two rates, each with 300 updates and batch 256. The study
@@ -43,7 +69,7 @@ gate. It wins on piecewise targets by 12.60% but loses on smooth, oscillatory an
 multiplicative targets. Its three small aggregate seed wins remain recorded.
 
 The affine control needs 147,840 coefficients, versus 350,208 used in the neural
-training and 282,624 after folding. The previously measured native speed deficit
+training and 282, 624 after folding. The previously measured native speed deficit
 also stands. Close the general nonlinear-benefit claim for this fixed recipe;
 retain the piecewise result as scoped evidence, without kernel refinement or
 automatic longer training. The original 12.92% advantage over narrow GELU is
@@ -86,10 +112,10 @@ checks and reporting rescoring after folding; maximum absolute MSE change is
 below1e-8. One FP64 function/Jacobian check and26 saved tensor-pair rechecks pass.
 
 **Training used350,208 weights (70.31% fewer than full). Folding reduces stored
-and inference weights to282,624 (76.04% fewer).** It is not evidence that training
-from scratch with282,624 weights reproduces these results or AdamW trajectories.
+and inference weights to282, 624 (76.04% fewer).** It is not evidence that training
+from scratch with282, 624 weights reproduces these results or AdamW trajectories.
 
-Native FP32 batch256 inference is0.261 ms for folded even versus
+Native FP32 batch 256 inference is0.261 ms for folded even versus
 0.297 ms for duplicate,0.129 ms for narrow GELU,
 0.177 ms for full GELU and0.226 ms for full SwiGLU.
 Folding lowers its own inference time by12.11%,

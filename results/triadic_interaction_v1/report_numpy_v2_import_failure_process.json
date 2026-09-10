@@ -1,0 +1,9 @@
+{
+  "status": "FAIL",
+  "phase": "Matplotlib import before diagnostic main",
+  "observed_exit_code": 1,
+  "exception": "RuntimeError: internal error in regular expression engine",
+  "source_sha256": "3f39e6d6443915fbf9cc062eb649f0de4400aec0e8c78f76162baa308f3f5d49",
+  "log_sha256": "6db7cb6baf135dc6bb11d5d4f05f25703567bf1d05ba370482236776e28367ab",
+  "diagnostic_process_file_created": false
+}
