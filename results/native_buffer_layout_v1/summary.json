@@ -1,0 +1,126 @@
+{
+  "metrics": [
+    {
+      "dataset": "wikitext2",
+      "arm": "native",
+      "peak_mib": 358.3984375,
+      "event_ms": 70.08380698785186,
+      "wall_ms": 76.89110000137589,
+      "host_mib": 64.00001239776611,
+      "exact": false,
+      "peak_phases": [
+        "backward_1",
+        "backward_2",
+        "backward_3",
+        "backward_4",
+        "backward_5",
+        "backward_6",
+        "backward_7",
+        "backward_8",
+        "backward_9"
+      ]
+    },
+    {
+      "dataset": "wikitext2",
+      "arm": "reuse",
+      "peak_mib": 306.43017578125,
+      "event_ms": 69.57836698368192,
+      "wall_ms": 75.1349999991362,
+      "host_mib": 64.00001239776611,
+      "exact": false,
+      "peak_phases": [
+        "backward_0",
+        "backward_1",
+        "backward_2",
+        "backward_3",
+        "backward_4",
+        "backward_5",
+        "backward_6",
+        "backward_7",
+        "backward_8",
+        "backward_9"
+      ]
+    },
+    {
+      "dataset": "tinystories",
+      "arm": "reuse",
+      "peak_mib": 300.2509765625,
+      "event_ms": 70.03811325877905,
+      "wall_ms": 75.90360000176588,
+      "host_mib": 64.00001239776611,
+      "exact": false,
+      "peak_phases": [
+        "backward_0",
+        "backward_1",
+        "backward_2",
+        "backward_3",
+        "backward_4",
+        "backward_5",
+        "backward_6",
+        "backward_7",
+        "backward_8",
+        "backward_9"
+      ]
+    },
+    {
+      "dataset": "tinystories",
+      "arm": "native",
+      "peak_mib": 352.21923828125,
+      "event_ms": 70.54297592677176,
+      "wall_ms": 75.51890000104322,
+      "host_mib": 64.00001239776611,
+      "exact": false,
+      "peak_phases": [
+        "backward_1",
+        "backward_2",
+        "backward_3",
+        "backward_4",
+        "backward_5",
+        "backward_6",
+        "backward_7",
+        "backward_8",
+        "backward_9"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "dataset": "wikitext2",
+      "ratios": {
+        "peak_mib": 0.8549986376021799,
+        "event_ms": 0.9927880629507247,
+        "wall_ms": 0.9771612058845788
+      },
+      "gates": {
+        "exact": false,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "host": true
+      },
+      "passed": false
+    },
+    {
+      "dataset": "tinystories",
+      "ratios": {
+        "peak_mib": 0.8524547893171783,
+        "event_ms": 0.9928431901070237,
+        "wall_ms": 1.0050940890388678
+      },
+      "gates": {
+        "exact": false,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "host": true
+      },
+      "passed": false
+    }
+  ],
+  "passed": false,
+  "backwards": 62,
+  "training_updates": 0,
+  "model_probe_targets": 163840,
+  "replay_targets": 16384,
+  "broad_goal_achieved": false
+}

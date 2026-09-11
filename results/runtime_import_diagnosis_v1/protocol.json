@@ -1,0 +1,29 @@
+{
+  "conditions": [
+    [
+      "3.12.9",
+      false
+    ],
+    [
+      "3.12.9",
+      true
+    ],
+    [
+      "3.12.12",
+      false
+    ],
+    [
+      "3.12.12",
+      true
+    ]
+  ],
+  "replications_each": 3,
+  "allocator": "malloc",
+  "pythonhashseed": 107,
+  "sources": {
+    "results/runtime_import_diagnosis_v1/source/probe.py": "b488d66577e2d3f2b530ade32e689de41b56730b5e1543f396a6d38d1498cb38",
+    "results/runtime_import_diagnosis_v1/source/study.py": "cbebad47abcbeb85c9cd7c605bd2f5e534bdb585bac12d19a2c66e32a74367cd"
+  },
+  "fresh_bytecode": "Use an absent pycache_prefix plus -B; existing caches untouched",
+  "neural_updates": 0
+}

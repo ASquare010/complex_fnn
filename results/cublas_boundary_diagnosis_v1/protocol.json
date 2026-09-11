@@ -1,0 +1,12 @@
+{
+  "sources": {
+    "results/cublas_boundary_diagnosis_v1/source/launch.py": "850c59f9b1a05196e224f76ff08bb65723fbc9c2e14ac10f95192ac6fbb1a193",
+    "results/cublas_boundary_diagnosis_v1/source/probe.py": "56cae6502d07eed8e69cd91c5f04393d877821cda27febea34c66613ec086b14",
+    "results/token_memory_duration_v1/source/common.py": "6db3f8eacb2b79ae034483454b23a75c2a4105187bab264ac90b40ee06852eec",
+    "results/token_memory_v1/source/execution.py": "3c64fc1b95c113cf4ef3c36faf9b4837350b48d052d3fedda57553619c4e16ad",
+    "src/core/token_memory.py": "211af447fb6eae3dc11cedda18ebe284fad0918bacdcb8c5549777b82f11a109"
+  },
+  "repetitions": 2,
+  "optimizer_updates": 0,
+  "question": "Does only clearing cuBLAS workspaces release all model-free post-qualification active tensor bytes?"
+}

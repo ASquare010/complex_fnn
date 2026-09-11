@@ -1,0 +1,211 @@
+{
+  "metrics": [
+    {
+      "dataset": "wikitext2",
+      "arm": "ordinary",
+      "peak_mib": 406.39892578125,
+      "event_ms": 73.04072141647339,
+      "wall_ms": 80.1466499997332,
+      "nll": 4.963396337297228,
+      "host_mib": 1.239776611328125e-05,
+      "stability": 1.0066395598443647
+    },
+    {
+      "dataset": "tinystories",
+      "arm": "ordinary",
+      "peak_mib": 400.2197265625,
+      "event_ms": 72.85833722352982,
+      "wall_ms": 79.96490000004997,
+      "nll": 2.6277052820945275,
+      "host_mib": 1.239776611328125e-05,
+      "stability": 1.0325343374267184
+    },
+    {
+      "dataset": "wikitext2",
+      "arm": "native",
+      "peak_mib": 454.14892578125,
+      "event_ms": 77.29432094097137,
+      "wall_ms": 84.49574999940523,
+      "nll": 4.9633912464929,
+      "host_mib": 1.239776611328125e-05,
+      "stability": 1.0114797922461767
+    },
+    {
+      "dataset": "wikitext2",
+      "arm": "offload",
+      "peak_mib": 406.14892578125,
+      "event_ms": 82.87759900093079,
+      "wall_ms": 90.42064999812283,
+      "nll": 4.9633912464929,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0070032304381091
+    },
+    {
+      "dataset": "wikitext2",
+      "arm": "reuse",
+      "peak_mib": 354.1806640625,
+      "event_ms": 87.9868313074112,
+      "wall_ms": 97.15585000230931,
+      "nll": 4.9633912464929,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0050440553344813
+    },
+    {
+      "dataset": "tinystories",
+      "arm": "reuse",
+      "peak_mib": 348.00146484375,
+      "event_ms": 85.2845755815506,
+      "wall_ms": 92.95409999867843,
+      "nll": 2.627681863551237,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0454541009844538
+    },
+    {
+      "dataset": "tinystories",
+      "arm": "offload",
+      "peak_mib": 399.9697265625,
+      "event_ms": 96.1114890575409,
+      "wall_ms": 105.74390000147105,
+      "nll": 2.627681863551237,
+      "host_mib": 64.00001239776611,
+      "stability": 1.1036794065640592
+    },
+    {
+      "dataset": "tinystories",
+      "arm": "native",
+      "peak_mib": 447.9697265625,
+      "event_ms": 81.86094236373901,
+      "wall_ms": 89.80380000139121,
+      "nll": 2.627681863551237,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0245782816671947
+    }
+  ],
+  "comparisons": [
+    {
+      "dataset": "wikitext2",
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.8715098431464428,
+        "event_ms": 1.204627084742442,
+        "wall_ms": 1.2122259633139094,
+        "nll": 0.9999989743304823
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": false,
+        "wall": false,
+        "quality": true,
+        "host": true,
+        "stability": true
+      },
+      "passed": false
+    },
+    {
+      "dataset": "wikitext2",
+      "control": "native",
+      "ratios": {
+        "peak_mib": 0.7798777976920687,
+        "event_ms": 1.1383350061980044,
+        "wall_ms": 1.1498312045634624,
+        "nll": 1.0
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true
+      },
+      "passed": true
+    },
+    {
+      "dataset": "wikitext2",
+      "control": "offload",
+      "ratios": {
+        "peak_mib": 0.8720462903631072,
+        "event_ms": 1.0616479286088274,
+        "wall_ms": 1.0744874097269408,
+        "nll": 1.0
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true
+      },
+      "passed": true
+    },
+    {
+      "dataset": "tinystories",
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.8695260172024645,
+        "event_ms": 1.1705534168299367,
+        "wall_ms": 1.1624362688957324,
+        "nll": 0.9999910878349068
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": false,
+        "wall": false,
+        "quality": true,
+        "host": true,
+        "stability": true
+      },
+      "passed": false
+    },
+    {
+      "dataset": "tinystories",
+      "control": "native",
+      "ratios": {
+        "peak_mib": 0.7768414788073796,
+        "event_ms": 1.0418225483234616,
+        "wall_ms": 1.035079807282525,
+        "nll": 1.0
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true
+      },
+      "passed": true
+    },
+    {
+      "dataset": "tinystories",
+      "control": "offload",
+      "ratios": {
+        "peak_mib": 0.8700695120968628,
+        "event_ms": 0.8873504761797173,
+        "wall_ms": 0.8790492879247437,
+        "nll": 1.0
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "training_updates": 240,
+  "training_targets": 983040,
+  "backwards": 240,
+  "broad_goal_achieved": false
+}

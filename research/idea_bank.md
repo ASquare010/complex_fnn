@@ -1193,3 +1193,372 @@ are preserved. Unchanged corrected NumPy diagnostics pass using Python 3.12.9;
 original training/audit are not repeated. Keep active models unchanged. The next
 distinct question is feature discovery with task-blind inputs and fair controls.
 [Full result](triadic_interaction_results.md).
+
+## H101 - Token-chunk memory factorial (STOPPED; FIXED FFN RECIPE REJECTED)
+
+The latest user priority is measured VRAM. A function-preserving schedule tests
+FFN chunks, classifier/loss chunks and both, against native/FFN/block checkpoints.
+These are established techniques, not claimed inventions. The grid stops at
+22 completed cases because full GELU's final NLL diverges despite close early
+losses and passed local gradients. Native NLL 6.935556 versus loss-only 8.224111
+reproduces in a fresh process and saved-checkpoint audit. No full GELU promotion.
+
+FFN chunking adds large costs with little memory benefit in the completed cases;
+close that fixed option. Small qualification (40 cases) and helper mathematics
+(14 tests) remain valid within scope but do not guarantee training trajectories.
+Preserve the unexpected failure rather than relax the tolerance. The narrow
+GELU loss-only memory signal earns a distinct, bounded replication.
+[Plan](token_memory_plan.md), [results](token_memory_results.md).
+
+## H102 - Replicate loss-only memory savings (PROMISING, SCOPED)
+
+Thirty-six fresh processes compare native, block and block+loss chunks on narrow
+GELU and full SwiGLU, two shapes and three seeds. All 38 endpoints, including the
+two H101 diagnostic replays, pass independent score, weight-hash and data-order
+verification. Narrow GELU passes every frozen gate: 21.01% / 32.23% less allocated
+training memory at contexts 128 / 512, 7.45-22.51% slower updates, at most +0.189%
+relative final NLL change. Parameters stay at 9,099,648. Each run has only 12 steps.
+
+Full SwiGLU fails the all-seed runtime gates; at context 128 it also saves only
+1.31% memory. Retain loss chunking as an experimental tool with model-specific
+qualification. No activation is promoted, no default changes, no novelty or
+convergence claim, and the original architectural target remains unmet.
+Further memory work must measure persistent optimizer/weight/gradient costs and
+the full training trajectory; the next activation must compare against such
+memory-aware controls. [Frozen replication](token_memory_followup_plan.md).
+
+## H103 - Training-label energy moments (QUALIFIES FOR A FITTING SCREEN)
+
+For Gaussian inputs and labels depending on an unknown low-dimensional subspace,
+the centered energy-weighted covariance has range inside that subspace. For
+normalized Hermite degree k>=2, its raw diagonal signal scales as 2k, exposing
+cubic directions despite zero first-order label/input correlation. This is a
+scoped population calculation using established spectral/Stein ideas.
+
+The bounded energy transform recovers 88.59-88.93% of the cubic subspace across
+three independent datasets; shuffled weights recover 7.63-8.34%. All allocation
+gates pass and 36 moments independently reconstruct. The screen takes 23.31 s,
+with zero neural updates. Constant-norm one-hot language labels give zero signal.
+Gaussian assumptions, finite-sample rank recovery and downstream training remain
+separate questions. [Plan and proof](spectral_discovery_plan.md).
+
+## H104 - Spectrally initialized small FFN (FIXED RECIPES REJECTED)
+
+Trainable rank-32 input factorization plus 128 cubic or GELU features uses 66,048
+parameters. Full, narrow and parameter-matched dense controls receive the same
+training-only spectral initialization. Random and raw-moment versions control
+the initialization. Four tasks, three fresh dataset seeds, two rates, 300 updates
+and batch 256 produce 408 fits; all 816 scores and 204 selections are audited.
+
+Bounded cubic uses 94.41% fewer parameters and improves aggregate MSE 41.01% /
+15.97% versus spectral full GELU / SwiGLU. It beats all tiny controls in each
+seed's aggregate. However, cubic-task MSE is 47.82% worse than tiny cubic and
+inference costs 2.12 times narrow GELU. These two frozen promotion gates fail.
+Bounded GELU additionally misses cubic-learning and full-quality gates.
+
+Training-only allocation saves about 51-52% versus fulls, but the initializer
+raises the pipeline peak to 30.77 MiB: actual savings become 25.02% / 22.68%.
+Small spectral controls have the same pipeline peak. Keep this as a synthetic
+feature-discovery lead without automatic integration, language training or kernel
+refinement. Real FFN input/teacher-output statistics and the cost of obtaining
+them would define a distinct qualification question. The global goal is unmet.
+
+Reporting/testing runtime failures are preserved; the original training and
+independent checkpoint audit are unchanged. [Complete results](spectral_fitting_results.md).
+
+## H105 - Real-FFN energy projection (REJECTED; OUTPUT-RANK OBSTRUCTION)
+
+Frozen seed-17 full GELU/SwiGLU teachers supply real FFN inputs and outputs at
+layers 0/3/7. Three sampling seeds vary calibration windows, not teacher training.
+Seven subspace methods, ranks 32/64/128, 32,768 calibration and 8,192 disjoint
+reporting tokens give 378 comparisons in 82.18 s; no SGD or NLL evaluation.
+
+At primary rank 64, bounded output energy has mean normalized MSE 0.6146/0.6492
+versus 0.1596/0.4279 for activation-aware linear response. Whitening and affine
+residual energy also fail. All fixed energy projection recipes are closed.
+They receive no fitting or kernel budget. Their roughly 79% parameter saving
+does not establish useful quality or end-to-end training-memory improvement.
+
+After the screen, the centered output singular-value tail exposes an independent
+capacity limit. Even the optimal affine rank-64 output prediction has conservative
+FP32 mean error floors 0.1098/0.2125 after accounting for BF16 capture drift.
+All 18 rank-64 cases exceed 5%; hence the absolute gate was unattainable for the
+entire tested output-rank class. The relative energy-control failures still hold.
+This is a scoped consequence of truncated SVD and reverse triangle inequality,
+not a new theorem, language-quality bound or rejection of full-rank structures.
+
+Independent audit recaptures all 18 pair sets and checks all 378 scores. Another
+54 checks compare covariance-based rank floors against direct rectangular SVD.
+All 116 maintained tests pass. Retain the capture helper and rank-capacity check
+as useful research tools. Before another global bottleneck grid, bound the output
+rank needed for its target. Prefer adequate output rank or other memory savings.
+[Complete report](real_subspace_results.md), [frozen plan](real_subspace_plan.md).
+
+## H106 - Full affine path plus low-rank residual (TWO WIDTHS QUALIFY FOR FITTING)
+
+For reporting matrices X1 and Y, let P project onto col(X1). The best arbitrary
+rank-h correction to an affine predictor has residual error equal to the tail
+sum of squared singular values of (I-P)Y. This established finite-data identity
+avoids H105's global output-rank obstruction but does not prove neuron learning.
+Oracle reporting fits remain diagnostic; no later model receives them.
+
+All 126 comparisons and eight qualification groups pass an independent QR/direct
+SVD audit. GELU h256 and SwiGLU h170 pass both fixed gates; h128/h85 fail.
+Training-only residual-basis oracle upper means are 0.00494/0.01122 at h256 and
+0.01643/0.03699 at h170 for GELU/SwiGLU teachers. No SGD or new capture is used.
+Known linear-plus-nonlinear and FFN-recoverability precedents prevent a novelty
+claim. [Proof/results](affine_residual_capacity_results.md),
+[frozen plan](affine_residual_capacity_plan.md).
+
+## H107 - Learned affine residual compression (BOTH FIXED RECIPES REJECTED)
+
+Fresh disjoint windows, two fixed pretrained teachers, depths 0/3/7 and sampling
+seeds 71/83/97 supply a 288-fit screen. All models receive paired teacher-row
+initialization and the same ridge readout procedure, then 600 AdamW updates at
+each of two rates. Six conventional activation controls have matching parameter
+budgets. All 172,800 updates finish in 12.98 minutes; no numerical training failure.
+
+Affine GELU h256 uses 344,704 parameters; affine SwiGLU h170 uses 344,020:
+70.78%/70.84% fewer than a full FFN. Paired MSE is 35.55%/56.61% above the best
+control on the GELU teacher and 38.78%/23.52% above the best on the SwiGLU teacher.
+Both lose in every sampling-seed aggregate and every depth. Inference costs
+1.64-2.32 times ordinary narrow GELU, failing the frozen ceiling.
+
+Local training peaks near 23.95 MiB, roughly 42-45% below full resource profiles,
+but conventional narrow controls already use 24.17-24.28 MiB. Folded inference
+uses about 10.94 MiB versus narrow GELU's 10.69 MiB. Full teacher capture makes
+the pipeline peak 117.91 MiB. No useful quality/VRAM tradeoff is established.
+
+Independent audit recaptures all 18 complete datasets and checks 864 scores,
+144 ridge initializations, selections and exports. All 116 maintained tests pass.
+Native audit-import and plot failures are preserved; separate recorded recovery
+changes no training, checkpoint or threshold. Close these recipes without longer
+training, width/rate tuning or kernel work. No active model is added and no NLL,
+scale, broad-data, universal stability or novelty result follows.
+[Full report](affine_residual_fit_results.md), [frozen plan](affine_residual_fit_plan.md).
+
+## H108 - Derivative-aware teacher-neuron calibration (PROMISING COMPONENT)
+
+Hypothesis: selecting trained neurons and refitting their output projection to
+match both values and directional derivatives better preserves local FFN behavior
+at smaller widths than value-only fitting. The deployed operator remains dense
+GELU/SwiGLU with an output bias. It tests teacher features without a preceding
+input projection. GELU h448 does not force output rank below 384; SwiGLU h298
+still has output rank at most 298. Neither shape guarantees accurate fitting.
+
+The exact regularized greedy marginal gain follows from completing a Schur
+complement: squared residual cross-target norm divided by residual variance.
+Thirteen qualification groups verify JVPs, counts, exported gradients, isotropic
+probe identity and all alternatives on small greedy fixtures. Prior OLS,
+Sobolev-training, GRAIL and FLAP work precludes a new-principle priority claim.
+
+The frozen screen builds 432 exports across eight methods, three widths, two
+existing teacher families, three depths and three sampling seeds, in 231.87 s
+with zero SGD. Both teachers pass the comparative component gate at all widths:
+paired derivative-error improvements 6.83-16.15%, with improved output error and
+each seed aggregate passing. Readout-only explains 88.33-90.14% of the combined
+absolute derivative gain; the extra selector contributes much less.
+
+All complete recipes fail absolute quality/memory gates. Primary exports save
+70.80% / 70.87% parameters and 33.45% / 35.44% local inference allocation, but
+mean value errors 0.1062 / 0.2355 and derivative errors 0.3293 / 0.5218 are too
+large. Half width fails quality. Three-quarter width saves only 6.6-6.8% forward
+allocation, while SwiGLU derivative error is 0.1171. No language run is earned.
+Calibration peaks at 36.125 MiB; prerequisite capture makes the pipeline peak
+117.908 MiB. Training memory and downstream gradient stability are unmeasured.
+
+Independent audit verifies 864 scores, 432 exports/readouts, 18 reconstructed
+statistics sets and 432 sampled actual greedy gains. The initial teacher GEMM
+batch-partition tolerance failure is preserved. A separately recorded recovery
+keeps student batching/tolerances fixed and restores the teacher's original batch,
+then passes. The maintained code/test suite remains unchanged from 116 passes.
+
+Retain derivative-aware readout calibration, not a complete compression success.
+The next distinct question is learning from this initialization on fresh data,
+versus a value-only counterpart, with preparation costs charged. Requires a new
+frozen protocol. No beta tuning, new language run or active integration follows
+automatically. Reused development inputs and sampling seeds do not establish
+teacher-training replication, scale, broad capability or the overall VRAM goal.
+[Report and ablations](sobolev_selection_results.md), [plan](sobolev_selection_plan.md).
+
+## H110 - Loss chunking through 800 updates (SCOPED COMPONENT; LONG-CONTEXT FIDELITY FAILS)
+
+Prediction: H102's narrow GELU loss-chunk execution remains within +/-1% of
+block-checkpoint learning through 800 updates, with >=15% lower training
+allocation and <=25% extra median update time for every seed at each shape.
+Freeze two shapes and three seeds; stop remaining work on a paired fidelity
+failure. The objective is numerical execution fidelity, not a one-sided test
+that permits arbitrarily improved loss.
+
+Eight trials / 6,400 updates finish. B16/T128 passes in all three seeds with
+20.32% training savings, 6.91-8.18% extra update time and at most 0.745% final NLL
+change. Whole-job savings shrink to 4.45% after unchunked validation. Retain
+only the scoped training-memory component; it does not meet a 15% whole-job
+saving across replicated seeds.
+
+B8/T512 seed 17 saves 32.83% training / 19.26% whole-job allocation and has 4.32%
+lower NLL, but exceeds the +/-1% fidelity band at 400 and 800. Stop the remaining
+four trials. Close this fixed faithful-execution claim; preserve the positive
+quality observation as an unreplicated performance lead. It is not a loss
+regression, and the stopped grid must not be quietly resumed under a new label.
+
+All 40 independent NLL checks are exact; 24 checkpoint states and all sampling
+streams are verified. No scientific training repeats. The original control and
+two pretraining native failures are preserved alongside a frozen bytecode-bypass
+continuation. A separate post-training UV dispatcher panic is preserved too.
+The runtime root cause is unresolved. Active code/tests remain unchanged.
+
+Next justified questions: stream evaluation to remove its memory peak while
+independently preserving scores; separately replicate any quality advantage
+under a prospectively quality-oriented protocol. Neither is answered by this
+result. No new activation, parameter reduction or broad breakthrough claim.
+[Report](token_memory_duration_results.md), [plan](token_memory_duration_plan.md).
+
+## H109 - Derivative-aware initialization then value learning (FIXED RECIPES ELIMINATED)
+
+Prediction: H108's derivative-aware readout initialization retains >=5% better
+reporting JVP error than the matched value-only initializer after all weights
+learn on fresh inputs, without >1% output error regression. Test both the simple
+readout candidate and combined selection/readout at original primary widths.
+
+144 fresh fits (600 steps, two equal rates), 18 disjoint new input sets, four
+initializers and 72 selections finish in 363.28 seconds. All selections choose
+LR0.001. Initial paired derivative gains 6.06-9.81% shrink to 0.41-0.73%; both
+candidates fail the fixed 5% and every-seed comparison gates for both teachers.
+Equal-rate LR0.003 also fails. No extra learning allocation is justified.
+
+Output error improves about 35% from candidate initialization, while derivative
+error rises 7-8% for GELU and 51-52% for SwiGLU. This warns that lower value MSE
+does not certify sensitivity preservation. It does not prove instability of the
+whole decoder or failure of continual derivative training, which was not tested.
+All 86,400 updates remain finite, with no clipping. Sampling seeds vary inputs
+and streams; the two existing teachers each retain training seed17.
+
+Parameter reduction is 70.80% / 70.87%; local fitting allocation saves 42.89% /
+41.43% versus full profiles, shared by the value-only narrow control. Complete
+pipeline peak is 117.908 MiB. Original process inference and an additional pure
+inference process are reported separately; no memory gate is retroactively
+changed. Mean value/JVP errors remain far above 0.05/0.10, so no language test
+is earned by any eligible method. H108's zero-SGD component result remains.
+
+Independent audit checks all 648 metrics, 216 endpoint states, 72 initializations
+and selections, 144 complete training records/initial losses, and exact recapture
+of all 18 datasets. The initial path-type preflight failure occurred before any
+protocol or training; its original source/logs and explicit repair are preserved.
+The actual 144 fits run once. Active model structure/tests remain unchanged.
+
+Close this initializer-plus-value-learning branch. A different derivative-aware
+training objective or actual upstream-sensitivity analysis would be a separately
+qualified hypothesis, not an automatic rescue. The full VRAM/quality goal is
+unmet. [Report](sobolev_learning_results.md), [frozen plan](sobolev_learning_plan.md).
+
+## H111 - Streamed evaluation (CLASSIFIER COMPONENT QUALIFIED; SEQUENCE RECIPE ELIMINATED)
+
+Prediction: evaluation can remove H110's memory bottleneck while preserving
+native scores within 0.01%, saving >=10% allocation and costing <=1.5x median
+time. Compare classifier chunks and whole-sequence microbatches on all 24
+H110 checkpoints. No training or optimizer replay; persistent state is a fixture.
+
+All 72 scores pass fidelity. Classifier chunks save 16.0-16.4% at T128 and
+31.11% at T512, with 1.008x / 1.015x median evaluation time. They qualify under
+every frozen gate. Sequence chunks cost 3.712x / 7.065x and fail. Keep the
+classifier evaluator; eliminate these fixed sequence-microbatch recipes.
+All 36 CPU-double mask/shape cases and 24 independent native rescores pass.
+The largest classifier relative score drift is 1.24e-8. The study takes 662.14
+seconds with zero optimizer updates. Fixture-based job estimates are not
+actual measured training jobs. [Report](streamed_evaluation_results.md),
+[plan](streamed_evaluation_plan.md).
+
+## H112 - Fresh whole-job replication (TINYSTORIES COMPONENT; TWO-CORPUS RECIPE FAILS)
+
+Prediction: the fixed loss-chunk training recipe, with H111's evaluator in
+both arms, saves >=15% job allocation with <=1% NLL regression and <=25%
+extra median update time for every seed in both corpora. This prospectively
+quality-oriented test uses fresh seeds 61/73/89 and does not reopen H110's
+stopped fidelity grid. Ordinary gate failures do not truncate the fixed grid.
+
+Twelve fresh trials complete 9,600 updates / 39,321,600 token presentations in
+922.36 seconds. Actual job allocation saves 32.43% on WikiText-2 and 33.06%
+on TinyStories; updates cost 13.65-14.52% more. TinyStories passes all three
+seeds with NLL changes -0.514%, -0.110%, +0.316%. WikiText fails two seeds,
+with +1.465%, +0.042%, +1.954%. The two-corpus recipe is rejected; retain
+only the scoped TinyStories quality/memory result. No parameter changes occur.
+
+All 72 native scores, 48 checkpoint hashes/states, twelve initializations and
+9,600 training batches pass independent audit. Maximum evaluation drift is
+3.40e-8. All model/Adam states and logged training quantities remain finite.
+This establishes neither general gradient stability nor optimal convergence.
+
+Original native startup/audit/plot failures and the zero-storage boundary
+failure remain preserved. A bounded two-repetition probe identifies retained
+cuBLAS workspaces, cleared only between successful trials. All 25 empty-storage
+boundaries pass and no workspace memory is subtracted from trial measurements.
+Fresh models share one process; this differs explicitly from fresh-process
+timing. No training repeats and native import-failure cause remains unknown.
+
+Close the fixed two-corpus recipe. A matched-state gradient/precision diagnostic
+is justified before any different execution policy earns training allocation.
+Do not assume the cause, retune rates under this label or call a known loss
+partition a new activation. The broader goal remains unmet.
+[Report](whole_job_memory_results.md), [plan](whole_job_memory_plan.md).
+
+## H113 - Classifier precision and shared casts (MECHANISM VERIFIED; FP32 COMPONENT ADVANCES)
+
+Prediction: cached BF16 weight conversions add accumulation error across
+classifier chunks, while disabling the cache preserves loss and dH and improves
+dW accuracy. Test 24 H112 states (100/800 checkpoints), five policies and one
+FP64 reference at fixed B8/T512, with zero optimizer updates.
+
+All 24 cases have one shared cast versus eight uncached casts, identical loss
+and hidden gradient, and different weight gradients. The incoming cast gradient
+is BF16. A five-term CPU/CUDA witness gives 256 versus exact/uncached 260 in one
+construction order, and 260 for both in reverse order. This supplies a scoped
+counterexample, not a new theorem or explanation of full-training NLL by itself.
+
+Uncaching improves median paired dW error by 35.24% on WikiText and 22.89% on
+TinyStories. It fails the TinyStories 25% improvement gate and both <=1.5x
+median time gates. Eliminate this fixed candidate under the local criteria.
+FP32 classifier chunks pass every local gate: 72.02% less classifier allocation
+and approximately 4e-7 dW error. They earn only a complete-model resource and
+gradient screen. No language training is allocated by these results.
+
+Timing varies sharply: FP32-chunk paired ratios span 0.335-15.862x despite
+1.378/1.415 medians. Further cost evidence needs sustained warmup and separate
+wall/GPU-event times. The planned whole diagnostic-process peak is incomplete
+because warmup peaks were not serialized; local recorded peaks stay distinct.
+
+The 170.33-second study completes 120 comparisons and 504 classifier backward
+passes, plus tiny checks, without optimization. All 24 native recaptures,
+24 explicit FP64 derivative checks and 144 full gradient reruns pass. Preserve
+the mechanism as a promising component and the failed uncaching result. The
+maintained model tree and previous 116-test suite are unchanged. The broader
+VRAM/quality and architecture goals remain open.
+[Report](classifier_precision_results.md), [plan](classifier_precision_plan.md).
+
+
+## H114 — FP32 classifier chunks in complete models: fixed fidelity claim rejected
+
+**Status: scoped memory component; full-model qualification fails.** 14 saved
+models × four policies × 50 updates = 2,800 updates, 10,649,600 targets, 502.12s.
+Narrow T512 job allocation improves 32.36% / 33.06%, with 12.84% / 12.64% slower
+updates and tiny short-NLL changes. Full T128 models save just 0.53-1.08%.
+Every scope fails the original global-gradient gate versus native FP32.
+Two independent gradient replay audits also fail; a narrower score/state/stream
+audit passes. Do not relax those failed gates or claim a fresh LM result.
+Retain memory accounting, reject the fixed fidelity/full-width saving claims,
+and investigate backward reproducibility under a separately frozen diagnosis.
+[Report](fp32_classifier_profile_results.md), [plan](fp32_classifier_profile_plan.md).
+
+
+| H115 | Do checkpointing, attention backend or decoder precision explain transport/replay failures? | DIAGNOSIS COMPLETE: no-checkpoint BF16 fails; math BF16 repeats exactly but transport fails; both FP32 modes pass numerical gates. Exact scalar rounding witness and independent forward/stored-arithmetic audit pass. Only an uninstrumented resource screen is earned; 320 backwards, zero updates, no broad goal or novelty claim. |
+
+
+| H116 | Can FP32 decoder fidelity coexist with lower whole-job VRAM and practical runtime? | PROMISING COMPONENT: default FP32 chunks pass both narrow T512 scopes with 26.97-27.23% lower allocation and comparable BF16-relative time; 24 gradient replays/36 native scores/all 1,500 batches verify. Math and full T128 settings are ELIMINATED from this resource gate. Correlated single-seed, 50-update scope; broader replication/duration remains required. |
+| H117 | Do default FP32 chunks preserve quality across fresh seeds and 800 updates? | wikitext2 fails the fixed gates; tinystories qualifies in this scope. Allocation falls 26.98–27.75% versus BF16 native; fixed all-seed gates, 18 fresh runs / 14,400 updates. Audit verifies 54 trained states, 60 native scores, 12 FP32 replays and all batches. Two-corpus claim REJECTED. Original zero-training startup failure retained; no new layer, default change or further sweep allocated. |
+| H118 | Does the failed WikiText seed's FP32 chunk/native gap exceed unchanged repeat variation? | INCONCLUSIVE by fixed rules: four additional 800-update executions give +1.143% / +0.940% paired NLL gaps; all observed chunked endpoints are worse, but minimum cross-gap is only 0.630%. All audits pass, memory saving persists. One selected seed; H117 failure unchanged. No further unchanged long repeats allocated; inspect first-update Adam sensitivity using saved gradients under a new plan. |
+
+| H119 | Does Adam magnify saved initial-gradient differences, and can epsilon reduce that without materially changing the direction? | LOCAL MECHANISM SUPPORTED: all nine cross-policy pairs amplify 61–64x with >99.88% near-zero contribution. GPU checks pass; combined numerical audit FAILS CPU clipping. Both larger-epsilon low-distortion criteria FAIL (10.8–32.8% direction change). Twelve disposable steps, zero LM updates; six completed CPU steps preserved across a guard-failure continuation. No new quality, VRAM or architecture result. |
+
+| H120 | Can existing per-tensor/fused AdamW reduce complete-job allocation by lowering optimizer temporaries? | ELIMINATED FOR THIS MEMORY GATE: optimizer-only saving does not lower any of four fixture job peaks; backward dominates. Fused is 25 KiB higher overall, per-tensor identical/slower. All numerical/data/scoring checks pass; 12 continuations / 360 updates. No broad quality or new architecture claim. Move to checkpoint-input lifetime/residency with a separately frozen test. |
+
+| H121 | Can pinned host storage of checkpoint inputs lower diagnostic peak by at least 10% with at most 15% time overhead? | ELIMINATED FOR THE ALL-FOUR-FIXTURE GATE: native classifier saves 48 MiB (about 12%); chunked classifier about 15 MiB (5%), failing its memory gate. All numerical/trace/timing checks pass. 262 backwards, zero updates; roughly 64 MiB pinned host allocation. Existing PyTorch API; no novelty or quality claim. Inspect remaining backward allocations under a new protocol. |

@@ -1,0 +1,246 @@
+{
+  "study": "H158",
+  "prior_receipt": "5039d929690f871d1d4259d19af66ad1d78a008fcf339f39ba744a185665913c",
+  "sources": {
+    "results/checkpoint_host_isolation_v1/study.py": "66a476418411b65d1d3b5e0472110716e16453cb02549ec594bef1e86da9a1d2",
+    "research/checkpoint_host_isolation_plan.md": "ed43e4d11404cd64a652cbe9555017a250553fb9d74acb81224541e8d79809c1"
+  },
+  "schedule": [
+    {
+      "index": 0,
+      "fixture": {
+        "dataset": "wikitext2",
+        "seed": 101,
+        "checkpoint": "results/batch_scale_long_v1/case00/runs/wikitext2_s101__fp32_default_native/final.pt",
+        "checkpoint_sha256": "10250e7bdac5a61ff037ca8c8186c122c7c7484769fb0dc3c8b1f53f3c1897f5",
+        "model_hash": "e90367ac74b68d092401dd695b90d7ce78ba7be665ba07f91247a3536e4cf6bc",
+        "optimizer_hash": "8a86f6c8bc89f55bb5340ffe28cb81b9a764caa793ba37eb6fd2cd2136d8ac00",
+        "sampler_hash": "826585880362fa6af2c52afd7dec4eb169b68853af8725901a32bc195d0f8ea6"
+      },
+      "arm": "native0"
+    },
+    {
+      "index": 1,
+      "fixture": {
+        "dataset": "wikitext2",
+        "seed": 101,
+        "checkpoint": "results/batch_scale_long_v1/case00/runs/wikitext2_s101__fp32_default_native/final.pt",
+        "checkpoint_sha256": "10250e7bdac5a61ff037ca8c8186c122c7c7484769fb0dc3c8b1f53f3c1897f5",
+        "model_hash": "e90367ac74b68d092401dd695b90d7ce78ba7be665ba07f91247a3536e4cf6bc",
+        "optimizer_hash": "8a86f6c8bc89f55bb5340ffe28cb81b9a764caa793ba37eb6fd2cd2136d8ac00",
+        "sampler_hash": "826585880362fa6af2c52afd7dec4eb169b68853af8725901a32bc195d0f8ea6"
+      },
+      "arm": "offload4"
+    },
+    {
+      "index": 2,
+      "fixture": {
+        "dataset": "wikitext2",
+        "seed": 101,
+        "checkpoint": "results/batch_scale_long_v1/case00/runs/wikitext2_s101__fp32_default_native/final.pt",
+        "checkpoint_sha256": "10250e7bdac5a61ff037ca8c8186c122c7c7484769fb0dc3c8b1f53f3c1897f5",
+        "model_hash": "e90367ac74b68d092401dd695b90d7ce78ba7be665ba07f91247a3536e4cf6bc",
+        "optimizer_hash": "8a86f6c8bc89f55bb5340ffe28cb81b9a764caa793ba37eb6fd2cd2136d8ac00",
+        "sampler_hash": "826585880362fa6af2c52afd7dec4eb169b68853af8725901a32bc195d0f8ea6"
+      },
+      "arm": "fp16"
+    },
+    {
+      "index": 3,
+      "fixture": {
+        "dataset": "wikitext2",
+        "seed": 113,
+        "checkpoint": "results/batch_scale_long_v1/case03/runs/wikitext2_s113__fp32_default_native/final.pt",
+        "checkpoint_sha256": "018424ab190d83f64f5491b07588d46aba71b2ab36723c292b851aa196af336c",
+        "model_hash": "547e82513e6c81d07c8cb5a9654066b50a1b3db612eee26c644cc49b1a630659",
+        "optimizer_hash": "4628954d41e8b33fad75dd7a6e62030cc7a7979b9dcd11389e6fdaf95e171e23",
+        "sampler_hash": "fa1e337c1c1dc5a6f4fc69c433f59b7517a74f0f0ed0bb02c21968f4291722ae"
+      },
+      "arm": "fp16"
+    },
+    {
+      "index": 4,
+      "fixture": {
+        "dataset": "wikitext2",
+        "seed": 113,
+        "checkpoint": "results/batch_scale_long_v1/case03/runs/wikitext2_s113__fp32_default_native/final.pt",
+        "checkpoint_sha256": "018424ab190d83f64f5491b07588d46aba71b2ab36723c292b851aa196af336c",
+        "model_hash": "547e82513e6c81d07c8cb5a9654066b50a1b3db612eee26c644cc49b1a630659",
+        "optimizer_hash": "4628954d41e8b33fad75dd7a6e62030cc7a7979b9dcd11389e6fdaf95e171e23",
+        "sampler_hash": "fa1e337c1c1dc5a6f4fc69c433f59b7517a74f0f0ed0bb02c21968f4291722ae"
+      },
+      "arm": "offload4"
+    },
+    {
+      "index": 5,
+      "fixture": {
+        "dataset": "wikitext2",
+        "seed": 113,
+        "checkpoint": "results/batch_scale_long_v1/case03/runs/wikitext2_s113__fp32_default_native/final.pt",
+        "checkpoint_sha256": "018424ab190d83f64f5491b07588d46aba71b2ab36723c292b851aa196af336c",
+        "model_hash": "547e82513e6c81d07c8cb5a9654066b50a1b3db612eee26c644cc49b1a630659",
+        "optimizer_hash": "4628954d41e8b33fad75dd7a6e62030cc7a7979b9dcd11389e6fdaf95e171e23",
+        "sampler_hash": "fa1e337c1c1dc5a6f4fc69c433f59b7517a74f0f0ed0bb02c21968f4291722ae"
+      },
+      "arm": "native0"
+    },
+    {
+      "index": 6,
+      "fixture": {
+        "dataset": "wikitext2",
+        "seed": 127,
+        "checkpoint": "results/batch_scale_long_v1/case04/runs/wikitext2_s127__fp32_default_native/final.pt",
+        "checkpoint_sha256": "d1a08743cebcd35e2f5e0d7533f9b6ef1933b5057765b48382978772c978fa67",
+        "model_hash": "46bc5f86ea998b7b918fbf1c5f5a142fb4ae5058fec5f69109a2e859e613e395",
+        "optimizer_hash": "d1265abe90ac5ea97df808217b1a714462bad4ef51b4149b9c1ed5c2ab0d76e0",
+        "sampler_hash": "61a8b90e544f9df722077d85cc3b9897d74cfef030196b9a115e8d64e4c24851"
+      },
+      "arm": "native0"
+    },
+    {
+      "index": 7,
+      "fixture": {
+        "dataset": "wikitext2",
+        "seed": 127,
+        "checkpoint": "results/batch_scale_long_v1/case04/runs/wikitext2_s127__fp32_default_native/final.pt",
+        "checkpoint_sha256": "d1a08743cebcd35e2f5e0d7533f9b6ef1933b5057765b48382978772c978fa67",
+        "model_hash": "46bc5f86ea998b7b918fbf1c5f5a142fb4ae5058fec5f69109a2e859e613e395",
+        "optimizer_hash": "d1265abe90ac5ea97df808217b1a714462bad4ef51b4149b9c1ed5c2ab0d76e0",
+        "sampler_hash": "61a8b90e544f9df722077d85cc3b9897d74cfef030196b9a115e8d64e4c24851"
+      },
+      "arm": "offload4"
+    },
+    {
+      "index": 8,
+      "fixture": {
+        "dataset": "wikitext2",
+        "seed": 127,
+        "checkpoint": "results/batch_scale_long_v1/case04/runs/wikitext2_s127__fp32_default_native/final.pt",
+        "checkpoint_sha256": "d1a08743cebcd35e2f5e0d7533f9b6ef1933b5057765b48382978772c978fa67",
+        "model_hash": "46bc5f86ea998b7b918fbf1c5f5a142fb4ae5058fec5f69109a2e859e613e395",
+        "optimizer_hash": "d1265abe90ac5ea97df808217b1a714462bad4ef51b4149b9c1ed5c2ab0d76e0",
+        "sampler_hash": "61a8b90e544f9df722077d85cc3b9897d74cfef030196b9a115e8d64e4c24851"
+      },
+      "arm": "fp16"
+    },
+    {
+      "index": 9,
+      "fixture": {
+        "dataset": "tinystories",
+        "seed": 101,
+        "checkpoint": "results/batch_scale_long_v1/case07/runs/tinystories_s101__fp32_default_native/final.pt",
+        "checkpoint_sha256": "eced466b624b322d1be5daaa605187734b4587760cdff2cefa617a8d49edd0de",
+        "model_hash": "7638c4ab99d7c5b3d198f395362cad3140b11a8e2fe29dd83494e14e23f83a05",
+        "optimizer_hash": "58c256838a31a7c2658e3fcf0663a3d141b3dedbdda3097f7951b5fd0e440926",
+        "sampler_hash": "826585880362fa6af2c52afd7dec4eb169b68853af8725901a32bc195d0f8ea6"
+      },
+      "arm": "fp16"
+    },
+    {
+      "index": 10,
+      "fixture": {
+        "dataset": "tinystories",
+        "seed": 101,
+        "checkpoint": "results/batch_scale_long_v1/case07/runs/tinystories_s101__fp32_default_native/final.pt",
+        "checkpoint_sha256": "eced466b624b322d1be5daaa605187734b4587760cdff2cefa617a8d49edd0de",
+        "model_hash": "7638c4ab99d7c5b3d198f395362cad3140b11a8e2fe29dd83494e14e23f83a05",
+        "optimizer_hash": "58c256838a31a7c2658e3fcf0663a3d141b3dedbdda3097f7951b5fd0e440926",
+        "sampler_hash": "826585880362fa6af2c52afd7dec4eb169b68853af8725901a32bc195d0f8ea6"
+      },
+      "arm": "offload4"
+    },
+    {
+      "index": 11,
+      "fixture": {
+        "dataset": "tinystories",
+        "seed": 101,
+        "checkpoint": "results/batch_scale_long_v1/case07/runs/tinystories_s101__fp32_default_native/final.pt",
+        "checkpoint_sha256": "eced466b624b322d1be5daaa605187734b4587760cdff2cefa617a8d49edd0de",
+        "model_hash": "7638c4ab99d7c5b3d198f395362cad3140b11a8e2fe29dd83494e14e23f83a05",
+        "optimizer_hash": "58c256838a31a7c2658e3fcf0663a3d141b3dedbdda3097f7951b5fd0e440926",
+        "sampler_hash": "826585880362fa6af2c52afd7dec4eb169b68853af8725901a32bc195d0f8ea6"
+      },
+      "arm": "native0"
+    },
+    {
+      "index": 12,
+      "fixture": {
+        "dataset": "tinystories",
+        "seed": 113,
+        "checkpoint": "results/batch_scale_long_v1/case08/runs/tinystories_s113__fp32_default_native/final.pt",
+        "checkpoint_sha256": "4c3eeb60a8a6cd71f048d5245fbd190b7a0707616ecd265150d3e68002218ac2",
+        "model_hash": "ce29be3ee639f8fbf7da28ec6dc1e5a1a842170a27a19fb15e6ea74353ea14a9",
+        "optimizer_hash": "be37027de5bd1242dcaebec15b5dc9f73b32483a3126364ead009eafb1dde55e",
+        "sampler_hash": "fa1e337c1c1dc5a6f4fc69c433f59b7517a74f0f0ed0bb02c21968f4291722ae"
+      },
+      "arm": "native0"
+    },
+    {
+      "index": 13,
+      "fixture": {
+        "dataset": "tinystories",
+        "seed": 113,
+        "checkpoint": "results/batch_scale_long_v1/case08/runs/tinystories_s113__fp32_default_native/final.pt",
+        "checkpoint_sha256": "4c3eeb60a8a6cd71f048d5245fbd190b7a0707616ecd265150d3e68002218ac2",
+        "model_hash": "ce29be3ee639f8fbf7da28ec6dc1e5a1a842170a27a19fb15e6ea74353ea14a9",
+        "optimizer_hash": "be37027de5bd1242dcaebec15b5dc9f73b32483a3126364ead009eafb1dde55e",
+        "sampler_hash": "fa1e337c1c1dc5a6f4fc69c433f59b7517a74f0f0ed0bb02c21968f4291722ae"
+      },
+      "arm": "offload4"
+    },
+    {
+      "index": 14,
+      "fixture": {
+        "dataset": "tinystories",
+        "seed": 113,
+        "checkpoint": "results/batch_scale_long_v1/case08/runs/tinystories_s113__fp32_default_native/final.pt",
+        "checkpoint_sha256": "4c3eeb60a8a6cd71f048d5245fbd190b7a0707616ecd265150d3e68002218ac2",
+        "model_hash": "ce29be3ee639f8fbf7da28ec6dc1e5a1a842170a27a19fb15e6ea74353ea14a9",
+        "optimizer_hash": "be37027de5bd1242dcaebec15b5dc9f73b32483a3126364ead009eafb1dde55e",
+        "sampler_hash": "fa1e337c1c1dc5a6f4fc69c433f59b7517a74f0f0ed0bb02c21968f4291722ae"
+      },
+      "arm": "fp16"
+    },
+    {
+      "index": 15,
+      "fixture": {
+        "dataset": "tinystories",
+        "seed": 127,
+        "checkpoint": "results/batch_scale_long_v1/case11/runs/tinystories_s127__fp32_default_native/final.pt",
+        "checkpoint_sha256": "b95b80d3e9eb7062e8b3e2716e9c2d10390c74fe11c8eb103814fb22f8a65909",
+        "model_hash": "9e80a27282a155dc14f47943668c0ab5f758efdc052fa6f5cc021cccc66aa825",
+        "optimizer_hash": "3f55e199953de17a0605df52620b8757e87e912a4b8b825fe3507ad926962b1b",
+        "sampler_hash": "61a8b90e544f9df722077d85cc3b9897d74cfef030196b9a115e8d64e4c24851"
+      },
+      "arm": "fp16"
+    },
+    {
+      "index": 16,
+      "fixture": {
+        "dataset": "tinystories",
+        "seed": 127,
+        "checkpoint": "results/batch_scale_long_v1/case11/runs/tinystories_s127__fp32_default_native/final.pt",
+        "checkpoint_sha256": "b95b80d3e9eb7062e8b3e2716e9c2d10390c74fe11c8eb103814fb22f8a65909",
+        "model_hash": "9e80a27282a155dc14f47943668c0ab5f758efdc052fa6f5cc021cccc66aa825",
+        "optimizer_hash": "3f55e199953de17a0605df52620b8757e87e912a4b8b825fe3507ad926962b1b",
+        "sampler_hash": "61a8b90e544f9df722077d85cc3b9897d74cfef030196b9a115e8d64e4c24851"
+      },
+      "arm": "offload4"
+    },
+    {
+      "index": 17,
+      "fixture": {
+        "dataset": "tinystories",
+        "seed": 127,
+        "checkpoint": "results/batch_scale_long_v1/case11/runs/tinystories_s127__fp32_default_native/final.pt",
+        "checkpoint_sha256": "b95b80d3e9eb7062e8b3e2716e9c2d10390c74fe11c8eb103814fb22f8a65909",
+        "model_hash": "9e80a27282a155dc14f47943668c0ab5f758efdc052fa6f5cc021cccc66aa825",
+        "optimizer_hash": "3f55e199953de17a0605df52620b8757e87e912a4b8b825fe3507ad926962b1b",
+        "sampler_hash": "61a8b90e544f9df722077d85cc3b9897d74cfef030196b9a115e8d64e4c24851"
+      },
+      "arm": "native0"
+    }
+  ],
+  "gpu_backwards": 18,
+  "training_updates": 0
+}

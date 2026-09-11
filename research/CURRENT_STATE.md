@@ -1,5 +1,914 @@
 # Current research state
 
+**Paused by user: do not resume automatically.** H160: 3/12 runs complete; case03 stopped after207 recorded updates, latest checkpoint200. [Handoff](PAUSED_HANDOFF.md).
+
+Latest: [H159 FP16 complete-update test](checkpoint_fp16_timing_results.md): **PASS complete-update resource/timing gate.**
+1,080 updates across six fixtures, paired repeats and independent optimizer/score audit.
+Fresh long-training quality remains unproven. Goal open.
+
+Earlier: [H158 fresh-process qualification](checkpoint_host_isolation_results.md): **PASS fresh-process resource/numerical qualification.**
+18 GPU backwards; zero optimizer updates. H157's failed zero-host gate is preserved.
+Complete-update speed and fresh quality validation remain outstanding. Goal open.
+
+## Earlier: FP16 checkpoint-storage preflight
+
+[H157](checkpoint_fp16_results.md): **FAIL pinned-host gate; numerical and GPU-memory checks pass**.
+36 GPU backwards, six diagnostic forwards, full-gradient and activation-rounding
+NumPy audit. Approximate gradients use separately frozen caps. Zero optimizer
+updates; startup module-name collision and pre-protocol repair retained.
+Host-cache carryover prevents qualification of the zero-host-memory gate.
+Complete-update timing and fresh quality validation remain necessary. Goal open.
+
+## Previous: fresh batch16 memory-helper validation
+
+[H156](batch_scale_long_results.md): **PASS fresh batch16 long-training gate**.
+12 fresh runs / 9,600 updates / 78,643,200 targets. All saved endpoints and
+initial native gradients audited: True. Maintained helper source unchanged.
+The maintained opt-in helper now has fresh 800-update evidence at batch16 across both corpora and all three seeds. Keep the scope explicit; test a larger model or another precision/workload before generalizing. This is a memory optimization and does not meet the separate architectural parameter-reduction target.
+Broad research goal stays open.
+
+## Previous: augmentation dimension barrier
+
+[H155](augmentation_barrier_results.md): scoped exact-representation necessity
+k >= q, with a matching unrestricted shear construction and conditional uniform
+error bound. 27 matrices / 162 scaled CPU checks and six inverse stresses audited.
+Not a Gaussian MSE bound; FP32 large-product cancellation is exposed separately.
+Zero GPU training. Tiny padding is not an exact-capacity repair; VRAM goal stays open.
+
+## Previous: learned narrow coupling
+
+[H154](narrow_coupling_results.md): **NO PROMOTION from narrow coupling**.
+120 fits / 72,000 updates; 240 independent CPU FP64 scores verified.
+Task qualification: teacher: qualified; product: qualified. No reconstructed-backward or real-data
+claim. Broad VRAM/quality goal stays open.
+
+## Previous: even-shape tangent diagnostic
+
+[H153](even_tangent_results.md): **NO PROMOTION from even-direction diagnostic**. Exact local parity,
+two-sided scalar inverse and finite-difference checks pass. Nine probes,81 ridge
+solves and54 actual nonlinear replays do not meet all held-out gates. Original
+FP32-in-FP64 fixture failure and bounded dtype-only recovery retained. Zero GPU
+training; broad research goal stays open.
+
+## Previous: readout learning pilot
+
+[H152](readout_learning_results.md): **NO PROMOTION from the readout learning pilot**.
+198 fits/59,400 updates, eleven arms, three tasks/seeds and equal two-rate search.
+396 independent saved-state scores verified. Task status: linear: qualified, teacher: qualified, product: inconclusive (positive-control gate failed).
+Linear capacity is repaired; general nonlinear performance must satisfy the
+reported gates. Prior failures remain intact; broad research goal stays open.
+
+## Previous: fixed-tail capacity obstruction
+
+[H151](fixed_tail_capacity_results.md): bounded scalar corrections cannot change
+the fixed mixing product in the linear tail. Exact witness normalized MSE>=9/4;
+six saved models/36 risk comparisons audited on CPU. Zero GPU/training work.
+A learned outer map can evade the obstruction but needs fresh verification.
+Stop timing-only refinement of the unmodified predictor. Research goal remains open.
+
+## Previous: mirrored-order fused resource confirmation
+
+[H150](fused_timing_confirmation_results.md): **FAIL mirrored-order resource confirmation**.
+36 saved-state segments/1,080 updates, longer windows and repeat-stability gates,
+independent saved-state scoring verified. H149 remains rejected. Resource
+evidence does not establish quality; the broad research goal remains open.
+
+## Previous: fused reconstruction training screen
+
+[H149](fused_reconstruction_results.md): **REJECT tested fused-reconstruction resource recipe**.
+Fused inverse/local gradients qualified,60 audited resource runs/720 updates,
+fixed matrix buffers counted. Four extra numerical-check VJPs. No quality or
+novelty claim; broad research goal remains open.
+
+## Previous: real autograd reconstruction resource screen
+
+[H148](reversible_training_results.md): **REJECT tested reconstruction resource recipe**. Custom backward,
+60 audited runs/720 updates with fixed matrices counted. Both checkpointed
+full controls, learned eager/checkpoint and fixed-shape/affine controls included.
+Numerical verification is not quality evidence. Broad research goal remains open.
+
+## Previous: reversible scalar reconstruction preflight passed
+
+[H147](reversible_softsign_results.md):36 GPU reconstruction/VJP cases through
+128 layers pass, with independent NumPy gradient checks. Maximum FP32 input
+error2.139e-06. Closed-form inverse, depth-scaled slope bounds and a
+contraction-capacity limit are documented. Zero optimizer updates. This earns
+a resource implementation study, not a quality/VRAM claim. Goal remains open.
+
+## Previous: depth and checkpoint modulation screen
+
+[H146](modulation_depth_results.md): **REJECT tested depth/recomputation modulation recipes**. Eight-layer stacks, both
+eager and equally checkpointed controls;60 cases,720 updates, independent saved-state
+scoring verified. Checkpointing reduces saved internal activations to the same
+21MiB across architectures at batch2048. No quality claim or default changes;
+the broader research goal remains open.
+
+## Previous: shared/split modulation resource screen rejected
+
+[H145](split_modulation_results.md): both candidates fail the10% VRAM-saving gate
+at batches128 and2048 despite about24.8% fewer parameters. At batch2048, shared
+and split use0.8% and2.7% more memory than full GELU. All36 saved states/scores
+are audited;432 updates,37 clean GPU boundaries. No learning-quality promotion,
+model/default change or novelty claim. The broader research goal remains open.
+
+## Previous: shared-latent modulation capacity obstruction
+
+[H144](modulated_capacity_results.md): **capacity obstruction verified**.
+For Gaussian linear targets, arbitrary output modulation of one h-dimensional
+observation reduces to diagonal-plus-rank-h approximation. An explicit rotation
+has exact relaxed normalized error max(1-2h/d,0): one third at d384/h128.
+Eight integer/SVD witnesses, four conditional-risk checks and candidate gradcheck
+pass, with zero GPU work. [Proof](modulated_capacity_theory.md).
+
+Do not allocate h128 fitting merely because its output rank is full. A new
+hypothesis must alter the shared observation bottleneck or accept a larger latent
+width and measure its resource cost. This is not a language-model bound or a
+rejection of all modulation. The broader research goal remains open.
+
+## Previous: conjugated shared-FFN falsification
+
+[H143](conjugated_ffn_results.md): **REJECT fixed shared-permuted recipe.**
+54 fits, three tasks/seeds, 16,200 updates; rank/gradient preflight and independent
+data/score audit pass. No active model/default changes.
+
+Do not insert this recipe into language models, tune kernels or claim a better FFN. The rank witness survived; the fixed learning/resource recipe did not. Use the linear and teacher-task controls to distinguish optimization or tying restrictions from the rank obstruction. Cubic nonlearning is inconclusive when wide controls also fail. A future change must identify a distinct mechanism or a specific failure diagnosis, not silently extend this failed budget.
+The broader VRAM/parameter-efficient FFN research goal remains open.
+
+## Previous: doubled-batch memory-helper qualification
+
+[H142](batch_scale_training_results.md): **PASS scoped batch-16 qualification gate.**
+720 updates across all six saved corpus/seed states; independent audit: True.
+
+The maintained helper now has bounded evidence at batch8 and batch16. Preserve ordinary defaults and H138's failed long-run result. Return to the unresolved structural FFN/parameter-efficiency question using the repository's prior candidate eliminations; do not infer novel neuron geometry or sustained throughput from these memory-only results.
+The broader VRAM/parameter-efficient FFN goal remains open.
+
+## Previous: maintained opt-in memory helper
+
+[H141](training_memory_integration_results.md): **integration verification passed**.
+Explicit helper, unchanged classifier arithmetic, 16 new tests and 12 GPU replay
+updates across all six source states. All 132 tests have passing coverage after
+a documented compiler-path rerun of six existing Triton tests. Old maintained
+sources/defaults remain unchanged. [Usage](training_memory_usage.md).
+
+Next: qualify another workload scale through the maintained API with ordinary
+controls and memory/compute/quality checks. H138 remains failed; sustained
+throughput and the broader parameter-efficient FFN objective remain open.
+
+## Previous: interleaved complete-training timing
+
+[H140](interleaved_training_results.md): **PASS scoped interleaved timing gate.**
+720 updates across all six saved corpus/seed states; independent audit: True.
+
+Design an explicit opt-in maintained implementation with source-equivalence tests, preserving defaults, then qualify another workload scale. This pass concerns only balanced short segments at saved states; H138 remains failed and sustained deployment throughput remains unproven.
+The broader VRAM/parameter-efficient FFN goal remains open.
+
+## Previous: timing-drift audit
+
+[H139](timing_drift_audit_results.md): verified all12 H138 runs and9,360 measured
+updates with zero GPU training. The final ordinary control transitions P0 to P4
+around updates541-566; its last timing block rises to142ms from78-80ms. The first
+WikiText pair also has different clock distributions. Cause remains unknown;
+H138 remains failed and no candidate is promoted.
+
+Next: prospectively freeze balanced, temporally interleaved complete-update
+comparisons at saved states, retaining every round and the15% runtime limit.
+Do not repeat long convergence runs to chase favorable timing. This must remain
+separate from H138 and cannot by itself prove deployment throughput or a new FFN.
+The broader VRAM/parameter-efficiency research goal remains open.
+
+## Previous: four-block fresh-training validation
+
+[H138](partial_offload_long_results.md): **FAIL four-block fresh-training gate.**
+12 fresh 800-update runs, three seeds and two corpora; independent audit: True.
+
+Do not promote the configuration. Retain every seed and inspect the failed quality/runtime/resource gate. Choose a narrower falsifiable follow-up without relaxing limits, reordering completed runs or using aggregate means to rescue failures.
+Historical failures and the full research goal remain open.
+
+## Previous: partial checkpoint-input offload
+
+[H137](partial_offload_training_results.md): **PASS short qualification: buffer4.**
+480 updates; zero/four/eight-block transfer comparison and independent audit.
+
+Validate buffer4 from fresh initialization against ordinary native training on both corpora and three seeds, using complete-update timing and native scoring. Preserve H136's failed full-offload result; this short continuation does not prove fresh convergence or robust long-run efficiency. The broader FFN/activation parameter-efficiency objective remains open.
+Historical failures and the full research goal remain open.
+
+## Previous: fresh three-seed ordinary-policy training
+
+[H136](ordinary_long_training_results.md): **FAIL three-seed long-training gate.**
+18 fresh 800-update runs, three seeds, two corpora; independent audit:True.
+
+Do not promote the configuration. Identify the failing seed/gate from the table, retain all three seeds and choose one narrower follow-up. Do not change limits or substitute aggregate means for a failed individual run.
+Historical failures and the full research goal remain open.
+
+## Previous: ordinary-policy complete training
+
+[H135](ordinary_complete_training_results.md): **PASS ordinary short-training gate.**
+360 updates; all arms share ordinary execution and default workspace.
+Independent numerical/native-score/noise audit: True.
+
+Run fresh longer training with at least three independent seeds on both corpora, paired ordinary/native-offload/buffer-offload controls, native validation and complete-update resource accounting. The short result earns that test; it does not prove fresh convergence or long-run quality. Preserve the existing structural FFN failures while pursuing the broader parameter-efficiency goal.
+Earlier failures and the broad research goal remain open.
+
+## Previous: paired complete-update training
+
+[H134](paired_complete_training_results.md): **FAIL complete short-training gate.**
+360 updates, mirrored run order, complete-update timing, passive telemetry.
+Independent numerical/native-score audit: True.
+
+Test the same candidate under ordinary/default attention policy, alongside native loss with and without checkpoint-input offload. Calibrate full-model numerical tolerances against repeated ordinary native controls, retaining the existing exact operator qualification. This isolates whether strict deterministic execution is the remaining practical runtime cost; do not assume it is the cause. Keep paired complete-update timing, native scoring and memory gates, and do not extend long training yet.
+Earlier failures remain recorded; the full research goal remains open.
+
+## Previous: balanced paired workspace timing
+
+[H133](paired_workspace_timing_results.md): **PASS paired timing gate.**
+All 32 bursts match fresh native gradient references bitwise.
+260 backwards, zero updates, passive GPU telemetry; independent CPU audit verified.
+
+Run a separately frozen complete-update comparison at the explicit 8-MiB capacity, using alternating candidate/control windows with telemetry. Include both ordinary execution and matched deterministic native controls, original clipping/Adam, native validation and peak GPU/host memory. Do not combine H132 memory with H133 timing to claim a complete-training win.
+Earlier gates and the broad research goal remain open.
+
+## Previous: explicit intermediate-workspace comparison
+
+[H132](blas_workspace_mid_results.md): **FAIL combined diagnostic gate.**
+8-MiB external workspaces save 48 MiB versus 32-MiB workspaces while keeping
+the deterministic environment fixed. Native replay: True; accounting verified.
+88 backwards, zero updates, eight artifacts; all 61 maintained files unchanged.
+
+Do not expand to longer training. Use a separately frozen timing experiment with alternating candidate/control probes and GPU clock/power telemetry to distinguish a persistent runtime penalty from execution-order drift. No threshold or old-result changes; the present gate remains failed.
+The full research goal and all earlier failed gates remain unchanged.
+
+## Previous: deterministic workspace isolation
+
+[H131](blas_workspace_results.md): **FAIL combined diagnostic gate.**
+Workspace release accounting verifies the 63.75 MiB high-low difference.
+Native replay audit: True. 88 backwards, no updates, eight gradients;
+all 61 maintained files unchanged. No long-run quality or novelty claim.
+
+Do not extend this 128-KiB workspace to longer training. Test an intermediate explicit workspace size through the installed PyTorch workspace API, keeping the deterministic environment and algorithm policy fixed. That isolates external workspace capacity without accepting this speed penalty. Require fresh exactness/resource comparisons; no threshold or old gate changes.
+Prior failed gates and the full research goal remain unchanged.
+
+## Previous: complete native-buffer training comparison
+
+[H130](native_buffer_training_results.md): **FAIL combined short-training gate.**
+Eight 30-update continuations, 240 updates, 24 tensor artifacts. Independent
+numerical/data/score and deterministic-equality audit: True. All 61
+maintained files unchanged; no parameter reduction or default change.
+
+Do not expand the training matrix yet. The deterministic native arm adds exactly 47.75 MiB over ordinary native on both corpora. Isolate the deterministic policy bundle, especially cuBLAS workspace allocation, before more training: test a lower-workspace deterministic configuration with matched controls, exactness checks, and full resource accounting. This is a causal hypothesis, not an attribution established by the present experiment. Preserve the current failures and thresholds.
+The full research goal remains open.
+
+## Previous: explicit-policy reproducibility test
+
+[H129](attention_reproducibility_results.md): **PASS scoped reproducibility: deterministic_default, deterministic_math.**
+36 backwards, zero updates; 18 gradient artifacts, CPU verification
+complete, all 61 maintained files unchanged. No training/resource claim.
+
+Run a separately frozen complete-update and resource comparison under `deterministic_default`, including all transfers, original clipping/Adam and native validation. Match the policy in both arms. Compare its cost with ordinary execution separately before claiming practical efficiency.
+Prior failed gates remain unchanged; the broad research goal remains open.
+
+## Previous: classifier resource gain, replay gate unresolved
+
+[H128](native_buffer_layout_results.md): layout-aware native-buffer reuse saves
+14.50–14.75% diagnostic GPU allocation with near-equal runtime. Nine operator
+cases pass bitwise checks, but independent full-model gradient replay fails
+for candidate AND native controls. All loss values match. Combined gate fails.
+62 backwards, zero updates, four artifacts; H127's earlier 16-backward failure
+is preserved. No defaults or parameter counts change. Next: native reference
+reproducibility and explicit attention-backward policy before any longer run.
+The full research goal remains open.
+
+## Previous: native-buffer exactness failure
+
+[H127](native_buffer_loss_results.md): native-buffer reuse fails bitwise input-gradient
+checks in five of eight operator cases. Loss/weight gradients are exact; finite
+differences pass. Sixteen backwards, zero updates; all model profiling stopped.
+Next: test PyTorch's layout-dependent input-gradient multiplication explicitly.
+No VRAM/quality claim or maintained default change. Full goal remains open.
+
+## Previous: long compact-training comparison
+
+[H126](compact_long_training_results.md): **FAIL: the candidate does not pass every fixed long-run gate.** Six matched runs from
+original initialization, 800 updates each, cover native/chunked/combined arms
+on both corpora. Independent audits pass. Total 4,800 updates/4,812 backwards;
+24 tensor artifacts, no repeated runs, all 61 maintained file hashes unchanged.
+
+Expansion to more seeds is not earned under this protocol. Investigate the failed dimensions before allocating another training matrix. Memory savings remain scoped observations, not a rescued quality/runtime gate.
+One seed per corpus does not establish broad quality or architectural success.
+The full research goal remains open. See the report for every comparison.
+
+## Previous: compact storage passes short complete-training validation
+
+[H125](compact_training_results.md): four 30-update continuations pass all
+fixed gates. Complete-job VRAM falls 13.82–14.42%, with 4.67–5.57% event-time
+overhead and about 0.0006% final NLL difference. Original AdamW/global clipping,
+BF16 evaluation fallback and all transfers are included. Independent update,
+batch and native-score audits pass. Total120 updates/122 backwards; no retries.
+
+Next: longer training from original initialization, conventional native-loss
+controls, multiple seeds and scale. No parameter reduction or default change;
+H117/H119 failures and the broader research goal remain unresolved.
+
+## Previous: compact RMSNorm plus gradient staging qualifies a training test
+
+[H124](compact_rmsnorm_results.md) passes the two-corpus diagnostic gate:
+13.73–14.33% lower peak VRAM, with 4.36–6.41% event-time overhead, relative
+to ordinary RMSNorm/resident gradients with checkpoint-input offload. Compact
+RMSNorm alone saves 12 MiB but fails 10%; gradient staging alone still fails.
+The combined arm passes memory, time and host-memory gates. Gradient checks,
+finite differences and bitwise staging restoration pass. No updates yet.
+
+86 backwards, eight gradient artifacts, zero repeated cases; 61 maintained
+file hashes unchanged. This is an FP32 first-derivative storage implementation,
+not a new activation or parameter reduction. Next: frozen complete-training
+validation with original AdamW/clipping, BF16 evaluation fallback, actual job
+VRAM and endpoint quality. Earlier quality/numerical failures remain failed.
+The broader research goal is still open.
+
+## Previous: gradient staging narrowly misses the memory gate
+
+[H123](gradient_staging_results.md) completes 42 backwards, zero updates.
+Completed gradients move to pinned CPU buffers and are restored to CUDA;
+round-trip cost is included. Peak allocation falls 26.60–27.53 MiB, but
+9.4605%/9.9778% savings both fail the fixed 10% requirement. Gradient checks
+pass; event overhead is 11.3–13.0%, within the 15% limit. Combined pinned-host
+allocation is 112.034 MiB. No training extension, default change or repeated
+case. Next hypothesis: reduce remaining temporary storage, such as RMSNorm
+backward intermediates, under a separate correctness/resource protocol.
+The broader research goal remains open; H121/H122 gates remain failed.
+
+## Previous: backward payload peak shifts after checkpoint-input offload
+
+[H122](backward_allocation_results.md) completes 12 backwards, zero updates.
+Requested-payload peaks move from block 7 backward to block 0 backward on both
+corpora after input offloading. All four gradient comparisons pass. Exact
+allocated-peak attribution remains **FAILED**: event requested sizes differ
+from allocator block sizes. Offline requested-byte accounting reconciles;
+it does not rescue that gate. No GPU case was repeated or default changed.
+Next test: inventory completed parameter gradients at the late backward peak
+before designing another storage change. The broad research goal remains open.
+
+## Previous: checkpoint-input offload preserves gradients but misses the combined gate
+
+[H121](checkpoint_input_offload_results.md) temporarily places eight block
+checkpoint inputs in pinned CPU memory using an existing PyTorch API. With
+native FP32 classifier loss, complete diagnostic-case peak falls by exactly
+48 MiB (11.81–11.99%) on WikiText and TinyStories, with 1.21–2.34% event-time
+overhead. With chunked loss it falls by only 14.47–15.40 MiB (4.98–5.19%).
+**The all-four-fixture 10% memory gate fails.** No training extension is
+earned under this protocol; no maintained default changes.
+
+All traces confirm eight pinned [8,512,384] FP32 inputs, exact copy hashes,
+one unpack each and zero logical payload after cleanup. Payload is 48 MiB;
+rounded pinned-host allocation is about 64 MiB and its cache persists. FP64
+finite differences and 24 NumPy gradient comparisons pass; maximum global
+gradient relative L2 is 9.344e-8 and checked losses match exactly. GPU allocator
+boundaries are zero and model/moment states remain unchanged.
+
+The first audit process crashed during SymPy import before PyTorch/replay.
+Its failure is preserved; a prospective recovery runs only the eight remaining
+replays through the unchanged audit function. Total work: 262 backwards,
+zero optimizer/training updates, 1,048,576 diagnostic target evaluations,
+24 gradient artifacts and 824 full-model memory intervals. Repeated fixed-state
+targets are not training exposure. The native import issue remains undiagnosed.
+
+All 162 frozen sources and 61 maintained files stay intact. The previous
+116-test pass is historical, not a new test execution. No parameter reduction,
+endpoint quality improvement or novelty is claimed. H117's quality and H119's
+active-clipping failures remain. A separately budgeted allocation timeline
+could identify the remaining chunked backward peak before another change;
+phase-boundary inventories alone do not uniquely explain it.
+[Plan](checkpoint_input_offload_plan.md),
+[recovery](checkpoint_input_offload_audit_recovery.md),
+[receipt](../results/verification/checkpoint_input_offload_final_v1.json).
+
+## Previous: optimizer temporary savings do not reduce the complete-job peak
+
+[H120](optimizer_memory_results.md) compares default, per-tensor and fused
+native AdamW on the same update800 states for WikiText/TinyStories, using both
+native and chunked FP32 classifier losses. Twelve cases × 30 updates complete.
+Backward sets all 12 job peaks. Fused saves 35–36 MiB within the optimizer phase,
+but complete-job allocation rises 25 KiB; per-tensor mode leaves it identical.
+**Both are ELIMINATED for the fixed 10% whole-job memory gate.**
+
+Fused event-sum timing is 2.7–3.6% lower in the instrumented screen; this is not
+an uninstrumented throughput claim. Per-tensor mode fails several timing gates.
+All short NLL, stability, numerical, batch and scoring gates pass. These are
+correlated continuations of one seed per corpus, not a broad quality result.
+First-step clipping is inactive (norm<1), so its zero error does not resolve
+H119's active CPU clipping failure.
+
+The audit independently verifies first-step AdamW with NumPy FP64, every
+first/final model/moment state, all 360 batches/samplers and 12 native final
+scores. Total work is 360 updates/backwards / 1,474,560 targets, plus 24 study
+and 12 audit scores. All 1,884 memory intervals and 26 zero CUDA boundaries
+are retained. No scientific stage or case was repeated. A later read-only
+PowerShell display failure is recorded separately.
+
+All 152 frozen sources and 61 maintained files stay intact. No optimizer,
+layer, parameter count or default is promoted; the historical 116-test result
+is not represented as a new test run. H117's old quality gate remains failed.
+Move the memory hypothesis to backward storage: inspect which checkpoint
+inputs remain resident and test selective host storage only under a separate
+budget with gradient/lifetime/transfer-cost checks. The eight input tensors
+contain at most 48 MiB of payload; that is an estimate, not a measured saving.
+The broad VRAM/quality and architectural goal remains open.
+[Plan](optimizer_memory_plan.md),
+[receipt](../results/verification/optimizer_memory_final_v1.json).
+
+## Previous: first-step sensitivity supports a mechanism, not a training cure
+
+[H119](adam_update_sensitivity_results.md) uses six frozen initial probe gradients
+from the selected WikiText seed and 12 disposable native AdamW steps. Across all
+nine cross-policy pairs, ideal first-update direction differences are amplified
+**61.21–63.51x**; at least **99.888%** of squared difference comes from gradients
+within 10 epsilon of zero. The direction difference is still only about 0.0017%.
+This does not prove the cause of the later 800-step quality gap.
+
+The independent NumPy calculation verifies all 45 direction pairs, 12 distortions,
+15 native pairs and six device comparisons. All six CUDA cases pass the fixed
+numerical checks. **The overall numerical audit fails**: CPU clipping differs
+from FP64 by up to 6.872e-6, above the fixed 1e-6 bound. All parameter/moment
+checks pass. Larger epsilons reduce discrepancy but change directions by
+10.79%/32.76%, so both fixed low-distortion remedies are rejected.
+
+The original process completed six CPU steps and then failed its CUDA-init
+guard. Its outputs and exit are preserved; a frozen continuation runs only the
+remaining six GPU cases through the unchanged function. Total is 12 disposable
+optimizer steps, zero language-training updates/forwards/backwards/scores,
+24 tensor artifacts and seven zero CUDA allocator boundaries. No tolerance or
+case is repeated. All 145 original frozen sources and 61 maintained files remain
+intact; recovery sources have their own manifest. The prior 116-test pass is
+historical, with no new maintained-suite run.
+
+H117's failed two-corpus gate stays failed, H118 stays inconclusive, and no
+optimizer or model default is promoted. Return the memory investigation to
+measuring optimizer temporaries versus persistent moments at the complete-update
+peak under a separate plan; no new long training sweep is allocated. The broad
+VRAM/quality and architectural goals remain open.
+[Plan](adam_update_sensitivity_plan.md),
+[recovery](adam_update_sensitivity_recovery_plan.md),
+[evidence receipt](../results/verification/adam_update_sensitivity_final_v1.json).
+
+## Previous: repeated execution exposes material trajectory variation
+
+[H118](training_variability_results.md) adds four 800-update executions of the
+failed WikiText seed101, using the same initial state, batches and unchanged
+H117 runner. New chunk/native NLL gaps are **+1.143% and +0.940%**, versus the
+original +1.352%. All three chunked endpoints are worse than all three native
+endpoints, but the smallest cross-comparison gap is only 0.630%, below the fixed
+1% rule. The preset diagnostic verdict is **INCONCLUSIVE**. These are repeats
+of one deliberately selected seed, not three independent training seeds.
+
+The native NLL range is 0.035284, smaller than the original 0.066509 pair gap.
+Observed ranges do not overlap, so repeat variability does not span the entire
+original gap. It still affects interpretation, and no unique cause is proved.
+Within-policy initial gradients differ by at most 5.904e-8 symmetric relative L2;
+median model distances reach 36–37% by step 800. First recorded scalar-loss
+differences appear at steps 14–18. This does not establish catastrophic gradients.
+
+All 12 new trained checkpoints, 13 native scores, four FP32 backward replays and
+all 3,200 new sampled batches verify. The new runs preserve 26.816% lower allocated
+memory versus native FP32, costing 12.65–17.65% more warmed update time. New
+budget is 3,200 updates / 13,107,200 targets / 3,208 backwards, with no failed stage
+or scientific retry. All 137 frozen sources and 61 maintained hashes are retained.
+
+H117's failed WikiText/two-corpus gate stays failed; its scoped TinyStories
+component remains separate. No new default, layer or parameter reduction is
+claimed. Do not allocate more identical long repeats automatically. A bounded
+first-Adam-update comparison on the six saved initial gradients is the next
+specific diagnostic question and needs a separate plan. The broad goal remains
+open; the prior 116-test result is historical, with no maintained-suite rerun.
+[Plan](training_variability_plan.md),
+[receipt](../results/verification/training_variability_final_v1.json).
+
+## Previous: fresh replication retains memory savings but requires every seed's quality
+
+[H117](fp32_training_replication_results.md) completes 18 fresh 800-update runs
+on seeds 101/113/127 for both WikiText-2 and TinyStories. Full-job tensor allocation
+falls 26.98–27.75% versus BF16 native, with practical warmed update time.
+wikitext2 fails the fixed gates; tinystories qualifies in this scope. Failed gate names: final_quality_bf16, final_quality_native.
+The two-corpus recipe does not qualify.
+
+The candidate and both references have identical 9,099,648 parameters. Initial
+FP32 gradient fidelity does not guarantee the endpoint after 800 updates.
+Independent verification covers six exact initial-state regenerations, 54
+trained model/Adam/sampler checkpoints, 60 complete native validation scores,
+12 FP32 initial-gradient replays and all 14,400 sampled batches. Three seeds,
+reused development validation and no complete-trajectory repeats limit the claim.
+
+The original startup failed after 24 CPU qualification backwards and before
+any training update because environment metadata initialized CUDA too early.
+Its frozen recovery reorders CPU initialization before metadata; no training,
+scientific recipe or tolerance is repeated or changed. Total backwards across
+attempts: 14,478; recorded memory intervals: 28,998. Original failure is retained.
+The initial figure process later hit a Matplotlib import access violation;
+one frozen-input CPU recovery ran the unchanged plot successfully. No training
+or audit was repeated and no runtime cure is claimed.
+
+No default or maintained model is promoted. All 61 maintained files remain
+unchanged from the earlier 116-test pass; that suite is not rerun. Keep the
+scoped memory evidence and close failed fixed quality claims. Paired versus
+within-policy trajectory variability is the next bounded diagnostic question,
+before any further broad training sweep. The broad goal remains unmet.
+[Plan](fp32_training_replication_plan.md),
+[recovery](fp32_training_replication_recovery_plan.md),
+[receipt](../results/verification/fp32_training_replication_final_v1.json).
+
+## Previous: default FP32 chunks pass the narrow-model full-job resource gates
+
+[H116](fp32_decoder_resource_results.md) completes 30 matched continuations /
+1,500 updates in 291.67 seconds. Default-attention FP32 decoder/classifier
+chunking reduces job allocation from 407.25 to 297.43 MiB on WikiText and
+400.22 to 291.25 MiB on TinyStories: **26.97% / 27.23% saved**. Median warmed
+update time changes -0.12% / +0.33% versus BF16 native. Same-backend native
+FP32 controls show 26.81% / 27.23% saving with 16.03% / 17.70% slower updates.
+
+All original gates pass for these two narrow scopes. Full gradient error is
+below 9.354e-7. The independent audit passes all 24 FP32 gradient replays,
+36 native scores and 1,500 batch/state checks. Default-chunk NLL changes stay
+within -0.00159% to +0.00170% versus BF16 after 50 updates. This does not prove
+long-run quality: the four narrow states are correlated seed61 pairs, with
+single-seed full controls. No architectural or parameter-count change occurs.
+
+Forced math attention fails memory and BF16-relative time on both narrow
+corpora. Full GELU/SwiGLU fail the 15% job-memory gate under either backend.
+Retain only default FP32 chunks on narrow context512 for broader replication
+and duration testing. No fresh training grid or default change occurs here.
+
+CPU analysis initially hits a Windows access violation. Its failure is retained;
+a fresh process runs the unchanged analyzer successfully, with no scientific
+retry. The 61 maintained files remain unchanged from the earlier 116-test pass.
+The broad goal stays open. [Plan](fp32_decoder_resource_plan.md),
+[receipt](../results/verification/fp32_decoder_resource_final_v1.json).
+
+## Previous: FP32 decoder modes pass the fixed numerical diagnosis
+
+[H115](decoder_gradient_transport_results.md) completes 30 conditions on six
+saved fixtures: correlated WikiText/TinyStories seed61 pairs and full GELU/SwiGLU
+seed17 controls. This is 300 main plus 20 qualification backwards, zero optimizer
+updates, with 189.85 seconds for the main study. No new model is introduced.
+
+BF16/default's median paired total-gradient error is 0.003181. Disabling
+checkpointing does not help. BF16/math removes the observed repeat variability
+but still gives median paired error 0.003030. Both FP32 modes reduce paired
+error below 9.354e-7 in every fixture/repetition and pass the original transport
+and numerical replay gates. FP32/default still has tiny bitwise replay changes;
+neither mode establishes global determinism. An exact CPU/CUDA scalar witness
+demonstrates 32,768-fold perturbation amplification at a BF16 rounding boundary.
+
+All same-mode forward boundaries match. Precision changes forward values too:
+FP32 normalized hidden states differ from BF16 by 0.249-0.384% relative L2.
+The independent audit verifies 30 native forward captures and saved gradient
+arithmetic, with zero backward replays. H114's failed audits remain failures.
+
+Retain FP32/default/block and FP32/math/block for an **uninstrumented whole-model
+resource screen** only. Diagnostic memory excludes optimizer state and hooks
+affect timing. No practical VRAM win, fresh LM allocation or default change is
+earned here. The broad goal remains open. All 61 maintained files remain
+unchanged from the earlier 116-test pass; that suite was not rerun.
+[Plan](decoder_gradient_transport_plan.md),
+[scoped receipt](../results/verification/decoder_gradient_transport_final_v1.json).
+
+
+## Previous: full-model precision gate fails despite useful narrow-model memory savings
+
+H114 completes **56 checkpoint continuations / 2,800 updates** in 502.12 seconds,
+using all twelve H112 final states plus full GELU/SwiGLU H078 controls. Each
+case receives 20 warmup and 30 measured updates from the same paired weights
+and Adam state. This is not fresh LM training. FP32 classifier chunks save
+**32.36% / 33.06%** whole-job allocation on WikiText/TinyStories narrow T512
+models, costing **12.84% / 12.64%** more median update time. Native validation
+NLL differs by at most 0.0051% after 50 updates; this does not prove long-run quality.
+
+Every scope fails the original <=0.002 global-gradient relative-L2 gate versus
+the native FP32 classifier. Median candidate error is 0.00225 / 0.00337 in the
+two narrow corpora. Full T128 GELU/SwiGLU additionally fail memory: only 0.53%
+/ 1.08% whole-job saving. Final diagnostics set both full-GELU peaks and the
+FP32-chunk SwiGLU peak. All 5,992 memory intervals are logged; warmed timing
+block ratios remain <=1.0479, without outlier removal.
+
+Independent exact gradient replay fails, and an explicit 1e-5 global / 1e-4
+per-tensor numerical recovery also fails on a different fixture (0.0005106
+global error). The cause is unresolved; no further tolerance relaxation or
+training retry occurs. A narrower completion audit verifies **70 native scores,
+56 saved gradient hashes, final model/Adam states and all 2,800 batches** with
+zero backwards. It does not qualify independent gradient replay.
+
+Close the fixed full-model precision-fidelity claim. Retain the scoped memory
+observation; hold fresh LM allocation pending a new matched-state backward
+diagnosis. Two model folders, five variants, eight recipes and all 61 maintained
+files remain unchanged from the prior 116-test pass. The broad goal remains open.
+[Report](fp32_classifier_profile_results.md), [plan](fp32_classifier_profile_plan.md),
+[verification and explicit limitations](../results/verification/fp32_classifier_profile_final_v1.json).
+
+## Previous: classifier cache error is verified; FP32 chunks earn resource screening
+
+H113 completes 120 local comparisons on 24 saved H112 states, with 504
+reference/warmup/measured backward passes and **zero optimizer updates**.
+One shared BF16 classifier-weight cast versus eight separate casts explains
+a reproducible difference: every cached/uncached loss and hidden gradient is
+bitwise identical, while every weight gradient differs. A CPU/CUDA witness
+gives cached gradient 256 versus the exact 260, recovered by separate casts.
+This is a scoped numerical mechanism, not proof of H112's final NLL cause.
+
+Uncaching reduces paired weight-gradient error by median 35.24% / 22.89% on
+WikiText/TinyStories, but fails the fixed improvement/runtime gates. FP32
+classifier chunks pass the local gates: approximately 3.7-3.9e-7 weight-gradient
+error and 72.02% lower classifier allocation than native BF16. Median paired
+time ratios are 1.378 / 1.415, but individual ratios span 0.335-15.862x. Timing
+evidence is weak; a full-model screen needs sustained warmup, wall time and
+GPU-event measurements. No language trial is allocated by this result.
+
+All 24 native recaptures, 144 gradient reruns and 24 independent closed-form
+FP64 derivative checks pass. The study takes 170.33 seconds and has no native
+failure or scientific retry. A planned overall diagnostic-process maximum was
+not fully recorded because warmup peaks were not serialized; only measured
+phase peaks are reported. This limitation does not change the local gates.
+
+Retain the cache diagnosis, eliminate the fixed uncaching-only candidate and
+advance FP32 chunks solely to whole-model gradient/resource qualification.
+The active model tree and 61 maintained files are unchanged from the previous
+116-test pass. The broad goal remains unmet.
+[Report and scoped proof](classifier_precision_results.md),
+[final receipt](../results/verification/classifier_precision_final_v1.json).
+
+## Previous: whole-job saving qualifies on TinyStories; WikiText quality fails
+
+H112 completes **12 fresh trials / 9,600 updates** across seeds 61/73/89 on two
+corpora. Both training arms get H111's qualified classifier-streaming evaluator.
+Measured job allocation falls **32.43% on WikiText-2 and 33.06% on TinyStories**,
+with 13.65-14.52% slower median updates. These actual per-trial tensor peaks
+include validation, diagnostics and CUDA corpus caches; they exclude driver/
+context memory. All training, model and Adam quantities remain finite.
+
+TinyStories passes every seed's <=1% NLL degradation, >=15% allocation saving
+and <=25% timing-cost gates. WikiText-2 loses 1.465% / 0.042% / 1.954% NLL and
+fails two seeds. **Retain the scoped TinyStories component; reject the fixed
+two-corpus recipe.** H110's favorable one-seed long-context observation does
+not replicate on these fresh WikiText seeds. Its old fidelity stop stays intact.
+
+Independent audit verifies 72 native scores, 48 checkpoints, twelve exact
+initializations and all 9,600 training batches. Maximum streamed/native score
+drift is 3.40e-8, so evaluation drift does not explain the quality changes.
+The grid runs once in 922.36 seconds, using fresh models in one process with
+25 verified zero-allocation boundaries. cuBLAS workspaces are cleared only
+between trials and fully charged within trials. Original startup failures,
+the workspace diagnosis and postprocessing recoveries remain preserved. Native
+failure root cause remains unknown; process-isolation changes are explicit.
+
+H111 separately qualifies classifier streaming at T128/T512 on 24 old states
+with zero updates: 16-31% lower evaluation allocation and roughly 1% median
+time overhead. Sequence microbatching fails cost at 3.71x / 7.07x. H111 uses
+persistent-state fixtures; H112 supplies the separate actual-job measurements.
+
+The next discriminator is a bounded matched-state gradient/precision comparison
+before allocating any changed training policy. No causal mechanism has been
+proved and no further training grid is allocated by these results. Models,
+parameters and defaults remain unchanged: two model folders, five variants,
+eight recipes, with the prior 116-test pass kept separate. The broader goal
+remains unmet. [H112 report](whole_job_memory_results.md),
+[H111 report](streamed_evaluation_results.md),
+[final audit](../results/verification/whole_job_memory_final_v1.json).
+
+## Previous: training memory improves; whole-job gains remain limited or unreplicated
+
+H110 completes **eight fresh 800-update trials / 6,400 updates**. At B16/T128,
+loss chunking passes all frozen training-memory, runtime and fidelity gates
+across seeds 17/29/43: **20.32% less training allocation**, 6.91-8.18% slower
+updates, and at most 0.745% final NLL change. But unchunked validation raises
+the candidate's whole-job peak from 222.3 to 266.6 MiB, so the overall saving is
+only **4.45%** versus 279.0 MiB for block checkpointing.
+
+At B8/T512, seed 17 saves **32.83% training / 19.26% whole-job allocation** and
+improves final NLL **4.32%**, with 13.05% slower updates. The lower loss is a
+positive one-seed quality observation. It fails the frozen +/-1% execution
+fidelity requirement, so the four remaining trials are not allocated. Close
+that fixed faithful-execution claim, not the possible performance lead. Do
+not relabel improved loss as regression or grant a retrospective exception.
+
+Independent audit verifies **40 exact NLL scores, 24 checkpoints, eight initial
+states and all 6,400 training batches**. Both original pretraining import
+failures and a separate post-training UV-launcher panic are retained. The
+recorded continuation uses the original UV-managed Python 3.12.9 with bytecode
+bypass, reuses the exact completed control, and repeats no scientific training.
+Twelve CPU probes and 1,572 matching SymPy source hashes do not establish the
+root cause. All model/Adam states remain finite; clipping occurs on 1.25-3.375%
+of updates. Finite gradients do not prove optimal conditioning or convergence.
+
+Retain the B16/T128 training component. The next memory question is streamed
+evaluation with independently verified scores; a long-context quality claim
+needs a separately frozen replication. No parameter reduction, inference
+benefit, new activation or architectural breakthrough is established here.
+Two model folders, five variants and eight recipes remain. Maintained code/
+tests are unchanged from the previous 116-test pass; current lint passes.
+[Full report](token_memory_duration_results.md),
+[runtime investigation](runtime_import_diagnosis.md).
+
+## Previous: derivative-aware initialization does not survive value-only learning
+
+H109 completes **144 fresh fits and 86,400 updates** in 363.28 seconds at the
+original 70.8% FFN-parameter reduction. Both derivative-aware initializers fail
+the fixed learning gate. Before training, their paired derivative advantage is
+6.06-9.81% over value-only; after 600 value-only updates it is just **0.41-0.73%**.
+All 72 selections choose LR0.001, so the result is also an equal-rate comparison.
+
+Relative to their own initialization, candidate output error improves about
+35%, but directional-derivative error **rises 7-8% for GELU and 51-52% for SwiGLU**.
+This is measured local sensitivity degradation, not proof of deep-network
+exploding/vanishing gradients. All training quantities remain finite and no
+update clips. H108's zero-SGD component result remains valid in its narrower scope.
+
+Mean learned output error is about 0.073 / 0.152 and derivative error about
+0.359 / 0.864 for GELU / SwiGLU, far above the fixed 0.05 / 0.10 gates. Narrow
+fitting peaks near 24.2 MiB, saving 41-43% versus full profiles, but the value-only
+control has the same memory. The complete pipeline reaches 117.908 MiB with
+teacher capture included. Fresh-process inference separately saves 31-35%
+allocation; no language experiment or complete quality/VRAM result is earned.
+
+Independent audit verifies **648 metrics, 216 endpoint states, 72 selections**,
+144 training records and exact input/target recapture for all 18 fresh datasets.
+The datasets use 960 windows disjoint from H105/H107, still from the teacher
+training corpus and the same two teachers, both trained with seed17. The three
+sampling seeds do not establish teacher-training replication. An initial
+pre-protocol path-type failure is preserved; no scientific training was repeated.
+
+Close both fixed initializer-plus-value-learning recipes. Do not add steps,
+rates or derivative terms automatically. Any different learning objective or
+upstream-sensitivity diagnostic needs its own hypothesis and cost qualification.
+The active code, tests, two model folders, five variants and eight recipes remain
+unchanged; the previous 116-test pass is referenced separately. The full goal
+remains unmet. [Report](sobolev_learning_results.md), [plan](sobolev_learning_plan.md).
+
+## Previous: derivative-aware calibration qualifies as a component
+
+H108 produces **432 compressed FFNs with zero SGD updates** in 231.87 seconds.
+It keeps selected teacher neurons and fits a dense output projection to both
+values and directional derivatives. All three widths pass the frozen comparative
+component gates on GELU and SwiGLU, including every sampling-seed aggregate.
+Paired derivative-error reductions are **6.83-16.15%** versus value-only selection
+and fitting, with improved output error. The crossed ablations attribute about
+**88-90%** of the combined absolute derivative gain to the readout objective alone.
+Retain derivative-aware calibration as **PROMISING COMPONENT**.
+
+None of the complete recipes meets the absolute quality/memory gate. The primary
+models use **70.80% / 70.87% fewer FFN parameters** and save **33.45% / 35.44%** of
+local inference allocation, but output error is 0.1062 / 0.2355 and derivative
+error is 0.3293 / 0.5218, above the fixed 0.05 / 0.10 limits. Half width also
+fails quality. Three-quarter width saves only 6.6-6.8% inference allocation and
+SwiGLU derivative error remains 0.1171. No language insertion is allocated.
+
+These are local FP32 FFN reconstruction results using 18 reused development
+input sets from two seed-17 teachers, three depths and three sampling seeds.
+They are not independently trained teacher replications or NLL measurements.
+Calibration peaks at 36.125 MiB; including prerequisite full-teacher capture
+raises pipeline allocation to 117.908 MiB. No optimizer or training-memory
+saving is tested. The export is an ordinary dense FFN with an output bias.
+
+Independent auditing verifies **864 scores, 432 exports/readouts**, all 18
+statistics sets and 432 sampled actual greedy marginal gains. Thirteen isolated
+qualification groups pass. An initial teacher-reference batch-partition mismatch
+and its source/logs are preserved; recovery restores only the teacher's original
+batch size, keeps all tolerances and student rescoring unchanged, and passes.
+No maintained code/test changes; the previous 116-test pass remains separate.
+
+The next justified question is whether derivative-aware readout initialization
+improves actual narrow-FFN learning on fresh data versus value-only initialization,
+with preparation and training costs charged. This needs a new frozen protocol.
+Do not assume the selector is necessary, relax the current gates or claim a new
+activation/theorem. The active tree remains two model folders, five variants and
+eight recipes; the broader VRAM/parameter/quality goal is unmet.
+[Full report](sobolev_selection_results.md), [frozen plan](sobolev_selection_plan.md).
+
+## Previous: affine residuals pass capacity screening but fail learned compression
+
+H106 checks 126 finite-data residual-rank bounds before training. An explicit
+full-rank affine path qualifies GELU h256 and SwiGLU h170 corrections; smaller
+h128/h85 recipes fail the fixed allocation gates. This follows from projection
+and truncated SVD, not a new theorem or a learned-model result.
+
+H107 then completes **288 fresh fits, 172,800 updates and 144 selections** in
+12.98 minutes. Both candidates are rejected against six parameter-matched
+conventional controls. They save **70.78% / 70.84% of FFN parameters**, but their
+paired reconstruction error is 35.55% / 56.61% above SiLU on the GELU teacher and
+38.78% / 23.52% above ordinary SwiGLU on the SwiGLU teacher. Both lose the strongest
+control in every sampling-seed aggregate and every tested depth. Native raw-input
+inference costs **1.64-2.32x narrow GELU**. No language trial or integration is earned.
+
+Student training peaks near 23.95 MiB versus 43.15 / 41.30 MiB full-reference
+profiles, but ordinary narrow controls already use 24.17-24.28 MiB. Raw inference
+needs about 10.94 MiB for the candidates versus 10.69 MiB for ordinary GELU.
+The entire compression pipeline peaks at **117.91 MiB** because it captures the
+full teacher. These are PyTorch tensor allocations, not whole-process VRAM or
+full Transformer training. Local memory savings do not establish preserved quality.
+
+Independent audit recaptures every row in all 18 datasets, checks **864 scores**,
+144 ridge initializations and all 144 exports/selections. The largest score
+discrepancy is 2.64e-8. **116 maintained tests pass.** Separate native Windows
+audit-import and plotting failures are preserved; recorded postprocessing recovery
+passes without retraining or changing frozen sources/thresholds. Both teachers
+have one training seed; three fresh sampling seeds are not teacher replications.
+
+Close these fixed affine recipes. A capacity bound can eliminate inadequate
+classes, but cannot certify learnability, useful memory savings or NLL. The
+active tree remains two model folders, five variants and eight recipes. The
+broader VRAM/parameter/quality goal remains unmet.
+[Fitting report](affine_residual_fit_results.md),
+[capacity proof and result](affine_residual_capacity_results.md).
+
+## Previous: real FFN inputs reject energy projection; a rank limit explains part of the failure
+
+H105 completes 378 local comparisons in 82.18 seconds with zero SGD updates.
+All three energy-based projection recipes fail against simpler input PCA and
+activation-aware linear compression on existing full GELU/SwiGLU checkpoints.
+At rank 64, unwhitened energy has normalized output MSE 0.6146 / 0.6492, versus
+0.1596 / 0.4279 for the linear-response control. Whitening and affine-residual
+energy do not repair the signal. No fitting budget is allocated to these recipes.
+
+A post-screen capacity diagnosis finds a stronger constraint: a final global
+rank-64 output bottleneck has mean normalized error floors **0.1098 for GELU
+and 0.2125 for SwiGLU** on these datasets, irrespective of the input nonlinearity.
+Every one of the 18 rank-64 cases exceeds the 5% gate. Thus that absolute gate
+was unattainable for the whole tested output-rank class. This was learned after
+the screen; it must not be portrayed as an initializer-specific failure.
+Energy's additional regression versus the simpler controls is independently
+measured. Check rank capacity before the next compression grid.
+
+The empirical bound uses centered output singular-value tails plus a conservative
+BF16-to-FP32 triangle-inequality correction. All 54 bounds match a separate direct
+SVD calculation. It constrains local teacher-function reconstruction, not language
+NLL, a surrounding Transformer, structured full-rank maps or training from scratch.
+
+Independent audit recaptures every token in all 18 pair datasets through the full
+decoder and verifies 378 scores, bases and counts. **116 tests pass.** Data varies
+across three calibration seeds, not three independently trained teachers. Only
+training-cache windows are used. About 79% fewer FFN parameters does not qualify
+a quality/VRAM result; collection retains the full teacher at 107-109 MiB peak.
+
+Close this fixed global projection branch. The next architecture should retain
+adequate output rank, or reduce memory without this rank restriction. The active
+factory remains two model folders and five variants. The full goal is unmet.
+[Report and proof](real_subspace_results.md), [frozen screen](real_subspace_plan.md).
+
+## Previous: feature discovery helps a small cubic FFN, but promotion fails
+
+H103/H104 completes 36 spectral estimates and 408 fresh synthetic fits, across
+four Gaussian target families, three independent dataset seeds and two rates.
+All 816 checkpoint scores and 204 rate selections pass independent verification.
+The feature-discovery population calculation and oracle capacity checks are
+scoped proofs, not new convergence or universal stability theorems.
+
+The bounded-initialized cubic factorization uses 66,048 parameters, **94.41% fewer**
+than full GELU/SwiGLU. It improves paired aggregate MSE by 41.01% / 15.97% versus
+those equally initialized full controls and wins each task's mean. It also beats
+every tiny control in each seed's aggregate, but **loses cubic to tiny cubic by
+47.82%** and takes **2.12 times narrow GELU's inference time**. Its fixed gates fail.
+The GELU factorization additionally fails cubic-learning and full-model quality.
+
+Initialization uses a training-label energy covariance to estimate a rank-32
+input subspace. Including its GPU workspace, the cubic candidate's peak tensor
+allocation is **30.77 MiB**, saving **25.02% / 22.68%** versus full GELU/SwiGLU.
+Training-only peaks save roughly 51-52%, but that is not the pipeline saving.
+Equally initialized narrow/tiny controls share the 30.77 MiB pipeline peak.
+
+Neither recipe earns automatic language training or integration. Constant-norm
+one-hot language labels give zero energy signal, and the Gaussian assumptions
+favor this synthetic screen. The next distinct question is whether useful
+training-only subspace information exists on real FFN inputs/teacher outputs,
+with all teacher, preprocessing, memory and inference costs charged. That needs
+its own qualification before allocation. No long-run or broad task win is known.
+
+Report/test runtime failures are preserved separately; no training or audited
+score is replaced. The active tree remains two model folders and five variants.
+[Full report](spectral_fitting_results.md), [H103 proof/plan](spectral_discovery_plan.md),
+[frozen H104 fitting plan](spectral_fitting_plan.md).
+
+## Previous: VRAM is primary; a scoped execution result qualifies
+
+The user's September 10 clarification makes measured VRAM the primary objective;
+the original parameter/quality goal remains separate and unmet. H101/H102 test
+token chunking with equally checkpointed models, without changing parameters.
+
+Narrow GELU uses **21.01% less training VRAM at context 128 and 32.23% less at
+context 512**, across three seeds. Updates cost 7.45-22.51% more; final NLL changes
+by at most +0.189% after 12 updates. Both shapes pass the frozen scoped gates.
+Retain loss chunking as an experimental option; it is not a default or an
+architectural promotion. Long-run learning and inference benefits are untested.
+
+H101 stops after 22 cases: full GELU chunking fails training fidelity despite
+local gradient checks. Fresh-process replay and checkpoint rescoring reproduce
+the failure. H102 completes 36 cases; all 38 saved endpoints, including diagnostic
+replays, rescore exactly. Full SwiGLU fails all-seed timing gates. FFN chunking
+adds cost with little memory benefit and is closed at this fixed setting.
+
+[Full report](token_memory_results.md), [initial plan](token_memory_plan.md),
+[scoped replication](token_memory_followup_plan.md),
+[machine-readable evidence](../results/token_memory_replication_v1/result.json).
+The active factory still has two model folders and five variants. The next
+architecture must beat memory-aware controls and undergo actual trajectory
+checks; local algebra cannot certify numerical training stability.
+
+## Previous architectural state
+
 **The gold target remains unmet. H078 fails its single-seed duration gates.**
 The latest completed longer-budget language experiment is matched-budget BlockShuffle GELU h3264, with
 2,801,664 FFN / 9,099,648 total weights: 70.3125% FFN and 42.1700% total reduction.

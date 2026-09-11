@@ -1,0 +1,151 @@
+{
+  "metrics": [
+    {
+      "dataset": "wikitext2",
+      "arm": "native",
+      "nll": 4.9288826669965475,
+      "peak_mib": 408.68603515625,
+      "event_ms": 70.38545608520508,
+      "wall_ms": 70.43865000014193,
+      "host_mib": 1.239776611328125e-05,
+      "stability": 1.1699871672940518
+    },
+    {
+      "dataset": "wikitext2",
+      "arm": "chunks",
+      "nll": 4.951098140837654,
+      "peak_mib": 281.837890625,
+      "event_ms": 84.80451202392578,
+      "wall_ms": 84.85485000164772,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0353857956459793
+    },
+    {
+      "dataset": "wikitext2",
+      "arm": "combined",
+      "nll": 4.981678210364448,
+      "peak_mib": 249.53759765625,
+      "event_ms": 91.65073776245117,
+      "wall_ms": 91.6989499983174,
+      "host_mib": 112.03321552276611,
+      "stability": 1.015773175969533
+    },
+    {
+      "dataset": "tinystories",
+      "arm": "combined",
+      "nll": 2.654535337370269,
+      "peak_mib": 241.6337890625,
+      "event_ms": 95.11833572387695,
+      "wall_ms": 95.1641000010568,
+      "host_mib": 112.03321552276611,
+      "stability": 1.0958429477928275
+    },
+    {
+      "dataset": "tinystories",
+      "arm": "chunks",
+      "nll": 2.655544616738144,
+      "peak_mib": 275.96435546875,
+      "event_ms": 94.05020523071289,
+      "wall_ms": 94.09875000164902,
+      "host_mib": 112.03321552276611,
+      "stability": 1.0135293177921214
+    },
+    {
+      "dataset": "tinystories",
+      "arm": "native",
+      "nll": 2.656350057952258,
+      "peak_mib": 401.1572265625,
+      "event_ms": 84.17830276489258,
+      "wall_ms": 84.2400000001362,
+      "host_mib": 112.03321552276611,
+      "stability": 1.0436170829443705
+    }
+  ],
+  "comparisons": [
+    {
+      "dataset": "wikitext2",
+      "control": "native",
+      "ratios": {
+        "nll": 1.0107114628070608,
+        "peak_mib": 0.6105850853475971,
+        "event_ms": 1.3021260763232594,
+        "wall_ms": 1.3018271928569418
+      },
+      "gates": {
+        "audit": true,
+        "quality": false,
+        "memory": true,
+        "event": false,
+        "wall": false,
+        "host": true,
+        "stability": false
+      },
+      "passed": false
+    },
+    {
+      "dataset": "wikitext2",
+      "control": "chunks",
+      "ratios": {
+        "nll": 1.0061764216052522,
+        "peak_mib": 0.8853940721131524,
+        "event_ms": 1.0807294986449998,
+        "wall_ms": 1.0806565564200135
+      },
+      "gates": {
+        "audit": true,
+        "quality": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "host": true,
+        "stability": false
+      },
+      "passed": false
+    },
+    {
+      "dataset": "tinystories",
+      "control": "native",
+      "ratios": {
+        "nll": 0.9993168368090056,
+        "peak_mib": 0.6023418576627676,
+        "event_ms": 1.1299626221918437,
+        "wall_ms": 1.1296783001056852
+      },
+      "gates": {
+        "audit": true,
+        "quality": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "host": true,
+        "stability": true
+      },
+      "passed": true
+    },
+    {
+      "dataset": "tinystories",
+      "control": "chunks",
+      "ratios": {
+        "nll": 0.9996199350741414,
+        "peak_mib": 0.87559782368293,
+        "event_ms": 1.0113570245864307,
+        "wall_ms": 1.0113216169119048
+      },
+      "gates": {
+        "audit": true,
+        "quality": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "host": true,
+        "stability": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "training_updates": 4800,
+  "training_targets": 19660800,
+  "backwards": 4812,
+  "broad_goal_achieved": false
+}

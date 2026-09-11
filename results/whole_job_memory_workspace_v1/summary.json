@@ -1,0 +1,386 @@
+{
+  "status": "COMPLETE",
+  "completed_trials": 12,
+  "updates": 9600,
+  "training_targets": 39321600,
+  "pairs": [
+    {
+      "dataset": "wikitext2",
+      "seed": 61,
+      "native_nll_ratio": 1.0146455501904534,
+      "job_memory_ratio": 0.6757166657503926,
+      "training_memory_ratio": 0.6757166657503926,
+      "update_time_ratio": 1.138242074583039,
+      "gates": {
+        "native_nll_at_most_one_percent_worse": false,
+        "whole_job_saving_at_least_15_percent": true,
+        "median_update_cost_at_most_25_percent": true,
+        "finite": true
+      },
+      "passes": false
+    },
+    {
+      "dataset": "wikitext2",
+      "seed": 73,
+      "native_nll_ratio": 1.0004203092906148,
+      "job_memory_ratio": 0.6757166657503926,
+      "training_memory_ratio": 0.6757166657503926,
+      "update_time_ratio": 1.1364675049721498,
+      "gates": {
+        "native_nll_at_most_one_percent_worse": true,
+        "whole_job_saving_at_least_15_percent": true,
+        "median_update_cost_at_most_25_percent": true,
+        "finite": true
+      },
+      "passes": true
+    },
+    {
+      "dataset": "wikitext2",
+      "seed": 89,
+      "native_nll_ratio": 1.0195420199632839,
+      "job_memory_ratio": 0.6757166657503926,
+      "training_memory_ratio": 0.6757166657503926,
+      "update_time_ratio": 1.1400403651705369,
+      "gates": {
+        "native_nll_at_most_one_percent_worse": false,
+        "whole_job_saving_at_least_15_percent": true,
+        "median_update_cost_at_most_25_percent": true,
+        "finite": true
+      },
+      "passes": false
+    },
+    {
+      "dataset": "tinystories",
+      "seed": 61,
+      "native_nll_ratio": 0.994861877911174,
+      "job_memory_ratio": 0.6693611444822808,
+      "training_memory_ratio": 0.6693611444822808,
+      "update_time_ratio": 1.1381299442978088,
+      "gates": {
+        "native_nll_at_most_one_percent_worse": true,
+        "whole_job_saving_at_least_15_percent": true,
+        "median_update_cost_at_most_25_percent": true,
+        "finite": true
+      },
+      "passes": true
+    },
+    {
+      "dataset": "tinystories",
+      "seed": 73,
+      "native_nll_ratio": 0.9988989731903033,
+      "job_memory_ratio": 0.6693611444822808,
+      "training_memory_ratio": 0.6693611444822808,
+      "update_time_ratio": 1.1393765328518566,
+      "gates": {
+        "native_nll_at_most_one_percent_worse": true,
+        "whole_job_saving_at_least_15_percent": true,
+        "median_update_cost_at_most_25_percent": true,
+        "finite": true
+      },
+      "passes": true
+    },
+    {
+      "dataset": "tinystories",
+      "seed": 89,
+      "native_nll_ratio": 1.0031605930149046,
+      "job_memory_ratio": 0.6693611444822808,
+      "training_memory_ratio": 0.6693611444822808,
+      "update_time_ratio": 1.1451840139478984,
+      "gates": {
+        "native_nll_at_most_one_percent_worse": true,
+        "whole_job_saving_at_least_15_percent": true,
+        "median_update_cost_at_most_25_percent": true,
+        "finite": true
+      },
+      "passes": true
+    }
+  ],
+  "groups": [
+    {
+      "dataset": "wikitext2",
+      "policies": {
+        "block": {
+          "native_full_nll": {
+            "mean": 4.953630603810467,
+            "median": 4.987338446057032,
+            "sample_variance": 0.015955405853285698,
+            "min": 4.813881435091534,
+            "max": 5.059671930282835,
+            "n": 3
+          },
+          "peak_training_allocated_bytes": {
+            "mean": 428401664,
+            "median": 428401664,
+            "sample_variance": 0,
+            "min": 428401664,
+            "max": 428401664,
+            "n": 3
+          },
+          "peak_validation_allocated_bytes": {
+            "mean": 262703104,
+            "median": 262703104,
+            "sample_variance": 0,
+            "min": 262703104,
+            "max": 262703104,
+            "n": 3
+          },
+          "peak_job_allocated_bytes": {
+            "mean": 428401664,
+            "median": 428401664,
+            "sample_variance": 0,
+            "min": 428401664,
+            "max": 428401664,
+            "n": 3
+          },
+          "clip_fraction": {
+            "mean": 0.03375,
+            "median": 0.0375,
+            "sample_variance": 7.65625e-05,
+            "min": 0.02375,
+            "max": 0.04,
+            "n": 3
+          },
+          "median_update_ms": {
+            "mean": 82.06103333335098,
+            "median": 82.07485000002634,
+            "sample_variance": 0.005201940830205687,
+            "min": 81.98300000003655,
+            "max": 82.12524999999005,
+            "n": 3
+          }
+        },
+        "loss_chunks": {
+          "native_full_nll": {
+            "mean": 5.010044573728369,
+            "median": 5.060380761585538,
+            "sample_variance": 0.007817304878726939,
+            "min": 4.9079544021969745,
+            "max": 5.061798557402596,
+            "n": 3
+          },
+          "peak_training_allocated_bytes": {
+            "mean": 289478144,
+            "median": 289478144,
+            "sample_variance": 0,
+            "min": 289478144,
+            "max": 289478144,
+            "n": 3
+          },
+          "peak_validation_allocated_bytes": {
+            "mean": 263030784,
+            "median": 263030784,
+            "sample_variance": 0,
+            "min": 263030784,
+            "max": 263030784,
+            "n": 3
+          },
+          "peak_job_allocated_bytes": {
+            "mean": 289478144,
+            "median": 289478144,
+            "sample_variance": 0,
+            "min": 289478144,
+            "max": 289478144,
+            "n": 3
+          },
+          "clip_fraction": {
+            "mean": 0.024166666666666666,
+            "median": 0.02375,
+            "sample_variance": 3.177083333333333e-05,
+            "min": 0.01875,
+            "max": 0.03,
+            "n": 3
+          },
+          "median_update_ms": {
+            "mean": 93.40600000026218,
+            "median": 93.31650000058289,
+            "sample_variance": 0.0367553098196263,
+            "min": 93.27540000049339,
+            "max": 93.62609999971028,
+            "n": 3
+          }
+        }
+      },
+      "native_nll_ratio": {
+        "mean": 1.011535959814784,
+        "median": 1.0146455501904534,
+        "sample_variance": 9.866211899065876e-05,
+        "min": 1.0004203092906148,
+        "max": 1.0195420199632839,
+        "n": 3
+      },
+      "job_memory_ratio": {
+        "mean": 0.6757166657503926,
+        "median": 0.6757166657503926,
+        "sample_variance": 0.0,
+        "min": 0.6757166657503926,
+        "max": 0.6757166657503926,
+        "n": 3
+      },
+      "training_memory_ratio": {
+        "mean": 0.6757166657503926,
+        "median": 0.6757166657503926,
+        "sample_variance": 0.0,
+        "min": 0.6757166657503926,
+        "max": 0.6757166657503926,
+        "n": 3
+      },
+      "update_time_ratio": {
+        "mean": 1.1382499815752418,
+        "median": 1.138242074583039,
+        "sample_variance": 3.191379389698941e-06,
+        "min": 1.1364675049721498,
+        "max": 1.1400403651705369,
+        "n": 3
+      },
+      "all_seeds_pass": false,
+      "verdict": "FIXED_RECIPE_NOT_QUALIFIED"
+    },
+    {
+      "dataset": "tinystories",
+      "policies": {
+        "block": {
+          "native_full_nll": {
+            "mean": 2.6253105442540177,
+            "median": 2.6278237858597113,
+            "sample_variance": 0.0001429684926468398,
+            "min": 2.6122967467016105,
+            "max": 2.6358111002007307,
+            "n": 3
+          },
+          "peak_training_allocated_bytes": {
+            "mean": 422347264,
+            "median": 422347264,
+            "sample_variance": 0,
+            "min": 422347264,
+            "max": 422347264,
+            "n": 3
+          },
+          "peak_validation_allocated_bytes": {
+            "mean": 256583168,
+            "median": 256583168,
+            "sample_variance": 0,
+            "min": 256583168,
+            "max": 256583168,
+            "n": 3
+          },
+          "peak_job_allocated_bytes": {
+            "mean": 422347264,
+            "median": 422347264,
+            "sample_variance": 0,
+            "min": 422347264,
+            "max": 422347264,
+            "n": 3
+          },
+          "clip_fraction": {
+            "mean": 0.16375,
+            "median": 0.1575,
+            "sample_variance": 0.0010453125,
+            "min": 0.135,
+            "max": 0.19875,
+            "n": 3
+          },
+          "median_update_ms": {
+            "mean": 82.20056666626381,
+            "median": 82.11819999996806,
+            "sample_variance": 0.03232970323814227,
+            "min": 82.07669999956124,
+            "max": 82.40679999926215,
+            "n": 3
+          }
+        },
+        "loss_chunks": {
+          "native_full_nll": {
+            "mean": 2.6226059287583747,
+            "median": 2.6222679809648164,
+            "sample_variance": 0.00017842471324880618,
+            "min": 2.6094205379486084,
+            "max": 2.6361292673616994,
+            "n": 3
+          },
+          "peak_training_allocated_bytes": {
+            "mean": 282702848,
+            "median": 282702848,
+            "sample_variance": 0,
+            "min": 282702848,
+            "max": 282702848,
+            "n": 3
+          },
+          "peak_validation_allocated_bytes": {
+            "mean": 256058880,
+            "median": 256058880,
+            "sample_variance": 0,
+            "min": 256058880,
+            "max": 256058880,
+            "n": 3
+          },
+          "peak_job_allocated_bytes": {
+            "mean": 282702848,
+            "median": 282702848,
+            "sample_variance": 0,
+            "min": 282702848,
+            "max": 282702848,
+            "n": 3
+          },
+          "clip_fraction": {
+            "mean": 0.1625,
+            "median": 0.175,
+            "sample_variance": 0.0011734375,
+            "min": 0.12375,
+            "max": 0.18875,
+            "n": 3
+          },
+          "median_update_ms": {
+            "mean": 93.78281666613475,
+            "median": 93.56354999999894,
+            "sample_variance": 0.2650206536889597,
+            "min": 93.4139499986486,
+            "max": 94.3709499997567,
+            "n": 3
+          }
+        }
+      },
+      "native_nll_ratio": {
+        "mean": 0.9989738147054606,
+        "median": 0.9988989731903033,
+        "sample_variance": 1.7221369032514843e-05,
+        "min": 0.994861877911174,
+        "max": 1.0031605930149046,
+        "n": 3
+      },
+      "job_memory_ratio": {
+        "mean": 0.6693611444822808,
+        "median": 0.6693611444822808,
+        "sample_variance": 0.0,
+        "min": 0.6693611444822808,
+        "max": 0.6693611444822808,
+        "n": 3
+      },
+      "training_memory_ratio": {
+        "mean": 0.6693611444822808,
+        "median": 0.6693611444822808,
+        "sample_variance": 0.0,
+        "min": 0.6693611444822808,
+        "max": 0.6693611444822808,
+        "n": 3
+      },
+      "update_time_ratio": {
+        "mean": 1.1408968303658547,
+        "median": 1.1393765328518566,
+        "sample_variance": 1.4173453055380131e-05,
+        "min": 1.1381299442978088,
+        "max": 1.1451840139478984,
+        "n": 3
+      },
+      "all_seeds_pass": true,
+      "verdict": "SCOPED_WHOLE_JOB_COMPONENT_QUALIFIED"
+    }
+  ],
+  "two_corpus_component_qualifies": false,
+  "single_process_fresh_models": true,
+  "zero_allocation_boundaries": 25,
+  "workspace_bytes_subtracted": 0,
+  "elapsed_seconds": 922.3558426,
+  "parameters_changed": false,
+  "new_architecture": false,
+  "broad_goal_achieved": false
+}

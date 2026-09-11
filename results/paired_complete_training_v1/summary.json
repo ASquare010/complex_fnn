@@ -1,0 +1,561 @@
+{
+  "study": "H134",
+  "metrics": [
+    {
+      "index": 0,
+      "dataset": "wikitext2",
+      "arm": "reuse",
+      "repeat": 0,
+      "peak_mib": 306.1806640625,
+      "reserved_mib": 374.0,
+      "event_ms": 80.14932632446289,
+      "wall_ms": 80.19955000054324,
+      "nll": 4.9633912464929,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0022012590158595,
+      "telemetry_samples": 9,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2325.0,
+          "median": 2460.0,
+          "max": 2490.0
+        },
+        "power_w": {
+          "min": 44.37,
+          "median": 94.73,
+          "max": 94.99
+        },
+        "temperature_c": {
+          "min": 73.0,
+          "median": 76.0,
+          "max": 77.0
+        }
+      }
+    },
+    {
+      "index": 1,
+      "dataset": "wikitext2",
+      "arm": "ordinary",
+      "repeat": 0,
+      "peak_mib": 406.39892578125,
+      "reserved_mib": 478.0,
+      "event_ms": 69.20156860351562,
+      "wall_ms": 69.24815000093076,
+      "nll": 4.963398750244625,
+      "host_mib": 1.239776611328125e-05,
+      "stability": 1.0043771136031991,
+      "telemetry_samples": 8,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2085.0,
+          "median": 2295.0,
+          "max": 2400.0
+        },
+        "power_w": {
+          "min": 83.86,
+          "median": 102.54,
+          "max": 109.2
+        },
+        "temperature_c": {
+          "min": 71.0,
+          "median": 79.0,
+          "max": 80.0
+        }
+      }
+    },
+    {
+      "index": 2,
+      "dataset": "wikitext2",
+      "arm": "native",
+      "repeat": 0,
+      "peak_mib": 358.14892578125,
+      "reserved_mib": 438.0,
+      "event_ms": 80.46017456054688,
+      "wall_ms": 80.50560000083351,
+      "nll": 4.9633912464929,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0442208431129096,
+      "telemetry_samples": 9,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2325.0,
+          "median": 2325.0,
+          "max": 2325.0
+        },
+        "power_w": {
+          "min": 91.73,
+          "median": 94.48,
+          "max": 94.64
+        },
+        "temperature_c": {
+          "min": 76.0,
+          "median": 80.0,
+          "max": 81.0
+        }
+      }
+    },
+    {
+      "index": 3,
+      "dataset": "wikitext2",
+      "arm": "native",
+      "repeat": 1,
+      "peak_mib": 358.14892578125,
+      "reserved_mib": 438.0,
+      "event_ms": 80.38246154785156,
+      "wall_ms": 80.43569999972533,
+      "nll": 4.9633912464929,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0063037810824627,
+      "telemetry_samples": 8,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2310.0,
+          "median": 2370.0,
+          "max": 2430.0
+        },
+        "power_w": {
+          "min": 90.58,
+          "median": 92.57,
+          "max": 94.57
+        },
+        "temperature_c": {
+          "min": 80.0,
+          "median": 81.0,
+          "max": 81.0
+        }
+      }
+    },
+    {
+      "index": 4,
+      "dataset": "wikitext2",
+      "arm": "ordinary",
+      "repeat": 1,
+      "peak_mib": 406.39892578125,
+      "reserved_mib": 478.0,
+      "event_ms": 68.9760627746582,
+      "wall_ms": 69.02119999904244,
+      "nll": 4.963393108428471,
+      "host_mib": 1.239776611328125e-05,
+      "stability": 1.002493755365174,
+      "telemetry_samples": 7,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2220.0,
+          "median": 2250.0,
+          "max": 2370.0
+        },
+        "power_w": {
+          "min": 99.19,
+          "median": 105.17,
+          "max": 105.49
+        },
+        "temperature_c": {
+          "min": 77.0,
+          "median": 83.0,
+          "max": 84.0
+        }
+      }
+    },
+    {
+      "index": 5,
+      "dataset": "wikitext2",
+      "arm": "reuse",
+      "repeat": 1,
+      "peak_mib": 306.1806640625,
+      "reserved_mib": 374.0,
+      "event_ms": 80.34511947631836,
+      "wall_ms": 80.38885000132723,
+      "nll": 4.9633912464929,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0282631587882975,
+      "telemetry_samples": 9,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2310.0,
+          "median": 2430.0,
+          "max": 2460.0
+        },
+        "power_w": {
+          "min": 91.74,
+          "median": 95.42,
+          "max": 109.04
+        },
+        "temperature_c": {
+          "min": 80.0,
+          "median": 81.0,
+          "max": 82.0
+        }
+      }
+    },
+    {
+      "index": 6,
+      "dataset": "tinystories",
+      "arm": "reuse",
+      "repeat": 0,
+      "peak_mib": 300.00146484375,
+      "reserved_mib": 370.0,
+      "event_ms": 80.99507141113281,
+      "wall_ms": 81.04289999755565,
+      "nll": 2.627681863551237,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0025657044289986,
+      "telemetry_samples": 8,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2280.0,
+          "median": 2310.0,
+          "max": 2340.0
+        },
+        "power_w": {
+          "min": 95.12,
+          "median": 95.27,
+          "max": 97.23
+        },
+        "temperature_c": {
+          "min": 80.0,
+          "median": 83.0,
+          "max": 84.0
+        }
+      }
+    },
+    {
+      "index": 7,
+      "dataset": "tinystories",
+      "arm": "ordinary",
+      "repeat": 0,
+      "peak_mib": 400.2197265625,
+      "reserved_mib": 474.0,
+      "event_ms": 69.07064056396484,
+      "wall_ms": 69.11835000209976,
+      "nll": 2.6276839849900226,
+      "host_mib": 1.239776611328125e-05,
+      "stability": 1.0062852726436662,
+      "telemetry_samples": 7,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2205.0,
+          "median": 2250.0,
+          "max": 2430.0
+        },
+        "power_w": {
+          "min": 101.14,
+          "median": 105.24,
+          "max": 119.47
+        },
+        "temperature_c": {
+          "min": 82.0,
+          "median": 83.0,
+          "max": 85.0
+        }
+      }
+    },
+    {
+      "index": 8,
+      "dataset": "tinystories",
+      "arm": "native",
+      "repeat": 0,
+      "peak_mib": 351.9697265625,
+      "reserved_mib": 434.0,
+      "event_ms": 86.80615997314453,
+      "wall_ms": 86.85404999960156,
+      "nll": 2.627681863551237,
+      "host_mib": 64.00001239776611,
+      "stability": 1.1199638256560385,
+      "telemetry_samples": 9,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2400.0,
+          "median": 2445.0,
+          "max": 2490.0
+        },
+        "power_w": {
+          "min": 68.88,
+          "median": 92.71,
+          "max": 112.39
+        },
+        "temperature_c": {
+          "min": 77.0,
+          "median": 83.0,
+          "max": 84.0
+        }
+      }
+    },
+    {
+      "index": 9,
+      "dataset": "tinystories",
+      "arm": "native",
+      "repeat": 1,
+      "peak_mib": 351.9697265625,
+      "reserved_mib": 434.0,
+      "event_ms": 80.0026741027832,
+      "wall_ms": 80.0471499987907,
+      "nll": 2.627681863551237,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0020465481360468,
+      "telemetry_samples": 9,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2340.0,
+          "median": 2355.0,
+          "max": 2490.0
+        },
+        "power_w": {
+          "min": 43.28,
+          "median": 80.5,
+          "max": 110.75
+        },
+        "temperature_c": {
+          "min": 78.0,
+          "median": 83.0,
+          "max": 86.0
+        }
+      }
+    },
+    {
+      "index": 10,
+      "dataset": "tinystories",
+      "arm": "ordinary",
+      "repeat": 1,
+      "peak_mib": 400.2197265625,
+      "reserved_mib": 474.0,
+      "event_ms": 68.197021484375,
+      "wall_ms": 68.24039999810338,
+      "nll": 2.6276944851388735,
+      "host_mib": 1.239776611328125e-05,
+      "stability": 1.0009401353864351,
+      "telemetry_samples": 7,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2295.0,
+          "median": 2370.0,
+          "max": 2385.0
+        },
+        "power_w": {
+          "min": 97.04,
+          "median": 102.66,
+          "max": 104.67
+        },
+        "temperature_c": {
+          "min": 84.0,
+          "median": 84.0,
+          "max": 86.0
+        }
+      }
+    },
+    {
+      "index": 11,
+      "dataset": "tinystories",
+      "arm": "reuse",
+      "repeat": 1,
+      "peak_mib": 300.00146484375,
+      "reserved_mib": 370.0,
+      "event_ms": 79.00468826293945,
+      "wall_ms": 79.04840000264812,
+      "nll": 2.627681863551237,
+      "host_mib": 64.00001239776611,
+      "stability": 1.0012163987552143,
+      "telemetry_samples": 8,
+      "telemetry": {
+        "sm_mhz": {
+          "min": 2370.0,
+          "median": 2415.0,
+          "max": 2445.0
+        },
+        "power_w": {
+          "min": 96.66,
+          "median": 102.68,
+          "max": 104.27
+        },
+        "temperature_c": {
+          "min": 84.0,
+          "median": 85.0,
+          "max": 86.0
+        }
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "dataset": "wikitext2",
+      "repeat": 0,
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.7533992947296965,
+        "event_ms": 1.1582010052932685,
+        "wall_ms": 1.1581471851517373,
+        "nll": 0.999998488182775
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": false,
+        "wall": false,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": false
+    },
+    {
+      "dataset": "wikitext2",
+      "repeat": 0,
+      "control": "native",
+      "ratios": {
+        "peak_mib": 0.8548976194598692,
+        "event_ms": 0.9961366199143643,
+        "wall_ms": 0.9961984011014501,
+        "nll": 1.0
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": true
+    },
+    {
+      "dataset": "wikitext2",
+      "repeat": 1,
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.7533992947296965,
+        "event_ms": 1.164826118573952,
+        "wall_ms": 1.1646979479122719,
+        "nll": 0.9999996248663909
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": false,
+        "wall": false,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": false
+    },
+    {
+      "dataset": "wikitext2",
+      "repeat": 1,
+      "control": "native",
+      "ratios": {
+        "peak_mib": 0.8548976194598692,
+        "event_ms": 0.9995354450359676,
+        "wall_ms": 0.9994175472035643,
+        "nll": 1.0
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": true
+    },
+    {
+      "dataset": "tinystories",
+      "repeat": 0,
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.7495918989812725,
+        "event_ms": 1.1726410925076771,
+        "wall_ms": 1.17252364958211,
+        "nll": 0.9999991926583266
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": false,
+        "wall": false,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": false
+    },
+    {
+      "dataset": "tinystories",
+      "repeat": 0,
+      "control": "native",
+      "ratios": {
+        "peak_mib": 0.8523501943582017,
+        "event_ms": 0.9330567258843208,
+        "wall_ms": 0.9330929300122152,
+        "nll": 1.0
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": true
+    },
+    {
+      "dataset": "tinystories",
+      "repeat": 1,
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.7495918989812725,
+        "event_ms": 1.1584771085793044,
+        "wall_ms": 1.158381252232477,
+        "nll": 0.9999951967065777
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": false,
+        "wall": false,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": false
+    },
+    {
+      "dataset": "tinystories",
+      "repeat": 1,
+      "control": "native",
+      "ratios": {
+        "peak_mib": 0.8523501943582017,
+        "event_ms": 0.9875255939750015,
+        "wall_ms": 0.9875229786924623,
+        "nll": 1.0
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "audit_passed": true,
+  "training_updates": 360,
+  "backwards": 360,
+  "training_targets": 1474560,
+  "broad_goal_achieved": false
+}

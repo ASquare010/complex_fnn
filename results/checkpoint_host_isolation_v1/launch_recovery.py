@@ -1,0 +1,38 @@
+"""Isolated UV stages for the documented startup recovery."""
+
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path("results/checkpoint_host_isolation_v1")
+PYTHON = "C:/Users/Cuebric/AppData/Roaming/uv/python/cpython-3.12.9-windows-x86_64-none/python.exe"
+stage = sys.argv[1]
+env = os.environ.copy()
+env.update(
+    PYTHONPATH=str(Path.cwd()) + os.pathsep + str(Path.cwd() / ".venv/Lib/site-packages"),
+    PYTHONMALLOC="pymalloc",
+    PYTHONHASHSEED="107",
+)
+env.pop("CUBLAS_WORKSPACE_CONFIG", None)
+args = ["audit"] if stage == "audit_recovery" else []
+with (ROOT / (stage + ".log")).open("x") as log:
+    code = subprocess.run(
+        [
+            PYTHON,
+            "-B",
+            "-X",
+            "pycache_prefix=" + str(ROOT.resolve() / "unused_cache"),
+            "-X",
+            "faulthandler",
+            "-u",
+            "-m",
+            "results.checkpoint_host_isolation_v1." + stage,
+            *args,
+        ],
+        env=env,
+        stdout=log,
+        stderr=subprocess.STDOUT,
+    ).returncode
+(ROOT / (stage + "_exit.txt")).write_text(str(code))
+raise SystemExit(code)

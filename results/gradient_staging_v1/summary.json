@@ -1,0 +1,40 @@
+{
+  "comparisons": [
+    {
+      "dataset": "wikitext2",
+      "resident_mib": 281.14990234375,
+      "staged_mib": 254.5517578125,
+      "memory_ratio": 0.9053951493152945,
+      "event_ratio": 1.1134423205209818,
+      "wall_ratio": 1.1018903826412756,
+      "host_mib": 112.03375625610352,
+      "gates": {
+        "memory": false,
+        "event_time": true,
+        "wall_time": true,
+        "host_memory": true
+      },
+      "passed": false
+    },
+    {
+      "dataset": "tinystories",
+      "resident_mib": 275.9013671875,
+      "staged_mib": 248.37255859375,
+      "memory_ratio": 0.9002222827875961,
+      "event_ratio": 1.1304697688938439,
+      "wall_ratio": 1.1194332684799102,
+      "host_mib": 112.03375625610352,
+      "gates": {
+        "memory": false,
+        "event_time": true,
+        "wall_time": true,
+        "host_memory": true
+      },
+      "passed": false
+    }
+  ],
+  "passed": false,
+  "backwards": 42,
+  "training_updates": 0,
+  "broad_goal_achieved": false
+}

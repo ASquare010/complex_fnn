@@ -1,0 +1,20 @@
+{
+  "raw": {
+    "seconds": 0.3154540000000452,
+    "peak_cuda_bytes": 32260096,
+    "matrix_sha256": "774a479806fee411868eb709d2fdda2db9f1638f539a5bd3daf337cb6ace2c33",
+    "basis_sha256": "0ed2c54f046e77cff9d317cd75f7f1bba7e345b4248f511192c967f3ff37eea7",
+    "training_label_rows": 65536,
+    "input_sha256": "78d66cf31af1c41cb4eb6d69cf95d32a38b8b4a694bf72157df5564232dfc43a",
+    "label_sha256": "64a056aaec3b2738012fba68f20859080b790d73cb5bd4148d0a5b5e87e00e01"
+  },
+  "bounded": {
+    "seconds": 0.2528948000000355,
+    "peak_cuda_bytes": 32260096,
+    "matrix_sha256": "c570ce326e83cea079d01da0a35c0bbeecfa5553f70483710ee9e6f2fed34967",
+    "basis_sha256": "864a9ee2d9387df916ddd1f34af1729b85132e1b55950bc2c8d5d0f00fb02b3b",
+    "training_label_rows": 65536,
+    "input_sha256": "78d66cf31af1c41cb4eb6d69cf95d32a38b8b4a694bf72157df5564232dfc43a",
+    "label_sha256": "64a056aaec3b2738012fba68f20859080b790d73cb5bd4148d0a5b5e87e00e01"
+  }
+}

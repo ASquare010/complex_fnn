@@ -1,0 +1,95 @@
+{
+  "status": "COMPLETE",
+  "strong_near_zero_amplification": true,
+  "all_numerical_gates_passed": false,
+  "cuda_numerical_gates_passed": true,
+  "cpu_numerical_gates_passed": false,
+  "cross_policy": {
+    "clipped_distance": {
+      "n": 9,
+      "min": 2.6840848291037386e-07,
+      "median": 2.687151940266035e-07,
+      "mean": 2.687322265375748e-07,
+      "max": 2.688937171197769e-07,
+      "sample_variance": 2.84949391276179e-20
+    },
+    "direction_distance": {
+      "n": 9,
+      "min": 1.6441733257675106e-05,
+      "median": 1.676855577067e-05,
+      "mean": 1.6793447038990634e-05,
+      "max": 1.7067031843711293e-05,
+      "sample_variance": 4.3634525053672246e-14
+    },
+    "amplification": {
+      "n": 9,
+      "min": 61.21424160076488,
+      "median": 62.36610330769913,
+      "mean": 62.49124092827507,
+      "max": 63.51346043358313,
+      "sample_variance": 0.5837706515627464
+    },
+    "near_zero_error_share": {
+      "n": 9,
+      "min": 0.9988804893714054,
+      "median": 0.9989137873274668,
+      "mean": 0.9989204892165022,
+      "max": 0.9989661945875116,
+      "sample_variance": 9.50638057076946e-10
+    },
+    "opposite_nonzero_signs": {
+      "n": 9,
+      "min": 3,
+      "median": 3,
+      "mean": 3,
+      "max": 3,
+      "sample_variance": 0
+    }
+  },
+  "conditioning": [
+    {
+      "epsilon": 1e-07,
+      "max_error_ratio": 0.3642096195442685,
+      "max_direction_distortion": 0.10793511297022979,
+      "passed": false
+    },
+    {
+      "epsilon": 1e-06,
+      "max_error_ratio": 0.13503397380792742,
+      "max_direction_distortion": 0.3276391546867938,
+      "passed": false
+    }
+  ],
+  "numerical_errors": {
+    "cpu": {
+      "clip_max": 6.872452125922981e-06,
+      "parameter_relative_max": 3.23227724408145e-08,
+      "parameter_absolute_max": 5.963130544905937e-08
+    },
+    "cuda": {
+      "clip_max": 3.00819763198066e-08,
+      "parameter_relative_max": 3.231221981589842e-08,
+      "parameter_absolute_max": 5.964742699759995e-08
+    }
+  },
+  "new_disposable_optimizer_steps": 12,
+  "original_stage_steps": 6,
+  "recovery_steps": 6,
+  "language_training_updates": 0,
+  "forwards": 0,
+  "backwards": 0,
+  "validation_scores": 0,
+  "distinct_training_seeds": 1,
+  "selected_failure_diagnosis": true,
+  "frozen_sources": 145,
+  "maintained_files": 61,
+  "tensor_artifacts": 24,
+  "cuda_memory_intervals": 24,
+  "cuda_zero_boundaries": 7,
+  "original_stage_failed": true,
+  "original_stage_wall_seconds": null,
+  "recovery_wall_seconds": 8.380090399998153,
+  "original_gate_requalified": false,
+  "changed_recipe_promoted": false,
+  "broad_goal_achieved": false
+}
