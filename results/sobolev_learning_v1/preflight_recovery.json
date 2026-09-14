@@ -1,0 +1,11 @@
+{
+  "before": {
+    "results\\sobolev_learning_v1\\preflight_failure\\study.py": "cb52116caf6356d9bc03d21f80223eacec10d7c9869f31e026f41df6a9fe8d69",
+    "results\\sobolev_learning_v1\\study.log": "efd6088e2f3309927c4ec2dcde82d7c648a691fe0e111042ad52193f8b0e95af",
+    "results\\sobolev_learning_v1\\study_exit.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "results\\sobolev_learning_v1\\failure.json": "6fb1126ec4b28f5f783c7606624ec4bde98189e076d694d9e7f0f349b9d86bb1"
+  },
+  "neural_updates_before_failure": 0,
+  "protocol_written_before_failure": false,
+  "change": "Wrap string paths in pathlib.Path before calling maintained sha256"
+}

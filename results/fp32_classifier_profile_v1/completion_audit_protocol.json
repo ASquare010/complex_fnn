@@ -1,0 +1,15 @@
+{
+  "files": {
+    "results/fp32_classifier_profile_v1/source/completion_audit.py": "d3796de8c94ab0bd3d68646c46c22e5c696f662939353968b03d26294a809f8e",
+    "results/fp32_classifier_profile_v1/source/prepare_completion_audit.py": "34e13e2c97124c651ce8d9686f87aba504b9b8f40c25266b4bcadf1d7fd873a5",
+    "results/fp32_classifier_profile_v1/audit_recovery_protocol.json": "ac6bb73a415e6a4223613bcf77fd8c2f1c417ace30b983f5771c3f005d4c1d0b",
+    "results/fp32_classifier_profile_v1/audit_recovery_failure.json": "f5bdc05103b2d59c30a3248ea4cd07a1c2b175f25951c45f977928f1c052564a",
+    "results/fp32_classifier_profile_v1/audit_recovery.log": "1a92635e6221df564abfcdd3ef5c627485f82f60654a8b4d8b8c60d244e9592b",
+    "results/fp32_classifier_profile_v1/audit_recovery_exit.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "research/fp32_classifier_profile_completion_audit.md": "6a5b88021e1edb10d24fc339189caefa1f202e1cc7b4c98f71006ee04079e5ec"
+  },
+  "optimizer_updates": 0,
+  "backward_passes": 0,
+  "full_gradient_replay_qualified": false,
+  "no_further_tolerance_relaxation": true
+}

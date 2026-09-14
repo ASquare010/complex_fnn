@@ -1,0 +1,45 @@
+{
+  "study": "H164",
+  "created_ns": 1789333508603433500,
+  "tasks": [
+    "teacher",
+    "product"
+  ],
+  "seeds": [
+    431,
+    443,
+    457
+  ],
+  "arms": [
+    "wide",
+    "narrow33",
+    "narrow40",
+    "narrow27",
+    "blockshuffle",
+    "greedy",
+    "balanced"
+  ],
+  "rates": [
+    0.001,
+    0.003
+  ],
+  "steps": 600,
+  "hashes": {
+    "results/btt_balance_v1/audit.py": "efe2d751defa2311c82bf54ce1788b4bd6c050237bfcc0f696e492d694a47e63",
+    "results/btt_balance_v1/check.py": "7fa6bbc51047d5e3be0c63b12d3bb4cc9dced92167236f52b23b6dce05c5c138",
+    "results/btt_balance_v1/model.py": "22750175264cfbd92f51a5dd95b5431508f10ca039de11b5b8d18bfd0b575822",
+    "results/btt_balance_v1/study.py": "c39da164fd987ce24d95713ace1613640e39a405e9118ffada3291a8136c2f3b",
+    "results/btt_balance_v1/data_product_431.pt": "3f427830fc0752dbba4dc9b7457f71663d2be1bcd70a6be030fb784c7a7dc9ad",
+    "results/btt_balance_v1/data_product_443.pt": "07eb91fed7d27b6a22af97bd2e2220620706be3b6ac02ff0451f8d9c5bf16446",
+    "results/btt_balance_v1/data_product_457.pt": "c42e2351ace7d6558e214ff1eb9a44354dd7c2556c03d8597228728159ab019a",
+    "results/btt_balance_v1/data_teacher_431.pt": "fc747b995fb820605ba68cc8866f9a740f0ab104a8271505cc3a868f3cc86e4d",
+    "results/btt_balance_v1/data_teacher_443.pt": "5153f0de389704f8313e087b249c008faa28c33d2b5437f10fa9c1b09bcfb233",
+    "results/btt_balance_v1/data_teacher_457.pt": "37023f03938cfed736d3b1f5479decce5f2f62a51b047ee72d0390e618155c0d",
+    "results/btt_balance_v1/check.json": "a824f4f97d88c1f0ab9eb7fe4502a4ccb07e7d2e03d52c9cb6636ebc66bf3441",
+    "research/btt_balance_plan.md": "6f3ae03200efd0bc3f4db42341f1a7a7d81097cb5b6ca38c25827e9216cced59",
+    "src/blockshuffle_ffn/__init__.py": "d494c95de6fb04a5c229ffcbf31b3a340afe0807079ae0b8053e80645f9cea15",
+    "src/core/structured_linear.py": "cbbba4672e9740dc5d8a98726e9e2cf996169298b12fc7b74f36d4c45abbf389",
+    "research/references/btt_official/nn_cola_nn.py.txt": "9cbaa00bae1a8f9c6b38794e924fdd3ce5f6af623f3e7d27f5af842c46c74f3f",
+    "research/references/btt_official/ops_operators.py.txt": "d6d878a08e25f7edd72d4cc8bc1bba4936fdfe0683aefe877e116b76ea9021d5"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "meaning": "Evidence integrity passes; native loss qualifies locally, chunked loss fails fixed memory gate",
+  "all_numerical_audits_passed": true,
+  "component_gate_qualified": false,
+  "training_updates": 0,
+  "backwards": 262,
+  "diagnostic_targets": 1048576,
+  "validation_scores": 0,
+  "tensor_artifacts": 24,
+  "phase_records": 824,
+  "zero_gpu_boundaries": 21,
+  "source_hashes_verified": 162,
+  "maintained_hashes_verified": 61,
+  "failed_pre_execution_imports": 1,
+  "repeated_completed_scientific_cases": 0,
+  "broad_goal_achieved": false,
+  "files": {
+    "results/checkpoint_input_offload_v1/source/analyze.py": "c1898d4f50659774cdfa797750a425d003f92b0ddf14ccffaa8d3ab5b583e3ac",
+    "results/checkpoint_input_offload_v1/source/audit.py": "3c250675a3e788f577261d589b2ed8a7fea26bcec2d6323df8639b68bdb8322a",
+    "results/checkpoint_input_offload_v1/source/audit_recovery.py": "c7a723b57b3fb11b1f94b6341fea8118bd3e3d2d29a94370fcd8d6a1e98a89ba",
+    "results/checkpoint_input_offload_v1/source/common.py": "81b3d92342570ad7e1923b34de35cd26b84ff6a6dd7bd99287b24a9ba4616fe8",
+    "results/checkpoint_input_offload_v1/source/launch.py": "842085e95520ccabc1bcefe732ef785d9ea9f81ab67ed4bb4f68901c96f7e78c",
+    "results/checkpoint_input_offload_v1/source/offload.py": "77fe0514e9a2cf6c9b80e54d39bcef3849fafa8b2a62b23abc71feb1b2a21367",
+    "results/checkpoint_input_offload_v1/source/plot.py": "7cbe98fb1eec4d81dcc63ab575631718601e885534d6f72d0b53dab06d56c64c",
+    "results/checkpoint_input_offload_v1/source/prepare.py": "5db7293c88945223f793af8c84818bea1292856a46a2fcb8382d329b7dce7ca4",
+    "results/checkpoint_input_offload_v1/source/prepare_audit.py": "55bac44144472b220911d80ee1e3fa74a6a849348d24c0352c285046805a36de",
+    "results/checkpoint_input_offload_v1/source/prepare_recovery.py": "aec1279809dda1faf8fb951ae3ff1df9689d4b6d484b6baee7b3383b69a6abf7",
+    "results/checkpoint_input_offload_v1/source/profile.py": "dd375c5cec7d8ef4da47c05d5fe248ca907bb01c19580558d3f09f6e7e38ded4",
+    "results/checkpoint_input_offload_v1/source/publish.py": "677737d44c17d490cf9a834f6453b724abec6ba2b86860867b5e23a9edb45913",
+    "results/checkpoint_input_offload_v1/source/qualify.py": "3aa206a59950e8ce5f1bd4db05ca404d1a299bf7f2e4ba897c05ecd75952b748",
+    "results/checkpoint_input_offload_v1/source/README.md": "ee3eddd84f74a9ebed642c7b12489abfc7ff2584c29068ef0ec2ba6d6fccada1",
+    "results/checkpoint_input_offload_v1/source/report.py": "e2628fffb502554a2da6ba6b1da5ca0fe462071a86f5dd47e59738a0d2550a6e",
+    "results/checkpoint_input_offload_v1/analyze_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/checkpoint_input_offload_v1/audit_exit.txt": "5205fef41c0db63d59104e9f7f636e546fddc5ec46e07a509335cf0fe255b877",
+    "results/checkpoint_input_offload_v1/audit_recovery_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/checkpoint_input_offload_v1/plot_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/checkpoint_input_offload_v1/prepare_audit_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/checkpoint_input_offload_v1/prepare_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/checkpoint_input_offload_v1/prepare_recovery_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/checkpoint_input_offload_v1/profile_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/checkpoint_input_offload_v1/publish_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/checkpoint_input_offload_v1/qualify_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/checkpoint_input_offload_v1/report_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/verification/checkpoint_input_offload_final_v1.py": "f5fe9f899d0ef5dad7c658eb878ffa0cb51f2a9f4e9a0eb80d950958258a3f8c",
+    "results/checkpoint_input_offload_v1/protocol.json": "d7622cc6e283dca84e023152d588f8109c74378edaebf38e936a184e53e758d4",
+    "results/checkpoint_input_offload_v1/audit_protocol.json": "6a0553da8cc5a16ecd435342e8615ff432cceb0e3cbd4eded567dd4bfedc999a",
+    "results/checkpoint_input_offload_v1/recovery_protocol.json": "6696d8504cb8c0778c70810b6e0f6c719366fa72ef9f54e54b4df5da3dbea448",
+    "results/checkpoint_input_offload_v1/summary.json": "10c1a986fd195f37b8fe5a3f829cc38c7bd679c4e1577acc0e5a9c8216bbfdd5",
+    "results/checkpoint_input_offload_v1/environment.json": "fedfbf4cc42974be9a96b8106f246a738495d14680f85b17c334aeb19fa4fdc3",
+    "README.md": "d9208efcd5c90d4a0596f91488d154bae1fb854516c32fc63adc4bb091ca6d5a",
+    "research/CURRENT_STATE.md": "a039078ab224b1ce87990ce36de7fa78afee1854f4bc57980ac046316f894c9b",
+    "research/PROGRESS_OVERVIEW.md": "d2707b162beebaf99e9e456257561cd75079da9f707dcfdc502a714d1a42a2a1",
+    "research/idea_bank.md": "887eb6f0e24c3d13e1ba0b89949ea1c59d8939a65e8c8d62efdd6a2a0f51998c",
+    "research/ARTIFACTS.md": "73bd94b82ec98a9383fcb95bf0cee08af8807f9e95cb50ab503f5bca2267c511",
+    "research/literature.md": "4f903b7ee6cacc3d701daebdfacaf31b8c8dd3fa254d113eaddb3e079b397d35",
+    ".gitignore": "0560367cfb7a55ef61e75c02af3e21cde2d34c487fa109f1d63c96fe52dbeaef",
+    "research/checkpoint_input_offload_plan.md": "a17f361be9494f0029c63efb8541eb64ecca4caf251deebe1569e3f051ac9ef8",
+    "research/checkpoint_input_offload_audit_recovery.md": "b2c19dac75d43b9907ecaebe5692c18899dfb2fc61d1d7f64f24dc023e3060cc",
+    "research/checkpoint_input_offload_results.md": "5e3fa6671bf82e17e821b34ec0c08637f5ff18df2984c489da3f076e200555f5",
+    "research/figures/checkpoint_input_offload.png": "1310362f4fb4a65111472dcb9f0635acdf961042798c043511a55bc107c4a3f6"
+  },
+  "tensor_hashes": {
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_native__native/untraced.pt": "5037e84bede5444c9416b4b1c23fcc7ea4dc5a57d3a0bd5e3d4210cde342a29a",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_native__native/traced.pt": "32f2cdb53e5febe9155ff5e6afc9a9833865a8ab69cda004954f06de3c980f90",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_native__native/replay.pt": "dca6acec18acf53156d7b69800aef0a4f7a1513691e01b1fe88ec98e10126cff",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_native__offload/untraced.pt": "804bed0bde44999594242aad56570726fb9d7be40633030e1e43669643449b42",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_native__offload/traced.pt": "32f2cdb53e5febe9155ff5e6afc9a9833865a8ab69cda004954f06de3c980f90",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_native__offload/replay.pt": "4f4faa2d8aefe4915cada962a2a07637a604eeb6605a273ffbcb95f2926b6a98",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_chunks__offload/untraced.pt": "13f6ed9b83711074d414188a11573e498cfd04a8587ecd531e7b51aea2ed06de",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_chunks__offload/traced.pt": "864ad581950323b39c15a97cda09bc2edd7dc3a1f4e4dcb56d72003addcec835",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_chunks__offload/replay.pt": "1625abc2ed25713aec99077c6971234e023054a465a73e2b562d9ee13cf40b60",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_chunks__native/untraced.pt": "13f6ed9b83711074d414188a11573e498cfd04a8587ecd531e7b51aea2ed06de",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_chunks__native/traced.pt": "6005617f7c3f180030a58886ded4f46ffac04cca96ca10f09c8b6f780ca0b67f",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_chunks__native/replay.pt": "8ad6e725962638177f142039880f7dae4e2dd0bfac5b5d8e6e53f6e3ac6e1533",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_native__native/untraced.pt": "c1711c24c762c8885b9a06e3ca3ff9a5fd080e7bb57673a6e90fd90918cafc14",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_native__native/traced.pt": "80aee2fe46ffe2cd04d0c67b1f5841a6bcae35ba72818ac92b7dc8e02e571a5b",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_native__native/replay.pt": "95ce77714b4577a8fd2ce1d8b567f1625e4c26edc04945fd54b45b3b6a346b15",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_native__offload/untraced.pt": "3637a74b5fb829e99a3d2d20c0dab5226d80bf4ee551dd88efd4041559394669",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_native__offload/traced.pt": "e61f6d0c9e499fd56bd27e6557440eab5b65fb7a90cb85790010a86794db488d",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_native__offload/replay.pt": "eef5ca081c9e90c84aed1b60a72c8ae3a7085848b283337ffad4fe5b3ca1d97c",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_chunks__offload/untraced.pt": "8998e61aebcd3272c26b3096e0c2425e466c7e10200939ad2e569206788a0aea",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_chunks__offload/traced.pt": "e3b5b51e2cbc25a98a6a15937297d3fbf3fc111338e13ee45f1269955aa10e4c",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_chunks__offload/replay.pt": "d7fc41d6092b907e346a6119b3b06e28b3f3b66718f2968dd0cf51a265ae3fc1",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_chunks__native/untraced.pt": "4c8d1694a711737b8fd04b8376b79102e10ad9127cfdfe71a70c87081698a05f",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_chunks__native/traced.pt": "65747ed4ee215a6fc624395000f2ed0d8a0e7a4b39b1466035ce00682050cbc5",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_chunks__native/replay.pt": "c4ff32154540c27c590b859b84de08d5df9f7a6837c5490bc90187cd84b36941"
+  },
+  "local_metric_hashes": {
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_native__native/result.json": "0c30940778a782e5926ba0e04f94869838f777dfe01308e5dbc2b34cc5080cf3",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_native__native/replay.json": "013a2db75103f674301c8a2da05e388a9e0adb7462a05951de3ff7a742fae7d2",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_native__offload/result.json": "0af9f6cf568fe1ab86bb4677768da56a103f0e88e7d74ece582ad68ba4355243",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_native__offload/replay.json": "bc75232805852a07a84d64ed727e0df2e58eb6fea7119a8e551c0f87dd45ab44",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_chunks__offload/result.json": "64172f53e95e582f40c732ae65c7e3ed9a4ce452d9816ba0a4068ccbfd445027",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_chunks__offload/replay.json": "608ec1032a0b4735669d0fb3dfa4ba2a288a4aa40e14781c02f18ec69c957da9",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_chunks__native/result.json": "72d6f125e5691679e3435fbb8820f7289f7d9f84442e8abc6095fc6ac3b5662b",
+    "results/checkpoint_input_offload_v1/runs/wikitext2__fp32_default_chunks__native/replay.json": "554440c7ec1890b4704062956c465794725ea91d6da67c7d56fd2a09e4dacc26",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_native__native/result.json": "3ff9c4dec8fb2facc2913eebcd7658fad8eea08282580e8cd12deedc8c2049e7",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_native__native/replay.json": "e49218c62cbff0ad74d3f9273f5dee713262b9b616c1df294ffdb4b103d13a31",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_native__offload/result.json": "0e48a021f6865e4c1f6971dbffc67ea304205c6609fbb0569ab4f5477892d52b",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_native__offload/replay.json": "741a7fa066e53d46987f76731d4de89debd2662414fab5d8851d10aeb398986c",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_chunks__offload/result.json": "2c84909688b15d2091b648a125f941662ddf095043df3383495cc8e98a0050e2",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_chunks__offload/replay.json": "9f979a1112e47a7db46fbbf9b598a89b1e1242359a1d9fef603e6dd887c1cf3f",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_chunks__native/result.json": "1842e6cf357fcfca175b39734005b75845faf0cd75b714a8467edbfefe08eef2",
+    "results/checkpoint_input_offload_v1/runs/tinystories__fp32_default_chunks__native/replay.json": "f14be1d2fd3157ef4e94ad4203eda6a76b712d3365c2e69b8176d7d6f4744a94",
+    "results/checkpoint_input_offload_v1/result.json": "af933e3437d4b4caf1a584fa1f82dcd190008f2383b1165876f2bd9e9b7deb22",
+    "results/checkpoint_input_offload_v1/audit.json": "ca61796e4306c95315f00454c308be03f07c1da7929d02b8597f20a64e5624c0",
+    "results/checkpoint_input_offload_v1/qualification.json": "74f5bd20296135c9c7255763b004ee955479f231d83763e452d5e05573872fb9",
+    "results/checkpoint_input_offload_v1/qualification_progress.json": "7a1415db7e0c2179855c8d0c5664d72420714a8fa32e45c8301670cf314f2dfc"
+  },
+  "packed": {
+    "results/checkpoint_input_offload_v1/analyze.log.gz": {
+      "sha256": "8eb57a9d8d81450ff4f328d00a5cafd6b50a59a5daf11fa69d5621905919d9cd",
+      "unpacked_bytes": 6726
+    },
+    "results/checkpoint_input_offload_v1/audit.json.gz": {
+      "sha256": "2bb66466299914d685dcccdf50b30c20c321ff56613418a3a79e8a123ece98dc",
+      "unpacked_bytes": 53592
+    },
+    "results/checkpoint_input_offload_v1/audit.log.gz": {
+      "sha256": "b7106a447bfd46fc9f96f76f7169b93ef6d984d723aa004079aa67224a343ec7",
+      "unpacked_bytes": 6335
+    },
+    "results/checkpoint_input_offload_v1/audit_recovery.log.gz": {
+      "sha256": "8fbc6592b7400f1ab86014e86d2a96b737ede60f06cb74e1eab7ba66800fc9bf",
+      "unpacked_bytes": 599
+    },
+    "results/checkpoint_input_offload_v1/metrics.csv.gz": {
+      "sha256": "70d1f788b2a15cefc6942a96006ba68c33b3c78c56b1808ee03817dc901a8976",
+      "unpacked_bytes": 1760
+    },
+    "results/checkpoint_input_offload_v1/phases.csv.gz": {
+      "sha256": "d2b55d183fce855954c8e746d78f3e534d51b216314043728bc5712c11182a29",
+      "unpacked_bytes": 168003
+    },
+    "results/checkpoint_input_offload_v1/plot.log.gz": {
+      "sha256": "27acd8504647093471fae904266b21cc46492050a185cd97294209842943539c",
+      "unpacked_bytes": 47
+    },
+    "results/checkpoint_input_offload_v1/prepare.log.gz": {
+      "sha256": "367c25097e71e2801060389198358a36a1747692bfdaf033a346dafc18a01403",
+      "unpacked_bytes": 71
+    },
+    "results/checkpoint_input_offload_v1/prepare_audit.log.gz": {
+      "sha256": "7a09b94d40d5e3a8ab77795adab08fa9ecf66e66e7956d81ad7623311cec8e45",
+      "unpacked_bytes": 74
+    },
+    "results/checkpoint_input_offload_v1/prepare_recovery.log.gz": {
+      "sha256": "27512172354c585f0b6b75ef750a893f985073097de7b9ed675fa728f23f8f04",
+      "unpacked_bytes": 72
+    },
+    "results/checkpoint_input_offload_v1/profile.log.gz": {
+      "sha256": "aecafcd7bcb28ac6f15c7cfd0089507d0d334cb23df8b7738620ca72c12c3f72",
+      "unpacked_bytes": 548
+    },
+    "results/checkpoint_input_offload_v1/publish.log.gz": {
+      "sha256": "b806db0c7e0d20f240e8c2b3fe64e6a3fc7646d2b61b51e51f16f0b367816dbb",
+      "unpacked_bytes": 58
+    },
+    "results/checkpoint_input_offload_v1/qualification.json.gz": {
+      "sha256": "c2d50baad2fd3f189fd1e26d9dbdd2b3ee2817f83a7f80a341ded66706f88c3e",
+      "unpacked_bytes": 3561
+    },
+    "results/checkpoint_input_offload_v1/qualify.log.gz": {
+      "sha256": "6e8a798d09dae8eb009888f4931e63efa3b6115436f081069e0de65d4d3aa13a",
+      "unpacked_bytes": 69
+    },
+    "results/checkpoint_input_offload_v1/repetitions.csv.gz": {
+      "sha256": "086217371f7cae4ef14fe32cc338538ed2c707f2a6e175450f132c97c226d641",
+      "unpacked_bytes": 32035
+    },
+    "results/checkpoint_input_offload_v1/report.log.gz": {
+      "sha256": "cc04c2a13c8de90b9315c994152b95bd0e9538a8e4259efaada9e8c297d0bf62",
+      "unpacked_bytes": 358
+    },
+    "results/checkpoint_input_offload_v1/result.json.gz": {
+      "sha256": "bd37fe816b0548bd382f6c448945cea74b29b6df0d3b1980e18e29faec5fb94d",
+      "unpacked_bytes": 981103
+    }
+  }
+}

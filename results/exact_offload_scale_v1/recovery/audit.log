@@ -1,0 +1,7 @@
+audited {'index': 0, 'seed': 401, 'arm': 'ordinary'}
+audited {'index': 1, 'seed': 401, 'arm': 'helper'}
+audited {'index': 2, 'seed': 409, 'arm': 'helper'}
+audited {'index': 3, 'seed': 409, 'arm': 'ordinary'}
+audited {'index': 4, 'seed': 419, 'arm': 'ordinary'}
+audited {'index': 5, 'seed': 419, 'arm': 'helper'}
+[{"seed": 401, "ratios": {"memory": 0.8190328378491728, "cuda": 1.0643476311294127, "wall": 1.0643088939097987, "nll": 1.0000002201985203}, "gates": {"memory": true, "cuda": true, "wall": true, "nll_smoke": true, "host": true, "stability": true, "gradient": true}, "passed": true}, {"seed": 409, "ratios": {"memory": 0.8190328378491728, "cuda": 1.0069274925178266, "wall": 1.0069363476133257, "nll": 0.9999812763016943}, "gates": {"memory": true, "cuda": true, "wall": true, "nll_smoke": true, "host": true, "stability": true, "gradient": true}, "passed": true}, {"seed": 419, "ratios": {"memory": 0.8190328378491728, "cuda": 1.044163837730267, "wall": 1.0441634932600177, "nll": 1.0000000017709638}, "gates": {"memory": true, "cuda": true, "wall": true, "nll_smoke": true, "host": true, "stability": true, "gradient": true}, "passed": true}]

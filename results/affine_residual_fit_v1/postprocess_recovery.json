@@ -1,0 +1,25 @@
+{
+  "completed": true,
+  "stages": {
+    "audit": {
+      "before_sha256": "337a14996fe30da7ebb2ba185098e50d6eff3bcd02f81397113cb6e0348490bf",
+      "completed_exit": 0,
+      "original_native_failure_exit": 3221225477
+    },
+    "plot": {
+      "before_sha256": "785238c372e55494397497316416ed48582f73d28c77aa3a37c22b47f236ba9c",
+      "completed_exit": 0,
+      "original_native_failure_exit": 3221225477
+    },
+    "diagnostics": {
+      "before_sha256": "b8a8acc7b46e3167958b110282285560a09e71a38124c38f56189825b087d524",
+      "completed_exit": 0
+    },
+    "tests": {
+      "before_sha256": "27c107a05352e57adeb3472fba01faa936653c752ad0ee9212fdbd0329d9c560",
+      "completed_exit": 0
+    }
+  },
+  "retrained": false,
+  "root_cause_proved": false
+}

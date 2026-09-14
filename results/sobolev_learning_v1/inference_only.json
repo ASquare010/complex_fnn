@@ -1,0 +1,1900 @@
+{
+  "posthoc": true,
+  "original_gates_unchanged": true,
+  "gradients_or_optimizers_in_process": false,
+  "neural_updates": 0,
+  "students": [
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s71/value_greedy/rate0.001.pt",
+        "sha256": "0dc9a1ecb3c15f5fb2ec1eaed3f7538e96034a8a1665c1e14e3cf0a907374067"
+      },
+      "inference_ms": 0.11119000000689994,
+      "inference_samples_ms": [
+        0.12424500000633998,
+        0.1097700000173063,
+        0.11119000000689994,
+        0.11177500000485452,
+        0.11091999995187507
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s71/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "9633b11d914721644b1dac00c2e7271fc847dd5215ea7e61537eb410e865c8cc"
+      },
+      "inference_ms": 0.045835000037186546,
+      "inference_samples_ms": [
+        0.06188500001371722,
+        0.045849999969505006,
+        0.045835000037186546,
+        0.045634999969479395,
+        0.045619999946211465
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s71/sobolev_greedy/rate0.001.pt",
+        "sha256": "89cab8e003733e9cb7eb94147663f7ca19678727d2460c9c70855d4710bb7a58"
+      },
+      "inference_ms": 0.0461399999949208,
+      "inference_samples_ms": [
+        0.054910000017116545,
+        0.04600000002028537,
+        0.047110000014072284,
+        0.04559499993774807,
+        0.0461399999949208
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s71/random/rate0.001.pt",
+        "sha256": "aaa9ce6808b63383f7d6f0a84b2c81c3994689ffdf085acd352a9cf28740922f"
+      },
+      "inference_ms": 0.046194999958970584,
+      "inference_samples_ms": [
+        0.058799999987968476,
+        0.046194999958970584,
+        0.045715000032942044,
+        0.04562499998428393,
+        0.04700999998021871
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s71/value_greedy/rate0.001.pt",
+        "sha256": "ef9170632061d4fca685200e2b6a227b9078e0463929200e7a2b92d508f3fa61"
+      },
+      "inference_ms": 0.04616500000338419,
+      "inference_samples_ms": [
+        0.057035000008909265,
+        0.046645000020362204,
+        0.04616500000338419,
+        0.04601000000548083,
+        0.0461199999335804
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s71/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "684881fa4772728e6c4847573c1b2ef2cf7290ef845411e2a76cba23160fc4b0"
+      },
+      "inference_ms": 0.04735000002256129,
+      "inference_samples_ms": [
+        0.056005000078585,
+        0.04735000002256129,
+        0.04655499997170409,
+        0.04760000001624576,
+        0.04666999993787613
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s71/sobolev_greedy/rate0.001.pt",
+        "sha256": "54760b92b684c22c05150dafce4f50cda325fee08623b11358aa35022eb588b4"
+      },
+      "inference_ms": 0.04627500002243323,
+      "inference_samples_ms": [
+        0.06081500005166163,
+        0.04643499996745959,
+        0.04622999995262944,
+        0.046114999986457406,
+        0.04627500002243323
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s71/random/rate0.001.pt",
+        "sha256": "cc5bc8785dc2d396cc46294a48f3c840c0266871ad6496b50dcdec344feaff1a"
+      },
+      "inference_ms": 0.04621500002031098,
+      "inference_samples_ms": [
+        0.05641999996441882,
+        0.04630999992514262,
+        0.04621500002031098,
+        0.04617500007952913,
+        0.046145000032993266
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s71/value_greedy/rate0.001.pt",
+        "sha256": "9dcc81d97eed01316dfb692429397faafa3ad02ff3002c783f2526eecf29b55f"
+      },
+      "inference_ms": 0.045775000035064295,
+      "inference_samples_ms": [
+        0.05596000000878121,
+        0.046349999956873944,
+        0.045775000035064295,
+        0.0457500000266009,
+        0.04576500004986883
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s71/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "c50e1e61d44988aae195016a54bc67bbeebab02c7876a6dd8f28355776db939d"
+      },
+      "inference_ms": 0.04673000003094785,
+      "inference_samples_ms": [
+        0.7480000000214204,
+        0.04673000003094785,
+        0.04644999999072752,
+        0.04617000004145666,
+        0.05496499998116633
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s71/sobolev_greedy/rate0.001.pt",
+        "sha256": "5d960d35af4d227c9a7408fcea22a14839c37f701d507c036afc9800b7e4629c"
+      },
+      "inference_ms": 0.04621500002031098,
+      "inference_samples_ms": [
+        0.056799999947543256,
+        0.04621500002031098,
+        0.04581499997584615,
+        0.045694999971601646,
+        0.04629000004570116
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s71/random/rate0.001.pt",
+        "sha256": "65dd570ba7f2927874f359c4a619f05f26360bc2b4a8ef497556428b4efe95d1"
+      },
+      "inference_ms": 0.11143499996251194,
+      "inference_samples_ms": [
+        0.11707499998010462,
+        0.11143499996251194,
+        0.11273000000073807,
+        0.10696499994082842,
+        0.10985500002789195
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s83/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "9f68a31be168aff6ea5c7d5c4b80ac9e3141aee0ddfd4352ec774626c1e416d1"
+      },
+      "inference_ms": 0.04588000001604087,
+      "inference_samples_ms": [
+        0.05715500001315377,
+        0.04588000001604087,
+        0.045665000016015256,
+        0.045619999946211465,
+        0.0461199999335804
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s83/sobolev_greedy/rate0.001.pt",
+        "sha256": "2b5f7ac179abc6594474feb9f4178e07fca3a6a51d2c939b7542be3873f2a6e9"
+      },
+      "inference_ms": 0.04619999999704305,
+      "inference_samples_ms": [
+        0.05648500000461354,
+        0.04617499998857966,
+        0.045959999988554046,
+        0.04619999999704305,
+        0.04632000000128755
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s83/random/rate0.001.pt",
+        "sha256": "d809f547ec3e7590a0787254c25685a10a0b7c1eed3dc465e9218832e0dceb2c"
+      },
+      "inference_ms": 0.045944999965286115,
+      "inference_samples_ms": [
+        0.05913999993936159,
+        0.046440000005532056,
+        0.045944999965286115,
+        0.045835000037186546,
+        0.0457500000266009
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s83/value_greedy/rate0.001.pt",
+        "sha256": "114a4ed229dc952b0ceda92e9b3a431089431a0c631b5c9f31699e0f68dd9389"
+      },
+      "inference_ms": 0.04584500002238201,
+      "inference_samples_ms": [
+        0.05722500000047148,
+        0.046144999942043796,
+        0.04584500002238201,
+        0.045680000039283186,
+        0.04573999995045597
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s83/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "43fd496a7bdf909d19c37548ba8719d87fe6cdd66ef0f723c90cd40bd9e2a782"
+      },
+      "inference_ms": 0.04614999998011626,
+      "inference_samples_ms": [
+        0.05835499996464932,
+        0.04619999999704305,
+        0.04570999999486958,
+        0.04564500004562433,
+        0.04614999998011626
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s83/sobolev_greedy/rate0.001.pt",
+        "sha256": "72fd814aa0d2e33065670b3e1c1236c476587bf8f3152ef7271c4cad9cd762ae"
+      },
+      "inference_ms": 0.045930000032967655,
+      "inference_samples_ms": [
+        0.08078000000750762,
+        0.04638999998860527,
+        0.045930000032967655,
+        0.045649999992747325,
+        0.045790000058332225
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s83/random/rate0.001.pt",
+        "sha256": "40ae6a26d9eb912bd98fa28520eb87c34c12de94383c5f651869c9fb9153e4da"
+      },
+      "inference_ms": 0.046180000026652124,
+      "inference_samples_ms": [
+        0.06128000004537171,
+        0.04636000003301888,
+        0.046180000026652124,
+        0.04586499999277294,
+        0.045715000032942044
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s83/value_greedy/rate0.001.pt",
+        "sha256": "fe212679474c3902819cf5d050baf57696e5f69839510c2aac9fe33887a1a9e4"
+      },
+      "inference_ms": 0.04596500002662651,
+      "inference_samples_ms": [
+        0.05945000002611778,
+        0.04625000001396984,
+        0.04596500002662651,
+        0.045635000060428865,
+        0.0457500000266009
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s83/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "9415d765b1dfa53b6be3e49dca11f38df41acd81efccf4b0dc1954668bb7acad"
+      },
+      "inference_ms": 0.04590999997162726,
+      "inference_samples_ms": [
+        0.057484999979351414,
+        0.04702000005636364,
+        0.04590999997162726,
+        0.04586499999277294,
+        0.04590500002450426
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s83/sobolev_greedy/rate0.001.pt",
+        "sha256": "d54c474aa1046b37e4f41a0dab6efb715218e74d0454d0f7e85096eb9d2d7c07"
+      },
+      "inference_ms": 0.046349999956873944,
+      "inference_samples_ms": [
+        0.0596199999563396,
+        0.04661500006477581,
+        0.046349999956873944,
+        0.046285000007628696,
+        0.04632499994841055
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s83/random/rate0.001.pt",
+        "sha256": "8a3090cc56f9b2a1af463eb245b095169a20d93bb8b9d54c013a920771ec5932"
+      },
+      "inference_ms": 0.0460150000435533,
+      "inference_samples_ms": [
+        0.057639999977254774,
+        0.04641499999706866,
+        0.045929999942018185,
+        0.045789999967382755,
+        0.0460150000435533
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s83/value_greedy/rate0.001.pt",
+        "sha256": "1893d65f402f505c37b3c758c9683bedb10ff5356b71ca7f2ed471013188c612"
+      },
+      "inference_ms": 0.04630999992514262,
+      "inference_samples_ms": [
+        0.05907499999011634,
+        0.04630999992514262,
+        0.04610500000126194,
+        0.046424999982264126,
+        0.04617499998857966
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s97/sobolev_greedy/rate0.001.pt",
+        "sha256": "9f2178526edf7c540eb56e2fa21acbef42461eb0be8affefc15beaace5cf04fd"
+      },
+      "inference_ms": 0.04606499996953062,
+      "inference_samples_ms": [
+        0.05966000007902039,
+        0.04607999999279855,
+        0.045789999967382755,
+        0.046024999937799294,
+        0.04606499996953062
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s97/random/rate0.001.pt",
+        "sha256": "2cf942ca407861fbd94d9f733cc2abbd81bc0d054953b0659c7c6a941dbccd8f"
+      },
+      "inference_ms": 0.0460199999906763,
+      "inference_samples_ms": [
+        0.05890499996894505,
+        0.046070000007603085,
+        0.0460199999906763,
+        0.04591999995682272,
+        0.045989999944140436
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s97/value_greedy/rate0.001.pt",
+        "sha256": "9e6b7313cd641de6a00d65d4ce7668bccd807d57da54d0dbb1590b8c609399be"
+      },
+      "inference_ms": 0.04608999997799401,
+      "inference_samples_ms": [
+        0.10249000006297138,
+        0.07356000005529495,
+        0.04592499999489519,
+        0.04608999997799401,
+        0.04565999997794279
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l0_s97/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "022b7cc2f2004bce6692f4bb58391ab239cce3b9a1e85aca48bb9241bda13bd2"
+      },
+      "inference_ms": 0.04586499999277294,
+      "inference_samples_ms": [
+        0.05668499998137122,
+        0.04586499999277294,
+        0.045694999971601646,
+        0.04567500000121072,
+        0.04772499996761326
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s97/sobolev_greedy/rate0.001.pt",
+        "sha256": "5cc5b611c62804eb85c9098aa0e197df0a7d746a611ac1b6d4628660e9871226"
+      },
+      "inference_ms": 0.050209999972139485,
+      "inference_samples_ms": [
+        0.061345000085566426,
+        0.05102500008433708,
+        0.04750500002046465,
+        0.050209999972139485,
+        0.04726999995909864
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s97/random/rate0.001.pt",
+        "sha256": "309e023a41e045cb9ae3fce45dc028c4b256cc416dfb203c6aa4985454924e07"
+      },
+      "inference_ms": 0.13127499996699044,
+      "inference_samples_ms": [
+        0.16507499994986574,
+        0.14168499992592842,
+        0.13127499996699044,
+        0.12380999996821629,
+        0.11590000003707246
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s97/value_greedy/rate0.001.pt",
+        "sha256": "4e228ebddb4b2482cbfb0519a64a14b3372d3736781ef9e54fa7a86968ae4924"
+      },
+      "inference_ms": 0.04472999999052263,
+      "inference_samples_ms": [
+        0.05504000000655651,
+        0.04472999999052263,
+        0.04465000001800945,
+        0.044284999967203476,
+        0.04482499998630374
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l3_s97/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "6db53cd5e66713da1dfa58a3ae6f794bba85c8ef9e728534f65e0ef2c3381809"
+      },
+      "inference_ms": 0.04482000003918074,
+      "inference_samples_ms": [
+        0.05527000002985005,
+        0.04482000003918074,
+        0.04417000000103144,
+        0.044704999982059235,
+        0.16340000001946464
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s97/sobolev_greedy/rate0.001.pt",
+        "sha256": "60b5aea472e71d2587837c7fb5afa0903b65f8c90d6a5662d0eeaf9113541dfc"
+      },
+      "inference_ms": 0.15509499999097898,
+      "inference_samples_ms": [
+        0.13001500001337263,
+        0.12233500001457287,
+        0.15509499999097898,
+        0.1560300000164716,
+        0.15591999999742256
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s97/random/rate0.001.pt",
+        "sha256": "701132f95f4a030f62c52eaa9672ef44c8b7e0bf988552c77d44f3115aca4d7c"
+      },
+      "inference_ms": 0.1559399999678135,
+      "inference_samples_ms": [
+        0.1680800000031013,
+        0.15675000004193862,
+        0.1550400000269292,
+        0.155815000016446,
+        0.1559399999678135
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s97/value_greedy/rate0.001.pt",
+        "sha256": "71533b60f7b5b915c77bc86afda19717e3b613b9291b0fc0c7a01f5dc82ce523"
+      },
+      "inference_ms": 0.15463999998246436,
+      "inference_samples_ms": [
+        0.16985000002023298,
+        0.1539549999506562,
+        0.15662499999962165,
+        0.15463999998246436,
+        0.15383999998448417
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/gelu_l7_s97/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "834b3091da45eed17e56b464c024edeee6eb012fb93de8dc4305a36736dcab88"
+      },
+      "inference_ms": 0.15602499997839914,
+      "inference_samples_ms": [
+        0.17049000007318682,
+        0.15602499997839914,
+        0.15614499998264364,
+        0.15389000000141095,
+        0.15510000002905144
+      ],
+      "peak_allocated_bytes": 11601408,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 344448,
+      "parameter_bytes": 1377792
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s71/value_greedy/rate0.001.pt",
+        "sha256": "a509244fc2cfb7e92a57ffe14fc5d6c65cfa29f657bf51d89e74103b350fe6be"
+      },
+      "inference_ms": 0.2233199999864155,
+      "inference_samples_ms": [
+        0.24176000006264076,
+        0.22217499999896972,
+        0.22164499996506493,
+        0.22599499998250394,
+        0.2233199999864155
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s71/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "19d6255b7bec658f6d9b5df9a3ee6b9e06d2ab3e790dd6368f9cf20b49218e57"
+      },
+      "inference_ms": 0.2228849999482918,
+      "inference_samples_ms": [
+        0.23486999998567626,
+        0.22595999998884508,
+        0.22256000002016663,
+        0.2228849999482918,
+        0.22248000004765345
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s71/sobolev_greedy/rate0.001.pt",
+        "sha256": "e400ebeec0ebfa9ce7063ef6ebe63f82af4e3b1c97ca2a53df297aaf524fcca5"
+      },
+      "inference_ms": 0.21926499994151527,
+      "inference_samples_ms": [
+        0.23460500005967333,
+        0.22078000001783948,
+        0.21826500005772687,
+        0.21926499994151527,
+        0.21810500002175104
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s71/random/rate0.001.pt",
+        "sha256": "1943c6ac8c4caea720785a0aba06943324b5f589fd4d582b23152fa311d8684d"
+      },
+      "inference_ms": 0.1809299999877112,
+      "inference_samples_ms": [
+        0.1809299999877112,
+        0.17148999995697523,
+        0.17148500000985223,
+        0.19221999991714256,
+        0.21984999993946985
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s71/value_greedy/rate0.001.pt",
+        "sha256": "49beafbf80e5ca1b73b4154188c7e86e68ee45e4bf248db59a5ce0821e849a63"
+      },
+      "inference_ms": 0.22264999997787527,
+      "inference_samples_ms": [
+        0.2324600000065402,
+        0.22160999997140607,
+        0.22645999997621402,
+        0.2212199999121367,
+        0.22264999997787527
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s71/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "4a8f98967fbb0e492fd95820c1899864b55d90d93913b08e4f1cae7a801fb8e1"
+      },
+      "inference_ms": 0.22437500001615263,
+      "inference_samples_ms": [
+        0.2336950000426441,
+        0.22109500005171867,
+        0.23138499991546269,
+        0.2213550000305986,
+        0.22437500001615263
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s71/sobolev_greedy/rate0.001.pt",
+        "sha256": "2b59d1f2c57b15b4a3b574a92c3bce74e5ff6a1d22025e9e98fabe8c05408fe9"
+      },
+      "inference_ms": 0.22148500002003857,
+      "inference_samples_ms": [
+        0.22990500001469627,
+        0.21889999998165877,
+        0.22148500002003857,
+        0.22766000001865905,
+        0.22109999999884167
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s71/random/rate0.001.pt",
+        "sha256": "8c6d681cef41ecb2a0ac723864e112c9ac263440ee0fe96bea5c71ce33dbb8ae"
+      },
+      "inference_ms": 0.22136999996291706,
+      "inference_samples_ms": [
+        0.2303600000232109,
+        0.22032999995644786,
+        0.22068999996918137,
+        0.22235500000533648,
+        0.22136999996291706
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s71/value_greedy/rate0.001.pt",
+        "sha256": "09f1ef11535231a7bab447e80eaa7a1fc67f1af49a813c0f11c26937fba64e11"
+      },
+      "inference_ms": 0.22207000001799315,
+      "inference_samples_ms": [
+        0.23748499997964245,
+        0.22207000001799315,
+        0.2214050000475254,
+        0.22261500007516588,
+        0.22103500004959642
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s71/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "fb8b22456170464e2d53e6f94f58a73309f4cb8eb451ce323ac3d51f05a5de42"
+      },
+      "inference_ms": 0.213889999940875,
+      "inference_samples_ms": [
+        0.213889999940875,
+        0.1696799999990617,
+        0.194164999993518,
+        0.22557499996764818,
+        0.2226850000624836
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s71/sobolev_greedy/rate0.001.pt",
+        "sha256": "409cc4334c93f8e4396a698102bc04e0f223f1698002cb699ec321a13995da2d"
+      },
+      "inference_ms": 0.22042999999030144,
+      "inference_samples_ms": [
+        0.23820500000510947,
+        0.21977500000502914,
+        0.21988999997120118,
+        0.2207099999395723,
+        0.22042999999030144
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s71/random/rate0.001.pt",
+        "sha256": "6002f2354a6f8558a80e20d13e8994ea8aa277a1a3b79daf240084e7e976726a"
+      },
+      "inference_ms": 0.21980499996061553,
+      "inference_samples_ms": [
+        0.22920999999769265,
+        0.21980499996061553,
+        0.21897500000704895,
+        0.2199800000198593,
+        0.21936500006631832
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s83/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "dc42afdb276e0ac566f4bb59ca06ed2f09aa61e98998577756dd612e9ecb8f6c"
+      },
+      "inference_ms": 0.2186249999795109,
+      "inference_samples_ms": [
+        0.2342750000025262,
+        0.2186249999795109,
+        0.21895499994570855,
+        0.08952500002123998,
+        0.12223500007166876
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s83/sobolev_greedy/rate0.001.pt",
+        "sha256": "c16eee5d0e1c4664a9cd66b32cdfc023cbca6b815bd991a77a58ad3e932f79c2"
+      },
+      "inference_ms": 0.22032999995644786,
+      "inference_samples_ms": [
+        0.23488999995606719,
+        0.21991000003254157,
+        0.22032999995644786,
+        0.2192500000091968,
+        0.22934000007808208
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s83/random/rate0.001.pt",
+        "sha256": "2070700f76708eb3a8adc19b26a83f4c7f3ee88ae71d36c805f00684a8b3a107"
+      },
+      "inference_ms": 0.22381000007953844,
+      "inference_samples_ms": [
+        0.2428949999739416,
+        0.22381000007953844,
+        0.22372000003088033,
+        0.22983499993642909,
+        0.20138500003668014
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s83/value_greedy/rate0.001.pt",
+        "sha256": "57068e30dff95766d2a6ce30cca0d784eec664fef2ed6a361390909b3beff25d"
+      },
+      "inference_ms": 0.227305000043998,
+      "inference_samples_ms": [
+        0.24016500001380336,
+        0.227305000043998,
+        0.22884500003783614,
+        0.22575000002689194,
+        0.2225400000497757
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s83/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "0df9cc5f3096488af36e23fdb3865610726547991859fb519bbb4bc949ae9545"
+      },
+      "inference_ms": 0.221384999986185,
+      "inference_samples_ms": [
+        0.24024499998631654,
+        0.221384999986185,
+        0.2200700000685174,
+        0.22452499997598352,
+        0.2208249999966938
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s83/sobolev_greedy/rate0.001.pt",
+        "sha256": "477509bac5a98856936299dc89697d1543f3f3dbe3c2dbf3a70e02b78b7063bb"
+      },
+      "inference_ms": 0.2250350000394974,
+      "inference_samples_ms": [
+        0.23782999996910803,
+        0.2250350000394974,
+        0.2228300000751915,
+        0.22632999998677406,
+        0.22272500000326545
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s83/random/rate0.001.pt",
+        "sha256": "8efcfff3531db067abaf5631d087116de172dd1f24bb0c94b028e021085b2365"
+      },
+      "inference_ms": 0.22097999999459716,
+      "inference_samples_ms": [
+        0.23436500005118432,
+        0.22097999999459716,
+        0.22071999992476776,
+        0.22407000005841837,
+        0.22089000003688852
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s83/value_greedy/rate0.001.pt",
+        "sha256": "a2d95e11ecee68fdd1fbba56d7c9611546a246a86adbfdb840bdaab983b45fe0"
+      },
+      "inference_ms": 0.22131000005174428,
+      "inference_samples_ms": [
+        0.2331900000172027,
+        0.2206099999966682,
+        0.2222549999714829,
+        0.22131000005174428,
+        0.2204899999924237
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s83/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "419f8318fc32d18848b890a9f7eb887d4e806eded2e3143bc38632ea05fe3279"
+      },
+      "inference_ms": 0.22363999996741768,
+      "inference_samples_ms": [
+        0.2287600000272505,
+        0.22059000002627727,
+        0.2242399999886402,
+        0.22363999996741768,
+        0.22026000006007962
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s83/sobolev_greedy/rate0.001.pt",
+        "sha256": "efbb480916a94d47e42bb2a2b368db6a8f998d3502d6aad9f2e0947c3acc2fc7"
+      },
+      "inference_ms": 0.22291999994195066,
+      "inference_samples_ms": [
+        0.22860500002934714,
+        0.22053000002415502,
+        0.223924999954761,
+        0.22291999994195066,
+        0.22032999995644786
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s83/random/rate0.001.pt",
+        "sha256": "414242b7a20e4aa8f39d83e0994ccc17f0626812acdfac3eb549e892cbb7245e"
+      },
+      "inference_ms": 0.22376500000973465,
+      "inference_samples_ms": [
+        0.23491000001740758,
+        0.22240999996938626,
+        0.2276250000250002,
+        0.22376500000973465,
+        0.22361500004990376
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s83/value_greedy/rate0.001.pt",
+        "sha256": "ce04b2fc4dcdd3ee09d66e4b0c76c4eb92ceca7a72b5df596f217f48398bfa6c"
+      },
+      "inference_ms": 0.22103999999671942,
+      "inference_samples_ms": [
+        0.2286199999616656,
+        0.21941000004517264,
+        0.22516000008181436,
+        0.22057500000300934,
+        0.22103999999671942
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s97/sobolev_greedy/rate0.001.pt",
+        "sha256": "130987c2a560a97aa056ecbb4834189c014abe48eccbf9ffca742433364d8aaf"
+      },
+      "inference_ms": 0.21989500000927364,
+      "inference_samples_ms": [
+        0.2304800000274554,
+        0.21989500000927364,
+        0.10951499998554937,
+        0.10584499996184604,
+        0.22143500000311178
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s97/random/rate0.001.pt",
+        "sha256": "aa274f0f13edc462c18707848a48684b7471d21267c443c2ade990eeb036485c"
+      },
+      "inference_ms": 0.21991000003254157,
+      "inference_samples_ms": [
+        0.22919000002730172,
+        0.21991000003254157,
+        0.21795000002384768,
+        0.22203499993338482,
+        0.21953499999654014
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s97/value_greedy/rate0.001.pt",
+        "sha256": "007397ee91adf5dd0fc4ec5ac5cd18c72d5f3e1216031d12b26758bc782998f3"
+      },
+      "inference_ms": 0.22190999998201733,
+      "inference_samples_ms": [
+        0.23482999995394493,
+        0.22190999998201733,
+        0.22003000003678608,
+        0.22268499997153413,
+        0.22149500000523403
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l0_s97/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "209b5fc533c0a75386b0cc4dd51e0c94707863a97fad86ad217283a7082069af"
+      },
+      "inference_ms": 0.23017000003164867,
+      "inference_samples_ms": [
+        0.2522550000321644,
+        0.22748999999748776,
+        0.23017000003164867,
+        0.23180500002126792,
+        0.2197849999902246
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s97/sobolev_greedy/rate0.001.pt",
+        "sha256": "dd4707b3c9bff2651593be6ace619f67b6bcfab14f2245875389661213915491"
+      },
+      "inference_ms": 0.2235850000033679,
+      "inference_samples_ms": [
+        0.23459500007447787,
+        0.22056500001781387,
+        0.2261249999719439,
+        0.2235850000033679,
+        0.22270999997999752
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s97/random/rate0.001.pt",
+        "sha256": "b36941883358c372a94b4dab23a5f9b86d4345117fbcc161302da79bde50962a"
+      },
+      "inference_ms": 0.22632999998677406,
+      "inference_samples_ms": [
+        0.2346850000321865,
+        0.22310999993351288,
+        0.2248699999654491,
+        0.2435150000565045,
+        0.22632999998677406
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s97/value_greedy/rate0.001.pt",
+        "sha256": "b0daed582003864835bab23bc2c4cca3080c977725a63ab525020ee1d3b1c67f"
+      },
+      "inference_ms": 0.22359999993568636,
+      "inference_samples_ms": [
+        0.2380500000072061,
+        0.22359999993568636,
+        0.2219199999672128,
+        0.22391499996956554,
+        0.2220350000243343
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l3_s97/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "1dd34cb53e5e6a8505c04cf092de6c3618328156f565d0897b528fabd67e77bb"
+      },
+      "inference_ms": 0.22351999996317318,
+      "inference_samples_ms": [
+        0.23181500000646338,
+        0.22285499999270542,
+        0.22142499992696685,
+        0.22351999996317318,
+        0.22550000003320747
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "method": "sobolev_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s97/sobolev_greedy/rate0.001.pt",
+        "sha256": "9e17674340dd2057ece20ef4eafca41817f253720b961970edd20ee986387389"
+      },
+      "inference_ms": 0.22119499999462278,
+      "inference_samples_ms": [
+        0.23105000000214204,
+        0.22044500001356937,
+        0.22217499999896972,
+        0.22119499999462278,
+        0.22109500005171867
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "method": "random",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s97/random/rate0.001.pt",
+        "sha256": "504a9b07ef1ceff283084c8e28f37bff27eb3bf1671008e75b08a1926c245e29"
+      },
+      "inference_ms": 0.22981500005698763,
+      "inference_samples_ms": [
+        0.22981500005698763,
+        0.22079500004110741,
+        0.23431500003425754,
+        0.3731849999894621,
+        0.22260499999902095
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "method": "value_greedy",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s97/value_greedy/rate0.001.pt",
+        "sha256": "aaf9544115688105bf02ed2950d56069839d97e9a8f04d90a0acf8f950d9c9c9"
+      },
+      "inference_ms": 0.22033999994164333,
+      "inference_samples_ms": [
+        0.23473000001104083,
+        0.21821500004080008,
+        0.21844500006409362,
+        0.22033999994164333,
+        0.22060000001147273
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "method": "value_select_sobolev_fit",
+      "checkpoint": {
+        "path": "results/sobolev_learning_v1/pairs/swiglu_l7_s97/value_select_sobolev_fit/rate0.001.pt",
+        "sha256": "81b6b4b1822644aa1129b7e3047c9f0cf6f113bb0143abd2076bc22d91a9c673"
+      },
+      "inference_ms": 0.2208249999966938,
+      "inference_samples_ms": [
+        0.23039999996399274,
+        0.22006999997756793,
+        0.2208249999966938,
+        0.22154500002216082,
+        0.22018499994373997
+      ],
+      "peak_allocated_bytes": 11508224,
+      "peak_reserved_bytes": 25165824,
+      "parameters": 343680,
+      "parameter_bytes": 1374720
+    }
+  ],
+  "full_teachers": [
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "inference_ms": 0.0866899999891757,
+      "inference_samples_ms": [
+        0.08664500001032138,
+        0.08705000000190921,
+        0.08661499996378552,
+        0.0868099999934202,
+        0.0866899999891757
+      ],
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "inference_ms": 0.08639500001663691,
+      "inference_samples_ms": [
+        0.08870000001479639,
+        0.0866899999891757,
+        0.08636000002297806,
+        0.08636000002297806,
+        0.08639500001663691
+      ],
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "inference_ms": 0.08640999994895537,
+      "inference_samples_ms": [
+        0.08948000004238565,
+        0.08661500005473499,
+        0.08640999994895537,
+        0.08631999999124673,
+        0.08639999996375991
+      ],
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "inference_ms": 0.09012999998958549,
+      "inference_samples_ms": [
+        0.09103499996854225,
+        0.09012999998958549,
+        0.08641499998702784,
+        0.08766500004639965,
+        0.09219999992637895
+      ],
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "inference_ms": 0.08662000000185799,
+      "inference_samples_ms": [
+        0.08877500004018657,
+        0.0866899999891757,
+        0.08640500000183238,
+        0.08633999996163766,
+        0.08662000000185799
+      ],
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "inference_ms": 0.08682500001668814,
+      "inference_samples_ms": [
+        0.08909500002118875,
+        0.08739499999137479,
+        0.08682500001668814,
+        0.08668000000398024,
+        0.08667500005685724
+      ],
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "inference_ms": 0.08639999996375991,
+      "inference_samples_ms": [
+        0.08858499995767488,
+        0.08664999995744438,
+        0.08633500001451466,
+        0.08639999996375991,
+        0.08634000005258713
+      ],
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "inference_ms": 0.0837399999909394,
+      "inference_samples_ms": [
+        0.08748499994908343,
+        0.09556000004522502,
+        0.0837399999909394,
+        0.08367999998881714,
+        0.08361000000149943
+      ],
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "inference_ms": 0.15910000001895241,
+      "inference_samples_ms": [
+        0.17624000001887907,
+        0.15910000001895241,
+        0.1579400000082387,
+        0.1568599999700382,
+        0.16131499996845378
+      ],
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "inference_ms": 0.22902000000613043,
+      "inference_samples_ms": [
+        0.2528550000533869,
+        0.23007500003586756,
+        0.22902000000613043,
+        0.22758499999326887,
+        0.22815000002083252
+      ],
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "inference_ms": 0.2290099999299855,
+      "inference_samples_ms": [
+        0.24410500000158208,
+        0.2274349999424885,
+        0.23150000006353366,
+        0.2282349999404687,
+        0.2290099999299855
+      ],
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "inference_ms": 0.2351250000174332,
+      "inference_samples_ms": [
+        0.25911499997164356,
+        0.2356099999815342,
+        0.23488999995606719,
+        0.2351250000174332,
+        0.23441499997716164
+      ],
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "inference_ms": 0.2328250000573462,
+      "inference_samples_ms": [
+        0.24962999996205326,
+        0.23722000005363952,
+        0.2328250000573462,
+        0.23266999996849336,
+        0.2298099999279657
+      ],
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "inference_ms": 0.22343000000546454,
+      "inference_samples_ms": [
+        0.25089000000662054,
+        0.23439000005964772,
+        0.21286000001055072,
+        0.20784500002264394,
+        0.22343000000546454
+      ],
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "inference_ms": 0.23788500002410728,
+      "inference_samples_ms": [
+        0.2521800000067742,
+        0.2366700000493438,
+        0.23788500002410728,
+        0.2382249999755004,
+        0.23389000007227878
+      ],
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "inference_ms": 0.23057499993228703,
+      "inference_samples_ms": [
+        0.25238000007448136,
+        0.24106000000756467,
+        0.23057499993228703,
+        0.22851499998068903,
+        0.2285900000060792
+      ],
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "inference_ms": 0.2330949999304721,
+      "inference_samples_ms": [
+        0.2525949999835575,
+        0.23577000001751003,
+        0.23170499998741434,
+        0.2326349999748345,
+        0.2330949999304721
+      ],
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "inference_ms": 0.2314700000169978,
+      "inference_samples_ms": [
+        0.24445500002912013,
+        0.23114999994504615,
+        0.23479000001316308,
+        0.22908999999344815,
+        0.2314700000169978
+      ],
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "parameters": 1179648,
+      "parameter_bytes": 4718592
+    }
+  ]
+}

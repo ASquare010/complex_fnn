@@ -1,0 +1,1453 @@
+{
+  "posthoc": true,
+  "batch": 256,
+  "gradients": false,
+  "precision": "FP32",
+  "warmup_forwards": 10,
+  "measured_forwards": 10,
+  "includes": "Raw folded FFN parameters, input batch and forward temporaries; no teacher, optimizer, normalization buffers or dataset on GPU",
+  "students": [
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "form": "gelu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "form": "relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "form": "leaky_relu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "form": "prelu",
+      "peak_allocated_bytes": 11210752,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10293248
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "form": "silu",
+      "peak_allocated_bytes": 11210240,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10292736
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "form": "swiglu",
+      "peak_allocated_bytes": 11511296,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10290688
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "form": "affine_gelu",
+      "peak_allocated_bytes": 11471360,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10291712
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "form": "affine_swiglu",
+      "peak_allocated_bytes": 11469312,
+      "peak_reserved_bytes": 25165824,
+      "live_model_and_input_bytes": 10289664
+    }
+  ],
+  "full_teachers": [
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "peak_allocated_bytes": 16777216,
+      "peak_reserved_bytes": 23068672,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "live_model_and_input_bytes": 13631488
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "peak_allocated_bytes": 17825792,
+      "peak_reserved_bytes": 27262976,
+      "live_model_and_input_bytes": 13631488
+    }
+  ]
+}

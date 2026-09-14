@@ -1,0 +1,10 @@
+{"active": "wikitext2_s127__fp32_default_native", "step": 100, "loss": 6.101770401000977}
+{"active": "wikitext2_s127__fp32_default_native", "step": 200, "loss": 5.626431465148926}
+{"active": "wikitext2_s127__fp32_default_native", "step": 300, "loss": 5.323585510253906}
+{"active": "wikitext2_s127__fp32_default_native", "step": 400, "loss": 5.113975524902344}
+{"active": "wikitext2_s127__fp32_default_native", "step": 500, "loss": 4.853315830230713}
+{"active": "wikitext2_s127__fp32_default_native", "step": 600, "loss": 4.613999366760254}
+{"active": "wikitext2_s127__fp32_default_native", "step": 700, "loss": 4.507932662963867}
+{"active": "wikitext2_s127__fp32_default_native", "step": 800, "loss": 4.352678298950195}
+{"completed": "wikitext2_s127__fp32_default_native", "nll": 4.482879865737188, "peak_mib": 665.75830078125, "wall_ms": 147.01675000003434, "stability": 1.0651560745964592}
+Complete 4 ordinary

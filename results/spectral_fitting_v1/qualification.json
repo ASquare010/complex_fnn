@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "full_gelu_random",
+      "parameters": 1181568,
+      "input_variance": 0.9968950152397156,
+      "cuda_finite": true
+    },
+    {
+      "name": "full_swiglu_random",
+      "parameters": 1182080,
+      "input_variance": 0.997190535068512,
+      "cuda_finite": true
+    },
+    {
+      "name": "full_gelu_bounded",
+      "parameters": 1181568,
+      "input_variance": 0.978452205657959,
+      "cuda_finite": true
+    },
+    {
+      "name": "full_swiglu_bounded",
+      "parameters": 1182080,
+      "input_variance": 0.9804024696350098,
+      "cuda_finite": true
+    },
+    {
+      "name": "narrow_gelu_bounded",
+      "parameters": 351048,
+      "input_variance": 0.9629440903663635,
+      "cuda_finite": true
+    },
+    {
+      "name": "narrow_swiglu_bounded",
+      "parameters": 351200,
+      "input_variance": 0.9683736562728882,
+      "cuda_finite": true
+    },
+    {
+      "name": "narrow_cubic_bounded",
+      "parameters": 351048,
+      "input_variance": 0.9629440903663635,
+      "cuda_finite": true
+    },
+    {
+      "name": "tiny_gelu_bounded",
+      "parameters": 65749,
+      "input_variance": 0.9343424439430237,
+      "cuda_finite": true
+    },
+    {
+      "name": "tiny_swiglu_bounded",
+      "parameters": 66162,
+      "input_variance": 0.9208329916000366,
+      "cuda_finite": true
+    },
+    {
+      "name": "tiny_cubic_bounded",
+      "parameters": 65749,
+      "input_variance": 0.9343424439430237,
+      "cuda_finite": true
+    },
+    {
+      "name": "tiny_relu2_bounded",
+      "parameters": 65749,
+      "input_variance": 0.9343424439430237,
+      "cuda_finite": true
+    },
+    {
+      "name": "factor_gelu_random",
+      "parameters": 66048,
+      "input_variance": 0.9540504813194275,
+      "cuda_finite": true
+    },
+    {
+      "name": "factor_gelu_raw",
+      "parameters": 66048,
+      "input_variance": 0.9540504813194275,
+      "cuda_finite": true
+    },
+    {
+      "name": "factor_gelu_bounded",
+      "parameters": 66048,
+      "input_variance": 0.9540504813194275,
+      "cuda_finite": true
+    },
+    {
+      "name": "factor_cubic_random",
+      "parameters": 66048,
+      "input_variance": 0.9540504813194275,
+      "cuda_finite": true
+    },
+    {
+      "name": "factor_cubic_raw",
+      "parameters": 66048,
+      "input_variance": 0.9540504813194275,
+      "cuda_finite": true
+    },
+    {
+      "name": "factor_cubic_bounded",
+      "parameters": 66048,
+      "input_variance": 0.9540504813194275,
+      "cuda_finite": true
+    },
+    {
+      "name": "gelu_folded_gradient_and_gradcheck",
+      "passed": true
+    },
+    {
+      "name": "cubic_folded_gradient_and_gradcheck",
+      "passed": true
+    },
+    {
+      "name": "oracle_quadratic",
+      "passed": true
+    },
+    {
+      "name": "oracle_cubic",
+      "passed": true
+    },
+    {
+      "name": "oracle_product",
+      "passed": true
+    }
+  ]
+}

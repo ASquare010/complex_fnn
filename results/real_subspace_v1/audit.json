@@ -1,0 +1,3898 @@
+{
+  "passed": true,
+  "score_count": 378,
+  "recaptured_pairs": [
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "all_rows_exact": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "all_rows_exact": true
+    }
+  ],
+  "rows": [
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 1.8036655172000025,
+      "absolute_error": 2.6014168597043863e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 2.46567627007762,
+      "absolute_error": 5.2812421102998997e-11,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 1.4549469910084554,
+      "absolute_error": 4.362122441037286e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 2.3669056522827625,
+      "absolute_error": 1.1429568402832047e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 4.43498772368365,
+      "absolute_error": 7.226841347574009e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 4.635638318840474,
+      "absolute_error": 1.1568017654894902e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 4.981476586829985,
+      "absolute_error": 1.2592415998824436e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.575777194022768,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.6757113929780653,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.3915356649411208,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 1.9873094715379755,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 4.838738664896909,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 5.127375482451317,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 5.430924135141815,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.12690167136520894,
+      "absolute_error": 5.505642330927429e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.09886433512100845,
+      "absolute_error": 1.387481032844029e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.07640400936671937,
+      "absolute_error": 3.040379198404608e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 1.6767362252379876,
+      "absolute_error": 2.2154040824062804e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 4.055421428953211,
+      "absolute_error": 4.0588297167687415e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 4.40716436376228,
+      "absolute_error": 5.7120290719581135e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 4.054257884051334,
+      "absolute_error": 7.665017065505708e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 0.22839989142577677,
+      "absolute_error": 1.5868106828520467e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 0.2350458676302797,
+      "absolute_error": 6.355205250940799e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 0.20638021667961995,
+      "absolute_error": 5.33642019462377e-11,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 0.2751089232715288,
+      "absolute_error": 3.2255026427563394e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 0.2975521456199521,
+      "absolute_error": 3.6865743791025807e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 0.3647512636275061,
+      "absolute_error": 6.554944920189598e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 0.3741994278005541,
+      "absolute_error": 2.201637205878626e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.0911168526927781,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.07763051358510538,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.07541216508556527,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 0.2329676244735329,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 0.2736437582105874,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 0.3490854840614974,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 0.3893115595243766,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.028846897383132314,
+      "absolute_error": 2.0193714755922798e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.026449645732506105,
+      "absolute_error": 1.0021705687535132e-12,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.025167662049701483,
+      "absolute_error": 1.1722028209204538e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 0.20890977556714627,
+      "absolute_error": 1.0019574059327852e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 0.23481642129217484,
+      "absolute_error": 1.882699995903181e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 0.3180535783620459,
+      "absolute_error": 1.6900939536768078e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 0.39944132499546914,
+      "absolute_error": 3.0192909283854874e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 0.7026107429592701,
+      "absolute_error": 1.1151373158213573e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 0.6547376074156896,
+      "absolute_error": 2.9990351313458063e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 0.5124215484996152,
+      "absolute_error": 1.7333472435154818e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 1.0738349628670696,
+      "absolute_error": 1.221405643292428e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 1.4126715596109625,
+      "absolute_error": 3.445288498937771e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 1.7309463414883621,
+      "absolute_error": 5.217959397896266e-11,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 1.9230253945585494,
+      "absolute_error": 1.290594298097858e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.34593606602239646,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.24113780116772662,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.20985978572230013,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 0.9256579686943026,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 1.206816028853526,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 1.6067426383846664,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 1.9092838071451865,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.11495900685437692,
+      "absolute_error": 1.6704666261357914e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.06775309030885421,
+      "absolute_error": 9.956106772346374e-11,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.057072884437217586,
+      "absolute_error": 1.604507984809267e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 0.8479012705123766,
+      "absolute_error": 5.933117330769733e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 0.8907948776726978,
+      "absolute_error": 1.9713608523375115e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 1.3981201098776967,
+      "absolute_error": 1.8540273760692116e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 1.6428480974420552,
+      "absolute_error": 2.4138315790622755e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 1.7791662238476504,
+      "absolute_error": 2.652520425527882e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 2.412835372437173,
+      "absolute_error": 9.790972477219384e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 1.4242096374865436,
+      "absolute_error": 1.5765051486482662e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 2.342286493814631,
+      "absolute_error": 7.325726691931322e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 4.342556865099566,
+      "absolute_error": 1.7926371498333538e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 4.550849850146133,
+      "absolute_error": 1.681055294966427e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 4.8557623645847015,
+      "absolute_error": 6.624771842211885e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.5836710195793962,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.677697761121414,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.38889056954810003,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 1.96478534490797,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 4.809856238248181,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 5.0876807183383805,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 5.433865593784442,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.12565881147864483,
+      "absolute_error": 2.2023544099525338e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.09753237832083733,
+      "absolute_error": 3.32543090286741e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.07542905444756949,
+      "absolute_error": 3.3429245482885506e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 1.6651078082847368,
+      "absolute_error": 1.4304923912078493e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 4.041179431206716,
+      "absolute_error": 8.422625263904138e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 4.37897099749419,
+      "absolute_error": 4.706988576685944e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 4.2300931282177165,
+      "absolute_error": 4.614233439781401e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 0.21885858717873063,
+      "absolute_error": 4.169857792390985e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 0.23095282518897475,
+      "absolute_error": 4.428707400805365e-12,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 0.20047192921528378,
+      "absolute_error": 6.82977813193375e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 0.27256043011479775,
+      "absolute_error": 4.3006487260299764e-11,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 0.2948812389179252,
+      "absolute_error": 1.1077899708666905e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 0.35807045630379264,
+      "absolute_error": 2.120927322657451e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 0.36739062996571564,
+      "absolute_error": 2.7811697389523715e-11,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.09107593189833318,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.07823381129494764,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.07557839316241423,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 0.23189524429354325,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 0.27114721252787927,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 0.34453873833824183,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 0.38222022737218025,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.029168253551037675,
+      "absolute_error": 3.022595229662528e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.026902665631475586,
+      "absolute_error": 1.1422348830669726e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.02559070819893543,
+      "absolute_error": 4.119213303788172e-11,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 0.20940445564118537,
+      "absolute_error": 7.263131207579931e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 0.23724966559420466,
+      "absolute_error": 2.850205627069613e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 0.30926761351532744,
+      "absolute_error": 1.2867152898721201e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 0.3901988200284266,
+      "absolute_error": 7.275184898958287e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 0.7173043086558709,
+      "absolute_error": 1.2613555755436323e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 0.6576675715916073,
+      "absolute_error": 1.1393060939113298e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 0.5262536509592504,
+      "absolute_error": 8.778378024487665e-11,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 1.0944273679422887,
+      "absolute_error": 2.243282448688433e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 1.402167415833518,
+      "absolute_error": 1.5800609709515356e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 1.678929261247679,
+      "absolute_error": 1.3642478258191204e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 1.9047194060797599,
+      "absolute_error": 6.137490515811805e-11,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.36892731771408854,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.24294347325522472,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.2145533553285607,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 0.9545910376853856,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 1.2088368314905569,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 1.5667461077017595,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 1.8910539430617925,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.12837762507756154,
+      "absolute_error": 1.6239856681643516e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.06817911028785713,
+      "absolute_error": 1.3039985757856698e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.05752482560563349,
+      "absolute_error": 2.610464830410386e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 0.8771910378053401,
+      "absolute_error": 2.884139593817281e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 0.9013281875886349,
+      "absolute_error": 3.323272768085417e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 1.363639037752321,
+      "absolute_error": 5.431410876610698e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 1.6394919451702423,
+      "absolute_error": 2.6397635188857294e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 1.8136536129972507,
+      "absolute_error": 2.4940915999138724e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 2.466221317529713,
+      "absolute_error": 2.3434676421629774e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 1.4612733783824534,
+      "absolute_error": 1.7376184935358197e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 2.351696127365526,
+      "absolute_error": 1.6725465457056998e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 4.415527020262426,
+      "absolute_error": 1.5469012737412413e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 4.6587133145291135,
+      "absolute_error": 1.1616378969847574e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 4.924253952558982,
+      "absolute_error": 7.759659581552114e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.5929508260104169,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.6816530690081274,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.40135598517094534,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 1.971342385808648,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 4.850157597213214,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 5.170829767385119,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 5.452291830200173,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.12815793085063834,
+      "absolute_error": 2.6412813602938456e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.099088755562947,
+      "absolute_error": 7.880017610650825e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.07785567605543203,
+      "absolute_error": 9.160118219497804e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 1.660208604292487,
+      "absolute_error": 2.7007345249074888e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 4.0763411581353735,
+      "absolute_error": 1.5469874270479522e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 4.437259784120012,
+      "absolute_error": 2.6842315037356457e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 4.231805601719527,
+      "absolute_error": 9.077103513277507e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 0.22464959327440281,
+      "absolute_error": 5.531862468100002e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 0.22868833002633426,
+      "absolute_error": 6.133127339325029e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 0.20134798171209378,
+      "absolute_error": 1.3120673991728893e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 0.2748215759566461,
+      "absolute_error": 2.704874102477106e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 0.2975353034703509,
+      "absolute_error": 9.75229397237598e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 0.3555032407024374,
+      "absolute_error": 4.6165055112012965e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 0.3636047878344975,
+      "absolute_error": 1.4708256834694566e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.09279202369926842,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.0791485495757187,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.07697406661203231,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 0.23198890147883997,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 0.27345081712768377,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 0.3412642900888853,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 0.37863234481155256,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.029625543956948525,
+      "absolute_error": 5.7069335368531426e-11,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.027183002749766677,
+      "absolute_error": 2.2387992501538e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.025886880502186668,
+      "absolute_error": 2.0046944659846133e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 0.2074429551254772,
+      "absolute_error": 5.963723404001087e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 0.23474348617847238,
+      "absolute_error": 1.1916484465857025e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 0.30700100730063645,
+      "absolute_error": 3.733925502125146e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 0.38244858708846313,
+      "absolute_error": 1.3008671362335633e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 0.7324487698714046,
+      "absolute_error": 1.3233663054279532e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 0.6521290823944205,
+      "absolute_error": 2.042216062925206e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 0.5342265251935381,
+      "absolute_error": 4.332678660290412e-11,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 1.0836124806675083,
+      "absolute_error": 4.679909793026127e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 1.4140183787679519,
+      "absolute_error": 2.1025221563775176e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 1.6825552241758928,
+      "absolute_error": 2.0000694433974786e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 1.9064118823775582,
+      "absolute_error": 4.056905922311671e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.3711789928341946,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.24258551564717093,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.21635386264194756,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 0.9382542306191485,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 1.1896664684575784,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 1.571631130017715,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 1.8925926963273978,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.1255868695715229,
+      "absolute_error": 1.3507255591793665e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.06824511916549096,
+      "absolute_error": 3.8893369080916784e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.05769269871376309,
+      "absolute_error": 2.3879794669445786e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 0.8649596259713035,
+      "absolute_error": 8.076992408234673e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 0.8980004260415563,
+      "absolute_error": 8.23113577297363e-10,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 1.3514637996791585,
+      "absolute_error": 5.5867910297990875e-09,
+      "passed": true
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 1.6592140285468353,
+      "absolute_error": 1.560372719922043e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 3.9188907922457843,
+      "absolute_error": 1.3507683860325415e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 4.260389324181195,
+      "absolute_error": 2.0795809518858732e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 3.8398656946021767,
+      "absolute_error": 6.686553533086226e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 4.296691013694596,
+      "absolute_error": 5.86101833732755e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 4.714390625747273,
+      "absolute_error": 9.646008436448028e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 4.797880173649755,
+      "absolute_error": 1.0359979540908171e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 4.7976722928020195,
+      "absolute_error": 2.3075319433019104e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 3.0238310516800233,
+      "absolute_error": 4.661955266271889e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 3.361620381548967,
+      "absolute_error": 1.6077672526648712e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 2.781024920252792,
+      "absolute_error": 8.164691145395864e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 3.6965502724448194,
+      "absolute_error": 3.06354053236646e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 4.455739553633971,
+      "absolute_error": 4.5280490468257995e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 4.68076898677903,
+      "absolute_error": 4.1871928146974824e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 4.699915509362828,
+      "absolute_error": 4.169420364519283e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 1.544195748901003,
+      "absolute_error": 4.406865983241914e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 1.6607913697102366,
+      "absolute_error": 1.5521226526260534e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 1.2288843318511706,
+      "absolute_error": 2.212964256287364e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 2.7273892968209013,
+      "absolute_error": 2.9317757110902676e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 3.8339657359253683,
+      "absolute_error": 2.422209099961492e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 4.203129551294123,
+      "absolute_error": 2.150336797512864e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 4.081032964215745,
+      "absolute_error": 2.377852581503248e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 0.24953203885969746,
+      "absolute_error": 4.143460574645985e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 0.25319577389600867,
+      "absolute_error": 2.199369575350829e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 0.22448894693726437,
+      "absolute_error": 3.5581204649304254e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 0.2495521808991148,
+      "absolute_error": 8.257969308367308e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 0.32375982993736857,
+      "absolute_error": 1.7583107192464809e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 0.3473079401629506,
+      "absolute_error": 5.260292201825223e-12,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 0.3823752863433201,
+      "absolute_error": 1.5042073142623735e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.15259941244587036,
+      "absolute_error": 2.979257396340529e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.1474955680591943,
+      "absolute_error": 1.8036952487143765e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.12521865328665394,
+      "absolute_error": 1.9956675201271423e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 0.1822620519959098,
+      "absolute_error": 2.0369331221736786e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 0.2879462072978561,
+      "absolute_error": 2.3640667201618726e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 0.3136437422396501,
+      "absolute_error": 5.575856443229554e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 0.36998176882150097,
+      "absolute_error": 4.0166647785611076e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.04893325179142909,
+      "absolute_error": 3.3044512959268246e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.04520409420890823,
+      "absolute_error": 8.302913911961696e-12,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.040797006821948006,
+      "absolute_error": 6.901699975414566e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 0.1192602934083095,
+      "absolute_error": 2.673344740022898e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 0.21999565627385428,
+      "absolute_error": 6.333486513021569e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 0.25371536819519164,
+      "absolute_error": 5.770161015661301e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 0.325205255333206,
+      "absolute_error": 9.01150598586753e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 3.7580073919855947,
+      "absolute_error": 5.581961559641968e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 3.8805312871142106,
+      "absolute_error": 6.958531528766798e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 3.440964480709649,
+      "absolute_error": 4.146590182330101e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 4.6351069798371585,
+      "absolute_error": 3.6331115893517563e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 6.096199961921642,
+      "absolute_error": 1.3209344729148143e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 6.886375060187141,
+      "absolute_error": 6.820748410518718e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 7.425562266061138,
+      "absolute_error": 4.843071721438719e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 2.3263352705198987,
+      "absolute_error": 1.6226961996324007e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 2.1193088995536686,
+      "absolute_error": 3.2371167968392456e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 1.9435806547162189,
+      "absolute_error": 1.5011971665757073e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 3.9141775771917793,
+      "absolute_error": 2.461435499867548e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 5.266951038023228,
+      "absolute_error": 1.4646044377286671e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 6.377638179909856,
+      "absolute_error": 4.118639651551348e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 7.25920258690608,
+      "absolute_error": 5.291482807479042e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.8685709659720464,
+      "absolute_error": 2.2382443676249864e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.7348523298093169,
+      "absolute_error": 1.887333733741059e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.6845606214800357,
+      "absolute_error": 2.6913704598285904e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 3.2727905955058727,
+      "absolute_error": 3.070228515866802e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 4.175089303449857,
+      "absolute_error": 2.461178194579361e-08,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 5.515097818212499,
+      "absolute_error": 3.2208156142132793e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 17,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 6.641729257146007,
+      "absolute_error": 2.806584298298276e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 3.799555900584346,
+      "absolute_error": 9.51745793287273e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 4.158925868765187,
+      "absolute_error": 2.404982879511408e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 3.7235442975786603,
+      "absolute_error": 2.349320737948801e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 4.216803404875261,
+      "absolute_error": 3.417133243033277e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 4.610257645601244,
+      "absolute_error": 1.4807710613240488e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 4.68268384457055,
+      "absolute_error": 5.667466496106499e-12,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 4.679917118200596,
+      "absolute_error": 9.639666842531369e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 2.934162794093251,
+      "absolute_error": 8.435994125477464e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 3.2841577226468304,
+      "absolute_error": 4.4188874781525556e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 2.6984578536727177,
+      "absolute_error": 1.7892043402412128e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 3.6620146407724152,
+      "absolute_error": 1.8005819057975714e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 4.397963045601518,
+      "absolute_error": 1.928244230953169e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 4.582222764968881,
+      "absolute_error": 2.0084822693888782e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 4.600851836017238,
+      "absolute_error": 2.4561508382703323e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 1.5255593009762558,
+      "absolute_error": 2.5686963667226337e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 1.626194861002767,
+      "absolute_error": 2.450094349626397e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 1.2016209698360065,
+      "absolute_error": 1.0454273002835635e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 2.706592801368427,
+      "absolute_error": 1.8550174729625724e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 3.822475537479505,
+      "absolute_error": 5.029292537983565e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 4.155522905003452,
+      "absolute_error": 1.189373932675153e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 4.106714485686209,
+      "absolute_error": 1.8424888281742824e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 0.24975587741439756,
+      "absolute_error": 6.164521670903866e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 0.2564885773273198,
+      "absolute_error": 1.0245021497823359e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 0.22445617802524223,
+      "absolute_error": 2.0810470013898907e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 0.25387788188635396,
+      "absolute_error": 1.1012196710069588e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 0.3308183074710351,
+      "absolute_error": 2.460499581857789e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 0.3566426598364583,
+      "absolute_error": 7.813127922418062e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 0.38679841907416335,
+      "absolute_error": 1.496534562939189e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.15380466127385886,
+      "absolute_error": 4.555983368348393e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.14788186574659792,
+      "absolute_error": 1.6386833556758518e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.1258332613842584,
+      "absolute_error": 3.456065433837807e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 0.18436145786964828,
+      "absolute_error": 7.258221801365039e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 0.29451120534934677,
+      "absolute_error": 2.2040941294321215e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 0.31891590044015944,
+      "absolute_error": 7.192324513738413e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 0.37324434922553545,
+      "absolute_error": 5.01457209090006e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.05016781395041694,
+      "absolute_error": 3.9210759639196624e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.04594465784106611,
+      "absolute_error": 5.310909351186055e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.041462009153203465,
+      "absolute_error": 8.806519402604351e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 0.12042709661620467,
+      "absolute_error": 5.6318297247948124e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 0.22533485925711225,
+      "absolute_error": 4.1732056699217424e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 0.259069878553347,
+      "absolute_error": 4.132726383332397e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 0.32830998634255354,
+      "absolute_error": 7.121326861536659e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 3.9701907177853535,
+      "absolute_error": 1.7848358346839177e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 4.035914708823693,
+      "absolute_error": 2.4994344371975785e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 3.6359334435012567,
+      "absolute_error": 4.436353062686749e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 4.846720762747523,
+      "absolute_error": 3.4873091081522034e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 6.180459204010404,
+      "absolute_error": 3.5430680611625576e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 6.898859443199515,
+      "absolute_error": 2.9927038625032765e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 7.550782377046812,
+      "absolute_error": 1.973456065229584e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 2.5114540866868356,
+      "absolute_error": 2.1226003177332586e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 2.173375470632553,
+      "absolute_error": 8.643028515109563e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 2.0202483188791476,
+      "absolute_error": 8.442508914185964e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 4.025167043343701,
+      "absolute_error": 2.7634019517108754e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 5.361947534032613,
+      "absolute_error": 2.0910215781100305e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 6.3422880265354635,
+      "absolute_error": 2.268069287936214e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 7.409273968699263,
+      "absolute_error": 1.851434561217502e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.9511291348739355,
+      "absolute_error": 2.927495690308035e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.7523750111008155,
+      "absolute_error": 3.304872819853699e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.7072441589421713,
+      "absolute_error": 2.575274216098933e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 3.334103668301488,
+      "absolute_error": 3.9558702980002636e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 4.151520322573086,
+      "absolute_error": 4.0582417426549e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 5.466666825542839,
+      "absolute_error": 4.8252744022647676e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 29,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 6.752548747617822,
+      "absolute_error": 1.0719289456062597e-08,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 3.852059600343266,
+      "absolute_error": 2.6763302685139934e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 4.192056893817987,
+      "absolute_error": 2.057625181350886e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 3.776982807214908,
+      "absolute_error": 2.370934559792204e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 4.231499317849827,
+      "absolute_error": 7.316547367963722e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 4.633720111227036,
+      "absolute_error": 5.081997045408571e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 4.711253791246251,
+      "absolute_error": 4.574420842118343e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 4.699856878657601,
+      "absolute_error": 1.347046918453998e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 2.9800244497958457,
+      "absolute_error": 1.489421919131928e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 3.3201696963431773,
+      "absolute_error": 7.030154236531416e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 2.7486602446988133,
+      "absolute_error": 1.1992047355136037e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 3.6680491920762575,
+      "absolute_error": 2.609157334632073e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 4.405337852397323,
+      "absolute_error": 1.8526691292208852e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 4.609606924510247,
+      "absolute_error": 4.2587267046201305e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 4.607702734631459,
+      "absolute_error": 1.9110846238845625e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 1.5335148768716331,
+      "absolute_error": 2.1572752473275614e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 1.645516966656227,
+      "absolute_error": 7.845706306852662e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 1.2218209001405116,
+      "absolute_error": 4.664334030124451e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 2.7227557806424496,
+      "absolute_error": 2.5500610512096955e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 3.8183069806943286,
+      "absolute_error": 5.963689098109626e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 4.158810974277785,
+      "absolute_error": 5.712754713727008e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 4.0659471340464455,
+      "absolute_error": 3.269322590426782e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 0.25359815233702265,
+      "absolute_error": 2.719127700778756e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 0.25705497354260953,
+      "absolute_error": 3.218847410835224e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 0.2283158426550637,
+      "absolute_error": 8.171702203796372e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 0.2643120160634362,
+      "absolute_error": 7.210010366520692e-12,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 0.3389269155457027,
+      "absolute_error": 4.822494625855711e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 0.35930226647518015,
+      "absolute_error": 2.1132845473559314e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 0.3899813565202089,
+      "absolute_error": 2.2785728859275878e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 0.1569759053521058,
+      "absolute_error": 1.0990286458678611e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 0.14831718319856033,
+      "absolute_error": 7.935707646566925e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 0.12942042198667308,
+      "absolute_error": 1.2454731690425547e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 0.19095685193431336,
+      "absolute_error": 3.2016611584140264e-12,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 0.30009326606530234,
+      "absolute_error": 1.3391820985475533e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 0.3209322022810479,
+      "absolute_error": 7.804029644731258e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 0.3764299992006756,
+      "absolute_error": 7.395983825375652e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.05183626194991255,
+      "absolute_error": 3.9508674803956367e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.046931998189661574,
+      "absolute_error": 1.665606541578768e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.04294726334758676,
+      "absolute_error": 1.5080321713600853e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 0.1247275790371235,
+      "absolute_error": 4.0004043133645695e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 0.22718576857636022,
+      "absolute_error": 8.622775826694351e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 0.25494425840849017,
+      "absolute_error": 5.941744873894095e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 0.32893305920587973,
+      "absolute_error": 3.1673397238307643e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "pca",
+      "independent_mse": 4.0431784245882145,
+      "absolute_error": 1.0273026873619528e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "weight_input",
+      "independent_mse": 4.067926308180382,
+      "absolute_error": 4.638784467658752e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "linear_aware",
+      "independent_mse": 3.7133378288022136,
+      "absolute_error": 1.5895751381833634e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "energy",
+      "independent_mse": 4.834775636529531,
+      "absolute_error": 1.5693313315523483e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_energy",
+      "independent_mse": 6.337884005516421,
+      "absolute_error": 1.5274714826318814e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_residual",
+      "independent_mse": 6.953753216897527,
+      "absolute_error": 2.9941373824726725e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 32,
+      "method": "white_permuted",
+      "independent_mse": 7.73208083374231,
+      "absolute_error": 2.187818815002629e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "pca",
+      "independent_mse": 2.5224700769032693,
+      "absolute_error": 7.033440496684307e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "weight_input",
+      "independent_mse": 2.196698461073756,
+      "absolute_error": 1.3762928574578837e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "linear_aware",
+      "independent_mse": 2.045048389626887,
+      "absolute_error": 4.81422013365318e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "energy",
+      "independent_mse": 4.021685711954809,
+      "absolute_error": 2.5428992245224435e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_energy",
+      "independent_mse": 5.430503438641272,
+      "absolute_error": 1.6857244489187906e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_residual",
+      "independent_mse": 6.426880724563865,
+      "absolute_error": 2.6223743176956305e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 64,
+      "method": "white_permuted",
+      "independent_mse": 7.572392433217907,
+      "absolute_error": 2.0200285888449798e-10,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "pca",
+      "independent_mse": 0.9298032515482175,
+      "absolute_error": 4.431000788507333e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "weight_input",
+      "independent_mse": 0.763613239697356,
+      "absolute_error": 9.955292146202055e-11,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "linear_aware",
+      "independent_mse": 0.716792988766947,
+      "absolute_error": 1.1567260482792108e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "energy",
+      "independent_mse": 3.336560739916043,
+      "absolute_error": 1.1088394646918687e-08,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_energy",
+      "independent_mse": 4.254114018155771,
+      "absolute_error": 4.5990082853109016e-09,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_residual",
+      "independent_mse": 5.554239027552772,
+      "absolute_error": 2.2534905497195723e-08,
+      "passed": true
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 43,
+      "rank": 128,
+      "method": "white_permuted",
+      "independent_mse": 6.865825395613693,
+      "absolute_error": 3.1223112983980172e-09,
+      "passed": true
+    }
+  ],
+  "score_tolerance": "absolute 1e-7 plus relative 1e-5; independent batch partition and factor algebra",
+  "all_frozen_sources_match": true
+}

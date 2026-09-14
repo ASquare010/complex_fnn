@@ -1,0 +1,7 @@
+Long-training gate: False
+wikitext2 101 ordinary {'peak_mib': 0.7627712466620168, 'event_ms': 1.0386102049318686, 'wall_ms': 1.0386299652952977, 'nll': 1.0076490517851633} ['stability']
+wikitext2 113 ordinary {'peak_mib': 0.7627712466620168, 'event_ms': 1.0275199553897183, 'wall_ms': 1.0274181200708685, 'nll': 1.0225766948891075} ['quality']
+wikitext2 127 ordinary {'peak_mib': 0.7627712466620168, 'event_ms': 0.9786513267735306, 'wall_ms': 0.9786180826336868, 'nll': 0.9948142903262401} []
+tinystories 101 ordinary {'peak_mib': 0.7623950820909997, 'event_ms': 0.9909867824490795, 'wall_ms': 0.990995331039829, 'nll': 0.9958714140726284} []
+tinystories 113 ordinary {'peak_mib': 0.7623950820909997, 'event_ms': 0.9868581506885011, 'wall_ms': 0.9867783969118854, 'nll': 0.9981221188998702} []
+tinystories 127 ordinary {'peak_mib': 0.7623950820909997, 'event_ms': 0.9869358018493455, 'wall_ms': 0.9868836941228499, 'nll': 0.9989301503250068} []

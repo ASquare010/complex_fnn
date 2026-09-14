@@ -1,0 +1,235 @@
+{
+  "balanced_factor_ablation": [
+    {
+      "d_in": 512,
+      "d_out": 608,
+      "input_factors": [
+        16,
+        32
+      ],
+      "output_factors": [
+        19,
+        32
+      ],
+      "core_parameters": 29184,
+      "intermediate_width": 608,
+      "rank_upper_bound": 512,
+      "fp32_intermediate_mib": 19.0
+    },
+    {
+      "d_in": 608,
+      "d_out": 512,
+      "input_factors": [
+        19,
+        32
+      ],
+      "output_factors": [
+        16,
+        32
+      ],
+      "core_parameters": 26112,
+      "intermediate_width": 512,
+      "rank_upper_bound": 512,
+      "fp32_intermediate_mib": 16.0
+    }
+  ],
+  "rows": [
+    {
+      "d_in": 512,
+      "d_out": 608,
+      "rank": 1,
+      "input_factors": [
+        16,
+        32
+      ],
+      "output_factors": [
+        8,
+        76
+      ],
+      "core_shapes": [
+        [
+          32,
+          16,
+          8
+        ],
+        [
+          8,
+          32,
+          76
+        ]
+      ],
+      "core_parameters": 23552,
+      "intermediate_width": 256,
+      "rank_upper_bound": 256,
+      "fp32_intermediate_mib": 8.0,
+      "blockshuffle_g8_parameters": 71680,
+      "blockshuffle_intermediate_width": 512,
+      "minimum_rank_to_avoid_this_bottleneck": 2
+    },
+    {
+      "d_in": 512,
+      "d_out": 608,
+      "rank": 2,
+      "input_factors": [
+        16,
+        32
+      ],
+      "output_factors": [
+        8,
+        76
+      ],
+      "core_shapes": [
+        [
+          32,
+          16,
+          16
+        ],
+        [
+          8,
+          64,
+          76
+        ]
+      ],
+      "core_parameters": 47104,
+      "intermediate_width": 512,
+      "rank_upper_bound": 512,
+      "fp32_intermediate_mib": 16.0,
+      "blockshuffle_g8_parameters": 71680,
+      "blockshuffle_intermediate_width": 512,
+      "minimum_rank_to_avoid_this_bottleneck": 2
+    },
+    {
+      "d_in": 608,
+      "d_out": 512,
+      "rank": 1,
+      "input_factors": [
+        8,
+        76
+      ],
+      "output_factors": [
+        16,
+        32
+      ],
+      "core_shapes": [
+        [
+          76,
+          8,
+          16
+        ],
+        [
+          16,
+          76,
+          32
+        ]
+      ],
+      "core_parameters": 48640,
+      "intermediate_width": 1216,
+      "rank_upper_bound": 512,
+      "fp32_intermediate_mib": 38.0,
+      "blockshuffle_g8_parameters": 71680,
+      "blockshuffle_intermediate_width": 512,
+      "minimum_rank_to_avoid_this_bottleneck": 1
+    },
+    {
+      "d_in": 608,
+      "d_out": 512,
+      "rank": 2,
+      "input_factors": [
+        8,
+        76
+      ],
+      "output_factors": [
+        16,
+        32
+      ],
+      "core_shapes": [
+        [
+          76,
+          8,
+          32
+        ],
+        [
+          16,
+          152,
+          32
+        ]
+      ],
+      "core_parameters": 97280,
+      "intermediate_width": 2432,
+      "rank_upper_bound": 512,
+      "fp32_intermediate_mib": 76.0,
+      "blockshuffle_g8_parameters": 71680,
+      "blockshuffle_intermediate_width": 512,
+      "minimum_rank_to_avoid_this_bottleneck": 1
+    },
+    {
+      "d_in": 512,
+      "d_out": 2048,
+      "rank": 1,
+      "input_factors": [
+        16,
+        32
+      ],
+      "output_factors": [
+        32,
+        64
+      ],
+      "core_shapes": [
+        [
+          32,
+          16,
+          32
+        ],
+        [
+          32,
+          32,
+          64
+        ]
+      ],
+      "core_parameters": 81920,
+      "intermediate_width": 1024,
+      "rank_upper_bound": 512,
+      "fp32_intermediate_mib": 32.0,
+      "blockshuffle_g8_parameters": 163840,
+      "blockshuffle_intermediate_width": 512,
+      "minimum_rank_to_avoid_this_bottleneck": 1
+    },
+    {
+      "d_in": 512,
+      "d_out": 2048,
+      "rank": 2,
+      "input_factors": [
+        16,
+        32
+      ],
+      "output_factors": [
+        32,
+        64
+      ],
+      "core_shapes": [
+        [
+          32,
+          16,
+          64
+        ],
+        [
+          32,
+          64,
+          64
+        ]
+      ],
+      "core_parameters": 163840,
+      "intermediate_width": 2048,
+      "rank_upper_bound": 512,
+      "fp32_intermediate_mib": 64.0,
+      "blockshuffle_g8_parameters": 163840,
+      "blockshuffle_intermediate_width": 512,
+      "minimum_rank_to_avoid_this_bottleneck": 1
+    }
+  ],
+  "normalization_scalars_excluded": 2,
+  "bias_excluded": true,
+  "gpu_work": false,
+  "optimizer_updates": 0,
+  "external_code_executed": false
+}

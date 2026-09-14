@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "experiment_status": "RUNTIME_INTERRUPTED",
+  "result_path": "results/token_memory_duration_v1/partial_result.json",
+  "trials": [
+    {
+      "label": "b16_t128_s17_block",
+      "initial_state_and_sampler_exact": true,
+      "all_800_training_batches_exact": true,
+      "finite_800_step_history": true,
+      "finite_final_optimizer_and_steps": true,
+      "checkpoints": 3
+    }
+  ],
+  "scores": [
+    {
+      "label": "b16_t128_s17_block",
+      "step": 0,
+      "scope": "subset",
+      "difference": 0.0
+    },
+    {
+      "label": "b16_t128_s17_block",
+      "step": 100,
+      "scope": "subset",
+      "difference": 0.0
+    },
+    {
+      "label": "b16_t128_s17_block",
+      "step": 400,
+      "scope": "subset",
+      "difference": 0.0
+    },
+    {
+      "label": "b16_t128_s17_block",
+      "step": 800,
+      "scope": "subset",
+      "difference": 0.0
+    },
+    {
+      "label": "b16_t128_s17_block",
+      "step": 800,
+      "scope": "full",
+      "difference": 0.0
+    }
+  ],
+  "checkpoints": 3,
+  "initializations": 1,
+  "audit_updates": 0,
+  "max_nll_difference": 0.0
+}

@@ -1,0 +1,234 @@
+{
+  "study": "H164",
+  "qualified_tasks": {
+    "teacher": true,
+    "product": true
+  },
+  "decisions": {
+    "teacher": [
+      {
+        "seed": 431,
+        "ratios": {
+          "wide_mse": 3.1153855584053844,
+          "narrow_mse": 1.1444878256160818,
+          "greedy_mse": 0.7252380446771114,
+          "parameters": 0.22265148434322896,
+          "memory": 1.1772091603053436,
+          "cuda": 5.87426506650729,
+          "wall": 5.810109466395625
+        },
+        "gates": {
+          "task": true,
+          "wide_quality": false,
+          "narrow_quality": false,
+          "parameters": true,
+          "memory": false,
+          "cuda": false,
+          "wall": false
+        },
+        "passed": false
+      },
+      {
+        "seed": 443,
+        "ratios": {
+          "wide_mse": 3.054733858404614,
+          "narrow_mse": 1.1466899603214002,
+          "greedy_mse": 0.7273490780118331,
+          "parameters": 0.22265148434322896,
+          "memory": 1.1772091603053436,
+          "cuda": 2.8025316763277885,
+          "wall": 2.780580756358132
+        },
+        "gates": {
+          "task": true,
+          "wide_quality": false,
+          "narrow_quality": false,
+          "parameters": true,
+          "memory": false,
+          "cuda": false,
+          "wall": false
+        },
+        "passed": false
+      },
+      {
+        "seed": 457,
+        "ratios": {
+          "wide_mse": 3.212768659570743,
+          "narrow_mse": 1.1417831642816887,
+          "greedy_mse": 0.7343722024056891,
+          "parameters": 0.22265148434322896,
+          "memory": 1.1772091603053436,
+          "cuda": 3.1951645016627417,
+          "wall": 3.1687159619909955
+        },
+        "gates": {
+          "task": true,
+          "wide_quality": false,
+          "narrow_quality": false,
+          "parameters": true,
+          "memory": false,
+          "cuda": false,
+          "wall": false
+        },
+        "passed": false
+      }
+    ],
+    "product": [
+      {
+        "seed": 431,
+        "ratios": {
+          "wide_mse": 1.488777745630513,
+          "narrow_mse": 0.6016464311527316,
+          "greedy_mse": 0.750068147775777,
+          "parameters": 0.22265148434322896,
+          "memory": 1.1772091603053436,
+          "cuda": 2.9710774856612163,
+          "wall": 2.948172200494074
+        },
+        "gates": {
+          "task": true,
+          "wide_quality": false,
+          "narrow_quality": true,
+          "parameters": true,
+          "memory": false,
+          "cuda": false,
+          "wall": false
+        },
+        "passed": false
+      },
+      {
+        "seed": 443,
+        "ratios": {
+          "wide_mse": 1.4555201916992384,
+          "narrow_mse": 0.6354453785272165,
+          "greedy_mse": 0.7739202776780117,
+          "parameters": 0.22265148434322896,
+          "memory": 1.1772091603053436,
+          "cuda": 4.527939037188776,
+          "wall": 4.466240393234799
+        },
+        "gates": {
+          "task": true,
+          "wide_quality": false,
+          "narrow_quality": true,
+          "parameters": true,
+          "memory": false,
+          "cuda": false,
+          "wall": false
+        },
+        "passed": false
+      },
+      {
+        "seed": 457,
+        "ratios": {
+          "wide_mse": 1.7029060257063318,
+          "narrow_mse": 0.6413400735550678,
+          "greedy_mse": 0.7991015659992634,
+          "parameters": 0.22265148434322896,
+          "memory": 1.1772091603053436,
+          "cuda": 3.8307616087998233,
+          "wall": 3.796836578224755
+        },
+        "gates": {
+          "task": true,
+          "wide_quality": false,
+          "narrow_quality": true,
+          "parameters": true,
+          "memory": false,
+          "cuda": false,
+          "wall": false
+        },
+        "passed": false
+      }
+    ]
+  },
+  "shape_hypothesis": {
+    "teacher": {
+      "mean_ratio": 0.7290054797633717,
+      "passed": true
+    },
+    "product": {
+      "mean_ratio": 0.7741870462572134,
+      "passed": true
+    }
+  },
+  "statistics": {
+    "teacher": {
+      "narrow33": {
+        "mean": 0.3220703676342964,
+        "median": 0.325776644051075,
+        "variance": 5.270881383406811e-05
+      },
+      "narrow40": {
+        "mean": 0.29323456188042957,
+        "median": 0.29431556165218353,
+        "variance": 8.098736721969442e-05
+      },
+      "balanced": {
+        "mean": 0.36855174352725345,
+        "median": 0.37196628749370575,
+        "variance": 6.978234133283208e-05
+      },
+      "wide": {
+        "mean": 0.11789009223381679,
+        "median": 0.11577748879790306,
+        "variance": 1.7049584924295803e-05
+      },
+      "narrow27": {
+        "mean": 0.36311014990011853,
+        "median": 0.36332567036151886,
+        "variance": 0.00012824797777806948
+      },
+      "blockshuffle": {
+        "mean": 0.34635024269421893,
+        "median": 0.3515274003148079,
+        "variance": 9.337629888508021e-05
+      },
+      "greedy": {
+        "mean": 0.5055541470646858,
+        "median": 0.5065092146396637,
+        "variance": 0.00010114258530574682
+      }
+    },
+    "product": {
+      "narrow33": {
+        "mean": 0.9231099387009939,
+        "median": 0.9245903193950653,
+        "variance": 0.0005343048836768579
+      },
+      "narrow40": {
+        "mean": 0.8812079826990763,
+        "median": 0.8759141713380814,
+        "variance": 0.00015098187955516393
+      },
+      "balanced": {
+        "mean": 0.5777509411176046,
+        "median": 0.5714498609304428,
+        "variance": 0.00017559159880738603
+      },
+      "wide": {
+        "mean": 0.3742997522155444,
+        "median": 0.3820759281516075,
+        "variance": 0.0005380591849562707
+      },
+      "narrow27": {
+        "mean": 0.942141463359197,
+        "median": 0.9429067075252533,
+        "variance": 0.0005130947078602807
+      },
+      "blockshuffle": {
+        "mean": 0.5636128981908163,
+        "median": 0.5551336109638214,
+        "variance": 0.0006027108108535758
+      },
+      "greedy": {
+        "mean": 0.7462678998708725,
+        "median": 0.7420543879270554,
+        "variance": 0.00011314110177362835
+      }
+    }
+  },
+  "shape_passed": true,
+  "promotion": false,
+  "broad_goal_achieved": false
+}

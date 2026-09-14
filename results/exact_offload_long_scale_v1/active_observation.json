@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-09-13T20:03:46.4729979+05:00",
+  "state": "running_at_observation",
+  "tool_session_id": 75377,
+  "processes": [
+    {
+      "ProcessId": 27368,
+      "CommandLine": "\"C:\\Users\\Cuebric\\AppData\\Roaming\\uv\\python\\cpython-3.12.9-windows-x86_64-none\\python.exe\" -B -u -m results.exact_offload_long_scale_v1.run run"
+    },
+    {
+      "ProcessId": 5208,
+      "CommandLine": "C:\\Users\\Cuebric\\AppData\\Roaming\\uv\\python\\cpython-3.12.9-windows-x86_64-none\\python.exe -B -X pycache_prefix=results\\exact_offload_long_scale_v1\\unused_cache -u C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\exact_offload_long_scale_v1\\run.py worker 1"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "runs": 288,
+  "all_finite": true,
+  "max_preclip_norm": 3.1474101543426514,
+  "max_clip_fraction": 0.015,
+  "forms": {
+    "affine_gelu": {
+      "mean_clip_fraction": 0.0,
+      "max_preclip_norm": 0.29378387331962585
+    },
+    "affine_swiglu": {
+      "mean_clip_fraction": 0.0001388888888888889,
+      "max_preclip_norm": 1.8396941423416138
+    },
+    "gelu": {
+      "mean_clip_fraction": 0.0,
+      "max_preclip_norm": 0.43586012721061707
+    },
+    "leaky_relu": {
+      "mean_clip_fraction": 0.0002777777777777778,
+      "max_preclip_norm": 1.7285047769546509
+    },
+    "prelu": {
+      "mean_clip_fraction": 0.0009722222222222222,
+      "max_preclip_norm": 3.1474101543426514
+    },
+    "relu": {
+      "mean_clip_fraction": 4.62962962962963e-05,
+      "max_preclip_norm": 1.4336673021316528
+    },
+    "silu": {
+      "mean_clip_fraction": 0.0,
+      "max_preclip_norm": 0.5069408416748047
+    },
+    "swiglu": {
+      "mean_clip_fraction": 0.0005555555555555556,
+      "max_preclip_norm": 1.4298934936523438
+    }
+  },
+  "prelu_selected_slopes": [
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 71,
+      "alpha": 0.20089124143123627
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 71,
+      "alpha": 0.030467212200164795
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 71,
+      "alpha": 0.07512234896421432
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 83,
+      "alpha": 0.19713814556598663
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 83,
+      "alpha": 0.030508946627378464
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 83,
+      "alpha": 0.06392819434404373
+    },
+    {
+      "teacher": "gelu",
+      "layer": 0,
+      "seed": 97,
+      "alpha": 0.20078422129154205
+    },
+    {
+      "teacher": "gelu",
+      "layer": 3,
+      "seed": 97,
+      "alpha": 0.03127776086330414
+    },
+    {
+      "teacher": "gelu",
+      "layer": 7,
+      "seed": 97,
+      "alpha": 0.06831788271665573
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 71,
+      "alpha": -0.03389616683125496
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 71,
+      "alpha": 0.021589823067188263
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 71,
+      "alpha": -0.05593421682715416
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 83,
+      "alpha": -0.03719968721270561
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 83,
+      "alpha": 0.015502861700952053
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 83,
+      "alpha": -0.0541689433157444
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 0,
+      "seed": 97,
+      "alpha": -0.033162832260131836
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 3,
+      "seed": 97,
+      "alpha": 0.023151760920882225
+    },
+    {
+      "teacher": "swiglu",
+      "layer": 7,
+      "seed": 97,
+      "alpha": -0.05253032594919205
+    }
+  ]
+}

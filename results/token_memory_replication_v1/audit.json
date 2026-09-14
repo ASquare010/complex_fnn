@@ -1,0 +1,348 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "key": "gelu_narrow_b16_t128_s17_block",
+      "checkpoint_sha256": "ab6ccb82d9e3d3b6f46cda5df29889c824e4a597f0c3f416598553f93e9412f9",
+      "metrics_sha256": "50f7d0de8f970568d77dfabaf592e261e14a3608c2129c9add8fb511fa643c11",
+      "nll": 6.948350131511688,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s17_loss_chunks",
+      "checkpoint_sha256": "111fffabda5487e9d64df9818aeead31db6a62b2171a34deb9e33c5f0bd8cc72",
+      "metrics_sha256": "b69e582347b11fc1df7d49802d14dd51423bcc879deaab968fd799a1213151a4",
+      "nll": 6.948288917541504,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s17_native",
+      "checkpoint_sha256": "ab6ccb82d9e3d3b6f46cda5df29889c824e4a597f0c3f416598553f93e9412f9",
+      "metrics_sha256": "3f934fafca4aa0a6f49c966adf002d1f5a74f12e29b0af529d7087a08d0cba38",
+      "nll": 6.948350131511688,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s29_block",
+      "checkpoint_sha256": "9dec3c5aadb4de660705894b135b1b705ec01b3605282c6fea9a17de13a6eeb3",
+      "metrics_sha256": "d6ad181bddaa49ab20c931d8262cdcfd72cd070cd5b0462b503eefd6810c28c4",
+      "nll": 6.952732503414154,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s29_loss_chunks",
+      "checkpoint_sha256": "14618e31a94eb61fda8ba81c1fc3c8c89ee5c434152602c32d8aebc9840d4bb6",
+      "metrics_sha256": "3d81e5aa17dd4a463c7eb6e33fbeee443076fd1ca8620b13be426a506cc94925",
+      "nll": 6.9526901841163635,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s29_native",
+      "checkpoint_sha256": "9dec3c5aadb4de660705894b135b1b705ec01b3605282c6fea9a17de13a6eeb3",
+      "metrics_sha256": "51ca700a14a6dab77f94813565dd64280b3c2d3a3a23741648368bf399fe1438",
+      "nll": 6.952732503414154,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s43_block",
+      "checkpoint_sha256": "53870c99621866b9af5668603841e0a6abe5d5824e4025d3a6fdb3905e805727",
+      "metrics_sha256": "74dbeb4a9947ec545c0163409aac77ec707443378459b8bf6eee49125952d0ee",
+      "nll": 6.952328324317932,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s43_loss_chunks",
+      "checkpoint_sha256": "b99313a1c825549740f34832eb4beb340ea2cfe503de66d4ee97cc151635f187",
+      "metrics_sha256": "f3cd6ffd9986a79afdc3e635fa5fd6bc09c1c8392d8d24d2488f915c9c8b86ce",
+      "nll": 6.952246725559235,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s43_native",
+      "checkpoint_sha256": "53870c99621866b9af5668603841e0a6abe5d5824e4025d3a6fdb3905e805727",
+      "metrics_sha256": "a375e8cfc77943e0d606afe2498db7f86ff76157a8db035a035462a2ffdc9455",
+      "nll": 6.952328324317932,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b8_t512_s17_block",
+      "checkpoint_sha256": "3f4f4a4b9317fee1ab34b9f263d12db896ae7915b4bca4fc777e526f784b192d",
+      "metrics_sha256": "b9b3348cdedb6b214ac3e692ba106c3057f99e378196960ca5b34904fb2c0838",
+      "nll": 6.927008748054504,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b8_t512_s17_loss_chunks",
+      "checkpoint_sha256": "286e4025acb5c0414c805341ed167986bf309119049d6a9f567c33e41772e6a0",
+      "metrics_sha256": "dfd03fb3053c1cf41da0f070bb3c72f24b3b5f22943d8d787541f205dd27fca8",
+      "nll": 6.939770400524139,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b8_t512_s17_native",
+      "checkpoint_sha256": "db990f063fde4b5cad1d46c61e58eba8644bf2e03e9ef42555bd7c705d513c7e",
+      "metrics_sha256": "17274a289dfe1dd1bbaa4f15ec77af59df103a72ee8e571bb50469e5b913cd5a",
+      "nll": 6.926682949066162,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b8_t512_s29_block",
+      "checkpoint_sha256": "35c42164ba1afa35fd81c9bcc00b433f0512bcec3a3c5bd96d44362437876829",
+      "metrics_sha256": "984dad091483564fbcb46769a30c7124b8c166fad2ca8a1412d0aeec86aec88e",
+      "nll": 6.926952302455902,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b8_t512_s29_loss_chunks",
+      "checkpoint_sha256": "3d8602d7236ef6b201c98184acdc5fd741ee9b15fbaed1daa4196023be7dc9ff",
+      "metrics_sha256": "f5b8a4187ce1e0495f8f7e5355228e3510e30f9ba51ba7bde6faa426d1e6155e",
+      "nll": 6.927059769630432,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b8_t512_s29_native",
+      "checkpoint_sha256": "25524e8029853f15bb4ac8b536b5dbeb0eaeb4768f199951b6f405700b65676f",
+      "metrics_sha256": "e572963485295f88e68c7d56b411ac239bc634d2fa9851cb0d2f43573f0daffc",
+      "nll": 6.926956593990326,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b8_t512_s43_block",
+      "checkpoint_sha256": "847b805d1bc5586f99cb51bf88fa3a70709c8ad17c9ca96c60178bfa903642f1",
+      "metrics_sha256": "845e17b12c5788566c0bc7fcffeb87b9c726d3ed18b516da31ce5f87aa2d507c",
+      "nll": 6.921499967575073,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b8_t512_s43_loss_chunks",
+      "checkpoint_sha256": "516249edee1b39ccb0c412192dee503143b472758358673656e4ca34bb5c04f6",
+      "metrics_sha256": "ed6fd29568b4599a84616e93aead912c5d9e0faa787c3ec30eb919f9a95565ea",
+      "nll": 6.9215200543403625,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_narrow_b8_t512_s43_native",
+      "checkpoint_sha256": "ed832f5e287542490310f5f4ed8eeca57c1dbc2b9fcabffb589ed0221720970f",
+      "metrics_sha256": "1f6a35e49b291f9a6f029ee88acbfc48143fc0aecf1e0a7471fba5a30e042b5a",
+      "nll": 6.921497225761414,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b16_t128_s17_block",
+      "checkpoint_sha256": "b86996cb00b4458db3568973acc413565e7adfe259e6366cef92301aa16790f3",
+      "metrics_sha256": "d2c2e804cd85862ff20fd750c9f7686223e3d035e81d47a4729b56a277237a8d",
+      "nll": 6.9681079387664795,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b16_t128_s17_loss_chunks",
+      "checkpoint_sha256": "b3159ff56e2e691a89e2864e71f6f90cba898559d53425a775745f2bab98d0a1",
+      "metrics_sha256": "0f5cafe0dcb607ecc2306bf1ee1c86bf68768d19fd87334220a1fc17047101e5",
+      "nll": 6.972231864929199,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b16_t128_s17_native",
+      "checkpoint_sha256": "b86996cb00b4458db3568973acc413565e7adfe259e6366cef92301aa16790f3",
+      "metrics_sha256": "148af7d15815e3f3b5b1e97218d87ad39536d9d1fe772657a2db131f9b54834d",
+      "nll": 6.9681079387664795,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b16_t128_s29_block",
+      "checkpoint_sha256": "15cf131d3a45ae30e468c059ddf583a3b0848d7ecc97631c1a2d6a5fb22815e7",
+      "metrics_sha256": "6b7aa54cfddb6ce1963aba492d6d263e805b8503b5fcedf514309be2682aaf36",
+      "nll": 6.957303702831268,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b16_t128_s29_loss_chunks",
+      "checkpoint_sha256": "0ccf3094ffdf5897ff38b67f998360c03c75623288d690488e27ccfe3afacbc6",
+      "metrics_sha256": "92d62f83491edd852793e39720b1250c8ab6e55f915359ca366b6504129e561a",
+      "nll": 6.953418135643005,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b16_t128_s29_native",
+      "checkpoint_sha256": "15cf131d3a45ae30e468c059ddf583a3b0848d7ecc97631c1a2d6a5fb22815e7",
+      "metrics_sha256": "0d6df1ef3bbe5b1629540cad8a7cd5fc98e354d23a2863caeead6ba45590b4e7",
+      "nll": 6.957303702831268,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b16_t128_s43_block",
+      "checkpoint_sha256": "ce7962229c7bfa24ff65bbc023c2ad548dbf24a92ebb3a6c8cd46c43c3808823",
+      "metrics_sha256": "f88f7bb163b3842bbf627ef27dd65962b0d5e6444596433d72444551c445f8b0",
+      "nll": 6.967312455177307,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b16_t128_s43_loss_chunks",
+      "checkpoint_sha256": "f8e7b18a6108d42ef779ea31874b1fcd5d1993477723473619a7cc90a62b088a",
+      "metrics_sha256": "7465b634355ed9f43d708462e59f746674fdfa6c7d133393ff557175e86e25df",
+      "nll": 6.9667553305625916,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b16_t128_s43_native",
+      "checkpoint_sha256": "ce7962229c7bfa24ff65bbc023c2ad548dbf24a92ebb3a6c8cd46c43c3808823",
+      "metrics_sha256": "2a6785cce3b98c406daf44d61f16d27077095263d5e7c7289b23b5425610db7d",
+      "nll": 6.967312455177307,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b8_t512_s17_block",
+      "checkpoint_sha256": "2bd45ca6dfa55d96ef98b5350eb05df9c3588e1ef82a571ebb1ff5cab8f38db8",
+      "metrics_sha256": "4bc277304e394a2f873697e3c983879c2e98e8859bd74163fcfbd4f110c007ab",
+      "nll": 6.927052795886993,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b8_t512_s17_loss_chunks",
+      "checkpoint_sha256": "c988108997641ad56a6a97864d6e4c8e10d61b43abfe64c7ae6653284b99d730",
+      "metrics_sha256": "8035488e0d7327ebd9a4cf0dbc688c7b2f53b41b465a002b6dafd537fb37fe59",
+      "nll": 6.924974501132965,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b8_t512_s17_native",
+      "checkpoint_sha256": "203257f26e710069049109e11d6b61d26b0712bcf81e5050f36127ea6b631308",
+      "metrics_sha256": "7c372c81e90eff8eeb7f1566693038a411525ccee225ce04b22d6905ce85d14c",
+      "nll": 6.927052795886993,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b8_t512_s29_block",
+      "checkpoint_sha256": "da92e49105b548116d5f60ad5e84ce14b6493bbb7a7410cb0a6826755863f100",
+      "metrics_sha256": "f42ae6383db53d85fb5d78f77c12d62420d6b45e1885886e86bd7b20563e0c23",
+      "nll": 6.909060120582581,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b8_t512_s29_loss_chunks",
+      "checkpoint_sha256": "492e62b34832a3840b88af0bf968d0d17009263d3d7484a71aed30c8db81f908",
+      "metrics_sha256": "ff785c830780f7f50c27b97103c56724e45069ebe31ba6512af0d6697d04e25f",
+      "nll": 6.911015272140503,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b8_t512_s29_native",
+      "checkpoint_sha256": "4acdf6e25892139c8b75fd460f9a9c999db23b7363e101f991b8168540e5b3c4",
+      "metrics_sha256": "0da44496ca9b8979f6c2136457535037f9affe5109f0a147bc8e00778a37d421",
+      "nll": 6.909060120582581,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b8_t512_s43_block",
+      "checkpoint_sha256": "804d725a6bbfe4ce51fd63aea0b4bd005d7e1ac70818f6372c2eacb6e78077bc",
+      "metrics_sha256": "72cca9e99e1cdc75003d3bf3cd05438d0ac7cdebe3af37d3fb6816417748072e",
+      "nll": 6.916287183761597,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b8_t512_s43_loss_chunks",
+      "checkpoint_sha256": "6b1e4197aa3d8c116f8015f6a6909501eabde8906f242a67ea5ccba6a6275c4f",
+      "metrics_sha256": "b88c623bc5bb56ccb5fef92d0e5598ba83cb356da12a36d681d6faaa60b6235d",
+      "nll": 6.9166505336761475,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "swiglu_b8_t512_s43_native",
+      "checkpoint_sha256": "bacbacbf1e90b99252a0913ae77ad2e6fa1f1e83e7f94b01fa6ca48b077ae73d",
+      "metrics_sha256": "b2353959a7c319436b7d12012658f3043b29f78ae6d4615d0143cebbc0c10745",
+      "nll": 6.916287183761597,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_b16_t128_s17_loss_chunks",
+      "checkpoint_sha256": "19f9725e5e46562975619a088b6288876e900155456beee71137b593ca1d9c1c",
+      "metrics_sha256": "d85407261f9aa38b3eecc966a268fb0ed3e7d3dcdd5789fe393fe8812766a3ac",
+      "nll": 8.22411060333252,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    },
+    {
+      "key": "gelu_b16_t128_s17_native",
+      "checkpoint_sha256": "203f84c8bcb584950b7507828d494410a119058867962c35a1b8310ec79e7747",
+      "metrics_sha256": "645899ad2d2b9be9a66b63b0eedb4665fa3afed54f442adff8c1921c72d9a9dc",
+      "nll": 6.935555994510651,
+      "exact_score_match": true,
+      "parameter_hashes_match": true,
+      "data_order_match": true
+    }
+  ],
+  "source_hashes_match": true
+}

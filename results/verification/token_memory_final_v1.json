@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "completed_initial_cases": 22,
+  "replication_cases": 36,
+  "audited_checkpoints": 38,
+  "pytest_passed": 111,
+  "helper_tests_included": 14,
+  "separate_small_model_qualification_cases": 40,
+  "all_frozen_source_hashes_match": true,
+  "all_frozen_gates_recomputed": true,
+  "broad_architectural_goal_achieved": false,
+  "files": {
+    "research/token_memory_results.md": "9de511049cbc7db04ad1d83bf85afd23f9748894f261ddc086970dbdd8c1befa",
+    "src/core/token_memory.py": "211af447fb6eae3dc11cedda18ebe284fad0918bacdcb8c5549777b82f11a109",
+    "tests/test_token_memory.py": "aa0aea4f8f6ec9799df57b2449f99455d8c19077658c967393abb17e77d10c2b",
+    "results/token_memory_replication_v1/result.json": "37f7253a5ae883589a182f16e62632386c7272d166de3eb46617cb8cdb37c28b",
+    "results/token_memory_v1/result.json": "d2460723fa19c07f96d393926df503a885fa4f48892e90792aba26bbfd4265c2",
+    "results/token_memory_replication_v1/audit.json": "0bbf1e98737c0de1cc03110e2b7a3c11ddf31c4cdcc2fc836558e46470e9984d",
+    "results/token_memory_replication_v1/tests.log": "ecbfdb945f41bbaccaddcbf03965bfe61b72a7b9fd0e8a2466edcb60c20a9565",
+    "research/figures/token_memory.png": "61e3736c9c60c92770ccb58f77c3e8e6c1da8f5b8e02a666cba27c724bd27443"
+  }
+}

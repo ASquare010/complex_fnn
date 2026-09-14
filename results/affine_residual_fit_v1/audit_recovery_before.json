@@ -1,0 +1,11 @@
+{
+  "purpose": "Postprocessing only; no retraining, checkpoint rewrite or gate change",
+  "runtime_change": "Fresh process, PYTHONMALLOC=malloc, PYTHONHASHSEED=107; root cause of native access violations remains unproven",
+  "before": {
+    "results\\affine_residual_fit_v1\\result.json": "e6238ed4b1a456a01b345e7a60bb8509e6eab91d696b757c76b84e915a87508c",
+    "results\\affine_residual_fit_v1\\protocol.json": "5098d9b9d41df204b4226060b72d5a555a95248730172484967e716742005ace",
+    "results\\affine_residual_fit_v1\\source\\audit.py": "e9b50d8b2380d2f800e6e7666d0e7201438293f9ffbaa70f62a45132233453ec",
+    "results\\affine_residual_fit_v1\\audit.log": "7a4a9fb0fcddba322abfb7ae4907ebb8a217a6ba09964e690e562884eb29f8d9",
+    "results\\affine_residual_fit_v1\\audit_exit.txt": "5205fef41c0db63d59104e9f7f636e546fddc5ec46e07a509335cf0fe255b877"
+  }
+}

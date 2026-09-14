@@ -1,0 +1,12 @@
+{
+  "change": "Teacher-reference verification uses its original batch512; student rescoring remains257 and all tolerances unchanged",
+  "training_repeated": false,
+  "files": {
+    "results\\sobolev_selection_v1\\audit.log": "07a8dd85d953869b610a36942f6ca24b92a1377b2f8176ad3f4ee57ca54b6584",
+    "results\\sobolev_selection_v1\\audit_exit.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "results\\sobolev_selection_v1\\audit_failure.json": "8111f7e175878d8535524c1b3ea946e63a539dc08dea2ea85e6739f55c7e3cba",
+    "results\\sobolev_selection_v1\\result.json": "e245dd1792ad543637bbf87ae9b17caa9a5552b8e77c9f12fb8ab660f27826f5",
+    "results\\sobolev_selection_v1\\protocol.json": "2a200e414ece443ea22e8e64eafcd8898bb0664f5673dc45e606d765b5c27ba4",
+    "results\\sobolev_selection_v1\\source\\audit.py": "56e4a3fffaa6c0a93ee0b960fa6b8ff10a8859ab83ded8146f0bdaf6c5a5b2ac"
+  }
+}

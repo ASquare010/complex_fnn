@@ -1,0 +1,3 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\token_memory_duration_recovery_v1\\source\\study.py\", line 163, in <module>\n    run()\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\token_memory_duration_recovery_v1\\source\\study.py\", line 94, in run\n    raise RuntimeError(f\"Recovery worker {label} failed: {code}\")\nRuntimeError: Recovery worker b16_t128_s17_loss_chunks failed: 3221225477\n"
+}

@@ -1,0 +1,741 @@
+{
+  "cases": [
+    {
+      "label": "wikitext2__fp32_default_chunks__offload",
+      "mode": "offload",
+      "dataset": "wikitext2",
+      "baseline": 155589632,
+      "peak": 293955072,
+      "final_allocated": 192683008,
+      "markers": [
+        {
+          "name": "forward_start",
+          "index": 0,
+          "allocated": 155589632
+        },
+        {
+          "name": "forward_end",
+          "index": 1016,
+          "allocated": 174514176
+        },
+        {
+          "name": "block_7_enter",
+          "index": 1271,
+          "allocated": 174466560
+        },
+        {
+          "name": "block_7_exit",
+          "index": 1345,
+          "allocated": 258746880
+        },
+        {
+          "name": "block_6_enter",
+          "index": 1552,
+          "allocated": 178268672
+        },
+        {
+          "name": "block_6_exit",
+          "index": 1626,
+          "allocated": 262548992
+        },
+        {
+          "name": "block_5_enter",
+          "index": 1833,
+          "allocated": 182359552
+        },
+        {
+          "name": "block_5_exit",
+          "index": 1907,
+          "allocated": 266639872
+        },
+        {
+          "name": "block_4_enter",
+          "index": 2114,
+          "allocated": 186450432
+        },
+        {
+          "name": "block_4_exit",
+          "index": 2188,
+          "allocated": 270730752
+        },
+        {
+          "name": "block_3_enter",
+          "index": 2395,
+          "allocated": 190213632
+        },
+        {
+          "name": "block_3_exit",
+          "index": 2469,
+          "allocated": 274493952
+        },
+        {
+          "name": "block_2_enter",
+          "index": 2676,
+          "allocated": 193976832
+        },
+        {
+          "name": "block_2_exit",
+          "index": 2750,
+          "allocated": 278781440
+        },
+        {
+          "name": "block_1_enter",
+          "index": 2957,
+          "allocated": 197740032
+        },
+        {
+          "name": "block_1_exit",
+          "index": 3031,
+          "allocated": 282020352
+        },
+        {
+          "name": "block_0_enter",
+          "index": 3238,
+          "allocated": 201503232
+        },
+        {
+          "name": "block_0_exit",
+          "index": 3312,
+          "allocated": 285783552
+        },
+        {
+          "name": "backward_end",
+          "index": 3570,
+          "allocated": 192683008
+        }
+      ],
+      "phases": [
+        {
+          "name": "construction",
+          "allocated": 138550272,
+          "peak": 138584064,
+          "reserved": 161480704
+        },
+        {
+          "name": "warmup_0",
+          "allocated": 193534976,
+          "peak": 294807040,
+          "reserved": 322961408
+        },
+        {
+          "name": "warmup_1",
+          "allocated": 192683008,
+          "peak": 294807040,
+          "reserved": 322961408
+        },
+        {
+          "name": "warmup_release",
+          "allocated": 155589632,
+          "peak": 294807040,
+          "reserved": 322961408
+        },
+        {
+          "name": "traced_backward",
+          "allocated": 192683008,
+          "peak": 293955072,
+          "reserved": 322961408
+        },
+        {
+          "name": "serialization",
+          "allocated": 192683008,
+          "peak": 293955072,
+          "reserved": 322961408
+        },
+        {
+          "name": "state_verification",
+          "allocated": 155589632,
+          "peak": 293955072,
+          "reserved": 322961408
+        }
+      ],
+      "gradient": {
+        "path": "results/backward_allocation_v1/runs/wikitext2__fp32_default_chunks__offload/gradient.pt",
+        "sha256": "a292a6920a9426d4007cc506f05780cba3cf68d0fd13a942ff7badcd2b1cb501",
+        "tree_hash": "9036140d4decbe2c835c6d431e52bc6957112eedb7b2cfba8fad93cf04753cb9",
+        "finite": true
+      },
+      "gradient_global": 6.7597380523657e-08,
+      "gradient_max_tensor": 1.8244695758344804e-07,
+      "loss_error": 0.0,
+      "backwards": 3,
+      "training_updates": 0,
+      "state_unchanged": true,
+      "h121_peak": 294807040,
+      "events": 3572
+    },
+    {
+      "label": "wikitext2__fp32_default_chunks__native",
+      "mode": "native",
+      "dataset": "wikitext2",
+      "baseline": 155589632,
+      "peak": 310958592,
+      "final_allocated": 193862656,
+      "markers": [
+        {
+          "name": "forward_start",
+          "index": 0,
+          "allocated": 155589632
+        },
+        {
+          "name": "forward_end",
+          "index": 1000,
+          "allocated": 224845824
+        },
+        {
+          "name": "block_7_enter",
+          "index": 1254,
+          "allocated": 218506752
+        },
+        {
+          "name": "block_7_exit",
+          "index": 1328,
+          "allocated": 302787072
+        },
+        {
+          "name": "block_6_enter",
+          "index": 1534,
+          "allocated": 216017408
+        },
+        {
+          "name": "block_6_exit",
+          "index": 1608,
+          "allocated": 300297728
+        },
+        {
+          "name": "block_5_enter",
+          "index": 1814,
+          "allocated": 213816832
+        },
+        {
+          "name": "block_5_exit",
+          "index": 1888,
+          "allocated": 298097152
+        },
+        {
+          "name": "block_4_enter",
+          "index": 2094,
+          "allocated": 211616256
+        },
+        {
+          "name": "block_4_exit",
+          "index": 2168,
+          "allocated": 295896576
+        },
+        {
+          "name": "block_3_enter",
+          "index": 2374,
+          "allocated": 209415680
+        },
+        {
+          "name": "block_3_exit",
+          "index": 2448,
+          "allocated": 293696000
+        },
+        {
+          "name": "block_2_enter",
+          "index": 2654,
+          "allocated": 206887424
+        },
+        {
+          "name": "block_2_exit",
+          "index": 2728,
+          "allocated": 292085248
+        },
+        {
+          "name": "block_1_enter",
+          "index": 2934,
+          "allocated": 204359168
+        },
+        {
+          "name": "block_1_exit",
+          "index": 3008,
+          "allocated": 289556992
+        },
+        {
+          "name": "block_0_enter",
+          "index": 3214,
+          "allocated": 201830912
+        },
+        {
+          "name": "block_0_exit",
+          "index": 3288,
+          "allocated": 286111232
+        },
+        {
+          "name": "backward_end",
+          "index": 3546,
+          "allocated": 193862656
+        }
+      ],
+      "phases": [
+        {
+          "name": "construction",
+          "allocated": 138550272,
+          "peak": 138584064,
+          "reserved": 161480704
+        },
+        {
+          "name": "warmup_0",
+          "allocated": 193862656,
+          "peak": 310958592,
+          "reserved": 364904448
+        },
+        {
+          "name": "warmup_1",
+          "allocated": 193862656,
+          "peak": 310958592,
+          "reserved": 364904448
+        },
+        {
+          "name": "warmup_release",
+          "allocated": 155589632,
+          "peak": 310958592,
+          "reserved": 364904448
+        },
+        {
+          "name": "traced_backward",
+          "allocated": 193862656,
+          "peak": 310958592,
+          "reserved": 364904448
+        },
+        {
+          "name": "serialization",
+          "allocated": 193862656,
+          "peak": 310958592,
+          "reserved": 364904448
+        },
+        {
+          "name": "state_verification",
+          "allocated": 155589632,
+          "peak": 310958592,
+          "reserved": 364904448
+        }
+      ],
+      "gradient": {
+        "path": "results/backward_allocation_v1/runs/wikitext2__fp32_default_chunks__native/gradient.pt",
+        "sha256": "b1e30e36490f1115aec86a67e4ac6920461a3d4d38db95794d876450fbd78736",
+        "tree_hash": "a9212d3c3bf794fc1a3e761d7ebfa910daa11a426def70302700baa639d56a5d",
+        "finite": true
+      },
+      "gradient_global": 5.5280754978314185e-08,
+      "gradient_max_tensor": 1.9856947782301892e-07,
+      "loss_error": 0.0,
+      "backwards": 3,
+      "training_updates": 0,
+      "state_unchanged": true,
+      "h121_peak": 310958592,
+      "events": 3548
+    },
+    {
+      "label": "tinystories__fp32_default_chunks__offload",
+      "mode": "offload",
+      "dataset": "tinystories",
+      "baseline": 149110272,
+      "peak": 288451584,
+      "final_allocated": 187179520,
+      "markers": [
+        {
+          "name": "forward_start",
+          "index": 0,
+          "allocated": 149110272
+        },
+        {
+          "name": "forward_end",
+          "index": 1016,
+          "allocated": 168034816
+        },
+        {
+          "name": "block_7_enter",
+          "index": 1271,
+          "allocated": 167987200
+        },
+        {
+          "name": "block_7_exit",
+          "index": 1345,
+          "allocated": 252267520
+        },
+        {
+          "name": "block_6_enter",
+          "index": 1552,
+          "allocated": 172078080
+        },
+        {
+          "name": "block_6_exit",
+          "index": 1626,
+          "allocated": 256358400
+        },
+        {
+          "name": "block_5_enter",
+          "index": 1833,
+          "allocated": 176168960
+        },
+        {
+          "name": "block_5_exit",
+          "index": 1907,
+          "allocated": 260449280
+        },
+        {
+          "name": "block_4_enter",
+          "index": 2114,
+          "allocated": 180946944
+        },
+        {
+          "name": "block_4_exit",
+          "index": 2188,
+          "allocated": 265227264
+        },
+        {
+          "name": "block_3_enter",
+          "index": 2395,
+          "allocated": 184710144
+        },
+        {
+          "name": "block_3_exit",
+          "index": 2469,
+          "allocated": 268990464
+        },
+        {
+          "name": "block_2_enter",
+          "index": 2676,
+          "allocated": 188473344
+        },
+        {
+          "name": "block_2_exit",
+          "index": 2750,
+          "allocated": 273277952
+        },
+        {
+          "name": "block_1_enter",
+          "index": 2957,
+          "allocated": 192236544
+        },
+        {
+          "name": "block_1_exit",
+          "index": 3031,
+          "allocated": 276516864
+        },
+        {
+          "name": "block_0_enter",
+          "index": 3238,
+          "allocated": 195999744
+        },
+        {
+          "name": "block_0_exit",
+          "index": 3312,
+          "allocated": 280280064
+        },
+        {
+          "name": "backward_end",
+          "index": 3570,
+          "allocated": 187179520
+        }
+      ],
+      "phases": [
+        {
+          "name": "construction",
+          "allocated": 132070912,
+          "peak": 132104704,
+          "reserved": 157286400
+        },
+        {
+          "name": "warmup_0",
+          "allocated": 188031488,
+          "peak": 289303552,
+          "reserved": 318767104
+        },
+        {
+          "name": "warmup_1",
+          "allocated": 187179520,
+          "peak": 289303552,
+          "reserved": 318767104
+        },
+        {
+          "name": "warmup_release",
+          "allocated": 149110272,
+          "peak": 289303552,
+          "reserved": 318767104
+        },
+        {
+          "name": "traced_backward",
+          "allocated": 187179520,
+          "peak": 288451584,
+          "reserved": 318767104
+        },
+        {
+          "name": "serialization",
+          "allocated": 187179520,
+          "peak": 288451584,
+          "reserved": 318767104
+        },
+        {
+          "name": "state_verification",
+          "allocated": 149110272,
+          "peak": 288451584,
+          "reserved": 318767104
+        }
+      ],
+      "gradient": {
+        "path": "results/backward_allocation_v1/runs/tinystories__fp32_default_chunks__offload/gradient.pt",
+        "sha256": "2634b541261a2b3b537e5addcf14d0cf3e13ed272387cc197706eca5ee165b26",
+        "tree_hash": "c7adb0a8a55ad096737be88bc5e506d2c804f585aa6bf9d85eed90283c3ed6cf",
+        "finite": true
+      },
+      "gradient_global": 7.778389939511908e-08,
+      "gradient_max_tensor": 1.5141930342988304e-07,
+      "loss_error": 0.0,
+      "backwards": 3,
+      "training_updates": 0,
+      "state_unchanged": true,
+      "h121_peak": 289303552,
+      "events": 3572
+    },
+    {
+      "label": "tinystories__fp32_default_chunks__native",
+      "mode": "native",
+      "dataset": "tinystories",
+      "baseline": 149110272,
+      "peak": 304479232,
+      "final_allocated": 188359168,
+      "markers": [
+        {
+          "name": "forward_start",
+          "index": 0,
+          "allocated": 149110272
+        },
+        {
+          "name": "forward_end",
+          "index": 1000,
+          "allocated": 218366464
+        },
+        {
+          "name": "block_7_enter",
+          "index": 1254,
+          "allocated": 212027392
+        },
+        {
+          "name": "block_7_exit",
+          "index": 1328,
+          "allocated": 296307712
+        },
+        {
+          "name": "block_6_enter",
+          "index": 1534,
+          "allocated": 209826816
+        },
+        {
+          "name": "block_6_exit",
+          "index": 1608,
+          "allocated": 294107136
+        },
+        {
+          "name": "block_5_enter",
+          "index": 1814,
+          "allocated": 207626240
+        },
+        {
+          "name": "block_5_exit",
+          "index": 1888,
+          "allocated": 291906560
+        },
+        {
+          "name": "block_4_enter",
+          "index": 2094,
+          "allocated": 205425664
+        },
+        {
+          "name": "block_4_exit",
+          "index": 2168,
+          "allocated": 289705984
+        },
+        {
+          "name": "block_3_enter",
+          "index": 2374,
+          "allocated": 203912192
+        },
+        {
+          "name": "block_3_exit",
+          "index": 2448,
+          "allocated": 288192512
+        },
+        {
+          "name": "block_2_enter",
+          "index": 2654,
+          "allocated": 201383936
+        },
+        {
+          "name": "block_2_exit",
+          "index": 2728,
+          "allocated": 286581760
+        },
+        {
+          "name": "block_1_enter",
+          "index": 2934,
+          "allocated": 198855680
+        },
+        {
+          "name": "block_1_exit",
+          "index": 3008,
+          "allocated": 284053504
+        },
+        {
+          "name": "block_0_enter",
+          "index": 3214,
+          "allocated": 196327424
+        },
+        {
+          "name": "block_0_exit",
+          "index": 3288,
+          "allocated": 280607744
+        },
+        {
+          "name": "backward_end",
+          "index": 3546,
+          "allocated": 188359168
+        }
+      ],
+      "phases": [
+        {
+          "name": "construction",
+          "allocated": 132070912,
+          "peak": 132104704,
+          "reserved": 157286400
+        },
+        {
+          "name": "warmup_0",
+          "allocated": 188359168,
+          "peak": 304479232,
+          "reserved": 360710144
+        },
+        {
+          "name": "warmup_1",
+          "allocated": 188359168,
+          "peak": 304479232,
+          "reserved": 360710144
+        },
+        {
+          "name": "warmup_release",
+          "allocated": 149110272,
+          "peak": 304479232,
+          "reserved": 360710144
+        },
+        {
+          "name": "traced_backward",
+          "allocated": 188359168,
+          "peak": 304479232,
+          "reserved": 360710144
+        },
+        {
+          "name": "serialization",
+          "allocated": 188359168,
+          "peak": 304479232,
+          "reserved": 360710144
+        },
+        {
+          "name": "state_verification",
+          "allocated": 149110272,
+          "peak": 304479232,
+          "reserved": 360710144
+        }
+      ],
+      "gradient": {
+        "path": "results/backward_allocation_v1/runs/tinystories__fp32_default_chunks__native/gradient.pt",
+        "sha256": "30113b54373385612900fbbc15095d23d9e60ae045a7707f7ded103c4ad4dafa",
+        "tree_hash": "24facecbbc10cd665e5cb83249aad89dd4176b06faefad6d6166376488a6625f",
+        "finite": true
+      },
+      "gradient_global": 0.0,
+      "gradient_max_tensor": 0.0,
+      "loss_error": 0.0,
+      "backwards": 3,
+      "training_updates": 0,
+      "state_unchanged": true,
+      "h121_peak": 304479232,
+      "events": 3548
+    }
+  ],
+  "boundaries": [
+    {
+      "gpu": {
+        "allocated": 0,
+        "reserved": 0
+      },
+      "host": {
+        "allocated_bytes.current": 0,
+        "allocated_bytes.peak": 0,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 0,
+        "allocations.current": 0,
+        "allocations.peak": 0,
+        "active_requests.current": 0,
+        "active_requests.peak": 0
+      }
+    },
+    {
+      "gpu": {
+        "allocated": 0,
+        "reserved": 0
+      },
+      "host": {
+        "allocated_bytes.current": 67108868,
+        "allocated_bytes.peak": 67108868,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 9,
+        "allocations.peak": 9,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "gpu": {
+        "allocated": 0,
+        "reserved": 0
+      },
+      "host": {
+        "allocated_bytes.current": 67108868,
+        "allocated_bytes.peak": 67108868,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 9,
+        "allocations.peak": 9,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      }
+    },
+    {
+      "gpu": {
+        "allocated": 0,
+        "reserved": 0
+      },
+      "host": {
+        "allocated_bytes.current": 67108868,
+        "allocated_bytes.peak": 67108868,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 9,
+        "allocations.peak": 9,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "gpu": {
+        "allocated": 0,
+        "reserved": 0
+      },
+      "host": {
+        "allocated_bytes.current": 67108868,
+        "allocated_bytes.peak": 67108868,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 9,
+        "allocations.peak": 9,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      }
+    }
+  ],
+  "backwards": 12,
+  "training_updates": 0,
+  "broad_goal_achieved": false
+}

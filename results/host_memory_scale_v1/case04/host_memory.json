@@ -1,0 +1,41 @@
+{
+  "before_torch": {
+    "cb": 80,
+    "PageFaultCount": 13700,
+    "PeakWorkingSetSize": 22425600,
+    "WorkingSetSize": 20439040,
+    "QuotaPeakPagedPoolUsage": 138112,
+    "QuotaPagedPoolUsage": 138040,
+    "QuotaPeakNonPagedPoolUsage": 11296,
+    "QuotaNonPagedPoolUsage": 11296,
+    "PagefileUsage": 13041664,
+    "PeakPagefileUsage": 15843328,
+    "PrivateUsage": 13041664
+  },
+  "before_worker": {
+    "cb": 80,
+    "PageFaultCount": 171396,
+    "PeakWorkingSetSize": 562327552,
+    "WorkingSetSize": 555835392,
+    "QuotaPeakPagedPoolUsage": 6245632,
+    "QuotaPagedPoolUsage": 6245440,
+    "QuotaPeakNonPagedPoolUsage": 46976,
+    "QuotaNonPagedPoolUsage": 46368,
+    "PagefileUsage": 1734639616,
+    "PeakPagefileUsage": 1741500416,
+    "PrivateUsage": 1734639616
+  },
+  "after_worker": {
+    "cb": 80,
+    "PageFaultCount": 594923,
+    "PeakWorkingSetSize": 1649172480,
+    "WorkingSetSize": 1615269888,
+    "QuotaPeakPagedPoolUsage": 6679072,
+    "QuotaPagedPoolUsage": 6662688,
+    "QuotaPeakNonPagedPoolUsage": 87512,
+    "QuotaNonPagedPoolUsage": 83568,
+    "PagefileUsage": 3365470208,
+    "PeakPagefileUsage": 4295888896,
+    "PrivateUsage": 3365470208
+  }
+}

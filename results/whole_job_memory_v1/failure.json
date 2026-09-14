@@ -1,0 +1,3 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\whole_job_memory_v1\\source\\study.py\", line 126, in <module>\n    run()\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\whole_job_memory_v1\\source\\study.py\", line 54, in run\n    child(\"qualification\", [\"qualify\"])\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\whole_job_memory_v1\\source\\study.py\", line 48, in child\n    raise RuntimeError(f\"H112 worker {label} failed: {code}\")\nRuntimeError: H112 worker qualification failed: 3221225477\n"
+}

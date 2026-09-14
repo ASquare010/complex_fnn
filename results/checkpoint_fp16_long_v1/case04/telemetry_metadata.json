@@ -1,0 +1,1 @@
+{"start_ns": 1789307714083363600, "timezone": "Pakistan Standard Time", "fields": "timestamp,index,uuid,pstate,temperature.gpu,clocks.sm,clocks.mem,power.draw,power.limit,utilization.gpu", "end_ns": 1789307842058294500, "monitor_stopped": true}

@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "numerical_recipe_changes": false,
+  "neural_training_retries": 0,
+  "checkpoint_audit_retries": 0,
+  "numeric_test_python": "UV-managed CPython 3.12.9; existing project site-packages",
+  "initial_test_recovery": "107 passed; six existing Triton tests could not locate the bundled C compiler",
+  "compiler_fix": "Set CC to .venv/Lib/site-packages/triton/runtime/tcc/tcc.exe",
+  "triton_recheck": "8 passed",
+  "complete_suite": "113 passed",
+  "plot_recovery": "Separate Matplotlib process reads audited JSON without Torch; manual layout",
+  "additional_shell_failure": "PowerShell 7 CLR startup access violation; later shell commands use Windows PowerShell 5.1",
+  "frozen_sources_unchanged": {
+    "results/spectral_discovery_v1/source/moments.py": "2d764e90c799df999378dbcade5c0cf5f53747e86ed3494ab67825cdad12d0e7",
+    "results/spectral_discovery_v1/source/study.py": "72fe6b6f4ba6d6cb2be8679a1f92da4807400490b47b01c9afe52a8b552cfcc5",
+    "research/spectral_discovery_plan.md": "68ddb9529b1d46f0dfc2203f36e7e90eba41b25bd16fc1f5b1e9a7bfa9f9ae87",
+    "results/nonlinear_residual_v1/source/model.py": "ffc5feb0301dd4ca4c2a68d43d8e5ad812f6645ab47eec8795b9abe9c55c31f3",
+    "results/spectral_fitting_v1/source/model.py": "575811f809bad6f7ce3dcc329ad79a689d950769fff0374e98160121eff637b0",
+    "results/spectral_fitting_v1/source/qualification.py": "18b68634e1f694d35290df3feda16a438e35732757f0abf7b49ca04608d96791",
+    "results/spectral_fitting_v1/source/study.py": "7248c2f98e5f5ef87379e1bd83ff08cff5cdb910cdaa31d23848523f71d3a742",
+    "research/spectral_fitting_plan.md": "999248e8d905b8b89d9a8eeaae0ffb8514108e35f75d3ca25d1ea4de4bdfb46a",
+    "src/core/function_fitting.py": "41b7ec3a30679922dad9b70cba9d4c0479c6d97394979ee93efb7e12e4297682"
+  },
+  "traces": {
+    "tests_original_failure": {
+      "path": "results\\spectral_fitting_v1\\tests_original_failure.log.gz",
+      "uncompressed_sha256": "b139cfbee16eb488f43fada95a502c206eab0791eb100bfe81e27ff12cbbd890"
+    },
+    "tests_recovery": {
+      "path": "results\\spectral_fitting_v1\\tests_recovery.log.gz",
+      "uncompressed_sha256": "9293fea578399694ef68b7a2ceefc74d52dbeef478f1d681654ffd13ed4f1071"
+    },
+    "triton_path_recovery": {
+      "path": "results\\spectral_fitting_v1\\triton_path_recovery.log.gz",
+      "uncompressed_sha256": "d953b17688c3c4121cf1435df6550e793c426c8e56d3706f13f76ea246f8fc35"
+    },
+    "tests_final": {
+      "path": "results\\spectral_fitting_v1\\tests_final.log.gz",
+      "uncompressed_sha256": "2d58bf9648216d77ac4c6706d5f9935720bb64dcc94aa35b5785afef85ea2c63"
+    },
+    "analysis_recovery": {
+      "path": "results\\spectral_fitting_v1\\analysis_recovery.log.gz",
+      "uncompressed_sha256": "4709673e9bfbfbce5d6f177e64848fca8e02d365a10c3583aeff7839f61d0e92"
+    },
+    "analysis_final": {
+      "path": "results\\spectral_fitting_v1\\analysis_final.log.gz",
+      "uncompressed_sha256": "4173ef9daa93be5358d5b65222aa923ee1aec6a32c41752338680a28d32003fe"
+    },
+    "plot_isolated": {
+      "path": "results\\spectral_fitting_v1\\plot_isolated.log.gz",
+      "uncompressed_sha256": "8e7373408c6c558347fa0cf8e0cebb69e0c0dde4782019265b9ac8b8906fd132"
+    }
+  }
+}

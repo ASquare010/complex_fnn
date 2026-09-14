@@ -1,0 +1,20 @@
+{
+  "hashes": {
+    "C:/Users/Cuebric/Desktop/Git/complex_fnn/results/exact_offload_scale_v1/recovery.py": "98791ca29b1937bd584e0a1005da53bedf1cbaf3d383f7c5124fb8a9cafc0c19",
+    "research/exact_offload_scale_recovery_plan.md": "2f99b6a5f68072b5848691bced8e1cc20991600a0f9dc0a83723d6054e25b531",
+    "results/exact_offload_scale_v1/diagnose.py": "f094299f61f7202ea3d1dd17f2ebe0bff3879b7fc25607f25708e1c7845556f1",
+    "results/exact_offload_scale_v1/cleanup_diagnosis.json": "a99e69c0bdeb004d31e5aa888acd8eb91abfa37c3245a76eece8f942308c2461",
+    "results/exact_offload_scale_v1/case00/exit.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "results/exact_offload_scale_v1/case00/final.pt": "77b0d5655212bb1b852677fef6450a0f702cbdf846588964566fee2de0f30a70",
+    "results/exact_offload_scale_v1/case00/history.jsonl": "7f50dd6a0b42b7143f1da3d28e425e92ca8cf7a2a637cb534b5a9190db0592ec",
+    "results/exact_offload_scale_v1/case00/initial_gradients.pt": "8aa179f3c6e4b5857a5ce669b664fb5692cc2bad5de6261565497ac49e69f21d",
+    "results/exact_offload_scale_v1/case00/telemetry.csv": "d8f5b753fee1dadc0e18a501bd1a3290408441fb011e56190086906ca42272c1",
+    "results/exact_offload_scale_v1/case00/telemetry.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/exact_offload_scale_v1/case00/worker.log": "d47c2022dc3893b256a1dde272490c0e2ae31ed6c6a4208db003b48e83ac9739"
+  },
+  "discarded_updates": 30,
+  "discarded_backwards": 31,
+  "accepted_updates": 180,
+  "total_updates": 210,
+  "total_backwards": 217
+}

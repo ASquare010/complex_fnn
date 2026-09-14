@@ -1,0 +1,11 @@
+{
+  "step": 200,
+  "score": {
+    "nll": 5.6811796158079115,
+    "targets": 322560
+  },
+  "path": "step200.pt",
+  "sha256": "c2f7c0920d32b64cc1165f49e7e4168d7c6cb57b61d7a8b70ea1b709ebf63cef",
+  "model_hash": "e59e9bd8bcdce4e761db5ed07ccaa8e8c242906e204a40d84fd2bde6462e4d9f",
+  "sampler_hash": "8af9ca7a53d37fd170f4baea3ba74a91ef7cfa918586cb533018a482d427f831"
+}

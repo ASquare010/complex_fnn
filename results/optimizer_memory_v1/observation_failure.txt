@@ -1,0 +1,16 @@
+Post-analysis observation failure; not a scientific-stage retry.
+
+After profile, audit and analyze completed successfully, a read-only command
+attempted to display the last 30 lines of summary.json using PowerShell.
+The shell exited -1073741819 with:
+
+Fatal error.
+Internal CLR error. (0x80131506)
+   at System.Buffers.SearchValues.Create(System.ReadOnlySpan`1<Char>)
+   at System.Reflection.Metadata.TypeNameParserHelpers..cctor()
+
+The remaining stack traversed TypeNameParser, CustomAttribute and EventSource
+initialization. The complete original tool output remains in the conversation.
+No scientific process was live, no data was changed by this display command,
+and no training or audit was rerun. Read-only inspection continued with cmd.exe.
+This records the observed failure, without claiming a runtime cause or fix.

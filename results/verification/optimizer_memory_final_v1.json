@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "meaning": "Evidence integrity and fixed decisions verified; both memory candidates fail",
+  "all_numerical_audits_passed": true,
+  "component_memory_gate_qualified": false,
+  "training_updates": 360,
+  "training_targets": 1474560,
+  "backwards": 360,
+  "native_audit_scores": 12,
+  "tensor_artifacts": 36,
+  "source_hashes_verified": 152,
+  "maintained_hashes_verified": 61,
+  "scientific_retries": 0,
+  "observation_failure_preserved": true,
+  "broad_goal_achieved": false,
+  "files": {
+    "results/optimizer_memory_v1/source/analyze.py": "306d62c0ee05dd2e773f9bd961bc494e7e6f739d9335efcfca2aa59d66d14ea8",
+    "results/optimizer_memory_v1/source/audit.py": "f3f47dcdf9a24a12edb392994c4d7e4f739146391563921e0f4e19b99b1bcf1f",
+    "results/optimizer_memory_v1/source/launch.py": "adba65f2f414a403d571e755adf8f9d976e7dec3b3cbbf99733284099a76ffa1",
+    "results/optimizer_memory_v1/source/plot.py": "690588da5bb743228bdc19ee1dfe18624993f467fccae5cd75328cfbbacaef34",
+    "results/optimizer_memory_v1/source/prepare.py": "ecebf97e5f7f0428ce05e89cfd11f0795130a4668f5218c3a6f2ccc18232a04f",
+    "results/optimizer_memory_v1/source/prepare_audit.py": "16420911bb69956839f5493ad44b8d577707c5d65dfc6f1c806c1c625b6d0f48",
+    "results/optimizer_memory_v1/source/profile.py": "345946aadc16823bcf8baf69d15dbfc46f9b1c218d7e463c6b838cc688b109aa",
+    "results/optimizer_memory_v1/source/publish.py": "0df9474eb56d5a42d36746f0c86fb81a6b9c85680aa2efab2ec96b6637923c50",
+    "results/optimizer_memory_v1/source/README.md": "7731d5e49824342ab69e74e84b7deadd38e2b715f6433e7d2c7676333880bddc",
+    "results/optimizer_memory_v1/source/report.py": "27ccecffebcdcaaa97908a75869ac21ff9c8b5f23030479dfd3b011328f78c3d",
+    "results/optimizer_memory_v1/analyze_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/optimizer_memory_v1/audit_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/optimizer_memory_v1/plot_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/optimizer_memory_v1/prepare_audit_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/optimizer_memory_v1/prepare_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/optimizer_memory_v1/profile_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/optimizer_memory_v1/publish_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/optimizer_memory_v1/report_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/verification/optimizer_memory_final_v1.py": "a90f84007a7cdf4ada09b601c62b59d1bf206b01e9f90d50dc0d4aa217a31db0",
+    "results/optimizer_memory_v1/protocol.json": "81cbf4cac04b46dc75aa56abc6d1afee6ef2c540cad5907980b4c8551ac05b33",
+    "results/optimizer_memory_v1/audit_protocol.json": "5b2cb04043e375b75c0f01af2850bd2fce355ee5703c97e971d9d3a734965f96",
+    "results/optimizer_memory_v1/summary.json": "5cd63574799d0bef2ba1754d3dc89919fbdba1c5d246419a6f7170350369a558",
+    "results/optimizer_memory_v1/environment.json": "fedfbf4cc42974be9a96b8106f246a738495d14680f85b17c334aeb19fa4fdc3",
+    "results/optimizer_memory_v1/observation_failure.txt": "2c62b5d69ec31d6bc9c2cfec9c034cf6dbdca1d72442d93335127405a4127002",
+    "README.md": "d027361774aac011c2a5860d9208ceff10af1f25f1203cfbc01c71ce03e8bdd0",
+    "research/CURRENT_STATE.md": "5cd10d773c50994a041d318af87880bbd1af57ed0af72ec421f49ea6691f2d5b",
+    "research/PROGRESS_OVERVIEW.md": "1aeb9ad5e18eed04c2fbee5c04f19473e0046ac828b038a3e7718fd22924b81f",
+    "research/idea_bank.md": "983c72bbae5574901c2431555851eccd4046b10e040f8f361ab7c6936ed88151",
+    "research/ARTIFACTS.md": "24357413328f8c418d10b3403b499433349c51d75304037803d42712a5bdea6d",
+    "research/literature.md": "71b822b292d61249179ea0e225c5455ed71f835936c2f2fa6dbda00931a90c56",
+    ".gitignore": "128d16010c5f0fd37308d705ceeceacdab139069bd5574da177a51ad4f432374",
+    "research/optimizer_memory_plan.md": "8a44de1553848f915116b348632d7cc194b1551c01d476eef0155ce1f93bb85c",
+    "research/optimizer_memory_results.md": "011fd5d778c6fd0d676b0538b52570c72bd97bfd9e0c54af97b7aee978c2e198",
+    "research/figures/optimizer_memory.png": "697b0f66ae92cb55a441a201f46644be32fa6d4c63798567a462f30036893913"
+  },
+  "tensor_hashes": {
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__default/first_gradients.pt": "05738fbd574f917c6e808f0a0f6b396d8d5ffeafa6f3c693906f5e60aed0b10f",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__default/first.pt": "6ce68429d2df49dafcd5059eebb37387cf5a4e00ac89342900b099ec886a7c90",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__default/final.pt": "ce3cb730d430217152fd0a361bdbd2da3bf71929d3b061b0cac005e558718698",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__single/first_gradients.pt": "188519e4666aa4072971b0ed2d6764aeeb659e11f8346fd8a546e6e4512e2bbe",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__single/first.pt": "a01e7d273569eaf41f5c77061276a47dd75ec338e68fc1ee9388543cd905d7c3",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__single/final.pt": "a3d227cbf15067bb82bf93bde83136dd55f0a36f48348bd2630e2a0d64d85781",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__fused/first_gradients.pt": "26761f0c7254d2d89d8db01626de04b207f892b494fb5ebbca3c569156f78b34",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__fused/first.pt": "ae8e2d13e83dcb6137962de0cad5ff30770be119f9eaa3fc9ca81263e812273e",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__fused/final.pt": "85ecf0f331304b4f45e1e61c817be6f0aa13ccc7a690478e83408ef890f3abde",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__single/first_gradients.pt": "fe847c33c4891ebe5c06f2e17ebd5e1af5f9a5c6571949b0bcfb67dfb1dd1b50",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__single/first.pt": "c23f1a3bb8772237e66b16900c09b50efa2e2ac09ef984d737e1fa47185c3972",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__single/final.pt": "64df60b616b23e9d89e1cbe6bf01380bd506cfb02c3e4608b92f89bc9238eae2",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__fused/first_gradients.pt": "c9b0f2313e85d065d381756710260c7ff0dc5f8ae4c552f2d17ba82d10402c76",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__fused/first.pt": "feb46a0b06e8903c069bfcb09587bd026711c556bf23323d2eb8bf0b826f4773",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__fused/final.pt": "70def80958fb73670bb4cbf405b30fc72ef702376bdab60d79b734edb2745bca",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__default/first_gradients.pt": "0773d7c20dc71758127ea92d9e0053a950a8a1e5939d8f3409cdf2574d2f28b3",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__default/first.pt": "8ac616733300b718eb67635d7afa0f16366f3fb53374b88bdcadbad1efaeaabc",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__default/final.pt": "a997a345f8ec57e5dc1de04d23e07c74fe5657130d0a66aee99c1fe68ba3470b",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__fused/first_gradients.pt": "a4fa0abaea6b6f819a5bfd7b2b9e1353f516ad99c08599e2129ca531dce8b1d2",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__fused/first.pt": "b223abda8402c997a914676714dbcf78029756c7abb36c4fa234f36481c16bae",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__fused/final.pt": "d84caa0baaa57d922d67e75370404cd353565c9fd61a84a7f68fa49feabec825",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__default/first_gradients.pt": "fad83bc299f3c23052701611702ed56e743cf6ee86d0af60f5dcef197ceb519d",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__default/first.pt": "697f9a4bde44fed8b75e0871f0b48dd2517ce870c0f76bddc69dc21dbd9c6289",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__default/final.pt": "fad4a764131dbb3d61e75f96a388e599741daae42a9cce4bddf66b5766bf84c5",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__single/first_gradients.pt": "af466068006ab683cd7cda88bd764d0e6a5a4d14c32d26b94b6acccdc62802ef",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__single/first.pt": "ecd9c1a1ec5840a17bbe220346ccce83aa607b1a8f740b52e1f89fa184c4caf1",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__single/final.pt": "3349893a4dae106fdebbaf21bcfd53ea1a30e49f4d54bc8e0591ef84acd3c759",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__default/first_gradients.pt": "183bb4a6c915bc0b50b4a8ca70a128372e8ccbaa317e1fd3f3753e3bb7e61b35",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__default/first.pt": "129881e7bf50ba4330f6a465a8566cd39f9cfc01324ef157959b069173fc48cc",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__default/final.pt": "ed3a14f2e533b818d20ea4e7f7c88e296c729045b273758963e35ccd78273667",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__single/first_gradients.pt": "e45c8655b7b1450b3471f56d9df6b1134bfb5e982f1aace8b3ba246ccae13794",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__single/first.pt": "f44a78ccb16b1d1756a4df7d57e0663d4573c0724e7b888db675673383ad838a",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__single/final.pt": "8b0898a5a70116041cd8ee2a8f5ecd6e39d9aec1958727738462f5db70707bba",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__fused/first_gradients.pt": "ef3b1ebb97af7a9e886006507473c51fc333bc1023833043174bc2224360a060",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__fused/first.pt": "e6f942a08a78499ac47af85bc198c11ab3759a4bd93e63fb614d73bca7b2c641",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__fused/final.pt": "1733120286249324b2d5d0e03907d05b7de580ffdf72a6ffcc2c184d122e5958"
+  },
+  "local_metric_hashes": {
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__default/result.json": "e91d01d62ff5b6f485f9139b68dbcc8f71e16b83d1716dd0c3e196a21ed5e05b",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__single/result.json": "6dd8cfbb1bf422f0c6a4fe8d42426ac2044c79deddd95a7caac02f695357e1f9",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_native__fused/result.json": "f3a725607e11be74a7f1ed0bec0d00c99080ffd58aacbecd0f26728564b52480",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__single/result.json": "ea1f40bd7c2cf4f80a14afe975e5d04df7561ae58ede16de82229c7dc24186fa",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__fused/result.json": "6788da30bff4da1d1e8ee858c1f3d820f7a1ba2b46a392388cf730d7b63f4fd4",
+    "results/optimizer_memory_v1/runs/wikitext2__fp32_default_chunks__default/result.json": "f12869bc85633ff98f448a5be110e85b9e068932eca5468fe1416aaf4c031b4a",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__fused/result.json": "129e8e86ac1af1e6c4659dd5fb8884ae7f89a3aa5b9579892f1b0475dd1d16a5",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__default/result.json": "4372a28579e171a2cc1f2d0d86a204d5776260e11e58c35caabc1c8b694ef8e2",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_native__single/result.json": "293b2e54de724bed3c02053d23286a61f6ed899d8583c96f8d2b54fed3aeb4bf",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__default/result.json": "efcad0716663e466b5e30ef7832868f53eaaf9fec73cc4081e14f88738c7acad",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__single/result.json": "526c1a37482e7fdff4aa1fff328f50c05cd63e68fb71088ecf2e1ebf909bd5b5",
+    "results/optimizer_memory_v1/runs/tinystories__fp32_default_chunks__fused/result.json": "c4d5397febdece412b9dbf77a76d6ea52b282c47f672925fb70a20cdc65723ae",
+    "results/optimizer_memory_v1/result.json": "7d91b3c0ea25bc1568a4ae5e4b30cea3e05cd4add18f217870c8f63f017738dc",
+    "results/optimizer_memory_v1/audit.json": "a3dc48dc3c5f058d996ecffd0933bf47ca98de27f02ddadc3435a66cdd3c65e2"
+  },
+  "packed": {
+    "results/optimizer_memory_v1/analyze.log.gz": {
+      "sha256": "b0e1b010c1ea7d3b33aa2ffd83da9137d44553d733d7f97f1a35db98ce18c34a",
+      "unpacked_bytes": 152
+    },
+    "results/optimizer_memory_v1/audit.json.gz": {
+      "sha256": "f0b2a2e72e3f70739920a5d01c2f85b93f3bffd30df04787393828d54b69fcc8",
+      "unpacked_bytes": 15201
+    },
+    "results/optimizer_memory_v1/audit.log.gz": {
+      "sha256": "5e55564c86158b8b392aa09ac125b8f0b8b02ad4c338134dd8c1c85ced10b18b",
+      "unpacked_bytes": 60
+    },
+    "results/optimizer_memory_v1/metrics.csv.gz": {
+      "sha256": "e67ee8d51faa330ade985b9c6f0df11dc9c853d7765c3d16f59ca44a3d6f80f9",
+      "unpacked_bytes": 2716
+    },
+    "results/optimizer_memory_v1/phases.csv.gz": {
+      "sha256": "4935467b24b9c443355bce18b7b81d10cfa7aff93a03f9ec92131a5993c57713",
+      "unpacked_bytes": 304458
+    },
+    "results/optimizer_memory_v1/plot.log.gz": {
+      "sha256": "95d00aa6dfbc557336c2dda8d49f512693701a0a9e93c59934cc776c3444bae7",
+      "unpacked_bytes": 39
+    },
+    "results/optimizer_memory_v1/prepare.log.gz": {
+      "sha256": "d8152fb90219cbb8b790803128d79b8ae836cdd1d6701a41d0fb524fe58a7e76",
+      "unpacked_bytes": 71
+    },
+    "results/optimizer_memory_v1/prepare_audit.log.gz": {
+      "sha256": "77569f1b2ac4a919d4015f3c0cce8527a0e92cb74ee3ce1a080cc9f72fbc345a",
+      "unpacked_bytes": 62
+    },
+    "results/optimizer_memory_v1/profile.log.gz": {
+      "sha256": "1bec04adfb0392bef0cf562e8b6864529fdfc90faa1101b67b4a9c551dafa183",
+      "unpacked_bytes": 732
+    },
+    "results/optimizer_memory_v1/publish.log.gz": {
+      "sha256": "b806db0c7e0d20f240e8c2b3fe64e6a3fc7646d2b61b51e51f16f0b367816dbb",
+      "unpacked_bytes": 58
+    },
+    "results/optimizer_memory_v1/report.log.gz": {
+      "sha256": "46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e",
+      "unpacked_bytes": 0
+    },
+    "results/optimizer_memory_v1/result.json.gz": {
+      "sha256": "d30f65f81aad9429d712f62be602689f571b848875796e345fad38a1c8520865",
+      "unpacked_bytes": 1486806
+    },
+    "results/optimizer_memory_v1/updates.csv.gz": {
+      "sha256": "ba179b7a7f789ccfc9393cd74af4134b04ddde2e17014e92a78fd38462edb671",
+      "unpacked_bytes": 117017
+    }
+  }
+}

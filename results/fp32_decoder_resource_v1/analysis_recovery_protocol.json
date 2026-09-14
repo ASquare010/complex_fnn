@@ -1,0 +1,21 @@
+{
+  "files": {
+    "results/fp32_decoder_resource_v1/source/analyze.py": "c03bb34635f737d4eb142d614e8a14c3c31490159b238bd42f1b3cf4163cf2b6",
+    "results/fp32_decoder_resource_v1/source/analyze_recovery.py": "d387803b2d7a0061c07f580d9ca8de89bccd246e142b87f9b0b8cf799a1d80b6",
+    "results/fp32_decoder_resource_v1/source/prepare_analysis_recovery.py": "414e7c31ce06d72cd90590722efd797aecde852ddef7155422512ec31c2c4b6b",
+    "results/fp32_decoder_resource_v1/source/launch.py": "b5d94a70215c47cbf487fdbe2d1c7558a160364bec230fca235742f74141e534",
+    "results/fp32_decoder_resource_v1/result.json": "8a75743113c1f6d4c05f649f10213340c55e9ac4d9d7b162205642e3d1e41685",
+    "results/fp32_decoder_resource_v1/audit.json": "aaef8b768a117b2d59d03f7e5c5fb092f905b55ed5025b1b7266df6b4195e7eb",
+    "results/fp32_decoder_resource_v1/protocol.json": "00665deb71d36bbeedba7df3f7ff279f3d0760264b1b8a9802956796c8f72abb",
+    "results/fp32_decoder_resource_v1/analyze.log": "335fb4c106b464d6b4ab0d9768f0ffa49c040fbb0f7129cceb653686562e6946",
+    "results/fp32_decoder_resource_v1/analyze_exit.txt": "5205fef41c0db63d59104e9f7f636e546fddc5ec46e07a509335cf0fe255b877"
+  },
+  "prior_raw_exit": 3221225477,
+  "observed_command_exit": -1,
+  "failure": "Windows fatal access violation in the stdlib-only analyzer at line116; cause unresolved",
+  "missing_exports_before_retry": true,
+  "scientific_training_repeated": false,
+  "additional_backward_passes": 0,
+  "additional_optimizer_updates": 0,
+  "action": "Fresh process imports and calls unchanged analyzer, with a 45-second traceback watchdog; no scientific retry or tolerance change"
+}

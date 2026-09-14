@@ -1,0 +1,399 @@
+{
+  "passed": true,
+  "double_checks": [
+    {
+      "shape": [
+        2,
+        5,
+        3
+      ],
+      "policy": "native_bf16",
+      "double_value_and_gradient": true
+    },
+    {
+      "shape": [
+        2,
+        5,
+        3
+      ],
+      "policy": "chunks_cached",
+      "double_value_and_gradient": true
+    },
+    {
+      "shape": [
+        2,
+        5,
+        3
+      ],
+      "policy": "chunks_uncached",
+      "double_value_and_gradient": true
+    },
+    {
+      "shape": [
+        2,
+        5,
+        3
+      ],
+      "policy": "native_fp32",
+      "double_value_and_gradient": true
+    },
+    {
+      "shape": [
+        2,
+        5,
+        3
+      ],
+      "policy": "chunks_fp32",
+      "double_value_and_gradient": true
+    },
+    {
+      "shape": [
+        1,
+        7,
+        3
+      ],
+      "policy": "native_bf16",
+      "double_value_and_gradient": true
+    },
+    {
+      "shape": [
+        1,
+        7,
+        3
+      ],
+      "policy": "chunks_cached",
+      "double_value_and_gradient": true
+    },
+    {
+      "shape": [
+        1,
+        7,
+        3
+      ],
+      "policy": "chunks_uncached",
+      "double_value_and_gradient": true
+    },
+    {
+      "shape": [
+        1,
+        7,
+        3
+      ],
+      "policy": "native_fp32",
+      "double_value_and_gradient": true
+    },
+    {
+      "shape": [
+        1,
+        7,
+        3
+      ],
+      "policy": "chunks_fp32",
+      "double_value_and_gradient": true
+    }
+  ],
+  "finite_difference_policies": [
+    "chunks_cached",
+    "chunks_uncached",
+    "chunks_fp32"
+  ],
+  "linear_witness": [
+    {
+      "device": "cpu",
+      "terms": [
+        1,
+        1,
+        1,
+        1,
+        256
+      ],
+      "cached": true,
+      "gradient": 256.0,
+      "exact_sum": 260,
+      "weight_cast_nodes": 1,
+      "events": [
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "device": "cpu",
+      "terms": [
+        1,
+        1,
+        1,
+        1,
+        256
+      ],
+      "cached": false,
+      "gradient": 260.0,
+      "exact_sum": 260,
+      "weight_cast_nodes": 5,
+      "events": [
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "device": "cpu",
+      "terms": [
+        256,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cached": true,
+      "gradient": 260.0,
+      "exact_sum": 260,
+      "weight_cast_nodes": 1,
+      "events": [
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "device": "cpu",
+      "terms": [
+        256,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cached": false,
+      "gradient": 260.0,
+      "exact_sum": 260,
+      "weight_cast_nodes": 5,
+      "events": [
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "device": "cuda",
+      "terms": [
+        1,
+        1,
+        1,
+        1,
+        256
+      ],
+      "cached": true,
+      "gradient": 256.0,
+      "exact_sum": 260,
+      "weight_cast_nodes": 1,
+      "events": [
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "device": "cuda",
+      "terms": [
+        1,
+        1,
+        1,
+        1,
+        256
+      ],
+      "cached": false,
+      "gradient": 260.0,
+      "exact_sum": 260,
+      "weight_cast_nodes": 5,
+      "events": [
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "device": "cuda",
+      "terms": [
+        256,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cached": true,
+      "gradient": 260.0,
+      "exact_sum": 260,
+      "weight_cast_nodes": 1,
+      "events": [
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "device": "cuda",
+      "terms": [
+        256,
+        1,
+        1,
+        1,
+        1
+      ],
+      "cached": false,
+      "gradient": 260.0,
+      "exact_sum": 260,
+      "weight_cast_nodes": 5,
+      "events": [
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        },
+        {
+          "dtype": "torch.bfloat16",
+          "shape": [
+            1,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "optimizer_updates": 0
+}

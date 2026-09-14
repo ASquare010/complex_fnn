@@ -1,0 +1,45 @@
+{
+  "status": "COMPLETE",
+  "records": [
+    {
+      "repetition": 0,
+      "qualification_cases": 8,
+      "after_gc_empty_cache_bytes": 17039360,
+      "active_blocks_before_clear": [
+        {
+          "size": 8519680,
+          "requested_size": 8519680,
+          "state": "active_allocated"
+        },
+        {
+          "size": 8519680,
+          "requested_size": 8519680,
+          "state": "active_allocated"
+        }
+      ],
+      "after_cublas_clear_bytes": 0,
+      "optimizer_updates": 0
+    },
+    {
+      "repetition": 1,
+      "qualification_cases": 8,
+      "after_gc_empty_cache_bytes": 17039360,
+      "active_blocks_before_clear": [
+        {
+          "size": 8519680,
+          "requested_size": 8519680,
+          "state": "active_allocated"
+        },
+        {
+          "size": 8519680,
+          "requested_size": 8519680,
+          "state": "active_allocated"
+        }
+      ],
+      "after_cublas_clear_bytes": 0,
+      "optimizer_updates": 0
+    }
+  ],
+  "optimizer_updates": 0,
+  "native_import_failure_root_cause_proved": false
+}

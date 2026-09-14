@@ -1,0 +1,681 @@
+{
+  "passed": true,
+  "independent_scores": 168,
+  "datasets_regenerated": 6,
+  "scores": [
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "wide",
+      "lr": 0.001,
+      "validation": 0.22736607900617392,
+      "report": 0.2298024608837323
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "wide",
+      "lr": 0.003,
+      "validation": 0.11567393791319634,
+      "report": 0.11524473568414997
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "narrow33",
+      "lr": 0.001,
+      "validation": 0.4107318402606012,
+      "report": 0.4122926832802192
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "narrow33",
+      "lr": 0.003,
+      "validation": 0.309178464103242,
+      "report": 0.3137052127041008
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "narrow40",
+      "lr": 0.001,
+      "validation": 0.3617355686802606,
+      "report": 0.3638568463381082
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "narrow40",
+      "lr": 0.003,
+      "validation": 0.2803504181094616,
+      "report": 0.28374358395747645
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "narrow27",
+      "lr": 0.001,
+      "validation": 0.4440295858568618,
+      "report": 0.4459549396015104
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "narrow27",
+      "lr": 0.003,
+      "validation": 0.34561612557579247,
+      "report": 0.3516792587182741
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "blockshuffle",
+      "lr": 0.001,
+      "validation": 0.3536986769384279,
+      "report": 0.3560953073548362
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "blockshuffle",
+      "lr": 0.003,
+      "validation": 0.32981354789062717,
+      "report": 0.3352016343655935
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "greedy",
+      "lr": 0.001,
+      "validation": 0.49601164250385554,
+      "report": 0.49505372409276766
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "greedy",
+      "lr": 0.003,
+      "validation": 0.49790386381892104,
+      "report": 0.49636615627373015
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "balanced",
+      "lr": 0.001,
+      "validation": 0.3785804321073233,
+      "report": 0.3829404719131245
+    },
+    {
+      "task": "teacher",
+      "seed": 431,
+      "arm": "balanced",
+      "lr": 0.003,
+      "validation": 0.3541315911222874,
+      "report": 0.3590317792376887
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "narrow33",
+      "lr": 0.001,
+      "validation": 0.4185332693448051,
+      "report": 0.42036363726485243
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "narrow33",
+      "lr": 0.003,
+      "validation": 0.3240082746063653,
+      "report": 0.3267292496823665
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "narrow40",
+      "lr": 0.001,
+      "validation": 0.366674613177271,
+      "report": 0.37831804361693233
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "narrow40",
+      "lr": 0.003,
+      "validation": 0.2929929058807508,
+      "report": 0.30164453398920016
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "narrow27",
+      "lr": 0.001,
+      "validation": 0.4660458640010909,
+      "report": 0.4785571161281434
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "narrow27",
+      "lr": 0.003,
+      "validation": 0.3657540993940064,
+      "report": 0.3743255121713972
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "blockshuffle",
+      "lr": 0.001,
+      "validation": 0.3610211436824795,
+      "report": 0.36878105378878223
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "blockshuffle",
+      "lr": 0.003,
+      "validation": 0.3462288705354559,
+      "report": 0.3515273956502321
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "greedy",
+      "lr": 0.001,
+      "validation": 0.5025494393863238,
+      "report": 0.516632707327082
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "greedy",
+      "lr": 0.003,
+      "validation": 0.5009104219553417,
+      "report": 0.5150995035355519
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "balanced",
+      "lr": 0.001,
+      "validation": 0.39013829356273044,
+      "report": 0.3995094999870714
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "balanced",
+      "lr": 0.003,
+      "validation": 0.36398371856002687,
+      "report": 0.3746571688130935
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "wide",
+      "lr": 0.001,
+      "validation": 0.23928957546443805,
+      "report": 0.24369242292394538
+    },
+    {
+      "task": "teacher",
+      "seed": 443,
+      "arm": "wide",
+      "lr": 0.003,
+      "validation": 0.12131281364882437,
+      "report": 0.12264805097189588
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "narrow40",
+      "lr": 0.001,
+      "validation": 0.3795520206084537,
+      "report": 0.378122519514822
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "narrow40",
+      "lr": 0.003,
+      "validation": 0.2954048277402058,
+      "report": 0.2943155616441371
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "narrow27",
+      "lr": 0.001,
+      "validation": 0.4737234667220534,
+      "report": 0.477017427313821
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "narrow27",
+      "lr": 0.003,
+      "validation": 0.36425769116810824,
+      "report": 0.3633256670269393
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "blockshuffle",
+      "lr": 0.001,
+      "validation": 0.36220347207796877,
+      "report": 0.3592846653800462
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "blockshuffle",
+      "lr": 0.003,
+      "validation": 0.3516758392932384,
+      "report": 0.35232169384241335
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "greedy",
+      "lr": 0.001,
+      "validation": 0.5131590629076519,
+      "report": 0.5073108412809297
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "greedy",
+      "lr": 0.003,
+      "validation": 0.5105816273726781,
+      "report": 0.5065092163767486
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "balanced",
+      "lr": 0.001,
+      "validation": 0.40253301893757554,
+      "report": 0.40313266741873544
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "balanced",
+      "lr": 0.003,
+      "validation": 0.3704030097405058,
+      "report": 0.3719662828256478
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "wide",
+      "lr": 0.001,
+      "validation": 0.23817044269985588,
+      "report": 0.2376035824280599
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "wide",
+      "lr": 0.003,
+      "validation": 0.11895861075114622,
+      "report": 0.11577748971074447
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "narrow33",
+      "lr": 0.001,
+      "validation": 0.417391993127461,
+      "report": 0.4186149410609312
+    },
+    {
+      "task": "teacher",
+      "seed": 457,
+      "arm": "narrow33",
+      "lr": 0.003,
+      "validation": 0.32566958273935365,
+      "report": 0.3257766443263771
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "wide",
+      "lr": 0.001,
+      "validation": 0.8599435506927017,
+      "report": 0.8970668186475682
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "wide",
+      "lr": 0.003,
+      "validation": 0.3659710693681164,
+      "report": 0.3820759349296943
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "narrow33",
+      "lr": 0.001,
+      "validation": 0.9806417926825083,
+      "report": 1.0210978436284566
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "narrow33",
+      "lr": 0.003,
+      "validation": 0.9023642773794383,
+      "report": 0.9454492027334109
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "narrow40",
+      "lr": 0.001,
+      "validation": 0.9791151290483494,
+      "report": 1.0210276909458589
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "narrow40",
+      "lr": 0.003,
+      "validation": 0.8609032570989121,
+      "report": 0.8952550349530359
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "narrow27",
+      "lr": 0.001,
+      "validation": 0.9821858620732962,
+      "report": 1.0270244535174402
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "narrow27",
+      "lr": 0.003,
+      "validation": 0.920281550934207,
+      "report": 0.9644007449232748
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "blockshuffle",
+      "lr": 0.001,
+      "validation": 0.6091610448315301,
+      "report": 0.6526411635177406
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "blockshuffle",
+      "lr": 0.003,
+      "validation": 0.531047632284352,
+      "report": 0.5551336004805643
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "greedy",
+      "lr": 0.001,
+      "validation": 0.7828475986245595,
+      "report": 0.824061695698499
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "greedy",
+      "lr": 0.003,
+      "validation": 0.7284731622943654,
+      "report": 0.7583659594950622
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "balanced",
+      "lr": 0.001,
+      "validation": 0.625050773424406,
+      "report": 0.6498375702072908
+    },
+    {
+      "task": "product",
+      "seed": 431,
+      "arm": "balanced",
+      "lr": 0.003,
+      "validation": 0.5495837634539029,
+      "report": 0.568826147880604
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "narrow33",
+      "lr": 0.001,
+      "validation": 0.9922965431035853,
+      "report": 0.9921363011455815
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "narrow33",
+      "lr": 0.003,
+      "validation": 0.8992901403737394,
+      "report": 0.8992902873158014
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "narrow40",
+      "lr": 0.001,
+      "validation": 0.9879432959755643,
+      "report": 0.9910740764275835
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "narrow40",
+      "lr": 0.003,
+      "validation": 0.8719608244401432,
+      "report": 0.8724547460052788
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "narrow27",
+      "lr": 0.001,
+      "validation": 0.9933517045376463,
+      "report": 0.9991995157189939
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "narrow27",
+      "lr": 0.003,
+      "validation": 0.9161675941761587,
+      "report": 0.9191169295918915
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "blockshuffle",
+      "lr": 0.001,
+      "validation": 0.6593226574420246,
+      "report": 0.6511659764655674
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "blockshuffle",
+      "lr": 0.003,
+      "validation": 0.5458244508487455,
+      "report": 0.544426329952525
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "greedy",
+      "lr": 0.001,
+      "validation": 0.761950436668037,
+      "report": 0.7615505284334347
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "greedy",
+      "lr": 0.003,
+      "validation": 0.737143843446169,
+      "report": 0.7383833729967464
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "balanced",
+      "lr": 0.001,
+      "validation": 0.5916416044165945,
+      "report": 0.5939346357621209
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "balanced",
+      "lr": 0.003,
+      "validation": 0.5739619120987245,
+      "report": 0.5714498587268506
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "wide",
+      "lr": 0.001,
+      "validation": 0.8820259618967661,
+      "report": 0.8841541128935225
+    },
+    {
+      "task": "product",
+      "seed": 443,
+      "arm": "wide",
+      "lr": 0.003,
+      "validation": 0.39097696765272955,
+      "report": 0.39260867855462417
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "narrow40",
+      "lr": 0.001,
+      "validation": 0.9970430141658017,
+      "report": 0.9935896767380024
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "narrow40",
+      "lr": 0.003,
+      "validation": 0.8826870369215282,
+      "report": 0.8759141964544591
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "narrow27",
+      "lr": 0.001,
+      "validation": 1.0033743429023003,
+      "report": 1.002287065172373
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "narrow27",
+      "lr": 0.003,
+      "validation": 0.9413633578358844,
+      "report": 0.9429067087996044
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "blockshuffle",
+      "lr": 0.001,
+      "validation": 0.6100380231278881,
+      "report": 0.6260613636212655
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "blockshuffle",
+      "lr": 0.003,
+      "validation": 0.5800203296376519,
+      "report": 0.5912787719960007
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "greedy",
+      "lr": 0.001,
+      "validation": 0.7745758283940649,
+      "report": 0.7638669363959223
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "greedy",
+      "lr": 0.003,
+      "validation": 0.7444828883614,
+      "report": 0.7420543976805878
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "balanced",
+      "lr": 0.001,
+      "validation": 0.6420285275131733,
+      "report": 0.649044110227147
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "balanced",
+      "lr": 0.003,
+      "validation": 0.5911540441868788,
+      "report": 0.5929768355442401
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "wide",
+      "lr": 0.001,
+      "validation": 0.8965409330683128,
+      "report": 0.8940701538912978
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "wide",
+      "lr": 0.003,
+      "validation": 0.3460287122100607,
+      "report": 0.34821465891265485
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "narrow33",
+      "lr": 0.001,
+      "validation": 1.0056906248287558,
+      "report": 1.000472758109789
+    },
+    {
+      "task": "product",
+      "seed": 457,
+      "arm": "narrow33",
+      "lr": 0.003,
+      "validation": 0.931323871038684,
+      "report": 0.9245903047698143
+    }
+  ],
+  "optimizer_updates": 0,
+  "gpu_work": false
+}

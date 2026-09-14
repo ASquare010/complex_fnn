@@ -1,0 +1,139 @@
+{
+  "status": "PASS",
+  "study": "H118",
+  "classification": "INCONCLUSIVE",
+  "verification_scope": "prior evidence, unchanged common runner, native scoring, initial gradient replay, complete records and conditional arithmetic",
+  "frozen_sources": 137,
+  "maintained_files_unchanged": 61,
+  "new_optimizer_updates": 3200,
+  "new_backward_passes": 3208,
+  "new_training_targets": 13107200,
+  "new_trained_checkpoints_verified": 12,
+  "original_cases_retained": 2,
+  "new_gradient_replays": 4,
+  "native_scores": 13,
+  "cpu_checkpoint_pair_diagnostics": 45,
+  "cpu_initial_gradient_pair_diagnostics": 15,
+  "distinct_training_seeds": 1,
+  "selected_failure_diagnosis": true,
+  "original_gate_requalified": false,
+  "broad_goal_achieved": false,
+  "no_default_change": true,
+  "maintained_tests_rerun": false,
+  "previous_maintained_tests_passed": 116,
+  "all_audits_passed": true,
+  "tensor_hashes": {
+    "results/fp32_training_replication_recovery_v1/runs/wikitext2_s101__fp32_default_native/initial_gradients.pt": "5faaf5ef48f9cbc0fdefc43f76f89c3c09b7e81fbd844f2dde924bc60f007f93",
+    "results/fp32_training_replication_recovery_v1/runs/wikitext2_s101__fp32_default_native/final.pt": "d3d538a30e300c32e8ea390e067242d598cab2fcf6b3bb272f9bcd1b7d87aa42",
+    "results/fp32_training_replication_recovery_v1/runs/wikitext2_s101__fp32_default_native/step200.pt": "35a61e6ec3af04a1d05b205508aeeb381fbd8589764cce5cd729ba80d36abf8f",
+    "results/fp32_training_replication_recovery_v1/runs/wikitext2_s101__fp32_default_native/step400.pt": "7abbb20264573d39e9dd6f344593a90b5843f7e3895b97ac9a1728360a0d2a73",
+    "results/fp32_training_replication_recovery_v1/runs/wikitext2_s101__fp32_default_chunks/initial_gradients.pt": "b00197e54dba3530df29d56cfe9ed7e977abf57ea47bbac95422ea5db49765f8",
+    "results/fp32_training_replication_recovery_v1/runs/wikitext2_s101__fp32_default_chunks/final.pt": "66be154279eaed71dc4f3b6f50aa9ef8572ee6c8d28a22bec8cd850e6459d931",
+    "results/fp32_training_replication_recovery_v1/runs/wikitext2_s101__fp32_default_chunks/step200.pt": "22a8bd4bb28291a7b779d90c56498a6ea1142bd1e4f95ad112497887319e8da8",
+    "results/fp32_training_replication_recovery_v1/runs/wikitext2_s101__fp32_default_chunks/step400.pt": "db53d3da0198c46d5d5c1f2c2193e13a3d39edb5130f63d000e6acd5d3079691",
+    "results/training_variability_v1/runs/wikitext2_s101_r1__fp32_default_native/initial_gradients.pt": "948b4538080b6ae940443cba5b4523faf71042f0f36ffc74a6532f7c8cfd9034",
+    "results/training_variability_v1/runs/wikitext2_s101_r1__fp32_default_native/final.pt": "c32bee30f310efc0b9c5914780f692f6e6ddd44823f6d960a3ef2d7e62868388",
+    "results/training_variability_v1/runs/wikitext2_s101_r1__fp32_default_native/step200.pt": "4f37deadcf4911d38feb56ff2b08cdefcf4e39337842c4870283918164a24e91",
+    "results/training_variability_v1/runs/wikitext2_s101_r1__fp32_default_native/step400.pt": "41f55a865993eadc8f2c6268873553bd596b9fd4d2719617484d577357e4b4c5",
+    "results/training_variability_v1/runs/wikitext2_s101_r1__fp32_default_chunks/initial_gradients.pt": "604f5b3cb66ecc4765961f6b5855ec39556423eecc89bb2768c5a3067ec1dc38",
+    "results/training_variability_v1/runs/wikitext2_s101_r1__fp32_default_chunks/final.pt": "1bce44dc616468f3ff5375cce9b7e12808d8c670e8c8628d2f4ced3395ee37d6",
+    "results/training_variability_v1/runs/wikitext2_s101_r1__fp32_default_chunks/step200.pt": "132ba0f7a8dde1d56ab83715da9ab46cd98ef5cef343e00d53440481d15e8aa2",
+    "results/training_variability_v1/runs/wikitext2_s101_r1__fp32_default_chunks/step400.pt": "48e19d0464ebc4e2aecc5f998cf432fb488fecd12349ae568a4d8562a140cdd2",
+    "results/training_variability_v1/runs/wikitext2_s101_r2__fp32_default_chunks/initial_gradients.pt": "27d197a416a6a7a46210c9a738e3c024de24ded5cefdc2ce8e99cddd1b095e23",
+    "results/training_variability_v1/runs/wikitext2_s101_r2__fp32_default_chunks/final.pt": "0a756040b84e50f040fd283db7240b865867b70e86c36d427aa2975ca5d8099e",
+    "results/training_variability_v1/runs/wikitext2_s101_r2__fp32_default_chunks/step200.pt": "f95dc17ea78a063b89ed987e9718b7a348e1dda3a44e1e09559a07dd517cae13",
+    "results/training_variability_v1/runs/wikitext2_s101_r2__fp32_default_chunks/step400.pt": "bd02930f802c8b9169c0b905ae5df18ceb0e5b046853e268046c1fb6f4f7cb8f",
+    "results/training_variability_v1/runs/wikitext2_s101_r2__fp32_default_native/initial_gradients.pt": "884b5e07d87a39853a18e6568de67ff4bb801bf874f1ada6e38a64a9cdd530ad",
+    "results/training_variability_v1/runs/wikitext2_s101_r2__fp32_default_native/final.pt": "8e80192dc8cb5eb99736300e5c1fbaae9f7a6e11537736c7a70d682992ec5477",
+    "results/training_variability_v1/runs/wikitext2_s101_r2__fp32_default_native/step200.pt": "201aec7f7320c6995709a126ef1b06d1c3116f0af4f1ef92806976dc38f8c014",
+    "results/training_variability_v1/runs/wikitext2_s101_r2__fp32_default_native/step400.pt": "28cb6294a2cb460d42b0af7b3882bcece2b55d025d91423caac9f3f181742345",
+    "results/fp32_training_replication_recovery_v1/initial/wikitext2_s101/step0.pt": "21bbc49e6845ead55c6d3be01368388dbf5df0e2bb03585cc4a8950667da8a2a"
+  },
+  "local_metric_hashes": {
+    "results/fp32_training_replication_recovery_v1/runs/wikitext2_s101__fp32_default_native/metrics.json": "d33cc8bce189e5bfe2cd2513930ae54e771ddae1894b616edcc86deff768626e",
+    "results/fp32_training_replication_recovery_v1/runs/wikitext2_s101__fp32_default_chunks/metrics.json": "9a4a9cc274413e069239f199d6336d105b316b04d9c27115f4ac5e1117bbe12e",
+    "results/training_variability_v1/runs/wikitext2_s101_r1__fp32_default_native/metrics.json": "51ca1f82256e35eb2de67795698043c00b7382fd5a0a4f957b4a20113fa33ca4",
+    "results/training_variability_v1/runs/wikitext2_s101_r1__fp32_default_chunks/metrics.json": "3f3009897610a3898038aee7de71aa6ed2088384eee30ece4f9667007ccf321e",
+    "results/training_variability_v1/runs/wikitext2_s101_r2__fp32_default_chunks/metrics.json": "e4107eb6301e1b23e0c0421d2dcea0bc28e9d559f00442accdb4b3ce8b58a505",
+    "results/training_variability_v1/runs/wikitext2_s101_r2__fp32_default_native/metrics.json": "67d6bd5bdb2903f298ca8ea20019372317f5341d6b6f1b4a7b0ae66845b5e0f3"
+  },
+  "packed": {
+    "results/training_variability_v1/result.json.gz": {
+      "sha256": "43a8134014bb8c3b201a2448e87ab1acdcdb540744f3df5773757c8b51b2f812",
+      "original_sha256": "048a5d4846afe1180ba2b3379ed11ea074d2deddf690f1aa81df332a59597303",
+      "bytes": 579423
+    },
+    "results/training_variability_v1/audit.json.gz": {
+      "sha256": "c5df65bf3e604d7a9f9c5d6155efeb7dd30910a8d516a6b8b92ebcd674737ded",
+      "original_sha256": "6667d3f464f498f76a73836a52e943f3697c13f49548a1afdbf0d777e7f6b88b",
+      "bytes": 6585
+    },
+    "results/training_variability_v1/analyze.log.gz": {
+      "sha256": "d474f993bbb258062801c50853a983b8c90e433985737953cb09476055c5af9a",
+      "original_sha256": "7f2960231b51bcbacc01b4ba8c05738e99194fe10654b101f61a8a0d68db8e9f",
+      "bytes": 572
+    },
+    "results/training_variability_v1/audit.log.gz": {
+      "sha256": "6ed5bda62c7bf5ec7925ddf287ed7be4558f1fe9c26b00e6287a5470120ec519",
+      "original_sha256": "3beaa8778a0ac07f1024f3cf1f77ab034fba5f2a6d48f8a7108b30e085f4cc2d",
+      "bytes": 175
+    },
+    "results/training_variability_v1/plot.log.gz": {
+      "sha256": "46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e",
+      "original_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 20
+    },
+    "results/training_variability_v1/prepare.log.gz": {
+      "sha256": "175d148007d98d6a0cc81e6d4d59adb8414199450a01445e2d973c912482ff98",
+      "original_sha256": "aca44d590831049c0c40745369de2c1edfc3afa25625d0486e22aeb591630ab2",
+      "bytes": 127
+    },
+    "results/training_variability_v1/report.log.gz": {
+      "sha256": "bd2037c51474b1bc54f898b8d89cc84cb83fece7a314c6bb7d3f714a250e8090",
+      "original_sha256": "689cc1a604d039c2fb56a8b3f618e4968934e24bd4f690ee0b4b329995a0410c",
+      "bytes": 221
+    },
+    "results/training_variability_v1/study.log.gz": {
+      "sha256": "6d31b61cb1648a6621140f0a3c9643f2d79f0400627a76b3edf64f1aa346c841",
+      "original_sha256": "29a919b3217076486ce72a42f587a0544e404bd7c50867b2ec06da5be97cf52c",
+      "bytes": 717
+    }
+  },
+  "files": {
+    "C:/Users/Cuebric/Desktop/Git/complex_fnn/results/verification/training_variability_final_v1.py": "2445154231bc2399f14bb153ef3ac3cc8c43872d62be1a4f8149e7a82392509f",
+    "results/training_variability_v1/source/analyze.py": "83ab9f6d1263e19489301d3da04c53e57d43f57635259ccb81fec599f9682eff",
+    "results/training_variability_v1/source/audit.py": "a33dbd204fd14e3a9180261e59517f77f298190c9342dcbdf963cdb8501aaac3",
+    "results/training_variability_v1/source/inspect_progress.py": "258797efba7f813e931ee8fd384faa4a657ef54404b12d546cfd398b6694fc6a",
+    "results/training_variability_v1/source/launch.py": "09bdf217f6b3233810dbc16df6e2baee33510cf3ab701c40808aea8111bae5ab",
+    "results/training_variability_v1/source/plot.py": "01702531c4417085a77b64c1dca010616c99b2651db8fc73bef9e2972ea27d97",
+    "results/training_variability_v1/source/prepare.py": "d5c27875ccac3ae301bcc8529e0c21b3167b193bf709057e0a3ebd8bc2fabbc1",
+    "results/training_variability_v1/source/prepare_audit.py": "90d17a05f159c5cca646462d79433d7210afbf98ee429da1064e0e27509ee25e",
+    "results/training_variability_v1/source/publish.py": "bed014d1e62b679ce5162a2b2542326c355d2a2d3c899a55046903872931412f",
+    "results/training_variability_v1/source/report.py": "b98942d01037e5bf98195672a5d2fd4d98ffcea68aa025274164b9f5f446b238",
+    "results/training_variability_v1/source/study.py": "3760cd2f7f45444a86b85ebc408148dde1c8a342eba8ade6742018a6b0270177",
+    "results/training_variability_v1/source/README.md": "511b21122b7a3d07514934428f4ab3b46d9017265b8f7053739aa8b5763b5ef7",
+    "results/training_variability_v1/protocol.json": "b0a41ddb27f4fc6dbca0ed47b40afe5d7ef1f018c6bd14df73882b3a55d31b3f",
+    "results/training_variability_v1/audit_protocol.json": "a317fbf31c6ad767600233f17536f6f87abf9504b0b42f874579321db39bab42",
+    "results/training_variability_v1/environment.json": "ddc9bd08734c4414fc2741c51277c2b8ec74d1f9307a5bc9fd8764c5cf566e4a",
+    "results/training_variability_v1/summary.json": "1a091cd5140f67b6c94e2fc9f553ae2431512f3bcfd7ba6d119d4b5cc3f02b88",
+    "results/training_variability_v1/curves.csv.gz": "56893203a021ae9ac9c507b72622e1ef0193df80e1ab96f39f24b5b1101a0cf9",
+    "results/training_variability_v1/metrics.csv.gz": "b20c27987c0d339dff9711be175993888b5f26d7f79002324ac75208c5549d70",
+    "results/training_variability_v1/updates.csv.gz": "4eb974c47986bbe2c6efd59afb881404ce5968eb2b9189b409527dc7cc571d69",
+    "results/training_variability_v1/analyze_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/training_variability_v1/audit_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/training_variability_v1/plot_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/training_variability_v1/prepare_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/training_variability_v1/report_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/training_variability_v1/study_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "research/training_variability_plan.md": "e5d22dc44c0e3e7586e02f3f4422913c8e2949ceb15dd43931d4c816fffc3d33",
+    "research/training_variability_results.md": "3a9c3ce2e2c1a08e0330e3234c137147eb02145400c3efbae179f4c980001a4f",
+    "research/figures/training_variability.png": "cb5661ded8bd80b2dd2933aaba9f91b1230ca418af3c0f3471e965968be1429c",
+    "README.md": "ab38303cde7a23cdead75ef22e0c3d07a5afbd050fbe482b6a20bdb1ca3a8660",
+    "research/CURRENT_STATE.md": "1fe463f32a0c707ba057a370ce504e28cdaa6cd1db5cff7b2d987ce3be19669e",
+    "research/PROGRESS_OVERVIEW.md": "53b473826849b76af102183c4e6b71ff57b221d2685141a1114a166e4ff5ab56",
+    "research/idea_bank.md": "e999c273539a909bb3e99ed321c5ae35fb9b6cca2afbf36dd312157d1f805cbd",
+    "research/ARTIFACTS.md": "d4313936b9a4754042919bc5c6c97a1d37a9e783849c9b0347f109093ee95c70",
+    "research/literature.md": "8f1f5049923fd9aaa2b752d6e8954119afc18e493db365b3a76cb46f9bcff7ec",
+    ".gitignore": "cc8bd5de9b5e77b208220b04465d8d8a2cca22050cbf307795917c9609c2ee5d"
+  }
+}

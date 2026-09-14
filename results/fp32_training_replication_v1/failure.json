@@ -1,0 +1,3 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\fp32_training_replication_v1\\source\\study.py\", line 376, in <module>\n    run()\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\fp32_training_replication_v1\\source\\study.py\", line 338, in run\n    initials = generate_initials(protocol)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\fp32_training_replication_v1\\source\\initialize.py\", line 36, in generate_initials\n    assert not torch.cuda.is_initialized()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

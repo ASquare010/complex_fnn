@@ -1,0 +1,8 @@
+audited {'index': 0, 'seed': 401, 'arm': 'ordinary'}
+audited {'index': 1, 'seed': 401, 'arm': 'helper'}
+audited {'index': 2, 'seed': 409, 'arm': 'helper'}
+audited {'index': 3, 'seed': 409, 'arm': 'ordinary'}
+audited {'index': 4, 'seed': 419, 'arm': 'ordinary'}
+audited {'index': 5, 'seed': 419, 'arm': 'helper'}
+[{"seed": 401, "ratios": {"memory": 0.8190328378491728, "cuda": 1.0594279724370705, "wall": 1.0593943869245859, "nll": 1.0011683945575867}, "gates": {"memory": true, "cuda": true, "wall": true, "quality": true, "host": true, "stability": true, "gradient": true}, "passed": true}, {"seed": 409, "ratios": {"memory": 0.8190328378491728, "cuda": 1.0119039920983122, "wall": 1.0119130047170213, "nll": 1.0023548378270293}, "gates": {"memory": true, "cuda": true, "wall": true, "quality": true, "host": true, "stability": true, "gradient": true}, "passed": true}, {"seed": 419, "ratios": {"memory": 0.8190328378491728, "cuda": 1.0230342824270449, "wall": 1.0230486734114463, "nll": 0.9994288725175023}, "gates": {"memory": true, "cuda": true, "wall": true, "quality": true, "host": true, "stability": true, "gradient": true}, "passed": true}]
+[{'seed': 401, 'host_delta_bytes': {'working_set': 66920448, 'private_commit': -117538816}, 'gates': {'numeric_resource': True, 'working_set': True, 'private_commit': True, 'absolute': True}, 'passed': True}, {'seed': 409, 'host_delta_bytes': {'working_set': 67579904, 'private_commit': -115630080}, 'gates': {'numeric_resource': True, 'working_set': True, 'private_commit': True, 'absolute': True}, 'passed': True}, {'seed': 419, 'host_delta_bytes': {'working_set': 69320704, 'private_commit': -112738304}, 'gates': {'numeric_resource': True, 'working_set': True, 'private_commit': True, 'absolute': True}, 'passed': True}]

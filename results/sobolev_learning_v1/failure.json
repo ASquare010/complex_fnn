@@ -1,0 +1,3 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\sobolev_learning_v1\\source\\study.py\", line 351, in <module>\n    run()\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\sobolev_learning_v1\\source\\study.py\", line 77, in run\n    sources[path] = sha256(path)\n                    ^^^^^^^^^^^^\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\src\\core\\reproducibility.py\", line 13, in sha256\n    return hashlib.sha256(path.read_bytes()).hexdigest()\n                          ^^^^^^^^^^^^^^^\nAttributeError: 'str' object has no attribute 'read_bytes'\n"
+}

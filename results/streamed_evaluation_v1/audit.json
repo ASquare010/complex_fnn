@@ -1,0 +1,202 @@
+{
+  "passed": true,
+  "all_gates_and_policy_selections_independently_verified": true,
+  "native_rescores": 24,
+  "policy_comparisons": 72,
+  "checks": [
+    {
+      "label": "b16_t128_s17_block",
+      "step": 100,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s17_block",
+      "step": 400,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s17_block",
+      "step": 800,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s17_loss_chunks",
+      "step": 100,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s17_loss_chunks",
+      "step": 400,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s17_loss_chunks",
+      "step": 800,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s29_loss_chunks",
+      "step": 100,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s29_loss_chunks",
+      "step": 400,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s29_loss_chunks",
+      "step": 800,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s29_block",
+      "step": 100,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s29_block",
+      "step": 400,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s29_block",
+      "step": 800,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s43_block",
+      "step": 100,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s43_block",
+      "step": 400,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s43_block",
+      "step": 800,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s43_loss_chunks",
+      "step": 100,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s43_loss_chunks",
+      "step": 400,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b16_t128_s43_loss_chunks",
+      "step": 800,
+      "native_rescore_difference": 0.0,
+      "targets": 322688,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b8_t512_s17_block",
+      "step": 100,
+      "native_rescore_difference": 0.0,
+      "targets": 322560,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b8_t512_s17_block",
+      "step": 400,
+      "native_rescore_difference": 0.0,
+      "targets": 322560,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b8_t512_s17_block",
+      "step": 800,
+      "native_rescore_difference": 0.0,
+      "targets": 322560,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b8_t512_s17_loss_chunks",
+      "step": 100,
+      "native_rescore_difference": 0.0,
+      "targets": 322560,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b8_t512_s17_loss_chunks",
+      "step": 400,
+      "native_rescore_difference": 0.0,
+      "targets": 322560,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    },
+    {
+      "label": "b8_t512_s17_loss_chunks",
+      "step": 800,
+      "native_rescore_difference": 0.0,
+      "targets": 322560,
+      "policy_comparisons": 3,
+      "exact_state_and_fixture_hashes": true
+    }
+  ],
+  "optimizer_updates": 0,
+  "max_native_rescore_difference": 0.0
+}

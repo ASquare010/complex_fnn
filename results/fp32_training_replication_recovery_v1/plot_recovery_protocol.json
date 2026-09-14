@@ -1,0 +1,27 @@
+{
+  "files": {
+    "results/fp32_training_replication_recovery_v1/source/plot.py": "f33902f0ccec60effe5c126412d8979ee64cc1d2b356bcc02b6afd3d17587cb8",
+    "results/fp32_training_replication_recovery_v1/source/plot_recovery.py": "441df68b4f6808f1565553edb33fd9edf343fbb6c7879d05e29376d7a7b28d60",
+    "results/fp32_training_replication_recovery_v1/source/prepare_plot_recovery.py": "26152572b2ee8a4fb2a2c756f05bed5fbe57bbabccc8eefaeaf850fd8db651af",
+    "results/fp32_training_replication_recovery_v1/source/launch.py": "89438ae0af2d667b2990ef69ca9d8e3f9dc3a33acb52b4584144c353b471c4ed",
+    "results/fp32_training_replication_recovery_v1/protocol.json": "f2168130a47b7ebca1ec20353d6ff805f064fc7d581377f4b9f01577cc66f6ef",
+    "results/fp32_training_replication_recovery_v1/audit_protocol.json": "af0531039410df4a0707712feef138aa9b7c824c3650c56865e4a7bcc90bc0d4",
+    "results/fp32_training_replication_recovery_v1/result.json": "747f4a53f4ecb8a2d8163ff5abc237f0d29fb9d7f607dc09a93a2b3753cfbcd9",
+    "results/fp32_training_replication_recovery_v1/audit.json": "52c9d298423a27e4b027716f8331e6b452c7ccece5810d1100b03cf901b786e7",
+    "results/fp32_training_replication_recovery_v1/summary.json": "de68518d6cbfc5025ff4a4ca62000629f1e6d1c49822c45bdb3988888d15d6ff",
+    "results/fp32_training_replication_recovery_v1/metrics.csv.gz": "b7d9438cd6b444b693f83d4ff8b8d66234eceda9082d441c2c5d999a4dd2e89b",
+    "results/fp32_training_replication_recovery_v1/curves.csv.gz": "8b3e006aa9080d9cb8f3e589be8a52895a84e9b0e600fc4fa19720b4a27bf941",
+    "results/fp32_training_replication_recovery_v1/updates.csv.gz": "7d50048bf3c5290a64e61076ee9d3aa8797390276ed61a0762a519dcc296a7f8",
+    "results/fp32_training_replication_recovery_v1/plot.log": "ed851f3823c69da9cd8a716f8d6588b20408f056f6b0a497982359c208a508f8",
+    "results/fp32_training_replication_recovery_v1/plot_exit.txt": "5205fef41c0db63d59104e9f7f636e546fddc5ec46e07a509335cf0fe255b877"
+  },
+  "prior_raw_exit": 3221225477,
+  "observed_command_exit": -1,
+  "failure": "Windows access violation while importing matplotlib.transforms; cause unresolved",
+  "missing_figure_before_retry": true,
+  "scientific_training_repeated": false,
+  "scientific_audit_repeated": false,
+  "additional_backward_passes": 0,
+  "additional_optimizer_updates": 0,
+  "action": "One fresh CPU process imports the unchanged plot, with a 45-second traceback watchdog; inputs, results and gates are unchanged"
+}

@@ -1,0 +1,128 @@
+{
+  "study": "H163",
+  "qualified_scope": "WikiText2; 22.2M FP32 model; 800 updates; three seeds",
+  "paths_relative_to": "repository root",
+  "copied_binaries": false,
+  "models": [
+    {
+      "seed": 401,
+      "arm": "ordinary",
+      "path": "results/exact_offload_long_scale_v1/case00/final.pt",
+      "sha256": "c7523d3b3aa23b70c6f40254c2205762890ee40ea8860aff623b20c29f7264e3",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model weights",
+      "final_validation_nll": 4.684674891214522
+    },
+    {
+      "seed": 401,
+      "arm": "ordinary",
+      "path": "results/exact_offload_long_scale_v1/case00/resume.pt",
+      "sha256": "872d2a319b56db8f26934d26daaf881c36e30c5377fad64f2717898f495077fb",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model, Adam, sampler, config",
+      "final_validation_nll": 4.684674891214522
+    },
+    {
+      "seed": 401,
+      "arm": "helper",
+      "path": "results/exact_offload_long_scale_v1/case01/final.pt",
+      "sha256": "99b08e723bc00168e03c2e230875674c48f4ebe8486849dc2cde1e3700458eb6",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model weights",
+      "final_validation_nll": 4.6901484398614794
+    },
+    {
+      "seed": 401,
+      "arm": "helper",
+      "path": "results/exact_offload_long_scale_v1/case01/resume.pt",
+      "sha256": "e25699bc3c1f08e2a1e8f424ae15454c44722c52ac45023b9ee16a04b3d3290d",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model, Adam, sampler, config",
+      "final_validation_nll": 4.6901484398614794
+    },
+    {
+      "seed": 409,
+      "arm": "helper",
+      "path": "results/exact_offload_long_scale_v1/case02/final.pt",
+      "sha256": "9792d188e95287c1bcdf92e09ed3533d7ea98c61171938c54251367e931dc3b5",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model weights",
+      "final_validation_nll": 4.724723740229531
+    },
+    {
+      "seed": 409,
+      "arm": "helper",
+      "path": "results/exact_offload_long_scale_v1/case02/resume.pt",
+      "sha256": "31c834b93f0e7671bd82139d9df176507209f0ed447a9e588240e886b3ae4af2",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model, Adam, sampler, config",
+      "final_validation_nll": 4.724723740229531
+    },
+    {
+      "seed": 409,
+      "arm": "ordinary",
+      "path": "results/exact_offload_long_scale_v1/case03/final.pt",
+      "sha256": "df082b742940f500a501bb8d1101641c380d09bbaba329c89c4a872bf82d8280",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model weights",
+      "final_validation_nll": 4.713623920319573
+    },
+    {
+      "seed": 409,
+      "arm": "ordinary",
+      "path": "results/exact_offload_long_scale_v1/case03/resume.pt",
+      "sha256": "1e6730e172cf3090bb46df77da47587fae9f0f765053cb8926c43a8e96e61eb7",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model, Adam, sampler, config",
+      "final_validation_nll": 4.713623920319573
+    },
+    {
+      "seed": 419,
+      "arm": "ordinary",
+      "path": "results/exact_offload_long_scale_v1/case04/final.pt",
+      "sha256": "b738fc8cf04bde41e288f02adb532b54bccdc75d7d5d8ba2d073789efd3b4201",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model weights",
+      "final_validation_nll": 4.713435976845878
+    },
+    {
+      "seed": 419,
+      "arm": "ordinary",
+      "path": "results/exact_offload_long_scale_v1/case04/resume.pt",
+      "sha256": "06fab8f64e70ce8a54172a659909bda39e7e2f4b11cdd0e88b93c1e16e428ae7",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model, Adam, sampler, config",
+      "final_validation_nll": 4.713435976845878
+    },
+    {
+      "seed": 419,
+      "arm": "helper",
+      "path": "results/exact_offload_long_scale_v1/case05/final.pt",
+      "sha256": "c7d6ef792e75bbdbd902645c394e91cf88f4f28a034690b25688eabe56d3319f",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model weights",
+      "final_validation_nll": 4.710744004022508
+    },
+    {
+      "seed": 419,
+      "arm": "helper",
+      "path": "results/exact_offload_long_scale_v1/case05/resume.pt",
+      "sha256": "c377f75859e1cbf59119ae20d6cae0cf4bb764c5603e5c3b272851cf22933119",
+      "step": 800,
+      "parameters": 22163968,
+      "contains": "model, Adam, sampler, config",
+      "final_validation_nll": 4.710744004022508
+    }
+  ]
+}

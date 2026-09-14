@@ -1,0 +1,10 @@
+{
+  "figure": "research\\figures\\btt_balance_learning.png",
+  "figure_sha256": "06436bd7d13571afbabcf6b92e8a352b8396881b7fc90474518b28a5d5197dc9",
+  "source_sha256": "1c9e8c240608094c433c991e6f325f54a317fdbb4b1db36fac23f3c3bbae17bb",
+  "input_sha256": "bc54e53508da949f2f563f6e36429d457ef2238ec7966e5c104775b18152227a",
+  "optimizer_updates": 0,
+  "selection": "Validation-selected rate; all600updates and all3seeds per arm/task",
+  "smoothing": 25,
+  "band": "sample standard deviation, not confidence interval"
+}

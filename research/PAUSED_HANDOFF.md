@@ -1,3 +1,7 @@
+**Superseded by the [2026-09-14 Windows reinstall handoff](WINDOWS_REINSTALL_HANDOFF.md).** H160 recovery finished; H163 passed its scoped qualification; H164 was rejected. The H160 pause record below is historical.
+
+**Resumed explicitly by user on 2026-09-13.** The pause record below is historical. See [current recovery protocol](checkpoint_fp16_long_resume_plan.md).
+
 # Paused by user — H160 checkpoint and research handoff
 
 Training and its telemetry processes were stopped on request. **Do not resume
@@ -80,3 +84,7 @@ is incomplete and paused, not achieved or scientifically blocked.
 Packaging checks: the copied codec matches its tested source byte-for-byte; new
 package/handoff checks pass. Historical generated SVG whitespace and two existing
 EOF-blank findings are preserved to avoid changing frozen evidence artifacts.
+
+Storage update (2026-09-13): obsolete historical tensor artifacts were removed to
+recover152.83 GiB. H156-H160, selected models, and seed initializations were kept.
+See [cleanup record](STORAGE_CLEANUP_2026-09-13.md) before auditing older studies.

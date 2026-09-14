@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\Cuebric\Desktop\Git\complex_fnn\results\exact_offload_scale_v1\study.py", line 288, in <module>
+    worker(args.index)
+  File "C:\Users\Cuebric\Desktop\Git\complex_fnn\results\exact_offload_scale_v1\study.py", line 225, in worker
+    assert result["boundary"] == [0, 0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

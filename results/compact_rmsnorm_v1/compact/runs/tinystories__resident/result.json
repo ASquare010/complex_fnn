@@ -1,0 +1,1372 @@
+{
+  "label": "tinystories__resident",
+  "dataset": "tinystories",
+  "mode": "resident",
+  "rows": [
+    {
+      "repetition": 1,
+      "loss": 2.53605318069458,
+      "wall_ms": 84.30619999853661,
+      "event_ms": {
+        "forward": 24.372831344604492,
+        "backward": 54.434814453125,
+        "restore": 0.03171199932694435
+      },
+      "event_sum_ms": 78.83935779705644,
+      "grad_bytes_after_backward": 36398592,
+      "hook_count": 0
+    },
+    {
+      "repetition": 2,
+      "loss": 2.53605318069458,
+      "wall_ms": 95.61949999988428,
+      "event_ms": {
+        "forward": 39.12307357788086,
+        "backward": 50.9931526184082,
+        "restore": 0.03244800120592117
+      },
+      "event_sum_ms": 90.14867419749498,
+      "grad_bytes_after_backward": 36398592,
+      "hook_count": 0
+    },
+    {
+      "repetition": 3,
+      "loss": 2.53605318069458,
+      "wall_ms": 79.42860000184737,
+      "event_ms": {
+        "forward": 22.877119064331055,
+        "backward": 51.106815338134766,
+        "restore": 0.03174399957060814
+      },
+      "event_sum_ms": 74.01567840203643,
+      "grad_bytes_after_backward": 36398592,
+      "hook_count": 0
+    },
+    {
+      "repetition": 4,
+      "loss": 2.53605318069458,
+      "wall_ms": 78.9108999997552,
+      "event_ms": {
+        "forward": 23.194047927856445,
+        "backward": 50.19014358520508,
+        "restore": 0.014336000196635723
+      },
+      "event_sum_ms": 73.39852751325816,
+      "grad_bytes_after_backward": 36398592,
+      "hook_count": 0
+    },
+    {
+      "repetition": 5,
+      "loss": 2.53605318069458,
+      "wall_ms": 78.60139999684179,
+      "event_ms": {
+        "forward": 22.237791061401367,
+        "backward": 50.82281494140625,
+        "restore": 0.03174399957060814
+      },
+      "event_sum_ms": 73.09235000237823,
+      "grad_bytes_after_backward": 36398592,
+      "hook_count": 0
+    },
+    {
+      "repetition": 6,
+      "loss": 2.53605318069458,
+      "wall_ms": 76.53690000006463,
+      "event_ms": {
+        "forward": 22.52444839477539,
+        "backward": 48.58265686035156,
+        "restore": 0.03232000023126602
+      },
+      "event_sum_ms": 71.13942525535822,
+      "grad_bytes_after_backward": 36398592,
+      "hook_count": 0
+    },
+    {
+      "repetition": 7,
+      "loss": 2.53605318069458,
+      "wall_ms": 80.57539999936125,
+      "event_ms": {
+        "forward": 25.55936050415039,
+        "backward": 49.372161865234375,
+        "restore": 0.03446400165557861
+      },
+      "event_sum_ms": 74.96598637104034,
+      "grad_bytes_after_backward": 36398592,
+      "hook_count": 0
+    },
+    {
+      "repetition": 8,
+      "loss": 2.53605318069458,
+      "wall_ms": 79.99460000064573,
+      "event_ms": {
+        "forward": 24.540576934814453,
+        "backward": 49.714176177978516,
+        "restore": 0.03219199925661087
+      },
+      "event_sum_ms": 74.28694511204958,
+      "grad_bytes_after_backward": 36398592,
+      "hook_count": 0
+    },
+    {
+      "repetition": 9,
+      "loss": 2.53605318069458,
+      "wall_ms": 80.52739999766345,
+      "event_ms": {
+        "forward": 23.601600646972656,
+        "backward": 51.392513275146484,
+        "restore": 0.031808000057935715
+      },
+      "event_sum_ms": 75.02592192217708,
+      "grad_bytes_after_backward": 36398592,
+      "hook_count": 0
+    },
+    {
+      "repetition": 10,
+      "loss": 2.53605318069458,
+      "wall_ms": 80.14669999829493,
+      "event_ms": {
+        "forward": 22.77552032470703,
+        "backward": 51.983009338378906,
+        "restore": 0.03276799991726875
+      },
+      "event_sum_ms": 74.7912976630032,
+      "grad_bytes_after_backward": 36398592,
+      "hook_count": 0
+    }
+  ],
+  "timing": {
+    "wall_ms": {
+      "mean": 79.327614284661,
+      "median": 79.99460000064573,
+      "variance": 2.1002250839782026
+    },
+    "event_sum_ms": {
+      "mean": 73.81435054846641,
+      "median": 74.28694511204958,
+      "variance": 1.970226742738702
+    }
+  },
+  "phases": [
+    {
+      "phase": "construction",
+      "peak_allocated_bytes": 132104704,
+      "peak_reserved_bytes": 157286400,
+      "live_allocated_bytes": 132070912,
+      "live_reserved_bytes": 157286400,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 525224,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 50366464,
+        "active_bytes.peak": 50366464,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 50,
+        "active_requests.peak": 50
+      }
+    },
+    {
+      "phase": "release_0",
+      "peak_allocated_bytes": 132070912,
+      "peak_reserved_bytes": 157286400,
+      "live_allocated_bytes": 132070912,
+      "live_reserved_bytes": 157286400,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 525224,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 50366464,
+        "active_bytes.peak": 50366464,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 50,
+        "active_requests.peak": 50
+      }
+    },
+    {
+      "phase": "forward_0",
+      "peak_allocated_bytes": 191021568,
+      "peak_reserved_bytes": 218103808,
+      "live_allocated_bytes": 153223680,
+      "live_reserved_bytes": 218103808,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 131545692,
+      "unattributed_live_bytes": 21677988,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 109086720,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 57
+      }
+    },
+    {
+      "phase": "backward_0",
+      "peak_allocated_bytes": 276720640,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "restore_0",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "release_1",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 149110272,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17564584,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "phase": "forward_1",
+      "peak_allocated_bytes": 200359424,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 161743360,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 131545692,
+      "unattributed_live_bytes": 30197668,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "backward_1",
+      "peak_allocated_bytes": 276720640,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "restore_1",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "release_2",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 149110272,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17564584,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "phase": "forward_2",
+      "peak_allocated_bytes": 200359424,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 161743360,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 131545692,
+      "unattributed_live_bytes": 30197668,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "backward_2",
+      "peak_allocated_bytes": 276720640,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "restore_2",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "release_3",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 149110272,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17564584,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "phase": "forward_3",
+      "peak_allocated_bytes": 200359424,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 161743360,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 131545692,
+      "unattributed_live_bytes": 30197668,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "backward_3",
+      "peak_allocated_bytes": 276720640,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "restore_3",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "release_4",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 149110272,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17564584,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "phase": "forward_4",
+      "peak_allocated_bytes": 200359424,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 161743360,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 131545692,
+      "unattributed_live_bytes": 30197668,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "backward_4",
+      "peak_allocated_bytes": 276720640,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "restore_4",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "release_5",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 149110272,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17564584,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "phase": "forward_5",
+      "peak_allocated_bytes": 200359424,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 161743360,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 131545692,
+      "unattributed_live_bytes": 30197668,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "backward_5",
+      "peak_allocated_bytes": 276720640,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "restore_5",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "release_6",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 149110272,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17564584,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "phase": "forward_6",
+      "peak_allocated_bytes": 200359424,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 161743360,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 131545692,
+      "unattributed_live_bytes": 30197668,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "backward_6",
+      "peak_allocated_bytes": 276720640,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "restore_6",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "release_7",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 149110272,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17564584,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "phase": "forward_7",
+      "peak_allocated_bytes": 200359424,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 161743360,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 131545692,
+      "unattributed_live_bytes": 30197668,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "backward_7",
+      "peak_allocated_bytes": 276720640,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "restore_7",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "release_8",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 149110272,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17564584,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "phase": "forward_8",
+      "peak_allocated_bytes": 200359424,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 161743360,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 131545692,
+      "unattributed_live_bytes": 30197668,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "backward_8",
+      "peak_allocated_bytes": 276720640,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "restore_8",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "release_9",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 149110272,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17564584,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "phase": "forward_9",
+      "peak_allocated_bytes": 200359424,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 161743360,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 131545692,
+      "unattributed_live_bytes": 30197668,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "backward_9",
+      "peak_allocated_bytes": 276720640,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "restore_9",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188031488,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 20087204,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 67108864,
+        "active_bytes.peak": 67108864,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 8,
+        "active_requests.peak": 8
+      }
+    },
+    {
+      "phase": "gradient_serialization",
+      "peak_allocated_bytes": 188031488,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188030976,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 167944280,
+      "unattributed_live_bytes": 20086696,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 67108868,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 0,
+        "active_requests.peak": 9
+      }
+    },
+    {
+      "phase": "state_verification",
+      "peak_allocated_bytes": 188030976,
+      "peak_reserved_bytes": 318767104,
+      "live_allocated_bytes": 188030976,
+      "live_reserved_bytes": 318767104,
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 167944280,
+      "unattributed_live_bytes": 20086696,
+      "host": {
+        "allocated_bytes.current": 117475341,
+        "allocated_bytes.peak": 117475341,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 0,
+        "allocations.current": 61,
+        "allocations.peak": 61,
+        "active_requests.current": 0,
+        "active_requests.peak": 0
+      }
+    }
+  ],
+  "peak": 276720640,
+  "reserved_peak": 318767104,
+  "host_allocated_peak": 117475341,
+  "host_active_peak": 109086720,
+  "gradient": {
+    "path": "results/compact_rmsnorm_v1/compact/runs/tinystories__resident/gradient.pt",
+    "sha256": "61a8c3364a547fbc99a96acbb8ddee167d972082e9b96b5509c84c625dec1f1a",
+    "tree_hash": "1e2b0e43ee533c86f5d55f16e4f592f35ce7dd3d297a995bd1bc7ab91d8dcdac"
+  },
+  "global_error": 2.6631165646148545e-07,
+  "tensor_error": 5.258009150670658e-07,
+  "loss_error": 0.0,
+  "backwards": 10,
+  "training_updates": 0,
+  "state_unchanged": true,
+  "parameters": 9099648,
+  "pinned_gradient_payload": 0
+}

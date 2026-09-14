@@ -1,0 +1,20 @@
+{
+  "reason": "Native SymPy import access violation before PyTorch import or audit.run; no replay started",
+  "original_audit_exit": "3221225477",
+  "completed_backwards": 254,
+  "completed_replays": 0,
+  "remaining_backwards": 8,
+  "additional_training_updates": 0,
+  "repeated_completed_cases": 0,
+  "files": {
+    "results/checkpoint_input_offload_v1/audit.log": "39e26481e6e2eac6ac197d7e54baa0525cd002d069ddfc821874041e7fcdf0b9",
+    "results/checkpoint_input_offload_v1/audit_exit.txt": "5205fef41c0db63d59104e9f7f636e546fddc5ec46e07a509335cf0fe255b877",
+    "results/checkpoint_input_offload_v1/audit_protocol.json": "6a0553da8cc5a16ecd435342e8615ff432cceb0e3cbd4eded567dd4bfedc999a",
+    "results/checkpoint_input_offload_v1/protocol.json": "d7622cc6e283dca84e023152d588f8109c74378edaebf38e936a184e53e758d4",
+    "results/checkpoint_input_offload_v1/result.json": "af933e3437d4b4caf1a584fa1f82dcd190008f2383b1165876f2bd9e9b7deb22",
+    "results/checkpoint_input_offload_v1/qualification.json": "74f5bd20296135c9c7255763b004ee955479f231d83763e452d5e05573872fb9",
+    "results/checkpoint_input_offload_v1/source/prepare_recovery.py": "aec1279809dda1faf8fb951ae3ff1df9689d4b6d484b6baee7b3383b69a6abf7",
+    "results/checkpoint_input_offload_v1/source/audit_recovery.py": "c7a723b57b3fb11b1f94b6341fea8118bd3e3d2d29a94370fcd8d6a1e98a89ba",
+    "research/checkpoint_input_offload_audit_recovery.md": "b2c19dac75d43b9907ecaebe5692c18899dfb2fc61d1d7f64f24dc023e3060cc"
+  }
+}

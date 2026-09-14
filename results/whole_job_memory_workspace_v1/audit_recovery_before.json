@@ -1,0 +1,23 @@
+{
+  "reason": "native access violation during module loading before audit output",
+  "training_repeated": false,
+  "root_cause_proved": false,
+  "unchanged_scoring_source": "results/whole_job_memory_workspace_v1/source/audit.py",
+  "files": {
+    "results/whole_job_memory_workspace_v1/audit.log": "ee45f81827fd06a2969f5fafcb454f1b5dd9f07dff4129f54aefc4881be5d5a4",
+    "results/whole_job_memory_workspace_v1/audit_exit.txt": "5205fef41c0db63d59104e9f7f636e546fddc5ec46e07a509335cf0fe255b877",
+    "results/whole_job_memory_workspace_v1/result.json": "7d189efd920304dc9e31b76767d1ce63d14d902c8e97ddb8020fb7a22198d593",
+    "results/whole_job_memory_workspace_v1/protocol.json": "9ee0da706ccdc472bfc58496ba423306a39b24da3f8287e928843e609361fe68",
+    "results/whole_job_memory_workspace_v1/study_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/whole_job_memory_workspace_v1/source/analyze.py": "0bbdef88eab89edb6196e0318837ec102bb3dd614218058613c15b058df52599",
+    "results/whole_job_memory_workspace_v1/source/audit.py": "b21b050ea447c90d75432d7068d31b68a92a394961bc95307a90c4640ae7ec73",
+    "results/whole_job_memory_workspace_v1/source/audit_recovery.py": "f521d69d273188bcdd187963cd92b843ca9711065faa8a41932eeaabc40249ea",
+    "results/whole_job_memory_workspace_v1/source/inspect_progress.py": "8e6ea6e58646f3b8bb639e9cdd08fbe57be398d1a3226b8e4582ebca62447cd3",
+    "results/whole_job_memory_workspace_v1/source/launch.py": "bb74056c636cc2b3e76f8a010394f3f1515e196cdfa0db5abd3d350826dfd312",
+    "results/whole_job_memory_workspace_v1/source/plot.py": "187272b49874e54e477e0c98488239f004ed88d82b43f9f59fd6116880fb0711",
+    "results/whole_job_memory_workspace_v1/source/prepare.py": "24080485c7865e7218533faab24b9c4e8c86b91772ad75c494dc9c2766f06897",
+    "results/whole_job_memory_workspace_v1/source/prepare_audit_recovery.py": "bcaf871bc6d918bc2b55e00269724cb3052324253e3b39809f4a51d1cf661538",
+    "results/whole_job_memory_workspace_v1/source/study.py": "8f1d0d1e6548fa98c1baf5e4695d92c6ec3dc1db84cabcde3da92954a7f26b77",
+    "research/whole_job_memory_audit_recovery.md": "c8c7282060e842de910debd091f81850f7e5f900263322394b0f85bad99d995c"
+  }
+}

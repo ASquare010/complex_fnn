@@ -1,0 +1,60 @@
+{
+  "pairs": [
+    {
+      "batch": 16,
+      "context": 128,
+      "seed": 17,
+      "full_relative_nll_difference_abs": 0.0006628137020114888,
+      "trajectory_relative_nll_difference_abs": {
+        "0": 0.0,
+        "100": 0.00048059746845652285,
+        "200": 0.0014552376827066116,
+        "400": 0.0007046788013036487,
+        "800": 0.0007583525089402965
+      },
+      "fidelity_passes": true
+    },
+    {
+      "batch": 16,
+      "context": 128,
+      "seed": 29,
+      "full_relative_nll_difference_abs": 0.0006097217150197176,
+      "trajectory_relative_nll_difference_abs": {
+        "0": 0.0,
+        "100": 0.003562760421139899,
+        "200": 0.001780267173330019,
+        "400": 0.0030626122661268074,
+        "800": 0.003589748901705603
+      },
+      "fidelity_passes": true
+    },
+    {
+      "batch": 16,
+      "context": 128,
+      "seed": 43,
+      "full_relative_nll_difference_abs": 0.007452059971717384,
+      "trajectory_relative_nll_difference_abs": {
+        "0": 0.0,
+        "100": 0.00651021894316095,
+        "200": 0.0035785224673510196,
+        "400": 0.004296391098397967,
+        "800": 0.007892199218778817
+      },
+      "fidelity_passes": true
+    },
+    {
+      "batch": 8,
+      "context": 512,
+      "seed": 17,
+      "full_relative_nll_difference_abs": 0.04318488622336436,
+      "trajectory_relative_nll_difference_abs": {
+        "0": 0.0,
+        "100": 0.0012413983970072096,
+        "200": 0.00405500918425139,
+        "400": 0.019282869373261513,
+        "800": 0.04482309033299825
+      },
+      "fidelity_passes": false
+    }
+  ]
+}

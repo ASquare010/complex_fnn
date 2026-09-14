@@ -1,0 +1,10 @@
+{"active": "tinystories_s101__fp32_default_native", "step": 100, "loss": 4.064362049102783}
+{"active": "tinystories_s101__fp32_default_native", "step": 200, "loss": 3.335096836090088}
+{"active": "tinystories_s101__fp32_default_native", "step": 300, "loss": 2.955042839050293}
+{"active": "tinystories_s101__fp32_default_native", "step": 400, "loss": 2.726778268814087}
+{"active": "tinystories_s101__fp32_default_native", "step": 500, "loss": 2.5657706260681152}
+{"active": "tinystories_s101__fp32_default_native", "step": 600, "loss": 2.4421887397766113}
+{"active": "tinystories_s101__fp32_default_native", "step": 700, "loss": 2.355238437652588}
+{"active": "tinystories_s101__fp32_default_native", "step": 800, "loss": 2.211956024169922}
+{"completed": "tinystories_s101__fp32_default_native", "nll": 2.352650413707811, "peak_mib": 659.5791015625, "wall_ms": 146.135299999969, "stability": 1.0450132729462938}
+Complete 7 ordinary

@@ -1,0 +1,11 @@
+{
+  "completedUtc": "2026-09-12T20:49:22.7019228Z",
+  "deletedFiles": 6880,
+  "deletedBytes": 164098048196,
+  "freeBytesBefore": 21352927232,
+  "freeBytesAfter": 185477656576,
+  "manifest": "research/storage_cleanup_2026-09-13.json",
+  "journal": "research/storage_cleanup_2026-09-13_deleted.jsonl",
+  "verification": "All 248 protected result tensors unchanged; selected model, paused step200 and six initialization hashes verified; all deletion targets absent",
+  "verifiedFreeBytes": 185464832000
+}

@@ -1,0 +1,13 @@
+{
+  "after_original_cleanup": [
+    8519680,
+    20971520
+  ],
+  "after_workspace_clear": [
+    0,
+    0
+  ],
+  "optimizer_updates": 0,
+  "backwards": 0,
+  "matrix_products": 1
+}

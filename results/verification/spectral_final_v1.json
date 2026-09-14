@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "frozen_source_files": 9,
+  "all_frozen_hashes_match": true,
+  "moment_audits": 36,
+  "checkpoint_audits": 408,
+  "score_audits": 816,
+  "selections": 204,
+  "pytest_passed": 113,
+  "report_links_exist": true,
+  "mathematical_qualification_checks": {
+    "H103": 12,
+    "H104": 22
+  },
+  "pipeline_memory_accounted": true,
+  "broad_goal_achieved": false,
+  "lossless_results": {
+    "results\\spectral_discovery_v1\\result.json.gz": {
+      "sha256": "773c1719a3fb0ca6905e4573f5a2a8539e6e0437bdca12595b61da0b2a6a8e2c",
+      "original_sha256": "9cfc753513672ea16f98f432912396f71f0114623e631a7b47a34f5cb26c57cd"
+    },
+    "results\\spectral_fitting_v1\\result.json.gz": {
+      "sha256": "168af2942aef02c1455b578ae1f8ec0eae11b605b66fa5c4a1d5756f2507482e",
+      "original_sha256": "e9cdd09c64de01859bcaef275358da678a32f43883e85f49541162a28fc1974e"
+    }
+  },
+  "files": {
+    "research\\spectral_fitting_results.md": "a4faccb3bdd252ef31ac67dc033cd73921bdee94f4d981d22286150af6f3d9eb",
+    "research\\figures\\spectral_fitting.png": "1a2dc9487c70b01d5df6232a6a902ad25f0a6bacfadc21bcccb1068f172b0ea0",
+    "results\\spectral_fitting_v1\\result.json": "e9cdd09c64de01859bcaef275358da678a32f43883e85f49541162a28fc1974e",
+    "results\\spectral_fitting_v1\\summary.json": "32d7bf766b5ea953be6af27581de8d13156f850ee88f4ba28486d816dd45325e",
+    "results\\spectral_fitting_v1\\audit.json": "74204b4a99bbc0f18d708ef3341a0e110cac2f3c633cb9fb9348ec49fc823cf5",
+    "results\\spectral_fitting_v1\\postprocess_recovery.json": "8b0a4cf871735377712cf177ae75655279ac792dfc7f08bcd75c7255a04cd569",
+    "src\\core\\function_fitting.py": "41b7ec3a30679922dad9b70cba9d4c0479c6d97394979ee93efb7e12e4297682",
+    "tests\\test_function_fitting.py": "0fbd559e60d435f592b27b7947cb20d4c699566b9b66e87f4604327806bcf91a",
+    "results\\spectral_fitting_v1\\source\\analyze.py": "c9b3371cdfa6b68a1024995a51d25bda09482e9ea9e684c917f1b25ee77fe827",
+    "results\\spectral_fitting_v1\\source\\plot.py": "8b354243be35d6bf99fbcb200714cbd9ec60e2502dc061e3d3fb3519275bdef6",
+    "results\\spectral_fitting_v1\\source\\audit.py": "8700afbc80ed2705e10b6a52315c9542bc72691c11c9b7be6e7e0af428e2e32b"
+  }
+}

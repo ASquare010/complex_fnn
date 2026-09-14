@@ -1,0 +1,188 @@
+{
+  "passed": true,
+  "double_model_checks": [
+    {
+      "variant": "gelu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "bf16_default_native",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "fp32_default_native",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "fp32_default_chunks",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "fp32_math_native",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "fp32_math_chunks",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "bf16_default_native",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "fp32_default_native",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "fp32_default_chunks",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "fp32_math_native",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "fp32_math_chunks",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "bf16_default_native",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "fp32_default_native",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "fp32_default_chunks",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "fp32_math_native",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "fp32_math_chunks",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "bf16_default_native",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "fp32_default_native",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "fp32_default_chunks",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "fp32_math_native",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "fp32_math_chunks",
+      "passed": true
+    }
+  ],
+  "reference_backward_passes": 4,
+  "qualification_backward_passes": 24,
+  "optimizer_updates": 0
+}

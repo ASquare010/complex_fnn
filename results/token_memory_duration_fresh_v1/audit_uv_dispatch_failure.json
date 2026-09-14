@@ -1,0 +1,10 @@
+{
+  "stage": "outer_uv_dispatch_of_audit_launcher",
+  "exit_code": 101,
+  "audit_worker_started": false,
+  "audit_log_created": false,
+  "training_updates_repeated": 0,
+  "message": "uv panicked before launching Python: Python installation keys must have valid Python versions: Python version 3.10.17 is a development release",
+  "recovery": "Invoke the same absolute UV-managed Python3.12.9 interpreter directly; preserve identical fresh-cache arguments and environment",
+  "root_cause_proved": false
+}

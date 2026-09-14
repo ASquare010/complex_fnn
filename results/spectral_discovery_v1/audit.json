@@ -1,0 +1,257 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "seed": 17,
+      "task": "quadratic",
+      "mode": "raw",
+      "matrix_error": 1.0408340855860843e-17,
+      "recovery": 0.8832719134821253
+    },
+    {
+      "seed": 17,
+      "task": "quadratic",
+      "mode": "bounded",
+      "matrix_error": 2.6020852139652106e-18,
+      "recovery": 0.929458724444244
+    },
+    {
+      "seed": 17,
+      "task": "quadratic",
+      "mode": "permuted",
+      "matrix_error": 1.734723475976807e-18,
+      "recovery": 0.07585061434039422
+    },
+    {
+      "seed": 17,
+      "task": "cubic",
+      "mode": "raw",
+      "matrix_error": 2.0816681711721685e-17,
+      "recovery": 0.641256871120939
+    },
+    {
+      "seed": 17,
+      "task": "cubic",
+      "mode": "bounded",
+      "matrix_error": 2.6020852139652106e-18,
+      "recovery": 0.8859034083260804
+    },
+    {
+      "seed": 17,
+      "task": "cubic",
+      "mode": "permuted",
+      "matrix_error": 1.734723475976807e-18,
+      "recovery": 0.07630290911103982
+    },
+    {
+      "seed": 17,
+      "task": "product",
+      "mode": "raw",
+      "matrix_error": 1.734723475976807e-17,
+      "recovery": 0.9064880293020898
+    },
+    {
+      "seed": 17,
+      "task": "product",
+      "mode": "bounded",
+      "matrix_error": 2.6020852139652106e-18,
+      "recovery": 0.9396555010613483
+    },
+    {
+      "seed": 17,
+      "task": "product",
+      "mode": "permuted",
+      "matrix_error": 1.0842021724855044e-18,
+      "recovery": 0.08645717407088023
+    },
+    {
+      "seed": 17,
+      "task": "piecewise",
+      "mode": "raw",
+      "matrix_error": 2.0816681711721685e-17,
+      "recovery": 0.7687390166300323
+    },
+    {
+      "seed": 17,
+      "task": "piecewise",
+      "mode": "bounded",
+      "matrix_error": 1.734723475976807e-18,
+      "recovery": 0.9041264727338449
+    },
+    {
+      "seed": 17,
+      "task": "piecewise",
+      "mode": "permuted",
+      "matrix_error": 1.3010426069826053e-18,
+      "recovery": 0.0824449577973542
+    },
+    {
+      "seed": 29,
+      "task": "quadratic",
+      "mode": "raw",
+      "matrix_error": 1.0408340855860843e-17,
+      "recovery": 0.8867201948237124
+    },
+    {
+      "seed": 29,
+      "task": "quadratic",
+      "mode": "bounded",
+      "matrix_error": 1.734723475976807e-18,
+      "recovery": 0.9305261011782013
+    },
+    {
+      "seed": 29,
+      "task": "quadratic",
+      "mode": "permuted",
+      "matrix_error": 1.3010426069826053e-18,
+      "recovery": 0.08199435847136802
+    },
+    {
+      "seed": 29,
+      "task": "cubic",
+      "mode": "raw",
+      "matrix_error": 1.734723475976807e-17,
+      "recovery": 0.6472265718981729
+    },
+    {
+      "seed": 29,
+      "task": "cubic",
+      "mode": "bounded",
+      "matrix_error": 2.6020852139652106e-18,
+      "recovery": 0.8893160196959
+    },
+    {
+      "seed": 29,
+      "task": "cubic",
+      "mode": "permuted",
+      "matrix_error": 1.734723475976807e-18,
+      "recovery": 0.08338891341960075
+    },
+    {
+      "seed": 29,
+      "task": "product",
+      "mode": "raw",
+      "matrix_error": 1.0408340855860843e-17,
+      "recovery": 0.9058235322080251
+    },
+    {
+      "seed": 29,
+      "task": "product",
+      "mode": "bounded",
+      "matrix_error": 2.168404344971009e-18,
+      "recovery": 0.9384412267754398
+    },
+    {
+      "seed": 29,
+      "task": "product",
+      "mode": "permuted",
+      "matrix_error": 1.3010426069826053e-18,
+      "recovery": 0.08232998666919483
+    },
+    {
+      "seed": 29,
+      "task": "piecewise",
+      "mode": "raw",
+      "matrix_error": 1.3877787807814457e-17,
+      "recovery": 0.782123617840258
+    },
+    {
+      "seed": 29,
+      "task": "piecewise",
+      "mode": "bounded",
+      "matrix_error": 1.734723475976807e-18,
+      "recovery": 0.9056212703860566
+    },
+    {
+      "seed": 29,
+      "task": "piecewise",
+      "mode": "permuted",
+      "matrix_error": 1.3010426069826053e-18,
+      "recovery": 0.08322805792915758
+    },
+    {
+      "seed": 43,
+      "task": "quadratic",
+      "mode": "raw",
+      "matrix_error": 1.3877787807814457e-17,
+      "recovery": 0.8859688040389491
+    },
+    {
+      "seed": 43,
+      "task": "quadratic",
+      "mode": "bounded",
+      "matrix_error": 2.168404344971009e-18,
+      "recovery": 0.9287340632402462
+    },
+    {
+      "seed": 43,
+      "task": "quadratic",
+      "mode": "permuted",
+      "matrix_error": 1.5178830414797062e-18,
+      "recovery": 0.08194627506961422
+    },
+    {
+      "seed": 43,
+      "task": "cubic",
+      "mode": "raw",
+      "matrix_error": 3.469446951953614e-17,
+      "recovery": 0.6382988972740644
+    },
+    {
+      "seed": 43,
+      "task": "cubic",
+      "mode": "bounded",
+      "matrix_error": 1.734723475976807e-18,
+      "recovery": 0.8883651249627323
+    },
+    {
+      "seed": 43,
+      "task": "cubic",
+      "mode": "permuted",
+      "matrix_error": 1.734723475976807e-18,
+      "recovery": 0.08302245887737472
+    },
+    {
+      "seed": 43,
+      "task": "product",
+      "mode": "raw",
+      "matrix_error": 1.0408340855860843e-17,
+      "recovery": 0.9041784422817747
+    },
+    {
+      "seed": 43,
+      "task": "product",
+      "mode": "bounded",
+      "matrix_error": 1.734723475976807e-18,
+      "recovery": 0.936497660823114
+    },
+    {
+      "seed": 43,
+      "task": "product",
+      "mode": "permuted",
+      "matrix_error": 1.3010426069826053e-18,
+      "recovery": 0.08466061076808379
+    },
+    {
+      "seed": 43,
+      "task": "piecewise",
+      "mode": "raw",
+      "matrix_error": 1.734723475976807e-17,
+      "recovery": 0.7717632156234555
+    },
+    {
+      "seed": 43,
+      "task": "piecewise",
+      "mode": "bounded",
+      "matrix_error": 1.734723475976807e-18,
+      "recovery": 0.9017992305252449
+    },
+    {
+      "seed": 43,
+      "task": "piecewise",
+      "mode": "permuted",
+      "matrix_error": 1.3010426069826053e-18,
+      "recovery": 0.08342105405964485
+    }
+  ]
+}

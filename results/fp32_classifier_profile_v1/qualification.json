@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "double_model_checks": [
+    {
+      "variant": "gelu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "block_bf16",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "chunks_bf16",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "block_fp32",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "chunks_fp32",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "block_bf16",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "chunks_bf16",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "block_fp32",
+      "passed": true
+    },
+    {
+      "variant": "gelu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "chunks_fp32",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "block_bf16",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "chunks_bf16",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "block_fp32",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        2,
+        7
+      ],
+      "policy": "chunks_fp32",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "block_bf16",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "chunks_bf16",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "block_fp32",
+      "passed": true
+    },
+    {
+      "variant": "swiglu",
+      "shape": [
+        1,
+        11
+      ],
+      "policy": "chunks_fp32",
+      "passed": true
+    }
+  ],
+  "optimizer_updates": 0
+}

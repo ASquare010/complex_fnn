@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "frozen_sources": 67,
+  "maintained_files_unchanged": 61,
+  "checkpoint_hashes": 24,
+  "evaluation_scores": 72,
+  "independent_native_rescores": 24,
+  "max_native_rescore_difference": 0,
+  "mathematical_qualification_cases": 36,
+  "optimizer_updates": 0,
+  "actual_training_job": false,
+  "classifier_chunks_qualifies_both_shapes": true,
+  "sequence_chunks_fails_runtime_both_shapes": true,
+  "previous_maintained_tests_passed": 116,
+  "maintained_tests_rerun": false,
+  "broad_goal_achieved": false,
+  "packed": {
+    "results/streamed_evaluation_v1/result.json.gz": {
+      "sha256": "1534732f39b8e0440ebad124be23e75c9be450a5df5a6f1ba03648e6a318b5b4",
+      "original_sha256": "b1755f913a42246694fd4295ad93e11cf1dfc742bb47d6af5c27b4f8f72a9f3a",
+      "bytes": 63651
+    },
+    "results/streamed_evaluation_v1/analyze.log.gz": {
+      "sha256": "4c96f43d69c522f3b272bf00f448e0ae27b335fd9bd2dce62d70b6c212e5ca08",
+      "original_sha256": "55f3a4514d4eb469b2efa3ee401e13853a245ae032ce94506ce9cfd74885a8a5",
+      "bytes": 1660
+    },
+    "results/streamed_evaluation_v1/audit.log.gz": {
+      "sha256": "9c44661ea5261be02983ddb32a29be0cd5d670b422ef3f5d4d3f59bf36b5e2b9",
+      "original_sha256": "3df6aa41ca741afd46e78d969fd43b4a5962fe483706024147d2bbfda9728139",
+      "bytes": 196
+    },
+    "results/streamed_evaluation_v1/study.log.gz": {
+      "sha256": "4a1d5e2f47f9a47ec807542843e98422cceacf56c0ca3298755c5015cd116d96",
+      "original_sha256": "8c909949d4a029fa028889dd9c64a0c5efda1a497aba1f7691f7226598dce571",
+      "bytes": 636
+    }
+  },
+  "files": {
+    "results/streamed_evaluation_v1/protocol.json": "22658fc12abd9f6e618eb53f65b7c14604073cf362736664988018ada3ab434d",
+    "results/streamed_evaluation_v1/qualification.json": "e9ad8102341bedf5214c33867ddf7de0d8099de33fab3ac5ed8e755102b3ece8",
+    "results/streamed_evaluation_v1/environment.json": "fedfbf4cc42974be9a96b8106f246a738495d14680f85b17c334aeb19fa4fdc3",
+    "results/streamed_evaluation_v1/summary.json": "55f3a4514d4eb469b2efa3ee401e13853a245ae032ce94506ce9cfd74885a8a5",
+    "results/streamed_evaluation_v1/audit.json": "4ebdbd84120e56b08734eb71ab2cfd111b4d6e1d21412b949fccd11d396efb84",
+    "results/streamed_evaluation_v1/source/README.md": "1cafd0998f8fcdd479d7e0c5b7077a3d98bfe2ebb922f036825228e7a05e2628",
+    "research/streamed_evaluation_plan.md": "0dd2807f45a233c7a7e0bfa964395af90f536375445d6c2beb73729088f10da7",
+    "research/streamed_evaluation_results.md": "cea842dcf2bd5d9a9c0bbc997ef0388edc6783000e217aea48040c7466f7dcf5",
+    "results/streamed_evaluation_v1/source/analyze.py": "54e145e45f5b8b4fa8fa5ee44bd8528aeb8cdadee8f734f4f184507d2cf78bdd",
+    "results/streamed_evaluation_v1/source/audit.py": "b3d9ea3285726b5fffe1737e40897877c322dc4e9caa29a8bfde497de5bdae70",
+    "results/streamed_evaluation_v1/source/evaluation.py": "c5c5a904670506f107902789363ca5cabc600f8733adafd41548376c286ba6e6",
+    "results/streamed_evaluation_v1/source/inspect_progress.py": "4881910877a27205a17ead7f714dd66eb48cb01ea0d260f8eb2257e63bdeb8cd",
+    "results/streamed_evaluation_v1/source/launch.py": "666e373f27e4de42478416715a82689970ce9706140f5a1af622fcf06f966522",
+    "results/streamed_evaluation_v1/source/prepare.py": "e1f368dd9c8d925ed121804da3d97d22e5c1b939e24eafdc42be8d0decb60a56",
+    "results/streamed_evaluation_v1/source/qualification.py": "e3a2c5fb2cca7ba26058dbac6efc9770c4b8222ba7fb889457432a33af59c85f",
+    "results/streamed_evaluation_v1/source/study.py": "40809d6716c49be9abc1b00a03df11fe636dd4937860ff7205aeb552a44c3bd8",
+    "C:/Users/Cuebric/Desktop/Git/complex_fnn/results/verification/streamed_evaluation_final_v1.py": "f2b3785f8d0758c577eb6321fd114dbeee14cfe5dbb36d287b2b70be6bac2b76"
+  }
+}

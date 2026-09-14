@@ -1,0 +1,722 @@
+[
+  {
+    "key": "gelu_narrow_t128_s17_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "17",
+      "--context",
+      "128",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t128_s17_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t128_s17_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "17",
+      "--context",
+      "128",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t128_s17_block"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t128_s17_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "17",
+      "--context",
+      "128",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t128_s17_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t128_s17_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "17",
+      "--context",
+      "128",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t128_s17_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t128_s17_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "17",
+      "--context",
+      "128",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t128_s17_block"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t128_s17_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "17",
+      "--context",
+      "128",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t128_s17_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t128_s29_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "29",
+      "--context",
+      "128",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t128_s29_block"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t128_s29_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "29",
+      "--context",
+      "128",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t128_s29_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t128_s29_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "29",
+      "--context",
+      "128",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t128_s29_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t128_s29_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "29",
+      "--context",
+      "128",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t128_s29_block"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t128_s29_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "29",
+      "--context",
+      "128",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t128_s29_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t128_s29_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "29",
+      "--context",
+      "128",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t128_s29_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t128_s43_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "43",
+      "--context",
+      "128",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t128_s43_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t128_s43_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "43",
+      "--context",
+      "128",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t128_s43_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t128_s43_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "43",
+      "--context",
+      "128",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t128_s43_block"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t128_s43_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "43",
+      "--context",
+      "128",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t128_s43_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t128_s43_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "43",
+      "--context",
+      "128",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t128_s43_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t128_s43_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "43",
+      "--context",
+      "128",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t128_s43_block"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t512_s17_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "17",
+      "--context",
+      "512",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t512_s17_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t512_s17_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "17",
+      "--context",
+      "512",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t512_s17_block"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t512_s17_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "17",
+      "--context",
+      "512",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t512_s17_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t512_s17_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "17",
+      "--context",
+      "512",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t512_s17_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t512_s17_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "17",
+      "--context",
+      "512",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t512_s17_block"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t512_s17_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "17",
+      "--context",
+      "512",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t512_s17_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t512_s29_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "29",
+      "--context",
+      "512",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t512_s29_block"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t512_s29_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "29",
+      "--context",
+      "512",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t512_s29_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t512_s29_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "29",
+      "--context",
+      "512",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t512_s29_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t512_s29_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "29",
+      "--context",
+      "512",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t512_s29_block"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t512_s29_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "29",
+      "--context",
+      "512",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t512_s29_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t512_s29_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "29",
+      "--context",
+      "512",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t512_s29_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t512_s43_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "43",
+      "--context",
+      "512",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t512_s43_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t512_s43_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "43",
+      "--context",
+      "512",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t512_s43_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "gelu_narrow_t512_s43_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "43",
+      "--context",
+      "512",
+      "--variant",
+      "gelu_narrow",
+      "--root",
+      "results\\token_memory_replication_v1\\gelu_narrow_t512_s43_block"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t512_s43_loss_chunks",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "loss_chunks",
+      "--seed",
+      "43",
+      "--context",
+      "512",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t512_s43_loss_chunks"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t512_s43_native",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "native",
+      "--seed",
+      "43",
+      "--context",
+      "512",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t512_s43_native"
+    ],
+    "returncode": 0
+  },
+  {
+    "key": "swiglu_t512_s43_block",
+    "command": [
+      "c:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\.venv\\Scripts\\python.exe",
+      "-X",
+      "faulthandler",
+      "-m",
+      "results.token_memory_v1.source.diagnose",
+      "block",
+      "--seed",
+      "43",
+      "--context",
+      "512",
+      "--variant",
+      "swiglu",
+      "--root",
+      "results\\token_memory_replication_v1\\swiglu_t512_s43_block"
+    ],
+    "returncode": 0
+  }
+]

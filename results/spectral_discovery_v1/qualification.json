@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "Hermite_2",
+      "value": 4.000000000000002,
+      "expected": 4
+    },
+    {
+      "name": "Hermite_3",
+      "value": 6.000000000000002,
+      "expected": 6
+    },
+    {
+      "name": "stream_raw_cpu",
+      "max_error": 1.249000902703301e-16
+    },
+    {
+      "name": "stream_raw_cuda",
+      "max_error": 1.249000902703301e-16
+    },
+    {
+      "name": "rotation_scale_raw",
+      "passed": true
+    },
+    {
+      "name": "one_hot_zero_raw",
+      "passed": true
+    },
+    {
+      "name": "stream_bounded_cpu",
+      "max_error": 5.551115123125783e-17
+    },
+    {
+      "name": "stream_bounded_cuda",
+      "max_error": 5.724587470723463e-17
+    },
+    {
+      "name": "rotation_scale_bounded",
+      "passed": true
+    },
+    {
+      "name": "one_hot_zero_bounded",
+      "passed": true
+    },
+    {
+      "name": "orthonormal_basis",
+      "passed": true
+    },
+    {
+      "name": "invalid_inputs",
+      "passed": true
+    }
+  ]
+}

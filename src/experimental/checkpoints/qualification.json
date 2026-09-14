@@ -1,0 +1,13 @@
+{
+  "historical_manifest": "manifest.json",
+  "updated_after_study": "H163",
+  "exact_offload": "H156 and H163 qualified for the documented 800-update workloads; no convergence or broad-domain claim",
+  "fp16_checkpoint_storage": "H160 independent audit passed; fresh-training qualification FAILED",
+  "failed_gates": [
+    "WikiText2 seed113 quality",
+    "WikiText2 seed101 timing stability"
+  ],
+  "report": "../../../research/checkpoint_fp16_long_results.md",
+  "note": "The original manifest records status at the user pause; this file supplies the later qualification. Checkpoint binaries and original hashes are unchanged.",
+  "exact_offload_report": "../../../research/exact_offload_long_scale_results.md"
+}

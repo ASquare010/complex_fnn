@@ -1,0 +1,168 @@
+{
+  "status": "PASS",
+  "meaning": "Evidence integrity and faithful accounting; CPU clipping numerical gate remains FAIL",
+  "scientific_numerical_audit_passed": false,
+  "cuda_numerical_gates_passed": true,
+  "strong_near_zero_amplification": true,
+  "low_distortion_epsilon_remedies_passed": false,
+  "new_disposable_optimizer_steps": 12,
+  "language_training_updates": 0,
+  "forwards": 0,
+  "backwards": 0,
+  "original_failure_preserved": true,
+  "broad_goal_achieved": false,
+  "files": {
+    "results/adam_update_sensitivity_v1/source/analyze.py": "038497d9b7370f59f8cbf19e90f9123faf99751310720bec9a87394d96bdb3da",
+    "results/adam_update_sensitivity_v1/source/audit.py": "87dfb3b33fd41b278019187b44e38c728cf61ad0d24d9e7a8e15e7a7d2191b21",
+    "results/adam_update_sensitivity_v1/source/launch.py": "e23a04fbd3b38391f767e2884697b4057548190ec97143b2540d1fad0114c9f0",
+    "results/adam_update_sensitivity_v1/source/plot.py": "dfafe621c43039860a9bc9061a614f6b605dab6f808077c281d9f7b2e89e590e",
+    "results/adam_update_sensitivity_v1/source/prepare.py": "ef91c20d268f629a142be5c5864a4d2e965cd33244bb5ffff2c396c5a9953d24",
+    "results/adam_update_sensitivity_v1/source/prepare_audit.py": "472d8d42529b473866dd68f98a4ae9450d74200f00e80c0015e8e18ceef5bc84",
+    "results/adam_update_sensitivity_v1/source/prepare_audit_recovery.py": "d61c65454749300ba0abccf981d6237810dd02774beef9c55a9abb4c59fc3031",
+    "results/adam_update_sensitivity_v1/source/prepare_recovery.py": "393792bdb3237a6f58a56b80e668b94371d710c075cb5bf57a14a45435634556",
+    "results/adam_update_sensitivity_v1/source/publish.py": "cafb00b9c58b578a733ff54be636ebd7a56625a6ddce87feb587f8ae96156a71",
+    "results/adam_update_sensitivity_v1/source/README.md": "2d8473b7c7605319d28eb2504ff5a5201f62cb8f3f26716e351a87e1c4938b69",
+    "results/adam_update_sensitivity_v1/source/recover.py": "a609d064feceb1a69e589f5898a632526d4f86a7b57887052f82d1d1d158cc9e",
+    "results/adam_update_sensitivity_v1/source/report.py": "9cb1a6187d13fea8a851d5d4646251083c91a1229e57df0f10bc0be9ebae348b",
+    "results/adam_update_sensitivity_v1/source/study.py": "8de651745660c6cec83b28d0e9cd21d7bda1f56a3ff4348beba974faeb62b017",
+    "results/adam_update_sensitivity_v1/source/summarize.py": "b36e86fd06d62cb073ac8aaf15e8e942d01bdcd9e8d391df84d59efa18cde361",
+    "results/adam_update_sensitivity_v1/analyze_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/adam_update_sensitivity_v1/audit_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/adam_update_sensitivity_v1/plot_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/adam_update_sensitivity_v1/prepare_audit_recovery_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/adam_update_sensitivity_v1/prepare_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/adam_update_sensitivity_v1/prepare_recovery_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/adam_update_sensitivity_v1/publish_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/adam_update_sensitivity_v1/recover_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/adam_update_sensitivity_v1/report_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/adam_update_sensitivity_v1/study_exit.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "results/adam_update_sensitivity_v1/summarize_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/adam_update_sensitivity_v1/protocol.json": "b6c310f95b00f2d5c8bc83010b28cc9f2a0481791e386ca8a086f5eca0de9cb3",
+    "results/adam_update_sensitivity_v1/recovery_protocol.json": "60e29802c0300848a200de2f257b20efa7a92d243b3de59a882af6dcfd79c095",
+    "results/adam_update_sensitivity_v1/audit_protocol.json": "d364a21354f526756c7d207312bb1e214bb5a907bd1429f5324aedb77ae4d4d4",
+    "results/adam_update_sensitivity_v1/summary.json": "67ab10640e0ce4027ebc668277aceb9dcf476531c26eb106312b83d73ae2b283",
+    "results/adam_update_sensitivity_v1/environment.json": "fedfbf4cc42974be9a96b8106f246a738495d14680f85b17c334aeb19fa4fdc3",
+    "results/adam_update_sensitivity_v1/study_failure.json": "4d98dabea5ef5cc568b387fa0c7d2ef5b1ad1759566a808dde04cce2107d792e",
+    "results/verification/adam_update_sensitivity_final_v1.py": "67cebcb0396a953fa08c8c0ee8f4df1f46eed1463c01311ff103b633df671745",
+    "README.md": "08754b2f2c3463043b197e41868c304f9b9df50c8a4a2df87ab6878d5b938a17",
+    "research/CURRENT_STATE.md": "77208658bd9e0ef86782b8b7f025f711fa7261068442f28e9bc427871327dd9e",
+    "research/PROGRESS_OVERVIEW.md": "c024f6242740432651182e9406d15e3825cd76392e0cdf19641b5ad89ac3b00c",
+    "research/idea_bank.md": "17075986168ea018fbecd8af309e8a94877821ea9f44beaa6e9c3679c4dc7c5f",
+    "research/ARTIFACTS.md": "47f1d0c598e2450231fd98c3c24b941c6995855d7ce062ef542a55b34b92e41d",
+    "research/literature.md": "dba72a9caf4315655372e6427846e14b27043783e927ad17e0c45a969e08fc20",
+    ".gitignore": "f6d12fda2a25996a165fdd247d32646246f020f9f51e88ba48535d9d4aa1aa18",
+    "research/adam_update_sensitivity_plan.md": "ab1a42134a6f47febe98b777efe75b3cb08cde2ef0b822539bc45eed670548c1",
+    "research/adam_update_sensitivity_recovery_plan.md": "3596cfd5724615a5e6ef2425560d8f18596b2c8efcd6653716311b7ccd15a557",
+    "research/adam_update_sensitivity_results.md": "52de5c02861dd7cf7efc42766cd2df4f49d49c6c38e2d30561f5975cb3fd7aee",
+    "research/figures/adam_update_sensitivity.png": "822f2d67f338c3e29c2afc7934c62a5852ba60551b2edc74fe6c6ea50265160c"
+  },
+  "tensor_hashes": {
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101__fp32_default_native/clipped.pt": "d7bfa2321a1ba90dbf59a2b8a4140d9a1e058f93fe6092f06da9f3cbe44b35c8",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101__fp32_default_native/updated.pt": "4f1b650439b3fdf153ccb0eb7eef5a033b207a238aa4d6ecc771f7cf6376e859",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101__fp32_default_chunks/clipped.pt": "7ecb41f8daeb7e92d8b9dc15b60d10112aab6e9cd28b9ea98e95300918c59a04",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101__fp32_default_chunks/updated.pt": "bdf732693598b322f406aa3f9ddf1d9f4b6e2ed828861f244de9dd38cadbd816",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r1__fp32_default_native/clipped.pt": "2bbaf8e5b101fbd8435f777ac09b2fc9663a3320319cba9abb2a8feb89d16300",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r1__fp32_default_native/updated.pt": "5f0c6ccbae55f22e6f6f7b825e4acd8bc779cc18885e04752348942b3d33998e",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r1__fp32_default_chunks/clipped.pt": "5ba9a69ec9d6fe14c05f725c46d5d20620ba3d4f5da3e6372d3c23876dd2231a",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r1__fp32_default_chunks/updated.pt": "dc39d662e2ade105206fa70973423d2907d8fe2005cabab1b868b240a9099a39",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r2__fp32_default_chunks/clipped.pt": "469d4d097ef5e93d655bb6656dedd46599ca6bb10ecff8bdba121a7eb633b1e3",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r2__fp32_default_chunks/updated.pt": "8cb5a264a120b831d0ba86985ddb25370623e9a8265fc21d207bd49c429ef90d",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r2__fp32_default_native/clipped.pt": "a4effe238c1648b79121b0c51835812b15f98a80f96f67d4b4681fd3cc7fa332",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r2__fp32_default_native/updated.pt": "63928529154de65fe1b9c8b07e16073bed4aaa66dfb49a033ba5844c656ec997",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101__fp32_default_native/clipped.pt": "03bc6c632eff514e6f902d1a975e391761dd648892574decdcc2b4254723aec1",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101__fp32_default_native/updated.pt": "dc918e375ea6e678f5fbd3a4541ec0c58b7c5b380659f72fc7bc56f15102f3f4",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101__fp32_default_chunks/clipped.pt": "8dd82703ba0ba6a15669976aa1f1182425c260ecc144f3ffbddc40f541e92347",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101__fp32_default_chunks/updated.pt": "0ad00d6f4e3a6077cd65d2a31a640cb9ed7b03004e57acae859fd70b38e638b6",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r1__fp32_default_native/clipped.pt": "766d04778aceed35f4171eaeabd4955463b26252fc53687180b0b07e49f3f193",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r1__fp32_default_native/updated.pt": "edefe097bb57c806a84c118f940c6c019d87a13c42d56fa08a0abde22bd90b9a",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r1__fp32_default_chunks/clipped.pt": "8263b51e39dbaf157aed528cbe54af549e0a16c515d0be29a11ae58b7316f4f8",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r1__fp32_default_chunks/updated.pt": "2ee24e9897554a800f87945412121dce486dda6e974788781e2d3396e9ed9b13",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r2__fp32_default_chunks/clipped.pt": "373601160499bf400906bc82330d3d732f8957a851e9ee5038deae643a5c6f76",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r2__fp32_default_chunks/updated.pt": "bc10fde7792929a57579cd9e8cbe079acb542a80e4cadb3acf6e312f0cc0b417",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r2__fp32_default_native/clipped.pt": "51afbc2b89c284da9bbf99f1e238e24ae6028b9c75b87e5666415d1f7cc362e1",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r2__fp32_default_native/updated.pt": "ceadf0743a791dc2281c8dd9b60d03eebabdd9ba478ce232ce103ae8c4fbd7fa"
+  },
+  "local_metric_hashes": {
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101__fp32_default_native/result.json": "96864bf0097d2fdf3957a3b9134de8a7132c1511fcca35b6b23ae7497e88db9e",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101__fp32_default_chunks/result.json": "de7328b094ba4c1ff5dbc5b96c42002ff3424c6e14132dfb0bf0ededcde0a864",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r1__fp32_default_native/result.json": "3b4b419d8078d94cd74085de950d6ea4a748e839a56a86460eb01f93f6e734a4",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r1__fp32_default_chunks/result.json": "72039f6df8589d16cd0ded927fb24e189bad9c4b3418cf1152dca529b20da779",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r2__fp32_default_chunks/result.json": "3a405bf186c2c17d3eb2f3852e3b181885348d954a4111d6ec8dfcaacc6b8754",
+    "results/adam_update_sensitivity_v1/runs/cpu__wikitext2_s101_r2__fp32_default_native/result.json": "fed6517910f6f762c26c03ad0bf5c234faac0271e1d7c822bf6667fb66534efa",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101__fp32_default_native/result.json": "671e4f6ac670549375395dfb0e8a2a2c2fc6526deb8953270859ed059051fd65",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101__fp32_default_chunks/result.json": "329161d249d0b09386ccadda8ecb9da72b9f638615a967ec6c5f8c3462efc8b0",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r1__fp32_default_native/result.json": "b822c55a8dc3bd1c7d830f552de98823ff08500be275e688fb5318e20bce4f66",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r1__fp32_default_chunks/result.json": "b3a145e17a9ba855fb7c95b5a57b8709547d052843203b362074ea91581adbe8",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r2__fp32_default_chunks/result.json": "8220011e1e56be44c354d9d33e3cd9376cb057322e36c4c42cff1a05305c8f7c",
+    "results/adam_update_sensitivity_v1/runs/cuda__wikitext2_s101_r2__fp32_default_native/result.json": "b96081c427d09ad7480e2854fe778fb60c423ad961c6dcd499a348be35511f05",
+    "results/adam_update_sensitivity_v1/result.json": "e904091e619d55e93b882b8cc9d41af6a097f1655bad809010ee36360035cbee",
+    "results/adam_update_sensitivity_v1/analysis.json": "682e71941a5a129426b432806182b14331a3a5926850e5067c50755691d1053c",
+    "results/adam_update_sensitivity_v1/audit.json": "bc402e47cbc25517e66734154fea9020a69887291a13adc789859653a2af73cc"
+  },
+  "packed": {
+    "results/adam_update_sensitivity_v1/analysis.json.gz": {
+      "sha256": "85472e905ca9efc8c8c39fe4fdb942242fcb684123779096093726c19862155c",
+      "unpacked_bytes": 46565
+    },
+    "results/adam_update_sensitivity_v1/analyze.log.gz": {
+      "sha256": "5fcb324dbd4d67413ae4a579e39bf11cfc76bf98b844f1bd4a4fd0af8d85eae1",
+      "unpacked_bytes": 72
+    },
+    "results/adam_update_sensitivity_v1/audit.json.gz": {
+      "sha256": "a9c68f7e4b8dbdde9c5eba51542767e34a2ef3307aadfd1ee50697a79e400b27",
+      "unpacked_bytes": 10644
+    },
+    "results/adam_update_sensitivity_v1/audit.log.gz": {
+      "sha256": "2befb2be6a80706935280027b6413bb47f275febcf4ae8d80f8422099d417c78",
+      "unpacked_bytes": 39
+    },
+    "results/adam_update_sensitivity_v1/direction_pairs.csv.gz": {
+      "sha256": "c64d875417ffc0f95045d7313a9d76e102efa80ca14839e49cd0010e340850c4",
+      "unpacked_bytes": 17224
+    },
+    "results/adam_update_sensitivity_v1/plot.log.gz": {
+      "sha256": "e826a1ab6329b711e487b156f47525967d429b2721ae01d65ce5e387ba9eaf1a",
+      "unpacked_bytes": 46
+    },
+    "results/adam_update_sensitivity_v1/prepare.log.gz": {
+      "sha256": "25ea30b71a0e7b9826d3468410109e2a31e01b14e4b1bc622ae0f7ecfe8f5f17",
+      "unpacked_bytes": 70
+    },
+    "results/adam_update_sensitivity_v1/prepare_audit_recovery.log.gz": {
+      "sha256": "091ee7e2192f108774879604138c0ad4fa73d654890d20c7765b3198a8d9d340",
+      "unpacked_bytes": 79
+    },
+    "results/adam_update_sensitivity_v1/prepare_recovery.log.gz": {
+      "sha256": "99ec98e021e7b8982eed1aadf1bf072dcd548ca93f239e1208aa3fb017271ca5",
+      "unpacked_bytes": 73
+    },
+    "results/adam_update_sensitivity_v1/publish.log.gz": {
+      "sha256": "476ffd2a00daebf25087e18e79fb449b23bb7b3ce264fb09f357b45189cf1483",
+      "unpacked_bytes": 63
+    },
+    "results/adam_update_sensitivity_v1/recover.log.gz": {
+      "sha256": "11223e16dcc939b4786b78235b4c07ab60be6e1606d4fe717a60cdd9acbbc597",
+      "unpacked_bytes": 456
+    },
+    "results/adam_update_sensitivity_v1/report.log.gz": {
+      "sha256": "46b50c321b39e89a491b6727a01628c34245605a30beb3e7414c5e01cff90e6e",
+      "unpacked_bytes": 0
+    },
+    "results/adam_update_sensitivity_v1/result.json.gz": {
+      "sha256": "7d40edf938b8ea2d080ff2567891935a7994fef5a438506a3bb7968e05235ecf",
+      "unpacked_bytes": 71717
+    },
+    "results/adam_update_sensitivity_v1/study.log.gz": {
+      "sha256": "9312b4ac064f44eb75512b70a509b44da575362a4fbff9a005ad83a468e10bb5",
+      "unpacked_bytes": 953
+    },
+    "results/adam_update_sensitivity_v1/study_failure.json.gz": {
+      "sha256": "14cb83ac56ca4aac15180bc9daa42d65ef018d9d945ff95a5b68ead413cf6c5d",
+      "unpacked_bytes": 443
+    },
+    "results/adam_update_sensitivity_v1/summarize.log.gz": {
+      "sha256": "073fa36d9583d8ff700e70bc909c407e6d90793452d1cde2071c7a5c14b7a3cc",
+      "unpacked_bytes": 2203
+    }
+  }
+}

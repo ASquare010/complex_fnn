@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "balanced": false,
+      "gradcheck": true,
+      "dense_error": 2.220446049250313e-16
+    },
+    {
+      "balanced": true,
+      "gradcheck": true,
+      "dense_error": 4.440892098500626e-16
+    }
+  ],
+  "counts": {
+    "wide": 19672,
+    "narrow33": 4321,
+    "narrow40": 5224,
+    "narrow27": 3547,
+    "blockshuffle": 3672,
+    "greedy": 5340,
+    "balanced": 4380
+  },
+  "passed": true,
+  "training_updates": 0,
+  "gpu_work": false
+}

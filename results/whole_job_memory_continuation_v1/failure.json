@@ -1,0 +1,3 @@
+{
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\whole_job_memory_continuation_v1\\source\\study.py\", line 150, in <module>\n    run()\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\whole_job_memory_continuation_v1\\source\\study.py\", line 47, in run\n    rows, boundaries = [], [clear_boundary(\"after_qualification\")]\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\whole_job_memory_continuation_v1\\source\\study.py\", line 27, in clear_boundary\n    assert allocated == 0, (label, allocated)\n           ^^^^^^^^^^^^^^\nAssertionError: ('after_qualification', 17039360)\n"
+}

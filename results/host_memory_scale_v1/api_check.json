@@ -1,0 +1,44 @@
+{
+  "before": {
+    "cb": 80,
+    "PageFaultCount": 3870,
+    "PeakWorkingSetSize": 15499264,
+    "WorkingSetSize": 15499264,
+    "QuotaPeakPagedPoolUsage": 152536,
+    "QuotaPagedPoolUsage": 152464,
+    "QuotaPeakNonPagedPoolUsage": 10480,
+    "QuotaNonPagedPoolUsage": 10480,
+    "PagefileUsage": 8519680,
+    "PeakPagefileUsage": 8519680,
+    "PrivateUsage": 8519680
+  },
+  "during": {
+    "cb": 80,
+    "PageFaultCount": 20290,
+    "PeakWorkingSetSize": 82620416,
+    "WorkingSetSize": 82620416,
+    "QuotaPeakPagedPoolUsage": 152536,
+    "QuotaPagedPoolUsage": 152464,
+    "QuotaPeakNonPagedPoolUsage": 10616,
+    "QuotaNonPagedPoolUsage": 10616,
+    "PagefileUsage": 75763712,
+    "PeakPagefileUsage": 75767808,
+    "PrivateUsage": 75763712
+  },
+  "after": {
+    "cb": 80,
+    "PageFaultCount": 20291,
+    "PeakWorkingSetSize": 82620416,
+    "WorkingSetSize": 15511552,
+    "QuotaPeakPagedPoolUsage": 152536,
+    "QuotaPagedPoolUsage": 152464,
+    "QuotaPeakNonPagedPoolUsage": 10616,
+    "QuotaNonPagedPoolUsage": 10480,
+    "PagefileUsage": 8519680,
+    "PeakPagefileUsage": 75767808,
+    "PrivateUsage": 8519680
+  },
+  "touched_allocation_bytes": 67108864,
+  "passed": true,
+  "gpu_work": false
+}

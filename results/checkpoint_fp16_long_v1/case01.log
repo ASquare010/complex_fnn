@@ -1,0 +1,10 @@
+{"active": "wikitext2_s101__fp32_default_native", "step": 100, "loss": 6.083710670471191}
+{"active": "wikitext2_s101__fp32_default_native", "step": 200, "loss": 5.709120750427246}
+{"active": "wikitext2_s101__fp32_default_native", "step": 300, "loss": 5.277263164520264}
+{"active": "wikitext2_s101__fp32_default_native", "step": 400, "loss": 5.1183319091796875}
+{"active": "wikitext2_s101__fp32_default_native", "step": 500, "loss": 4.923572540283203}
+{"active": "wikitext2_s101__fp32_default_native", "step": 600, "loss": 4.620812892913818}
+{"active": "wikitext2_s101__fp32_default_native", "step": 700, "loss": 4.4631853103637695}
+{"active": "wikitext2_s101__fp32_default_native", "step": 800, "loss": 4.355200290679932}
+{"completed": "wikitext2_s101__fp32_default_native", "nll": 4.52275658410693, "peak_mib": 507.8212890625, "wall_ms": 144.4538499963528, "stability": 707.2615517048898}
+Complete 1 fp16

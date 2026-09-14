@@ -1,8 +1,30 @@
 # Current research state
 
-**Paused by user: do not resume automatically.** H160: 3/12 runs complete; case03 stopped after207 recorded updates, latest checkpoint200. [Handoff](PAUSED_HANDOFF.md).
+**Paused for Windows reinstall:** [handoff](WINDOWS_REINSTALL_HANDOFF.md). H165 has draft model/check code only; no CPU numerical checks or GPU results.
 
-Latest: [H159 FP16 complete-update test](checkpoint_fp16_timing_results.md): **PASS complete-update resource/timing gate.**
+Latest: [H164 BTT factor-shape pilot](btt_balance_results.md): **NO PROMOTION.**
+84 fits, 42 local-resource profiles; independent CPU scores verified.
+This is prior-art architecture screening; the broad goal remains open.
+
+Earlier: [H163 sustained larger-model test](exact_offload_long_scale_results.md): **PASS 800-update larger-scale qualification.**
+Six fresh runs/4,800 updates; all endpoint scores, batches and resume states audited.
+The architecture and broad research goal remain unresolved.
+
+Earlier: [H162 worker host-memory test](host_memory_scale_results.md): **PASS short-workload host qualification.**
+Six fresh processes/180 updates with Windows peak working-set and private-commit counters.
+Sustained quality and the broad research goal remain open.
+
+Earlier: [H161 larger-model probe](exact_offload_scale_results.md): **PASS numeric/resource smoke gates.**
+Three seeds, 180 accepted updates, exact-gradient and native-score checks.
+RSS coverage incomplete; sustained quality and the broad research goal remain open.
+
+Earlier: [H160 fresh FP16 training](checkpoint_fp16_long_results.md): **FAIL fresh FP16 long-training gate.**
+12 fresh runs /9,600 updates, independent initialization and native endpoint audit.
+Approximate-gradient qualification is separate from exact replay. Broad goal open.
+
+**H160 resume completed.** Three completed runs were retained; interrupted case03 was restarted separately and cases04-11 completed. [Resume protocol](checkpoint_fp16_long_resume_plan.md).
+
+Earlier: [H159 FP16 complete-update test](checkpoint_fp16_timing_results.md): **PASS complete-update resource/timing gate.**
 1,080 updates across six fixtures, paired repeats and independent optimizer/score audit.
 Fresh long-training quality remains unproven. Goal open.
 

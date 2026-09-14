@@ -1,0 +1,163 @@
+{
+  "label": "tinystories__fp32_default_chunks__native",
+  "mode": "native",
+  "dataset": "tinystories",
+  "baseline": 149110272,
+  "peak": 304479232,
+  "final_allocated": 188359168,
+  "markers": [
+    {
+      "name": "forward_start",
+      "index": 0,
+      "allocated": 149110272
+    },
+    {
+      "name": "forward_end",
+      "index": 1000,
+      "allocated": 218366464
+    },
+    {
+      "name": "block_7_enter",
+      "index": 1254,
+      "allocated": 212027392
+    },
+    {
+      "name": "block_7_exit",
+      "index": 1328,
+      "allocated": 296307712
+    },
+    {
+      "name": "block_6_enter",
+      "index": 1534,
+      "allocated": 209826816
+    },
+    {
+      "name": "block_6_exit",
+      "index": 1608,
+      "allocated": 294107136
+    },
+    {
+      "name": "block_5_enter",
+      "index": 1814,
+      "allocated": 207626240
+    },
+    {
+      "name": "block_5_exit",
+      "index": 1888,
+      "allocated": 291906560
+    },
+    {
+      "name": "block_4_enter",
+      "index": 2094,
+      "allocated": 205425664
+    },
+    {
+      "name": "block_4_exit",
+      "index": 2168,
+      "allocated": 289705984
+    },
+    {
+      "name": "block_3_enter",
+      "index": 2374,
+      "allocated": 203912192
+    },
+    {
+      "name": "block_3_exit",
+      "index": 2448,
+      "allocated": 288192512
+    },
+    {
+      "name": "block_2_enter",
+      "index": 2654,
+      "allocated": 201383936
+    },
+    {
+      "name": "block_2_exit",
+      "index": 2728,
+      "allocated": 286581760
+    },
+    {
+      "name": "block_1_enter",
+      "index": 2934,
+      "allocated": 198855680
+    },
+    {
+      "name": "block_1_exit",
+      "index": 3008,
+      "allocated": 284053504
+    },
+    {
+      "name": "block_0_enter",
+      "index": 3214,
+      "allocated": 196327424
+    },
+    {
+      "name": "block_0_exit",
+      "index": 3288,
+      "allocated": 280607744
+    },
+    {
+      "name": "backward_end",
+      "index": 3546,
+      "allocated": 188359168
+    }
+  ],
+  "phases": [
+    {
+      "name": "construction",
+      "allocated": 132070912,
+      "peak": 132104704,
+      "reserved": 157286400
+    },
+    {
+      "name": "warmup_0",
+      "allocated": 188359168,
+      "peak": 304479232,
+      "reserved": 360710144
+    },
+    {
+      "name": "warmup_1",
+      "allocated": 188359168,
+      "peak": 304479232,
+      "reserved": 360710144
+    },
+    {
+      "name": "warmup_release",
+      "allocated": 149110272,
+      "peak": 304479232,
+      "reserved": 360710144
+    },
+    {
+      "name": "traced_backward",
+      "allocated": 188359168,
+      "peak": 304479232,
+      "reserved": 360710144
+    },
+    {
+      "name": "serialization",
+      "allocated": 188359168,
+      "peak": 304479232,
+      "reserved": 360710144
+    },
+    {
+      "name": "state_verification",
+      "allocated": 149110272,
+      "peak": 304479232,
+      "reserved": 360710144
+    }
+  ],
+  "gradient": {
+    "path": "results/backward_allocation_v1/runs/tinystories__fp32_default_chunks__native/gradient.pt",
+    "sha256": "30113b54373385612900fbbc15095d23d9e60ae045a7707f7ded103c4ad4dafa",
+    "tree_hash": "24facecbbc10cd665e5cb83249aad89dd4176b06faefad6d6166376488a6625f",
+    "finite": true
+  },
+  "gradient_global": 0.0,
+  "gradient_max_tensor": 0.0,
+  "loss_error": 0.0,
+  "backwards": 3,
+  "training_updates": 0,
+  "state_unchanged": true,
+  "h121_peak": 304479232,
+  "events": 3548
+}

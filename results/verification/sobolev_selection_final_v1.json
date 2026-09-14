@@ -1,0 +1,81 @@
+{
+  "status": "PASS",
+  "h108_frozen_sources_verified": 8,
+  "total_h106_h107_h108_frozen_files_verified": 21,
+  "maintained_files_unchanged_since_h107": 61,
+  "qualification_groups": 13,
+  "compressed_models": 432,
+  "independent_scores": 864,
+  "independent_statistics_cases": 18,
+  "independent_export_readout_checks": 432,
+  "sampled_actual_greedy_gain_checks": 432,
+  "max_score_difference": 8.485866231922046e-09,
+  "max_gain_difference": 3.552713678800501e-15,
+  "neural_updates": 0,
+  "component_passes_all_three_widths_both_teachers": true,
+  "all_six_language_allocations_unearned": true,
+  "readout_fraction_of_combined_derivative_gain_range": [
+    0.8832503354724974,
+    0.9013613657294619
+  ],
+  "original_audit_failure_preserved": true,
+  "audit_recovery_passed": true,
+  "training_repeated": false,
+  "previous_maintained_tests_passed": 116,
+  "maintained_tests_rerun_in_h108": false,
+  "previous_test_receipt": "results/verification/affine_residual_final_v1.json",
+  "broad_goal_achieved": false,
+  "packed": {
+    "results\\sobolev_selection_v1\\result.json.gz": {
+      "sha256": "2b46976bcb9a5ef41353e28a3287b67801f19a6e38efe8bfc80b34c4dcc24726",
+      "original_sha256": "e245dd1792ad543637bbf87ae9b17caa9a5552b8e77c9f12fb8ab660f27826f5",
+      "bytes": 607893
+    },
+    "results\\sobolev_selection_v1\\audit.json.gz": {
+      "sha256": "271542abd58ee24c6138e547e64193e584e65a856497240d5778e2702c8bda4a",
+      "original_sha256": "84b6816a75a6bd567109bb8b0c6fb0a478a1349493aac341e01af06a3dbf274f",
+      "bytes": 17543
+    },
+    "results\\sobolev_selection_v1\\study.log.gz": {
+      "sha256": "c87fc47536e124513c934d956f180fac08bfc4a8f6a5eeb374146d52baeeed3b",
+      "original_sha256": "dc34282f962ba7a6f1a434e8d7dae50ea15127a5a81708e594112661a3c525e2",
+      "bytes": 1893
+    },
+    "results\\sobolev_selection_v1\\audit.log.gz": {
+      "sha256": "da115b628ad32517a4ac1eda3274c0fdfa6f1076b6216d7594b8f22b6577b00f",
+      "original_sha256": "07a8dd85d953869b610a36942f6ca24b92a1377b2f8176ad3f4ee57ca54b6584",
+      "bytes": 568
+    },
+    "results\\sobolev_selection_v1\\audit_recovery.log.gz": {
+      "sha256": "beff86f55838c568e3953f334a43bee1b2b21e3ff4fa8a4d9be27f85575730df",
+      "original_sha256": "f7a86f10225a97e5937fa98e16fb9928d9e6833e5a5faeec8fc5a049dadeef05",
+      "bytes": 415
+    }
+  },
+  "public_bytes_excluding_this_receipt": 1208620,
+  "files": {
+    "research\\sobolev_selection_results.md": "5d7af76bb2420127488ca36cdd96397c41ee444b9a6504ad0368f4bc3da8f1af",
+    "results\\sobolev_selection_v1\\source\\README.md": "365ca19fcc366c33e83cfdb487eb26176853e75430033f6fcdb0544f85dbb595",
+    "research\\sobolev_selection_plan.md": "43af57ecfe645d92141edf8e6a6f9c00cf252469b5434cd71d5c9f043e94e591",
+    "research\\figures\\sobolev_selection.png": "9e921f1c6d96bc45e619d5e52bbb2eaedc6e707b8699f59d5a072758751fcbc3",
+    "results\\sobolev_selection_v1\\protocol.json": "2a200e414ece443ea22e8e64eafcd8898bb0664f5673dc45e606d765b5c27ba4",
+    "results\\sobolev_selection_v1\\qualification.json": "fe1e4e0c3a335d1a416e6e2c382af0af081cea86c06fbafee9597a61f2df182c",
+    "results\\sobolev_selection_v1\\summary.json": "6547fc6ac7aea48c1145386fae65c4e18cd26c1aed25a58ba1032b402b010d68",
+    "results\\sobolev_selection_v1\\ablation.json": "138a0eeefbd2ca390291dc8a02d9b7bb2724976cef0f49af979552fe2ec813cb",
+    "results\\sobolev_selection_v1\\metrics.csv.gz": "2602f5f2262ad7555b1d9da6246d34513ac79f288716871483be0e873d50ff17",
+    "results\\sobolev_selection_v1\\audit_failure.json": "8111f7e175878d8535524c1b3ea946e63a539dc08dea2ea85e6739f55c7e3cba",
+    "results\\sobolev_selection_v1\\audit_recovery_before.json": "e44ffddef77274a2e65728b57320b2ad754965bbedbaf5e6ee04aed02c7246bf",
+    "results\\sobolev_selection_v1\\source\\ablation.py": "3a90fa01aab7a8d8635dac96106bd80099ad4286adbfc8b473f4660c0b02772a",
+    "results\\sobolev_selection_v1\\source\\analyze.py": "3bd695267cbfef4466fa642a72a2fad5e5d113e74a2dd0e397170c941a666afd",
+    "results\\sobolev_selection_v1\\source\\audit.py": "56e4a3fffaa6c0a93ee0b960fa6b8ff10a8859ab83ded8146f0bdaf6c5a5b2ac",
+    "results\\sobolev_selection_v1\\source\\audit_recovery.py": "1463661befe92dd62e45969767a88060981f984becf3a957a91e96493520e685",
+    "results\\sobolev_selection_v1\\source\\features.py": "b43e1202f3c4055054157b2ad7c0254f12bcc169bbe50b01cc2d122aa7ba8667",
+    "results\\sobolev_selection_v1\\source\\launch.py": "6668f2a11e42a53a89948df1fa494e9828db932cd0691261c3e45b9f514fcfb2",
+    "results\\sobolev_selection_v1\\source\\plot.py": "a900e68fa6964e9dd8dc27baafb3596702ed1306286253cf77e0cf6068379489",
+    "results\\sobolev_selection_v1\\source\\qualification.py": "3461b84e4837dce452c4f1bf432b908b9366eb08e7882cbae16de5a80afc088b",
+    "results\\sobolev_selection_v1\\source\\report.py": "7c034ad9ab61ca097c8a25d3f1ca4472ca3cbe0797b5134e23ee8c4d455fbf92",
+    "results\\sobolev_selection_v1\\source\\selection.py": "6b96e0d99f005673ac8e10e9c371448ca55381afa9bd6ece871439d813e733d6",
+    "results\\sobolev_selection_v1\\source\\study.py": "c42790eb99519ee4a17c62be7b629c950038f4650e825b4752da26c9c229104b",
+    "C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\verification\\sobolev_selection_final_v1.py": "94ff75d7dc22208e03fbf5912911084d9c7c2afdb66a26eaf770022fe660e16a"
+  }
+}

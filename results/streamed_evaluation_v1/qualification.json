@@ -1,0 +1,293 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "none",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "none",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "none",
+      "policy": "sequence_chunks",
+      "matches": true
+    },
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "partial",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "partial",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "partial",
+      "policy": "sequence_chunks",
+      "matches": true
+    },
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "one_sequence",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "one_sequence",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "one_sequence",
+      "policy": "sequence_chunks",
+      "matches": true
+    },
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "all",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "all",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 3,
+      "context": 7,
+      "chunk": 10,
+      "mask": "all",
+      "policy": "sequence_chunks",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "none",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "none",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "none",
+      "policy": "sequence_chunks",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "partial",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "partial",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "partial",
+      "policy": "sequence_chunks",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "one_sequence",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "one_sequence",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "one_sequence",
+      "policy": "sequence_chunks",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "all",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "all",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 5,
+      "context": 5,
+      "chunk": 12,
+      "mask": "all",
+      "policy": "sequence_chunks",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "none",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "none",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "none",
+      "policy": "sequence_chunks",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "partial",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "partial",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "partial",
+      "policy": "sequence_chunks",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "one_sequence",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "one_sequence",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "one_sequence",
+      "policy": "sequence_chunks",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "all",
+      "policy": "native",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "all",
+      "policy": "classifier_chunks",
+      "matches": true
+    },
+    {
+      "batch": 2,
+      "context": 11,
+      "chunk": 4,
+      "mask": "all",
+      "policy": "sequence_chunks",
+      "matches": true
+    }
+  ]
+}

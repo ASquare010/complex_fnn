@@ -1,0 +1,29 @@
+{
+  "files": {
+    "results/backward_allocation_v1/runs/tinystories__fp32_default_chunks__native/final.json.gz": "b05f7d34b4f4c76e6376272977d7bf83393f4522bff6b7db063579baa1dc75f8",
+    "results/backward_allocation_v1/runs/tinystories__fp32_default_chunks__native/gradient.pt": "30113b54373385612900fbbc15095d23d9e60ae045a7707f7ded103c4ad4dafa",
+    "results/backward_allocation_v1/runs/tinystories__fp32_default_chunks__native/initial.json.gz": "ffd95716115465cdeedbe51a4af82d0cbb3312b4c3958b18884caeb59e286e44",
+    "results/backward_allocation_v1/runs/tinystories__fp32_default_chunks__native/result.json": "baa40abaa956324bb38370e563e7d7be5f83cfabc631e2828c2ef5663d2cd05c",
+    "results/backward_allocation_v1/runs/tinystories__fp32_default_chunks__offload/final.json.gz": "e97ccfc45d5b3de83134f418210d647a29e1bfc5c6f21cfe6162108541bb6238",
+    "results/backward_allocation_v1/runs/tinystories__fp32_default_chunks__offload/gradient.pt": "2634b541261a2b3b537e5addcf14d0cf3e13ed272387cc197706eca5ee165b26",
+    "results/backward_allocation_v1/runs/tinystories__fp32_default_chunks__offload/initial.json.gz": "7a204966ac6374ef9b9ce4e98c884326599701942a5d9ef25995633c5a5bc6a9",
+    "results/backward_allocation_v1/runs/tinystories__fp32_default_chunks__offload/result.json": "01c6211c1676f82168780a2e8eb0ba1e1515beeb024e429bf70f9405b7301a5d",
+    "results/backward_allocation_v1/runs/wikitext2__fp32_default_chunks__native/final.json.gz": "e2c09c7077aeaf9bbd757dcd8892b85156c9f177555f95d09bf4aad949c955a6",
+    "results/backward_allocation_v1/runs/wikitext2__fp32_default_chunks__native/gradient.pt": "b1e30e36490f1115aec86a67e4ac6920461a3d4d38db95794d876450fbd78736",
+    "results/backward_allocation_v1/runs/wikitext2__fp32_default_chunks__native/initial.json.gz": "71d7350ff6ceb9eb81b46d879fdfd93de5cec8fdcc3561fc0bff063f642a4f3b",
+    "results/backward_allocation_v1/runs/wikitext2__fp32_default_chunks__native/result.json": "4f18946cb33fb4c77b09fddcbdfadaaebd82693071c60dab3e2be24b2aad36d3",
+    "results/backward_allocation_v1/runs/wikitext2__fp32_default_chunks__offload/final.json.gz": "44ec6a3619747e56fb34e5f12122cf21d1c9da25de9a4f0790325043af1fa940",
+    "results/backward_allocation_v1/runs/wikitext2__fp32_default_chunks__offload/gradient.pt": "a292a6920a9426d4007cc506f05780cba3cf68d0fd13a942ff7badcd2b1cb501",
+    "results/backward_allocation_v1/runs/wikitext2__fp32_default_chunks__offload/initial.json.gz": "5eb589cc4904372bc0d1c5a3dd3d47e24a58ea3c4bc5a901626a04a85fe4dd4d",
+    "results/backward_allocation_v1/runs/wikitext2__fp32_default_chunks__offload/result.json": "62b4fca2f36eadfa5a2d8db2874288d709dcf4fcd6e4bc1f4d118f7cc8f122e1",
+    "results/backward_allocation_v1/analyze.log": "896b5421387598f5add1aeaea0fd50f089ccc7983790543721de70cc44931771",
+    "results/backward_allocation_v1/analyze_exit.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "results/backward_allocation_v1/inspect_events.log": "9a22219f25bd181db06ed3bd1bee78eabf99f57a73ae437dcb505ebc573f7d79",
+    "results/backward_allocation_v1/inspect_sizes.log": "29fb106b3c66ea4359016cc3bb7ae2406e579ca480a7c9f21c97894b4ac1be04",
+    "results/backward_allocation_v1/payload.py": "0253e5455c1ca4acf8baff8f1978abf80d5e9c3162d2de00991f561e6a6e6b8b",
+    "research/backward_allocation_reanalysis.md": "1c274c0301cbecc9558a505b4d9ae23851cc6b3ee2b74ed2aac3465ce21c6fa0"
+  },
+  "additional_gpu_backwards": 0,
+  "original_gate": "FAIL_ALLOCATED_ACCOUNTING",
+  "scope": "requested payload only"
+}

@@ -1,0 +1,111 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "form": "affine_gelu",
+      "parameters": 344704,
+      "gradients": true,
+      "fold": true,
+      "ridge": {
+        "stationarity_max": 2.220446049250313e-16,
+        "ridge": 0.0001,
+        "floored_columns": 0,
+        "columns": 20
+      }
+    },
+    {
+      "form": "affine_swiglu",
+      "parameters": 344020,
+      "gradients": true,
+      "fold": true,
+      "ridge": {
+        "stationarity_max": 1.3053794156725473e-16,
+        "ridge": 0.0001,
+        "floored_columns": 0,
+        "columns": 20
+      }
+    },
+    {
+      "form": "gelu",
+      "parameters": 344896,
+      "gradients": true,
+      "fold": true,
+      "ridge": {
+        "stationarity_max": 1.6653345369377348e-16,
+        "ridge": 0.0001,
+        "floored_columns": 0,
+        "columns": 12
+      }
+    },
+    {
+      "form": "relu",
+      "parameters": 344896,
+      "gradients": true,
+      "fold": true,
+      "ridge": {
+        "stationarity_max": 1.1102230246251565e-16,
+        "ridge": 0.0001,
+        "floored_columns": 0,
+        "columns": 12
+      }
+    },
+    {
+      "form": "leaky_relu",
+      "parameters": 344896,
+      "gradients": true,
+      "fold": true,
+      "ridge": {
+        "stationarity_max": 1.1102230246251565e-16,
+        "ridge": 0.0001,
+        "floored_columns": 0,
+        "columns": 12
+      }
+    },
+    {
+      "form": "prelu",
+      "parameters": 344897,
+      "gradients": true,
+      "fold": true,
+      "ridge": {
+        "stationarity_max": 1.5265566588595902e-16,
+        "ridge": 0.0001,
+        "floored_columns": 0,
+        "columns": 12
+      }
+    },
+    {
+      "form": "silu",
+      "parameters": 344896,
+      "gradients": true,
+      "fold": true,
+      "ridge": {
+        "stationarity_max": 1.942890293094024e-16,
+        "ridge": 0.0001,
+        "floored_columns": 0,
+        "columns": 12
+      }
+    },
+    {
+      "form": "swiglu",
+      "parameters": 344276,
+      "gradients": true,
+      "fold": true,
+      "ridge": {
+        "stationarity_max": 8.326672684688674e-17,
+        "ridge": 0.0001,
+        "floored_columns": 0,
+        "columns": 12
+      }
+    },
+    {
+      "teacher": "gelu",
+      "normalized_exact": true,
+      "prefix": true
+    },
+    {
+      "teacher": "swiglu",
+      "normalized_exact": true,
+      "prefix": true
+    }
+  ]
+}

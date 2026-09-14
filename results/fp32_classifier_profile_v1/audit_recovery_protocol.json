@@ -1,0 +1,19 @@
+{
+  "files": {
+    "results/fp32_classifier_profile_v1/source/audit_recovery.py": "6ff595262bc717ef2ef1d56742a443cba38ebc7ccf932570a7a8e25eeb59a981",
+    "results/fp32_classifier_profile_v1/source/prepare_audit_recovery.py": "9883672607b89889b27e30e8112a45c2fc3eb62b9fc53165c802137255567811",
+    "results/fp32_classifier_profile_v1/source/gradient_replay_diagnosis.py": "814d065e6b173a01657a11c9d4b560491d7bd553cc06c3354a81def54d1266ae",
+    "results/fp32_classifier_profile_v1/audit_protocol.json": "ea86d08f81b8764174293d34d5fdd6dbf2be452f932d92c8c6d8709fb95c8a96",
+    "results/fp32_classifier_profile_v1/audit_failure.json": "bcbdd5f90f0e2a2ceddb926db093158452234f5025a8772d802bf50cb288fbd1",
+    "results/fp32_classifier_profile_v1/audit.log": "8a7cbb32fb2c3cc5fd8041d1aa39d1e6951835937a8d2b9c4eeb8a5ec25c3714",
+    "results/fp32_classifier_profile_v1/audit_exit.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "results/fp32_classifier_profile_v1/gradient_replay_diagnosis.json": "93a430ba0d120e59af1c3d1a7bbac0b9f5d3ca286fe862488d277c3e35a2e816",
+    "results/fp32_classifier_profile_v1/gradient_replay_diagnosis.log": "90d79ce54f49c52666f37852b7581b3ea61d49624d9572b42518726c04813136",
+    "results/fp32_classifier_profile_v1/gradient_replay_diagnosis_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "research/fp32_classifier_profile_audit_recovery.md": "0dcc7696891d1a80c7eb79f5d0380b582ce802f998c91ce1d9cc136316b807b5"
+  },
+  "optimizer_updates": 0,
+  "prospective_scientific_gates_changed": false,
+  "posthoc_replay_global_tolerance": 1e-05,
+  "posthoc_replay_per_tensor_tolerance": 0.0001
+}

@@ -1,0 +1,176 @@
+{
+  "posthoc_attribution_of_predeclared_ablations": true,
+  "note": "Fractions use arithmetic mean errors, are descriptive and need not add to one because of interactions. No threshold or allocation is changed.",
+  "rows": [
+    {
+      "teacher": "gelu",
+      "budget": "primary",
+      "metrics": {
+        "value_nmse": {
+          "baseline": 0.10806570728055256,
+          "readout_only": 0.1061092193563355,
+          "selection_only": 0.10813237187234553,
+          "both": 0.10620331840417475,
+          "readout_fraction_of_combined_absolute_gain": 1.050525993272831,
+          "selection_fraction_of_combined_absolute_gain": -0.03579520509305598,
+          "interaction": 2.74344560462908e-05
+        },
+        "derivative_relative_mse": {
+          "baseline": 0.3636807377977561,
+          "readout_only": 0.3328811038512411,
+          "selection_only": 0.3594985062714134,
+          "both": 0.3292628582136055,
+          "readout_fraction_of_combined_absolute_gain": 0.8948730810453014,
+          "selection_fraction_of_combined_absolute_gain": 0.1215133406495106,
+          "interaction": 0.0005639858887071525
+        }
+      }
+    },
+    {
+      "teacher": "gelu",
+      "budget": "half",
+      "metrics": {
+        "value_nmse": {
+          "baseline": 0.050156236604973654,
+          "readout_only": 0.04821921631126894,
+          "selection_only": 0.04999395211441148,
+          "both": 0.0480991832357825,
+          "readout_fraction_of_combined_absolute_gain": 0.9416480499319083,
+          "selection_fraction_of_combined_absolute_gain": 0.07889172589916041,
+          "interaction": 4.2251415075730825e-05
+        },
+        "derivative_relative_mse": {
+          "baseline": 0.1944427911157635,
+          "readout_only": 0.17298367146191745,
+          "selection_only": 0.1913313983686037,
+          "both": 0.17020682580333277,
+          "readout_fraction_of_combined_absolute_gain": 0.885424590158147,
+          "selection_fraction_of_combined_absolute_gain": 0.12837915498929914,
+          "interaction": 0.0003345470885751378
+        }
+      }
+    },
+    {
+      "teacher": "gelu",
+      "budget": "three_quarter",
+      "metrics": {
+        "value_nmse": {
+          "baseline": 0.015298338568926111,
+          "readout_only": 0.014279737506709517,
+          "selection_only": 0.01520042318067591,
+          "both": 0.014185738224589068,
+          "readout_fraction_of_combined_absolute_gain": 0.9155138836700073,
+          "selection_fraction_of_combined_absolute_gain": 0.08800589425356117,
+          "interaction": 3.916106129752198e-06
+        },
+        "derivative_relative_mse": {
+          "baseline": 0.06807934536712215,
+          "readout_only": 0.058485706328816875,
+          "selection_only": 0.06696405087411221,
+          "both": 0.057435846096947366,
+          "readout_fraction_of_combined_absolute_gain": 0.9013613657294619,
+          "selection_fraction_of_combined_absolute_gain": 0.10478644895811845,
+          "interaction": 6.543426114043183e-05
+        }
+      }
+    },
+    {
+      "teacher": "swiglu",
+      "budget": "primary",
+      "metrics": {
+        "value_nmse": {
+          "baseline": 0.23853221175542028,
+          "readout_only": 0.23608988404773731,
+          "selection_only": 0.23788541937432447,
+          "both": 0.23546777488364254,
+          "readout_fraction_of_combined_absolute_gain": 0.7969907065718479,
+          "selection_fraction_of_combined_absolute_gain": 0.21106402518926246,
+          "interaction": 2.4683217001025826e-05
+        },
+        "derivative_relative_mse": {
+          "baseline": 0.5633176132403886,
+          "readout_only": 0.5266513934592901,
+          "selection_only": 0.5574328540887863,
+          "both": 0.5218047846474804,
+          "readout_fraction_of_combined_absolute_gain": 0.8832503354724974,
+          "selection_fraction_of_combined_absolute_gain": 0.14175760484332942,
+          "interaction": 0.0010381503397925984
+        }
+      }
+    },
+    {
+      "teacher": "swiglu",
+      "budget": "half",
+      "metrics": {
+        "value_nmse": {
+          "baseline": 0.11300587650796358,
+          "readout_only": 0.11055805651257414,
+          "selection_only": 0.1124085529542444,
+          "both": 0.10997062398760898,
+          "readout_fraction_of_combined_absolute_gain": 0.806463376267446,
+          "selection_fraction_of_combined_absolute_gain": 0.19679534065567494,
+          "interaction": 9.891028754024922e-06
+        },
+        "derivative_relative_mse": {
+          "baseline": 0.33996029185867827,
+          "readout_only": 0.3091491127529168,
+          "selection_only": 0.3355684374594237,
+          "both": 0.3052141026212813,
+          "readout_fraction_of_combined_absolute_gain": 0.8867498791090367,
+          "selection_fraction_of_combined_absolute_gain": 0.12639816036365906,
+          "interaction": 0.00045684426761904984
+        }
+      }
+    },
+    {
+      "teacher": "swiglu",
+      "budget": "three_quarter",
+      "metrics": {
+        "value_nmse": {
+          "baseline": 0.036124105719630664,
+          "readout_only": 0.034650337655440906,
+          "selection_only": 0.03601094053525221,
+          "both": 0.03453355799449692,
+          "readout_fraction_of_combined_absolute_gain": 0.9265789645298667,
+          "selection_fraction_of_combined_absolute_gain": 0.0711485625927633,
+          "interaction": -3.614476565529101e-06
+        },
+        "derivative_relative_mse": {
+          "baseline": 0.13529534091188175,
+          "readout_only": 0.11916623034184437,
+          "selection_only": 0.13328594443214303,
+          "both": 0.11712723919305691,
+          "readout_fraction_of_combined_absolute_gain": 0.8877708205103915,
+          "selection_fraction_of_combined_absolute_gain": 0.11060024381395255,
+          "interaction": -2.959466904875474e-05
+        }
+      }
+    }
+  ],
+  "full_reference": {
+    "gelu": {
+      "peak_allocated_bytes": {
+        "mean": 17432576,
+        "min": 17432576,
+        "max": 17432576
+      },
+      "inference_ms": {
+        "mean": 0.5620411111117897,
+        "min": 0.1580850000209466,
+        "max": 0.7106800000201474
+      }
+    },
+    "swiglu": {
+      "peak_allocated_bytes": {
+        "mean": 17825792,
+        "min": 17825792,
+        "max": 17825792
+      },
+      "inference_ms": {
+        "mean": 0.7184727777712396,
+        "min": 0.5672150000009424,
+        "max": 0.8771050000177638
+      }
+    }
+  }
+}

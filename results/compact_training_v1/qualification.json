@@ -1,0 +1,23 @@
+{
+  "rows": [
+    {
+      "combined": false,
+      "active_norm": 132.7569122314453,
+      "clip_error": 8.408304354139321e-08,
+      "gradient_global": 0.0,
+      "gradient_tensor": 0.0,
+      "passed": true
+    },
+    {
+      "combined": true,
+      "active_norm": 132.7569122314453,
+      "clip_error": 8.781229792140993e-08,
+      "gradient_global": 8.674794656368455e-08,
+      "gradient_tensor": 1.9502224722071056e-07,
+      "passed": true
+    }
+  ],
+  "backwards": 2,
+  "eval_forwards": 4,
+  "passed": true
+}

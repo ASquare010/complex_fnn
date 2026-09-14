@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "frozen_sources_verified": 20,
+  "maintained_files_unchanged": 61,
+  "qualification_groups": 4,
+  "fresh_fits": 144,
+  "neural_updates": 86400,
+  "profile_updates": 540,
+  "endpoint_states": 216,
+  "independent_metrics": 648,
+  "selected_models": 72,
+  "exact_recaptured_datasets": 18,
+  "max_score_difference": 1.0888157708777157e-08,
+  "audit_neural_updates": 0,
+  "both_initializer_learning_recipes_closed": true,
+  "all_language_allocations_unearned": true,
+  "preflight_failure_preserved": true,
+  "scientific_training_repeated": false,
+  "previous_maintained_tests_passed": 116,
+  "maintained_tests_rerun_in_h109": false,
+  "fresh_process_inference_profiles": 90,
+  "broad_goal_achieved": false,
+  "packed": {
+    "results\\sobolev_learning_v1\\result.json.gz": {
+      "sha256": "48a821deb6cfcc906ea94b200ead77c28583146fc2345b152d6d22bf1969e5b9",
+      "original_sha256": "20608550df0c15fd36ef47813498c437517a7848680f16adf051fff731f057b6",
+      "bytes": 73529
+    },
+    "results\\sobolev_learning_v1\\audit.json.gz": {
+      "sha256": "71d055ed2121d6209ab414ef6d5b2ae7a013adb4ff696880408aee8eb82ebfb3",
+      "original_sha256": "5e41924fbb732e700cf9246cca5692ee863bb895f5a9b364f70b67b90fdb8679",
+      "bytes": 11174
+    },
+    "results\\sobolev_learning_v1\\study.log.gz": {
+      "sha256": "f772054a0d4e06b0d86264750265f1661a6e461a545f451ebed81d075f4a2f35",
+      "original_sha256": "efd6088e2f3309927c4ec2dcde82d7c648a691fe0e111042ad52193f8b0e95af",
+      "bytes": 336
+    },
+    "results\\sobolev_learning_v1\\study_recovery.log.gz": {
+      "sha256": "8e38b8e745e4a394fbdc64991df24cc49c605cf3504a0159906629f4e1f02202",
+      "original_sha256": "fee429227b8c31dd14775df6ceafabe138c79da3de44e827cf7339655bb0d3c9",
+      "bytes": 2903
+    },
+    "results\\sobolev_learning_v1\\audit.log.gz": {
+      "sha256": "96e51a48aec4bb366a0c02e43e35ce61c2d1a4d05e3e01f01a20e6308ce5e129",
+      "original_sha256": "3ffa506d4a72e03a81daafd9fa73902bd0af0cce2d3064f6d8e995351c4585d4",
+      "bytes": 410
+    }
+  },
+  "files": {
+    "research\\sobolev_learning_results.md": "f778a5cf5ccf330391cd3033236cef0252b066d2bf5fcfbe6f92f8c15ce8d89d",
+    "results\\sobolev_learning_v1\\source\\README.md": "0c4e8516fe3ecdb744e1474374dab06d1841171533715994b2682c129f084755",
+    "research\\sobolev_learning_plan.md": "88abf0f349376e34f8ef37ea01db5e162b538083adf5e8db1adc15878945f381",
+    "research\\figures\\sobolev_learning.png": "227eb4a3dd3dfa172e7a0ade16850890a1abc809af132ed3b9c827cfeaa3a022",
+    "results\\sobolev_learning_v1\\protocol.json": "3a3b8898015f8f21a22e434f6714a5f55d861d89ac4bbc45c9dde90eddf52d59",
+    "results\\sobolev_learning_v1\\summary.json": "428132a829b86afb6064b995598a28bd2a203d19ff84fe9946c8fefa8844bf04",
+    "results\\sobolev_learning_v1\\qualification.json": "9ae7b7341df41c326a98e3a4ebe26ade8bd5aa776317f8e012bc3cd9724721ee",
+    "results\\sobolev_learning_v1\\data_manifest.json": "8fe06992aa5e5e78cd7d08bdbbf8fb9bdbd127bd62428dd870c273658c8a74a9",
+    "results\\sobolev_learning_v1\\metrics.csv.gz": "cbcb7652a87b1cfdcf34fd2440584850cd86e0daab13a020d10359d09ce6a5f3",
+    "results\\sobolev_learning_v1\\diagnostics.json.gz": "bb99af88747a188635810c40cc7e2f6003f5257d4e5a551296134761a22e7839",
+    "results\\sobolev_learning_v1\\inference_only.json": "e7473666ef5f3ea94ce285f3017fdd29db6582a8c582e7eac13bbc1fca8837d0",
+    "results\\sobolev_learning_v1\\failure.json": "6fb1126ec4b28f5f783c7606624ec4bde98189e076d694d9e7f0f349b9d86bb1",
+    "results\\sobolev_learning_v1\\preflight_recovery.json": "bed7dc83ff9358f23c312797c35417506ac5c3aabce4446625ef2f5c8b0e54bc",
+    "results\\sobolev_learning_v1\\preflight_failure\\study.py": "cb52116caf6356d9bc03d21f80223eacec10d7c9869f31e026f41df6a9fe8d69",
+    "results\\sobolev_learning_v1\\source\\analyze.py": "7be28285e1c784a82e53dfa814adb99b8329ee63dfd43133f8a56f2767d63f21",
+    "results\\sobolev_learning_v1\\source\\audit.py": "b6d5eb23ecead155a9636cfbe569db93c770f9bdc52e208a09dfc084a9cd6242",
+    "results\\sobolev_learning_v1\\source\\inference_only.py": "84672bf571cd5c14deb39b478ea9d028cac82fdf3329a3c4e7c04fb62636a564",
+    "results\\sobolev_learning_v1\\source\\inspect_summary.py": "27c6a51e4b36388135785fd306389f5ae692e5f20d2711f0b08b4976659633d2",
+    "results\\sobolev_learning_v1\\source\\launch.py": "1b14083a6251b967c186280a2615b6afa6a7282cfdb5a509b14f54b2545e082f",
+    "results\\sobolev_learning_v1\\source\\model.py": "7eef8daf3125e6612943a261efeda093e62651a96feea72d903b628ee73fc65d",
+    "results\\sobolev_learning_v1\\source\\plot.py": "638cb2411353c645d7161ab3b0ef6525dcd11c3f273c4459c1fbe9d219f74202",
+    "results\\sobolev_learning_v1\\source\\qualification.py": "cd9a2f25edcceb9e24e3c37efdeb32b66fb170f47456dc3afdd830226e20dccd",
+    "results\\sobolev_learning_v1\\source\\repair_preflight.py": "4fea6601e5d1343d4fa977d0edb7e402b6049734513c6b779c998fe2281da9c3",
+    "results\\sobolev_learning_v1\\source\\report.py": "9bae0937d8b06a208c2241b0a4a6678c657b6b8d510fa3caf90f97205e9e50f1",
+    "results\\sobolev_learning_v1\\source\\study.py": "6f98e161cca4412e8b2535478e6900bb04bfdb12407ebec1c553952e64a924a9",
+    "results\\sobolev_learning_v1\\source\\study_recovery.py": "c733b8b9850dd6d83777ca72d3dd5677a646fac6c665f710ccf54caa0238d379",
+    "C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\results\\verification\\sobolev_learning_final_v1.py": "e88fbda40cd099ae3f32513f807ebebb77b74950feca06b199c7e2010c3a1c5e"
+  }
+}

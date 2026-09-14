@@ -1,0 +1,151 @@
+{
+  "receipt_sha256": "4aa999d55813fc3eeabab1a3eb27524a4800901f1b68985861b179162c739c55",
+  "verified_files": 209,
+  "audit_passed": true,
+  "qualification_passed": false,
+  "timing_outlier": {
+    "step": 503,
+    "wall_update_ms": 23964922.411499996,
+    "event_update_ms": 23966272.0,
+    "at_ns": 1789096045428397800,
+    "until_ns": 1789120010350595200
+  },
+  "outlier_hours": 6.656922892083332,
+  "cause": "Unestablished; recorded elapsed time alone does not identify sleep, driver, or hardware cause.",
+  "comparisons": [
+    {
+      "dataset": "wikitext2",
+      "seed": 101,
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.7627712466620168,
+        "event_ms": 1.0386102049318686,
+        "wall_ms": 1.0386299652952977,
+        "nll": 1.0076490517851633
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": false,
+        "telemetry": true
+      },
+      "passed": false
+    },
+    {
+      "dataset": "wikitext2",
+      "seed": 113,
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.7627712466620168,
+        "event_ms": 1.0275199553897183,
+        "wall_ms": 1.0274181200708685,
+        "nll": 1.0225766948891075
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": false,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": false
+    },
+    {
+      "dataset": "wikitext2",
+      "seed": 127,
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.7627712466620168,
+        "event_ms": 0.9786513267735306,
+        "wall_ms": 0.9786180826336868,
+        "nll": 0.9948142903262401
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": true
+    },
+    {
+      "dataset": "tinystories",
+      "seed": 101,
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.7623950820909997,
+        "event_ms": 0.9909867824490795,
+        "wall_ms": 0.990995331039829,
+        "nll": 0.9958714140726284
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": true
+    },
+    {
+      "dataset": "tinystories",
+      "seed": 113,
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.7623950820909997,
+        "event_ms": 0.9868581506885011,
+        "wall_ms": 0.9867783969118854,
+        "nll": 0.9981221188998702
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": true
+    },
+    {
+      "dataset": "tinystories",
+      "seed": 127,
+      "control": "ordinary",
+      "ratios": {
+        "peak_mib": 0.7623950820909997,
+        "event_ms": 0.9869358018493455,
+        "wall_ms": 0.9868836941228499,
+        "nll": 0.9989301503250068
+      },
+      "gates": {
+        "audit": true,
+        "memory": true,
+        "event": true,
+        "wall": true,
+        "quality": true,
+        "host": true,
+        "stability": true,
+        "telemetry": true
+      },
+      "passed": true
+    }
+  ],
+  "optimizer_updates": 0,
+  "gpu_work": false
+}

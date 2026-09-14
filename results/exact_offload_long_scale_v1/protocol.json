@@ -1,0 +1,113 @@
+{
+  "config": {
+    "variant": "gelu",
+    "width": 512,
+    "hidden": 608,
+    "layers": 12,
+    "heads": 8,
+    "context": 512,
+    "vocab_size": 4096
+  },
+  "schedule": [
+    {
+      "index": 0,
+      "seed": 401,
+      "arm": "ordinary"
+    },
+    {
+      "index": 1,
+      "seed": 401,
+      "arm": "helper"
+    },
+    {
+      "index": 2,
+      "seed": 409,
+      "arm": "helper"
+    },
+    {
+      "index": 3,
+      "seed": 409,
+      "arm": "ordinary"
+    },
+    {
+      "index": 4,
+      "seed": 419,
+      "arm": "ordinary"
+    },
+    {
+      "index": 5,
+      "seed": 419,
+      "arm": "helper"
+    }
+  ],
+  "hashes": {
+    "C:/Users/Cuebric/Desktop/Git/complex_fnn/results/exact_offload_scale_v1/study.py": "347674dce3a97a4cc11dc9ca77f0fb5720ad21e228b5a00f0089e0f7b4d92821",
+    "results/exact_offload_scale_v1/audit.py": "d8846651c93c8838f7efe7461d641dcccc7db2156c31dd14c98b714d88821b65",
+    "research/exact_offload_scale_plan.md": "88c29bcf23bad43918b42fe6fd0a7a8fe2c067f3b728365659f725dca7fb86fb",
+    "src/__init__.py": "d22482bb1aa7596dbf12aa0d1b8a3b07fa89e5d194ef1ea84cc63b1d3c3351a3",
+    "src/blockshuffle_ffn/triton_inference.py": "d9fb859a8a6fa68d8fac8fa91f2ab3564b4d8ece83b61a49e5a2c925af8cb4c0",
+    "src/blockshuffle_ffn/__init__.py": "d494c95de6fb04a5c229ffcbf31b3a340afe0807079ae0b8053e80645f9cea15",
+    "src/core/allocation_trace.py": "4bb15ce8d34de20622f77fc7a1c21c80c649c61ab201fb223fd0dfe9724d7467",
+    "src/core/analysis.py": "c009b60c54105d765847e5956ab1086828070ef1c01a886f8c6b192fba5d63b7",
+    "src/core/benchmark.py": "ea37b15a32232a160d144f4b8db14702f0ea777d5bf1b185161ff7d91fddef29",
+    "src/core/cli.py": "e6bcd69b2a5d4b6cbd858fff990c4d3085a30c7988c65132e91400f4ee097296",
+    "src/core/compile_serving.py": "f6bf84d45f86858d24c229f0b0bee0e7c20fd5d5e8491c7b6daa35ef6c6e5223",
+    "src/core/conditioning.py": "168032c302314c1cf8a78b198d1ff91c36a5ac9307668d12d22787b40212087f",
+    "src/core/config.py": "2dc623b5fd4697c24364f6deed62aff2a8851f2911bae84331e5727f68fd1505",
+    "src/core/data.py": "89e105d33d3c15cac5e2961c94a5cc3d6e89d99c5a31552a72b6eb6d53aef5a9",
+    "src/core/diagnostics.py": "215e50208496ba85c7dc2b3694c31cbe8a83ef0713ceba7136e6dfc49558610f",
+    "src/core/ffn_capture.py": "15809cbfc98dd2cb1f1938e4b2bcb66f058fcac78705665951e7600b62e873a9",
+    "src/core/frozen_train_worker.py": "b5da66f008f3c5c0ebe73405f5d50e300338b1ab816bf5bb137b4ca898c68884",
+    "src/core/function_fitting.py": "41b7ec3a30679922dad9b70cba9d4c0479c6d97394979ee93efb7e12e4297682",
+    "src/core/fused_serving.py": "d4d84d60760e2592118e0eea497218af016046993240b11f4a516957bad3d57b",
+    "src/core/graph_serving.py": "ca45c19e5c947e9ed2816550df2758e4c18638bf61a749a97f80141e0f23a934",
+    "src/core/model_audit.py": "a08e82c7110406ac6dfb764419f979e2bc3764cca9f945c8fe4b61a17b8d45e3",
+    "src/core/native_recompute_audit.py": "c6151e935cbd7e3050a1b122dfb393937304d67dbc784de9f118c5ebb15573cd",
+    "src/core/optimization.py": "0dd1f1033b9cc2e95804cd6cb1390f16a36d7d8fb22e96b61b4ffc9c71a05e39",
+    "src/core/report.py": "ff9786374097d04edc185f8686607ef9ba4b5f540aff22fbf94185c7c0e07c2b",
+    "src/core/reproducibility.py": "3dda7f1e322456417359948e5e0f41dcfad2827bacfb9b91da25305bba69748c",
+    "src/core/serving.py": "4f426eeac851624e64c58c637b74e0dfdd6b953193d59f1d9d46f3767ae99b10",
+    "src/core/structured_linear.py": "cbbba4672e9740dc5d8a98726e9e2cf996169298b12fc7b74f36d4c45abbf389",
+    "src/core/token_memory.py": "211af447fb6eae3dc11cedda18ebe284fad0918bacdcb8c5549777b82f11a109",
+    "src/core/trainer.py": "1299ae5b2664ba67d562ea177b52e53d809cdd4121619262673a3d4e93a5051b",
+    "src/core/training_memory.py": "58aee444fa7fce197f0eb370165b086d6c8fbefafe54cc63caad06c249d5b7ef",
+    "src/core/transformer.py": "e89efefc509b80884897d115d7c886b3703d76cf50b747782f1d078e8c2500a7",
+    "src/core/wikitext_data.py": "52f04eaae7398e4c7a594c8a3828c023b8635bd29abfce5d8be1ebe455990e39",
+    "src/core/__init__.py": "cbd0a03c524fed4c67bcc31b8c7e97b640589a5d881e2a0879c38f4dd2813bb8",
+    "src/dense_ffn/__init__.py": "42bce96d3771e009be74feb100c20502e741c7587fb94e7b554ba538069505e1",
+    "src/experimental/checkpoint_compression.py": "50ff404bca24587887639ae85cbb06872538e6e1edbc4b30aa77b4bea107f766",
+    "src/experimental/__init__.py": "d5213699a9f3394c56d34a4e50204e647d50d6564a4c51dd5c817512992c1c9d",
+    "results/streamed_evaluation_v1/source/evaluation.py": "c5c5a904670506f107902789363ca5cabc600f8733adafd41548376c286ba6e6",
+    "data/wikitext2_v1/deduplication.json": "40953ceaf2d2e973f52e6f7285b2bcc35f27acc4a5abca1b53b1a6edaaf6559f",
+    "data/wikitext2_v1/manifest.json": "2aa4c3b8ef90ae94bf93f929f8d39a2e8f8dcf46fdea08f4ff0b4e7938bc7670",
+    "data/wikitext2_v1/preparation_provenance.json": "cbaec43ea882acedb65fff2e68eb222b3f738bac51d98f93f53412768763535c",
+    "data/wikitext2_v1/tokenizer.json": "9a6fd1b57ffccb7723688b4d01e8d21444569fac6bc903f319b8713b94a13c50",
+    "data/wikitext2_v1/train.json": "635cd7b101ead189c680f9a5a321729c5ce60502ce45fb4fff01b6c992cd98ed",
+    "data/wikitext2_v1/train.npy": "9a6166c0ac5ac07fd88787392ada51ac3158dfba000273768b0d224b140dd21a",
+    "data/wikitext2_v1/train_articles.json": "c7b9f0ef17a548e2e2236194fb47c91a89b00a043818baa3cbae5cd6d6a14bb4",
+    "data/wikitext2_v1/valid.json": "2cc20b3afe30010560088b1ffa2612ce1dff43602a89deddc2ebf36d34194198",
+    "data/wikitext2_v1/valid.npy": "aaee98864e4c86aa1cc6b2808e1fc736feeefd90b17d86c734aad86ecfac4591",
+    "data/wikitext2_v1/valid_articles.json": "8d04c2efd063f53891136bf4dc1b823e7dee28e2c00ab433e01eff5f2a778492",
+    "results/host_memory_scale_v1/host.py": "cfa329e453fcb9623b90e9c3de1b12692e4955227624e9db0de6453210f94f4b",
+    "results/host_memory_scale_v1/qualify.py": "3fb7269bcf49738d1c0af910deb47a6799c125aab9671151fee4849151fde273",
+    "results/host_memory_scale_v1/run.py": "a41240611c18d6c18e549364245ac325d8fae1985c547ec5bc42001778420c3b",
+    "results/host_memory_scale_v1/api_check.json": "346951dfb6f176ad8d76cd5765e7d77a8bc7940d3dd794b251292ba002a104af",
+    "research/host_memory_scale_plan.md": "83f22c15dc67389f15e097a6687b1413146e49b8c0c7552b0948842a2e2cec5f",
+    "results/exact_offload_scale_v1/receipt.json": "5d32ec3ae708643614522b9c312a21a46b9cef408772a55efd8676e3f30c2742",
+    "results/exact_offload_scale_v1/recovery.py": "98791ca29b1937bd584e0a1005da53bedf1cbaf3d383f7c5124fb8a9cafc0c19",
+    "results/exact_offload_long_scale_v1/audit.py": "d7b1bd400a5cd17c02bde1dbe41b01caf21e69fed2dca9220d71bd5106e632b6",
+    "results/exact_offload_long_scale_v1/qualify.py": "b4f74efda0e5ced959d755c319097c1271335fce01e1d1e0b2f1a8c4272046cb",
+    "results/exact_offload_long_scale_v1/run.py": "f233e30dc5058e429016df016b67179739840aa76def7cba986a1b4ef4b3986e",
+    "results/exact_offload_long_scale_v1/study.py": "e83e2514ef07d51424abf4dc3203fb3d56292e13558b7ec81741b7378bf66a6d",
+    "research/exact_offload_long_scale_plan.md": "f737f85ef12015ab9e79691c0b8bd9034c1498842d52aa30d0354a87957c4073",
+    "results/host_memory_scale_v1/receipt.json": "f308d06bc6f8ee615f7ed6d1183703161af56b59f08ab282a9e179d1659acad8"
+  },
+  "frozen_at_ns": 1789311302626407000,
+  "updates": 4800,
+  "initial_backwards": 6,
+  "study": "H163",
+  "host_increment_limit_bytes": 268435456,
+  "host_peak_limit_bytes": 8589934592,
+  "steps": 800,
+  "warmup": 20
+}

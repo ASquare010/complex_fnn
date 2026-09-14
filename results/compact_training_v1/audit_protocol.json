@@ -1,0 +1,28 @@
+{
+  "files": {
+    "results/compact_training_v1/protocol.json": "caf16f9aa62d5a17aaaee36df85102389914f1d15f5ee781d570309635317816",
+    "results/compact_training_v1/result.json": "56db662efc3a69a4fd01c1d0f0a4140f1a5df234e80a44c90f6a35a848403430",
+    "results/compact_training_v1/qualification.json": "08dbb5f03bbaaace5a2c961d511cf87e9bb25718286952dc73f85c945067bae0",
+    "results/compact_training_v1/study.log": "3df94f57307326455902ad3f0845a8bc04ee6ed8122cb94f5f82ee903c708dfd",
+    "results/compact_training_v1/study_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/compact_training_v1/baseline/runs/wikitext2__fp32_default_chunks__default/first_gradients.pt": "c9b0f2313e85d065d381756710260c7ff0dc5f8ae4c552f2d17ba82d10402c76",
+    "results/compact_training_v1/baseline/runs/wikitext2__fp32_default_chunks__default/first.pt": "0f34cc9cab7817606f550eb5f6b023e90f7d5f728755c66279e7efa5d45b069a",
+    "results/compact_training_v1/baseline/runs/wikitext2__fp32_default_chunks__default/final.pt": "b513fac2742074cad041c93503c5c1e2250271e7a4eb81c383aa339561f2afb2",
+    "results/compact_training_v1/baseline/runs/wikitext2__fp32_default_chunks__default/result.json": "47404fee783b9b5fa3a7bc4b234d1be5cb8c81ab09d48cf5ef7c4d7ba4704e1a",
+    "results/compact_training_v1/combined/runs/wikitext2__fp32_default_chunks__default/first_gradients.pt": "8d2e8caca0bb8327eb802530cbb3345314b9568ec5919516b324cb0506913ae3",
+    "results/compact_training_v1/combined/runs/wikitext2__fp32_default_chunks__default/first.pt": "7984eb39425ed335cd40c8fe48e6c6d3fa82afdd25af33678224bbe49f313688",
+    "results/compact_training_v1/combined/runs/wikitext2__fp32_default_chunks__default/final.pt": "fff8b0aaa4ff976902e72190ec1d2de11674ae2a53af31235dace3d4868be968",
+    "results/compact_training_v1/combined/runs/wikitext2__fp32_default_chunks__default/result.json": "62cd60c8cdf26994241d9c47954d2d1374e30c03ccecd3c83b9b285f3bb69c87",
+    "results/compact_training_v1/combined/runs/tinystories__fp32_default_chunks__default/first_gradients.pt": "13c5f46e0346d6c9ca29a4fd178aac7e02b6a686488f32cf76ad6832ea810786",
+    "results/compact_training_v1/combined/runs/tinystories__fp32_default_chunks__default/first.pt": "5c012dcd20b9a7c3efb401b9bd6e9260757415ac5221de189b625e7c86c2513f",
+    "results/compact_training_v1/combined/runs/tinystories__fp32_default_chunks__default/final.pt": "e2b934715cb057cf73764470401a9ae66ff0b2d02aef81fcecbb79813e2a2734",
+    "results/compact_training_v1/combined/runs/tinystories__fp32_default_chunks__default/result.json": "3aa3a012920bd02104829fb97e5b3a607d147ac4f74e8ca0daa6a5b30e986dd6",
+    "results/compact_training_v1/baseline/runs/tinystories__fp32_default_chunks__default/first_gradients.pt": "3d5cc7b9192ff1cd404943bb77300c1a13cbdfd42572e5b594597014feb56e56",
+    "results/compact_training_v1/baseline/runs/tinystories__fp32_default_chunks__default/first.pt": "17c2923dd55efeef5e477ba02ec06826eb91d6277794f68fc0876962278ef4c3",
+    "results/compact_training_v1/baseline/runs/tinystories__fp32_default_chunks__default/final.pt": "f567ada3865ee2e68faade5065b4d51316e0071204e1595d8104e503859c89a6",
+    "results/compact_training_v1/baseline/runs/tinystories__fp32_default_chunks__default/result.json": "e3701d96719c0d66361c9311c33b9c0e5608a6504cb8662fab11b9629eedf57d"
+  },
+  "audit_backwards": 0,
+  "native_scores": 4,
+  "batches": 120
+}

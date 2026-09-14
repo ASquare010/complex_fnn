@@ -1,0 +1,13 @@
+{"audited": "wikitext2_s101__fp32_default_native", "all_scores_passed": true, "replay_passed": true}
+{"audited": "wikitext2_s101__fp32_default_native", "all_scores_passed": true, "replay_passed": false}
+{"audited": "wikitext2_s113__fp32_default_native", "all_scores_passed": true, "replay_passed": false}
+{"audited": "wikitext2_s113__fp32_default_native", "all_scores_passed": true, "replay_passed": true}
+{"audited": "wikitext2_s127__fp32_default_native", "all_scores_passed": true, "replay_passed": true}
+{"audited": "wikitext2_s127__fp32_default_native", "all_scores_passed": true, "replay_passed": false}
+{"audited": "tinystories_s101__fp32_default_native", "all_scores_passed": true, "replay_passed": false}
+{"audited": "tinystories_s101__fp32_default_native", "all_scores_passed": true, "replay_passed": true}
+{"audited": "tinystories_s113__fp32_default_native", "all_scores_passed": true, "replay_passed": true}
+{"audited": "tinystories_s113__fp32_default_native", "all_scores_passed": true, "replay_passed": false}
+{"audited": "tinystories_s127__fp32_default_native", "all_scores_passed": true, "replay_passed": false}
+{"audited": "tinystories_s127__fp32_default_native", "all_scores_passed": true, "replay_passed": true}
+Independent audit: True

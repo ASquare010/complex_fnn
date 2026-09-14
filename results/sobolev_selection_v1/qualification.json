@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "activation": "gelu",
+      "autograd_jvp": true,
+      "finite_difference_jvp": true,
+      "export_and_input_gradient": true
+    },
+    {
+      "activation": "gelu",
+      "budget": "primary",
+      "parameters": 344448
+    },
+    {
+      "activation": "gelu",
+      "budget": "half",
+      "parameters": 590208
+    },
+    {
+      "activation": "gelu",
+      "budget": "three_quarter",
+      "parameters": 885120
+    },
+    {
+      "activation": "swiglu",
+      "autograd_jvp": true,
+      "finite_difference_jvp": true,
+      "export_and_input_gradient": true
+    },
+    {
+      "activation": "swiglu",
+      "budget": "primary",
+      "parameters": 343680
+    },
+    {
+      "activation": "swiglu",
+      "budget": "half",
+      "parameters": 590208
+    },
+    {
+      "activation": "swiglu",
+      "budget": "three_quarter",
+      "parameters": 885120
+    },
+    {
+      "rank_deficient": false,
+      "beta": 0.0,
+      "seven_greedy_gains_against_all_candidate_solves": true
+    },
+    {
+      "rank_deficient": false,
+      "beta": 0.13,
+      "seven_greedy_gains_against_all_candidate_solves": true
+    },
+    {
+      "rank_deficient": true,
+      "beta": 0.0,
+      "seven_greedy_gains_against_all_candidate_solves": true
+    },
+    {
+      "rank_deficient": true,
+      "beta": 0.13,
+      "seven_greedy_gains_against_all_candidate_solves": true
+    },
+    {
+      "rademacher_isotropy_exact_enumeration": true
+    }
+  ]
+}

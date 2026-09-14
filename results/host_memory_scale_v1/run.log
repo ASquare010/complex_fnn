@@ -1,0 +1,6 @@
+complete {'index': 0, 'seed': 401, 'arm': 'ordinary'}
+complete {'index': 1, 'seed': 401, 'arm': 'helper'}
+complete {'index': 2, 'seed': 409, 'arm': 'helper'}
+complete {'index': 3, 'seed': 409, 'arm': 'ordinary'}
+complete {'index': 4, 'seed': 419, 'arm': 'ordinary'}
+complete {'index': 5, 'seed': 419, 'arm': 'helper'}

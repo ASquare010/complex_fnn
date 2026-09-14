@@ -1,0 +1,22 @@
+{
+  "commit": "452376450cf99667f65a07d5c5373dd559f7dd3d",
+  "retrieved": "2026-09-13T20:14:46.8745888+05:00",
+  "files": [
+    {
+      "source": "https://raw.githubusercontent.com/shikaiqiu/compute-better-spent/452376450cf99667f65a07d5c5373dd559f7dd3d/nn/cola_nn.py",
+      "file": "C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\research\\references\\btt_official\\nn_cola_nn.py.txt",
+      "sha256": "9cbaa00bae1a8f9c6b38794e924fdd3ce5f6af623f3e7d27f5af842c46c74f3f"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/shikaiqiu/compute-better-spent/452376450cf99667f65a07d5c5373dd559f7dd3d/ops/operators.py",
+      "file": "C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\research\\references\\btt_official\\ops_operators.py.txt",
+      "sha256": "d6d878a08e25f7edd72d4cc8bc1bba4936fdfe0683aefe877e116b76ea9021d5"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/shikaiqiu/compute-better-spent/452376450cf99667f65a07d5c5373dd559f7dd3d/LICENSE",
+      "file": "C:\\Users\\Cuebric\\Desktop\\Git\\complex_fnn\\research\\references\\btt_official\\LICENSE.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ],
+  "executed": false
+}

@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "rank_deficient": false,
+      "correction_rank": 1,
+      "error": 5.684341886080801e-13
+    },
+    {
+      "rank_deficient": false,
+      "correction_rank": 2,
+      "error": 2.2737367544323206e-13
+    },
+    {
+      "rank_deficient": false,
+      "correction_rank": 4,
+      "error": 7.913429637829221e-28
+    },
+    {
+      "rank_deficient": false,
+      "design_rank": 10,
+      "affine_and_planted_residual": true
+    },
+    {
+      "rank_deficient": true,
+      "correction_rank": 1,
+      "error": 6.821210263296962e-13
+    },
+    {
+      "rank_deficient": true,
+      "correction_rank": 2,
+      "error": 1.1368683772161603e-13
+    },
+    {
+      "rank_deficient": true,
+      "correction_rank": 4,
+      "error": 2.2463056977667088e-27
+    },
+    {
+      "rank_deficient": true,
+      "design_rank": 9,
+      "affine_and_planted_residual": true
+    }
+  ]
+}

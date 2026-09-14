@@ -1,0 +1,746 @@
+[
+  {
+    "label": "wikitext2_s61_block_100",
+    "dataset": "wikitext2",
+    "seed": 61,
+    "training_policy": "block",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s61_block/step100.pt",
+      "sha256": "1ea06ddebe1bd94a2d958d6736e4ea34914bb2808e911a02c0182b1db1b589f9"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s61_block_100.pt",
+    "sha256": "b619324199ace53b7f90f223ff616ebf1ce0934aa8c8e5727f1eb06a24d8b1d3",
+    "tensor_hashes": {
+      "hidden": "041cd3eabb17701c60e756989465723f6a5a3f02e12e69dabf9e20e3e570281e",
+      "weight": "d17a3aa7e1bae6e04de200066577308cfd975310b9daf38513ead324ffc875e0",
+      "tokens": "ad014fd8b1a2fb9512c8a6f6f914069af92556d6114831f294a01b5ffd8bd863",
+      "targets": "bdaab091b5c0f2c503366daad9daee5fb481d3042849c54eba59266cee0eee81"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "wikitext2_s61_block_800",
+    "dataset": "wikitext2",
+    "seed": 61,
+    "training_policy": "block",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s61_block/step800.pt",
+      "sha256": "94621dc2a396af4cc3af226aace2a6fe641eb43148fb90e8228215ffec39f4bd"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s61_block_800.pt",
+    "sha256": "262b0dfd69cef5d3c90285d8f1e1f1ac1a1e5808694380c621f6d264ca236e9f",
+    "tensor_hashes": {
+      "hidden": "c3de176c903dc1d8f0730714c25c73f8bdc38c1713ba542db8654579c0ced53a",
+      "weight": "d7e5328ed497466d58a9bec3cbded0bb7843b4eba07cbc0e178476726da23cff",
+      "tokens": "ad014fd8b1a2fb9512c8a6f6f914069af92556d6114831f294a01b5ffd8bd863",
+      "targets": "bdaab091b5c0f2c503366daad9daee5fb481d3042849c54eba59266cee0eee81"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "wikitext2_s61_loss_chunks_100",
+    "dataset": "wikitext2",
+    "seed": 61,
+    "training_policy": "loss_chunks",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s61_loss_chunks/step100.pt",
+      "sha256": "f26f77b99bee5ad8252bee547822a6138794e69da25fab1d6a8ed0dfd84ba272"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s61_loss_chunks_100.pt",
+    "sha256": "781c1649d8dd00565997f92583240f0cba356080e7daec83a1f53a3603ae3619",
+    "tensor_hashes": {
+      "hidden": "24f9cae8fbffc64c813db2fa6348a98946b7fbd1bda8c18b6ba7287010afbad2",
+      "weight": "c945f982109cdcbfe4d3e501336b34a55829c946072e2ea1f0f80abf5d573785",
+      "tokens": "ad014fd8b1a2fb9512c8a6f6f914069af92556d6114831f294a01b5ffd8bd863",
+      "targets": "bdaab091b5c0f2c503366daad9daee5fb481d3042849c54eba59266cee0eee81"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "wikitext2_s61_loss_chunks_800",
+    "dataset": "wikitext2",
+    "seed": 61,
+    "training_policy": "loss_chunks",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s61_loss_chunks/step800.pt",
+      "sha256": "a8841daa481a1e4678c12e4bb966e3621156f59fd7135abe1a84bfadec826fb9"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s61_loss_chunks_800.pt",
+    "sha256": "a8a33a2a08e951a1f2e26b2556e1c2d751abd318d16053c28b637720d0d16f03",
+    "tensor_hashes": {
+      "hidden": "4841427129537301f5d0eddcc8737472d5cf225ac666da9579be3a4f0146a00b",
+      "weight": "c01e27121a8227530dc8eb5044686577823725d31b05789415171aeff5a08c12",
+      "tokens": "ad014fd8b1a2fb9512c8a6f6f914069af92556d6114831f294a01b5ffd8bd863",
+      "targets": "bdaab091b5c0f2c503366daad9daee5fb481d3042849c54eba59266cee0eee81"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "wikitext2_s73_loss_chunks_100",
+    "dataset": "wikitext2",
+    "seed": 73,
+    "training_policy": "loss_chunks",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s73_loss_chunks/step100.pt",
+      "sha256": "f91a2f02f89b698baadaa007a5543bf3fe99d84d8148960c98f650556625c7a1"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s73_loss_chunks_100.pt",
+    "sha256": "879e02ed110d01e984a35ee5e3f182c4d70d6c2b2b14e25f1ad986a22e494540",
+    "tensor_hashes": {
+      "hidden": "a1ffef2499c75eb2bea0c02fa8915c8dd5a4afb463d2c571b9df9518ffed4b3d",
+      "weight": "b9d07d7f3958ca0204f109f6b4569842530b3aefa19b262a0c6a85ef19f68243",
+      "tokens": "8ae6b1dc249131e5ff77b35a94a77f01de2fe4082224d9c7cad912232d7084b2",
+      "targets": "9e68d48979b5031efbd12548c5648ba315f7af1733fbb9bdbf3fca9af22c8c52"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "wikitext2_s73_loss_chunks_800",
+    "dataset": "wikitext2",
+    "seed": 73,
+    "training_policy": "loss_chunks",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s73_loss_chunks/step800.pt",
+      "sha256": "34509b3ff36b20f41ab80c2030a369391bf695b14caef7e45eee7beb37b8cce9"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s73_loss_chunks_800.pt",
+    "sha256": "ab77d603c04bc0420416c821c924947782e3eb45d7465dfd54abc4020f004dd6",
+    "tensor_hashes": {
+      "hidden": "a0c9d74868efa5f028ea5ab5ce53e597f3b1f890d4fce5bc5b355100858203e6",
+      "weight": "2a5cb2db2cb71c8bca63c404c7a8ad736c97868f74be687d5d2053f539c38ed1",
+      "tokens": "8ae6b1dc249131e5ff77b35a94a77f01de2fe4082224d9c7cad912232d7084b2",
+      "targets": "9e68d48979b5031efbd12548c5648ba315f7af1733fbb9bdbf3fca9af22c8c52"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "wikitext2_s73_block_100",
+    "dataset": "wikitext2",
+    "seed": 73,
+    "training_policy": "block",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s73_block/step100.pt",
+      "sha256": "c7dc2d07dcf3e83d5d57f5d12689fd4c370a2912f9a1990cc2b873cbe6446497"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s73_block_100.pt",
+    "sha256": "10801a0f03681a311b5a8080054e18571f9ca44bd61d7ca9b7235716a64c06ae",
+    "tensor_hashes": {
+      "hidden": "265b3ab3334311af755251a747c8577c1f73723b404385cd1663463b19780916",
+      "weight": "ff5793e84d1d098746a30222dbb2d06ad83e76782dfacf96f12c754853a7463b",
+      "tokens": "8ae6b1dc249131e5ff77b35a94a77f01de2fe4082224d9c7cad912232d7084b2",
+      "targets": "9e68d48979b5031efbd12548c5648ba315f7af1733fbb9bdbf3fca9af22c8c52"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "wikitext2_s73_block_800",
+    "dataset": "wikitext2",
+    "seed": 73,
+    "training_policy": "block",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s73_block/step800.pt",
+      "sha256": "5916f523a4f1a6fa4e6c0122bf6d62168c3d0c47444ad77726085fe9d082ffce"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s73_block_800.pt",
+    "sha256": "d34e68ae4590568f5506fac960088a1d5adf5bc9df3c40ae0469bde35371249a",
+    "tensor_hashes": {
+      "hidden": "a3c6b493888e71b4c71baddb6a498a2e56018931b715c17ec532ff7356405232",
+      "weight": "842874d253d31fe96cccd5b3e9dc7dc8015cc3fb808f6fe8fa95d1ef339e7bce",
+      "tokens": "8ae6b1dc249131e5ff77b35a94a77f01de2fe4082224d9c7cad912232d7084b2",
+      "targets": "9e68d48979b5031efbd12548c5648ba315f7af1733fbb9bdbf3fca9af22c8c52"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "wikitext2_s89_block_100",
+    "dataset": "wikitext2",
+    "seed": 89,
+    "training_policy": "block",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s89_block/step100.pt",
+      "sha256": "9f911842a64162833dd90422e432f9b106930df6251a8e773729cba1f49de2e8"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s89_block_100.pt",
+    "sha256": "d91f015ce86c3532ee8677cd2c41ebd4f25ac755787a90ec34bb7a5ffc8a0e65",
+    "tensor_hashes": {
+      "hidden": "ed3f268874d6029f4c253688bbf705e5f99854237bbe6684f9a2f1658f8dc60a",
+      "weight": "2da84701f3a9c31c0a99e1c0e87233b37dda69c16d5cabece035485b8b74c9a2",
+      "tokens": "0b52a9e563898c2c87f580df7e2da982025e63ca68bbb2606d2bec78bcbb5f4f",
+      "targets": "076424237bbf3ca8adc38089d8631ca7634b389f4f747ccb800c6cdf2a39af36"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "wikitext2_s89_block_800",
+    "dataset": "wikitext2",
+    "seed": 89,
+    "training_policy": "block",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s89_block/step800.pt",
+      "sha256": "21fe8c7a10dd9fd392aa62a5d0bee398f1712129a5a92abae3409c7fa3535c03"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s89_block_800.pt",
+    "sha256": "e2f0403085e93f166ee5b7108d3eec4575519b50e8e082d22be44494927e2e7b",
+    "tensor_hashes": {
+      "hidden": "07ed5fa77bb1af9859076afbd93c4576e8f732afb1d027ff48091c1a858b5705",
+      "weight": "dc65cbf6c3134c2f3e49b9220dbd7a8c22d03226a183eff125c0db2e7428fb94",
+      "tokens": "0b52a9e563898c2c87f580df7e2da982025e63ca68bbb2606d2bec78bcbb5f4f",
+      "targets": "076424237bbf3ca8adc38089d8631ca7634b389f4f747ccb800c6cdf2a39af36"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "wikitext2_s89_loss_chunks_100",
+    "dataset": "wikitext2",
+    "seed": 89,
+    "training_policy": "loss_chunks",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s89_loss_chunks/step100.pt",
+      "sha256": "1db31c9f932065253597a2eb60eb6cf213c86eb2e4b0e3d284927abd6b1081b4"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s89_loss_chunks_100.pt",
+    "sha256": "4ea0843ab5e4de4823ccb11b65acc26b12034756603e5aa652821e9a6fe0bbc2",
+    "tensor_hashes": {
+      "hidden": "db5845275634d8f6eed398eb7134fb1533c34fd8157c368b4bb919c2803d470b",
+      "weight": "44d47a8328c4b8fcf61b73f8cfbfe173b7713d48c822fab91b043440317c6504",
+      "tokens": "0b52a9e563898c2c87f580df7e2da982025e63ca68bbb2606d2bec78bcbb5f4f",
+      "targets": "076424237bbf3ca8adc38089d8631ca7634b389f4f747ccb800c6cdf2a39af36"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "wikitext2_s89_loss_chunks_800",
+    "dataset": "wikitext2",
+    "seed": 89,
+    "training_policy": "loss_chunks",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/wikitext2/runs/b8_t512_s89_loss_chunks/step800.pt",
+      "sha256": "0096e5fd0fc560772cfc659c479f41fb74953d4768eedc07c6ad38157d5710cc"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/wikitext2_s89_loss_chunks_800.pt",
+    "sha256": "c45485f58baa5a8910e86c0a9d22aede9a8e42de7b1618c2433f52f721b30e7e",
+    "tensor_hashes": {
+      "hidden": "24c58cc403f3c3e7fb3beb4d2f5809ba5ac7e6ee4cf1948bef8c08f4f099a141",
+      "weight": "432b557a94dbad9fd18b72f27300dd28569e0360579fb3a1dd8f3be2d1258ec9",
+      "tokens": "0b52a9e563898c2c87f580df7e2da982025e63ca68bbb2606d2bec78bcbb5f4f",
+      "targets": "076424237bbf3ca8adc38089d8631ca7634b389f4f747ccb800c6cdf2a39af36"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s61_loss_chunks_100",
+    "dataset": "tinystories",
+    "seed": 61,
+    "training_policy": "loss_chunks",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s61_loss_chunks/step100.pt",
+      "sha256": "6377443ce9e2feba72896fd16bad3f26b918ebf6637a88294b8f99a3da2f3617"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s61_loss_chunks_100.pt",
+    "sha256": "1b9d0a78014cd383f7d13e63aa9ad040b542672d8154d25e13c4c33c3e2fdbd5",
+    "tensor_hashes": {
+      "hidden": "a5e2e1e3a206991da95c32682142c1cffc8881f3bd50d6cb1211eec6c6879f78",
+      "weight": "622393250d42d5ab3d246ad5c6fabefc4b6c6104aa09cff63de9c96d722e392e",
+      "tokens": "7b52a80280056f1ad76d3322dd355bf37af1b4d4277a02cd89e4947bda8015e5",
+      "targets": "386225f7c0bcaafa47c694acf471bbf16524088a459e884a0dc8c2806ccc97b1"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s61_loss_chunks_800",
+    "dataset": "tinystories",
+    "seed": 61,
+    "training_policy": "loss_chunks",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s61_loss_chunks/step800.pt",
+      "sha256": "2d31932a9bb488cb539965e1ae71293e8a74077fb6b6dc1276bbeb25c5f9d4c3"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s61_loss_chunks_800.pt",
+    "sha256": "916e531bd436f4ee5e5c8caf65f59de8665256d300b2f7101f20d1c1bccf1768",
+    "tensor_hashes": {
+      "hidden": "e390e219ce7aa483ce793bdf632e191c8de43c8159dda098a636da0c2303aca4",
+      "weight": "9ad74d604069fa1929d6b697237ab48cc7aefac355aa884d119e736b2a6fb8f8",
+      "tokens": "7b52a80280056f1ad76d3322dd355bf37af1b4d4277a02cd89e4947bda8015e5",
+      "targets": "386225f7c0bcaafa47c694acf471bbf16524088a459e884a0dc8c2806ccc97b1"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s61_block_100",
+    "dataset": "tinystories",
+    "seed": 61,
+    "training_policy": "block",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s61_block/step100.pt",
+      "sha256": "0077af13f25cad8fdc70c8acae1fbd5f886ae98e7d8b7f6f533096a196a1e8fb"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s61_block_100.pt",
+    "sha256": "6f819d1beb30772728cb7bbaa89e48df243aad6907bd973bb7a15e9221d8a240",
+    "tensor_hashes": {
+      "hidden": "fd44ea87c57017d5a0d87fc4d1303e3473fa7649d96bcde2860b96a40bdf9218",
+      "weight": "2b0e8a712ff2aa375e782eff797ec0394a37499c1ea8c8da5f574c9e8a131d63",
+      "tokens": "7b52a80280056f1ad76d3322dd355bf37af1b4d4277a02cd89e4947bda8015e5",
+      "targets": "386225f7c0bcaafa47c694acf471bbf16524088a459e884a0dc8c2806ccc97b1"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s61_block_800",
+    "dataset": "tinystories",
+    "seed": 61,
+    "training_policy": "block",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s61_block/step800.pt",
+      "sha256": "e18bd08a482a295a0a4ce6d06aad67e1e34a1311db9b4c3784d4c6ce9eaa6e62"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s61_block_800.pt",
+    "sha256": "f6e4f99583fb491ae3226bc0b947a4cc3d3b4e1b979ee25265509899968a1e38",
+    "tensor_hashes": {
+      "hidden": "2635a8db89e71457dea4c3df0e0d49876d159c964010986d7778fdf3d445b4a0",
+      "weight": "302e4729ff8750615f940c8460f747b710bc68b2b5a1a2b475e3a62c0b0d24d7",
+      "tokens": "7b52a80280056f1ad76d3322dd355bf37af1b4d4277a02cd89e4947bda8015e5",
+      "targets": "386225f7c0bcaafa47c694acf471bbf16524088a459e884a0dc8c2806ccc97b1"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s73_block_100",
+    "dataset": "tinystories",
+    "seed": 73,
+    "training_policy": "block",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s73_block/step100.pt",
+      "sha256": "210f835aa25df049224b1f71c49d9eb7546eff29f0d101e0ef182902de87b99d"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s73_block_100.pt",
+    "sha256": "c11f7497cb9946dc30c3b2e7ff7cc36121d3b7a299755b84c32e39d69801a29b",
+    "tensor_hashes": {
+      "hidden": "8f85814540e6141cc896891ba28de0e92e9554669ffadc35e350339a64b29878",
+      "weight": "fbcdd7527834a4f21955c1b33bac2a1f50c2f1c2bf6500cf51eec304424e66dc",
+      "tokens": "db884fa9aa7ad5b9c1a25796ebc7324f422312df50b79575db198da4c5535297",
+      "targets": "f3114cf81f6e2ef74e86ce370f77a02fda7a4ecc90e08508d064fac9f6218863"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s73_block_800",
+    "dataset": "tinystories",
+    "seed": 73,
+    "training_policy": "block",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s73_block/step800.pt",
+      "sha256": "11f5edb8bb4a989eeb2659b1b77f66b4ce5bec8d1e0340b15ccbd0b2e23effec"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s73_block_800.pt",
+    "sha256": "5259f8576cf197c6413738de69c0cc16158c41adc8c723e4e9a62667892257e6",
+    "tensor_hashes": {
+      "hidden": "188a9eca315d5ff24faf87a0208d0bd2f5865f1ef4c9405e067d77b9c7cf4d9a",
+      "weight": "c3631dc5f5fcbd282ef5549ef5e233843d2bd1176aa3bbe520d4abfe216b7b23",
+      "tokens": "db884fa9aa7ad5b9c1a25796ebc7324f422312df50b79575db198da4c5535297",
+      "targets": "f3114cf81f6e2ef74e86ce370f77a02fda7a4ecc90e08508d064fac9f6218863"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s73_loss_chunks_100",
+    "dataset": "tinystories",
+    "seed": 73,
+    "training_policy": "loss_chunks",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s73_loss_chunks/step100.pt",
+      "sha256": "863c2b760d1a5f80a02caed2f80628fed9d622c7bc84657232a5f0f50d7bc47f"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s73_loss_chunks_100.pt",
+    "sha256": "4e1a8d85c02aba5564834e0753963471e230d3841e17eb6a50234606724f35cd",
+    "tensor_hashes": {
+      "hidden": "f3a3bc4abc4475084722d5be5e38eb4c17fa1456bc05e2c26e716304043b7274",
+      "weight": "a6dbca7a5be9547668474d4742f60660a520ff47744b5177e74bb13b6f7e951c",
+      "tokens": "db884fa9aa7ad5b9c1a25796ebc7324f422312df50b79575db198da4c5535297",
+      "targets": "f3114cf81f6e2ef74e86ce370f77a02fda7a4ecc90e08508d064fac9f6218863"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s73_loss_chunks_800",
+    "dataset": "tinystories",
+    "seed": 73,
+    "training_policy": "loss_chunks",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s73_loss_chunks/step800.pt",
+      "sha256": "cff55d64443539745d3f4f796ceb468710a7d56839fe6d7af3c1bcc59430fe4e"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s73_loss_chunks_800.pt",
+    "sha256": "080db6193d27eee016120e36f3ad56eaa8f8c7b7b455928117b864f804f2d568",
+    "tensor_hashes": {
+      "hidden": "c416581b5a8aea2d222f048ff925e4787c919855c155ae742260d88bed274f50",
+      "weight": "e024688f972cea13c10cac1c0fa381ab3b180e7812965e24c47d11e4ffa49dd3",
+      "tokens": "db884fa9aa7ad5b9c1a25796ebc7324f422312df50b79575db198da4c5535297",
+      "targets": "f3114cf81f6e2ef74e86ce370f77a02fda7a4ecc90e08508d064fac9f6218863"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s89_loss_chunks_100",
+    "dataset": "tinystories",
+    "seed": 89,
+    "training_policy": "loss_chunks",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s89_loss_chunks/step100.pt",
+      "sha256": "392f002488c98ce3331a4d4a243ca5e0104ce88535c71708190b27ffad1da494"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s89_loss_chunks_100.pt",
+    "sha256": "cd58347a22a3b8f2f7d4397720c028da02800225c2434c9d0276d17fb7ec62b8",
+    "tensor_hashes": {
+      "hidden": "60cd53918570b288b9f3a32f6a536bbf79d74a0ac4b13d2852de7deaf8099696",
+      "weight": "b871b79eeff0c4e50878b3617451a9fe73d14ef833f543d84ff2e95462d4bef5",
+      "tokens": "905577c3d1057b47e4e0ecea98f706ba39bdbfbe9667b3308ecedda615f7a2b0",
+      "targets": "9f90b442d7800cd474bba6beab1aece77f0df75b7ca620f29aae56af47ebe60e"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s89_loss_chunks_800",
+    "dataset": "tinystories",
+    "seed": 89,
+    "training_policy": "loss_chunks",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s89_loss_chunks/step800.pt",
+      "sha256": "834dea3af7d6f64709ffc55884d4ceb172085d388b360c1b0989cf7c9561842f"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s89_loss_chunks_800.pt",
+    "sha256": "2a25878b219c6b587a9bf72a6b35aa67cf2840d0ce882cd9064b5d8ac15f285e",
+    "tensor_hashes": {
+      "hidden": "5d9f22f9809d6b3319f576920f8b0572219f2a5e534f5d7a2f810d8bc2103eb7",
+      "weight": "02b4fb51d211c16e7b7bc61d1c4ffce11a6a2cfbb421d304ec915954ff1e4c7a",
+      "tokens": "905577c3d1057b47e4e0ecea98f706ba39bdbfbe9667b3308ecedda615f7a2b0",
+      "targets": "9f90b442d7800cd474bba6beab1aece77f0df75b7ca620f29aae56af47ebe60e"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s89_block_100",
+    "dataset": "tinystories",
+    "seed": 89,
+    "training_policy": "block",
+    "step": 100,
+    "source_checkpoint": {
+      "step": 100,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s89_block/step100.pt",
+      "sha256": "1f83ee6a6a3996d5ad12df5e70a94ebf9ffdb43c8a9daf8565dd0a253cdfe3f7"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s89_block_100.pt",
+    "sha256": "4d0143d1af10f8193d7536a96eb273c06388f8558d112553241c20c8ff22cd5e",
+    "tensor_hashes": {
+      "hidden": "8f892e8e90c4d6d979feebc4c6fcf62e21996e3ca185f0c59c1f9af1fd265a75",
+      "weight": "0f53e04c74dbd4ed0aae365fb3be01622b51ef2c499565feb05308f51c13cb6a",
+      "tokens": "905577c3d1057b47e4e0ecea98f706ba39bdbfbe9667b3308ecedda615f7a2b0",
+      "targets": "9f90b442d7800cd474bba6beab1aece77f0df75b7ca620f29aae56af47ebe60e"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  },
+  {
+    "label": "tinystories_s89_block_800",
+    "dataset": "tinystories",
+    "seed": 89,
+    "training_policy": "block",
+    "step": 800,
+    "source_checkpoint": {
+      "step": 800,
+      "path": "results/whole_job_memory_workspace_v1/tinystories/runs/b8_t512_s89_block/step800.pt",
+      "sha256": "8227d69d1c153a3f08aed6f64d17b67dae18f701e4e33709182def6372b8e6c2"
+    },
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "path": "results/classifier_precision_v1/captures/tinystories_s89_block_800.pt",
+    "sha256": "872a505a800f587f4c1d10e79f400d5e7ee0ef61c2355f5203dbb1559958443a",
+    "tensor_hashes": {
+      "hidden": "32d21639af4774365db468e593ba00fe0287108028017e70121bcd426f396358",
+      "weight": "c3900ea54e7a6f122c6a5f801ff9b20718811efda1cee0239cc435c720d1bf21",
+      "tokens": "905577c3d1057b47e4e0ecea98f706ba39bdbfbe9667b3308ecedda615f7a2b0",
+      "targets": "9f90b442d7800cd474bba6beab1aece77f0df75b7ca620f29aae56af47ebe60e"
+    },
+    "capture_peak_allocated_bytes": 92583424
+  }
+]

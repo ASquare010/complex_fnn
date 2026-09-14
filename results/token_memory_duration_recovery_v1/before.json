@@ -1,0 +1,26 @@
+{
+  "files": {
+    "results/token_memory_duration_v1/protocol.json": "2a61ba5d0b2fc4552dd78d35b3e4b9f8a108ef3b6bc6ba8daaf77b938934eb41",
+    "results/token_memory_duration_v1/source.zip": "23b5f8e5cf8f2b605dc36a333ddbeec174258d4ef191c24a8c7bc43795f1863f",
+    "results/token_memory_duration_v1/qualification.json": "153bd248a941063ccd8abbda6a7c697f17c5a30ede72b8c00abfdd54d97226db",
+    "results/token_memory_duration_v1/study.log": "017589e73e37b551eb178dc69f95909eedb9608746bf9b519fc1feb514d48a55",
+    "results/token_memory_duration_v1/study_exit.txt": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+    "results/token_memory_duration_v1/study_failure.json": "a990c7c740fe07ad90c425e7f51726ed37572c60a55337ef9bc009f12aab06f8",
+    "results/token_memory_duration_v1/coordinator_status.json": "608e3e474d9fc6de7c8e3efb985f1c69e42e468814f61d4bf4ec0b23d4566ab8",
+    "results/token_memory_duration_v1/b16_t128_s17_block.log": "bb4f0c93072d681d51484d53144196cffe4f5025ef7ed498f7ab401ea584655e",
+    "results/token_memory_duration_v1/b16_t128_s17_block_exit.txt": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+    "results/token_memory_duration_v1/b16_t128_s17_loss_chunks.log": "f09d0a5530227a573b9607f66d27769501f915e92c4cd174dcac9e50038b7fc9",
+    "results/token_memory_duration_v1/b16_t128_s17_loss_chunks_exit.txt": "5205fef41c0db63d59104e9f7f636e546fddc5ec46e07a509335cf0fe255b877",
+    "results/token_memory_duration_v1/runs/b16_t128_s17_block/history.jsonl": "088dd6ae3767b32f901e806a6f57e1bc0c777d5edfc79ea82f2e482f790ee2dc",
+    "results/token_memory_duration_v1/runs/b16_t128_s17_block/metrics.json": "258aaa5e4b9f3695ce8725d2847d60e59e500762b339ae391d8fe061232a7ab5",
+    "results/token_memory_duration_v1/runs/b16_t128_s17_block/step100.pt": "2880a4ba1c3e72c16266f0e422c2262c332c90368f2471513ba66ce39e501343",
+    "results/token_memory_duration_v1/runs/b16_t128_s17_block/step400.pt": "ffa8325835efd885204d4a03a4d7a4cb777ac1620e833db5cc460d0921eff87e",
+    "results/token_memory_duration_v1/runs/b16_t128_s17_block/step800.pt": "58d685121de89cfa2eb3f867219d24d9cdb597b54ac125d08639d3835d920166"
+  },
+  "original_completed_updates": 800,
+  "failed_candidate_updates": 0,
+  "failed_candidate_directory_empty": true,
+  "change": "Preload sympy and torch._dynamo on CPU before invoking unchanged frozen worker in a new root",
+  "algorithm_precision_optimizer_gates_changed": false,
+  "native_root_cause_proved": false
+}

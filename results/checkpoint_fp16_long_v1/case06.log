@@ -1,0 +1,10 @@
+{"active": "tinystories_s101__fp32_default_native", "step": 100, "loss": 4.050273418426514}
+{"active": "tinystories_s101__fp32_default_native", "step": 200, "loss": 3.3316049575805664}
+{"active": "tinystories_s101__fp32_default_native", "step": 300, "loss": 2.948831081390381}
+{"active": "tinystories_s101__fp32_default_native", "step": 400, "loss": 2.711033582687378}
+{"active": "tinystories_s101__fp32_default_native", "step": 500, "loss": 2.5468459129333496}
+{"active": "tinystories_s101__fp32_default_native", "step": 600, "loss": 2.434739112854004}
+{"active": "tinystories_s101__fp32_default_native", "step": 700, "loss": 2.350955009460449}
+{"active": "tinystories_s101__fp32_default_native", "step": 800, "loss": 2.21146297454834}
+{"completed": "tinystories_s101__fp32_default_native", "nll": 2.3429372943177516, "peak_mib": 502.85986328125, "wall_ms": 144.81940000007398, "stability": 1.0247245437693548}
+Complete 6 fp16

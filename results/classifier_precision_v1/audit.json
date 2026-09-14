@@ -1,0 +1,323 @@
+{
+  "passed": true,
+  "fixtures": 24,
+  "native_recaptures": 24,
+  "closed_form_reference_checks": 24,
+  "exact_gradient_reruns": 144,
+  "scalar_error_records": 240,
+  "optimizer_updates": 0,
+  "records": [
+    {
+      "label": "wikitext2_s61_block_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32"
+      ]
+    },
+    {
+      "label": "wikitext2_s61_block_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16"
+      ]
+    },
+    {
+      "label": "wikitext2_s61_loss_chunks_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached"
+      ]
+    },
+    {
+      "label": "wikitext2_s61_loss_chunks_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached"
+      ]
+    },
+    {
+      "label": "wikitext2_s73_loss_chunks_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32"
+      ]
+    },
+    {
+      "label": "wikitext2_s73_loss_chunks_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32"
+      ]
+    },
+    {
+      "label": "wikitext2_s73_block_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16"
+      ]
+    },
+    {
+      "label": "wikitext2_s73_block_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached"
+      ]
+    },
+    {
+      "label": "wikitext2_s89_block_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached"
+      ]
+    },
+    {
+      "label": "wikitext2_s89_block_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32"
+      ]
+    },
+    {
+      "label": "wikitext2_s89_loss_chunks_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32"
+      ]
+    },
+    {
+      "label": "wikitext2_s89_loss_chunks_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16"
+      ]
+    },
+    {
+      "label": "tinystories_s61_loss_chunks_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached"
+      ]
+    },
+    {
+      "label": "tinystories_s61_loss_chunks_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached"
+      ]
+    },
+    {
+      "label": "tinystories_s61_block_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32"
+      ]
+    },
+    {
+      "label": "tinystories_s61_block_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32"
+      ]
+    },
+    {
+      "label": "tinystories_s73_block_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16"
+      ]
+    },
+    {
+      "label": "tinystories_s73_block_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached"
+      ]
+    },
+    {
+      "label": "tinystories_s73_loss_chunks_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached"
+      ]
+    },
+    {
+      "label": "tinystories_s73_loss_chunks_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32"
+      ]
+    },
+    {
+      "label": "tinystories_s89_loss_chunks_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32"
+      ]
+    },
+    {
+      "label": "tinystories_s89_loss_chunks_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_cached",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16"
+      ]
+    },
+    {
+      "label": "tinystories_s89_block_100",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "chunks_uncached",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached"
+      ]
+    },
+    {
+      "label": "tinystories_s89_block_800",
+      "recapture_exact": true,
+      "independent_closed_form_passed": true,
+      "exact_gradient_reruns": [
+        "native_fp64",
+        "native_fp32",
+        "chunks_fp32",
+        "native_bf16",
+        "chunks_cached",
+        "chunks_uncached"
+      ]
+    }
+  ]
+}

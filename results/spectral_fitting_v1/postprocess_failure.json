@@ -1,0 +1,10 @@
+{
+  "scope": "Post-training analysis and test-process failure; no neural run or checkpoint audit is repeated",
+  "combined_exit_code": 1,
+  "analysis_stdout_bytes": 0,
+  "figure_created": false,
+  "test_trace": "Windows fatal exception: access violation\r\n\r\nCurrent thread 0x00002eac (most recent call first):\r\n  File Windows fatal exception: access violation\r\n\r\n",
+  "recovery_python": "C:/Users/Cuebric/AppData/Roaming/uv/python/cpython-3.12.9-windows-x86_64-none/python.exe",
+  "reason": "Existing UV Python 3.12.9 recovered previous independent reporting imports; keep existing installed packages and source unchanged",
+  "recorded_at": "2026-09-10T06:27:48.0072014+05:00"
+}

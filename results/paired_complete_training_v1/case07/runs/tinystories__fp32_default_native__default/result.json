@@ -1,0 +1,2707 @@
+{
+  "label": "tinystories__fp32_default_native__default",
+  "fixture": {
+    "label": "tinystories__fp32_default_native",
+    "scope": "tinystories",
+    "dataset": "tinystories",
+    "batch": 8,
+    "context": 512,
+    "seed": 101,
+    "source_policy": "fresh_initialization",
+    "source_step": 800,
+    "checkpoint": "results/fp32_training_replication_recovery_v1/runs/tinystories_s101__fp32_default_chunks/final.pt",
+    "model_config": {
+      "variant": "gelu_narrow",
+      "vocab_size": 4096,
+      "width": 384,
+      "layers": 8,
+      "heads": 6,
+      "context": 512,
+      "hidden": 456,
+      "groups": 8
+    },
+    "policy_order": [
+      "fp32_default_chunks",
+      "fp32_default_native",
+      "bf16_default_native"
+    ],
+    "loss_policy": "fp32_default_native",
+    "source_sha256": "9955f30538e92c671bb05f4d043710507450015664c12d8ee05833e2f5a83a8c",
+    "mode_order": [
+      "fused",
+      "default",
+      "single"
+    ]
+  },
+  "mode": "default",
+  "groups": [
+    {
+      "options": {
+        "weight_decay": 0.1,
+        "lr_scale": 1.0,
+        "lr": 0.0006,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      },
+      "names": [
+        "embedding.weight",
+        "blocks.0.attn.qkv.weight",
+        "blocks.0.attn.out.weight",
+        "blocks.0.ffn.up.weight",
+        "blocks.0.ffn.down.weight",
+        "blocks.1.attn.qkv.weight",
+        "blocks.1.attn.out.weight",
+        "blocks.1.ffn.up.weight",
+        "blocks.1.ffn.down.weight",
+        "blocks.2.attn.qkv.weight",
+        "blocks.2.attn.out.weight",
+        "blocks.2.ffn.up.weight",
+        "blocks.2.ffn.down.weight",
+        "blocks.3.attn.qkv.weight",
+        "blocks.3.attn.out.weight",
+        "blocks.3.ffn.up.weight",
+        "blocks.3.ffn.down.weight",
+        "blocks.4.attn.qkv.weight",
+        "blocks.4.attn.out.weight",
+        "blocks.4.ffn.up.weight",
+        "blocks.4.ffn.down.weight",
+        "blocks.5.attn.qkv.weight",
+        "blocks.5.attn.out.weight",
+        "blocks.5.ffn.up.weight",
+        "blocks.5.ffn.down.weight",
+        "blocks.6.attn.qkv.weight",
+        "blocks.6.attn.out.weight",
+        "blocks.6.ffn.up.weight",
+        "blocks.6.ffn.down.weight",
+        "blocks.7.attn.qkv.weight",
+        "blocks.7.attn.out.weight",
+        "blocks.7.ffn.up.weight",
+        "blocks.7.ffn.down.weight"
+      ],
+      "ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ]
+    },
+    {
+      "options": {
+        "weight_decay": 0.0,
+        "lr_scale": 1.0,
+        "lr": 0.0006,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": null,
+        "decoupled_weight_decay": true
+      },
+      "names": [
+        "blocks.0.attn_norm.weight",
+        "blocks.0.ffn_norm.weight",
+        "blocks.1.attn_norm.weight",
+        "blocks.1.ffn_norm.weight",
+        "blocks.2.attn_norm.weight",
+        "blocks.2.ffn_norm.weight",
+        "blocks.3.attn_norm.weight",
+        "blocks.3.ffn_norm.weight",
+        "blocks.4.attn_norm.weight",
+        "blocks.4.ffn_norm.weight",
+        "blocks.5.attn_norm.weight",
+        "blocks.5.ffn_norm.weight",
+        "blocks.6.attn_norm.weight",
+        "blocks.6.ffn_norm.weight",
+        "blocks.7.attn_norm.weight",
+        "blocks.7.ffn_norm.weight",
+        "norm.weight"
+      ],
+      "ids": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ]
+    }
+  ],
+  "initial_model_hash": "72826b84df6cce90b636d5785cca9aae65cacdfb940a3c6366ac8034c89d277d",
+  "initial_moment_hash": "4a419931be6342c9453f666ccc83a795f078176979dbe9e50ef575b41257501f",
+  "initial_sampler_hash": "826585880362fa6af2c52afd7dec4eb169b68853af8725901a32bc195d0f8ea6",
+  "before_score": {
+    "nll": 2.654330555273562,
+    "targets": 200704,
+    "order_sha256": "5e4352a07a92abc42f68f9656cdc7a52f867669022cff48b0c7f39676337c707"
+  },
+  "after_score": {
+    "nll": 2.6276839849900226,
+    "targets": 200704,
+    "order_sha256": "5e4352a07a92abc42f68f9656cdc7a52f867669022cff48b0c7f39676337c707"
+  },
+  "first_gradients": {
+    "path": "results/paired_complete_training_v1/case07/runs/tinystories__fp32_default_native__default/first_gradients.pt",
+    "sha256": "a4fa0abaea6b6f819a5bfd7b2b9e1353f516ad99c08599e2129ca531dce8b1d2",
+    "raw_hash": "4009b36d83e3b2c26121456ab1f4a47c7ea0746d5dd3b26802d982500a6e2ee5",
+    "clipped_hash": "4009b36d83e3b2c26121456ab1f4a47c7ea0746d5dd3b26802d982500a6e2ee5"
+  },
+  "first_state": {
+    "path": "results/paired_complete_training_v1/case07/runs/tinystories__fp32_default_native__default/first.pt",
+    "sha256": "c3cf8e43c5ab690f179fb56f27a95088d760cf3c29806e972562238bb23cbd7d",
+    "model_hash": "032818937489931dc86b7e0f38fd8ce17178e2c1131e24232cf4d5de83ee8371",
+    "optimizer_hash": "58edbdbb88864b009be200df747c47505ceeef1858e311c9fa3d962b527a36be",
+    "sampler_hash": "4f509f73ce3f81cf0d953ece7ddb76805cac86c54d947362e94e58407235eaba"
+  },
+  "final_state": {
+    "path": "results/paired_complete_training_v1/case07/runs/tinystories__fp32_default_native__default/final.pt",
+    "sha256": "22e35939ab73efb66d3b04936b49d7fdc0fbd4ba6afe04ebab2c62bd43f33592",
+    "model_hash": "fe4d68a3e2f19a3cb8f87a8bfc5705613bc9831c768887fe30117fcb1e93c483",
+    "optimizer_hash": "d34b6b1eea9af654c8bc7d44252a89ae1a7dc70d323a688b958a2d1ac6fb24a2",
+    "sampler_hash": "b277c147b90bb86c9f39f0ec461a03f1e7487e5c10f82c499e026d6c0e9a4fd4"
+  },
+  "updates": [
+    {
+      "step": 1,
+      "absolute_step": 801,
+      "tokens_hash": "a01b9cd97809405362eaed52ef750541d1264066d0934d872e66f643a4146d4f",
+      "targets_hash": "2994632260f318fef14fef114907a207437a48679c00ee83a1d97626c476cc7b",
+      "loss": 2.53605318069458,
+      "norm": 0.9758139848709106,
+      "wall_ms": 508.1800000007206,
+      "event_complete_ms": 507.73907470703125,
+      "at_ns": 1789065168162045200,
+      "until_ns": 1789065168670518500,
+      "event_ms": {
+        "forward": 117.80908966064453,
+        "backward": 118.80960083007812,
+        "clipping": 119.97532653808594,
+        "optimizer": 122.2297592163086
+      },
+      "event_sum_ms": 478.8237762451172
+    },
+    {
+      "step": 2,
+      "absolute_step": 802,
+      "tokens_hash": "de6d1ca554a735bbdd892fe7ddffca66234a2660ebba7b39d488f8ffeacb2d7a",
+      "targets_hash": "ee30fe02e7ce1c5b23ef5e15766b24b683abe5a482012ac0abdb0b079ca9734c",
+      "loss": 2.605337142944336,
+      "norm": 0.8814525604248047,
+      "wall_ms": 75.81849999769474,
+      "event_complete_ms": 75.75885009765625,
+      "at_ns": 1789065169199523400,
+      "until_ns": 1789065169275168000,
+      "event_ms": {
+        "forward": 21.156095504760742,
+        "backward": 49.86982345581055,
+        "clipping": 0.8048639893531799,
+        "optimizer": 3.9229440689086914
+      },
+      "event_sum_ms": 75.75372701883316
+    },
+    {
+      "step": 3,
+      "absolute_step": 803,
+      "tokens_hash": "93b22c256a77ddab1556de7a1aff663c7e70bce035311ecb3b524b43d1b1987c",
+      "targets_hash": "3bc76010bb4e6d87ab27cf38f6d75c12bc9f11984df02b0ff64f14893f6b7bae",
+      "loss": 2.5443294048309326,
+      "norm": 0.8769147992134094,
+      "wall_ms": 75.82570000158739,
+      "event_complete_ms": 75.78153228759766,
+      "at_ns": 1789065169278763200,
+      "until_ns": 1789065169354262700,
+      "event_ms": {
+        "forward": 20.7476806640625,
+        "backward": 50.30195236206055,
+        "clipping": 0.8130559921264648,
+        "optimizer": 3.915776014328003
+      },
+      "event_sum_ms": 75.77846503257751
+    },
+    {
+      "step": 4,
+      "absolute_step": 804,
+      "tokens_hash": "6023aa08bdb3930f97f9c36609d94ff7aeed6d521a64d577c1c3a2697744abda",
+      "targets_hash": "383f51337c7bfa5fddd1076ef9482442787bfe762c84b1eeb596b33aee156727",
+      "loss": 2.516754150390625,
+      "norm": 0.9195698499679565,
+      "wall_ms": 75.69529999818769,
+      "event_complete_ms": 75.6398696899414,
+      "at_ns": 1789065169357771600,
+      "until_ns": 1789065169433930700,
+      "event_ms": {
+        "forward": 20.840511322021484,
+        "backward": 50.08998489379883,
+        "clipping": 0.7956479787826538,
+        "optimizer": 3.9086079597473145
+      },
+      "event_sum_ms": 75.63475215435028
+    },
+    {
+      "step": 5,
+      "absolute_step": 805,
+      "tokens_hash": "6a6bd09e4a09f4342e2b341a9dc35042fc259f15377f8aa1b0be6c8ad36bacb5",
+      "targets_hash": "21cb73cfed5b5e9ba672c6e4f1c16fc8b161e69149b91811b6d0d87bfbab81a6",
+      "loss": 2.4368162155151367,
+      "norm": 0.844030499458313,
+      "wall_ms": 80.6222000028356,
+      "event_complete_ms": 80.56995391845703,
+      "at_ns": 1789065169436950500,
+      "until_ns": 1789065169518217800,
+      "event_ms": {
+        "forward": 20.908639907836914,
+        "backward": 54.49932861328125,
+        "clipping": 1.2625919580459595,
+        "optimizer": 3.895296096801758
+      },
+      "event_sum_ms": 80.56585657596588
+    },
+    {
+      "step": 6,
+      "absolute_step": 806,
+      "tokens_hash": "c20b237b669c59773700bdebfff35d0f1cd68fefbde8f95b589077614fce668e",
+      "targets_hash": "ea7d335f0f88513932754c51952fc312d9145304a9ced7ac7e704abb72134ff4",
+      "loss": 2.6937055587768555,
+      "norm": 0.9030735492706299,
+      "wall_ms": 69.42349999735598,
+      "event_complete_ms": 69.37926483154297,
+      "at_ns": 1789065169521837800,
+      "until_ns": 1789065169590863900,
+      "event_ms": {
+        "forward": 20.7392635345459,
+        "backward": 43.91321563720703,
+        "clipping": 0.8151040077209473,
+        "optimizer": 3.9075839519500732
+      },
+      "event_sum_ms": 69.37516713142395
+    },
+    {
+      "step": 7,
+      "absolute_step": 807,
+      "tokens_hash": "03a200e6f96c285c008f7abacfddbec09dfb6443e2489919bb3cb3d440f10493",
+      "targets_hash": "f6e0f03de4c8bf340b136c834e0cd94e1cb1df06662c7a437100362de7672712",
+      "loss": 2.4587340354919434,
+      "norm": 0.88299560546875,
+      "wall_ms": 68.74650000099791,
+      "event_complete_ms": 68.70428466796875,
+      "at_ns": 1789065169593891100,
+      "until_ns": 1789065169662917500,
+      "event_ms": {
+        "forward": 20.476959228515625,
+        "backward": 43.52511978149414,
+        "clipping": 0.8038399815559387,
+        "optimizer": 3.8942720890045166
+      },
+      "event_sum_ms": 68.70019108057022
+    },
+    {
+      "step": 8,
+      "absolute_step": 808,
+      "tokens_hash": "62b46f4fa2ca18a1d5079b541e51a44f451c2e5d328f6a23406bf692d593e808",
+      "targets_hash": "8fb358e84f843ddeaa96c46d04e521bda39a3588df4d95a2b267d5d711cc68e4",
+      "loss": 2.3916049003601074,
+      "norm": 0.8554467558860779,
+      "wall_ms": 72.79410000046482,
+      "event_complete_ms": 72.73725128173828,
+      "at_ns": 1789065169666893900,
+      "until_ns": 1789065169738807700,
+      "event_ms": {
+        "forward": 20.717023849487305,
+        "backward": 46.56742477416992,
+        "clipping": 1.783743977546692,
+        "optimizer": 3.620863914489746
+      },
+      "event_sum_ms": 72.68905651569366
+    },
+    {
+      "step": 9,
+      "absolute_step": 809,
+      "tokens_hash": "31a82b54a9a67c5e505e8d096f723fbcedb82afb98c8ace4dce0c5282c6a0bb8",
+      "targets_hash": "5c1fa940924bdc194671a81dadf44406ad9efa71e55ba683930571e5915485d7",
+      "loss": 2.3882739543914795,
+      "norm": 0.9339340925216675,
+      "wall_ms": 76.59150000108639,
+      "event_complete_ms": 76.53395080566406,
+      "at_ns": 1789065169742850600,
+      "until_ns": 1789065169819524200,
+      "event_ms": {
+        "forward": 24.856767654418945,
+        "backward": 46.60531234741211,
+        "clipping": 1.5044159889221191,
+        "optimizer": 3.5624959468841553
+      },
+      "event_sum_ms": 76.52899193763733
+    },
+    {
+      "step": 10,
+      "absolute_step": 810,
+      "tokens_hash": "2be422239a791e7fedfbe7317aeef27e18265875a7f4f9e98429090b5fa4174a",
+      "targets_hash": "38b61ab1d7cdd8d07d8b039e1e2a026d4c6fa13c49745f93a7bdd8dc580739d7",
+      "loss": 2.7335433959960938,
+      "norm": 0.9096847176551819,
+      "wall_ms": 71.78669999848353,
+      "event_complete_ms": 71.73567962646484,
+      "at_ns": 1789065169823531400,
+      "until_ns": 1789065169895215500,
+      "event_ms": {
+        "forward": 21.302656173706055,
+        "backward": 45.637630462646484,
+        "clipping": 1.287168025970459,
+        "optimizer": 3.5031039714813232
+      },
+      "event_sum_ms": 71.73055863380432
+    },
+    {
+      "step": 11,
+      "absolute_step": 811,
+      "tokens_hash": "928abcaf241cfdac3762026e6fb993d32cb6083e7692e7f974073f91c68c9b10",
+      "targets_hash": "cbd3712a057553f747a75a670d82c6f291a1d070f74281f50ef25da574cf037e",
+      "loss": 2.635998487472534,
+      "norm": 0.9475857615470886,
+      "wall_ms": 68.31199999942328,
+      "event_complete_ms": 68.26515197753906,
+      "at_ns": 1789065169898731200,
+      "until_ns": 1789065169966313900,
+      "event_ms": {
+        "forward": 20.777151107788086,
+        "backward": 43.2281608581543,
+        "clipping": 0.7761920094490051,
+        "optimizer": 3.4805760383605957
+      },
+      "event_sum_ms": 68.26208001375198
+    },
+    {
+      "step": 12,
+      "absolute_step": 812,
+      "tokens_hash": "250f014e76e93a2cf5511d75aa425430b67450ad3af54f70291600519f1b82df",
+      "targets_hash": "0635ead669575fb5b35438eac784d73d74a080c8c4091a5531c3ecbe987f798e",
+      "loss": 2.5219409465789795,
+      "norm": 0.9417310357093811,
+      "wall_ms": 70.04429999869899,
+      "event_complete_ms": 69.99961853027344,
+      "at_ns": 1789065169970833700,
+      "until_ns": 1789065170040789300,
+      "event_ms": {
+        "forward": 20.800512313842773,
+        "backward": 44.623870849609375,
+        "clipping": 1.0577919483184814,
+        "optimizer": 3.512320041656494
+      },
+      "event_sum_ms": 69.99449515342712
+    },
+    {
+      "step": 13,
+      "absolute_step": 813,
+      "tokens_hash": "1184e58ed455efc8b69f4bd3ad3b4368a5aae4f809f05c6ca13d0b48afccb7f0",
+      "targets_hash": "46bcf78eb599fcdebcad5bcd93ee349272408e0474f80a7650244ec897ee970f",
+      "loss": 2.6640896797180176,
+      "norm": 0.8921244144439697,
+      "wall_ms": 67.81169999885606,
+      "event_complete_ms": 67.76905822753906,
+      "at_ns": 1789065170043787100,
+      "until_ns": 1789065170111923800,
+      "event_ms": {
+        "forward": 20.499168395996094,
+        "backward": 42.793983459472656,
+        "clipping": 0.907263994216919,
+        "optimizer": 3.5635199546813965
+      },
+      "event_sum_ms": 67.76393580436707
+    },
+    {
+      "step": 14,
+      "absolute_step": 814,
+      "tokens_hash": "31018997f885745bedf2ce922e308ffc43071f4a3a2fe0adf68090a09bf4b1b7",
+      "targets_hash": "15721f63451b95e7892238e19a80ad3bc0e31aa10b8a78d4b02ffe2d2311167b",
+      "loss": 2.502432346343994,
+      "norm": 0.9047456383705139,
+      "wall_ms": 67.92919999861624,
+      "event_complete_ms": 67.88566589355469,
+      "at_ns": 1789065170114858400,
+      "until_ns": 1789065170183017000,
+      "event_ms": {
+        "forward": 20.3176326751709,
+        "backward": 43.3070068359375,
+        "clipping": 0.749567985534668,
+        "optimizer": 3.506335973739624
+      },
+      "event_sum_ms": 67.88054347038269
+    },
+    {
+      "step": 15,
+      "absolute_step": 815,
+      "tokens_hash": "f7e43b5970e010d5b9c91f3e9b083e2d1991b651defd1ae1f8cb0bf8604b9ace",
+      "targets_hash": "f1b51482c68b2f5cf637ee6cc33bbd495494428a926027dcf6894409c99321b9",
+      "loss": 2.740670680999756,
+      "norm": 0.9255574345588684,
+      "wall_ms": 68.61189999835915,
+      "event_complete_ms": 68.56620788574219,
+      "at_ns": 1789065170185990300,
+      "until_ns": 1789065170254985500,
+      "event_ms": {
+        "forward": 20.420799255371094,
+        "backward": 43.39507293701172,
+        "clipping": 1.1397119760513306,
+        "optimizer": 3.6075520515441895
+      },
+      "event_sum_ms": 68.56313621997833
+    },
+    {
+      "step": 16,
+      "absolute_step": 816,
+      "tokens_hash": "7f69f783df97003d82296c3111d40a30dca00f22e970d8faa94b09a192892282",
+      "targets_hash": "20694207471c69199686b344b2e8c66afa6a72e13ba1c4dbd2215565797f325d",
+      "loss": 2.521419048309326,
+      "norm": 0.8488237857818604,
+      "wall_ms": 71.16959999984829,
+      "event_complete_ms": 71.1209945678711,
+      "at_ns": 1789065170257986600,
+      "until_ns": 1789065170329606900,
+      "event_ms": {
+        "forward": 20.588640213012695,
+        "backward": 45.644927978515625,
+        "clipping": 1.3926399946212769,
+        "optimizer": 3.4897921085357666
+      },
+      "event_sum_ms": 71.11600029468536
+    },
+    {
+      "step": 17,
+      "absolute_step": 817,
+      "tokens_hash": "2343136614e60d42083f9423b550298518c85d6531f73ff767715f64cfa0556d",
+      "targets_hash": "ff18a3c462603a3edc2dc45276f6cfe05a017ed20c669db95c307ec18ceecb64",
+      "loss": 2.5742409229278564,
+      "norm": 0.8913787007331848,
+      "wall_ms": 74.67760000145063,
+      "event_complete_ms": 74.6310043334961,
+      "at_ns": 1789065170332626700,
+      "until_ns": 1789065170408197700,
+      "event_ms": {
+        "forward": 24.12735939025879,
+        "backward": 45.93356704711914,
+        "clipping": 1.07315194606781,
+        "optimizer": 3.492863893508911
+      },
+      "event_sum_ms": 74.62694227695465
+    },
+    {
+      "step": 18,
+      "absolute_step": 818,
+      "tokens_hash": "befdd2b7aaa3d3ae129341712511abee40ef65664c01116fc31f73fea2898a4d",
+      "targets_hash": "dbe9eeea0c9b4b31e0139b46a450e5c174c8630aec5408f1d7d01f4b0eb23b6e",
+      "loss": 2.7205920219421387,
+      "norm": 0.898242175579071,
+      "wall_ms": 71.83720000102767,
+      "event_complete_ms": 71.78797149658203,
+      "at_ns": 1789065170411715600,
+      "until_ns": 1789065170483192200,
+      "event_ms": {
+        "forward": 21.615039825439453,
+        "backward": 45.5813102722168,
+        "clipping": 1.0588159561157227,
+        "optimizer": 3.527679920196533
+      },
+      "event_sum_ms": 71.7828459739685
+    },
+    {
+      "step": 19,
+      "absolute_step": 819,
+      "tokens_hash": "7d3ddb4c1e287dc09fb4ad6265fcdb9ba1172345a0c7ba1b30bfdb6fa063a963",
+      "targets_hash": "e60142aab256d5a83833d0aef14a9cd13d497ca0cf75a66dc075e2deed65d158",
+      "loss": 2.548032283782959,
+      "norm": 0.9755617380142212,
+      "wall_ms": 70.94209999922896,
+      "event_complete_ms": 70.89250946044922,
+      "at_ns": 1789065170487171600,
+      "until_ns": 1789065170558017000,
+      "event_ms": {
+        "forward": 21.13225555419922,
+        "backward": 45.462528228759766,
+        "clipping": 0.7557119727134705,
+        "optimizer": 3.5379199981689453
+      },
+      "event_sum_ms": 70.8884157538414
+    },
+    {
+      "step": 20,
+      "absolute_step": 820,
+      "tokens_hash": "afb57c56f6c89671b6b5c065b2abb9ac68d4630b49272cef5e7c090066da78d5",
+      "targets_hash": "b3f985777045063879c93c6c6c0be420e29955b253336016fb3e7a850fb248ba",
+      "loss": 2.582184314727783,
+      "norm": 0.8571449518203735,
+      "wall_ms": 69.05429999824264,
+      "event_complete_ms": 69.00991821289062,
+      "at_ns": 1789065170561292600,
+      "until_ns": 1789065170630443800,
+      "event_ms": {
+        "forward": 20.459007263183594,
+        "backward": 44.244991302490234,
+        "clipping": 0.8191999793052673,
+        "optimizer": 3.4805760383605957
+      },
+      "event_sum_ms": 69.00377458333969
+    },
+    {
+      "step": 21,
+      "absolute_step": 821,
+      "tokens_hash": "077e913faee02cff7b0845cf5c3bd2b1a05a7105f920fc8bc04b6345cb6cc93d",
+      "targets_hash": "2c9aa1dd33b1229a3eac815ed918bc9ff7738bc1ecbdf74af5a393fa0c7083d6",
+      "loss": 2.5057687759399414,
+      "norm": 0.9154226779937744,
+      "wall_ms": 69.05110000298009,
+      "event_complete_ms": 68.99929809570312,
+      "at_ns": 1789065170633445200,
+      "until_ns": 1789065170703136900,
+      "event_ms": {
+        "forward": 20.6060791015625,
+        "backward": 44.115966796875,
+        "clipping": 0.7720959782600403,
+        "optimizer": 3.501055955886841
+      },
+      "event_sum_ms": 68.99519783258438
+    },
+    {
+      "step": 22,
+      "absolute_step": 822,
+      "tokens_hash": "6763aeb27cf8bc494ce46f7c39696ac1561862dad0028a26b91215d6ef4a7a97",
+      "targets_hash": "c085480747b451a33c7d8c58a1cae4849d1fff3afe1e7217a90ee2b063e05d3d",
+      "loss": 2.647022247314453,
+      "norm": 0.9883802533149719,
+      "wall_ms": 68.64110000242363,
+      "event_complete_ms": 68.59683227539062,
+      "at_ns": 1789065170706139400,
+      "until_ns": 1789065170774968000,
+      "event_ms": {
+        "forward": 20.89379119873047,
+        "backward": 43.465728759765625,
+        "clipping": 0.7557119727134705,
+        "optimizer": 3.477504014968872
+      },
+      "event_sum_ms": 68.59273594617844
+    },
+    {
+      "step": 23,
+      "absolute_step": 823,
+      "tokens_hash": "3695a061507f6750ffc72c11563a42459da2a0a074690280e21a9c6efafdf85c",
+      "targets_hash": "f1a4a562f3a657a6d191146d6d305165ecddac7dca598fe47272bd16a7f1f543",
+      "loss": 2.5127029418945312,
+      "norm": 0.9272196888923645,
+      "wall_ms": 72.39219999974011,
+      "event_complete_ms": 72.34896087646484,
+      "at_ns": 1789065170778475600,
+      "until_ns": 1789065170850210900,
+      "event_ms": {
+        "forward": 24.20047950744629,
+        "backward": 43.86406326293945,
+        "clipping": 0.7690240144729614,
+        "optimizer": 3.5102720260620117
+      },
+      "event_sum_ms": 72.34383881092072
+    },
+    {
+      "step": 24,
+      "absolute_step": 824,
+      "tokens_hash": "eadfa04a92aa45ca9619de0f2c2c5f003e49aa26bb292a6e7625e8af8b17b22a",
+      "targets_hash": "05e0232b8d1e450c93277d8cde21fbce5acc6f84ffff835e0d29b5d164c959cc",
+      "loss": 2.509187698364258,
+      "norm": 0.8904861211776733,
+      "wall_ms": 69.10030000290135,
+      "event_complete_ms": 69.05133056640625,
+      "at_ns": 1789065170854195500,
+      "until_ns": 1789065170923042500,
+      "event_ms": {
+        "forward": 20.895519256591797,
+        "backward": 43.88966369628906,
+        "clipping": 0.7577599883079529,
+        "optimizer": 3.504319906234741
+      },
+      "event_sum_ms": 69.04726284742355
+    },
+    {
+      "step": 25,
+      "absolute_step": 825,
+      "tokens_hash": "d3b3872f98de3d126b923ab050829748e516d29bdd18e25f222ef524d8eb93e9",
+      "targets_hash": "63cc774ca1e438630db8b1bc66d9692ec27cd3f2f33dae9b544a670498fc61e3",
+      "loss": 2.623979091644287,
+      "norm": 0.9137558937072754,
+      "wall_ms": 68.5897000003024,
+      "event_complete_ms": 68.53731536865234,
+      "at_ns": 1789065170926960000,
+      "until_ns": 1789065170995610700,
+      "event_ms": {
+        "forward": 20.495328903198242,
+        "backward": 43.76473617553711,
+        "clipping": 0.7516160011291504,
+        "optimizer": 3.522559881210327
+      },
+      "event_sum_ms": 68.53424096107483
+    },
+    {
+      "step": 26,
+      "absolute_step": 826,
+      "tokens_hash": "8bd00524ee21070f9cdcc4060fff098809589ac58a9d52babf9a685afd09733b",
+      "targets_hash": "7eccf176c9afc2022528386c8bba0e9e15ae8f4746f0f6cb1ee5cbcb3b14d6b7",
+      "loss": 2.6002981662750244,
+      "norm": 0.8858718872070312,
+      "wall_ms": 70.39130000339355,
+      "event_complete_ms": 70.34540557861328,
+      "at_ns": 1789065170999126300,
+      "until_ns": 1789065171069193100,
+      "event_ms": {
+        "forward": 20.917951583862305,
+        "backward": 45.16761779785156,
+        "clipping": 0.7475200295448303,
+        "optimizer": 3.507200002670288
+      },
+      "event_sum_ms": 70.34028941392899
+    },
+    {
+      "step": 27,
+      "absolute_step": 827,
+      "tokens_hash": "babfff6d8071e54b8cccd41ae445c62e9456a050b8041d1d55f225b95af27803",
+      "targets_hash": "b08ee57092cd1fde863406ca12e0faaab0be446aae1103f0993df48724a094b6",
+      "loss": 2.546830415725708,
+      "norm": 0.8719807267189026,
+      "wall_ms": 69.13640000129817,
+      "event_complete_ms": 69.08995056152344,
+      "at_ns": 1789065171073192400,
+      "until_ns": 1789065171141518000,
+      "event_ms": {
+        "forward": 20.408960342407227,
+        "backward": 44.42214584350586,
+        "clipping": 0.7567359805107117,
+        "optimizer": 3.498016119003296
+      },
+      "event_sum_ms": 69.0858582854271
+    },
+    {
+      "step": 28,
+      "absolute_step": 828,
+      "tokens_hash": "fbac30fc8496fad8379f56c37567059d9b70004a0445f7355c0b2ff2cd15af00",
+      "targets_hash": "06a483b55656b97f89a58fd0acc8734b50adc12dc276bd4877e0b4c1f7a714b5",
+      "loss": 2.692869186401367,
+      "norm": 0.9180716276168823,
+      "wall_ms": 69.38299999819719,
+      "event_complete_ms": 69.32886505126953,
+      "at_ns": 1789065171145452500,
+      "until_ns": 1789065171215319000,
+      "event_ms": {
+        "forward": 20.817888259887695,
+        "backward": 44.233726501464844,
+        "clipping": 0.7720959782600403,
+        "optimizer": 3.501055955886841
+      },
+      "event_sum_ms": 69.32476669549942
+    },
+    {
+      "step": 29,
+      "absolute_step": 829,
+      "tokens_hash": "20f9ae6e79798940ac3f94546adeaba6c758ce362b71f9eb570982c5d49e1d90",
+      "targets_hash": "fa6148dc804548b23d42c1d5966f3741ec7f330eb7247c568f1b546172796107",
+      "loss": 2.5732264518737793,
+      "norm": 0.9097498059272766,
+      "wall_ms": 69.59390000338317,
+      "event_complete_ms": 69.54822540283203,
+      "at_ns": 1789065171217934600,
+      "until_ns": 1789065171288129600,
+      "event_ms": {
+        "forward": 20.70854377746582,
+        "backward": 44.61977767944336,
+        "clipping": 0.7413759827613831,
+        "optimizer": 3.4744319915771484
+      },
+      "event_sum_ms": 69.54412943124771
+    },
+    {
+      "step": 30,
+      "absolute_step": 830,
+      "tokens_hash": "b8fb916752ba90561d021108a574a289e6b194cf9e5827072e35461a5180f5e3",
+      "targets_hash": "2f390903baa8e09a382792d45fab36271dad25d7360613e8e7e434f0bc1bc57b",
+      "loss": 2.383122444152832,
+      "norm": 0.9811518788337708,
+      "wall_ms": 68.68069999836734,
+      "event_complete_ms": 68.63292694091797,
+      "at_ns": 1789065171291249600,
+      "until_ns": 1789065171360440100,
+      "event_ms": {
+        "forward": 20.358495712280273,
+        "backward": 43.93164825439453,
+        "clipping": 0.8120319843292236,
+        "optimizer": 3.526655912399292
+      },
+      "event_sum_ms": 68.62883186340332
+    }
+  ],
+  "phases": [
+    {
+      "phase": "construction",
+      "peak_allocated_bytes": 132037632,
+      "peak_reserved_bytes": 157286400,
+      "live_allocated_bytes": 132037632,
+      "live_reserved_bytes": 157286400,
+      "host": {
+        "allocated_bytes.current": 0,
+        "allocated_bytes.peak": 0,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 0,
+        "allocations.current": 0,
+        "allocations.peak": 0,
+        "active_requests.current": 0,
+        "active_requests.peak": 0
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 0
+      },
+      "known_storage_bytes": 131512856,
+      "unattributed_live_bytes": 524776
+    },
+    {
+      "phase": "initial_validation",
+      "peak_allocated_bytes": 189256704,
+      "peak_reserved_bytes": 216006656,
+      "live_allocated_bytes": 140557312,
+      "live_reserved_bytes": 216006656,
+      "host": {
+        "allocated_bytes.current": 12,
+        "allocated_bytes.peak": 12,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 12,
+        "allocations.current": 2,
+        "allocations.peak": 2,
+        "active_requests.current": 0,
+        "active_requests.peak": 2
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 0
+      },
+      "known_storage_bytes": 131512856,
+      "unattributed_live_bytes": 9044456
+    },
+    {
+      "phase": "batch_1",
+      "peak_allocated_bytes": 140624384,
+      "peak_reserved_bytes": 216006656,
+      "live_allocated_bytes": 140590592,
+      "live_reserved_bytes": 216006656,
+      "host": {
+        "allocated_bytes.current": 12,
+        "allocated_bytes.peak": 12,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 0,
+        "allocations.current": 2,
+        "allocations.peak": 2,
+        "active_requests.current": 0,
+        "active_requests.peak": 0
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 9044904
+    },
+    {
+      "phase": "first_raw_gradient_copy",
+      "peak_allocated_bytes": 411140608,
+      "peak_reserved_bytes": 480247808,
+      "live_allocated_bytes": 187344384,
+      "live_reserved_bytes": 480247808,
+      "host": {
+        "allocated_bytes.current": 12,
+        "allocated_bytes.peak": 12,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 0,
+        "allocations.current": 2,
+        "allocations.peak": 2,
+        "active_requests.current": 0,
+        "active_requests.peak": 0
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32836
+      },
+      "known_storage_bytes": 167944284,
+      "unattributed_live_bytes": 19400100
+    },
+    {
+      "phase": "optimizer_1",
+      "peak_allocated_bytes": 224569344,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "first_artifact_serialization",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_2",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 0,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 0
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_2",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_3",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_3",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_4",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_4",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_5",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_5",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_6",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_6",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_7",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_7",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_8",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_8",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_9",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_9",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_10",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_10",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_11",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_11",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_12",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_12",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_13",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_13",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_14",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_14",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_15",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_15",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_16",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_16",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_17",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_17",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_18",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_18",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_19",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_19",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_20",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_20",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_21",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_21",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_22",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_22",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_23",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_23",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_24",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_24",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_25",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_25",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_26",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_26",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_27",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_27",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_28",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_28",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_29",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_29",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "batch_30",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 149111296,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 4,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 0,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32832
+      },
+      "known_storage_bytes": 131545688,
+      "unattributed_live_bytes": 17565608
+    },
+    {
+      "phase": "optimizer_30",
+      "peak_allocated_bytes": 419660800,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "final_validation",
+      "peak_allocated_bytes": 235814400,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 12,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 2
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "final_finite_checks",
+      "peak_allocated_bytes": 199403520,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 1,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 1
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    },
+    {
+      "phase": "final_artifact_serialization",
+      "peak_allocated_bytes": 187344896,
+      "peak_reserved_bytes": 497025024,
+      "live_allocated_bytes": 187344896,
+      "live_reserved_bytes": 497025024,
+      "host": {
+        "allocated_bytes.current": 13,
+        "allocated_bytes.peak": 13,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 0,
+        "allocations.current": 3,
+        "allocations.peak": 3,
+        "active_requests.current": 0,
+        "active_requests.peak": 0
+      },
+      "storage_bytes": {
+        "parameters": 36398592,
+        "buffers": 1048576,
+        "gradients": 36398592,
+        "moments": 72797184,
+        "counters": 0,
+        "dataset": 21268504,
+        "batch_and_loss": 32840
+      },
+      "known_storage_bytes": 167944288,
+      "unattributed_live_bytes": 19400608
+    }
+  ],
+  "timing": {
+    "wall_ms": {
+      "n": 20,
+      "mean": 69.76748000033695,
+      "median": 69.11835000209976,
+      "sample_variance": 2.9279960050400233,
+      "min": 67.81169999885606,
+      "max": 74.67760000145063
+    },
+    "event_sum_ms": {
+      "n": 20,
+      "mean": 69.71596608161926,
+      "median": 69.06656056642532,
+      "sample_variance": 2.926997677031057,
+      "min": 67.76393580436707,
+      "max": 74.62694227695465
+    },
+    "event_complete_ms": {
+      "n": 20,
+      "mean": 69.72036056518554,
+      "median": 69.07064056396484,
+      "sample_variance": 2.9275651431550567,
+      "min": 67.76905822753906,
+      "max": 74.6310043334961
+    }
+  },
+  "timing_stability": {
+    "wall_ms": 1.006234957813055,
+    "event_sum_ms": 1.0062631510590723,
+    "event_complete_ms": 1.0062852726436662
+  },
+  "peak_allocated_bytes": 419660800,
+  "peak_reserved_bytes": 497025024,
+  "parameters": 9099648,
+  "training_updates": 30,
+  "training_targets": 122880,
+  "training_backwards": 30,
+  "full_validation_scores": 2,
+  "finite": true
+}

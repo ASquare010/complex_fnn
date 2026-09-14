@@ -1,0 +1,126 @@
+{
+  "study": "H163",
+  "passed": true,
+  "peaks": [
+    {
+      "index": 0,
+      "seed": 401,
+      "arm": "ordinary",
+      "working_set": 1843638272,
+      "private_commit": 4524408832
+    },
+    {
+      "index": 1,
+      "seed": 401,
+      "arm": "helper",
+      "working_set": 1910558720,
+      "private_commit": 4406870016
+    },
+    {
+      "index": 2,
+      "seed": 409,
+      "arm": "helper",
+      "working_set": 1911558144,
+      "private_commit": 4411310080
+    },
+    {
+      "index": 3,
+      "seed": 409,
+      "arm": "ordinary",
+      "working_set": 1843978240,
+      "private_commit": 4526940160
+    },
+    {
+      "index": 4,
+      "seed": 419,
+      "arm": "ordinary",
+      "working_set": 1841909760,
+      "private_commit": 4521394176
+    },
+    {
+      "index": 5,
+      "seed": 419,
+      "arm": "helper",
+      "working_set": 1911230464,
+      "private_commit": 4408655872
+    }
+  ],
+  "pairs": [
+    {
+      "seed": 401,
+      "host_delta_bytes": {
+        "working_set": 66920448,
+        "private_commit": -117538816
+      },
+      "gates": {
+        "numeric_resource": true,
+        "working_set": true,
+        "private_commit": true,
+        "absolute": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 409,
+      "host_delta_bytes": {
+        "working_set": 67579904,
+        "private_commit": -115630080
+      },
+      "gates": {
+        "numeric_resource": true,
+        "working_set": true,
+        "private_commit": true,
+        "absolute": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 419,
+      "host_delta_bytes": {
+        "working_set": 69320704,
+        "private_commit": -112738304
+      },
+      "gates": {
+        "numeric_resource": true,
+        "working_set": true,
+        "private_commit": true,
+        "absolute": true
+      },
+      "passed": true
+    }
+  ],
+  "statistics": {
+    "ordinary": {
+      "working_set": {
+        "mean": 1843175424,
+        "median": 1843638272,
+        "sample_variance": 1230323580928,
+        "n": 3
+      },
+      "private_commit": {
+        "mean": 4524247722.666667,
+        "median": 4524408832,
+        "sample_variance": 7708951795029.333,
+        "n": 3
+      }
+    },
+    "helper": {
+      "working_set": {
+        "mean": 1911115776,
+        "median": 1911230464,
+        "sample_variance": 259577085952,
+        "n": 3
+      },
+      "private_commit": {
+        "mean": 4408945322.666667,
+        "median": 4408655872,
+        "sample_variance": 4991378347349.333,
+        "n": 3
+      }
+    }
+  },
+  "optimizer_updates": 4800,
+  "backwards": 4806,
+  "terminal_convergence_qualified": false,
+  "goal_achieved": false
+}

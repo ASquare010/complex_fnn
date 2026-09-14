@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "shape": [
+        2,
+        5
+      ],
+      "scale": 0.0,
+      "passed": true,
+      "directions": [
+        {
+          "absolute_error": 6.398682046437898e-07,
+          "analytical": 240.44782459665043
+        },
+        {
+          "absolute_error": 2.402150869329489e-07,
+          "analytical": -89.80692319999608
+        }
+      ]
+    },
+    {
+      "shape": [
+        2,
+        3,
+        8
+      ],
+      "scale": 0.1,
+      "passed": true,
+      "directions": [
+        {
+          "absolute_error": 2.716227243126923e-11,
+          "analytical": -11.269434327915755
+        },
+        {
+          "absolute_error": 1.5685728271819244e-09,
+          "analytical": 18.166532718341294
+        }
+      ]
+    },
+    {
+      "shape": [
+        3,
+        16
+      ],
+      "scale": 10.0,
+      "passed": true,
+      "directions": [
+        {
+          "absolute_error": 7.862731021823777e-10,
+          "analytical": 0.3917077634565523
+        },
+        {
+          "absolute_error": 2.827094114365991e-11,
+          "analytical": -0.48919914477692417
+        }
+      ]
+    }
+  ],
+  "backwards": 6,
+  "finite_difference_forwards": 12
+}

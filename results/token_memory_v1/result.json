@@ -1,0 +1,1752 @@
+{
+  "status": "STOPPED_FOR_FIDELITY_DIAGNOSIS",
+  "completed_cases": 22,
+  "planned_cases": 180,
+  "qualification": {
+    "records": [
+      {
+        "device": "cpu",
+        "variant": "gelu",
+        "policy": "native",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "gelu",
+        "policy": "ffn_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 1.6159075614692888e-16,
+          "blocks.0.ffn.up.weight": 1.6804137109511896e-16,
+          "blocks.0.ffn.down.weight": 1.5659965237459556e-16,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 1.5772169895274348e-16,
+          "blocks.1.ffn.up.weight": 1.6558323284242552e-16,
+          "blocks.1.ffn.down.weight": 1.5381954553551903e-16,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "gelu",
+        "policy": "loss_chunks",
+        "loss_relative_error": 1.1102230246251565e-16,
+        "gradient_errors": {
+          "embedding.weight": 9.654299431783779e-17,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "norm.weight": 8.070249266110443e-17
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "gelu",
+        "policy": "both_chunks",
+        "loss_relative_error": 1.1102230246251565e-16,
+        "gradient_errors": {
+          "embedding.weight": 9.654299431783779e-17,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 1.6159075614692888e-16,
+          "blocks.0.ffn.up.weight": 1.6804137109511896e-16,
+          "blocks.0.ffn.down.weight": 1.5659965237459556e-16,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 1.5772169895274348e-16,
+          "blocks.1.ffn.up.weight": 1.6558323284242552e-16,
+          "blocks.1.ffn.down.weight": 1.5381954553551903e-16,
+          "norm.weight": 8.070249266110443e-17
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "swiglu",
+        "policy": "native",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.0.ffn.gate.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "blocks.1.ffn.gate.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "swiglu",
+        "policy": "ffn_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 1.6166176491419018e-16,
+          "blocks.0.ffn.up.weight": 1.9576679616024608e-16,
+          "blocks.0.ffn.down.weight": 1.5421875479280635e-16,
+          "blocks.0.ffn.gate.weight": 1.6171566728161005e-16,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 1.6665956782375461e-16,
+          "blocks.1.ffn.up.weight": 1.69662296177219e-16,
+          "blocks.1.ffn.down.weight": 1.4779724981525344e-16,
+          "blocks.1.ffn.gate.weight": 1.9457407268201018e-16,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "swiglu",
+        "policy": "loss_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 1.1349318292934745e-16,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.0.ffn.gate.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "blocks.1.ffn.gate.weight": 0.0,
+          "norm.weight": 6.287020874655997e-17
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "swiglu",
+        "policy": "both_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 1.1349318292934745e-16,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 1.6166176491419018e-16,
+          "blocks.0.ffn.up.weight": 1.9576679616024608e-16,
+          "blocks.0.ffn.down.weight": 1.5421875479280635e-16,
+          "blocks.0.ffn.gate.weight": 1.6171566728161005e-16,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 1.6665956782375461e-16,
+          "blocks.1.ffn.up.weight": 1.69662296177219e-16,
+          "blocks.1.ffn.down.weight": 1.4779724981525344e-16,
+          "blocks.1.ffn.gate.weight": 1.9457407268201018e-16,
+          "norm.weight": 6.287020874655997e-17
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "gelu_narrow",
+        "policy": "native",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "gelu_narrow",
+        "policy": "ffn_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 1.6159075614692888e-16,
+          "blocks.0.ffn.up.weight": 1.6804137109511896e-16,
+          "blocks.0.ffn.down.weight": 1.5659965237459556e-16,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 1.5772169895274348e-16,
+          "blocks.1.ffn.up.weight": 1.6558323284242552e-16,
+          "blocks.1.ffn.down.weight": 1.5381954553551903e-16,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "gelu_narrow",
+        "policy": "loss_chunks",
+        "loss_relative_error": 1.1102230246251565e-16,
+        "gradient_errors": {
+          "embedding.weight": 9.654299431783779e-17,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "norm.weight": 8.070249266110443e-17
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "gelu_narrow",
+        "policy": "both_chunks",
+        "loss_relative_error": 1.1102230246251565e-16,
+        "gradient_errors": {
+          "embedding.weight": 9.654299431783779e-17,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 1.6159075614692888e-16,
+          "blocks.0.ffn.up.weight": 1.6804137109511896e-16,
+          "blocks.0.ffn.down.weight": 1.5659965237459556e-16,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 1.5772169895274348e-16,
+          "blocks.1.ffn.up.weight": 1.6558323284242552e-16,
+          "blocks.1.ffn.down.weight": 1.5381954553551903e-16,
+          "norm.weight": 8.070249266110443e-17
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "swiglu_narrow",
+        "policy": "native",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.0.ffn.gate.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "blocks.1.ffn.gate.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "swiglu_narrow",
+        "policy": "ffn_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 1.6166176491419018e-16,
+          "blocks.0.ffn.up.weight": 1.9576679616024608e-16,
+          "blocks.0.ffn.down.weight": 1.5421875479280635e-16,
+          "blocks.0.ffn.gate.weight": 1.6171566728161005e-16,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 1.6665956782375461e-16,
+          "blocks.1.ffn.up.weight": 1.69662296177219e-16,
+          "blocks.1.ffn.down.weight": 1.4779724981525344e-16,
+          "blocks.1.ffn.gate.weight": 1.9457407268201018e-16,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "swiglu_narrow",
+        "policy": "loss_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 1.1349318292934745e-16,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.0.ffn.gate.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "blocks.1.ffn.gate.weight": 0.0,
+          "norm.weight": 6.287020874655997e-17
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "swiglu_narrow",
+        "policy": "both_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 1.1349318292934745e-16,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 1.6166176491419018e-16,
+          "blocks.0.ffn.up.weight": 1.9576679616024608e-16,
+          "blocks.0.ffn.down.weight": 1.5421875479280635e-16,
+          "blocks.0.ffn.gate.weight": 1.6171566728161005e-16,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 1.6665956782375461e-16,
+          "blocks.1.ffn.up.weight": 1.69662296177219e-16,
+          "blocks.1.ffn.down.weight": 1.4779724981525344e-16,
+          "blocks.1.ffn.gate.weight": 1.9457407268201018e-16,
+          "norm.weight": 6.287020874655997e-17
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "blockshuffle_swiglu",
+        "policy": "native",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.first.weight": 0.0,
+          "blocks.0.ffn.up.second.weight": 0.0,
+          "blocks.0.ffn.gate.first.weight": 0.0,
+          "blocks.0.ffn.gate.second.weight": 0.0,
+          "blocks.0.ffn.down.first.weight": 0.0,
+          "blocks.0.ffn.down.second.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.first.weight": 0.0,
+          "blocks.1.ffn.up.second.weight": 0.0,
+          "blocks.1.ffn.gate.first.weight": 0.0,
+          "blocks.1.ffn.gate.second.weight": 0.0,
+          "blocks.1.ffn.down.first.weight": 0.0,
+          "blocks.1.ffn.down.second.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "blockshuffle_swiglu",
+        "policy": "ffn_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.first.weight": 1.7327273647298778e-16,
+          "blocks.0.ffn.up.second.weight": 1.2173145631588888e-16,
+          "blocks.0.ffn.gate.first.weight": 1.256845022395495e-16,
+          "blocks.0.ffn.gate.second.weight": 1.259903680189167e-16,
+          "blocks.0.ffn.down.first.weight": 1.7375920530025637e-16,
+          "blocks.0.ffn.down.second.weight": 1.4755843385863893e-16,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.first.weight": 1.4232193664883913e-16,
+          "blocks.1.ffn.up.second.weight": 1.4929748118614237e-16,
+          "blocks.1.ffn.gate.first.weight": 2.6081800948531365e-16,
+          "blocks.1.ffn.gate.second.weight": 1.38865787765939e-16,
+          "blocks.1.ffn.down.first.weight": 1.1359765105291236e-16,
+          "blocks.1.ffn.down.second.weight": 1.6501870606975497e-16,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "blockshuffle_swiglu",
+        "policy": "loss_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 1.1627382730957101e-16,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.first.weight": 0.0,
+          "blocks.0.ffn.up.second.weight": 0.0,
+          "blocks.0.ffn.gate.first.weight": 0.0,
+          "blocks.0.ffn.gate.second.weight": 0.0,
+          "blocks.0.ffn.down.first.weight": 0.0,
+          "blocks.0.ffn.down.second.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.first.weight": 0.0,
+          "blocks.1.ffn.up.second.weight": 0.0,
+          "blocks.1.ffn.gate.first.weight": 0.0,
+          "blocks.1.ffn.gate.second.weight": 0.0,
+          "blocks.1.ffn.down.first.weight": 0.0,
+          "blocks.1.ffn.down.second.weight": 0.0,
+          "norm.weight": 6.905430811369981e-17
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cpu",
+        "variant": "blockshuffle_swiglu",
+        "policy": "both_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 1.1627382730957101e-16,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.first.weight": 1.7327273647298778e-16,
+          "blocks.0.ffn.up.second.weight": 1.2173145631588888e-16,
+          "blocks.0.ffn.gate.first.weight": 1.256845022395495e-16,
+          "blocks.0.ffn.gate.second.weight": 1.259903680189167e-16,
+          "blocks.0.ffn.down.first.weight": 1.7375920530025637e-16,
+          "blocks.0.ffn.down.second.weight": 1.4755843385863893e-16,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.first.weight": 1.4232193664883913e-16,
+          "blocks.1.ffn.up.second.weight": 1.4929748118614237e-16,
+          "blocks.1.ffn.gate.first.weight": 2.6081800948531365e-16,
+          "blocks.1.ffn.gate.second.weight": 1.38865787765939e-16,
+          "blocks.1.ffn.down.first.weight": 1.1359765105291236e-16,
+          "blocks.1.ffn.down.second.weight": 1.6501870606975497e-16,
+          "norm.weight": 6.905430811369981e-17
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "gelu",
+        "policy": "native",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "gelu",
+        "policy": "ffn_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.003169751064638459,
+          "blocks.0.ffn.down.weight": 0.003356945251252058,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0033051809501503204,
+          "blocks.1.ffn.down.weight": 0.0033510111667809915,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "gelu",
+        "policy": "loss_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0020969506593786487,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "gelu",
+        "policy": "both_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0020969506593786487,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.003169751064638459,
+          "blocks.0.ffn.down.weight": 0.003356945251252058,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0033051809501503204,
+          "blocks.1.ffn.down.weight": 0.0033510111667809915,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "swiglu",
+        "policy": "native",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.0.ffn.gate.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "blocks.1.ffn.gate.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "swiglu",
+        "policy": "ffn_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.002966821923107166,
+          "blocks.0.ffn.down.weight": 0.0031480902808213793,
+          "blocks.0.ffn.gate.weight": 0.003396504022781138,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0032891444339741916,
+          "blocks.1.ffn.down.weight": 0.0028511173627527144,
+          "blocks.1.ffn.gate.weight": 0.0034212752189375487,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "swiglu",
+        "policy": "loss_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0021456873132302654,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.0.ffn.gate.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "blocks.1.ffn.gate.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "swiglu",
+        "policy": "both_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0021456873132302654,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.002966821923107166,
+          "blocks.0.ffn.down.weight": 0.0031480902808213793,
+          "blocks.0.ffn.gate.weight": 0.003396504022781138,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0032891444339741916,
+          "blocks.1.ffn.down.weight": 0.0028511173627527144,
+          "blocks.1.ffn.gate.weight": 0.0034212752189375487,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "gelu_narrow",
+        "policy": "native",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "gelu_narrow",
+        "policy": "ffn_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.003169751064638459,
+          "blocks.0.ffn.down.weight": 0.003356945251252058,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0033051809501503204,
+          "blocks.1.ffn.down.weight": 0.0033510111667809915,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "gelu_narrow",
+        "policy": "loss_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0020969506593786487,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "gelu_narrow",
+        "policy": "both_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0020969506593786487,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.003169751064638459,
+          "blocks.0.ffn.down.weight": 0.003356945251252058,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0033051809501503204,
+          "blocks.1.ffn.down.weight": 0.0033510111667809915,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "swiglu_narrow",
+        "policy": "native",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.0.ffn.gate.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "blocks.1.ffn.gate.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "swiglu_narrow",
+        "policy": "ffn_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.002966821923107166,
+          "blocks.0.ffn.down.weight": 0.0031480902808213793,
+          "blocks.0.ffn.gate.weight": 0.003396504022781138,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0032891444339741916,
+          "blocks.1.ffn.down.weight": 0.0028511173627527144,
+          "blocks.1.ffn.gate.weight": 0.0034212752189375487,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "swiglu_narrow",
+        "policy": "loss_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0021456873132302654,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.0,
+          "blocks.0.ffn.down.weight": 0.0,
+          "blocks.0.ffn.gate.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0,
+          "blocks.1.ffn.down.weight": 0.0,
+          "blocks.1.ffn.gate.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "swiglu_narrow",
+        "policy": "both_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0021456873132302654,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.weight": 0.002966821923107166,
+          "blocks.0.ffn.down.weight": 0.0031480902808213793,
+          "blocks.0.ffn.gate.weight": 0.003396504022781138,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.weight": 0.0032891444339741916,
+          "blocks.1.ffn.down.weight": 0.0028511173627527144,
+          "blocks.1.ffn.gate.weight": 0.0034212752189375487,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "blockshuffle_swiglu",
+        "policy": "native",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.first.weight": 0.0,
+          "blocks.0.ffn.up.second.weight": 0.0,
+          "blocks.0.ffn.gate.first.weight": 0.0,
+          "blocks.0.ffn.gate.second.weight": 0.0,
+          "blocks.0.ffn.down.first.weight": 0.0,
+          "blocks.0.ffn.down.second.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.first.weight": 0.0,
+          "blocks.1.ffn.up.second.weight": 0.0,
+          "blocks.1.ffn.gate.first.weight": 0.0,
+          "blocks.1.ffn.gate.second.weight": 0.0,
+          "blocks.1.ffn.down.first.weight": 0.0,
+          "blocks.1.ffn.down.second.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "blockshuffle_swiglu",
+        "policy": "ffn_chunks",
+        "loss_relative_error": 0.0,
+        "gradient_errors": {
+          "embedding.weight": 0.0,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.first.weight": 0.0021503472387813796,
+          "blocks.0.ffn.up.second.weight": 0.002227847949335448,
+          "blocks.0.ffn.gate.first.weight": 0.002494694616184542,
+          "blocks.0.ffn.gate.second.weight": 0.0024451913241017686,
+          "blocks.0.ffn.down.first.weight": 0.002893237105432713,
+          "blocks.0.ffn.down.second.weight": 0.0024467517405653235,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.first.weight": 0.0019346257452250535,
+          "blocks.1.ffn.up.second.weight": 0.0023973814553752294,
+          "blocks.1.ffn.gate.first.weight": 0.0021185302878278444,
+          "blocks.1.ffn.gate.second.weight": 0.0024370444547003674,
+          "blocks.1.ffn.down.first.weight": 0.0017646520425037607,
+          "blocks.1.ffn.down.second.weight": 0.001965865839189119,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "blockshuffle_swiglu",
+        "policy": "loss_chunks",
+        "loss_relative_error": 6.891084958215998e-08,
+        "gradient_errors": {
+          "embedding.weight": 0.0026538058044467557,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.first.weight": 0.0,
+          "blocks.0.ffn.up.second.weight": 0.0,
+          "blocks.0.ffn.gate.first.weight": 0.0,
+          "blocks.0.ffn.gate.second.weight": 0.0,
+          "blocks.0.ffn.down.first.weight": 0.0,
+          "blocks.0.ffn.down.second.weight": 0.0,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.first.weight": 0.0,
+          "blocks.1.ffn.up.second.weight": 0.0,
+          "blocks.1.ffn.gate.first.weight": 0.0,
+          "blocks.1.ffn.gate.second.weight": 0.0,
+          "blocks.1.ffn.down.first.weight": 0.0,
+          "blocks.1.ffn.down.second.weight": 0.0,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      },
+      {
+        "device": "cuda",
+        "variant": "blockshuffle_swiglu",
+        "policy": "both_chunks",
+        "loss_relative_error": 6.891084958215998e-08,
+        "gradient_errors": {
+          "embedding.weight": 0.0026538058044467557,
+          "blocks.0.attn_norm.weight": 0.0,
+          "blocks.0.attn.qkv.weight": 0.0,
+          "blocks.0.attn.out.weight": 0.0,
+          "blocks.0.ffn_norm.weight": 0.0,
+          "blocks.0.ffn.up.first.weight": 0.0021503472387813796,
+          "blocks.0.ffn.up.second.weight": 0.002227847949335448,
+          "blocks.0.ffn.gate.first.weight": 0.002494694616184542,
+          "blocks.0.ffn.gate.second.weight": 0.0024451913241017686,
+          "blocks.0.ffn.down.first.weight": 0.002893237105432713,
+          "blocks.0.ffn.down.second.weight": 0.0024467517405653235,
+          "blocks.1.attn_norm.weight": 0.0,
+          "blocks.1.attn.qkv.weight": 0.0,
+          "blocks.1.attn.out.weight": 0.0,
+          "blocks.1.ffn_norm.weight": 0.0,
+          "blocks.1.ffn.up.first.weight": 0.0019346257452250535,
+          "blocks.1.ffn.up.second.weight": 0.0023973814553752294,
+          "blocks.1.ffn.gate.first.weight": 0.0021185302878278444,
+          "blocks.1.ffn.gate.second.weight": 0.0024370444547003674,
+          "blocks.1.ffn.down.first.weight": 0.0017646520425037607,
+          "blocks.1.ffn.down.second.weight": 0.001965865839189119,
+          "norm.weight": 0.0
+        },
+        "eval_finite": true,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "endpoints": [
+    {
+      "key": "gelu_b16_t128_s17_block",
+      "policy": "block",
+      "variant": "gelu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.935555994510651,
+      "peak_allocated_bytes": 376822784,
+      "timing": {
+        "forward_ms": {
+          "mean": 24.183037500051796,
+          "median": 24.51290000044537,
+          "sample_variance": 10.674808610593864
+        },
+        "backward_ms": {
+          "mean": 59.5596124999247,
+          "median": 58.50385000030656,
+          "sample_variance": 31.53815078448693
+        },
+        "optimizer_ms": {
+          "mean": 7.45736250041773,
+          "median": 7.482450000679819,
+          "sample_variance": 0.05535292845977879
+        },
+        "update_ms": {
+          "mean": 91.20001250039422,
+          "median": 93.94485000120767,
+          "sample_variance": 35.639694031560055
+        }
+      }
+    },
+    {
+      "key": "gelu_b16_t128_s17_both_chunks",
+      "policy": "both_chunks",
+      "variant": "gelu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.939282596111298,
+      "peak_allocated_bytes": 372104704,
+      "timing": {
+        "forward_ms": {
+          "mean": 38.69712499954403,
+          "median": 37.62654999991355,
+          "sample_variance": 5.915623466464894
+        },
+        "backward_ms": {
+          "mean": 102.68477500039808,
+          "median": 99.63870000046882,
+          "sample_variance": 213.98843835532617
+        },
+        "optimizer_ms": {
+          "mean": 7.43751249979141,
+          "median": 7.366499999079679,
+          "sample_variance": 0.09010478672773772
+        },
+        "update_ms": {
+          "mean": 148.81941249973352,
+          "median": 146.78744999946503,
+          "sample_variance": 215.0685556535406
+        }
+      }
+    },
+    {
+      "key": "gelu_b16_t128_s17_ffn",
+      "policy": "ffn",
+      "variant": "gelu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.935555994510651,
+      "peak_allocated_bytes": 578533888,
+      "timing": {
+        "forward_ms": {
+          "mean": 21.51793749976605,
+          "median": 21.249899999020272,
+          "sample_variance": 1.104936394428053
+        },
+        "backward_ms": {
+          "mean": 36.124325000173485,
+          "median": 34.75775000060821,
+          "sample_variance": 13.83518047447484
+        },
+        "optimizer_ms": {
+          "mean": 7.998362500075018,
+          "median": 8.074800000031246,
+          "sample_variance": 0.1874072597884033
+        },
+        "update_ms": {
+          "mean": 65.64062500001455,
+          "median": 63.69619999986753,
+          "sample_variance": 19.529805625717042
+        }
+      }
+    },
+    {
+      "key": "gelu_b16_t128_s17_ffn_chunks",
+      "policy": "ffn_chunks",
+      "variant": "gelu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 9.108537077903748,
+      "peak_allocated_bytes": 375905280,
+      "timing": {
+        "forward_ms": {
+          "mean": 35.41949999998906,
+          "median": 34.05819999989035,
+          "sample_variance": 34.15897900290219
+        },
+        "backward_ms": {
+          "mean": 88.83223750012803,
+          "median": 90.93155000027764,
+          "sample_variance": 56.99695908099081
+        },
+        "optimizer_ms": {
+          "mean": 7.489137499987919,
+          "median": 7.233400000586698,
+          "sample_variance": 0.1857479424067392
+        },
+        "update_ms": {
+          "mean": 131.740875000105,
+          "median": 132.20174999969458,
+          "sample_variance": 112.31602623544764
+        }
+      }
+    },
+    {
+      "key": "gelu_b16_t128_s17_loss_chunks",
+      "policy": "loss_chunks",
+      "variant": "gelu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 8.22411060333252,
+      "peak_allocated_bytes": 372891136,
+      "timing": {
+        "forward_ms": {
+          "mean": 26.185712500137015,
+          "median": 25.300549999883515,
+          "sample_variance": 5.810413940159072
+        },
+        "backward_ms": {
+          "mean": 62.402562499983105,
+          "median": 60.32595000033325,
+          "sample_variance": 95.04191836462877
+        },
+        "optimizer_ms": {
+          "mean": 7.341250000081345,
+          "median": 7.3468500004310044,
+          "sample_variance": 0.04654599997748822
+        },
+        "update_ms": {
+          "mean": 95.92952500020147,
+          "median": 94.13325000059558,
+          "sample_variance": 94.0401401777742
+        }
+      }
+    },
+    {
+      "key": "gelu_b16_t128_s17_native",
+      "policy": "native",
+      "variant": "gelu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.935555994510651,
+      "peak_allocated_bytes": 690141696,
+      "timing": {
+        "forward_ms": {
+          "mean": 18.7540874997012,
+          "median": 18.838650000361667,
+          "sample_variance": 0.879559272887129
+        },
+        "backward_ms": {
+          "mean": 28.16443749998143,
+          "median": 27.808449999611184,
+          "sample_variance": 5.9474063997232784
+        },
+        "optimizer_ms": {
+          "mean": 7.504450000169527,
+          "median": 7.369400000243331,
+          "sample_variance": 0.16515367735223743
+        },
+        "update_ms": {
+          "mean": 54.42297499985216,
+          "median": 54.182050000235904,
+          "sample_variance": 10.80723944023825
+        }
+      }
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s17_block",
+      "policy": "block",
+      "variant": "gelu_narrow",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.948350131511688,
+      "peak_allocated_bytes": 294191616,
+      "timing": {
+        "forward_ms": {
+          "mean": 26.129324999828896,
+          "median": 25.70614999967802,
+          "sample_variance": 9.961187770804539
+        },
+        "backward_ms": {
+          "mean": 54.80808750030519,
+          "median": 55.44405000000552,
+          "sample_variance": 163.03919556819528
+        },
+        "optimizer_ms": {
+          "mean": 5.31025000009322,
+          "median": 5.302099999425991,
+          "sample_variance": 0.022383048572331598
+        },
+        "update_ms": {
+          "mean": 86.2476625002273,
+          "median": 87.4392000005173,
+          "sample_variance": 171.69977319165713
+        }
+      }
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s17_both_chunks",
+      "policy": "both_chunks",
+      "variant": "gelu_narrow",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.948332965373993,
+      "peak_allocated_bytes": 232218624,
+      "timing": {
+        "forward_ms": {
+          "mean": 40.46728749972317,
+          "median": 38.694899999427435,
+          "sample_variance": 64.49304410375964
+        },
+        "backward_ms": {
+          "mean": 101.54023750033048,
+          "median": 99.22980000101234,
+          "sample_variance": 55.45747114648493
+        },
+        "optimizer_ms": {
+          "mean": 6.311962499921719,
+          "median": 6.268000000090979,
+          "sample_variance": 0.18899469743456973
+        },
+        "update_ms": {
+          "mean": 148.31948749997537,
+          "median": 149.89874999992026,
+          "sample_variance": 77.44970259381219
+        }
+      }
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s17_ffn",
+      "policy": "ffn",
+      "variant": "gelu_narrow",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.948350131511688,
+      "peak_allocated_bytes": 497426944,
+      "timing": {
+        "forward_ms": {
+          "mean": 22.38328750013352,
+          "median": 21.201450000262412,
+          "sample_variance": 9.091712980067497
+        },
+        "backward_ms": {
+          "mean": 34.59032499995374,
+          "median": 33.84100000039325,
+          "sample_variance": 8.95213105398668
+        },
+        "optimizer_ms": {
+          "mean": 4.946062500039261,
+          "median": 4.9815500005934155,
+          "sample_variance": 0.01662632835470234
+        },
+        "update_ms": {
+          "mean": 61.91967500012652,
+          "median": 60.88125000042055,
+          "sample_variance": 25.32772034249029
+        }
+      }
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s17_ffn_chunks",
+      "policy": "ffn_chunks",
+      "variant": "gelu_narrow",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.948322117328644,
+      "peak_allocated_bytes": 294689280,
+      "timing": {
+        "forward_ms": {
+          "mean": 38.55328750000808,
+          "median": 37.2732999994696,
+          "sample_variance": 18.155497440277514
+        },
+        "backward_ms": {
+          "mean": 96.85812499992608,
+          "median": 94.23694999986765,
+          "sample_variance": 42.63937612813536
+        },
+        "optimizer_ms": {
+          "mean": 5.596574999572113,
+          "median": 5.636400000184949,
+          "sample_variance": 0.24040463089631012
+        },
+        "update_ms": {
+          "mean": 141.00798749950627,
+          "median": 137.16239999939717,
+          "sample_variance": 113.47629831792953
+        }
+      }
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s17_loss_chunks",
+      "policy": "loss_chunks",
+      "variant": "gelu_narrow",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.948288917541504,
+      "peak_allocated_bytes": 231524352,
+      "timing": {
+        "forward_ms": {
+          "mean": 26.38356249985918,
+          "median": 25.757150000572437,
+          "sample_variance": 4.679805377379761
+        },
+        "backward_ms": {
+          "mean": 60.73762500000157,
+          "median": 57.90245000025607,
+          "sample_variance": 65.69368643375269
+        },
+        "optimizer_ms": {
+          "mean": 6.291249999776483,
+          "median": 6.1853499992139405,
+          "sample_variance": 0.12580326571091888
+        },
+        "update_ms": {
+          "mean": 93.41243749963724,
+          "median": 91.03854999921168,
+          "sample_variance": 67.9429896220515
+        }
+      }
+    },
+    {
+      "key": "gelu_narrow_b16_t128_s17_native",
+      "policy": "native",
+      "variant": "gelu_narrow",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.948350131511688,
+      "peak_allocated_bytes": 519021056,
+      "timing": {
+        "forward_ms": {
+          "mean": 20.123274999832574,
+          "median": 20.573200000399083,
+          "sample_variance": 1.9587140054132386
+        },
+        "backward_ms": {
+          "mean": 29.613912500281003,
+          "median": 30.44930000032764,
+          "sample_variance": 8.508050025151846
+        },
+        "optimizer_ms": {
+          "mean": 5.155950000016674,
+          "median": 5.228400000305555,
+          "sample_variance": 0.03036905143959154
+        },
+        "update_ms": {
+          "mean": 54.89313750013025,
+          "median": 56.083700000272074,
+          "sample_variance": 19.40189784882635
+        }
+      }
+    },
+    {
+      "key": "swiglu_b16_t128_s17_block",
+      "policy": "block",
+      "variant": "swiglu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.9681079387664795,
+      "peak_allocated_bytes": 373135872,
+      "timing": {
+        "forward_ms": {
+          "mean": 27.32815000035771,
+          "median": 26.731800000561634,
+          "sample_variance": 4.669059867557478
+        },
+        "backward_ms": {
+          "mean": 62.516399999594796,
+          "median": 61.70729999939795,
+          "sample_variance": 36.76930906340629
+        },
+        "optimizer_ms": {
+          "mean": 8.005325000340235,
+          "median": 8.195350000278268,
+          "sample_variance": 0.24631634815251396
+        },
+        "update_ms": {
+          "mean": 97.84987500029274,
+          "median": 97.57460000037099,
+          "sample_variance": 38.10676003570412
+        }
+      }
+    },
+    {
+      "key": "swiglu_b16_t128_s17_both_chunks",
+      "policy": "both_chunks",
+      "variant": "swiglu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.9673959612846375,
+      "peak_allocated_bytes": 363401728,
+      "timing": {
+        "forward_ms": {
+          "mean": 46.1735249996309,
+          "median": 43.976500000098895,
+          "sample_variance": 18.98381180540006
+        },
+        "backward_ms": {
+          "mean": 122.50473750032143,
+          "median": 120.56205000044429,
+          "sample_variance": 27.914499217951718
+        },
+        "optimizer_ms": {
+          "mean": 9.173875000215048,
+          "median": 9.523499999886553,
+          "sample_variance": 0.6964635643420762
+        },
+        "update_ms": {
+          "mean": 177.85213750016737,
+          "median": 176.92815000100381,
+          "sample_variance": 41.53936218185314
+        }
+      }
+    },
+    {
+      "key": "swiglu_b16_t128_s17_ffn",
+      "policy": "ffn",
+      "variant": "swiglu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.9681079387664795,
+      "peak_allocated_bytes": 582203904,
+      "timing": {
+        "forward_ms": {
+          "mean": 23.863637499971446,
+          "median": 22.76579999943351,
+          "sample_variance": 9.534440458721678
+        },
+        "backward_ms": {
+          "mean": 41.238412499751576,
+          "median": 40.62599999906524,
+          "sample_variance": 11.10120305459499
+        },
+        "optimizer_ms": {
+          "mean": 7.621175000167568,
+          "median": 7.6108999992356985,
+          "sample_variance": 0.011863299269913244
+        },
+        "update_ms": {
+          "mean": 72.72322499989059,
+          "median": 71.38985000074172,
+          "sample_variance": 24.501337234944806
+        }
+      }
+    },
+    {
+      "key": "swiglu_b16_t128_s17_ffn_chunks",
+      "policy": "ffn_chunks",
+      "variant": "swiglu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.973606288433075,
+      "peak_allocated_bytes": 373660160,
+      "timing": {
+        "forward_ms": {
+          "mean": 42.34871250037031,
+          "median": 42.16125000039028,
+          "sample_variance": 3.1607902317638183
+        },
+        "backward_ms": {
+          "mean": 119.85203750009532,
+          "median": 116.34064999998373,
+          "sample_variance": 67.00461247855759
+        },
+        "optimizer_ms": {
+          "mean": 8.348824999757198,
+          "median": 7.6991999994788785,
+          "sample_variance": 1.1601598739154935
+        },
+        "update_ms": {
+          "mean": 170.54957500022283,
+          "median": 167.874650000158,
+          "sample_variance": 86.21739802543634
+        }
+      }
+    },
+    {
+      "key": "swiglu_b16_t128_s17_loss_chunks",
+      "policy": "loss_chunks",
+      "variant": "swiglu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.972231864929199,
+      "peak_allocated_bytes": 369221120,
+      "timing": {
+        "forward_ms": {
+          "mean": 28.524425000114206,
+          "median": 28.004650000184483,
+          "sample_variance": 3.8062242244138456
+        },
+        "backward_ms": {
+          "mean": 65.48344999987421,
+          "median": 63.625150000007125,
+          "sample_variance": 59.225289168252374
+        },
+        "optimizer_ms": {
+          "mean": 7.618325000294135,
+          "median": 7.548349999524362,
+          "sample_variance": 0.0920059881899082
+        },
+        "update_ms": {
+          "mean": 101.62620000028255,
+          "median": 98.70020000016666,
+          "sample_variance": 88.6716393001458
+        }
+      }
+    },
+    {
+      "key": "swiglu_b16_t128_s17_native",
+      "policy": "native",
+      "variant": "swiglu",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.9681079387664795,
+      "peak_allocated_bytes": 737786368,
+      "timing": {
+        "forward_ms": {
+          "mean": 20.11379999953533,
+          "median": 19.8099999988699,
+          "sample_variance": 4.192188492431693
+        },
+        "backward_ms": {
+          "mean": 30.53690000047027,
+          "median": 29.779349999444094,
+          "sample_variance": 3.6121370925110097
+        },
+        "optimizer_ms": {
+          "mean": 7.505637500116791,
+          "median": 7.474799999727111,
+          "sample_variance": 0.01849723416569776
+        },
+        "update_ms": {
+          "mean": 58.15633750012239,
+          "median": 57.418000000325264,
+          "sample_variance": 8.11378613324316
+        }
+      }
+    },
+    {
+      "key": "swiglu_narrow_b16_t128_s17_block",
+      "policy": "block",
+      "variant": "swiglu_narrow",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 7.013685345649719,
+      "peak_allocated_bytes": 294689280,
+      "timing": {
+        "forward_ms": {
+          "mean": 30.372449999958917,
+          "median": 28.31609999975626,
+          "sample_variance": 47.732085871260196
+        },
+        "backward_ms": {
+          "mean": 70.48955000004753,
+          "median": 66.40229999993608,
+          "sample_variance": 121.46509609492095
+        },
+        "optimizer_ms": {
+          "mean": 5.516000000170607,
+          "median": 5.418249999820546,
+          "sample_variance": 0.19335117970504498
+        },
+        "update_ms": {
+          "mean": 106.37800000017705,
+          "median": 99.33189999992464,
+          "sample_variance": 314.3361036393427
+        }
+      }
+    },
+    {
+      "key": "swiglu_narrow_b16_t128_s17_ffn",
+      "policy": "ffn",
+      "variant": "swiglu_narrow",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 7.013685345649719,
+      "peak_allocated_bytes": 497793536,
+      "timing": {
+        "forward_ms": {
+          "mean": 24.851437500046814,
+          "median": 23.363449999123986,
+          "sample_variance": 21.988118190060042
+        },
+        "backward_ms": {
+          "mean": 38.30123749980885,
+          "median": 38.2049999998344,
+          "sample_variance": 5.211530108912562
+        },
+        "optimizer_ms": {
+          "mean": 5.195262499910314,
+          "median": 5.21030000072642,
+          "sample_variance": 0.05066722571665995
+        },
+        "update_ms": {
+          "mean": 68.34793749976598,
+          "median": 67.82409999868833,
+          "sample_variance": 7.9922123880540745
+        }
+      }
+    },
+    {
+      "key": "swiglu_narrow_b16_t128_s17_ffn_chunks",
+      "policy": "ffn_chunks",
+      "variant": "swiglu_narrow",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 6.979038834571838,
+      "peak_allocated_bytes": 294689280,
+      "timing": {
+        "forward_ms": {
+          "mean": 46.542599999838785,
+          "median": 44.7538500002338,
+          "sample_variance": 46.42633859517116
+        },
+        "backward_ms": {
+          "mean": 129.0101750003032,
+          "median": 121.9248500001413,
+          "sample_variance": 273.3003650548508
+        },
+        "optimizer_ms": {
+          "mean": 6.42074999950637,
+          "median": 6.345349999719474,
+          "sample_variance": 0.13442141162548174
+        },
+        "update_ms": {
+          "mean": 181.97352499964836,
+          "median": 175.39304999991145,
+          "sample_variance": 464.86044270163285
+        }
+      }
+    },
+    {
+      "key": "swiglu_narrow_b16_t128_s17_native",
+      "policy": "native",
+      "variant": "swiglu_narrow",
+      "seed": 17,
+      "context": 128,
+      "validation_nll": 7.013685345649719,
+      "peak_allocated_bytes": 544487936,
+      "timing": {
+        "forward_ms": {
+          "mean": 14.281862500183706,
+          "median": 11.27375000032771,
+          "sample_variance": 53.230902829983485
+        },
+        "backward_ms": {
+          "mean": 24.32919999978367,
+          "median": 17.24224999998114,
+          "sample_variance": 171.6292609969084
+        },
+        "optimizer_ms": {
+          "mean": 5.34919999995509,
+          "median": 5.093949999718461,
+          "sample_variance": 0.39612475407570513
+        },
+        "update_ms": {
+          "mean": 43.960262499922464,
+          "median": 34.11065000000235,
+          "sample_variance": 407.0548330643645
+        }
+      }
+    }
+  ],
+  "diagnosis": "Fresh-process replay and checkpoint audit reproduce full GELU failure; not promoted.",
+  "followup": "research/token_memory_followup_plan.md"
+}

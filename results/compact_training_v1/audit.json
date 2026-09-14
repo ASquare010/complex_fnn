@@ -1,0 +1,267 @@
+{
+  "passed": true,
+  "numerical": [
+    {
+      "arm": "baseline",
+      "check": {
+        "label": "wikitext2__fp32_default_chunks__default",
+        "parameter_error": {
+          "distance": 3.4512393432971023e-08,
+          "max_absolute": 5.9592333956359766e-08
+        },
+        "moment_errors": [
+          {
+            "distance": 2.9320992651765753e-08,
+            "max_absolute": 1.1641532204377525e-10
+          },
+          {
+            "distance": 3.7899031049759706e-08,
+            "max_absolute": 1.537488834705593e-11
+          }
+        ],
+        "clip_error": {
+          "distance": 0.0,
+          "max_absolute": 0.0
+        },
+        "raw_norm_fp64": 0.8188087046219696,
+        "passed": true
+      }
+    },
+    {
+      "arm": "combined",
+      "check": {
+        "label": "wikitext2__fp32_default_chunks__default",
+        "parameter_error": {
+          "distance": 3.451442816809073e-08,
+          "max_absolute": 5.9602303981165505e-08
+        },
+        "moment_errors": [
+          {
+            "distance": 2.937105334259614e-08,
+            "max_absolute": 1.1641532182693481e-10
+          },
+          {
+            "distance": 3.7536855871798494e-08,
+            "max_absolute": 1.5119619911543175e-11
+          }
+        ],
+        "clip_error": {
+          "distance": 0.0,
+          "max_absolute": 0.0
+        },
+        "raw_norm_fp64": 0.8188087025906854,
+        "passed": true
+      }
+    },
+    {
+      "arm": "combined",
+      "check": {
+        "label": "tinystories__fp32_default_chunks__default",
+        "parameter_error": {
+          "distance": 3.5933449535873656e-08,
+          "max_absolute": 5.960428040019394e-08
+        },
+        "moment_errors": [
+          {
+            "distance": 2.9428193568429907e-08,
+            "max_absolute": 2.0954757894153797e-10
+          },
+          {
+            "distance": 3.648211813255325e-08,
+            "max_absolute": 1.2915805632039007e-11
+          }
+        ],
+        "clip_error": {
+          "distance": 0.0,
+          "max_absolute": 0.0
+        },
+        "raw_norm_fp64": 0.975813958853387,
+        "passed": true
+      }
+    },
+    {
+      "arm": "baseline",
+      "check": {
+        "label": "tinystories__fp32_default_chunks__default",
+        "parameter_error": {
+          "distance": 3.5933468427641946e-08,
+          "max_absolute": 5.9603279201070336e-08
+        },
+        "moment_errors": [
+          {
+            "distance": 2.9500825275648765e-08,
+            "max_absolute": 2.0954757894153797e-10
+          },
+          {
+            "distance": 3.622997032903257e-08,
+            "max_absolute": 1.0040432759294768e-11
+          }
+        ],
+        "clip_error": {
+          "distance": 0.0,
+          "max_absolute": 0.0
+        },
+        "raw_norm_fp64": 0.9758139578065919,
+        "passed": true
+      }
+    }
+  ],
+  "scores": [
+    {
+      "arm": "baseline",
+      "check": {
+        "label": "wikitext2__fp32_default_chunks__default",
+        "native_score": {
+          "nll": 4.9633737760876855,
+          "targets": 322560,
+          "order_sha256": "52d02cdaf8132420a3297ce0f28a261d983927d9eafb7ffa7cc144eaf408108f"
+        },
+        "relative_error": 4.879805670654491e-09,
+        "passed": true,
+        "batches_verified": 30
+      }
+    },
+    {
+      "arm": "combined",
+      "check": {
+        "label": "wikitext2__fp32_default_chunks__default",
+        "native_score": {
+          "nll": 4.963404846191406,
+          "targets": 322560,
+          "order_sha256": "52d02cdaf8132420a3297ce0f28a261d983927d9eafb7ffa7cc144eaf408108f"
+        },
+        "relative_error": 2.4398876252718082e-09,
+        "passed": true,
+        "batches_verified": 30
+      }
+    },
+    {
+      "arm": "combined",
+      "check": {
+        "label": "tinystories__fp32_default_chunks__default",
+        "native_score": {
+          "nll": 2.6276822868658574,
+          "targets": 200704,
+          "order_sha256": "5e4352a07a92abc42f68f9656cdc7a52f867669022cff48b0c7f39676337c707"
+        },
+        "relative_error": 1.8517022359887392e-09,
+        "passed": true,
+        "batches_verified": 30
+      }
+    },
+    {
+      "arm": "baseline",
+      "check": {
+        "label": "tinystories__fp32_default_chunks__default",
+        "native_score": {
+          "nll": 2.6276656072966906,
+          "targets": 200704,
+          "order_sha256": "5e4352a07a92abc42f68f9656cdc7a52f867669022cff48b0c7f39676337c707"
+        },
+        "relative_error": 0.0,
+        "passed": true,
+        "batches_verified": 30
+      }
+    }
+  ],
+  "gradients": [
+    {
+      "fixture": "wikitext2__fp32_default_chunks",
+      "global_relative": 2.0673024156608014e-07,
+      "max_tensor_relative": 4.5879413617505213e-07,
+      "passed": true
+    },
+    {
+      "fixture": "tinystories__fp32_default_chunks",
+      "global_relative": 2.661662003813959e-07,
+      "max_tensor_relative": 5.662269676936861e-07,
+      "passed": true
+    }
+  ],
+  "boundaries": [
+    {
+      "gpu": {
+        "allocated": 0,
+        "reserved": 0
+      },
+      "host": {
+        "allocated_bytes.current": 0,
+        "allocated_bytes.peak": 0,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 0,
+        "allocations.current": 0,
+        "allocations.peak": 0,
+        "active_requests.current": 0,
+        "active_requests.peak": 0
+      }
+    },
+    {
+      "gpu": {
+        "allocated": 0,
+        "reserved": 0
+      },
+      "host": {
+        "allocated_bytes.current": 12,
+        "allocated_bytes.peak": 12,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 12,
+        "allocations.current": 2,
+        "allocations.peak": 2,
+        "active_requests.current": 0,
+        "active_requests.peak": 2
+      }
+    },
+    {
+      "gpu": {
+        "allocated": 0,
+        "reserved": 0
+      },
+      "host": {
+        "allocated_bytes.current": 12,
+        "allocated_bytes.peak": 12,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 12,
+        "allocations.current": 2,
+        "allocations.peak": 2,
+        "active_requests.current": 0,
+        "active_requests.peak": 2
+      }
+    },
+    {
+      "gpu": {
+        "allocated": 0,
+        "reserved": 0
+      },
+      "host": {
+        "allocated_bytes.current": 12,
+        "allocated_bytes.peak": 12,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 12,
+        "allocations.current": 2,
+        "allocations.peak": 2,
+        "active_requests.current": 0,
+        "active_requests.peak": 2
+      }
+    },
+    {
+      "gpu": {
+        "allocated": 0,
+        "reserved": 0
+      },
+      "host": {
+        "allocated_bytes.current": 12,
+        "allocated_bytes.peak": 12,
+        "active_bytes.current": 0,
+        "active_bytes.peak": 12,
+        "allocations.current": 2,
+        "allocations.peak": 2,
+        "active_requests.current": 0,
+        "active_requests.peak": 2
+      }
+    }
+  ],
+  "optimizer_updates": 0,
+  "backwards": 0,
+  "native_scores": 4,
+  "batches": 120
+}

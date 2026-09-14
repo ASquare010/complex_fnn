@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "frozen_sources_verified": 15,
+  "capacity_checks": 126,
+  "qualification_groups": {
+    "H106": 8,
+    "H107": 10
+  },
+  "exact_recaptured_datasets": 18,
+  "independent_scores": 864,
+  "audited_exports_and_selections": 144,
+  "ridge_initializations_checked": 144,
+  "neural_updates": 172800,
+  "resource_profile_updates": 540,
+  "max_score_difference": 2.6369404770854032e-08,
+  "pytest_passed": 116,
+  "both_fixed_recipes_rejected": true,
+  "broad_goal_achieved": false,
+  "active_model_structure_unchanged": true,
+  "original_postprocessing_failures_preserved": true,
+  "postprocessing_recovered_without_training_repeat": true,
+  "packed": {
+    "results\\affine_residual_capacity_v1\\result.json.gz": {
+      "sha256": "084a49ad3b8ca6857e34f21f9bf9c32837cd35a78274adc77b99c2bb51d1e187",
+      "original_sha256": "70d53ecaff92edf5d348868be1bc41e72a6e77f17b50af3f0c97776eae0d6e75",
+      "bytes": 7363
+    },
+    "results\\affine_residual_capacity_v1\\study.log.gz": {
+      "sha256": "4269605bba8c16de34d91c71ef445678a9b047de79442d8eb2d3a417fa425062",
+      "original_sha256": "a88800839eeeea885bea1947ecec1b21443f1e1c1106683939590cd717bfd820",
+      "bytes": 2886
+    },
+    "results\\affine_residual_capacity_v1\\audit.log.gz": {
+      "sha256": "0c3645fd7ab3ae7b723c8b0eb75fa171507b06958f344facba94f7eb116a7c91",
+      "original_sha256": "fd4c6497b3eccb5e74f9cf2c64701e2d8cd2297f09559d3c309f5f694a037c98",
+      "bytes": 106
+    },
+    "results\\affine_residual_fit_v1\\result.json.gz": {
+      "sha256": "5c936fcf66cb9b1b50e2a0246cdcca0c5101289c3452d343b4e8bdd6d44cb3e1",
+      "original_sha256": "e6238ed4b1a456a01b345e7a60bb8509e6eab91d696b757c76b84e915a87508c",
+      "bytes": 114049
+    },
+    "results\\affine_residual_fit_v1\\audit.json.gz": {
+      "sha256": "64aae11b37b7881f9050f9e1e1343196eaaaa0241fbaca967744b9a3f2a23ee0",
+      "original_sha256": "2c33c4387c56fb5ba3871b3b77cfc1449907607d1314a7b1bec6136ca2c7d4fb",
+      "bytes": 17371
+    },
+    "results\\affine_residual_fit_v1\\study.log.gz": {
+      "sha256": "1afd00d00c77dc166e2361bebc53684ca652f023061431a41401f778a21bf256",
+      "original_sha256": "4720e7012e1a612288371a8acf5374c30de2e5e651112df3a354f30d02f0d212",
+      "bytes": 3928
+    },
+    "results\\affine_residual_fit_v1\\audit.log.gz": {
+      "sha256": "9317e5a6af491ebb6bf8f94f1a4ca3dc50e8761be728def75ee82b38dcc76676",
+      "original_sha256": "7a4a9fb0fcddba322abfb7ae4907ebb8a217a6ba09964e690e562884eb29f8d9",
+      "bytes": 559
+    },
+    "results\\affine_residual_fit_v1\\plot.log.gz": {
+      "sha256": "8fa3619abcb425f88cab8f65ebea217df117f1b9521a5b6f01c7b076adbc580a",
+      "original_sha256": "5c3171b1fe0d79d64099f179c1dd21b6f726d7a30c805085704e5faee3551341",
+      "bytes": 500
+    },
+    "results\\affine_residual_fit_v1\\audit_recovery.log.gz": {
+      "sha256": "cee929c2107e136086ea5c2d8f91f42e9f114692ecd6f69db2f271cdebc98b74",
+      "original_sha256": "82532a8d60263d4b9ccdbd39b6f8ec7d53bfa8048746caa074ef2b16be8f813d",
+      "bytes": 189
+    },
+    "results\\affine_residual_fit_v1\\plot_recovery.log.gz": {
+      "sha256": "ad7a77a1fd288b8fb5bb762ff6e2ad6e6e5081b88b67e15cfd99a815232f28a5",
+      "original_sha256": "de54308e3c61b24401a84f2beea4f2e9ec280c0049e8d32d81f6da00eebf60e8",
+      "bytes": 56
+    },
+    "results\\affine_residual_fit_v1\\tests_recovery.log.gz": {
+      "sha256": "4815193a4461446c57fbb5d69e7b3ee54e11dee8fa38b013e0fa7cbf17b97c02",
+      "original_sha256": "3193b772381861b5390ba6033e46ed61728b677559d668b0ab35c540a74eff6f",
+      "bytes": 65
+    }
+  },
+  "files": {
+    "research\\affine_residual_capacity_results.md": "0fea8eec8893a9e13d84f55d2e1db4db447ac958f9fe86733068bb92ff7c57a0",
+    "research\\affine_residual_fit_results.md": "723009618ec7c34442ce11c46849ce5167d9ffef5fb244b44a58ed94104c28c6",
+    "research\\figures\\affine_residual.png": "8cea3ab64c078b0780a87782cb2f9983fc0e6b92b2ee42b46118d7176ae7f582",
+    "results\\affine_residual_fit_v1\\summary.json": "4fcf0bda5e875bb3d5b1944fc66d00234f2a10558fb9f5a58157a5850d483989",
+    "results\\affine_residual_fit_v1\\diagnostics.json.gz": "b31af2fbf0d2ef3323a75b365b2bd1b7578fb436b9f06aaa0e795c0c20df1ac8",
+    "results\\affine_residual_fit_v1\\diagnostic_summary.json": "17cf5b50c223f9b575bea106c1bd29887069d80faeb20aa0cfda839cebfbff17",
+    "results\\affine_residual_fit_v1\\inference_memory.json": "554cc33ab370be6d24bcf86d1255724d959f5317cffacdd9c2effa90dd0f981d",
+    "results\\affine_residual_fit_v1\\postprocess_recovery.json": "b46da19810f783b73ebadba0bed429cfc1f0407e816276e6254cecaaa39c7bfb",
+    "results\\affine_residual_fit_v1\\metrics.csv.gz": "084bb976e440aeeed198274527b88907e55506cac4d2f31320142dfa1cfcc294",
+    "results\\affine_residual_capacity_v1\\audit.json": "ee09c1227beb16e630efb6dde2413c9d55b49fc88767c2cda07038494bd8f2ac",
+    "results\\affine_residual_fit_v1\\source\\analyze.py": "58a6ad8c8294674ccc9e5a4c387a9e27e51358b14e787e6129d7319fdc87b142",
+    "results\\affine_residual_fit_v1\\source\\audit.py": "e9b50d8b2380d2f800e6e7666d0e7201438293f9ffbaa70f62a45132233453ec",
+    "results\\affine_residual_fit_v1\\source\\diagnostics.py": "51dd1fb25f990af9655858656903bcc6c155ebf7edec0130d90afad4b76e4b46",
+    "results\\affine_residual_fit_v1\\source\\launch.py": "9dcf383d0e42eafb401aa612462e69d07b41b7c84e1128b50ee5e8b6fc20ccf2",
+    "results\\affine_residual_fit_v1\\source\\model.py": "926659de9c8bfda8fec515e80b1ec6cf01b58540e9cacc49c467e4c2abe13f7a",
+    "results\\affine_residual_fit_v1\\source\\plot.py": "5939e20f4ea3448aa3d351aaed16f77f6a744fab519ebb923d80d35f312cddc4",
+    "results\\affine_residual_fit_v1\\source\\qualification.py": "1846d5547b0890db249d5b0e51b90b226058ad995162a69b0ea92511389b0fb7",
+    "results\\affine_residual_fit_v1\\source\\recover_postprocess.py": "732055650723824734b278a0078d60d4e94a3a737d4236072af3939be1fc8ec0",
+    "results\\affine_residual_fit_v1\\source\\report.py": "645fe7b1be35ed9c023bed95fce3053adc9f16030a21b3cc3d6a3661b08666bc",
+    "results\\affine_residual_fit_v1\\source\\study.py": "e15d411dfb3c61ed6e1fab2e4a208e99b57e54934aff63b18b2f2fdc4a3740a1",
+    "results\\affine_residual_fit_v1\\source\\tests.py": "570561f6cc2d23d35260f5539b9ef9a9d4e9f932af46823f26f0ecb7f65c4609",
+    "results\\affine_residual_capacity_v1\\source\\audit.py": "024e118b119a10dbf7f1e19473c89cf15efb9afcb5197c52fc3fee13b8151f37",
+    "results\\affine_residual_capacity_v1\\source\\launch.py": "fe5e943d130830699ff4a29bb9bde2ca80a229c1bb1991562aa701618fed39ea",
+    "results\\affine_residual_capacity_v1\\source\\launch_audit.py": "8f0befcc8e017d0c3aa80e407c4e4c5bd5fe8e67e358769879f17508202e3d49",
+    "results\\affine_residual_capacity_v1\\source\\study.py": "2468ec638b1ee1721d8db4b67aae7f7b2929d5afa746e54b852bc596c1209148"
+  }
+}

@@ -1,0 +1,593 @@
+{
+  "rows": [
+    {
+      "label": "wikitext2__fp32_default_chunks__offload",
+      "requested_peak": 292237304,
+      "allocated_peak": 293955072,
+      "peak_index": 3315,
+      "previous": "block_0_exit",
+      "next": "backward_end",
+      "trigger_site": "unattributed native/backward allocation",
+      "trigger_bytes": 7471104,
+      "groups": {
+        "unattributed native/backward allocation": 157342724,
+        "src/core/transformer.py:52 forward": 27394048,
+        "src/core/data.py:138 __init__": 24669200,
+        "src/core/transformer.py:29 forward": 12615680,
+        "src/core/transformer.py:30 forward": 12582912,
+        "src/core/transformer.py:48 rotate": 12582912,
+        "src/core/token_memory.py:58 sum_loss": 8519680,
+        "src/dense_ffn/__init__.py:19 forward": 7471104,
+        "src/dense_ffn/__init__.py:23 forward": 7471104,
+        "src/core/transformer.py:54 forward": 6389776,
+        ".venv/Lib/site-packages/torch/autograd/graph.py:425 unpack_from_cpu": 6291456,
+        "src/core/transformer.py:68 _forward": 6291456,
+        "src/core/data.py:139 __init__": 2582416,
+        "src/core/data.py:150 batch": 32832,
+        "src/core/token_memory.py:70 chunked_linear_cross_entropy": 4
+      },
+      "markers": [
+        {
+          "name": "forward_start",
+          "index": 1,
+          "requested": 154568160,
+          "allocated": 155589632
+        },
+        {
+          "name": "forward_end",
+          "index": 1017,
+          "requested": 173491692,
+          "allocated": 174514176
+        },
+        {
+          "name": "block_7_enter",
+          "index": 1272,
+          "requested": 173444072,
+          "allocated": 174466560
+        },
+        {
+          "name": "block_7_exit",
+          "index": 1346,
+          "requested": 257723384,
+          "allocated": 258746880
+        },
+        {
+          "name": "block_6_enter",
+          "index": 1553,
+          "requested": 177207272,
+          "allocated": 178268672
+        },
+        {
+          "name": "block_6_exit",
+          "index": 1627,
+          "requested": 261486584,
+          "allocated": 262548992
+        },
+        {
+          "name": "block_5_enter",
+          "index": 1834,
+          "requested": 180970472,
+          "allocated": 182359552
+        },
+        {
+          "name": "block_5_exit",
+          "index": 1908,
+          "requested": 265249784,
+          "allocated": 266639872
+        },
+        {
+          "name": "block_4_enter",
+          "index": 2115,
+          "requested": 184733672,
+          "allocated": 186450432
+        },
+        {
+          "name": "block_4_exit",
+          "index": 2189,
+          "requested": 269012984,
+          "allocated": 270730752
+        },
+        {
+          "name": "block_3_enter",
+          "index": 2396,
+          "requested": 188496872,
+          "allocated": 190213632
+        },
+        {
+          "name": "block_3_exit",
+          "index": 2470,
+          "requested": 272776184,
+          "allocated": 274493952
+        },
+        {
+          "name": "block_2_enter",
+          "index": 2677,
+          "requested": 192260072,
+          "allocated": 193976832
+        },
+        {
+          "name": "block_2_exit",
+          "index": 2751,
+          "requested": 276539384,
+          "allocated": 278781440
+        },
+        {
+          "name": "block_1_enter",
+          "index": 2958,
+          "requested": 196023272,
+          "allocated": 197740032
+        },
+        {
+          "name": "block_1_exit",
+          "index": 3032,
+          "requested": 280302584,
+          "allocated": 282020352
+        },
+        {
+          "name": "block_0_enter",
+          "index": 3239,
+          "requested": 199786472,
+          "allocated": 201503232
+        },
+        {
+          "name": "block_0_exit",
+          "index": 3313,
+          "requested": 284065784,
+          "allocated": 285783552
+        },
+        {
+          "name": "backward_end",
+          "index": 3571,
+          "requested": 190966756,
+          "allocated": 192683008
+        }
+      ],
+      "requested_endpoint_verified": true,
+      "allocated_peak_attribution_verified": false,
+      "events": 3572
+    },
+    {
+      "label": "wikitext2__fp32_default_chunks__native",
+      "requested_peak": 309935096,
+      "allocated_peak": 310958592,
+      "peak_index": 1331,
+      "previous": "block_7_exit",
+      "next": "block_6_enter",
+      "trigger_site": "unattributed native/backward allocation",
+      "trigger_bytes": 7471104,
+      "groups": {
+        "unattributed native/backward allocation": 137291780,
+        "src/core/transformer.py:74 _forward": 44040192,
+        "src/core/transformer.py:52 forward": 27394048,
+        "src/core/data.py:138 __init__": 24669200,
+        "src/core/transformer.py:29 forward": 12615680,
+        "src/core/transformer.py:30 forward": 12582912,
+        "src/core/transformer.py:48 rotate": 12582912,
+        "src/core/token_memory.py:58 sum_loss": 8519680,
+        "src/dense_ffn/__init__.py:19 forward": 7471104,
+        "src/dense_ffn/__init__.py:23 forward": 7471104,
+        "src/core/transformer.py:54 forward": 6389776,
+        "src/core/transformer.py:68 _forward": 6291456,
+        "src/core/data.py:139 __init__": 2582416,
+        "src/core/data.py:150 batch": 32832,
+        "src/core/token_memory.py:70 chunked_linear_cross_entropy": 4
+      },
+      "markers": [
+        {
+          "name": "forward_start",
+          "index": 1,
+          "requested": 154568160,
+          "allocated": 155589632
+        },
+        {
+          "name": "forward_end",
+          "index": 1001,
+          "requested": 223823340,
+          "allocated": 224845824
+        },
+        {
+          "name": "block_7_enter",
+          "index": 1255,
+          "requested": 217484264,
+          "allocated": 218506752
+        },
+        {
+          "name": "block_7_exit",
+          "index": 1329,
+          "requested": 301763576,
+          "allocated": 302787072
+        },
+        {
+          "name": "block_6_enter",
+          "index": 1535,
+          "requested": 214956008,
+          "allocated": 216017408
+        },
+        {
+          "name": "block_6_exit",
+          "index": 1609,
+          "requested": 299235320,
+          "allocated": 300297728
+        },
+        {
+          "name": "block_5_enter",
+          "index": 1815,
+          "requested": 212427752,
+          "allocated": 213816832
+        },
+        {
+          "name": "block_5_exit",
+          "index": 1889,
+          "requested": 296707064,
+          "allocated": 298097152
+        },
+        {
+          "name": "block_4_enter",
+          "index": 2095,
+          "requested": 209899496,
+          "allocated": 211616256
+        },
+        {
+          "name": "block_4_exit",
+          "index": 2169,
+          "requested": 294178808,
+          "allocated": 295896576
+        },
+        {
+          "name": "block_3_enter",
+          "index": 2375,
+          "requested": 207371240,
+          "allocated": 209415680
+        },
+        {
+          "name": "block_3_exit",
+          "index": 2449,
+          "requested": 291650552,
+          "allocated": 293696000
+        },
+        {
+          "name": "block_2_enter",
+          "index": 2655,
+          "requested": 204842984,
+          "allocated": 206887424
+        },
+        {
+          "name": "block_2_exit",
+          "index": 2729,
+          "requested": 289122296,
+          "allocated": 292085248
+        },
+        {
+          "name": "block_1_enter",
+          "index": 2935,
+          "requested": 202314728,
+          "allocated": 204359168
+        },
+        {
+          "name": "block_1_exit",
+          "index": 3009,
+          "requested": 286594040,
+          "allocated": 289556992
+        },
+        {
+          "name": "block_0_enter",
+          "index": 3215,
+          "requested": 199786472,
+          "allocated": 201830912
+        },
+        {
+          "name": "block_0_exit",
+          "index": 3289,
+          "requested": 284065784,
+          "allocated": 286111232
+        },
+        {
+          "name": "backward_end",
+          "index": 3547,
+          "requested": 190966756,
+          "allocated": 193862656
+        }
+      ],
+      "requested_endpoint_verified": true,
+      "allocated_peak_attribution_verified": false,
+      "events": 3548
+    },
+    {
+      "label": "tinystories__fp32_default_chunks__offload",
+      "requested_peak": 286254192,
+      "allocated_peak": 288451584,
+      "peak_index": 3315,
+      "previous": "block_0_exit",
+      "next": "backward_end",
+      "trigger_site": "unattributed native/backward allocation",
+      "trigger_bytes": 7471104,
+      "groups": {
+        "unattributed native/backward allocation": 157342724,
+        "src/core/transformer.py:52 forward": 27394048,
+        "src/core/data.py:138 __init__": 19662080,
+        "src/core/transformer.py:29 forward": 12615680,
+        "src/core/transformer.py:30 forward": 12582912,
+        "src/core/transformer.py:48 rotate": 12582912,
+        "src/core/token_memory.py:58 sum_loss": 8519680,
+        "src/dense_ffn/__init__.py:19 forward": 7471104,
+        "src/dense_ffn/__init__.py:23 forward": 7471104,
+        "src/core/transformer.py:54 forward": 6389776,
+        ".venv/Lib/site-packages/torch/autograd/graph.py:425 unpack_from_cpu": 6291456,
+        "src/core/transformer.py:68 _forward": 6291456,
+        "src/core/data.py:139 __init__": 1606424,
+        "src/core/data.py:150 batch": 32832,
+        "src/core/token_memory.py:70 chunked_linear_cross_entropy": 4
+      },
+      "markers": [
+        {
+          "name": "forward_start",
+          "index": 1,
+          "requested": 148585048,
+          "allocated": 149110272
+        },
+        {
+          "name": "forward_end",
+          "index": 1017,
+          "requested": 167508580,
+          "allocated": 168034816
+        },
+        {
+          "name": "block_7_enter",
+          "index": 1272,
+          "requested": 167460960,
+          "allocated": 167987200
+        },
+        {
+          "name": "block_7_exit",
+          "index": 1346,
+          "requested": 251740272,
+          "allocated": 252267520
+        },
+        {
+          "name": "block_6_enter",
+          "index": 1553,
+          "requested": 171224160,
+          "allocated": 172078080
+        },
+        {
+          "name": "block_6_exit",
+          "index": 1627,
+          "requested": 255503472,
+          "allocated": 256358400
+        },
+        {
+          "name": "block_5_enter",
+          "index": 1834,
+          "requested": 174987360,
+          "allocated": 176168960
+        },
+        {
+          "name": "block_5_exit",
+          "index": 1908,
+          "requested": 259266672,
+          "allocated": 260449280
+        },
+        {
+          "name": "block_4_enter",
+          "index": 2115,
+          "requested": 178750560,
+          "allocated": 180946944
+        },
+        {
+          "name": "block_4_exit",
+          "index": 2189,
+          "requested": 263029872,
+          "allocated": 265227264
+        },
+        {
+          "name": "block_3_enter",
+          "index": 2396,
+          "requested": 182513760,
+          "allocated": 184710144
+        },
+        {
+          "name": "block_3_exit",
+          "index": 2470,
+          "requested": 266793072,
+          "allocated": 268990464
+        },
+        {
+          "name": "block_2_enter",
+          "index": 2677,
+          "requested": 186276960,
+          "allocated": 188473344
+        },
+        {
+          "name": "block_2_exit",
+          "index": 2751,
+          "requested": 270556272,
+          "allocated": 273277952
+        },
+        {
+          "name": "block_1_enter",
+          "index": 2958,
+          "requested": 190040160,
+          "allocated": 192236544
+        },
+        {
+          "name": "block_1_exit",
+          "index": 3032,
+          "requested": 274319472,
+          "allocated": 276516864
+        },
+        {
+          "name": "block_0_enter",
+          "index": 3239,
+          "requested": 193803360,
+          "allocated": 195999744
+        },
+        {
+          "name": "block_0_exit",
+          "index": 3313,
+          "requested": 278082672,
+          "allocated": 280280064
+        },
+        {
+          "name": "backward_end",
+          "index": 3571,
+          "requested": 184983644,
+          "allocated": 187179520
+        }
+      ],
+      "requested_endpoint_verified": true,
+      "allocated_peak_attribution_verified": false,
+      "events": 3572
+    },
+    {
+      "label": "tinystories__fp32_default_chunks__native",
+      "requested_peak": 303951984,
+      "allocated_peak": 304479232,
+      "peak_index": 1331,
+      "previous": "block_7_exit",
+      "next": "block_6_enter",
+      "trigger_site": "unattributed native/backward allocation",
+      "trigger_bytes": 7471104,
+      "groups": {
+        "unattributed native/backward allocation": 137291780,
+        "src/core/transformer.py:74 _forward": 44040192,
+        "src/core/transformer.py:52 forward": 27394048,
+        "src/core/data.py:138 __init__": 19662080,
+        "src/core/transformer.py:29 forward": 12615680,
+        "src/core/transformer.py:30 forward": 12582912,
+        "src/core/transformer.py:48 rotate": 12582912,
+        "src/core/token_memory.py:58 sum_loss": 8519680,
+        "src/dense_ffn/__init__.py:19 forward": 7471104,
+        "src/dense_ffn/__init__.py:23 forward": 7471104,
+        "src/core/transformer.py:54 forward": 6389776,
+        "src/core/transformer.py:68 _forward": 6291456,
+        "src/core/data.py:139 __init__": 1606424,
+        "src/core/data.py:150 batch": 32832,
+        "src/core/token_memory.py:70 chunked_linear_cross_entropy": 4
+      },
+      "markers": [
+        {
+          "name": "forward_start",
+          "index": 1,
+          "requested": 148585048,
+          "allocated": 149110272
+        },
+        {
+          "name": "forward_end",
+          "index": 1001,
+          "requested": 217840228,
+          "allocated": 218366464
+        },
+        {
+          "name": "block_7_enter",
+          "index": 1255,
+          "requested": 211501152,
+          "allocated": 212027392
+        },
+        {
+          "name": "block_7_exit",
+          "index": 1329,
+          "requested": 295780464,
+          "allocated": 296307712
+        },
+        {
+          "name": "block_6_enter",
+          "index": 1535,
+          "requested": 208972896,
+          "allocated": 209826816
+        },
+        {
+          "name": "block_6_exit",
+          "index": 1609,
+          "requested": 293252208,
+          "allocated": 294107136
+        },
+        {
+          "name": "block_5_enter",
+          "index": 1815,
+          "requested": 206444640,
+          "allocated": 207626240
+        },
+        {
+          "name": "block_5_exit",
+          "index": 1889,
+          "requested": 290723952,
+          "allocated": 291906560
+        },
+        {
+          "name": "block_4_enter",
+          "index": 2095,
+          "requested": 203916384,
+          "allocated": 205425664
+        },
+        {
+          "name": "block_4_exit",
+          "index": 2169,
+          "requested": 288195696,
+          "allocated": 289705984
+        },
+        {
+          "name": "block_3_enter",
+          "index": 2375,
+          "requested": 201388128,
+          "allocated": 203912192
+        },
+        {
+          "name": "block_3_exit",
+          "index": 2449,
+          "requested": 285667440,
+          "allocated": 288192512
+        },
+        {
+          "name": "block_2_enter",
+          "index": 2655,
+          "requested": 198859872,
+          "allocated": 201383936
+        },
+        {
+          "name": "block_2_exit",
+          "index": 2729,
+          "requested": 283139184,
+          "allocated": 286581760
+        },
+        {
+          "name": "block_1_enter",
+          "index": 2935,
+          "requested": 196331616,
+          "allocated": 198855680
+        },
+        {
+          "name": "block_1_exit",
+          "index": 3009,
+          "requested": 280610928,
+          "allocated": 284053504
+        },
+        {
+          "name": "block_0_enter",
+          "index": 3215,
+          "requested": 193803360,
+          "allocated": 196327424
+        },
+        {
+          "name": "block_0_exit",
+          "index": 3289,
+          "requested": 278082672,
+          "allocated": 280607744
+        },
+        {
+          "name": "backward_end",
+          "index": 3547,
+          "requested": 184983644,
+          "allocated": 188359168
+        }
+      ],
+      "requested_endpoint_verified": true,
+      "allocated_peak_attribution_verified": false,
+      "events": 3548
+    }
+  ],
+  "original_gate": "FAIL_ALLOCATED_ACCOUNTING",
+  "backwards": 12,
+  "training_updates": 0,
+  "diagnostic_targets": 49152,
+  "broad_goal_achieved": false
+}

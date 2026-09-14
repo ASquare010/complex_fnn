@@ -1,0 +1,24 @@
+{
+  "scientific_training_repeated": false,
+  "analyzer_stall": {
+    "pid": 16516,
+    "observed_cpu_seconds": 95.72,
+    "observed_working_set_bytes": 24576000,
+    "action": "terminated only the confirmed H114 analyzer process",
+    "child_exit_code_unsigned": 4294967295,
+    "launcher_tool_exit_code_signed": -1,
+    "cause": "unknown",
+    "no_summary_or_csv_existed_at_termination": true
+  },
+  "premature_report_attempt": "FileNotFoundError for missing summary; no report was written",
+  "premature_plot_attempt": "FileNotFoundError for missing CSV; original plot.log and exit 1 preserved",
+  "failed_process_inspection": "optional psutil unavailable; used read-only PowerShell process metadata",
+  "recovery": "same analyzer with traceback watchdog finished; plot rerun after numeric exports existed",
+  "initial_verifier_correction": "The draft verifier compared the Windows unsigned child exit to signed -1; corrected to recorded 4294967295. No scientific record or gate changed.",
+  "source_hashes": {
+    "results/fp32_classifier_profile_v1/source/analyze.py": "6f62c05a7fdde97ca29392a792318340d858555c6636fd47c8dca90a85fbed1f",
+    "results/fp32_classifier_profile_v1/source/analyze_recovery.py": "0033645f0e0c5e9f69d03c0495e78c3a1808f38de7554dd3eb569a8a757d1a09",
+    "results/fp32_classifier_profile_v1/source/plot.py": "24e58ad96f5ba12a41607130d86bacc5b207ca2ed1598e015216c0b864f4ad0f",
+    "results/fp32_classifier_profile_v1/source/plot_recovery.py": "e9ef0b7aec0bef1d32c31296c1ac96275a878a789b61b150412466d53f5b1510"
+  }
+}

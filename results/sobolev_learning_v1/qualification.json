@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "activation": "gelu",
+      "loss_gradient_optimizer_scaling": true,
+      "raw_identity": true,
+      "jvp": true
+    },
+    {
+      "activation": "gelu",
+      "parameters": 344448,
+      "seventy_percent_reduction": true
+    },
+    {
+      "activation": "swiglu",
+      "loss_gradient_optimizer_scaling": true,
+      "raw_identity": true,
+      "jvp": true
+    },
+    {
+      "activation": "swiglu",
+      "parameters": 343680,
+      "seventy_percent_reduction": true
+    }
+  ]
+}

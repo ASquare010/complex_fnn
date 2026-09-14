@@ -1,0 +1,108 @@
+{
+  "status": "COMPLETE",
+  "integrity": {
+    "checked_hashed_files": 1572,
+    "missing": [],
+    "mismatched": []
+  },
+  "rows": [
+    {
+      "label": "py3.12.9_existing_r0",
+      "python": "3.12.9",
+      "fresh_bytecode": false,
+      "replication": 0,
+      "exit_code": 3221225477,
+      "elapsed_seconds": 14.1309399999991
+    },
+    {
+      "label": "py3.12.9_fresh_r0",
+      "python": "3.12.9",
+      "fresh_bytecode": true,
+      "replication": 0,
+      "exit_code": 0,
+      "elapsed_seconds": 37.20418579999932
+    },
+    {
+      "label": "py3.12.12_existing_r0",
+      "python": "3.12.12",
+      "fresh_bytecode": false,
+      "replication": 0,
+      "exit_code": 0,
+      "elapsed_seconds": 3.5875338000005286
+    },
+    {
+      "label": "py3.12.12_fresh_r0",
+      "python": "3.12.12",
+      "fresh_bytecode": true,
+      "replication": 0,
+      "exit_code": 0,
+      "elapsed_seconds": 15.106009499999345
+    },
+    {
+      "label": "py3.12.9_fresh_r1",
+      "python": "3.12.9",
+      "fresh_bytecode": true,
+      "replication": 1,
+      "exit_code": 0,
+      "elapsed_seconds": 11.422725499998705
+    },
+    {
+      "label": "py3.12.12_existing_r1",
+      "python": "3.12.12",
+      "fresh_bytecode": false,
+      "replication": 1,
+      "exit_code": 1,
+      "elapsed_seconds": 2.787255600000208
+    },
+    {
+      "label": "py3.12.12_fresh_r1",
+      "python": "3.12.12",
+      "fresh_bytecode": true,
+      "replication": 1,
+      "exit_code": 0,
+      "elapsed_seconds": 11.236055900000792
+    },
+    {
+      "label": "py3.12.9_existing_r1",
+      "python": "3.12.9",
+      "fresh_bytecode": false,
+      "replication": 1,
+      "exit_code": 3221225477,
+      "elapsed_seconds": 14.120477899999969
+    },
+    {
+      "label": "py3.12.12_existing_r2",
+      "python": "3.12.12",
+      "fresh_bytecode": false,
+      "replication": 2,
+      "exit_code": 0,
+      "elapsed_seconds": 2.8111035999991145
+    },
+    {
+      "label": "py3.12.12_fresh_r2",
+      "python": "3.12.12",
+      "fresh_bytecode": true,
+      "replication": 2,
+      "exit_code": 3221225477,
+      "elapsed_seconds": 14.071314700000585
+    },
+    {
+      "label": "py3.12.9_existing_r2",
+      "python": "3.12.9",
+      "fresh_bytecode": false,
+      "replication": 2,
+      "exit_code": 0,
+      "elapsed_seconds": 2.844539600000644
+    },
+    {
+      "label": "py3.12.9_fresh_r2",
+      "python": "3.12.9",
+      "fresh_bytecode": true,
+      "replication": 2,
+      "exit_code": 0,
+      "elapsed_seconds": 11.615614000000278
+    }
+  ],
+  "neural_updates": 0,
+  "root_cause_proved": false
+}

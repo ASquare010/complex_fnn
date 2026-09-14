@@ -1,0 +1,14 @@
+{
+  "optimizer_updates": 0,
+  "cuda_requested": false,
+  "root_cause_proved": false,
+  "files": {
+    "results/whole_job_memory_workspace_v1/plot.log": "4d85f166af9d048ae231de6991939ba9f0875f0f46fe730dde9d10ba31fed1dc",
+    "results/whole_job_memory_workspace_v1/plot_exit.txt": "5205fef41c0db63d59104e9f7f636e546fddc5ec46e07a509335cf0fe255b877",
+    "results/whole_job_memory_workspace_v1/summary.json": "73806f86440aef0fd2327783ee152feb7cf2f35352beb6bef664716215fc5d1c",
+    "results/whole_job_memory_workspace_v1/audit.json": "813cea2d6d1c3e3fd4ad30f11e696de311ff490ac7e4a448189bb0f12bfacc0e",
+    "results/whole_job_memory_workspace_v1/source/plot.py": "187272b49874e54e477e0c98488239f004ed88d82b43f9f59fd6116880fb0711",
+    "results/whole_job_memory_workspace_v1/source/launch.py": "bb74056c636cc2b3e76f8a010394f3f1515e196cdfa0db5abd3d350826dfd312",
+    "results/whole_job_memory_workspace_v1/source/plot_recovery.py": "0b77d76da7f34a0f189b176de99108d5e380632101cbacfd91ed2bfa443828d7"
+  }
+}

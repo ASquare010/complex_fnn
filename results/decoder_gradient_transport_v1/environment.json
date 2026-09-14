@@ -1,0 +1,15 @@
+{
+  "python": "3.12.9",
+  "torch": "2.14.0+cu132",
+  "cuda": "13.2",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "vram_bytes": 8585216000,
+  "bf16_supported": true,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "tf32": false,
+  "threads": 4,
+  "deterministic_algorithms": false,
+  "cudnn_deterministic": false,
+  "cublas_workspace_config": null
+}

@@ -1,0 +1,78 @@
+{
+  "unchanged_receipt_artifacts_verified": 495,
+  "superseded_live_documents": [
+    {
+      "study": "checkpoint_fp16_long_v1",
+      "path": "README.md",
+      "sha256": "cb91992fa8254af0d90a2911646782e74ecf2f31c6276288b19c5c1d16d9567b",
+      "preserved_snapshot": "results/exact_offload_scale_v1/README.before.md"
+    },
+    {
+      "study": "checkpoint_fp16_long_v1",
+      "path": "research/CURRENT_STATE.md",
+      "sha256": "1b2b14b22f10b19b0bc02c77b13afdf045bad087f0abdab086d21e4621b6ef98",
+      "preserved_snapshot": "results/exact_offload_scale_v1/CURRENT_STATE.before.md"
+    },
+    {
+      "study": "exact_offload_scale_v1",
+      "path": "README.md",
+      "sha256": "5f3db376256a826668a3e1883c4e967ddce0037f69e1be2f0fd30f090d749560",
+      "preserved_snapshot": "results/host_memory_scale_v1/README.before.md"
+    },
+    {
+      "study": "exact_offload_scale_v1",
+      "path": "research/CURRENT_STATE.md",
+      "sha256": "5243d2ad6462713b3052e128ea45126fd9d3c8c03692d63d6f7169cce0b4e095",
+      "preserved_snapshot": "results/host_memory_scale_v1/CURRENT_STATE.before.md"
+    },
+    {
+      "study": "host_memory_scale_v1",
+      "path": "README.md",
+      "sha256": "09e370bc7d60d095dda21e3e3d93571d45a7e767a30794ff084ecfebeb1ac4dc",
+      "preserved_snapshot": "results/exact_offload_long_scale_v1/README.before.md"
+    },
+    {
+      "study": "host_memory_scale_v1",
+      "path": "research/CURRENT_STATE.md",
+      "sha256": "e24a4b71f3cb2597b697087e41dc65a556eafc02fd1e11a09915a613e6fd1f85",
+      "preserved_snapshot": "results/exact_offload_long_scale_v1/CURRENT_STATE.before.md"
+    },
+    {
+      "study": "exact_offload_long_scale_v1",
+      "path": "README.md",
+      "sha256": "24b17bb329cf669c05825ca210bf8fb34c81770278cf6a07f64a0d10725f267c",
+      "preserved_snapshot": "results/btt_balance_v1/README.before.md"
+    },
+    {
+      "study": "exact_offload_long_scale_v1",
+      "path": "research/CURRENT_STATE.md",
+      "sha256": "cb69133906d847e3c7fee1eed6dc6910d12228ff981fa02caea53e9a123b5a6e",
+      "preserved_snapshot": "results/btt_balance_v1/CURRENT_STATE.before.md"
+    },
+    {
+      "study": "btt_balance_v1",
+      "path": "README.md",
+      "sha256": "e867910299864ed6885a7a291fc83b1aa552360e07c0d0005c302fbd6a080d0a",
+      "preserved_snapshot": "research/reinstall_snapshots/README.before.md"
+    },
+    {
+      "study": "btt_balance_v1",
+      "path": "research/CURRENT_STATE.md",
+      "sha256": "e3b2e807cf360ef8851a8799feab465ba7f985e8afd48ed4e6f3e7f6e3b033ba",
+      "preserved_snapshot": "research/reinstall_snapshots/CURRENT_STATE.before.md"
+    }
+  ],
+  "failures": [],
+  "note": "Original receipts remain unchanged. README and CURRENT_STATE evolve; prior exact bytes are retained in snapshots. Tensor binaries remain local and are not re-audited by this metadata packaging check.",
+  "archive_verification": {
+    "files": 110,
+    "all_decompressed_bytes_and_hashes_verified": true,
+    "existing_originals_match": true
+  },
+  "staged_artifact_check": {
+    "model_tensor_files": 0,
+    "largest_file_mib": 2.75,
+    "restore_utility_ruff": "PASS",
+    "whitespace_note": "git diff --cached --check reports only two pre-existing whitespace lines (67, 142) in the byte-preserved upstream reference research/references/btt_official/nn_cola_nn.py.txt. Frozen source was not reformatted."
+  }
+}

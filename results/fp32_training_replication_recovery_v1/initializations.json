@@ -1,0 +1,67 @@
+{
+  "initializations": [
+    {
+      "fixture": "wikitext2_s101",
+      "path": "results/fp32_training_replication_recovery_v1/initial/wikitext2_s101/step0.pt",
+      "sha256": "21bbc49e6845ead55c6d3be01368388dbf5df0e2bb03585cc4a8950667da8a2a",
+      "model_hash": "c7288d8687ae6a3d538b100431525955c163c5a26083f6c210e922a8a04ece22",
+      "optimizer_hash": "93a8c3b45678dd789120490d536775679248509cd7664c6b3c8405b94cf9b730",
+      "seed": 101,
+      "step": 0,
+      "optimizer_updates": 0
+    },
+    {
+      "fixture": "wikitext2_s113",
+      "path": "results/fp32_training_replication_recovery_v1/initial/wikitext2_s113/step0.pt",
+      "sha256": "fe50db0be7006154349521cd714c613995ec5e98e18900db2a12970654dc423b",
+      "model_hash": "06a65f917eb4136c9fa74beb4c1fca6cd0ca7eb040ad481dbc61fae87bed8b02",
+      "optimizer_hash": "93a8c3b45678dd789120490d536775679248509cd7664c6b3c8405b94cf9b730",
+      "seed": 113,
+      "step": 0,
+      "optimizer_updates": 0
+    },
+    {
+      "fixture": "wikitext2_s127",
+      "path": "results/fp32_training_replication_recovery_v1/initial/wikitext2_s127/step0.pt",
+      "sha256": "c55c7aed957a0f95c65b0427c36c7fc633bf88b9044c41b6a49efd8488b272f3",
+      "model_hash": "f60ebe79ab84d7d8022295cbe48c9e558a2c639c1e97cb86b93c2b319f62118e",
+      "optimizer_hash": "93a8c3b45678dd789120490d536775679248509cd7664c6b3c8405b94cf9b730",
+      "seed": 127,
+      "step": 0,
+      "optimizer_updates": 0
+    },
+    {
+      "fixture": "tinystories_s101",
+      "path": "results/fp32_training_replication_recovery_v1/initial/tinystories_s101/step0.pt",
+      "sha256": "21bbc49e6845ead55c6d3be01368388dbf5df0e2bb03585cc4a8950667da8a2a",
+      "model_hash": "c7288d8687ae6a3d538b100431525955c163c5a26083f6c210e922a8a04ece22",
+      "optimizer_hash": "93a8c3b45678dd789120490d536775679248509cd7664c6b3c8405b94cf9b730",
+      "seed": 101,
+      "step": 0,
+      "optimizer_updates": 0
+    },
+    {
+      "fixture": "tinystories_s113",
+      "path": "results/fp32_training_replication_recovery_v1/initial/tinystories_s113/step0.pt",
+      "sha256": "fe50db0be7006154349521cd714c613995ec5e98e18900db2a12970654dc423b",
+      "model_hash": "06a65f917eb4136c9fa74beb4c1fca6cd0ca7eb040ad481dbc61fae87bed8b02",
+      "optimizer_hash": "93a8c3b45678dd789120490d536775679248509cd7664c6b3c8405b94cf9b730",
+      "seed": 113,
+      "step": 0,
+      "optimizer_updates": 0
+    },
+    {
+      "fixture": "tinystories_s127",
+      "path": "results/fp32_training_replication_recovery_v1/initial/tinystories_s127/step0.pt",
+      "sha256": "c55c7aed957a0f95c65b0427c36c7fc633bf88b9044c41b6a49efd8488b272f3",
+      "model_hash": "f60ebe79ab84d7d8022295cbe48c9e558a2c639c1e97cb86b93c2b319f62118e",
+      "optimizer_hash": "93a8c3b45678dd789120490d536775679248509cd7664c6b3c8405b94cf9b730",
+      "seed": 127,
+      "step": 0,
+      "optimizer_updates": 0
+    }
+  ],
+  "initialized_on_cpu": true,
+  "cuda_initialized": false,
+  "optimizer_updates": 0
+}

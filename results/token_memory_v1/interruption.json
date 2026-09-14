@@ -1,0 +1,6 @@
+{
+  "status": "STOPPED_FOR_FIDELITY_DIAGNOSIS",
+  "completed_cases": 22,
+  "reason": "Large final NLL divergences in full GELU chunk policies despite close preceding losses; grid stopped intentionally before further allocation.",
+  "utc": "2026-09-10T00:41:05.336383+00:00"
+}
