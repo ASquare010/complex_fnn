@@ -1,7 +1,0 @@
-{
-  "exact_cpu_resume": true,
-  "final_validation_nll": 8.253623615611684,
-  "resumed_run": "dump\\runs\\20261004T035435Z-e3d296b1",
-  "steps": 4,
-  "uninterrupted_run": "dump\\runs\\20261004T035435Z-e65ed42f"
-}

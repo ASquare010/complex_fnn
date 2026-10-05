@@ -34,8 +34,8 @@ src/
   experiments.py                planning, comparison and evidence export
   leaderboard.py                automatic full-validation rankings
 ffn_experiments/                 archived shortlist for future research
-docs/                           research plans, historical reports and study configs
-records/                        compact evidence retained for every experiment
+docs/                           current research goal, selected study and leaderboard
+records/                        local experiment evidence; ignored by Git
 dump/                           ignored local data, checkpoints and source snapshots
 ```
 
@@ -76,9 +76,11 @@ recipe is frozen. Recorded evaluations are never overwritten.
 
 [ffn_experiments](ffn_experiments/README.md) retains Signed Linear, Self-Curve and
 Basis Readout, including their family controls and original kernels where needed.
-They are not registered in the active trainer. Other implementations have been
-removed; their [result reports](docs/retired_models/README.md),
-[historical study configs](docs/study_configs) and all compact evidence remain.
+They are not registered in the active trainer. Older documentation is kept only
+in ignored `dump/old-research-docs/`; retired implementations are absent.
+`records/` is local evidence and is no longer tracked by Git. Links to raw records,
+checkpoints and old reports therefore work only where those local files exist.
+The current study tables and conclusions remain in `docs/`.
 
 Recorded runs enforce exact source provenance. Load old weights directly for
 inspection, or use their original local source snapshots to resume/re-evaluate

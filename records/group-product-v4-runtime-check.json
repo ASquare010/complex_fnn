@@ -1,7 +1,0 @@
-{
-  "cold_compile_seconds": 3.02307650000148,
-  "scope": "runtime compiler availability, not FFN resources or quality",
-  "single_and_multiple_outputs": true,
-  "supported": true,
-  "torch": "2.14.0+cu132"
-}

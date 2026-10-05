@@ -1,6 +1,0 @@
-{
-  "counts": true,
-  "exact_initial_weights": true,
-  "exact_nonzero_interaction_outputs_and_gradients": true,
-  "scope": "CPU production-layout file versus profiled prototype; production schema/Trainer still pending"
-}

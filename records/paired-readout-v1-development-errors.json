@@ -1,8 +1,0 @@
-{
-  "errors": [
-    {
-      "stage": "preflight_lint",
-      "detail": "The recompute backward branch referenced exchange instead of ctx.exchange. Lint caught this before GPU execution; corrected before numerical checks. Final formatted source was rechecked on CPU before GPU validation."
-    }
-  ]
-}

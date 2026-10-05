@@ -1,6 +1,10 @@
 # Datasets, weights, logs, raw results and local archives.
 /dump/
+# Local evidence only; do not force-add experiment records.
 /records/
+# Obsolete research trees must not return to the current source tree.
+/research/
+/results/
 /.venv*/
 /.cache/
 /.pytest_cache/

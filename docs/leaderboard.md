@@ -271,19 +271,19 @@ resource or synthetic-task results. Execution revisions are not new mathematical
 
 | Recipe | Evidence / status |
 | --- | --- |
-| PairFlux (combined), no-exchange, no-curve | [Synthetic-task screen](retired_models/pairflux_transformer/result.md); curve-only has separate language rows above |
-| Looped BlockShuffle / repeated dense | [Synthetic and execution checks](retired_models/looped_blockshuffle_transformer/result.md) |
-| Shared-basis v1 / gate transport v2 | [Resource screens](shared_gate_transport_hypothesis.md); plain sharing and untied controls have language rows above |
-| Polynomial sketch / single sketch | [Resource failures](polynomial_sketch_result.md) |
-| Group-product execution v1–v3 | [Resource revisions](group_product_result.md); v4 language rows above |
-| Channel-curve execution v1 | [Resource failure](channel_curve_result.md); v2 language rows above |
-| Learned basis templates | [Resource failure](basis_readout_result.md); fixed/tied/cached language rows above |
-| Feature-flow execution v1–v3 | [Resource revisions](feature_flow_result.md); v4 language rows above |
-| Readout reuse v1 | [Resource failure](readout_reuse_result.md) |
-| Readout reuse v2 / v3 | [Forward failure](readout_reuse_v2_result.md) / [gradient failure](readout_reuse_v3_result.md) |
-| Readout reuse v4 | [Gradient failure](readout_reuse_v4_result.md); retired before language |
-| Readout reuse v5 | [Resource failure](readout_reuse_v5_result.md); numerical checks passed, but slowdown exceeds the gate; no language result |
-| Paired readout v1 | [Resource report](paired_readout_result.md); numerical checks passed; misses all-control memory/speed gate, no language score |
+| PairFlux (combined), no-exchange, no-curve | [Synthetic-task screen](../dump/old-research-docs/retired_models/pairflux_transformer/result.md); curve-only has separate language rows above |
+| Looped BlockShuffle / repeated dense | [Synthetic and execution checks](../dump/old-research-docs/retired_models/looped_blockshuffle_transformer/result.md) |
+| Shared-basis v1 / gate transport v2 | [Resource screens](../dump/old-research-docs/shared_gate_transport_hypothesis.md); plain sharing and untied controls have language rows above |
+| Polynomial sketch / single sketch | [Resource failures](../dump/old-research-docs/polynomial_sketch_result.md) |
+| Group-product execution v1–v3 | [Resource revisions](../dump/old-research-docs/group_product_result.md); v4 language rows above |
+| Channel-curve execution v1 | [Resource failure](../dump/old-research-docs/channel_curve_result.md); v2 language rows above |
+| Learned basis templates | [Resource failure](../dump/old-research-docs/basis_readout_result.md); fixed/tied/cached language rows above |
+| Feature-flow execution v1–v3 | [Resource revisions](../dump/old-research-docs/feature_flow_result.md); v4 language rows above |
+| Readout reuse v1 | [Resource failure](../dump/old-research-docs/readout_reuse_result.md) |
+| Readout reuse v2 / v3 | [Forward failure](../dump/old-research-docs/readout_reuse_v2_result.md) / [gradient failure](../dump/old-research-docs/readout_reuse_v3_result.md) |
+| Readout reuse v4 | [Gradient failure](../dump/old-research-docs/readout_reuse_v4_result.md); retired before language |
+| Readout reuse v5 | [Resource failure](../dump/old-research-docs/readout_reuse_v5_result.md); numerical checks passed, but slowdown exceeds the gate; no language result |
+| Paired readout v1 | [Resource report](../dump/old-research-docs/paired_readout_result.md); numerical checks passed; misses all-control memory/speed gate, no language score |
 
 Frozen-weight removal experiments stay in each study's result report; they are
 interventions on trained checkpoints, not independently trained model entries.

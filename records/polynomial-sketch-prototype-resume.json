@@ -1,5 +1,0 @@
-{
-  "exact_cpu_resume": true,
-  "model_and_optimizer_and_sampler": true,
-  "scope": "staged model, manual checkpoint; production Trainer check still required before language training"
-}
