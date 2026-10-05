@@ -1,8 +1,0 @@
-{
-  "selected_label": "piecewise_twist_learned_s29_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 0.5032851025462151,
-    "0.003": 0.5416127120455106
-  }
-}

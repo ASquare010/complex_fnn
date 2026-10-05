@@ -1,8 +1,0 @@
-{
-  "selected_cell": "smooth_latent_tanh_s43_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "smooth_latent_tanh_s43_lr1000": 0.7060022801160812,
-    "smooth_latent_tanh_s43_lr3000": 0.6595745732386907
-  }
-}

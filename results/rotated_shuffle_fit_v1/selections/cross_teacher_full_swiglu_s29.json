@@ -1,8 +1,0 @@
-{
-  "selected_cell": "cross_teacher_full_swiglu_s29_lr1000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "cross_teacher_full_swiglu_s29_lr1000": 1.6197840372721355,
-    "cross_teacher_full_swiglu_s29_lr3000": 2.030159910519918
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "selected_cell": "piecewise_full_swiglu_s29_lr1000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "piecewise_full_swiglu_s29_lr1000": 1.2452526688575745,
-    "piecewise_full_swiglu_s29_lr3000": 1.410099466641744
-  }
-}

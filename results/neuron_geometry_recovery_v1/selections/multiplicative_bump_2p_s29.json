@@ -1,8 +1,0 @@
-{
-  "selected_label": "multiplicative_bump_2p_s29_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 0.9101372907559077,
-    "0.003": 0.9410757372776667
-  }
-}

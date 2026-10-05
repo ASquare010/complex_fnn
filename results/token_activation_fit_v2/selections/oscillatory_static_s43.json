@@ -1,8 +1,0 @@
-{
-  "selected_cell": "oscillatory_static_s43_lr1000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "oscillatory_static_s43_lr1000": 1.0304303169250488,
-    "oscillatory_static_s43_lr3000": 1.0368460615475972
-  }
-}

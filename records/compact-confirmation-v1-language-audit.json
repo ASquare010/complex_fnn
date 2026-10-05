@@ -1,0 +1,659 @@
+{
+  "compact_quality_ranking": [
+    {
+      "ffn_parameters": 2121728,
+      "mean_relative_loss_cost": 0.015938749372752192,
+      "per_corpus_cost": {
+        "tinystories": 0.019448116451425673,
+        "wikitext": 0.012429382294078714
+      },
+      "variant": "curve-wide",
+      "worst_relative_loss_cost": 0.019448116451425673
+    },
+    {
+      "ffn_parameters": 2490368,
+      "mean_relative_loss_cost": 0.0174655052138654,
+      "per_corpus_cost": {
+        "tinystories": 0.02279385938303517,
+        "wikitext": 0.01213715104469563
+      },
+      "variant": "signed-parent",
+      "worst_relative_loss_cost": 0.02279385938303517
+    },
+    {
+      "ffn_parameters": 2359296,
+      "mean_relative_loss_cost": 0.01874918803423801,
+      "per_corpus_cost": {
+        "tinystories": 0.025318990006574598,
+        "wikitext": 0.012179386061901424
+      },
+      "variant": "signed-fine",
+      "worst_relative_loss_cost": 0.025318990006574598
+    },
+    {
+      "ffn_parameters": 2121728,
+      "mean_relative_loss_cost": 0.019659677079620276,
+      "per_corpus_cost": {
+        "tinystories": 0.024500939015314433,
+        "wikitext": 0.014818415143926122
+      },
+      "variant": "curve-parent",
+      "worst_relative_loss_cost": 0.024500939015314433
+    },
+    {
+      "ffn_parameters": 2359296,
+      "mean_relative_loss_cost": 0.020006863893326326,
+      "per_corpus_cost": {
+        "tinystories": 0.025372141633298522,
+        "wikitext": 0.014641586153354128
+      },
+      "variant": "compact-swiglu-kernel-h384",
+      "worst_relative_loss_cost": 0.025372141633298522
+    },
+    {
+      "ffn_parameters": 2125824,
+      "mean_relative_loss_cost": 0.02210876425530998,
+      "per_corpus_cost": {
+        "tinystories": 0.028332114959768322,
+        "wikitext": 0.01588541355085164
+      },
+      "variant": "compact-swiglu-kernel-h346",
+      "worst_relative_loss_cost": 0.028332114959768322
+    },
+    {
+      "ffn_parameters": 2359296,
+      "mean_relative_loss_cost": 0.024227638336209334,
+      "per_corpus_cost": {
+        "tinystories": 0.029259552897557956,
+        "wikitext": 0.01919572377486071
+      },
+      "variant": "compact-gelu-h576",
+      "worst_relative_loss_cost": 0.029259552897557956
+    },
+    {
+      "ffn_parameters": 2121728,
+      "mean_relative_loss_cost": 0.027420490624178173,
+      "per_corpus_cost": {
+        "tinystories": 0.03255334907030768,
+        "wikitext": 0.02228763217804867
+      },
+      "variant": "compact-gelu-h518",
+      "worst_relative_loss_cost": 0.03255334907030768
+    }
+  ],
+  "complete": true,
+  "counts": {
+    "compact-gelu-h518": 2121728,
+    "compact-gelu-h576": 2359296,
+    "compact-swiglu-kernel-h346": 2125824,
+    "compact-swiglu-kernel-h384": 2359296,
+    "curve-parent": 2121728,
+    "curve-wide": 2121728,
+    "full-gelu": 8454144,
+    "full-swiglu": 8454144,
+    "signed-fine": 2359296,
+    "signed-parent": 2490368
+  },
+  "final_selection_complete": false,
+  "means": {
+    "tinystories": {
+      "compact-gelu-h518": 2.625607963916943,
+      "compact-gelu-h576": 2.617235565511172,
+      "compact-swiglu-kernel-h346": 2.614868159992187,
+      "compact-swiglu-kernel-h384": 2.6073478795603915,
+      "curve-parent": 2.6051447335543205,
+      "curve-wide": 2.592299871245257,
+      "full-gelu": 2.589528995144332,
+      "full-swiglu": 2.5428371759138706,
+      "signed-fine": 2.60722269220226,
+      "signed-parent": 2.600802501754989
+    },
+    "wikitext": {
+      "compact-gelu-h518": 4.314460752376172,
+      "compact-gelu-h576": 4.301414138047153,
+      "compact-swiglu-kernel-h346": 4.287452600872705,
+      "compact-swiglu-kernel-h384": 4.282196943091337,
+      "curve-parent": 4.282949023776585,
+      "curve-wide": 4.2728622365880895,
+      "full-gelu": 4.254606271168543,
+      "full-swiglu": 4.22041456182167,
+      "signed-fine": 4.271803854382227,
+      "signed-parent": 4.271631635433782
+    }
+  },
+  "paired_parent_changes": {
+    "curve-wide": {
+      "tinystories": {
+        "mean_delta": -0.012844862309063862,
+        "parent": "curve-parent",
+        "relative_mean_change": -0.004930575312619423,
+        "seed_deltas": {
+          "211": -0.006423542349958122,
+          "307": -0.014593350292015472,
+          "401": -0.01751769428521799
+        },
+        "seeds_improved": 3
+      },
+      "wikitext": {
+        "mean_delta": -0.010086787188494798,
+        "parent": "curve-parent",
+        "relative_mean_change": -0.0023551032553734697,
+        "seed_deltas": {
+          "211": -0.008200436546689005,
+          "307": -0.01710891875009679,
+          "401": -0.004951006268698599
+        },
+        "seeds_improved": 3
+      }
+    },
+    "signed-fine": {
+      "tinystories": {
+        "mean_delta": 0.006420190447271157,
+        "parent": "signed-parent",
+        "relative_mean_change": 0.0024685420915040446,
+        "seed_deltas": {
+          "211": 0.010481680553792838,
+          "307": 0.007120834575267132,
+          "401": 0.0016580562127535003
+        },
+        "seeds_improved": 0
+      },
+      "wikitext": {
+        "mean_delta": 0.00017221894844521302,
+        "parent": "signed-parent",
+        "relative_mean_change": 4.0316900693504465e-05,
+        "seed_deltas": {
+          "211": 0.0017403723701603369,
+          "307": -0.013534883468869552,
+          "401": 0.012311167944044854
+        },
+        "seeds_improved": 1
+      }
+    }
+  },
+  "scope": "Paired language evidence only; isolated resources required before final selection.",
+  "selection_sha256": "2d163b0b6fab7a421a933a99eecf60063375fbe4e6cad479ad3bfb57b2afe004",
+  "test_loss_used": false,
+  "verified_runs": [
+    {
+      "corpus": "tinystories",
+      "nll": 2.5989618240336907,
+      "record": "records/compact-confirmation-v1-tinystories-curve-wide-s211.json",
+      "record_sha256": "153c7f8eea0b3f3be82be37ed9f83c7c22f3c3bfd798c3bc73efbedc716297a6",
+      "seed": 211,
+      "variant": "curve-wide"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.577930178135519,
+      "record": "records/compact-confirmation-v1-tinystories-curve-wide-s307.json",
+      "record_sha256": "d33a87988a9818f85a97d99142560d16e495e401ac5eda26a64246c369762503",
+      "seed": 307,
+      "variant": "curve-wide"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6000076115665607,
+      "record": "records/compact-confirmation-v1-tinystories-curve-wide-s401.json",
+      "record_sha256": "e8c077de1d86cc9081f0ff568e1fb654e3108d606ed4466acad5b47bbb65237a",
+      "seed": 401,
+      "variant": "curve-wide"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6188642548232623,
+      "record": "records/compact-confirmation-v1-tinystories-signed-fine-s211.json",
+      "record_sha256": "626d74083b686c095ed465e6ebadcdf90a3b064b29b55698d47e95accf0356fd",
+      "seed": 211,
+      "variant": "signed-fine"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.5965953111343287,
+      "record": "records/compact-confirmation-v1-tinystories-signed-fine-s307.json",
+      "record_sha256": "e95e8bd24dd3a008d6d4fefde453ca8f066918178858768151e6a3d6c6cf9168",
+      "seed": 307,
+      "variant": "signed-fine"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.606208510649189,
+      "record": "records/compact-confirmation-v1-tinystories-signed-fine-s401.json",
+      "record_sha256": "d35d4eb13265f6acb0068429dea4b4e8356bf99bd83674abad0d758ea80fd49c",
+      "seed": 401,
+      "variant": "signed-fine"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.605385366383649,
+      "record": "records/compact-confirmation-v1-tinystories-curve-parent-s211.json",
+      "record_sha256": "5cf324a085b8cb790e12038efd67547fbfa73e34c3de8d68787498c2f9916e70",
+      "seed": 211,
+      "variant": "curve-parent"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.5925235284275345,
+      "record": "records/compact-confirmation-v1-tinystories-curve-parent-s307.json",
+      "record_sha256": "4c49e3ee546d7fefbbf5cae50a0df7a85b4a529fc466c82ecb0e65bb28e32166",
+      "seed": 307,
+      "variant": "curve-parent"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6175253058517787,
+      "record": "records/compact-confirmation-v1-tinystories-curve-parent-s401.json",
+      "record_sha256": "61af244565987d3bbe46d248d43c9f39181e2edf784f40465577602aac346dc4",
+      "seed": 401,
+      "variant": "curve-parent"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.617220740617466,
+      "record": "records/compact-confirmation-v1-tinystories-compact-swiglu-kernel-h346-s211.json",
+      "record_sha256": "23ebc3e91faf32f8e4261836f5e99202471c8a5ac0f5c37d835ea4cad5e03868",
+      "seed": 211,
+      "variant": "compact-swiglu-kernel-h346"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.613471204584295,
+      "record": "records/compact-confirmation-v1-tinystories-compact-swiglu-kernel-h346-s307.json",
+      "record_sha256": "edcecf4bd4c72a563368285f93eeee98048e2da2c4be304c0867128e2f7ec4fd",
+      "seed": 307,
+      "variant": "compact-swiglu-kernel-h346"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6139125347748,
+      "record": "records/compact-confirmation-v1-tinystories-compact-swiglu-kernel-h346-s401.json",
+      "record_sha256": "bec3e4d6f11e715434c987bf9b42277a8d9759956436047314a9ecc24b48ca7d",
+      "seed": 401,
+      "variant": "compact-swiglu-kernel-h346"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6254961536422123,
+      "record": "records/compact-confirmation-v1-tinystories-compact-gelu-h518-s211.json",
+      "record_sha256": "030753eaef9ead01a2efbb6e47d8994a40323962087373a20a378dcd08f7fb95",
+      "seed": 211,
+      "variant": "compact-gelu-h518"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6205045392357587,
+      "record": "records/compact-confirmation-v1-tinystories-compact-gelu-h518-s307.json",
+      "record_sha256": "1a65b25dbe6f93a2f74a5460a3d0ff396ad4a8065b4eaf4e9286a4eb363da7a2",
+      "seed": 307,
+      "variant": "compact-gelu-h518"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.630823198872858,
+      "record": "records/compact-confirmation-v1-tinystories-compact-gelu-h518-s401.json",
+      "record_sha256": "d88dac941450172295c964ab424a85e158a5d9f5e4dc157d0a9cfb5185417a12",
+      "seed": 401,
+      "variant": "compact-gelu-h518"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6083825742694695,
+      "record": "records/compact-confirmation-v1-tinystories-signed-parent-s211.json",
+      "record_sha256": "ea11960f075de063e90bcbf751356a04f9a963e1b0a2bc78d4febdccbaf8f675",
+      "seed": 211,
+      "variant": "signed-parent"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.5894744765590616,
+      "record": "records/compact-confirmation-v1-tinystories-signed-parent-s307.json",
+      "record_sha256": "a6110260099bc8f5c8543c54c1287bb90c31b3f42091280f3f7d2e716b736a7f",
+      "seed": 307,
+      "variant": "signed-parent"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6045504544364353,
+      "record": "records/compact-confirmation-v1-tinystories-signed-parent-s401.json",
+      "record_sha256": "8c9fb8f2fc31467d3cdd05c6c71b3d690667ecae5c5f3c685b0ad37d1f48075d",
+      "seed": 401,
+      "variant": "signed-parent"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6102831177461163,
+      "record": "records/compact-confirmation-v1-tinystories-compact-swiglu-kernel-h384-s211.json",
+      "record_sha256": "93587675a9d48eec21c31ad0f7b2525b28d411dba6a989ffbc17334d02cfb96f",
+      "seed": 211,
+      "variant": "compact-swiglu-kernel-h384"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6021581373813056,
+      "record": "records/compact-confirmation-v1-tinystories-compact-swiglu-kernel-h384-s307.json",
+      "record_sha256": "db6eb94dbdd130d3d05c67d7d7bae9e1051c7815bfaafb8596237c92b873042b",
+      "seed": 307,
+      "variant": "compact-swiglu-kernel-h384"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.609602383553753,
+      "record": "records/compact-confirmation-v1-tinystories-compact-swiglu-kernel-h384-s401.json",
+      "record_sha256": "657d4408956c49a2cadf15ff256e5fb4e559d23f932eb932f1db9cf4a35de7dc",
+      "seed": 401,
+      "variant": "compact-swiglu-kernel-h384"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6219669810941064,
+      "record": "records/compact-confirmation-v1-tinystories-compact-gelu-h576-s211.json",
+      "record_sha256": "81de55b8e4a341600164997c604203aabd11c2873ce15fc0d9755ad49193b391",
+      "seed": 211,
+      "variant": "compact-gelu-h576"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.610544892187766,
+      "record": "records/compact-confirmation-v1-tinystories-compact-gelu-h576-s307.json",
+      "record_sha256": "d42b3835e951cfa4405d60122dcc66d617ff95d6714616f3df1f57bd99a4a571",
+      "seed": 307,
+      "variant": "compact-gelu-h576"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.6191948232516435,
+      "record": "records/compact-confirmation-v1-tinystories-compact-gelu-h576-s401.json",
+      "record_sha256": "67600bd62ff1befb5fc97c3230c1dfc09a3177cd2e13ce2c375a2294bcf89607",
+      "seed": 401,
+      "variant": "compact-gelu-h576"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.547593417149347,
+      "record": "records/compact-confirmation-v1-tinystories-full-swiglu-s211.json",
+      "record_sha256": "bc8e4f17ae865498a7f5630276d6289541d25bb635ab395733227f1fd325adae",
+      "seed": 211,
+      "variant": "full-swiglu"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.534088132323437,
+      "record": "records/compact-confirmation-v1-tinystories-full-swiglu-s307.json",
+      "record_sha256": "13687849a9f6555eb35c2208f1779c9d904b9b1bb0f12168e929a7da02119063",
+      "seed": 307,
+      "variant": "full-swiglu"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.546829978268827,
+      "record": "records/compact-confirmation-v1-tinystories-full-swiglu-s401.json",
+      "record_sha256": "ab3b4ec665033f34dbaaf812c173e89aab77b26d42232d7b2d49ecba82ee4264",
+      "seed": 401,
+      "variant": "full-swiglu"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.5989156276102103,
+      "record": "records/compact-confirmation-v1-tinystories-full-gelu-s211.json",
+      "record_sha256": "33c530cb9ce002ce2c0159322db847b31293c58077e8d9c0d5c5a0d0100eda46",
+      "seed": 211,
+      "variant": "full-gelu"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.5784558114260627,
+      "record": "records/compact-confirmation-v1-tinystories-full-gelu-s307.json",
+      "record_sha256": "ecb600c32d5a186201fcb230dd38e528193b0ca613f72f56e17b87250aa64a31",
+      "seed": 307,
+      "variant": "full-gelu"
+    },
+    {
+      "corpus": "tinystories",
+      "nll": 2.591215546396722,
+      "record": "records/compact-confirmation-v1-tinystories-full-gelu-s401.json",
+      "record_sha256": "cf59b3b469020a7de72907c33fa6fe7248ee8c6b6c49243fe8cc45d7a81660e1",
+      "seed": 401,
+      "variant": "full-gelu"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.270795728289892,
+      "record": "records/compact-confirmation-v1-wikitext-curve-wide-s211.json",
+      "record_sha256": "ad189b3da75f924205b48e1db1f6ee7246b4a6fb31d8d5d8c351479c8bc1e350",
+      "seed": 211,
+      "variant": "curve-wide"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.271971648080008,
+      "record": "records/compact-confirmation-v1-wikitext-curve-wide-s307.json",
+      "record_sha256": "17aa13e4014d32f85b196a923f63afbad9ec59e88299ee10a59725e5d4be07ad",
+      "seed": 307,
+      "variant": "curve-wide"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.275819333394368,
+      "record": "records/compact-confirmation-v1-wikitext-curve-wide-s401.json",
+      "record_sha256": "881353fe320cf9237d8e528e5d340e8da8bd456c71d14ad58da331d5f5907c66",
+      "seed": 401,
+      "variant": "curve-wide"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.273047889225067,
+      "record": "records/compact-confirmation-v1-wikitext-signed-fine-s211.json",
+      "record_sha256": "992d650375b1541200474fc89aadb7f6261bfb84a02d94211471d65ee8b48cbd",
+      "seed": 211,
+      "variant": "signed-fine"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.270331228347052,
+      "record": "records/compact-confirmation-v1-wikitext-signed-fine-s307.json",
+      "record_sha256": "7dc779eba90b121707f0c2551cb3aaea47a0525c029d64826a5ee0116e452520",
+      "seed": 307,
+      "variant": "signed-fine"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.272032445574563,
+      "record": "records/compact-confirmation-v1-wikitext-signed-fine-s401.json",
+      "record_sha256": "1fdddc919ad2123a33a713ba2b1eae7fc5600ca1532ac08c86e4a66704e9e887",
+      "seed": 401,
+      "variant": "signed-fine"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.278996164836581,
+      "record": "records/compact-confirmation-v1-wikitext-curve-parent-s211.json",
+      "record_sha256": "b2a51e1a3df9dd785a40bac6a2567ddb25d4e7624ebd37b99e6b4f3a93f3c03a",
+      "seed": 211,
+      "variant": "curve-parent"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.289080566830105,
+      "record": "records/compact-confirmation-v1-wikitext-curve-parent-s307.json",
+      "record_sha256": "9f52c0b6b1c93a59f8b2c9173d5d2e24c92db41bf127dfee8e41b8067332ad6d",
+      "seed": 307,
+      "variant": "curve-parent"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.280770339663067,
+      "record": "records/compact-confirmation-v1-wikitext-curve-parent-s401.json",
+      "record_sha256": "29c6fb7d26c6f3c7432b49b6cbe96dc4c00e313673ae7e0b9095372ac8189f87",
+      "seed": 401,
+      "variant": "curve-parent"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.286545276641846,
+      "record": "records/compact-confirmation-v1-wikitext-compact-swiglu-kernel-h346-s211.json",
+      "record_sha256": "d1953aa78f24b6d850740d0d0796b5b996dfeff9cb824da2cd6f74bc8a6fd148",
+      "seed": 211,
+      "variant": "compact-swiglu-kernel-h346"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.303409151046995,
+      "record": "records/compact-confirmation-v1-wikitext-compact-swiglu-kernel-h346-s307.json",
+      "record_sha256": "988a156e214c0f79fc310724e5e209880266900db42250c1b65291bd852cbe8a",
+      "seed": 307,
+      "variant": "compact-swiglu-kernel-h346"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.272403374929277,
+      "record": "records/compact-confirmation-v1-wikitext-compact-swiglu-kernel-h346-s401.json",
+      "record_sha256": "26bc312083c0aa89c44c5744795f4c05e24860c3508752663ed654104e593833",
+      "seed": 401,
+      "variant": "compact-swiglu-kernel-h346"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.320844653296092,
+      "record": "records/compact-confirmation-v1-wikitext-compact-gelu-h518-s211.json",
+      "record_sha256": "88d39fbc77c4d8c47476fdc2e56e417576de6bd67bf09be791cc73ad81ff0428",
+      "seed": 211,
+      "variant": "compact-gelu-h518"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.315508445860847,
+      "record": "records/compact-confirmation-v1-wikitext-compact-gelu-h518-s307.json",
+      "record_sha256": "184a6f3972d741a283f62d6c2521ae10be5c8f1ed9bf9cfb02488e711a729ac0",
+      "seed": 307,
+      "variant": "compact-gelu-h518"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.307029157971579,
+      "record": "records/compact-confirmation-v1-wikitext-compact-gelu-h518-s401.json",
+      "record_sha256": "519c429110cd835c28c87d0156f4166a9e1e34e4a3db9a1bf7cfe4c8876471f8",
+      "seed": 401,
+      "variant": "compact-gelu-h518"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.271307516854907,
+      "record": "records/compact-confirmation-v1-wikitext-signed-parent-s211.json",
+      "record_sha256": "2484b9a67a609c26c8658140af2d73a0ccd981b38acf98ef38fe87a5ae41b663",
+      "seed": 211,
+      "variant": "signed-parent"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.283866111815922,
+      "record": "records/compact-confirmation-v1-wikitext-signed-parent-s307.json",
+      "record_sha256": "9fbdc97c2bfd957a858ca9c33848b5870c22fa9b0584a6187ba496fa126c39e2",
+      "seed": 307,
+      "variant": "signed-parent"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.259721277630518,
+      "record": "records/compact-confirmation-v1-wikitext-signed-parent-s401.json",
+      "record_sha256": "8f7b963d34af5d6134a8e7fc1018f2297a306289eb11ca301a4ed6cab713bb89",
+      "seed": 401,
+      "variant": "signed-parent"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.283336253393264,
+      "record": "records/compact-confirmation-v1-wikitext-compact-swiglu-kernel-h384-s211.json",
+      "record_sha256": "756691d42554c8b1f76b9e0e5dfc30a217d313e01f33e680ed49126ba21ddfb6",
+      "seed": 211,
+      "variant": "compact-swiglu-kernel-h384"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.285270868028913,
+      "record": "records/compact-confirmation-v1-wikitext-compact-swiglu-kernel-h384-s307.json",
+      "record_sha256": "8ce9acf042a6b499a23a0a2d42239b55eebf97f265a505abc0a686e461cf9c4e",
+      "seed": 307,
+      "variant": "compact-swiglu-kernel-h384"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.277983707851834,
+      "record": "records/compact-confirmation-v1-wikitext-compact-swiglu-kernel-h384-s401.json",
+      "record_sha256": "ce2e75f2babd880c7445159ff967e49e5f588b9794241b35f458540daf13aeef",
+      "seed": 401,
+      "variant": "compact-swiglu-kernel-h384"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.304881256345719,
+      "record": "records/compact-confirmation-v1-wikitext-compact-gelu-h576-s211.json",
+      "record_sha256": "1b5e87708b13da28256cd4f6d217f2610bf8e7d044e6058dfb7327aeff82b104",
+      "seed": 211,
+      "variant": "compact-gelu-h576"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.301717926207043,
+      "record": "records/compact-confirmation-v1-wikitext-compact-gelu-h576-s307.json",
+      "record_sha256": "b0c7e93fa9bee6599be59dff5e7972679cbfa8115a6a072b6b7cc83fd41e372b",
+      "seed": 307,
+      "variant": "compact-gelu-h576"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.2976432315886965,
+      "record": "records/compact-confirmation-v1-wikitext-compact-gelu-h576-s401.json",
+      "record_sha256": "0bc3ea15b4b65629e1c9fb096f155aac9e8fa59b8c9148d78f84370431373de7",
+      "seed": 401,
+      "variant": "compact-gelu-h576"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.2111070163666255,
+      "record": "records/compact-confirmation-v1-wikitext-full-swiglu-s211.json",
+      "record_sha256": "b0f046b8b61f45a80587efe126a705fa8971676502b9769688f950177bb27c14",
+      "seed": 211,
+      "variant": "full-swiglu"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.227178903609987,
+      "record": "records/compact-confirmation-v1-wikitext-full-swiglu-s307.json",
+      "record_sha256": "d4514720492be42250b8490713c86da31686065e814b93ced9834a1cf80bac13",
+      "seed": 307,
+      "variant": "full-swiglu"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.222957765488397,
+      "record": "records/compact-confirmation-v1-wikitext-full-swiglu-s401.json",
+      "record_sha256": "4117b1ea2bfaa1f153c012586ee1165cc82b7d59145d9510ee8b6474f7a3fcdc",
+      "seed": 401,
+      "variant": "full-swiglu"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.2581140048920165,
+      "record": "records/compact-confirmation-v1-wikitext-full-gelu-s211.json",
+      "record_sha256": "ab36d913cda64fd07e83d4a5a4862b4eefd9977c71cd987dad6fda176bb54e3d",
+      "seed": 211,
+      "variant": "full-gelu"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.259445541624039,
+      "record": "records/compact-confirmation-v1-wikitext-full-gelu-s307.json",
+      "record_sha256": "343f0c757d053dd2478bf4b7ced83d4e134694c051541291a6ea2505d5510739",
+      "seed": 307,
+      "variant": "full-gelu"
+    },
+    {
+      "corpus": "wikitext",
+      "nll": 4.246259266989572,
+      "record": "records/compact-confirmation-v1-wikitext-full-gelu-s401.json",
+      "record_sha256": "3a70dd86fd882d3f42583879c0250cc7c011f86bdaf076fda15bc5ed71a17ccc",
+      "seed": 401,
+      "variant": "full-gelu"
+    }
+  ]
+}

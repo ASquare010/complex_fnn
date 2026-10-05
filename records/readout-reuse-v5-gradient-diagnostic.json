@@ -1,0 +1,149 @@
+{
+  "diagnostic_source_sha256": "e0ef442315cee25bb1cf30373aabd9378b668f6866cbbe8db240b9bfadfd7a7f",
+  "fixture_sha256": "f3b79e0b63f83a2ac556b81dad1588a6193edb41b2fc40bbaafa4308b9571cb6",
+  "kernel_source_sha256": "40f47a21b43f860d24d3572cfc3cfb322c5f6060fd242875afd4f11d56506c32",
+  "native_incoming_same_input_layer_traces": [
+    {
+      "fused_group_and_scalar_projected_adjoint": {
+        "different": 0,
+        "max": 0.0,
+        "total": 2359296
+      },
+      "layer": 0,
+      "native_group_raw_scalar_projected_adjoint": {
+        "different": 0,
+        "max": 0.0,
+        "total": 2359296
+      },
+      "same_input_local_gradients": [
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 1048576
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 36864
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 589824
+        }
+      ],
+      "same_input_output": {
+        "different": 0,
+        "max": 0.0,
+        "total": 1048576
+      }
+    },
+    {
+      "fused_group_and_scalar_projected_adjoint": {
+        "different": 0,
+        "max": 0.0,
+        "total": 2359296
+      },
+      "layer": 1,
+      "native_group_raw_scalar_projected_adjoint": {
+        "different": 0,
+        "max": 0.0,
+        "total": 2359296
+      },
+      "same_input_local_gradients": [
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 1048576
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 36864
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 589824
+        }
+      ],
+      "same_input_output": {
+        "different": 0,
+        "max": 0.0,
+        "total": 1048576
+      }
+    },
+    {
+      "fused_group_and_scalar_projected_adjoint": {
+        "different": 0,
+        "max": 0.0,
+        "total": 2359296
+      },
+      "layer": 2,
+      "native_group_raw_scalar_projected_adjoint": {
+        "different": 0,
+        "max": 0.0,
+        "total": 2359296
+      },
+      "same_input_local_gradients": [
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 1048576
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 36864
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 589824
+        }
+      ],
+      "same_input_output": {
+        "different": 0,
+        "max": 0.0,
+        "total": 1048576
+      }
+    },
+    {
+      "fused_group_and_scalar_projected_adjoint": {
+        "different": 0,
+        "max": 0.0,
+        "total": 2359296
+      },
+      "layer": 3,
+      "native_group_raw_scalar_projected_adjoint": {
+        "different": 0,
+        "max": 0.0,
+        "total": 2359296
+      },
+      "same_input_local_gradients": [
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 1048576
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 36864
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 589824
+        }
+      ],
+      "same_input_output": {
+        "different": 0,
+        "max": 0.0,
+        "total": 1048576
+      }
+    }
+  ],
+  "scope": "Local backward rounding trace on a saved fixture; no complete pass or resource claim.",
+  "source_sha256": "c0f41360438647dfe03612f12fc22cace0320aaa1c4fd4adda5755fde975be34"
+}

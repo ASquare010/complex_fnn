@@ -1,8 +1,0 @@
-{
-  "selected_cell": "multiplicative_plain_s29_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "multiplicative_plain_s29_lr1000": 0.9371236562728882,
-    "multiplicative_plain_s29_lr3000": 0.8201694488525391
-  }
-}

@@ -1,0 +1,130 @@
+{
+  "config": {
+    "dataset": "dump/data/wikitext2-v2",
+    "hypothesis": "Registered finalist from complete two-corpus development screen",
+    "model": {
+      "context": 256,
+      "ffn": "self_curve_wide",
+      "ffn_output_init_scale": 1.0,
+      "groups": 64,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "channel_curve_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "compact-final-v1-wikitext-curve-wide-s509-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 509,
+      "steps": 8000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "fd17963558497334252021472f345ad994a0c7cc9aae4cfbc2b937ca0821f564",
+      "complete_split": true,
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "exact_match": {},
+      "final_opt_in": true,
+      "nll": 3.9667620117994504,
+      "perplexity": 52.813245014401005,
+      "split": "test",
+      "step": 8000,
+      "targets": 367872
+    },
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "fd17963558497334252021472f345ad994a0c7cc9aae4cfbc2b937ca0821f564",
+      "complete_split": true,
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 3.9423220944783046,
+      "perplexity": 51.53813888575888,
+      "split": "valid",
+      "step": 8000,
+      "targets": 322560
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 3.8287420347332954,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2121728,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 4194304,
+      "total_parameters": 8417792
+    },
+    "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Registered finalist from complete two-corpus development screen",
+    "input_tokens_including_padding": 16384000,
+    "model": {
+      "context": 256,
+      "ffn": "self_curve_wide",
+      "ffn_output_init_scale": 1.0,
+      "groups": 64,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "channel_curve_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "compact-final-v1-wikitext-curve-wide-s509-lr0.0006",
+    "peak_training_allocated_bytes": 422776320,
+    "peak_training_reserved_bytes": 473956352,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261005T043839Z-8d5b5e15",
+    "seed": 509,
+    "source_sha256": "c0f7bc029505e815268888294f40c139c4d52c1c6164c008262739e06026ae9a",
+    "step": 8000,
+    "trained_target_tokens": 16384000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 509,
+      "steps": 8000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 443.1683380784852,
+    "training_seconds": 36970.15014889983,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 3.8287420347332954,
+      "perplexity": 46.004629592186326,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 37011.67581439999
+  }
+}

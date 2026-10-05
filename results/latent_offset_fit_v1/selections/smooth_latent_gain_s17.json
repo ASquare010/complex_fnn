@@ -1,8 +1,0 @@
-{
-  "selected_cell": "smooth_latent_gain_s17_lr1000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "smooth_latent_gain_s17_lr1000": 0.7010472069183985,
-    "smooth_latent_gain_s17_lr3000": 0.725053941210111
-  }
-}

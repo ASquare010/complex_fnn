@@ -1,5 +1,5 @@
-# Frozen research manifests hash exact file bytes, including historical line endings.
-# Preserve those bytes when staging and checking out on Windows or Linux.
+# Research evidence hashes exact bytes, including source files and line endings.
+# Preserve those bytes when committing and checking out on every platform.
 * -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 *.png binary
 *.zip binary

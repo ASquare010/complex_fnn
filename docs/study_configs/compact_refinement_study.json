@@ -1,0 +1,91 @@
+{
+  "dataset": "dump/data/tinystories-v2",
+  "output": "dump/compact-refinement-v1/tinystories",
+  "seeds": [
+    101
+  ],
+  "learning_rates": [
+    0.0006
+  ],
+  "model": {
+    "width": 512,
+    "layers": 4,
+    "heads": 16,
+    "context": 256,
+    "vocab_size": 4096,
+    "rope_base": 10000
+  },
+  "training": {
+    "batch_size": 8,
+    "device": "cuda",
+    "precision": "bf16",
+    "steps": 2000,
+    "threads": 4,
+    "warmup_steps": 200,
+    "weight_decay": 0.1,
+    "eval_every": 200,
+    "eval_batches": 32
+  },
+  "variants": [
+    {
+      "name": "signed-parent",
+      "hypothesis": "Registered compact refinement round 1: signed-parent",
+      "model": {
+        "name": "signed_context_transformer",
+        "ffn": "signed_linear",
+        "hidden": 576,
+        "groups": 64
+      }
+    },
+    {
+      "name": "signed-fine",
+      "hypothesis": "Registered compact refinement round 1: signed-fine",
+      "model": {
+        "name": "signed_context_transformer",
+        "ffn": "signed_linear",
+        "hidden": 512,
+        "groups": 128
+      }
+    },
+    {
+      "name": "curve-parent",
+      "hypothesis": "Registered compact refinement round 1: curve-parent",
+      "model": {
+        "name": "channel_curve_transformer",
+        "ffn": "self_curve",
+        "hidden": 512,
+        "groups": 64
+      }
+    },
+    {
+      "name": "curve-wide",
+      "hypothesis": "Registered compact refinement round 1: curve-wide",
+      "model": {
+        "name": "channel_curve_transformer",
+        "ffn": "self_curve_wide",
+        "hidden": 512,
+        "groups": 64
+      }
+    },
+    {
+      "name": "basis-parent",
+      "hypothesis": "Registered compact refinement round 1: basis-parent",
+      "model": {
+        "name": "basis_readout_transformer",
+        "ffn": "fixed_basis",
+        "hidden": 512,
+        "groups": 16
+      }
+    },
+    {
+      "name": "basis-small-groups",
+      "hypothesis": "Registered compact refinement round 1: basis-small-groups",
+      "model": {
+        "name": "basis_readout_transformer",
+        "ffn": "fixed_basis",
+        "hidden": 512,
+        "groups": 32
+      }
+    }
+  ]
+}

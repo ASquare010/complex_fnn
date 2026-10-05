@@ -1,0 +1,660 @@
+{
+  "comparison_warnings": [],
+  "complete": true,
+  "completed_removals": 22,
+  "completed_runs": 22,
+  "decision": "Retire feature-flow: both dense quality margins fail on both corpora; diagonal wins both.",
+  "evaluated_checkpoint_hashes_intact": true,
+  "frozen_core_and_recipe_hashes_intact": true,
+  "results": {
+    "tinystories": {
+      "decision": {
+        "beats_once_and_diagonal": false,
+        "compact_loss_gain": 0.0032123549871104773,
+        "full_loss_cost": 0.026791530809090247,
+        "language_pass": false,
+        "strongest_compact_dense": "narrow-swiglu-calibrated",
+        "strongest_full": "full-swiglu-fused"
+      },
+      "variants": {
+        "feature-cached": {
+          "allocated_mib": 617.65966796875,
+          "ffn_parameters": 2162688,
+          "nll": 2.606072342807902,
+          "removal": {
+            "diagonal_m_nll": 2.6079409510164346,
+            "half_features_removed_nll": 2.6069488647500014,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "mixing": [
+              {
+                "max_abs": 0.09469230473041534,
+                "mean": 0.003966112621128559,
+                "std": 0.019490648061037064
+              },
+              {
+                "max_abs": 0.08878772705793381,
+                "mean": -0.0033096913248300552,
+                "std": 0.01742706634104252
+              },
+              {
+                "max_abs": 0.12570194900035858,
+                "mean": -0.002953220158815384,
+                "std": 0.02121950313448906
+              },
+              {
+                "max_abs": 0.1259639710187912,
+                "mean": -0.0064703007228672504,
+                "std": 0.02538513019680977
+              }
+            ],
+            "original_calibration_retained": true,
+            "removal_site": "even psi coordinates at every internal update; identity h retained",
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "single_step_nll": 2.6060861228522816,
+            "targets": 199936,
+            "trained_nll": 2.606072342807902,
+            "training_mean_output_nll": 8.423437819438158,
+            "zero_m_nll": 2.608531263207351
+          },
+          "training_seconds": 121.46325650002836
+        },
+        "feature-diagonal": {
+          "allocated_mib": 403.18310546875,
+          "ffn_parameters": 2099200,
+          "nll": 2.604415457624174,
+          "removal": {
+            "diagonal_m_nll": 2.604415457624174,
+            "half_features_removed_nll": 2.6044195885847534,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "mixing": [
+              {
+                "max_abs": 0.05200842767953873,
+                "mean": 0.0003778277605306357,
+                "std": 0.0033112261444330215
+              },
+              {
+                "max_abs": 0.061526909470558167,
+                "mean": -0.0003417512052692473,
+                "std": 0.0030305252876132727
+              },
+              {
+                "max_abs": 0.05072260648012161,
+                "mean": -0.00015194169827736914,
+                "std": 0.0024136288557201624
+              },
+              {
+                "max_abs": 0.06971096992492676,
+                "mean": -0.0001728000061120838,
+                "std": 0.0025745851453393698
+              }
+            ],
+            "original_calibration_retained": true,
+            "removal_site": "even psi coordinates at every internal update; identity h retained",
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "single_step_nll": 2.6044350952558726,
+            "targets": 199936,
+            "trained_nll": 2.604415457624174,
+            "training_mean_output_nll": 8.729917606837313,
+            "zero_m_nll": 2.6044997350812418
+          },
+          "training_seconds": 91.87781479995465
+        },
+        "feature-flow": {
+          "allocated_mib": 403.65966796875,
+          "ffn_parameters": 2162688,
+          "nll": 2.606495697275472,
+          "removal": {
+            "diagonal_m_nll": 2.608527282441319,
+            "half_features_removed_nll": 2.6073483309580943,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "mixing": [
+              {
+                "max_abs": 0.09197108447551727,
+                "mean": 0.00410088337957859,
+                "std": 0.019552918151021004
+              },
+              {
+                "max_abs": 0.0808112621307373,
+                "mean": -0.003182586282491684,
+                "std": 0.017157848924398422
+              },
+              {
+                "max_abs": 0.11508850753307343,
+                "mean": -0.002950629685074091,
+                "std": 0.02129635587334633
+              },
+              {
+                "max_abs": 0.13007451593875885,
+                "mean": -0.006698589771986008,
+                "std": 0.025279870256781578
+              }
+            ],
+            "original_calibration_retained": true,
+            "removal_site": "even psi coordinates at every internal update; identity h retained",
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "single_step_nll": 2.606476902198547,
+            "targets": 199936,
+            "trained_nll": 2.606495697275472,
+            "training_mean_output_nll": 8.603020896374339,
+            "zero_m_nll": 2.6090121165433096
+          },
+          "training_seconds": 89.15512610004225
+        },
+        "feature-once": {
+          "allocated_mib": 403.65966796875,
+          "ffn_parameters": 2162688,
+          "nll": 2.607807143549608,
+          "removal": {
+            "diagonal_m_nll": 2.6098380387974154,
+            "half_features_removed_nll": 2.6086542102652537,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "mixing": [
+              {
+                "max_abs": 0.07997540384531021,
+                "mean": 0.004062985070049763,
+                "std": 0.019448338076472282
+              },
+              {
+                "max_abs": 0.07431652396917343,
+                "mean": -0.003262598067522049,
+                "std": 0.01718890853226185
+              },
+              {
+                "max_abs": 0.1149962767958641,
+                "mean": -0.0030060792341828346,
+                "std": 0.021652964875102043
+              },
+              {
+                "max_abs": 0.1472206562757492,
+                "mean": -0.006414033006876707,
+                "std": 0.025446688756346703
+              }
+            ],
+            "original_calibration_retained": true,
+            "removal_site": "even psi coordinates at every internal update; identity h retained",
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "single_step_nll": 2.607807143549608,
+            "targets": 199936,
+            "trained_nll": 2.607807143549608,
+            "training_mean_output_nll": 8.909471094226715,
+            "zero_m_nll": 2.6103985392024667
+          },
+          "training_seconds": 88.35473069991713
+        },
+        "feature-plain": {
+          "allocated_mib": 403.15966796875,
+          "ffn_parameters": 2097152,
+          "nll": 2.604788927964761,
+          "removal": {
+            "diagonal_m_nll": 2.604788927964761,
+            "half_features_removed_nll": 2.604788927964761,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "mixing": [
+              {
+                "max_abs": 0.0,
+                "mean": 0.0,
+                "std": 0.0
+              },
+              {
+                "max_abs": 0.0,
+                "mean": 0.0,
+                "std": 0.0
+              },
+              {
+                "max_abs": 0.0,
+                "mean": 0.0,
+                "std": 0.0
+              },
+              {
+                "max_abs": 0.0,
+                "mean": 0.0,
+                "std": 0.0
+              }
+            ],
+            "original_calibration_retained": true,
+            "removal_site": "even psi coordinates at every internal update; identity h retained",
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "single_step_nll": 2.604788927964761,
+            "targets": 199936,
+            "trained_nll": 2.604788927964761,
+            "training_mean_output_nll": 8.668289311564076,
+            "zero_m_nll": 2.604788927964761
+          },
+          "training_seconds": 85.49863129998266
+        },
+        "full-gelu": {
+          "allocated_mib": 539.39404296875,
+          "ffn_parameters": 8454144,
+          "nll": 2.592983325220711,
+          "removal": {
+            "half_features_removed_nll": 2.90518856048584,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 199936,
+            "trained_nll": 2.592983325220711,
+            "training_mean_output_nll": 7.583977483146169
+          },
+          "training_seconds": 88.78121719983028
+        },
+        "full-swiglu-fused": {
+          "allocated_mib": 560.72216796875,
+          "ffn_parameters": 8454144,
+          "nll": 2.5384857773628187,
+          "removal": {
+            "half_features_removed_nll": 3.0304686952949944,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 199936,
+            "trained_nll": 2.5384857773628187,
+            "training_mean_output_nll": 9.228603846590284
+          },
+          "training_seconds": 89.96889120017295
+        },
+        "full-swiglu-kernel": {
+          "allocated_mib": 542.47216796875,
+          "ffn_parameters": 8454144,
+          "nll": 2.5442395399535664,
+          "removal": {
+            "half_features_removed_nll": 3.0158030757830785,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 199936,
+            "trained_nll": 2.5442395399535664,
+            "training_mean_output_nll": 9.090187273013301
+          },
+          "training_seconds": 94.44701399991754
+        },
+        "narrow-gelu": {
+          "allocated_mib": 404.37841796875,
+          "ffn_parameters": 2162688,
+          "nll": 2.6228650345845046,
+          "removal": {
+            "half_features_removed_nll": 3.007011880032079,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 199936,
+            "trained_nll": 2.6228650345845046,
+            "training_mean_output_nll": 8.029525068138993
+          },
+          "training_seconds": 81.09656920026464
+        },
+        "narrow-swiglu-calibrated": {
+          "allocated_mib": 406.15966796875,
+          "ffn_parameters": 2162688,
+          "nll": 2.614895670423129,
+          "removal": {
+            "half_features_removed_nll": 3.4019878450948053,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 199936,
+            "trained_nll": 2.614895670423129,
+            "training_mean_output_nll": 8.349485643999829
+          },
+          "training_seconds": 84.55410459994891
+        },
+        "narrow-swiglu-kernel": {
+          "allocated_mib": 406.15966796875,
+          "ffn_parameters": 2162688,
+          "nll": 2.6228965791025782,
+          "removal": {
+            "half_features_removed_nll": 3.332684593835652,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 199936,
+            "trained_nll": 2.6228965791025782,
+            "training_mean_output_nll": 8.568974596284873
+          },
+          "training_seconds": 85.35916390008788
+        }
+      }
+    },
+    "wikitext": {
+      "decision": {
+        "beats_once_and_diagonal": false,
+        "compact_loss_gain": 4.5423489496321245e-05,
+        "full_loss_cost": 0.014723334542319222,
+        "language_pass": false,
+        "strongest_compact_dense": "narrow-swiglu-kernel",
+        "strongest_full": "full-swiglu-fused"
+      },
+      "variants": {
+        "feature-cached": {
+          "allocated_mib": 617.65966796875,
+          "ffn_parameters": 2162688,
+          "nll": 4.291654060000465,
+          "removal": {
+            "diagonal_m_nll": 4.293415887015207,
+            "half_features_removed_nll": 4.292871781001016,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "mixing": [
+              {
+                "max_abs": 0.07942711561918259,
+                "mean": 0.006446031853556633,
+                "std": 0.020127933472394943
+              },
+              {
+                "max_abs": 0.09472589194774628,
+                "mean": -0.00551138911396265,
+                "std": 0.01960141584277153
+              },
+              {
+                "max_abs": 0.08625330030918121,
+                "mean": -0.001986138755455613,
+                "std": 0.021024607121944427
+              },
+              {
+                "max_abs": 0.12965717911720276,
+                "mean": -0.0027178346645087004,
+                "std": 0.025640860199928284
+              }
+            ],
+            "original_calibration_retained": true,
+            "removal_site": "even psi coordinates at every internal update; identity h retained",
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "single_step_nll": 4.291655389089433,
+            "targets": 322560,
+            "trained_nll": 4.291654060000465,
+            "training_mean_output_nll": 9.203910500662667,
+            "zero_m_nll": 4.294402865758018
+          },
+          "training_seconds": 122.03145359996415
+        },
+        "feature-diagonal": {
+          "allocated_mib": 403.18310546875,
+          "ffn_parameters": 2099200,
+          "nll": 4.293004157051207,
+          "removal": {
+            "diagonal_m_nll": 4.293004157051207,
+            "half_features_removed_nll": 4.29314247161623,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "mixing": [
+              {
+                "max_abs": 0.06263536214828491,
+                "mean": 0.000945853884331882,
+                "std": 0.005805873312056065
+              },
+              {
+                "max_abs": 0.05943845584988594,
+                "mean": -0.0002058323152596131,
+                "std": 0.0023153142537921667
+              },
+              {
+                "max_abs": 0.05231058970093727,
+                "mean": -2.8147027478553355e-05,
+                "std": 0.002436118433251977
+              },
+              {
+                "max_abs": 0.07800045609474182,
+                "mean": 6.0170852520968765e-05,
+                "std": 0.003028051694855094
+              }
+            ],
+            "original_calibration_retained": true,
+            "removal_site": "even psi coordinates at every internal update; identity h retained",
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "single_step_nll": 4.2930131412687755,
+            "targets": 322560,
+            "trained_nll": 4.293004157051207,
+            "training_mean_output_nll": 9.44018065437438,
+            "zero_m_nll": 4.29321365810576
+          },
+          "training_seconds": 90.0809723999264
+        },
+        "feature-flow": {
+          "allocated_mib": 403.65966796875,
+          "ffn_parameters": 2162688,
+          "nll": 4.30001734324864,
+          "removal": {
+            "diagonal_m_nll": 4.301878423539419,
+            "half_features_removed_nll": 4.3013982303558835,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "mixing": [
+              {
+                "max_abs": 0.08405716717243195,
+                "mean": 0.006475022993981838,
+                "std": 0.02015823684632778
+              },
+              {
+                "max_abs": 0.11813575774431229,
+                "mean": -0.005316247697919607,
+                "std": 0.019496899098157883
+              },
+              {
+                "max_abs": 0.10034378618001938,
+                "mean": -0.002124237595126033,
+                "std": 0.02118946984410286
+              },
+              {
+                "max_abs": 0.12837550044059753,
+                "mean": -0.002693125046789646,
+                "std": 0.025875575840473175
+              }
+            ],
+            "original_calibration_retained": true,
+            "removal_site": "even psi coordinates at every internal update; identity h retained",
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "single_step_nll": 4.300058551061721,
+            "targets": 322560,
+            "trained_nll": 4.30001734324864,
+            "training_mean_output_nll": 9.804952306596059,
+            "zero_m_nll": 4.303128964560372
+          },
+          "training_seconds": 87.64879319996544
+        },
+        "feature-once": {
+          "allocated_mib": 403.65966796875,
+          "ffn_parameters": 2162688,
+          "nll": 4.296649165380568,
+          "removal": {
+            "diagonal_m_nll": 4.298794249882774,
+            "half_features_removed_nll": 4.29810449055263,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "mixing": [
+              {
+                "max_abs": 0.08786820620298386,
+                "mean": 0.006484825164079666,
+                "std": 0.020071696490049362
+              },
+              {
+                "max_abs": 0.09100944548845291,
+                "mean": -0.005402006208896637,
+                "std": 0.019537346437573433
+              },
+              {
+                "max_abs": 0.11080799996852875,
+                "mean": -0.0022205894347280264,
+                "std": 0.02138664945960045
+              },
+              {
+                "max_abs": 0.13847477734088898,
+                "mean": -0.002762350719422102,
+                "std": 0.02558950148522854
+              }
+            ],
+            "original_calibration_retained": true,
+            "removal_site": "even psi coordinates at every internal update; identity h retained",
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "single_step_nll": 4.296649165380568,
+            "targets": 322560,
+            "trained_nll": 4.296649165380568,
+            "training_mean_output_nll": 9.787180282956077,
+            "zero_m_nll": 4.3000221873086595
+          },
+          "training_seconds": 89.73856430009619
+        },
+        "feature-plain": {
+          "allocated_mib": 403.15966796875,
+          "ffn_parameters": 2097152,
+          "nll": 4.296418648674375,
+          "removal": {
+            "diagonal_m_nll": 4.296418648674375,
+            "half_features_removed_nll": 4.296418648674375,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "mixing": [
+              {
+                "max_abs": 0.0,
+                "mean": 0.0,
+                "std": 0.0
+              },
+              {
+                "max_abs": 0.0,
+                "mean": 0.0,
+                "std": 0.0
+              },
+              {
+                "max_abs": 0.0,
+                "mean": 0.0,
+                "std": 0.0
+              },
+              {
+                "max_abs": 0.0,
+                "mean": 0.0,
+                "std": 0.0
+              }
+            ],
+            "original_calibration_retained": true,
+            "removal_site": "even psi coordinates at every internal update; identity h retained",
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "single_step_nll": 4.296418648674375,
+            "targets": 322560,
+            "trained_nll": 4.296418648674375,
+            "training_mean_output_nll": 9.176047682383704,
+            "zero_m_nll": 4.296418648674375
+          },
+          "training_seconds": 88.23613429995021
+        },
+        "full-gelu": {
+          "allocated_mib": 539.39404296875,
+          "ffn_parameters": 8454144,
+          "nll": 4.2691681528848315,
+          "removal": {
+            "half_features_removed_nll": 4.625870400383359,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 322560,
+            "trained_nll": 4.2691681528848315,
+            "training_mean_output_nll": 10.499083137512207
+          },
+          "training_seconds": 89.11510920004366
+        },
+        "full-swiglu-fused": {
+          "allocated_mib": 560.72216796875,
+          "ffn_parameters": 8454144,
+          "nll": 4.237625367300851,
+          "removal": {
+            "half_features_removed_nll": 4.771780961657328,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 322560,
+            "trained_nll": 4.237625367300851,
+            "training_mean_output_nll": 12.236744605170356
+          },
+          "training_seconds": 92.88588679997338
+        },
+        "full-swiglu-kernel": {
+          "allocated_mib": 540.53466796875,
+          "ffn_parameters": 8454144,
+          "nll": 4.239025527711899,
+          "removal": {
+            "half_features_removed_nll": 4.758692488594661,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 322560,
+            "trained_nll": 4.239025527711899,
+            "training_mean_output_nll": 11.917760954962837
+          },
+          "training_seconds": 89.55567489986424
+        },
+        "narrow-gelu": {
+          "allocated_mib": 404.37841796875,
+          "ffn_parameters": 2162688,
+          "nll": 4.329682661995055,
+          "removal": {
+            "half_features_removed_nll": 4.772863987513951,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 322560,
+            "trained_nll": 4.329682661995055,
+            "training_mean_output_nll": 11.082305799211774
+          },
+          "training_seconds": 81.19249329992454
+        },
+        "narrow-swiglu-calibrated": {
+          "allocated_mib": 406.15966796875,
+          "ffn_parameters": 2162688,
+          "nll": 4.309997322445824,
+          "removal": {
+            "half_features_removed_nll": 5.049348970443483,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 322560,
+            "trained_nll": 4.309997322445824,
+            "training_mean_output_nll": 10.373492237878224
+          },
+          "training_seconds": 86.08516099979897
+        },
+        "narrow-swiglu-kernel": {
+          "allocated_mib": 406.15966796875,
+          "ffn_parameters": 2162688,
+          "nll": 4.300212673913865,
+          "removal": {
+            "half_features_removed_nll": 4.986005089774964,
+            "mean_sampler_seed": 2027,
+            "mean_training_batches": 32,
+            "same_arithmetic_backend": true,
+            "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+            "targets": 322560,
+            "trained_nll": 4.300212673913865,
+            "training_mean_output_nll": 9.499983951023646
+          },
+          "training_seconds": 84.58206890014117
+        }
+      }
+    }
+  },
+  "scope": "One development seed; fixed allocation retired; no qualification or confirmation.",
+  "source_sha256": "5875cc325b8f29b02c9361e02f15d2444deb92e1a9f762c51a809a7aae2993f8",
+  "test_evaluation_records_present": false
+}

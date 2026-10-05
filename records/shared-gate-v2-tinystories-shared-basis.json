@@ -1,0 +1,111 @@
+{
+  "config": {
+    "dataset": "dump/data/tinystories-v2",
+    "hypothesis": "Reuse detectors to expose twice as many features as the equal-weight compact dense bank.",
+    "model": {
+      "context": 256,
+      "ffn": "shared_swiglu",
+      "groups": 8,
+      "heads": 16,
+      "hidden": 608,
+      "layers": 4,
+      "loops": 1,
+      "name": "shared_basis_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "shared-gate-v2-tinystories-shared-basis-s101-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "732dc5f928a9363373d4dca81dbec6dda353688ae30ee256b9a34ed47c591904",
+      "complete_split": true,
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 2.6036953553652795,
+      "perplexity": 13.513583372982088,
+      "split": "valid",
+      "step": 2000,
+      "targets": 199936
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 2.6369415931403637,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 1867776,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 7471104,
+      "total_parameters": 8163840
+    },
+    "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Reuse detectors to expose twice as many features as the equal-weight compact dense bank.",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "shared_swiglu",
+      "groups": 8,
+      "heads": 16,
+      "hidden": 608,
+      "layers": 4,
+      "loops": 1,
+      "name": "shared_basis_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "shared-gate-v2-tinystories-shared-basis-s101-lr0.0006",
+    "peak_training_allocated_bytes": 446336512,
+    "peak_training_reserved_bytes": 509607936,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T052736Z-1c407023",
+    "seed": 101,
+    "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 51035.751767651986,
+    "training_seconds": 80.25746380003693,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 2.6369415931403637,
+      "perplexity": 13.97041100165054,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 90.46542750000299
+  }
+}

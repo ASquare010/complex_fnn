@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "device": "cpu",
+      "mode": "feature_flow",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cuda",
+      "mode": "feature_flow",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cuda",
+      "mode": "feature_flow",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cpu",
+      "mode": "feature_once",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cuda",
+      "mode": "feature_once",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cuda",
+      "mode": "feature_once",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cpu",
+      "mode": "feature_diagonal",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cuda",
+      "mode": "feature_diagonal",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cuda",
+      "mode": "feature_diagonal",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cpu",
+      "mode": "feature_plain",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cuda",
+      "mode": "feature_plain",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cuda",
+      "mode": "feature_plain",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cpu",
+      "mode": "feature_cached",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cuda",
+      "mode": "feature_cached",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "device": "cuda",
+      "mode": "feature_cached",
+      "weights_counts_outputs_gradients_exact": true
+    },
+    {
+      "exact_production_cpu_resume": true,
+      "full_run": "dump\\runs\\20261004T125848Z-9785f761",
+      "mode": "feature_flow",
+      "resumed_run": "dump\\runs\\20261004T125849Z-c437713c"
+    },
+    {
+      "exact_production_cpu_resume": true,
+      "full_run": "dump\\runs\\20261004T125850Z-a9de3392",
+      "mode": "feature_once",
+      "resumed_run": "dump\\runs\\20261004T125850Z-99c913b8"
+    },
+    {
+      "exact_production_cpu_resume": true,
+      "full_run": "dump\\runs\\20261004T125851Z-177a37a3",
+      "mode": "feature_diagonal",
+      "resumed_run": "dump\\runs\\20261004T125851Z-0767ad7f"
+    },
+    {
+      "exact_production_cpu_resume": true,
+      "full_run": "dump\\runs\\20261004T125852Z-52e33bd3",
+      "mode": "feature_plain",
+      "resumed_run": "dump\\runs\\20261004T125852Z-4be5e1a1"
+    },
+    {
+      "exact_production_cpu_resume": true,
+      "full_run": "dump\\runs\\20261004T125853Z-f012a600",
+      "mode": "feature_cached",
+      "resumed_run": "dump\\runs\\20261004T125853Z-e4af40cc"
+    },
+    {
+      "control": "variance-calibrated compact SwiGLU",
+      "expected_gaussian_residual_variance_ratio": 1.0,
+      "gain": 1.9771421064483223,
+      "only_down_initialization_changed": true,
+      "parameters": 2162688
+    },
+    {
+      "exact_production_cpu_resume": true,
+      "mode": "calibrated_dense"
+    }
+  ],
+  "kernel_prototype_sha256": "a870a2cebab7a2853220ecec29ae164e0063eda675f8d1eb9f77a119a8c308e5",
+  "prototype_sha256": "097b48618855bdb9b2a7283b6dfcd58ee16aff0d18f9a868cc0758fbc0222816",
+  "scope": "production CPU/CUDA equivalence and exact shared-Trainer CPU resume",
+  "source_sha256": "5875cc325b8f29b02c9361e02f15d2444deb92e1a9f762c51a809a7aae2993f8"
+}

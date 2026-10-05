@@ -1,8 +1,0 @@
-{
-  "selected_label": "multiplicative_bezier_1p_s29_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 0.9097827623287836,
-    "0.003": 0.948834240436554
-  }
-}

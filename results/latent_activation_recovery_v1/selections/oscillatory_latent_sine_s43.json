@@ -1,8 +1,0 @@
-{
-  "selected_cell": "oscillatory_latent_sine_s43_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "oscillatory_latent_sine_s43_lr1000": 1.0102905929088593,
-    "oscillatory_latent_sine_s43_lr3000": 1.0052533149719238
-  }
-}

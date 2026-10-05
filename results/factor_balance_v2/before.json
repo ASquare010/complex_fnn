@@ -1,9 +1,0 @@
-{
-  "original_protocol_sha256": "a3ad1e37cc75bfa41198bd40bb1b4f64428dbb1e4599eb0343ea27f4c444b680",
-  "original_failure_sha256": "2e7dce11284b65da26f2a4a4848aace69fb57413b3cbc2baa2ffa288cd8f990d",
-  "original_harness_sha256": "6f1b993a5c7c6d899db28708bfac14ebccb8f7a2b026696c0f9a70711c1886c0",
-  "original_artifacts": {
-    "results/factor_balance_v1/checks/s17_0_l0_cpu.json": "f6969c285560dfa807224af9c16cf28de7b01ed70e02d70c8bfdc3a76be5dca2",
-    "results/factor_balance_v1/checks/s17_0_l0_cpu.pt": "4b0e7348cf5455e2df34ca417391b307b210132703d6156ff6317f764242b9ad"
-  }
-}

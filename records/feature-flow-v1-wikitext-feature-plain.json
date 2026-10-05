@@ -1,0 +1,117 @@
+{
+  "config": {
+    "dataset": "dump/data/wikitext2-v2",
+    "hypothesis": "Registered feature-flow candidate/control",
+    "model": {
+      "context": 256,
+      "ffn": "feature_plain",
+      "ffn_output_init_scale": 1.0,
+      "groups": 16,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "feature_flow_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "feature-flow-v1-wikitext-feature-plain-s101-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "77cfc67445784e4cad05477da0ae1a219289adc663b5ae53e8418eed8df6c857",
+      "complete_split": true,
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 4.296418648674375,
+      "perplexity": 73.43632092163288,
+      "split": "valid",
+      "step": 2000,
+      "targets": 322560
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 4.222033426165581,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2097152,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 4194304,
+      "total_parameters": 8393216
+    },
+    "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Registered feature-flow candidate/control",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "feature_plain",
+      "ffn_output_init_scale": 1.0,
+      "groups": 16,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "feature_flow_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "feature-flow-v1-wikitext-feature-plain-s101-lr0.0006",
+    "peak_training_allocated_bytes": 422743552,
+    "peak_training_reserved_bytes": 471859200,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T133642Z-76296cba",
+    "seed": 101,
+    "source_sha256": "5875cc325b8f29b02c9361e02f15d2444deb92e1a9f762c51a809a7aae2993f8",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 46420.89131053774,
+    "training_seconds": 88.23613429995021,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 4.222033426165581,
+      "perplexity": 68.17196610506663,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 99.46510719999787
+  }
+}

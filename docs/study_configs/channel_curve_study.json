@@ -1,0 +1,116 @@
+{
+  "dataset": "dump/data/tinystories-v2",
+  "learning_rates": [
+    0.0006
+  ],
+  "model": {
+    "context": 256,
+    "heads": 16,
+    "layers": 4,
+    "rope_base": 10000,
+    "vocab_size": 4096,
+    "width": 512
+  },
+  "output": "dump/channel-curve-language-v2/tinystories",
+  "seeds": [
+    101
+  ],
+  "training": {
+    "batch_size": 8,
+    "device": "cuda",
+    "eval_batches": 32,
+    "eval_every": 200,
+    "precision": "bf16",
+    "steps": 2000,
+    "threads": 4,
+    "warmup_steps": 200
+  },
+  "variants": [
+    {
+      "hypothesis": "Registered coupled-curve control: full-swiglu-kernel",
+      "model": {
+        "ffn": "swiglu_kernel",
+        "groups": 64,
+        "hidden": 1376,
+        "name": "base_transformer"
+      },
+      "name": "full-swiglu-kernel"
+    },
+    {
+      "hypothesis": "Registered coupled-curve control: full-swiglu-fused",
+      "model": {
+        "ffn": "swiglu_fused",
+        "groups": 64,
+        "hidden": 1376,
+        "name": "base_transformer"
+      },
+      "name": "full-swiglu-fused"
+    },
+    {
+      "hypothesis": "Registered coupled-curve control: full-gelu",
+      "model": {
+        "ffn": "gelu",
+        "groups": 64,
+        "hidden": 2064,
+        "name": "base_transformer"
+      },
+      "name": "full-gelu"
+    },
+    {
+      "hypothesis": "Registered coupled-curve control: narrow-swiglu-kernel",
+      "model": {
+        "ffn": "swiglu_kernel",
+        "groups": 64,
+        "hidden": 346,
+        "name": "base_transformer"
+      },
+      "name": "narrow-swiglu-kernel"
+    },
+    {
+      "hypothesis": "Registered coupled-curve control: narrow-gelu",
+      "model": {
+        "ffn": "gelu",
+        "groups": 64,
+        "hidden": 518,
+        "name": "base_transformer"
+      },
+      "name": "narrow-gelu"
+    },
+    {
+      "hypothesis": "Registered coupled-curve hypothesis: channel-curve",
+      "model": {
+        "ffn": "channel_curve",
+        "hidden": 512,
+        "name": "channel_curve_transformer"
+      },
+      "name": "channel-curve"
+    },
+    {
+      "hypothesis": "Registered coupled-curve hypothesis: self-curve",
+      "model": {
+        "ffn": "self_curve",
+        "hidden": 512,
+        "name": "channel_curve_transformer"
+      },
+      "name": "self-curve"
+    },
+    {
+      "hypothesis": "Registered coupled-curve hypothesis: fixed-shape",
+      "model": {
+        "ffn": "fixed_shape",
+        "hidden": 512,
+        "name": "channel_curve_transformer"
+      },
+      "name": "fixed-shape"
+    },
+    {
+      "hypothesis": "Registered coupled-curve hypothesis: plain-silu",
+      "model": {
+        "ffn": "plain",
+        "hidden": 512,
+        "name": "channel_curve_transformer"
+      },
+      "name": "plain-silu"
+    }
+  ]
+}

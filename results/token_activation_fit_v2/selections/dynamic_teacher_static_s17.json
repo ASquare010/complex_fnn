@@ -1,8 +1,0 @@
-{
-  "selected_cell": "dynamic_teacher_static_s17_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "dynamic_teacher_static_s17_lr1000": 0.8406312068303426,
-    "dynamic_teacher_static_s17_lr3000": 0.6167990962664286
-  }
-}

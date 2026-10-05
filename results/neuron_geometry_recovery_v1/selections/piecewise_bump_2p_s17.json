@@ -1,8 +1,0 @@
-{
-  "selected_label": "piecewise_bump_2p_s17_lr3000",
-  "selected_rate": 0.003,
-  "selection_mse_by_rate": {
-    "0.001": 0.5594444250067075,
-    "0.003": 0.5012311860918999
-  }
-}

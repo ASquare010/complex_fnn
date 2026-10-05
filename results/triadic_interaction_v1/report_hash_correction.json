@@ -1,9 +1,0 @@
-{
-  "status": "IDENTIFIED",
-  "scope": "Post-audit NumPy checker bug, not a tensor or training failure",
-  "error": "Checker omitted dtype/shape JSON header from established tensor_sha digest",
-  "authoritative_definition": "results/neuron_geometry_v1/source/study.py:35",
-  "failed_source_sha256": "5f17c87fd6d59b8277930b69bdde31e3c524c1c41513f7490678e4698b48fe19",
-  "change": "Add exactly the existing torch.int64 and shape header; keep numeric tolerances unchanged",
-  "original_attempt_preserved": true
-}

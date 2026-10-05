@@ -1,0 +1,53 @@
+{
+  "device": "CPU",
+  "dtype": "numpy.float64",
+  "groups": 2,
+  "matrix_first_derivative_difference_max": 1.1102230246251565e-11,
+  "measurements": [
+    {
+      "epsilon": 0.2,
+      "output_delta_max": 0.00018303393806071155,
+      "output_residual_over_epsilon_cubed": 0.0011639759496985776,
+      "output_second_order_residual_max": 9.311807597588623e-06,
+      "state_delta_max": 0.0002621667676881989,
+      "state_residual_over_epsilon_cubed": 0.0005037717877566472,
+      "state_second_order_residual_max": 4.0301743020531786e-06
+    },
+    {
+      "epsilon": 0.1,
+      "output_delta_max": 4.511348693317374e-05,
+      "output_residual_over_epsilon_cubed": 0.0011504640445731333,
+      "output_second_order_residual_max": 1.1504640445731337e-06,
+      "state_delta_max": 6.503582573336164e-05,
+      "state_residual_over_epsilon_cubed": 0.0005016773868252079,
+      "state_second_order_residual_max": 5.01677386825208e-07
+    },
+    {
+      "epsilon": 0.05,
+      "output_delta_max": 1.119908110386314e-05,
+      "output_residual_over_epsilon_cubed": 0.0011437853280361478,
+      "output_second_order_residual_max": 1.429731660045185e-07,
+      "state_delta_max": 1.619611597047932e-05,
+      "state_residual_over_epsilon_cubed": 0.000500631070761686,
+      "state_second_order_residual_max": 6.257888384521076e-08
+    },
+    {
+      "epsilon": 0.025,
+      "output_delta_max": 2.7899409767440098e-06,
+      "output_residual_over_epsilon_cubed": 0.0011404651081894086,
+      "output_second_order_residual_max": 1.7819767315459513e-08,
+      "state_delta_max": 4.041198461757212e-06,
+      "state_residual_over_epsilon_cubed": 0.0005001081663158143,
+      "state_second_order_residual_max": 7.8141900986846e-09
+    }
+  ],
+  "registration_sha256": "dabbd79388a295a720f646665e51be6536b965d626af7d61d3e2b1bc7f5703bd",
+  "scope": "Synthetic Taylor audit only; no trained weights, data, efficiency or quality claim",
+  "seed": 7103,
+  "shape": [
+    13,
+    8
+  ],
+  "source_sha256": "31358c22c6ec73cecc6d3988aca6e95411cadcf50ad2eb2417ef933091d7e546",
+  "zero_m_state_exact": true
+}

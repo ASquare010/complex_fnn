@@ -1,0 +1,34 @@
+{
+  "dataset": "dump/data/tinystories-v2",
+  "hypothesis": "Registered compact refinement round 1: signed-parent",
+  "model": {
+    "context": 256,
+    "ffn": "signed_linear",
+    "ffn_output_init_scale": 1.0,
+    "groups": 64,
+    "heads": 16,
+    "hidden": 576,
+    "input_rank": 128,
+    "layers": 4,
+    "loops": 1,
+    "name": "signed_context_transformer",
+    "output_rank": 128,
+    "rope_base": 10000,
+    "vocab_size": 4096,
+    "width": 512
+  },
+  "name": "compact-refinement-v1-tinystories-signed-parent-s101-lr0.0006",
+  "training": {
+    "batch_size": 8,
+    "device": "cuda",
+    "eval_batches": 32,
+    "eval_every": 200,
+    "learning_rate": 0.0006,
+    "precision": "bf16",
+    "seed": 101,
+    "steps": 2000,
+    "threads": 4,
+    "warmup_steps": 200,
+    "weight_decay": 0.1
+  }
+}

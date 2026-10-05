@@ -1,0 +1,16 @@
+{
+  "run": "dump/runs/20261005T043839Z-8d5b5e15",
+  "record": "records/compact-final-v1-wikitext-curve-wide-valid.json",
+  "training_seconds_raw": 36970.15014889983,
+  "wall_seconds_raw": 37011.67581439999,
+  "timing_suitable_for_speed_comparison": false,
+  "finding": "Windows standby and hibernation overlapped this run. The elapsed training timer includes host inactivity; retain raw timing but exclude it from speed conclusions.",
+  "evidence_source": "Windows System event log, queried within the run interval on 2026-10-05",
+  "events": [
+    {"time": "2026-10-04T21:38:57.4321305-07:00", "provider": "Microsoft-Windows-Kernel-Power", "id": 506, "message": "Entering Modern Standby; Reason: Lid."},
+    {"time": "2026-10-04T22:43:12.4432238-07:00", "provider": "Microsoft-Windows-Kernel-Power", "id": 42, "message": "Entering sleep; Hibernate from Sleep - Standby Battery Budget Exceeded."},
+    {"time": "2026-10-05T07:49:57.8611094-07:00", "provider": "Microsoft-Windows-Power-Troubleshooter", "id": 1, "sleep_time_utc": "2026-10-05T05:43:03.620965600Z", "wake_time_utc": "2026-10-05T14:49:56.784376900Z", "message": "Returned from a low power state; Wake Source: Unknown."}
+  ],
+  "handling": "No sleep-subtracted compute estimate, no record rewriting, and no quality-score exclusion. Completion, checkpoint and split integrity remain subject to the final audit.",
+  "scope_limit": "These events do not explain the earlier resource-profile timing variation."
+}

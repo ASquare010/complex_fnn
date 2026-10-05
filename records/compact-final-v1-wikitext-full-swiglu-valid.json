@@ -1,0 +1,117 @@
+{
+  "config": {
+    "dataset": "dump/data/wikitext2-v2",
+    "hypothesis": "Full native SwiGLU reference",
+    "model": {
+      "context": 256,
+      "ffn": "swiglu_fused",
+      "ffn_output_init_scale": 1.0,
+      "groups": 64,
+      "heads": 16,
+      "hidden": 1376,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "base_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "compact-final-v1-wikitext-full-swiglu-s509-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 509,
+      "steps": 8000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "d3ae064cbba9e116a1f0544370c308ebf0823e6d7c46c4f552cf17d832862fbc",
+      "complete_split": true,
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 3.991951612442259,
+      "perplexity": 54.16048656686466,
+      "split": "valid",
+      "step": 8000,
+      "targets": 322560
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 3.8532346189022064,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 8454144,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 16908288,
+      "total_parameters": 14750208
+    },
+    "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Full native SwiGLU reference",
+    "input_tokens_including_padding": 16384000,
+    "model": {
+      "context": 256,
+      "ffn": "swiglu_fused",
+      "ffn_output_init_scale": 1.0,
+      "groups": 64,
+      "heads": 16,
+      "hidden": 1376,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "base_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "compact-final-v1-wikitext-full-swiglu-s509-lr0.0006",
+    "peak_training_allocated_bytes": 587959808,
+    "peak_training_reserved_bytes": 631242752,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261005T150845Z-65e49e55",
+    "seed": 509,
+    "source_sha256": "c0f7bc029505e815268888294f40c139c4d52c1c6164c008262739e06026ae9a",
+    "step": 8000,
+    "trained_target_tokens": 16384000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 509,
+      "steps": 8000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 39464.67611137209,
+    "training_seconds": 415.1560740993591,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 3.8631454557180405,
+      "perplexity": 47.61488658463484,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 475.31735949998256
+  }
+}

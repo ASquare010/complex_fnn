@@ -1,8 +1,0 @@
-{
-  "selected_label": "multiplicative_groupsort_s43_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 0.9361656407515208,
-    "0.003": 0.9641862759987513
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "selected_label": "smooth_bump_2p_s43_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 0.5585066402951876,
-    "0.003": 0.5869688391685486
-  }
-}

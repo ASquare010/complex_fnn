@@ -1,8 +1,0 @@
-{
-  "selected_cell": "piecewise_latent_tanh_s29_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "piecewise_latent_tanh_s29_lr1000": 0.708258127172788,
-    "piecewise_latent_tanh_s29_lr3000": 0.6044933696587881
-  }
-}

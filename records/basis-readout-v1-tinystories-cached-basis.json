@@ -1,0 +1,115 @@
+{
+  "config": {
+    "dataset": "dump/data/tinystories-v2",
+    "hypothesis": "Registered basis-readout candidate/control: cached-basis",
+    "model": {
+      "context": 256,
+      "ffn": "cached_basis",
+      "groups": 16,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "basis_readout_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "basis-readout-v1-tinystories-cached-basis-s101-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "b406308396da522feef69fa2269faf99702410dd4d306bc2de6c6db3ca622a30",
+      "complete_split": true,
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 2.6109485736119153,
+      "perplexity": 13.611956672708917,
+      "split": "valid",
+      "step": 2000,
+      "targets": 199936
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 2.6436830051243305,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2490368,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 4980736,
+      "total_parameters": 8786432
+    },
+    "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Registered basis-readout candidate/control: cached-basis",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "cached_basis",
+      "groups": 16,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "basis_readout_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "basis-readout-v1-tinystories-cached-basis-s101-lr0.0006",
+    "peak_training_allocated_bytes": 636964352,
+    "peak_training_reserved_bytes": 698351616,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T111049Z-083fa21c",
+    "seed": 101,
+    "source_sha256": "b05094039e85d4a3017d271347ebe09b15f4c5b4a33c15d21582ee5987ea993a",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 42026.26915152708,
+    "training_seconds": 97.46285080009693,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 2.6436830051243305,
+      "perplexity": 14.064909466453383,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 109.19229529999575
+  }
+}

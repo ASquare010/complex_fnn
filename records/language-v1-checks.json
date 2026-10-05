@@ -1,0 +1,59 @@
+{
+  "causality": true,
+  "counts": {
+    "attention": "full causal multi-head; one pass per block",
+    "ffn_parameters": 345408,
+    "ffn_passes": 1,
+    "ffn_projection_flops_per_token": 688128,
+    "total_parameters": 1723392
+  },
+  "datasets": {
+    "tinystories-v2": {
+      "manifest_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "splits": {
+        "test": {
+          "documents": 1000,
+          "removed_exact_duplicates": 0,
+          "tokens": 229270
+        },
+        "train": {
+          "documents": 49900,
+          "removed_exact_duplicates": 100,
+          "tokens": 11340178
+        },
+        "valid": {
+          "documents": 1000,
+          "removed_exact_duplicates": 0,
+          "tokens": 200105
+        }
+      },
+      "validation_targets": 199936
+    },
+    "wikitext2-v2": {
+      "manifest_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "splits": {
+        "test": {
+          "documents": 62,
+          "removed_exact_duplicates": 0,
+          "tokens": 368043
+        },
+        "train": {
+          "documents": 624,
+          "removed_exact_duplicates": 5,
+          "tokens": 3083650
+        },
+        "valid": {
+          "documents": 60,
+          "removed_exact_duplicates": 0,
+          "tokens": 322802
+        }
+      },
+      "validation_targets": 322560
+    }
+  },
+  "fused_swiglu_weights_outputs_gradients": true,
+  "maxout_gradcheck": true,
+  "maxout_independent_reference": true,
+  "split_hashes_disjoint": true,
+  "token_locality": true
+}

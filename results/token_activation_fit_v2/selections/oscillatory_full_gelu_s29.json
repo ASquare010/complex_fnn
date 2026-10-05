@@ -1,8 +1,0 @@
-{
-  "selected_cell": "oscillatory_full_gelu_s29_lr1000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "oscillatory_full_gelu_s29_lr1000": 1.034040371576945,
-    "oscillatory_full_gelu_s29_lr3000": 1.0686983466148376
-  }
-}

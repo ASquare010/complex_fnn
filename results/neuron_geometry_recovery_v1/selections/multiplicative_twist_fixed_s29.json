@@ -1,8 +1,0 @@
-{
-  "selected_label": "multiplicative_twist_fixed_s29_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 0.8993254552284876,
-    "0.003": 0.9475259979565939
-  }
-}

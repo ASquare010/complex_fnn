@@ -1,8 +1,0 @@
-{
-  "scope": "Explicit runtime recovery of post-audit diagnostics only",
-  "python": "C:/Users/Cuebric/AppData/Roaming/uv/python/cpython-3.12.9-windows-x86_64-none/python.exe",
-  "package_path": "C:/Users/Cuebric/Desktop/Git/complex_fnn/.venv/Lib/site-packages",
-  "source_sha256": "3f39e6d6443915fbf9cc062eb649f0de4400aec0e8c78f76162baa308f3f5d49",
-  "numerical_changes": false,
-  "training_or_audit_retries": 0
-}

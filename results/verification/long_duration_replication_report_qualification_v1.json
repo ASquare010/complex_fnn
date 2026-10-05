@@ -1,6 +1,0 @@
-{
-  "failure_record_sha256": "8150544c26737f79d94a38a76dc8fa50fb8c90dd96fa684dfb36f461522ce368",
-  "failure_log_sha256": "170c95ca07689eb3447c45df7c411246a0c7ef3b99413c4658e253797eb27222",
-  "diagnosis": "Access violation in fontTools.agl._builddicts during Matplotlib import before report function execution. Existing verified report/result remains; no training or test process is live. Root cause unresolved.",
-  "action": "One source-identical report continuation; no dependency, data, code, test assertion, NN, or experiment change. Preserve failure."
-}

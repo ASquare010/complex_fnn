@@ -1,50 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "complex-fnn"
-version = "0.1.0"
-description = "Controlled research on parameter-efficient Transformer FFNs"
+version = "0.2.0"
+description = "Atlas: controlled experiments on compact reusable computation"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "matplotlib>=3.10",
-    "numpy>=2.0",
-    "tokenizers>=0.21",
-    "torch>=2.14.0",
-    "torchvision>=0.29.0",
-]
+dependencies = ["numpy>=2,<3", "torch>=2.6,<3", "tokenizers>=0.21,<1"]
 
 [project.optional-dependencies]
-compile = [
-    "triton-windows==3.8.0.post28 ; sys_platform == 'win32'",
-]
-data = [
-    "pyarrow>=25.0.1",
-]
-
-[tool.uv.sources]
-torch = { index = "pytorch-cu132" }
-torchvision = { index = "pytorch-cu132" }
-
-[[tool.uv.index]]
-url = "https://pypi.org/simple"
+data = ["datasets>=3.6,<5"]
 
 [dependency-groups]
-dev = [
-    "pytest>=9.1.1",
-    "ruff>=0.16.6",
-]
+dev = ["ruff>=0.11,<1"]
 
-[[tool.uv.index]]
-name = "pytorch-cu132"
-url = "https://download.pytorch.org/whl/cu132"
-explicit = true
+[project.scripts]
+fnnlab = "main:main"
 
-[tool.pytest.ini_options]
-pythonpath = ["."]
-testpaths = ["tests"]
+[tool.setuptools]
+py-modules = ["main", "settings", "trainer", "experiments", "storage", "leaderboard"]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+config = ["*.json", "data/*.json"]
 
 [tool.ruff]
 line-length = 100
-extend-exclude = ["research/archive"]
+extend-exclude = ["dump"]
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I"]

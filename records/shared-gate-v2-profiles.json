@@ -1,0 +1,908 @@
+{
+  "decisions": {
+    "tinystories": {
+      "gate-transport": {
+        "comparisons": {
+          "full-gelu": {
+            "memory_reduction": 0.1792558555524777,
+            "passes": false,
+            "speed_ratio": 1.0101061584767372
+          },
+          "full-swiglu-fused": {
+            "memory_reduction": 0.2104304298376548,
+            "passes": true,
+            "speed_ratio": 1.0193876895204872
+          }
+        },
+        "passes": false,
+        "stats": {
+          "peak_allocated_bytes": 464208896,
+          "tokens_per_second": 48462.95295941861
+        }
+      },
+      "shared-basis": {
+        "comparisons": {
+          "full-gelu": {
+            "memory_reduction": 0.21085601415072985,
+            "passes": true,
+            "speed_ratio": 1.0929912450411114
+          },
+          "full-swiglu-fused": {
+            "memory_reduction": 0.24083031000771582,
+            "passes": true,
+            "speed_ratio": 1.103034379702021
+          }
+        },
+        "passes": true,
+        "stats": {
+          "peak_allocated_bytes": 446336000,
+          "tokens_per_second": 52439.620181469916
+        }
+      }
+    },
+    "wikitext": {
+      "gate-transport": {
+        "comparisons": {
+          "full-gelu": {
+            "memory_reduction": 0.1792558555524777,
+            "passes": false,
+            "speed_ratio": 0.9979357050849376
+          },
+          "full-swiglu-fused": {
+            "memory_reduction": 0.2104304298376548,
+            "passes": true,
+            "speed_ratio": 1.0518761328935777
+          }
+        },
+        "passes": false,
+        "stats": {
+          "peak_allocated_bytes": 464208896,
+          "tokens_per_second": 49171.02997535951
+        }
+      },
+      "shared-basis": {
+        "comparisons": {
+          "full-gelu": {
+            "memory_reduction": 0.21085601415072985,
+            "passes": true,
+            "speed_ratio": 1.065048431963732
+          },
+          "full-swiglu-fused": {
+            "memory_reduction": 0.24083031000771582,
+            "passes": true,
+            "speed_ratio": 1.12261643736159
+          }
+        },
+        "passes": true,
+        "stats": {
+          "peak_allocated_bytes": 446336000,
+          "tokens_per_second": 52477.85814902871
+        }
+      }
+    }
+  },
+  "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "hardware_survivors": [
+    "shared-basis"
+  ],
+  "profiles": [
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 584551424,
+      "peak_reserved_bytes": 622854144,
+      "round": 0,
+      "seconds": 4.307839000000968,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 47541.23819389583,
+      "variant": "full-swiglu-fused",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 0,
+      "seconds": 4.207888900000398,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 48670.48652353455,
+      "variant": "full-gelu",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "shared_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1867776,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8163840
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 446336000,
+      "peak_reserved_bytes": 507510784,
+      "round": 0,
+      "seconds": 3.916498099999444,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 52291.61224411907,
+      "variant": "shared-basis",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "transport_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1870208,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8166272
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 464208896,
+      "peak_reserved_bytes": 526385152,
+      "round": 0,
+      "seconds": 4.458345200000622,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 45936.326330220334,
+      "variant": "gate-transport",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "transport_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1870208,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8166272
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 464208896,
+      "peak_reserved_bytes": 526385152,
+      "round": 1,
+      "seconds": 4.225908399999753,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 48462.95295941861,
+      "variant": "gate-transport",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "shared_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1867776,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8163840
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 446336000,
+      "peak_reserved_bytes": 507510784,
+      "round": 1,
+      "seconds": 3.881831599999714,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 52758.59983210376,
+      "variant": "shared-basis",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 1,
+      "seconds": 4.351867099998344,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 47060.26064078977,
+      "variant": "full-gelu",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 587926528,
+      "peak_reserved_bytes": 631242752,
+      "round": 1,
+      "seconds": 4.20314960000178,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 48725.36537836133,
+      "variant": "full-swiglu-fused",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 587926528,
+      "peak_reserved_bytes": 631242752,
+      "round": 2,
+      "seconds": 4.349975500001165,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 47080.72493740371,
+      "variant": "full-swiglu-fused",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 2,
+      "seconds": 4.268616099998326,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 47978.078890739394,
+      "variant": "full-gelu",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "shared_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1867776,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8163840
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 446336000,
+      "peak_reserved_bytes": 507510784,
+      "round": 2,
+      "seconds": 3.9054439999999886,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 52439.620181469916,
+      "variant": "shared-basis",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "transport_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1870208,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8166272
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 464208896,
+      "peak_reserved_bytes": 526385152,
+      "round": 2,
+      "seconds": 4.1916382999988855,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 48859.17756788663,
+      "variant": "gate-transport",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 587926528,
+      "peak_reserved_bytes": 631242752,
+      "round": 0,
+      "seconds": 4.423599400000967,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 46297.13983593434,
+      "variant": "full-swiglu-fused",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 0,
+      "seconds": 4.156456199998502,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 49272.74344911269,
+      "variant": "full-gelu",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "shared_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1867776,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8163840
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 446336000,
+      "peak_reserved_bytes": 507510784,
+      "round": 0,
+      "seconds": 4.023323299999902,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 50903.19239321508,
+      "variant": "shared-basis",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "transport_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1870208,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8166272
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 464208896,
+      "peak_reserved_bytes": 526385152,
+      "round": 0,
+      "seconds": 4.165054099998088,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 49171.02997535951,
+      "variant": "gate-transport",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "transport_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1870208,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8166272
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 464208896,
+      "peak_reserved_bytes": 526385152,
+      "round": 1,
+      "seconds": 4.0992250999988755,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 49960.66207734144,
+      "variant": "gate-transport",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "shared_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1867776,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8163840
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 446336000,
+      "peak_reserved_bytes": 507510784,
+      "round": 1,
+      "seconds": 3.7967247999986284,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 53941.22850307033,
+      "variant": "shared-basis",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 1,
+      "seconds": 4.163826199997857,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 49185.53036630237,
+      "variant": "full-gelu",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 587926528,
+      "peak_reserved_bytes": 631242752,
+      "round": 1,
+      "seconds": 4.266001700001652,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 48007.4820410692,
+      "variant": "full-swiglu-fused",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 587926528,
+      "peak_reserved_bytes": 631242752,
+      "round": 2,
+      "seconds": 4.381120999998529,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 46746.02687304659,
+      "variant": "full-swiglu-fused",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 2,
+      "seconds": 4.145013599998492,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 49408.76430419299,
+      "variant": "full-gelu",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "shared_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1867776,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8163840
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 446336000,
+      "peak_reserved_bytes": 507510784,
+      "round": 2,
+      "seconds": 3.9025982999992266,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 52477.85814902871,
+      "variant": "shared-basis",
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "transport_swiglu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 608,
+        "layers": 4,
+        "loops": 1,
+        "name": "shared_basis_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 1870208,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 7471104,
+        "total_parameters": 8166272
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 464208896,
+      "peak_reserved_bytes": 526385152,
+      "round": 2,
+      "seconds": 4.291707599997608,
+      "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+      "targets_per_second": 47719.93320330448,
+      "variant": "gate-transport",
+      "warmup_steps": 20
+    }
+  ],
+  "scope": "short resource screen, not independent confirmation or language quality",
+  "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d"
+}

@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-03",
+  "archive": "dump/legacy/research-before-reset.zip",
+  "archive_sha256": "c83900b158aa564ded7e2e5b435397669f5f0a3e7c31416529df7a58ef354103",
+  "archive_bytes": 830124958,
+  "archive_entries_verified": 34877,
+  "retained_reference_bytes": 13417993713,
+  "retired_generated_bytes": 57295743215,
+  "data_preserved_at": "dump/data/legacy",
+  "retained_weights_at": "dump/legacy/checkpoints",
+  "inventory": "dump/legacy/inventory.json",
+  "git_history_rewritten": false,
+  "warning": "Original reports may cite retired artifacts. Retained historical recipes are not the new runner."
+}

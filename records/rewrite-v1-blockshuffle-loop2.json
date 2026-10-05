@@ -1,0 +1,142 @@
+{
+  "config": {
+    "dataset": "dump/data/tasks-v1",
+    "hypothesis": "Stateful composition improves the structured block without additional weights.",
+    "model": {
+      "context": 256,
+      "ffn": "swiglu",
+      "groups": 8,
+      "heads": 6,
+      "hidden": 1024,
+      "layers": 4,
+      "loops": 2,
+      "name": "looped_blockshuffle_transformer",
+      "rope_base": 10000.0,
+      "vocab_size": 4096,
+      "width": 192
+    },
+    "name": "rewrite-v1-blockshuffle-loop2",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "3c5ffe0d419f6d0b2501eabc07ab771a29efebd4cb412d376b45e65268fa815f",
+      "complete_split": true,
+      "dataset_sha256": "fc9a8fbf2a9d1685ee7d347a12efa6f2bf0a5928f9e1ce0648e03eecaae73976",
+      "exact_match": {
+        "arithmetic/difficulty_1": {
+          "accuracy": 0.27586206896551724,
+          "correct": 8,
+          "examples": 29
+        },
+        "arithmetic/difficulty_2": {
+          "accuracy": 0.2571428571428571,
+          "correct": 18,
+          "examples": 70
+        },
+        "arithmetic/difficulty_3": {
+          "accuracy": 0.14285714285714285,
+          "correct": 10,
+          "examples": 70
+        },
+        "chain/difficulty_2": {
+          "accuracy": 0.09473684210526316,
+          "correct": 9,
+          "examples": 95
+        },
+        "chain/difficulty_3": {
+          "accuracy": 0.0761904761904762,
+          "correct": 8,
+          "examples": 105
+        },
+        "lookup/difficulty_1": {
+          "accuracy": 0.105,
+          "correct": 21,
+          "examples": 200
+        }
+      },
+      "final_opt_in": false,
+      "nll": 1.4557690969214172,
+      "perplexity": 4.287779916127859,
+      "split": "valid",
+      "step": 2000,
+      "targets": 1538
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 1.4081142469701478,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 350208,
+      "ffn_passes": 2,
+      "ffn_projection_flops_per_token": 1400832,
+      "total_parameters": 1728192
+    },
+    "dataset_sha256": "fc9a8fbf2a9d1685ee7d347a12efa6f2bf0a5928f9e1ce0648e03eecaae73976",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Stateful composition improves the structured block without additional weights.",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "swiglu",
+      "groups": 8,
+      "heads": 6,
+      "hidden": 1024,
+      "layers": 4,
+      "loops": 2,
+      "name": "looped_blockshuffle_transformer",
+      "rope_base": 10000.0,
+      "vocab_size": 4096,
+      "width": 192
+    },
+    "name": "rewrite-v1-blockshuffle-loop2",
+    "peak_training_allocated_bytes": 395125248,
+    "peak_training_reserved_bytes": 436207616,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T024743Z-80421f74",
+    "seed": 101,
+    "source_sha256": "91a397331388ab19644e3c7cc2a070d7ba37bbaf031868eb7fbaa5c8a6f7f267",
+    "step": 2000,
+    "trained_target_tokens": 42851,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 19181.590252955753,
+    "training_seconds": 213.53808240006765,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 1.4081142469701478,
+      "perplexity": 4.088238721922932,
+      "split": "valid",
+      "targets": 691
+    },
+    "wall_seconds": 229.8852750999995
+  }
+}

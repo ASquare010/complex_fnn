@@ -1,8 +1,0 @@
-{
-  "selected_cell": "multiplicative_static_s43_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "multiplicative_static_s43_lr1000": 0.9318512876828512,
-    "multiplicative_static_s43_lr3000": 0.8131322860717773
-  }
-}

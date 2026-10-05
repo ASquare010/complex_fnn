@@ -1,8 +1,0 @@
-{
-  "selected_cell": "gelu_teacher_full_gelu_s43_lr1000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "gelu_teacher_full_gelu_s43_lr1000": 0.3355911858379841,
-    "gelu_teacher_full_gelu_s43_lr3000": 0.3439877728621165
-  }
-}

@@ -1,0 +1,149 @@
+{
+  "diagnostic_source_sha256": "c3cdfc4dac4e5bdfce766d673459840f42eef2acf9c4829a9bf9a79eb0e23e84",
+  "fixture_sha256": "f3b79e0b63f83a2ac556b81dad1588a6193edb41b2fc40bbaafa4308b9571cb6",
+  "kernel_source_sha256": "acbec35b2959f653746ec5d5ad35c5cf4ef0598382613e357fe222adc220475d",
+  "native_incoming_same_input_layer_traces": [
+    {
+      "fused_group_and_scalar_projected_adjoint": {
+        "different": 0,
+        "max": 0.0,
+        "total": 2359296
+      },
+      "layer": 0,
+      "native_group_raw_scalar_projected_adjoint": {
+        "different": 0,
+        "max": 0.0,
+        "total": 2359296
+      },
+      "same_input_local_gradients": [
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 1048576
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 36864
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 589824
+        }
+      ],
+      "same_input_output": {
+        "different": 0,
+        "max": 0.0,
+        "total": 1048576
+      }
+    },
+    {
+      "fused_group_and_scalar_projected_adjoint": {
+        "different": 2,
+        "max": 1.4901161193847656e-08,
+        "total": 2359296
+      },
+      "layer": 1,
+      "native_group_raw_scalar_projected_adjoint": {
+        "different": 2,
+        "max": 1.4901161193847656e-08,
+        "total": 2359296
+      },
+      "same_input_local_gradients": [
+        {
+          "different": 14,
+          "max": 2.9802322387695312e-08,
+          "total": 1048576
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 36864
+        },
+        {
+          "different": 4,
+          "max": 1.1920928955078125e-07,
+          "total": 589824
+        }
+      ],
+      "same_input_output": {
+        "different": 0,
+        "max": 0.0,
+        "total": 1048576
+      }
+    },
+    {
+      "fused_group_and_scalar_projected_adjoint": {
+        "different": 1,
+        "max": 1.1920928955078125e-07,
+        "total": 2359296
+      },
+      "layer": 2,
+      "native_group_raw_scalar_projected_adjoint": {
+        "different": 1,
+        "max": 1.1920928955078125e-07,
+        "total": 2359296
+      },
+      "same_input_local_gradients": [
+        {
+          "different": 66,
+          "max": 5.960464477539063e-08,
+          "total": 1048576
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 36864
+        },
+        {
+          "different": 41,
+          "max": 7.62939453125e-06,
+          "total": 589824
+        }
+      ],
+      "same_input_output": {
+        "different": 0,
+        "max": 0.0,
+        "total": 1048576
+      }
+    },
+    {
+      "fused_group_and_scalar_projected_adjoint": {
+        "different": 2,
+        "max": 2.384185791015625e-07,
+        "total": 2359296
+      },
+      "layer": 3,
+      "native_group_raw_scalar_projected_adjoint": {
+        "different": 2,
+        "max": 2.384185791015625e-07,
+        "total": 2359296
+      },
+      "same_input_local_gradients": [
+        {
+          "different": 208,
+          "max": 5.960464477539063e-08,
+          "total": 1048576
+        },
+        {
+          "different": 0,
+          "max": 0.0,
+          "total": 36864
+        },
+        {
+          "different": 16,
+          "max": 1.52587890625e-05,
+          "total": 589824
+        }
+      ],
+      "same_input_output": {
+        "different": 0,
+        "max": 0.0,
+        "total": 1048576
+      }
+    }
+  ],
+  "scope": "Local backward rounding trace on a saved fixture; no complete pass or resource claim.",
+  "source_sha256": "8a0e9b5c4cad1acfbe0b174bd7ad5b2622949ee638cb274b9ee17528372d3b55"
+}

@@ -1,8 +1,0 @@
-{
-  "selected_label": "piecewise_bezier_1p_s29_lr3000",
-  "selected_rate": 0.003,
-  "selection_mse_by_rate": {
-    "0.001": 0.5560304671525955,
-    "0.003": 0.5112932523091634
-  }
-}

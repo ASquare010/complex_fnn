@@ -1,0 +1,27 @@
+{
+  "complete": true,
+  "winner": "curve-wide",
+  "development_runs_and_removals": 12,
+  "paired_seed_runs": 60,
+  "resource_profiles": 60,
+  "independent_runs_with_validation_and_test": 8,
+  "leaderboard_tables": 6,
+  "leaderboard_ranked_rows": 190,
+  "documentation_links_verified": 213,
+  "documentation_sha256": {
+    "README.md": "a23e57978d00f4f5af79035a79913b8217e863f932294df11e1c4c726bc5ce95",
+    "docs/step_1_ffn.md": "b40df638a3d0be0697ccda1c7030472247ab7bbafbb0b3edb1425435968c76aa",
+    "docs/compact_refinement_summary.md": "e84f1165ee5d73ab305e7225ce4252fc781949a194085ea466b861b6c5959ac2",
+    "docs/compact_refinement_independent_result.md": "b8bf7f7cfb632c0f4464c0b7f4e4114ce998a382637a11a037ebcca4e6f03d3c",
+    "docs/compact_refinement_confirmation_analysis.md": "1239f906b78fa43f371f2a3d108a87e293df8c4d557341b970e4a4b4d1652c6a",
+    "docs/compact_refinement_result.md": "f38b13a1b0a00da588ca0bcfe46a64db04fc811ad70c035dc18abf8c6acb5c8d",
+    "src/models/channel_curve_transformer/result.md": "38f54d1183c14fcd590327d2fa171299bffe43bf48e08f2bf56667fbff54d226",
+    "src/models/signed_context_transformer/result.md": "a4d27b0d59b5f3127b45507b82305886b830d12b0cc9674e4105cbbe5128cfc6",
+    "src/models/basis_readout_transformer/result.md": "4dde45bcbe9533be04f6ff91a6c23dde6f7efa3d50f68ad675d24f543e72e906",
+    "src/models/base_transformer/result.md": "de72aed83d165babd9f9ba02bab8709fd4d7af8160c44a8f74753d0378bb8ff8"
+  },
+  "final_audit_sha256": "d47948d21d3fa716eefe0b4bd0a6703cdc709f3b86546a23597c46af4be4343d",
+  "source_matches_correctness_evidence": true,
+  "pre_refinement_kernels_unchanged": true,
+  "scope": "Bounded three-family refinement complete; no universal quality, speed or large-LLM claim."
+}

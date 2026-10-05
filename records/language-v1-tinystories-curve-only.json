@@ -1,0 +1,111 @@
+{
+  "config": {
+    "dataset": "dump/data/tinystories-v2",
+    "hypothesis": "Test whether the activation training effect transfers to language and survives removal.",
+    "model": {
+      "context": 256,
+      "ffn": "pairflux_no_exchange",
+      "groups": 8,
+      "heads": 6,
+      "hidden": 224,
+      "layers": 4,
+      "loops": 1,
+      "name": "pairflux_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 192
+    },
+    "name": "tinystories-curve-only-s101-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "99a05e6347b8c1232edd5ca6e1f701fcbda778993035c8615dd04e5d606b9478",
+      "complete_split": true,
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 3.0636135509163713,
+      "perplexity": 21.404764788585418,
+      "split": "valid",
+      "step": 2000,
+      "targets": 199936
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 3.08905129134655,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 344960,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 688128,
+      "total_parameters": 1722944
+    },
+    "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Test whether the activation training effect transfers to language and survives removal.",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "pairflux_no_exchange",
+      "groups": 8,
+      "heads": 6,
+      "hidden": 224,
+      "layers": 4,
+      "loops": 1,
+      "name": "pairflux_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 192
+    },
+    "name": "tinystories-curve-only-s101-lr0.0006",
+    "peak_training_allocated_bytes": 233761280,
+    "peak_training_reserved_bytes": 272629760,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T044021Z-f6e08d7d",
+    "seed": 101,
+    "source_sha256": "44915c574c6a6dc5f7ef10e5cc3201e6550a622e191277451f809e35affaaea7",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 55627.07423647095,
+    "training_seconds": 73.63320929998736,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 3.08905129134655,
+      "perplexity": 21.956238018797105,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 80.99892929999987
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "config": {
+    "dataset": "dump/data/tasks-v1",
+    "hypothesis": "Structured width helps beyond narrowing at equal FFN parameters and projection work.",
+    "model": {
+      "context": 256,
+      "ffn": "swiglu",
+      "groups": 8,
+      "heads": 6,
+      "hidden": 1024,
+      "layers": 4,
+      "loops": 1,
+      "name": "blockshuffle_transformer",
+      "rope_base": 10000.0,
+      "vocab_size": 4096,
+      "width": 192
+    },
+    "name": "rewrite-v1-blockshuffle",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "115b99e139a48dbc7070e143f48d018b7c73f57a27fd016a21090dd7cd2079ec",
+      "complete_split": true,
+      "dataset_sha256": "fc9a8fbf2a9d1685ee7d347a12efa6f2bf0a5928f9e1ce0648e03eecaae73976",
+      "exact_match": {
+        "arithmetic/difficulty_1": {
+          "accuracy": 0.3103448275862069,
+          "correct": 9,
+          "examples": 29
+        },
+        "arithmetic/difficulty_2": {
+          "accuracy": 0.22857142857142856,
+          "correct": 16,
+          "examples": 70
+        },
+        "arithmetic/difficulty_3": {
+          "accuracy": 0.14285714285714285,
+          "correct": 10,
+          "examples": 70
+        },
+        "chain/difficulty_2": {
+          "accuracy": 0.2,
+          "correct": 19,
+          "examples": 95
+        },
+        "chain/difficulty_3": {
+          "accuracy": 0.1523809523809524,
+          "correct": 16,
+          "examples": 105
+        },
+        "lookup/difficulty_1": {
+          "accuracy": 0.2,
+          "correct": 40,
+          "examples": 200
+        }
+      },
+      "final_opt_in": false,
+      "nll": 1.4010919154232904,
+      "perplexity": 4.0596303205786,
+      "split": "valid",
+      "step": 2000,
+      "targets": 1538
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 1.3420362210308245,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 350208,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 700416,
+      "total_parameters": 1728192
+    },
+    "dataset_sha256": "fc9a8fbf2a9d1685ee7d347a12efa6f2bf0a5928f9e1ce0648e03eecaae73976",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Structured width helps beyond narrowing at equal FFN parameters and projection work.",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "swiglu",
+      "groups": 8,
+      "heads": 6,
+      "hidden": 1024,
+      "layers": 4,
+      "loops": 1,
+      "name": "blockshuffle_transformer",
+      "rope_base": 10000.0,
+      "vocab_size": 4096,
+      "width": 192
+    },
+    "name": "rewrite-v1-blockshuffle",
+    "peak_training_allocated_bytes": 298971648,
+    "peak_training_reserved_bytes": 331350016,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T024407Z-c40b110b",
+    "seed": 101,
+    "source_sha256": "91a397331388ab19644e3c7cc2a070d7ba37bbaf031868eb7fbaa5c8a6f7f267",
+    "step": 2000,
+    "trained_target_tokens": 42851,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 26286.28021597708,
+    "training_seconds": 155.8227321000104,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 1.3420362210308245,
+      "perplexity": 3.8268278446977093,
+      "split": "valid",
+      "targets": 691
+    },
+    "wall_seconds": 169.4317302999989
+  }
+}

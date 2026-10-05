@@ -1,8 +1,0 @@
-{
-  "selected_cell": "piecewise_plain_first_lr_s29_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "piecewise_plain_first_lr_s29_lr1000": 0.7346659998099009,
-    "piecewise_plain_first_lr_s29_lr3000": 0.7279091527064642
-  }
-}

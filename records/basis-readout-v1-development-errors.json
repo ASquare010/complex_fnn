@@ -1,0 +1,12 @@
+{
+  "scope": "Implementation preparation, not an experiment outcome",
+  "events": [
+    {
+      "operation": "first production-equivalence check process",
+      "exit_code": 1,
+      "diagnostic_output": "none",
+      "cause": "unknown",
+      "resolution": "Standalone rerun completed all CPU/CUDA exact-equivalence and shared-Trainer recovery checks; no language run started before successful verification"
+    }
+  ]
+}

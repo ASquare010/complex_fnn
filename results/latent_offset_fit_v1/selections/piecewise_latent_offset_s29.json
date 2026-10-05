@@ -1,8 +1,0 @@
-{
-  "selected_cell": "piecewise_latent_offset_s29_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "piecewise_latent_offset_s29_lr1000": 0.5747204348444939,
-    "piecewise_latent_offset_s29_lr3000": 0.5737690354386965
-  }
-}

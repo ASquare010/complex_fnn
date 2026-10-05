@@ -1,8 +1,0 @@
-{
-  "selected_label": "smooth_twist_fixed_s17_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 0.48043285806973773,
-    "0.003": 0.5310057997703552
-  }
-}

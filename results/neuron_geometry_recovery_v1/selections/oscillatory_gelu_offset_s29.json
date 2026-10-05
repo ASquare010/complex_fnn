@@ -1,8 +1,0 @@
-{
-  "selected_label": "oscillatory_gelu_offset_s29_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 1.013993223508199,
-    "0.003": 1.0249343315760295
-  }
-}

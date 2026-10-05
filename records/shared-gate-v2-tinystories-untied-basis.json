@@ -1,0 +1,111 @@
+{
+  "config": {
+    "dataset": "dump/data/tinystories-v2",
+    "hypothesis": "Untie identically initialized detectors to measure the training cost of sharing; not a size-matched control.",
+    "model": {
+      "context": 256,
+      "ffn": "untied_swiglu",
+      "groups": 8,
+      "heads": 16,
+      "hidden": 608,
+      "layers": 4,
+      "loops": 1,
+      "name": "shared_basis_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "shared-gate-v2-tinystories-untied-basis-s101-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "a6775f46c3cc4529e741d8b33ee1669a57188d5bc01e40c62741b81248a0e463",
+      "complete_split": true,
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 2.5863591534838024,
+      "perplexity": 13.281328191718378,
+      "split": "valid",
+      "step": 2000,
+      "targets": 199936
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 2.6193327233195305,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 3735552,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 7471104,
+      "total_parameters": 10031616
+    },
+    "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Untie identically initialized detectors to measure the training cost of sharing; not a size-matched control.",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "untied_swiglu",
+      "groups": 8,
+      "heads": 16,
+      "hidden": 608,
+      "layers": 4,
+      "loops": 1,
+      "name": "shared_basis_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "shared-gate-v2-tinystories-untied-basis-s101-lr0.0006",
+    "peak_training_allocated_bytes": 469732864,
+    "peak_training_reserved_bytes": 513802240,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T052913Z-59dc2020",
+    "seed": 101,
+    "source_sha256": "681c1de1bf0e08b0fc68d47441f34180d8993af6a6d89acea97cf60aeaacd05d",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 48041.72312929982,
+    "training_seconds": 85.25922330004687,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 2.6193327233195305,
+      "perplexity": 13.726561114331732,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 96.48860100000093
+  }
+}

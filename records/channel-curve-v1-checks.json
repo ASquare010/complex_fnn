@@ -1,0 +1,245 @@
+{
+  "counts": {
+    "attention": "full causal multi-head; one pass per block",
+    "ffn_parameters": 2121728,
+    "ffn_passes": 1,
+    "ffn_projection_flops_per_token": 4194304,
+    "total_parameters": 8417792
+  },
+  "cuda_check_source_sha256": "018507fea5f7c66edc9804708f4b434b7333e143d8097126e9e5545fde7bf509",
+  "cuda_checks_complete": true,
+  "cuda_inner_checks": [
+    {
+      "atol": 1e-06,
+      "dtype": "torch.float32",
+      "output_z_a_b_c_e_max_errors": [
+        1.1175870895385742e-08,
+        4.470348358154297e-08,
+        4.470348358154297e-08,
+        3.5762786865234375e-07,
+        5.960464477539063e-08,
+        1.1920928955078125e-07
+      ],
+      "rtol": 0.0001,
+      "self_gate": false,
+      "width": 512
+    },
+    {
+      "atol": 1e-06,
+      "dtype": "torch.float32",
+      "output_z_a_b_c_e_max_errors": [
+        1.4901161193847656e-08,
+        1.4901161193847656e-08,
+        1.4901161193847656e-08,
+        7.450580596923828e-08,
+        2.9802322387695312e-08,
+        5.960464477539063e-08
+      ],
+      "rtol": 0.0001,
+      "self_gate": true,
+      "width": 512
+    },
+    {
+      "atol": 0.00025,
+      "dtype": "torch.bfloat16",
+      "output_z_a_b_c_e_max_errors": [
+        0.0,
+        7.450580596923828e-09,
+        2.9802322387695312e-08,
+        2.384185791015625e-07,
+        3.725290298461914e-08,
+        2.384185791015625e-07
+      ],
+      "rtol": 0.025,
+      "self_gate": false,
+      "width": 512
+    },
+    {
+      "atol": 0.00025,
+      "dtype": "torch.bfloat16",
+      "output_z_a_b_c_e_max_errors": [
+        0.0,
+        0.0,
+        2.2351741790771484e-08,
+        5.960464477539063e-08,
+        2.2351741790771484e-08,
+        6.705522537231445e-08
+      ],
+      "rtol": 0.025,
+      "self_gate": true,
+      "width": 512
+    }
+  ],
+  "cuda_model_checks": [
+    {
+      "interventions": [
+        {
+          "max_output_error": 0.0,
+          "name": "remove_exchange",
+          "retains_original_calibration": true
+        },
+        {
+          "max_output_error": 0.0,
+          "name": "restore_shapes",
+          "retains_original_calibration": true
+        },
+        {
+          "max_output_error": 0.0,
+          "name": "remove_even",
+          "retains_original_calibration": true
+        }
+      ],
+      "max_output_error": 0.0,
+      "max_weight_gradient_error": 1.4551915228366852e-11,
+      "mode": "channel_curve"
+    },
+    {
+      "interventions": [
+        {
+          "max_output_error": 0.0,
+          "name": "remove_exchange",
+          "retains_original_calibration": true
+        },
+        {
+          "max_output_error": 0.0,
+          "name": "restore_shapes",
+          "retains_original_calibration": true
+        },
+        {
+          "max_output_error": 0.0,
+          "name": "remove_even",
+          "retains_original_calibration": true
+        }
+      ],
+      "max_output_error": 0.0,
+      "max_weight_gradient_error": 2.9103830456733704e-11,
+      "mode": "self_curve"
+    },
+    {
+      "interventions": [
+        {
+          "max_output_error": 0.0,
+          "name": "remove_exchange",
+          "retains_original_calibration": true
+        },
+        {
+          "max_output_error": 0.0,
+          "name": "restore_shapes",
+          "retains_original_calibration": true
+        },
+        {
+          "max_output_error": 0.0,
+          "name": "remove_even",
+          "retains_original_calibration": true
+        }
+      ],
+      "max_output_error": 0.0,
+      "max_weight_gradient_error": 1.4551915228366852e-11,
+      "mode": "fixed_shape"
+    },
+    {
+      "interventions": [],
+      "max_output_error": 0.0,
+      "max_weight_gradient_error": 0.0,
+      "mode": "plain"
+    }
+  ],
+  "hypothesis_sha256": "2d07a63f59daaaf03c67734152c880e0f5d15691491b94f973cb1733ded42ad8",
+  "inner_checks": [
+    {
+      "calibration128": [
+        0.0,
+        1.071203528872718
+      ],
+      "calibration256": [
+        0.0,
+        1.071203528872718
+      ],
+      "finite_differences": true,
+      "output_z_a_b_c_e_max_errors": [
+        0.0,
+        6.938893903907228e-18,
+        1.734723475976807e-18,
+        2.0816681711721685e-17,
+        3.469446951953614e-18,
+        1.734723475976807e-17
+      ],
+      "self_gate": false
+    },
+    {
+      "calibration128": [
+        0.18826868823387075,
+        0.5800403171365451
+      ],
+      "calibration256": [
+        0.18826868823387072,
+        0.580040317136545
+      ],
+      "finite_differences": true,
+      "output_z_a_b_c_e_max_errors": [
+        0.0,
+        6.938893903907228e-18,
+        3.686287386450715e-18,
+        2.0816681711721685e-17,
+        1.734723475976807e-18,
+        1.3877787807814457e-17
+      ],
+      "self_gate": true
+    }
+  ],
+  "model_checks": [
+    {
+      "causality_locality_save_load_exact_cpu_resume": true,
+      "mode": "channel_curve"
+    },
+    {
+      "causality_locality_save_load_exact_cpu_resume": true,
+      "mode": "self_curve"
+    },
+    {
+      "causality_locality_save_load_exact_cpu_resume": true,
+      "mode": "fixed_shape"
+    },
+    {
+      "causality_locality_save_load_exact_cpu_resume": true,
+      "mode": "plain"
+    }
+  ],
+  "sampled_initial_moments": [
+    {
+      "distribution": "standard Gaussian inputs through named initialized P",
+      "input_samples": 4096,
+      "mode": "channel_curve",
+      "normalized_activation_mean": -0.000512017693836242,
+      "normalized_activation_variance": 0.0316833071410656,
+      "scope": "descriptive initialization moments; Gaussian calibration does not match actual correlations/logits",
+      "seed": 904,
+      "z_mean": -0.0002463851706124842,
+      "z_variance": 0.20443710684776306
+    },
+    {
+      "distribution": "standard Gaussian inputs through named initialized P",
+      "input_samples": 4096,
+      "mode": "self_curve",
+      "normalized_activation_mean": -0.0002282642526552081,
+      "normalized_activation_variance": 0.03198687359690666,
+      "scope": "descriptive initialization moments; Gaussian calibration does not match actual correlations/logits",
+      "seed": 904,
+      "z_mean": -0.0002463851706124842,
+      "z_variance": 0.20443710684776306
+    },
+    {
+      "distribution": "standard Gaussian inputs through named initialized P",
+      "input_samples": 4096,
+      "mode": "fixed_shape",
+      "normalized_activation_mean": -0.000512017693836242,
+      "normalized_activation_variance": 0.0316833071410656,
+      "scope": "descriptive initialization moments; Gaussian calibration does not match actual correlations/logits",
+      "seed": 904,
+      "z_mean": -0.0002463851706124842,
+      "z_variance": 0.20443710684776306
+    }
+  ],
+  "scope": "CPU/CUDA numerical and execution preparation; resource and quality unmeasured",
+  "source_sha256": "a2e871421e60049c1e0735225220552264c2f285d202ad9361a61d1785ad5ac7"
+}

@@ -1,0 +1,142 @@
+{
+  "config": {
+    "dataset": "dump/data/tasks-v1",
+    "hypothesis": "Bounded pair exchange and local learned curvature improve narrow FFN feature extraction.",
+    "model": {
+      "context": 256,
+      "ffn": "pairflux",
+      "groups": 8,
+      "heads": 6,
+      "hidden": 224,
+      "layers": 4,
+      "loops": 1,
+      "name": "pairflux_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 192
+    },
+    "name": "pairflux-s101-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "95eeb7b5f958a4ff4d6805c6f2cd95fe869b16958de35e3310bd6841690cbfc9",
+      "complete_split": true,
+      "dataset_sha256": "fc9a8fbf2a9d1685ee7d347a12efa6f2bf0a5928f9e1ce0648e03eecaae73976",
+      "exact_match": {
+        "arithmetic/difficulty_1": {
+          "accuracy": 0.2413793103448276,
+          "correct": 7,
+          "examples": 29
+        },
+        "arithmetic/difficulty_2": {
+          "accuracy": 0.24285714285714285,
+          "correct": 17,
+          "examples": 70
+        },
+        "arithmetic/difficulty_3": {
+          "accuracy": 0.14285714285714285,
+          "correct": 10,
+          "examples": 70
+        },
+        "chain/difficulty_2": {
+          "accuracy": 0.1368421052631579,
+          "correct": 13,
+          "examples": 95
+        },
+        "chain/difficulty_3": {
+          "accuracy": 0.047619047619047616,
+          "correct": 5,
+          "examples": 105
+        },
+        "lookup/difficulty_1": {
+          "accuracy": 0.11,
+          "correct": 22,
+          "examples": 200
+        }
+      },
+      "final_opt_in": false,
+      "nll": 1.4996640469845002,
+      "perplexity": 4.48018368626367,
+      "split": "valid",
+      "step": 2000,
+      "targets": 1538
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 1.4643840541370354,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 345856,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 688128,
+      "total_parameters": 1723840
+    },
+    "dataset_sha256": "fc9a8fbf2a9d1685ee7d347a12efa6f2bf0a5928f9e1ce0648e03eecaae73976",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Bounded pair exchange and local learned curvature improve narrow FFN feature extraction.",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "pairflux",
+      "groups": 8,
+      "heads": 6,
+      "hidden": 224,
+      "layers": 4,
+      "loops": 1,
+      "name": "pairflux_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 192
+    },
+    "name": "pairflux-s101-lr0.0006",
+    "peak_training_allocated_bytes": 254360064,
+    "peak_training_reserved_bytes": 293601280,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T035132Z-81dfd818",
+    "seed": 101,
+    "source_sha256": "4bbd13cb56d9f14e7c14a2e90a8d7c6ca80e9cabc96fc3cb84d9d93026cb6809",
+    "step": 2000,
+    "trained_target_tokens": 42851,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 40770.65869630231,
+    "training_seconds": 100.464405800034,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 1.4643840541370354,
+      "perplexity": 4.324878528688403,
+      "split": "valid",
+      "targets": 691
+    },
+    "wall_seconds": 109.25264479999896
+  }
+}

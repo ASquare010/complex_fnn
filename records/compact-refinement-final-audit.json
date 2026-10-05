@@ -1,0 +1,251 @@
+{
+  "frozen_winner": "curve-wide",
+  "independent_evaluation_complete": true,
+  "scope": "Independent measurement complete; preserves outcome even if the frozen choice loses.",
+  "selection_sha256": "410676bfca40020aee5b098ce567b733fd4c7421f2e282784db4498d76b737f0",
+  "test_used_for_selection": false,
+  "timing_review": {
+    "path": "records/compact-final-v1-timing-review.json",
+    "sha256": "abf8df07daf33144d7fa88426d476e69c88164b9757e6ec2dfdeb9438c29f607"
+  },
+  "verified_runs": [
+    {
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2359296,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4718592,
+        "total_parameters": 8655360
+      },
+      "evidence": {
+        "final": {
+          "path": "records/compact-final-v1-tinystories-compact-swiglu-kernel-h384-final.json",
+          "sha256": "827548b975b6200a14d909b0e3638bef0d7883a8fc79e0598d20d080f9f958a0"
+        },
+        "valid": {
+          "path": "records/compact-final-v1-tinystories-compact-swiglu-kernel-h384-valid.json",
+          "sha256": "550ff705affa173965952561899f7fc59bdb5565ef333aa37d204d959e8f4943"
+        }
+      },
+      "host_sleep_affected_timing": false,
+      "peak_training_allocated_bytes": 427331072,
+      "test_nll": 2.0240196750150714,
+      "training_seconds": 365.92440959946543,
+      "validation_nll": 2.1277558550181372,
+      "variant": "compact-swiglu-kernel-h384"
+    },
+    {
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2121728,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8417792
+      },
+      "evidence": {
+        "final": {
+          "path": "records/compact-final-v1-tinystories-curve-parent-final.json",
+          "sha256": "f096df2cdc9946ed7f2f4d4a203e2e3218b3e3cb00d16f3c5fd60b08b3d60562"
+        },
+        "valid": {
+          "path": "records/compact-final-v1-tinystories-curve-parent-valid.json",
+          "sha256": "79b99d4fed7fcb5299f30913ce2b255a89b7c3135505906f59e4971bd96e329a"
+        }
+      },
+      "host_sleep_affected_timing": false,
+      "peak_training_allocated_bytes": 422776320,
+      "test_nll": 2.0209902715416592,
+      "training_seconds": 373.99509240045154,
+      "validation_nll": 2.125865706713648,
+      "variant": "curve-parent"
+    },
+    {
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2121728,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8417792
+      },
+      "evidence": {
+        "final": {
+          "path": "records/compact-final-v1-tinystories-curve-wide-final.json",
+          "sha256": "b0a3f1d9ada8d08486c3a309ce1fc236cd677b484341b775bd0fe063457f7bfe"
+        },
+        "valid": {
+          "path": "records/compact-final-v1-tinystories-curve-wide-valid.json",
+          "sha256": "06b49f8efa4c5b72957fa1e662099d701aceebb4e04fa466b2278635b8647f2b"
+        }
+      },
+      "host_sleep_affected_timing": false,
+      "peak_training_allocated_bytes": 420679168,
+      "test_nll": 2.0202912804800706,
+      "training_seconds": 375.172588599904,
+      "validation_nll": 2.122984989962413,
+      "variant": "curve-wide"
+    },
+    {
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "evidence": {
+        "final": {
+          "path": "records/compact-final-v1-tinystories-full-swiglu-final.json",
+          "sha256": "12a8bdc118b7f53c2153937854ee4e7d1c19abfb50cc8e3fa04ef7cce59b4951"
+        },
+        "valid": {
+          "path": "records/compact-final-v1-tinystories-full-swiglu-valid.json",
+          "sha256": "f4b201b84e411b0e95e3be3965faf634e9a349e28a88b7a3db1ec22eb40645cd"
+        }
+      },
+      "host_sleep_affected_timing": false,
+      "peak_training_allocated_bytes": 587959808,
+      "test_nll": 1.9749341005719574,
+      "training_seconds": 394.5515334993397,
+      "validation_nll": 2.078244333841126,
+      "variant": "full-swiglu"
+    },
+    {
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2359296,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4718592,
+        "total_parameters": 8655360
+      },
+      "evidence": {
+        "final": {
+          "path": "records/compact-final-v1-wikitext-compact-swiglu-kernel-h384-final.json",
+          "sha256": "16b04e93ea3676754c1bc6bdbbf005cbb7e9fb485b524e5a081a84ef85a09128"
+        },
+        "valid": {
+          "path": "records/compact-final-v1-wikitext-compact-swiglu-kernel-h384-valid.json",
+          "sha256": "e7a2b34cf5f2751d9bf6addef1a40ab436b82756c9ed4cda686db9f9850f57fc"
+        }
+      },
+      "host_sleep_affected_timing": false,
+      "peak_training_allocated_bytes": 427331072,
+      "test_nll": 3.971139871999466,
+      "training_seconds": 329.35942329998943,
+      "validation_nll": 3.946194763789101,
+      "variant": "compact-swiglu-kernel-h384"
+    },
+    {
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2121728,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8417792
+      },
+      "evidence": {
+        "final": {
+          "path": "records/compact-final-v1-wikitext-curve-parent-final.json",
+          "sha256": "ad05d15ba717c85d79f61112bef9930a092845a3c9f55b2972c75f8b122bbc83"
+        },
+        "valid": {
+          "path": "records/compact-final-v1-wikitext-curve-parent-valid.json",
+          "sha256": "a39f309a5587d7722a1294aadf0cc7dddc434db11e16912e986c4b75a619ab49"
+        }
+      },
+      "host_sleep_affected_timing": false,
+      "peak_training_allocated_bytes": 422776320,
+      "test_nll": 3.986061382890992,
+      "training_seconds": 359.32417249985156,
+      "validation_nll": 3.9622062380351717,
+      "variant": "curve-parent"
+    },
+    {
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2121728,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8417792
+      },
+      "evidence": {
+        "final": {
+          "path": "records/compact-final-v1-wikitext-curve-wide-final.json",
+          "sha256": "b1b20472c648b31c9da47b626435f0f88ebd7d0178047b03150bfeefba515605"
+        },
+        "valid": {
+          "path": "records/compact-final-v1-wikitext-curve-wide-valid.json",
+          "sha256": "4878a26eaad073497b6a2ef5864728f02e80c51c3c87c221922aaa772d6d3eb7"
+        }
+      },
+      "host_sleep_affected_timing": true,
+      "peak_training_allocated_bytes": 422776320,
+      "test_nll": 3.9667620117994504,
+      "training_seconds": 36970.15014889983,
+      "validation_nll": 3.9423220944783046,
+      "variant": "curve-wide"
+    },
+    {
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "evidence": {
+        "final": {
+          "path": "records/compact-final-v1-wikitext-full-swiglu-final.json",
+          "sha256": "8159e84dca6ac24b9d99e1101151ba51ede0674ebbcdbb11fab9d3f6e9d157d7"
+        },
+        "valid": {
+          "path": "records/compact-final-v1-wikitext-full-swiglu-valid.json",
+          "sha256": "758a530a7cdd04613b33c45df3cb8157c60569c59fc0342d278b6ff2c8024768"
+        }
+      },
+      "host_sleep_affected_timing": false,
+      "peak_training_allocated_bytes": 587959808,
+      "test_nll": 4.022205889017614,
+      "training_seconds": 415.1560740993591,
+      "validation_nll": 3.991951612442259,
+      "variant": "full-swiglu"
+    }
+  ],
+  "winner_relative_loss_changes": {
+    "tinystories": {
+      "compact-swiglu-kernel-h384": {
+        "test": -0.0018420742550208091,
+        "validation": -0.002242205112241824
+      },
+      "curve-parent": {
+        "test": -0.00034586562411087485,
+        "validation": -0.001355079364673606
+      },
+      "full-swiglu": {
+        "test": 0.022966427029123215,
+        "validation": 0.02152810205843081
+      }
+    },
+    "wikitext": {
+      "compact-swiglu-kernel-h384": {
+        "test": -0.0011024190386452748,
+        "validation": -0.0009813680121246726
+      },
+      "curve-parent": {
+        "test": -0.0048417144739362206,
+        "validation": -0.005018452438439347
+      },
+      "full-swiglu": {
+        "test": -0.013784445338700713,
+        "validation": -0.012432394673639657
+      }
+    }
+  }
+}

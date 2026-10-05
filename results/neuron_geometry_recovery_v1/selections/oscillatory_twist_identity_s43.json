@@ -1,8 +1,0 @@
-{
-  "selected_label": "oscillatory_twist_identity_s43_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 1.0105504989624023,
-    "0.003": 1.0248646885156631
-  }
-}

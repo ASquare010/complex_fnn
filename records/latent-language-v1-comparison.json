@@ -1,0 +1,301 @@
+{
+  "complete": true,
+  "completed_runs": 18,
+  "decision": "Retire this fixed wide recipe: it misses a required language or allocation comparison.",
+  "decisions": {
+    "tinystories": {
+      "beats_both_thin_controls": false,
+      "compact_loss_gain": -0.04595927899313268,
+      "full_loss_cost": 0.07392846932944708,
+      "language_pass": false,
+      "strongest_compact_dense": "narrow-swiglu-kernel",
+      "strongest_full": "full-swiglu-fused"
+    },
+    "wikitext": {
+      "beats_both_thin_controls": true,
+      "compact_loss_gain": -0.0260965489113707,
+      "full_loss_cost": 0.03850815871429747,
+      "language_pass": false,
+      "strongest_compact_dense": "narrow-swiglu-kernel",
+      "strongest_full": "full-swiglu-fused"
+    }
+  },
+  "planned_runs": 18,
+  "results": {
+    "tinystories": {
+      "full-gelu": {
+        "allocated_mib": 539.39404296875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 2.592983325220711,
+        "run": "dump\\runs\\20261004T090912Z-22a44a28",
+        "targets": 199936,
+        "update_seconds": 87.82491769991611,
+        "wall_seconds": 100.71967030000087
+      },
+      "full-swiglu-fused": {
+        "allocated_mib": 560.72216796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 2.5384857773628187,
+        "run": "dump\\runs\\20261004T090724Z-b2ba4307",
+        "targets": 199936,
+        "update_seconds": 88.09986989988101,
+        "wall_seconds": 101.16662899999938
+      },
+      "full-swiglu-kernel": {
+        "allocated_mib": 542.47216796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 2.5442395399535664,
+        "run": "dump\\runs\\20261004T090532Z-95a8f28b",
+        "targets": 199936,
+        "update_seconds": 91.5165474000969,
+        "wall_seconds": 104.83146119999583
+      },
+      "narrow-gelu": {
+        "allocated_mib": 408.90966796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 2.616390907199679,
+        "run": "dump\\runs\\20261004T091246Z-f7cc5206",
+        "targets": 199936,
+        "update_seconds": 83.5997462001178,
+        "wall_seconds": 94.43764350000129
+      },
+      "narrow-swiglu-kernel": {
+        "allocated_mib": 407.59716796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2506752,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 5013504,
+          "total_parameters": 8802816
+        },
+        "nll": 2.6063654676136987,
+        "run": "dump\\runs\\20261004T091101Z-0c3fc8a7",
+        "targets": 199936,
+        "update_seconds": 86.12649359971692,
+        "wall_seconds": 97.29946770000242
+      },
+      "thin-calibrated": {
+        "allocated_mib": 396.03466796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 2.7015811270544074,
+        "run": "dump\\runs\\20261004T092001Z-ffe9e9a9",
+        "targets": 199936,
+        "update_seconds": 105.95589960004145,
+        "wall_seconds": 119.86516670000128
+      },
+      "thin-recompute": {
+        "allocated_mib": 396.03466796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 2.7252226132284205,
+        "run": "dump\\runs\\20261004T091808Z-fa72a8ef",
+        "targets": 199936,
+        "update_seconds": 93.23003939984483,
+        "wall_seconds": 104.40085669999826
+      },
+      "wide-cached": {
+        "allocated_mib": 458.78466796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 2.7261521452978235,
+        "run": "dump\\runs\\20261004T091617Z-1c3ebd3b",
+        "targets": 199936,
+        "update_seconds": 91.26901899998484,
+        "wall_seconds": 102.49343650000083
+      },
+      "wide-recompute": {
+        "allocated_mib": 396.03466796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 2.7261521452978235,
+        "run": "dump\\runs\\20261004T091427Z-98b49166",
+        "targets": 199936,
+        "update_seconds": 90.68068739986484,
+        "wall_seconds": 101.83190099999774
+      }
+    },
+    "wikitext": {
+      "full-gelu": {
+        "allocated_mib": 539.39404296875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 4.2691681528848315,
+        "run": "dump\\runs\\20261004T092623Z-b143edfd",
+        "targets": 322560,
+        "update_seconds": 88.63204609978129,
+        "wall_seconds": 102.21317679999629
+      },
+      "full-swiglu-fused": {
+        "allocated_mib": 560.72216796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 4.237625367300851,
+        "run": "dump\\runs\\20261004T092428Z-547324df",
+        "targets": 322560,
+        "update_seconds": 91.40015819997643,
+        "wall_seconds": 104.54038570000557
+      },
+      "full-swiglu-kernel": {
+        "allocated_mib": 540.53466796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 4.239025527711899,
+        "run": "dump\\runs\\20261004T092213Z-41bc1418",
+        "targets": 322560,
+        "update_seconds": 109.15089320010156,
+        "wall_seconds": 124.38210780000372
+      },
+      "narrow-gelu": {
+        "allocated_mib": 408.90966796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 4.317236715649802,
+        "run": "dump\\runs\\20261004T093005Z-76636aff",
+        "targets": 322560,
+        "update_seconds": 82.72611889996915,
+        "wall_seconds": 93.37964170000487
+      },
+      "narrow-swiglu-kernel": {
+        "allocated_mib": 407.59716796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2506752,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 5013504,
+          "total_parameters": 8802816
+        },
+        "nll": 4.288883460514129,
+        "run": "dump\\runs\\20261004T092815Z-ad913694",
+        "targets": 322560,
+        "update_seconds": 88.6317469999558,
+        "wall_seconds": 99.93225269999675
+      },
+      "thin-calibrated": {
+        "allocated_mib": 396.03466796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 4.406499767303467,
+        "run": "dump\\runs\\20261004T093732Z-7e529a5b",
+        "targets": 322560,
+        "update_seconds": 91.0587028998707,
+        "wall_seconds": 102.21517319999839
+      },
+      "thin-recompute": {
+        "allocated_mib": 396.03466796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 4.438516792418465,
+        "run": "dump\\runs\\20261004T093537Z-a366dd6c",
+        "targets": 322560,
+        "update_seconds": 90.8202966999379,
+        "wall_seconds": 102.06011130000115
+      },
+      "wide-cached": {
+        "allocated_mib": 458.78466796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 4.400808517516605,
+        "run": "dump\\runs\\20261004T093343Z-039fdbc5",
+        "targets": 322560,
+        "update_seconds": 90.95879050034273,
+        "wall_seconds": 102.31407269999909
+      },
+      "wide-recompute": {
+        "allocated_mib": 396.03466796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 4.400808517516605,
+        "run": "dump\\runs\\20261004T093147Z-cd15663c",
+        "targets": 322560,
+        "update_seconds": 91.72475550008676,
+        "wall_seconds": 103.09437220000109
+      }
+    }
+  },
+  "source_sha256": "749198ccbd66810b29598920b1f11fb205090cbf08436391e071b0318d471e07"
+}

@@ -1,0 +1,117 @@
+{
+  "config": {
+    "dataset": "dump/data/tinystories-v2",
+    "hypothesis": "Registered finalist from complete two-corpus development screen",
+    "model": {
+      "context": 256,
+      "ffn": "signed_linear",
+      "ffn_output_init_scale": 1.0,
+      "groups": 128,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "signed_context_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "compact-confirmation-v1-tinystories-signed-fine-s401-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 401,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "aff03400442583f0ba404be22cfe57d5a6f3e938a925a9faf6117e5b179c7637",
+      "complete_split": true,
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 2.606208510649189,
+      "perplexity": 13.547587817767964,
+      "split": "valid",
+      "step": 2000,
+      "targets": 199936
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 2.637403041124344,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2359296,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 4718592,
+      "total_parameters": 8655360
+    },
+    "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Registered finalist from complete two-corpus development screen",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "signed_linear",
+      "ffn_output_init_scale": 1.0,
+      "groups": 128,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "signed_context_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "compact-confirmation-v1-tinystories-signed-fine-s401-lr0.0006",
+    "peak_training_allocated_bytes": 424971776,
+    "peak_training_reserved_bytes": 490733568,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261005T025415Z-b05571bb",
+    "seed": 401,
+    "source_sha256": "c0f7bc029505e815268888294f40c139c4d52c1c6164c008262739e06026ae9a",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 401,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 46891.91975745452,
+    "training_seconds": 87.34980400005588,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 2.637403041124344,
+      "perplexity": 13.976859107260873,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 98.96728820000135
+  }
+}

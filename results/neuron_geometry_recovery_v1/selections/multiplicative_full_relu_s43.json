@@ -1,8 +1,0 @@
-{
-  "selected_label": "multiplicative_full_relu_s43_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 0.8983790477116903,
-    "0.003": 0.9267283082008362
-  }
-}

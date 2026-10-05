@@ -1,8 +1,0 @@
-{
-  "selected_label": "smooth_full_gelu_s17_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 0.48113374412059784,
-    "0.003": 0.5094775855541229
-  }
-}

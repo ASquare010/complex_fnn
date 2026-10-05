@@ -1,0 +1,115 @@
+{
+  "config": {
+    "dataset": "dump/data/wikitext2-v2",
+    "hypothesis": "Dense reference matched to learned-template budget",
+    "model": {
+      "context": 256,
+      "ffn": "gelu",
+      "groups": 8,
+      "heads": 16,
+      "hidden": 611,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "base_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "basis-readout-v1-wikitext-narrow-gelu-learned-budget-s101-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "c418e5f1203fe6d8c2aee203f6a855ef2ce09dfed16f3369db53ca616cbabe20",
+      "complete_split": true,
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 4.316168421790714,
+      "perplexity": 74.90108839984663,
+      "split": "valid",
+      "step": 2000,
+      "targets": 322560
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 4.243701055645943,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2502656,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 5005312,
+      "total_parameters": 8798720
+    },
+    "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Dense reference matched to learned-template budget",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "gelu",
+      "groups": 8,
+      "heads": 16,
+      "hidden": 611,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "base_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "basis-readout-v1-wikitext-narrow-gelu-learned-budget-s101-lr0.0006",
+    "peak_training_allocated_bytes": 428969472,
+    "peak_training_reserved_bytes": 490733568,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T112413Z-f98c24fa",
+    "seed": 101,
+    "source_sha256": "b05094039e85d4a3017d271347ebe09b15f4c5b4a33c15d21582ee5987ea993a",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 50148.87782823669,
+    "training_seconds": 81.67680269993434,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 4.243701055645943,
+      "perplexity": 69.66521011555707,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 92.52097620000131
+  }
+}

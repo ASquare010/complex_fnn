@@ -1,8 +1,0 @@
-{
-  "selected_cell": "oscillatory_full_swiglu_s43_lr1000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "oscillatory_full_swiglu_s43_lr1000": 1.041887253522873,
-    "oscillatory_full_swiglu_s43_lr3000": 1.053637887040774
-  }
-}

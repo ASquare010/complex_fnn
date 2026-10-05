@@ -1,0 +1,117 @@
+{
+  "config": {
+    "dataset": "dump/data/tinystories-v2",
+    "hypothesis": "Rounded-up matched ordinary dense control",
+    "model": {
+      "context": 256,
+      "ffn": "swiglu_kernel",
+      "ffn_output_init_scale": 1.0,
+      "groups": 64,
+      "heads": 16,
+      "hidden": 384,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "base_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "compact-confirmation-v1-tinystories-compact-swiglu-kernel-h384-s401-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 401,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "e884c276da8cabbd45081e10c236d11191c4e44fe9109b30a6244c3086882d94",
+      "complete_split": true,
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 2.609602383553753,
+      "perplexity": 13.593644720413494,
+      "split": "valid",
+      "step": 2000,
+      "targets": 199936
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 2.6418357603251934,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2359296,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 4718592,
+      "total_parameters": 8655360
+    },
+    "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Rounded-up matched ordinary dense control",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "swiglu_kernel",
+      "ffn_output_init_scale": 1.0,
+      "groups": 64,
+      "heads": 16,
+      "hidden": 384,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "base_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "compact-confirmation-v1-tinystories-compact-swiglu-kernel-h384-s401-lr0.0006",
+    "peak_training_allocated_bytes": 427331072,
+    "peak_training_reserved_bytes": 486539264,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261005T030234Z-3a9d8ca3",
+    "seed": 401,
+    "source_sha256": "c0f7bc029505e815268888294f40c139c4d52c1c6164c008262739e06026ae9a",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 401,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 51414.88697760423,
+    "training_seconds": 79.66564240011212,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 2.6418357603251934,
+      "perplexity": 14.038952117761044,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 90.72458090000146
+  }
+}

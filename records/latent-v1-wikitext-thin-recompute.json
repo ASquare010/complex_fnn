@@ -1,0 +1,115 @@
+{
+  "config": {
+    "dataset": "dump/data/wikitext2-v2",
+    "hypothesis": "Registered latent FFN allocation: thin-recompute",
+    "model": {
+      "context": 256,
+      "ffn": "latent_swiglu",
+      "groups": 8,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 320,
+      "layers": 4,
+      "loops": 1,
+      "name": "latent_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "latent-v1-wikitext-thin-recompute-s101-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "453e6d2a6e601625a5345fa33334b78e45f30eab20e1d6bec1e44d5d5eceec3a",
+      "complete_split": true,
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 4.438516792418465,
+      "perplexity": 84.64929603992562,
+      "split": "valid",
+      "step": 2000,
+      "targets": 322560
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 4.3696479350328445,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2490368,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 4980736,
+      "total_parameters": 8786432
+    },
+    "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Registered latent FFN allocation: thin-recompute",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "latent_swiglu",
+      "groups": 8,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 320,
+      "layers": 4,
+      "loops": 1,
+      "name": "latent_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "latent-v1-wikitext-thin-recompute-s101-lr0.0006",
+    "peak_training_allocated_bytes": 415272448,
+    "peak_training_reserved_bytes": 455081984,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T093537Z-a366dd6c",
+    "seed": 101,
+    "source_sha256": "749198ccbd66810b29598920b1f11fb205090cbf08436391e071b0318d471e07",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 45100.050856834525,
+    "training_seconds": 90.8202966999379,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 4.3696479350328445,
+      "perplexity": 79.0158081041103,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 102.06011130000115
+  }
+}

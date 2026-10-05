@@ -1,8 +1,0 @@
-{
-  "selected_label": "piecewise_gelu_offset_s29_lr3000",
-  "selected_rate": 0.003,
-  "selection_mse_by_rate": {
-    "0.001": 0.5035835082332293,
-    "0.003": 0.4165919249256452
-  }
-}

@@ -1,0 +1,17 @@
+{
+  "output": "dump/shared-gate-v2/tinystories",
+  "dataset": "dump/data/tinystories-v2",
+  "model": {"width":512,"layers":4,"heads":16,"context":256,"vocab_size":4096,"rope_base":10000},
+  "training": {"steps":2000,"batch_size":8,"warmup_steps":200,"eval_every":200,"eval_batches":32,"device":"cuda","precision":"bf16","threads":4},
+  "seeds": [101],
+  "learning_rates": [0.0006],
+  "variants": [
+    {"name":"full-swiglu-fused","hypothesis":"Full fused SwiGLU reference at the fixed v2 backbone.","model":{"name":"base_transformer","hidden":1376,"ffn":"swiglu_fused"}},
+    {"name":"full-gelu","hypothesis":"Full GELU reference with equal FFN weights.","model":{"name":"base_transformer","hidden":2064,"ffn":"gelu"}},
+    {"name":"narrow-swiglu-fused","hypothesis":"Compact dense reference at the shared-bank parameter budget.","model":{"name":"base_transformer","hidden":304,"ffn":"swiglu_fused"}},
+    {"name":"narrow-gelu","hypothesis":"Compact GELU reference at the shared-bank parameter budget.","model":{"name":"base_transformer","hidden":456,"ffn":"gelu"}},
+    {"name":"shared-basis","hypothesis":"Reuse detectors to expose twice as many features as the equal-weight compact dense bank.","model":{"name":"shared_basis_transformer","hidden":608,"ffn":"shared_swiglu"}},
+    {"name":"gate-transport","hypothesis":"Layer-specific neighboring-feature products improve shared-bank reuse; train only if it passes the registered hardware screen.","model":{"name":"shared_basis_transformer","hidden":608,"ffn":"transport_swiglu"}},
+    {"name":"untied-basis","hypothesis":"Untie identically initialized detectors to measure the training cost of sharing; not a size-matched control.","model":{"name":"shared_basis_transformer","hidden":608,"ffn":"untied_swiglu"}}
+  ]
+}

@@ -1,8 +1,0 @@
-{
-  "selected_cell": "multiplicative_dynamic_s17_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "multiplicative_dynamic_s17_lr1000": 0.9270282785097758,
-    "multiplicative_dynamic_s17_lr3000": 0.8029886881510416
-  }
-}

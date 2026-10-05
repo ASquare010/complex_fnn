@@ -1,0 +1,15 @@
+{
+  "causality": true,
+  "counts": {
+    "attention": "full causal multi-head; one pass per block",
+    "ffn_parameters": 2099200,
+    "ffn_passes": 1,
+    "ffn_projection_flops_per_token": 4194304,
+    "total_parameters": 8395264
+  },
+  "finite_nonzero_interaction_gradients": true,
+  "identical_initial_controls": true,
+  "save_load": true,
+  "scope": "staged Transformer, CPU only",
+  "token_locality": true
+}

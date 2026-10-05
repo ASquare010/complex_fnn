@@ -1,8 +1,0 @@
-{
-  "selected_cell": "oscillatory_latent_gain_s43_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "oscillatory_latent_gain_s43_lr1000": 1.0102679133415222,
-    "oscillatory_latent_gain_s43_lr3000": 1.0042051126559575
-  }
-}

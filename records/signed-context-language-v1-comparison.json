@@ -1,0 +1,381 @@
+{
+  "candidate_hardware_passes": {
+    "signed-linear": true,
+    "signed-tanh": true
+  },
+  "complete": true,
+  "completed_runs": 20,
+  "decision": "Retire both fixed signed recipes: neither passes all resource, quality and mechanism comparisons on both corpora.",
+  "decisions": {
+    "tinystories": {
+      "signed-linear": {
+        "beats_plain_closed_open": true,
+        "compact_loss_gain": 0.0009325979727132783,
+        "full_loss_cost": 0.02578269284913115,
+        "language_pass": false,
+        "strongest_compact_dense": "narrow-swiglu-kernel",
+        "strongest_full": "full-swiglu-fused"
+      },
+      "signed-tanh": {
+        "beats_plain_closed_open": true,
+        "compact_loss_gain": -0.004142040064902153,
+        "full_loss_cost": 0.030993027868467138,
+        "language_pass": false,
+        "strongest_compact_dense": "narrow-swiglu-kernel",
+        "strongest_full": "full-swiglu-fused"
+      }
+    },
+    "wikitext": {
+      "signed-linear": {
+        "beats_plain_closed_open": true,
+        "compact_loss_gain": 0.002702144651706151,
+        "full_loss_cost": 0.009361117670938945,
+        "language_pass": false,
+        "strongest_compact_dense": "narrow-swiglu-kernel",
+        "strongest_full": "full-swiglu-fused"
+      },
+      "signed-tanh": {
+        "beats_plain_closed_open": true,
+        "compact_loss_gain": -0.0032787989220992575,
+        "full_loss_cost": 0.015414406423149174,
+        "language_pass": false,
+        "strongest_compact_dense": "narrow-swiglu-kernel",
+        "strongest_full": "full-swiglu-fused"
+      }
+    }
+  },
+  "planned_runs": 20,
+  "qualification": "unproven: equal tuning, fresh seeds, sustained resources and independent confirmation required",
+  "recipe_screen_passes": {
+    "signed-linear": false,
+    "signed-tanh": false
+  },
+  "results": {
+    "tinystories": {
+      "closed-gain": {
+        "allocated_mib": 415.93896484375,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2492672,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8788736
+        },
+        "nll": 2.6679036852339624,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T082548Z-61e472a1",
+        "targets": 199936,
+        "update_seconds": 87.35928969974339,
+        "wall_seconds": 98.17646580000292
+      },
+      "full-gelu": {
+        "allocated_mib": 539.39404296875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 2.592983325220711,
+        "reserved_mib": 610.0,
+        "run": "dump\\runs\\20261004T081903Z-c6e0cd7b",
+        "targets": 199936,
+        "update_seconds": 89.06049759987218,
+        "wall_seconds": 102.0542107999936
+      },
+      "full-swiglu-fused": {
+        "allocated_mib": 560.72216796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 2.5384857773628187,
+        "reserved_mib": 602.0,
+        "run": "dump\\runs\\20261004T081652Z-b2523ff8",
+        "targets": 199936,
+        "update_seconds": 108.14312989998143,
+        "wall_seconds": 123.43128919999435
+      },
+      "full-swiglu-kernel": {
+        "allocated_mib": 542.47216796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 2.5442395399535664,
+        "reserved_mib": 574.0,
+        "run": "dump\\runs\\20261004T081449Z-1a69fe60",
+        "targets": 199936,
+        "update_seconds": 100.23448879991338,
+        "wall_seconds": 114.57170059999771
+      },
+      "narrow-gelu": {
+        "allocated_mib": 408.90966796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 2.616390907199679,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T082234Z-bbae11e0",
+        "targets": 199936,
+        "update_seconds": 80.38947009994445,
+        "wall_seconds": 90.98900739999954
+      },
+      "narrow-swiglu-kernel": {
+        "allocated_mib": 407.59716796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2506752,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 5013504,
+          "total_parameters": 8802816
+        },
+        "nll": 2.6063654676136987,
+        "reserved_mib": 450.0,
+        "run": "dump\\runs\\20261004T082052Z-f43aa655",
+        "targets": 199936,
+        "update_seconds": 84.01541080010793,
+        "wall_seconds": 94.97213360000023
+      },
+      "open-gain": {
+        "allocated_mib": 415.93896484375,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2492672,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8788736
+        },
+        "nll": 2.6192718559587505,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T082735Z-98c638ea",
+        "targets": 199936,
+        "update_seconds": 87.08255479996296,
+        "wall_seconds": 97.8362014000013
+      },
+      "plain-silu": {
+        "allocated_mib": 406.65966796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2359296,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4718592,
+          "total_parameters": 8655360
+        },
+        "nll": 2.666189604013128,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T082412Z-e5f9c09e",
+        "targets": 199936,
+        "update_seconds": 78.76780149987462,
+        "wall_seconds": 89.05769719999807
+      },
+      "signed-linear": {
+        "allocated_mib": 415.90966796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 2.6039347764624523,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T082921Z-c73bd0ba",
+        "targets": 199936,
+        "update_seconds": 85.5217442999492,
+        "wall_seconds": 96.29612749999797
+      },
+      "signed-tanh": {
+        "allocated_mib": 415.90966796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 2.617161137804332,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T083107Z-084e62fb",
+        "targets": 199936,
+        "update_seconds": 83.55739770004584,
+        "wall_seconds": 94.29179299999669
+      }
+    },
+    "wikitext": {
+      "closed-gain": {
+        "allocated_mib": 415.93896484375,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2492672,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8788736
+        },
+        "nll": 4.373279430752709,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T084339Z-be00224f",
+        "targets": 322560,
+        "update_seconds": 85.8349689999668,
+        "wall_seconds": 96.97675069999968
+      },
+      "full-gelu": {
+        "allocated_mib": 539.39404296875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 4.2691681528848315,
+        "reserved_mib": 610.0,
+        "run": "dump\\runs\\20261004T083642Z-efb74959",
+        "targets": 322560,
+        "update_seconds": 88.43200959982642,
+        "wall_seconds": 101.39055160000134
+      },
+      "full-swiglu-fused": {
+        "allocated_mib": 560.72216796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 4.237625367300851,
+        "reserved_mib": 602.0,
+        "run": "dump\\runs\\20261004T083447Z-e1a2782c",
+        "targets": 322560,
+        "update_seconds": 90.57972190004512,
+        "wall_seconds": 104.20682269999816
+      },
+      "full-swiglu-kernel": {
+        "allocated_mib": 540.53466796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 8454144,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 16908288,
+          "total_parameters": 14750208
+        },
+        "nll": 4.239025527711899,
+        "reserved_mib": 582.0,
+        "run": "dump\\runs\\20261004T083253Z-01dcf7c3",
+        "targets": 322560,
+        "update_seconds": 90.17943630022637,
+        "wall_seconds": 103.34798089999822
+      },
+      "narrow-gelu": {
+        "allocated_mib": 408.90966796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 4.317236715649802,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T084017Z-b0252e08",
+        "targets": 322560,
+        "update_seconds": 82.54453810003906,
+        "wall_seconds": 93.33557629999996
+      },
+      "narrow-swiglu-kernel": {
+        "allocated_mib": 407.59716796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2506752,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 5013504,
+          "total_parameters": 8802816
+        },
+        "nll": 4.288883460514129,
+        "reserved_mib": 450.0,
+        "run": "dump\\runs\\20261004T083833Z-7a9ad339",
+        "targets": 322560,
+        "update_seconds": 83.80603570013773,
+        "wall_seconds": 94.48984290000226
+      },
+      "open-gain": {
+        "allocated_mib": 415.93896484375,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2492672,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8788736
+        },
+        "nll": 4.309518384176587,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T084528Z-88a29d61",
+        "targets": 322560,
+        "update_seconds": 85.99106480002229,
+        "wall_seconds": 96.85541420000663
+      },
+      "plain-silu": {
+        "allocated_mib": 406.65966796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2359296,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4718592,
+          "total_parameters": 8655360
+        },
+        "nll": 4.377302872188507,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T084200Z-f7841449",
+        "targets": 322560,
+        "update_seconds": 80.55853310004022,
+        "wall_seconds": 91.15766100000474
+      },
+      "signed-linear": {
+        "allocated_mib": 415.90966796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 4.27729427700951,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T084717Z-4bbf32c6",
+        "targets": 322560,
+        "update_seconds": 84.23196219983947,
+        "wall_seconds": 95.00198860000091
+      },
+      "signed-tanh": {
+        "allocated_mib": 415.90966796875,
+        "counts": {
+          "attention": "full causal multi-head; one pass per block",
+          "ffn_parameters": 2490368,
+          "ffn_passes": 1,
+          "ffn_projection_flops_per_token": 4980736,
+          "total_parameters": 8786432
+        },
+        "nll": 4.302945846981473,
+        "reserved_mib": 468.0,
+        "run": "dump\\runs\\20261004T084906Z-1e367fb8",
+        "targets": 322560,
+        "update_seconds": 85.77893859989854,
+        "wall_seconds": 96.62843940000312
+      }
+    }
+  },
+  "selected_for_tuning": null,
+  "source_sha256": "4907340a63274b546286c7879f64dce3b6fc06518ffe41e777ffd10d7c911ade"
+}

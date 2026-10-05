@@ -1,8 +1,0 @@
-{
-  "selected_cell": "smooth_latent_offset_first_lr_s29_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "smooth_latent_offset_first_lr_s29_lr1000": 0.6025066450238228,
-    "smooth_latent_offset_first_lr_s29_lr3000": 0.5235162774721781
-  }
-}

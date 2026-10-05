@@ -1,8 +1,0 @@
-{
-  "selected_cell": "smooth_cross_s17_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "smooth_cross_s17_lr1000": 1.1002829869588215,
-    "smooth_cross_s17_lr3000": 1.0165586272875469
-  }
-}

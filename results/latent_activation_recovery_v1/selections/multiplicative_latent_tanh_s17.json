@@ -1,8 +1,0 @@
-{
-  "selected_cell": "multiplicative_latent_tanh_s17_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "multiplicative_latent_tanh_s17_lr1000": 0.9795031398534775,
-    "multiplicative_latent_tanh_s17_lr3000": 0.9702169299125671
-  }
-}

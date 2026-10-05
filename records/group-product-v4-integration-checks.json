@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "device": "cpu",
+      "initial_weights_and_counts": true,
+      "max_output_difference": 0.0,
+      "mode": "group_product",
+      "nonzero_coefficient_outputs_gradients": true
+    },
+    {
+      "device": "cuda",
+      "initial_weights_and_counts": true,
+      "max_output_difference": 0.0,
+      "mode": "group_product",
+      "nonzero_coefficient_outputs_gradients": true
+    },
+    {
+      "device": "cpu",
+      "initial_weights_and_counts": true,
+      "max_output_difference": 0.0,
+      "mode": "group_square",
+      "nonzero_coefficient_outputs_gradients": true
+    },
+    {
+      "device": "cuda",
+      "initial_weights_and_counts": true,
+      "max_output_difference": 0.0,
+      "mode": "group_square",
+      "nonzero_coefficient_outputs_gradients": true
+    },
+    {
+      "device": "cpu",
+      "initial_weights_and_counts": true,
+      "max_output_difference": 0.0,
+      "mode": "plain",
+      "nonzero_coefficient_outputs_gradients": true
+    },
+    {
+      "device": "cuda",
+      "initial_weights_and_counts": true,
+      "max_output_difference": 0.0,
+      "mode": "plain",
+      "nonzero_coefficient_outputs_gradients": true
+    },
+    {
+      "exact_production_cpu_resume": true,
+      "full_run": "dump\\runs\\20261004T063857Z-21621853",
+      "mode": "group",
+      "resumed_run": "dump\\runs\\20261004T063858Z-ae4de627"
+    },
+    {
+      "exact_production_cpu_resume": true,
+      "full_run": "dump\\runs\\20261004T063859Z-e14559f7",
+      "mode": "swiglu-kernel",
+      "resumed_run": "dump\\runs\\20261004T063859Z-d6b5bca4"
+    }
+  ],
+  "compiled_dense_control_equivalence": true,
+  "counts": true,
+  "scope": "production layout/schema, CPU/CUDA numerical equivalence and exact CPU Trainer resume",
+  "source_sha256": "69d7ed9d3405c89fdfa59deb4b48871e34521593ccd38e7fa2a1408f121e6780"
+}

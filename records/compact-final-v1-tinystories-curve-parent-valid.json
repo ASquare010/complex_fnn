@@ -1,0 +1,117 @@
+{
+  "config": {
+    "dataset": "dump/data/tinystories-v2",
+    "hypothesis": "Contemporaneous parent comparison",
+    "model": {
+      "context": 256,
+      "ffn": "self_curve",
+      "ffn_output_init_scale": 1.0,
+      "groups": 64,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "channel_curve_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "compact-final-v1-tinystories-curve-parent-s509-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 509,
+      "steps": 8000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "ff510382981c22285f0bf185faf3557bb35c51d1037f7f72c7252176f9d1fc28",
+      "complete_split": true,
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 2.125865706713648,
+      "perplexity": 8.380149100127129,
+      "split": "valid",
+      "step": 8000,
+      "targets": 199936
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 2.159258507192135,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2121728,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 4194304,
+      "total_parameters": 8417792
+    },
+    "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Contemporaneous parent comparison",
+    "input_tokens_including_padding": 16384000,
+    "model": {
+      "context": 256,
+      "ffn": "self_curve",
+      "ffn_output_init_scale": 1.0,
+      "groups": 64,
+      "heads": 16,
+      "hidden": 512,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "channel_curve_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "compact-final-v1-tinystories-curve-parent-s509-lr0.0006",
+    "peak_training_allocated_bytes": 422776320,
+    "peak_training_reserved_bytes": 473956352,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261005T041654Z-23d988b6",
+    "seed": 509,
+    "source_sha256": "c0f7bc029505e815268888294f40c139c4d52c1c6164c008262739e06026ae9a",
+    "step": 8000,
+    "trained_target_tokens": 16384000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 509,
+      "steps": 8000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 43808.061477066105,
+    "training_seconds": 373.99509240045154,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 2.159258507192135,
+      "perplexity": 8.664710455410594,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 422.6390684000071
+  }
+}

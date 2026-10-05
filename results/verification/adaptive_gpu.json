@@ -1,5 +1,0 @@
-{
-  "bf16_zero_initialization_exact": true,
-  "finite_backward": true,
-  "max_logit_difference": 0.0
-}

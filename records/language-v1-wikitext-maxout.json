@@ -1,0 +1,111 @@
+{
+  "config": {
+    "dataset": "dump/data/wikitext2-v2",
+    "hypothesis": "Three affine branches per hidden unit preserve useful feature selection with two narrow projections.",
+    "model": {
+      "context": 256,
+      "ffn": "maxout",
+      "groups": 8,
+      "heads": 6,
+      "hidden": 112,
+      "layers": 4,
+      "loops": 1,
+      "name": "maxout_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 192
+    },
+    "name": "wikitext-maxout-s101-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "40bd8f1d5004225bcacaee6afeaa67f10f8eee5503453923f0361aaea1149c43",
+      "complete_split": true,
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 4.68439750368633,
+      "perplexity": 108.24503542285038,
+      "split": "valid",
+      "step": 2000,
+      "targets": 322560
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 4.612475574016571,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 345408,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 688128,
+      "total_parameters": 1723392
+    },
+    "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Three affine branches per hidden unit preserve useful feature selection with two narrow projections.",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "maxout",
+      "groups": 8,
+      "heads": 6,
+      "hidden": 112,
+      "layers": 4,
+      "loops": 1,
+      "name": "maxout_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 192
+    },
+    "name": "wikitext-maxout-s101-lr0.0006",
+    "peak_training_allocated_bytes": 225555968,
+    "peak_training_reserved_bytes": 274726912,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T045926Z-51fd93ef",
+    "seed": 101,
+    "source_sha256": "44915c574c6a6dc5f7ef10e5cc3201e6550a622e191277451f809e35affaaea7",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 51836.81343882536,
+    "training_seconds": 79.01720279997244,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 4.612475574016571,
+      "perplexity": 100.7332137474289,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 87.26508099999774
+  }
+}

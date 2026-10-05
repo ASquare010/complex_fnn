@@ -1,8 +1,0 @@
-{
-  "selected_label": "oscillatory_full_gelu_s17_lr3000",
-  "selected_rate": 0.003,
-  "selection_mse_by_rate": {
-    "0.001": 1.0273788173993428,
-    "0.003": 1.0207639733950298
-  }
-}

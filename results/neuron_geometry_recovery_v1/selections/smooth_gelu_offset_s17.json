@@ -1,8 +1,0 @@
-{
-  "selected_label": "smooth_gelu_offset_s17_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 0.46702779829502106,
-    "0.003": 0.5258800238370895
-  }
-}

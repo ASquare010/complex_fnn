@@ -1,0 +1,241 @@
+{
+  "decision": "retire fixed widths/hidden ratios before language training",
+  "groups": [
+    {
+      "comparisons": {
+        "full-gelu": {
+          "allocated_reduction": 0.06658312212144046,
+          "passes": false,
+          "speed_ratio": 0.975919432322557
+        },
+        "full-swiglu-fused": {
+          "allocated_reduction": 0.09910901447122289,
+          "passes": false,
+          "speed_ratio": 1.0130231260384501
+        }
+      },
+      "corpus": "tinystories",
+      "passes": false,
+      "stats": {
+        "attention-only": {
+          "allocated_mib": 186.28125,
+          "reserved_mib": 234.0,
+          "tokens_per_second": 69249.65396304148
+        },
+        "full-gelu": {
+          "allocated_mib": 242.3544921875,
+          "reserved_mib": 292.0,
+          "tokens_per_second": 57213.76613495497
+        },
+        "full-swiglu-fused": {
+          "allocated_mib": 251.1044921875,
+          "reserved_mib": 294.0,
+          "tokens_per_second": 55118.21471027452
+        },
+        "shared-basis": {
+          "allocated_mib": 226.2177734375,
+          "reserved_mib": 264.0,
+          "tokens_per_second": 55836.02616746078
+        }
+      },
+      "width": 192
+    },
+    {
+      "comparisons": {
+        "full-gelu": {
+          "allocated_reduction": 0.06658312212144046,
+          "passes": false,
+          "speed_ratio": 0.9973605320106345
+        },
+        "full-swiglu-fused": {
+          "allocated_reduction": 0.09910901447122289,
+          "passes": false,
+          "speed_ratio": 1.0388821522400289
+        }
+      },
+      "corpus": "wikitext",
+      "passes": false,
+      "stats": {
+        "attention-only": {
+          "allocated_mib": 186.28125,
+          "reserved_mib": 234.0,
+          "tokens_per_second": 71187.01426507812
+        },
+        "full-gelu": {
+          "allocated_mib": 242.3544921875,
+          "reserved_mib": 292.0,
+          "tokens_per_second": 55089.05005066223
+        },
+        "full-swiglu-fused": {
+          "allocated_mib": 251.1044921875,
+          "reserved_mib": 294.0,
+          "tokens_per_second": 52887.27325618207
+        },
+        "shared-basis": {
+          "allocated_mib": 226.2177734375,
+          "reserved_mib": 264.0,
+          "tokens_per_second": 54943.64426648895
+        }
+      },
+      "width": 192
+    },
+    {
+      "comparisons": {
+        "full-gelu": {
+          "allocated_reduction": 0.14504923894798405,
+          "passes": false,
+          "speed_ratio": 1.0568232255280567
+        },
+        "full-swiglu-fused": {
+          "allocated_reduction": 0.17201092337519397,
+          "passes": false,
+          "speed_ratio": 1.0422628860169365
+        }
+      },
+      "corpus": "tinystories",
+      "passes": false,
+      "stats": {
+        "attention-only": {
+          "allocated_mib": 260.97802734375,
+          "reserved_mib": 314.0,
+          "tokens_per_second": 69183.60074366929
+        },
+        "full-gelu": {
+          "allocated_mib": 410.744140625,
+          "reserved_mib": 466.0,
+          "tokens_per_second": 51427.35906877747
+        },
+        "full-swiglu-fused": {
+          "allocated_mib": 424.119140625,
+          "reserved_mib": 470.0,
+          "tokens_per_second": 52145.79567267811
+        },
+        "shared-basis": {
+          "allocated_mib": 351.166015625,
+          "reserved_mib": 416.0,
+          "tokens_per_second": 54349.62749145497
+        }
+      },
+      "width": 384
+    },
+    {
+      "comparisons": {
+        "full-gelu": {
+          "allocated_reduction": 0.14504923894798405,
+          "passes": false,
+          "speed_ratio": 1.044116973388871
+        },
+        "full-swiglu-fused": {
+          "allocated_reduction": 0.17201092337519397,
+          "passes": false,
+          "speed_ratio": 1.0580258682617725
+        }
+      },
+      "corpus": "wikitext",
+      "passes": false,
+      "stats": {
+        "attention-only": {
+          "allocated_mib": 260.97802734375,
+          "reserved_mib": 314.0,
+          "tokens_per_second": 71095.59597837832
+        },
+        "full-gelu": {
+          "allocated_mib": 410.744140625,
+          "reserved_mib": 466.0,
+          "tokens_per_second": 53042.394418633165
+        },
+        "full-swiglu-fused": {
+          "allocated_mib": 424.119140625,
+          "reserved_mib": 470.0,
+          "tokens_per_second": 52345.09474959218
+        },
+        "shared-basis": {
+          "allocated_mib": 351.166015625,
+          "reserved_mib": 416.0,
+          "tokens_per_second": 55382.46432168201
+        }
+      },
+      "width": 384
+    },
+    {
+      "comparisons": {
+        "full-gelu": {
+          "allocated_reduction": 0.17009607105713964,
+          "passes": false,
+          "speed_ratio": 1.040077144957681
+        },
+        "full-swiglu-fused": {
+          "allocated_reduction": 0.20211163983375358,
+          "passes": true,
+          "speed_ratio": 1.051797803157698
+        }
+      },
+      "corpus": "tinystories",
+      "passes": false,
+      "stats": {
+        "attention-only": {
+          "allocated_mib": 315.4873046875,
+          "reserved_mib": 358.0,
+          "tokens_per_second": 63649.44471602974
+        },
+        "full-gelu": {
+          "allocated_mib": 545.5556640625,
+          "reserved_mib": 600.0,
+          "tokens_per_second": 48507.13834170419
+        },
+        "full-swiglu-fused": {
+          "allocated_mib": 567.4462890625,
+          "reserved_mib": 606.0,
+          "tokens_per_second": 47966.60138007792
+        },
+        "shared-basis": {
+          "allocated_mib": 452.7587890625,
+          "reserved_mib": 504.0,
+          "tokens_per_second": 50451.16595650696
+        }
+      },
+      "width": 512
+    },
+    {
+      "comparisons": {
+        "full-gelu": {
+          "allocated_reduction": 0.17009607105713964,
+          "passes": false,
+          "speed_ratio": 1.0723740107889204
+        },
+        "full-swiglu-fused": {
+          "allocated_reduction": 0.20211163983375358,
+          "passes": true,
+          "speed_ratio": 1.1173575343309126
+        }
+      },
+      "corpus": "wikitext",
+      "passes": false,
+      "stats": {
+        "attention-only": {
+          "allocated_mib": 315.4873046875,
+          "reserved_mib": 350.0,
+          "tokens_per_second": 68352.84137215925
+        },
+        "full-gelu": {
+          "allocated_mib": 545.5556640625,
+          "reserved_mib": 600.0,
+          "tokens_per_second": 49047.13134750812
+        },
+        "full-swiglu-fused": {
+          "allocated_mib": 567.4462890625,
+          "reserved_mib": 604.0,
+          "tokens_per_second": 47072.55049952647
+        },
+        "shared-basis": {
+          "allocated_mib": 452.7587890625,
+          "reserved_mib": 504.0,
+          "tokens_per_second": 52596.86896081826
+        }
+      },
+      "width": 512
+    }
+  ],
+  "scope": "short profiles; not a confirmed resource result",
+  "selected_width": null
+}

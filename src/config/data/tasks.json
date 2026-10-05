@@ -1,0 +1,12 @@
+{
+  "kind": "synthetic",
+  "output": "dump/data/tasks-v1",
+  "seed": 49157,
+  "vocab_size": 4096,
+  "counts": {
+    "train": 12000,
+    "valid": 600,
+    "test": 1200,
+    "ood": 1200
+  }
+}

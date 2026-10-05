@@ -1,0 +1,6 @@
+{
+  "equation": true,
+  "finite_difference": true,
+  "gradients": true,
+  "scope": "CPU staged FFN, dense complete-graph adjacency reference"
+}

@@ -1,8 +1,0 @@
-{
-  "selected_cell": "piecewise_cross_s43_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "piecewise_cross_s43_lr1000": 1.0544881621996562,
-    "piecewise_cross_s43_lr3000": 0.9905531605084738
-  }
-}

@@ -1,0 +1,60 @@
+{
+  "compact_loss_gain": 4.5423489496321245e-05,
+  "compact_reference": "narrow-swiglu-kernel",
+  "completed_runs": 8,
+  "corpus": "wikitext",
+  "full_loss_cost": 0.014723334542319222,
+  "full_reference": "full-swiglu-fused",
+  "nll": {
+    "feature-flow": 4.30001734324864,
+    "feature-once": 4.296649165380568,
+    "full-gelu": 4.2691681528848315,
+    "full-swiglu-fused": 4.237625367300851,
+    "full-swiglu-kernel": 4.239025527711899,
+    "narrow-gelu": 4.329682661995055,
+    "narrow-swiglu-calibrated": 4.309997322445824,
+    "narrow-swiglu-kernel": 4.300212673913865
+  },
+  "planned_runs": 11,
+  "removals": {
+    "diagonal_m_nll": 4.301878423539419,
+    "half_features_removed_nll": 4.3013982303558835,
+    "mean_sampler_seed": 2027,
+    "mean_training_batches": 32,
+    "mixing": [
+      {
+        "max_abs": 0.08405716717243195,
+        "mean": 0.006475022993981838,
+        "std": 0.02015823684632778
+      },
+      {
+        "max_abs": 0.11813575774431229,
+        "mean": -0.005316247697919607,
+        "std": 0.019496899098157883
+      },
+      {
+        "max_abs": 0.10034378618001938,
+        "mean": -0.002124237595126033,
+        "std": 0.02118946984410286
+      },
+      {
+        "max_abs": 0.12837550044059753,
+        "mean": -0.002693125046789646,
+        "std": 0.025875575840473175
+      }
+    ],
+    "original_calibration_retained": true,
+    "removal_site": "even psi coordinates at every internal update; identity h retained",
+    "same_arithmetic_backend": true,
+    "scope": "frozen-weight validation interventions; changed statistics are not semantic-role proof",
+    "single_step_nll": 4.300058551061721,
+    "targets": 322560,
+    "trained_nll": 4.30001734324864,
+    "training_mean_output_nll": 9.804952306596059,
+    "zero_m_nll": 4.303128964560372
+  },
+  "source_and_recipe_hashes_intact": true,
+  "source_sha256": "5875cc325b8f29b02c9361e02f15d2444deb92e1a9f762c51a809a7aae2993f8",
+  "status": "partial campaign; fixed recipe already fails required quality margins",
+  "test_loss_used": false
+}

@@ -1,0 +1,24 @@
+{
+  "events": [
+    {
+      "failure": "Context mismatch",
+      "operation": "Patch application",
+      "repair": "Read current lines and apply corrected patch; no partial patch accepted"
+    },
+    {
+      "failure": "Live source digest differed after authorized post-profile core integration edits",
+      "operation": "Integration source guard",
+      "repair": "Verify all archived profile hashes and all current hashes except the three intended integration files before promoting family"
+    },
+    {
+      "failure": "Import appended below executable code",
+      "operation": "Integration-check lint",
+      "repair": "Move import to top; format/lint passed before execution"
+    }
+  ],
+  "final_cpu_cuda_checks_pass": true,
+  "integration_checks_pass": true,
+  "resource_pass": true,
+  "resource_profiles_complete": 48,
+  "scope": "Preparation/integration repairs; numerical tests passed on first execution"
+}

@@ -1,8 +1,0 @@
-{
-  "selected_cell": "oscillatory_cross_s17_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "oscillatory_cross_s17_lr1000": 1.4024640321731567,
-    "oscillatory_cross_s17_lr3000": 1.332314948240916
-  }
-}

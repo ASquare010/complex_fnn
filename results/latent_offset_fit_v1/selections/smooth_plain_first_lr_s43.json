@@ -1,8 +1,0 @@
-{
-  "selected_cell": "smooth_plain_first_lr_s43_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "smooth_plain_first_lr_s43_lr1000": 0.7238555252552032,
-    "smooth_plain_first_lr_s43_lr3000": 0.7237456142902374
-  }
-}

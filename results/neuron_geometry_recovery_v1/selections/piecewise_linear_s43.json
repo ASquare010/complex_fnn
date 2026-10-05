@@ -1,8 +1,0 @@
-{
-  "selected_label": "piecewise_linear_s43_lr1000",
-  "selected_rate": 0.001,
-  "selection_mse_by_rate": {
-    "0.001": 0.5177482192715009,
-    "0.003": 0.5625591774781545
-  }
-}

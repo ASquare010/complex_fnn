@@ -1,0 +1,90 @@
+{
+  "archive_files": {
+    "ffn_experiments/basis_readout_transformer/config.json": "373e5cab640fa326a98859c95ce2484b9761903cf7608c808ef82d45743325d4",
+    "ffn_experiments/basis_readout_transformer/kernels.py": "c9d950cf143be81d2b62812fdc052a82a29aafc3cee57e090d6e296bf199b9fe",
+    "ffn_experiments/basis_readout_transformer/transformer.py": "ab272152533c294f976f233ff366d878b45fc951d8917d0d677ebf91049033be",
+    "ffn_experiments/channel_curve_transformer/config.json": "815e244d71603b8c171a8281b1cf413fd7c31274f3916c1ef50a60801033ea77",
+    "ffn_experiments/channel_curve_transformer/kernels.py": "503ee4819462cfde8d221512d49d4cbf52e403e18d1720de6683ceb0b56086c1",
+    "ffn_experiments/channel_curve_transformer/transformer.py": "62cc138cd425bb55707d998871892dec2a3cc5b34f607a498be4807b9692b375",
+    "ffn_experiments/components.py": "363bcd12dc5089d15d20671f8fc46a555c9932f901f98b7d76b13852314afa9e",
+    "ffn_experiments/context_activation.py": "2a79055139d806d75a7e2b8c55c64c441421b7e8859f2804956189b214ef4b19",
+    "ffn_experiments/settings.py": "81a2d03eca72d637c083719ee177f31416f4923611233786a2ebff93258904cb",
+    "ffn_experiments/signed_context_transformer/config.json": "c96c9d969d0d9185154c54fce958552a5b33eda2de72d87b2aa284c4ac79cc18",
+    "ffn_experiments/signed_context_transformer/transformer.py": "55c4732c001bdda44ae5ff94283d4f7f7597bed3424337e53f47e07a4fda2886"
+  },
+  "checks": {
+    "baseline_checkpoint_load": true,
+    "baseline_tinystories.json": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 8454144,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 16908288,
+      "total_parameters": 14750208
+    },
+    "baseline_wikitext.json": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 8454144,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 16908288,
+      "total_parameters": 14750208
+    },
+    "basis_readout_transformer_archive_forward_backward": true,
+    "channel_curve_transformer_archive_forward_backward": true,
+    "cpu_fp64_equivalence": {
+      "gradients_exact": true,
+      "output_max_absolute_error": 0.0
+    },
+    "cuda_bf16_equivalence": {
+      "gradients_exact": true,
+      "output_max_absolute_error": 0.0
+    },
+    "cuda_fp32_equivalence": {
+      "gradients_exact": true,
+      "output_max_absolute_error": 0.0
+    },
+    "curve_wide_tinystories.json": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2121728,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 4194304,
+      "total_parameters": 8417792
+    },
+    "curve_wide_wikitext.json": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2121728,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 4194304,
+      "total_parameters": 8417792
+    },
+    "signed_context_transformer_archive_forward_backward": true,
+    "smoke.json": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 16896,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 33792,
+      "total_parameters": 156320
+    },
+    "winning_checkpoint_logits_exact": true
+  },
+  "main_research_goal_unchanged": true,
+  "passed": true,
+  "scope": "Refactor verification; no new language experiment or ranking.",
+  "selected_kernel_unchanged": true,
+  "source_files": {
+    "src/dataset/loader.py": "ef29e2b4a4cbc9c0aec508818da786f26feece935a7bc30a7fe92e9518343335",
+    "src/dataset/prepare.py": "c0932ea7c0a4c32a0ec6f6140fd062d01b53337e22d2d3d3659bf814d087df9f",
+    "src/dataset/tasks.py": "1af6bf821499dd1ad8f2e1146726cf3a4b3d263a7ef49ae57f21302afb88ae8a",
+    "src/experiments.py": "1104efa1e4cf70800f85273a1486507a71710e92c0c314fcaeacc6fdcd73ba13",
+    "src/leaderboard.py": "e9f114206a99afb735b9050fe6ed06ac1820f7e06a4879417aef148255bb7c09",
+    "src/main.py": "3df395ca208fce7d7dbb946a969b18ae170cac49303ca398c316a9563fc4a1ea",
+    "src/models/activation_kernels.py": "e280d8bdc9bfa210c1776a2e487112612e4bccb3518233d9505cd96a99c02158",
+    "src/models/base_transformer/transformer.py": "83c8049e9169c0d282c3c867e341c4aa181b963605053940bb319969b085c432",
+    "src/models/channel_curve_transformer/kernels.py": "503ee4819462cfde8d221512d49d4cbf52e403e18d1720de6683ceb0b56086c1",
+    "src/models/channel_curve_transformer/transformer.py": "02ad20c448629c5d91a2ecb9ad6745708f75ce3db30dbeac281546ed401f578c",
+    "src/models/components.py": "7887d3348b26c7ffcb978e640cf12a283ae14e19e168088eda32cc77bf670ed3",
+    "src/settings.py": "c4dfbc9f2e1d33a9f04fb90f61f97a729904593a06acf1bd9fd38baaf2956153",
+    "src/storage.py": "fe4266db8374ac7e6984347a3749a8472c4ee9ed1917b383eaafaa80afafbfdd",
+    "src/trainer.py": "4b15ea08109e969bfb22401f0fccae07c1e2aac06f5e39bba71930d57844653c"
+  },
+  "torch": "2.14.0+cu132"
+}

@@ -1,0 +1,124 @@
+{
+  "dataset": "dump/data/tinystories-v2",
+  "learning_rates": [
+    0.0006
+  ],
+  "model": {
+    "context": 256,
+    "heads": 16,
+    "layers": 4,
+    "rope_base": 10000,
+    "vocab_size": 4096,
+    "width": 512
+  },
+  "output": "dump/latent-language-v1/tinystories",
+  "seeds": [
+    101
+  ],
+  "training": {
+    "batch_size": 8,
+    "device": "cuda",
+    "eval_batches": 32,
+    "eval_every": 200,
+    "precision": "bf16",
+    "steps": 2000,
+    "threads": 4,
+    "warmup_steps": 200
+  },
+  "variants": [
+    {
+      "hypothesis": "Registered latent FFN control: full-swiglu-kernel",
+      "model": {
+        "ffn": "swiglu_kernel",
+        "groups": 64,
+        "hidden": 1376,
+        "name": "base_transformer"
+      },
+      "name": "full-swiglu-kernel"
+    },
+    {
+      "hypothesis": "Registered latent FFN control: full-swiglu-fused",
+      "model": {
+        "ffn": "swiglu_fused",
+        "groups": 64,
+        "hidden": 1376,
+        "name": "base_transformer"
+      },
+      "name": "full-swiglu-fused"
+    },
+    {
+      "hypothesis": "Registered latent FFN control: full-gelu",
+      "model": {
+        "ffn": "gelu",
+        "groups": 64,
+        "hidden": 2064,
+        "name": "base_transformer"
+      },
+      "name": "full-gelu"
+    },
+    {
+      "hypothesis": "Registered latent FFN control: narrow-swiglu-kernel",
+      "model": {
+        "ffn": "swiglu_kernel",
+        "groups": 64,
+        "hidden": 408,
+        "name": "base_transformer"
+      },
+      "name": "narrow-swiglu-kernel"
+    },
+    {
+      "hypothesis": "Registered latent FFN control: narrow-gelu",
+      "model": {
+        "ffn": "gelu",
+        "groups": 64,
+        "hidden": 608,
+        "name": "base_transformer"
+      },
+      "name": "narrow-gelu"
+    },
+    {
+      "hypothesis": "Registered latent FFN allocation: wide-recompute",
+      "model": {
+        "ffn": "latent_swiglu",
+        "hidden": 1280,
+        "input_rank": 128,
+        "name": "latent_transformer",
+        "output_rank": 128
+      },
+      "name": "wide-recompute"
+    },
+    {
+      "hypothesis": "Registered latent FFN allocation: wide-cached",
+      "model": {
+        "ffn": "latent_native",
+        "hidden": 1280,
+        "input_rank": 128,
+        "name": "latent_transformer",
+        "output_rank": 128
+      },
+      "name": "wide-cached"
+    },
+    {
+      "hypothesis": "Registered latent FFN allocation: thin-recompute",
+      "model": {
+        "ffn": "latent_swiglu",
+        "hidden": 512,
+        "input_rank": 320,
+        "name": "latent_transformer",
+        "output_rank": 128
+      },
+      "name": "thin-recompute"
+    },
+    {
+      "hypothesis": "Registered latent FFN allocation: thin-calibrated",
+      "model": {
+        "ffn": "latent_matched_init",
+        "hidden": 512,
+        "input_rank": 320,
+        "name": "latent_transformer",
+        "output_rank": 128
+      },
+      "name": "thin-calibrated"
+    }
+  ]
+}

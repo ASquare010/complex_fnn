@@ -1,0 +1,19 @@
+{
+  "results": {
+    "no-curve": {
+      "delta_nll": -8.745993377523575e-06,
+      "removed_component": "exchange",
+      "removed_nll": 1.4864033804758316,
+      "run": "dump\\runs\\20261004T035528Z-40590059",
+      "trained_nll": 1.4864121264692092
+    },
+    "no-exchange": {
+      "delta_nll": -3.152504388936883e-05,
+      "removed_component": "curvature",
+      "removed_nll": 1.4627937159085616,
+      "run": "dump\\runs\\20261004T035346Z-dcc3e8ba",
+      "trained_nll": 1.462825240952451
+    }
+  },
+  "scope": "Complete validation with trained isolated-component weights frozen; inference removal does not replace retrained ablations"
+}

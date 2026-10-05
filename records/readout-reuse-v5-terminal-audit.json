@@ -1,0 +1,12 @@
+{
+  "all_resource_comparisons_pass": false,
+  "archived_sources_verified": 35,
+  "complete": true,
+  "completed_profiles": 54,
+  "cpu_record_sha256": "05f249738d76b04a121570da6f79b98c65ab5ac031680b063515c5b454cff4f8",
+  "cuda_record_sha256": "a98a5d82f059c017699b050abb7bc9ea896b4fecbb3c1a814f1b812064510251",
+  "decision": "Retire execution v5 before language; quality unmeasured.",
+  "language_runs_started": false,
+  "profile_record_sha256": "5cdf42bdb03c6f06637ec98351378b8073934d2cc0bbc0e277f4e57d94e02f75",
+  "v4_archive_verified": true
+}

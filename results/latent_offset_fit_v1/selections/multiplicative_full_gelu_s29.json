@@ -1,8 +1,0 @@
-{
-  "selected_cell": "multiplicative_full_gelu_s29_lr1000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "multiplicative_full_gelu_s29_lr1000": 0.8960364808638891,
-    "multiplicative_full_gelu_s29_lr3000": 0.923028310139974
-  }
-}

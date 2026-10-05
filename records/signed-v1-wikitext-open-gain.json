@@ -1,0 +1,111 @@
+{
+  "config": {
+    "dataset": "dump/data/wikitext2-v2",
+    "hypothesis": "Registered signed-context study: open-gain",
+    "model": {
+      "context": 256,
+      "ffn": "open_gain",
+      "groups": 64,
+      "heads": 16,
+      "hidden": 576,
+      "layers": 4,
+      "loops": 1,
+      "name": "signed_context_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "signed-v1-wikitext-open-gain-s101-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "bb08fba93c9a1be1ca3a7d85a591b85300ce028df6b8cdf0a78b004a14587254",
+      "complete_split": true,
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 4.309518384176587,
+      "perplexity": 74.40464585496056,
+      "split": "valid",
+      "step": 2000,
+      "targets": 322560
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 4.241554632782936,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2492672,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 4980736,
+      "total_parameters": 8788736
+    },
+    "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Registered signed-context study: open-gain",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "open_gain",
+      "groups": 64,
+      "heads": 16,
+      "hidden": 576,
+      "layers": 4,
+      "loops": 1,
+      "name": "signed_context_transformer",
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "signed-v1-wikitext-open-gain-s101-lr0.0006",
+    "peak_training_allocated_bytes": 436143616,
+    "peak_training_reserved_bytes": 490733568,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T084528Z-88a29d61",
+    "seed": 101,
+    "source_sha256": "4907340a63274b546286c7879f64dce3b6fc06518ffe41e777ffd10d7c911ade",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 47632.85591968781,
+    "training_seconds": 85.99106480002229,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 4.241554632782936,
+      "perplexity": 69.5158394794306,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 96.85541420000663
+  }
+}

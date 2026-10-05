@@ -1,0 +1,14 @@
+{
+  "errors": [
+    {
+      "stage": "CUDA checker lint",
+      "observed": "Ruff I001 rejected the combined backward/forward aliased import.",
+      "action": "Split aliases into sorted individual imports, format and re-lint before executing checks. No equations or tolerances changed."
+    },
+    {
+      "stage": "Whole-Transformer CUDA numerical check",
+      "observed": "The registered BF16 output comparison failed: 30346/8388608 mismatches, maximum absolute difference 0.01171875 against atol .004/rtol .02.",
+      "action": "Preserve the failure, repeat the same check with failing-fixture capture, and diagnose without changing equations, tolerances or proceeding to profiles."
+    }
+  ]
+}

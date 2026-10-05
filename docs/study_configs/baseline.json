@@ -1,0 +1,27 @@
+{
+  "name": "full-attention-dense-swiglu",
+  "dataset": "dump/data/tinystories-v2",
+  "hypothesis": "Strong conventional full-attention control for the FFN comparison.",
+  "model": {
+    "vocab_size": 4096,
+    "width": 192,
+    "layers": 4,
+    "heads": 6,
+    "context": 256,
+    "hidden": 512,
+    "ffn": "swiglu",
+    "loops": 1,
+    "name": "base_transformer"
+  },
+  "training": {
+    "steps": 2000,
+    "batch_size": 8,
+    "learning_rate": 0.0006,
+    "warmup_steps": 200,
+    "eval_every": 200,
+    "eval_batches": 32,
+    "seed": 101,
+    "device": "cuda",
+    "precision": "bf16"
+  }
+}

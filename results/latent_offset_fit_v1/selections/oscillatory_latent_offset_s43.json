@@ -1,8 +1,0 @@
-{
-  "selected_cell": "oscillatory_latent_offset_s43_lr3000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "oscillatory_latent_offset_s43_lr1000": 1.0104067077239354,
-    "oscillatory_latent_offset_s43_lr3000": 1.0051692177851994
-  }
-}

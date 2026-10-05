@@ -1,8 +1,0 @@
-{
-  "selected_cell": "multiplicative_latent_gain_s17_lr1000",
-  "criterion": "final selection MSE, then smaller rate",
-  "values": {
-    "multiplicative_latent_gain_s17_lr1000": 0.981705238421758,
-    "multiplicative_latent_gain_s17_lr3000": 1.004475216070811
-  }
-}

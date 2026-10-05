@@ -1,0 +1,115 @@
+{
+  "config": {
+    "dataset": "dump/data/tinystories-v2",
+    "hypothesis": "Registered coupled-curve control: narrow-gelu",
+    "model": {
+      "context": 256,
+      "ffn": "gelu",
+      "groups": 64,
+      "heads": 16,
+      "hidden": 518,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "base_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "channel-curve-v2-tinystories-narrow-gelu-s101-lr0.0006",
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    }
+  },
+  "evaluations": [
+    {
+      "checkpoint": "last",
+      "checkpoint_sha256": "c11c66f7802ae0b10bd9ab0f4a67ac3f9c79dea030f7db303f5d69b694387992",
+      "complete_split": true,
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "exact_match": {},
+      "final_opt_in": false,
+      "nll": 2.6227478095725005,
+      "perplexity": 13.773518640857429,
+      "split": "valid",
+      "step": 2000,
+      "targets": 199936
+    }
+  ],
+  "summary": {
+    "best_valid_nll": 2.6513223201036453,
+    "claim": "measurement only; not an automatic research success",
+    "completed": true,
+    "counts": {
+      "attention": "full causal multi-head; one pass per block",
+      "ffn_parameters": 2121728,
+      "ffn_passes": 1,
+      "ffn_projection_flops_per_token": 4243456,
+      "total_parameters": 8417792
+    },
+    "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+    "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "format": 1,
+    "hypothesis": "Registered coupled-curve control: narrow-gelu",
+    "input_tokens_including_padding": 4096000,
+    "model": {
+      "context": 256,
+      "ffn": "gelu",
+      "groups": 64,
+      "heads": 16,
+      "hidden": 518,
+      "input_rank": 128,
+      "layers": 4,
+      "loops": 1,
+      "name": "base_transformer",
+      "output_rank": 128,
+      "rope_base": 10000,
+      "vocab_size": 4096,
+      "width": 512
+    },
+    "name": "channel-curve-v2-tinystories-narrow-gelu-s101-lr0.0006",
+    "peak_training_allocated_bytes": 423714304,
+    "peak_training_reserved_bytes": 490733568,
+    "precision": "bf16",
+    "run": "dump\\runs\\20261004T101333Z-34d81762",
+    "seed": 101,
+    "source_sha256": "7bbafbdb2a0acb69ba3f3166ece91fdbd2b062a4d0806b58ac48d64dc97aec1b",
+    "step": 2000,
+    "trained_target_tokens": 4096000,
+    "training": {
+      "batch_size": 8,
+      "device": "cuda",
+      "eval_batches": 32,
+      "eval_every": 200,
+      "learning_rate": 0.0006,
+      "precision": "bf16",
+      "seed": 101,
+      "steps": 2000,
+      "threads": 4,
+      "warmup_steps": 200,
+      "weight_decay": 0.1
+    },
+    "training_input_tokens_per_second": 51212.1507869378,
+    "training_seconds": 79.98101890000544,
+    "validation": {
+      "complete_split": false,
+      "exact_match": {},
+      "nll": 2.6513223201036453,
+      "perplexity": 14.172767195064285,
+      "split": "valid",
+      "targets": 65536
+    },
+    "wall_seconds": 90.34545090000029
+  }
+}

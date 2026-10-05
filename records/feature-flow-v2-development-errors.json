@@ -1,0 +1,22 @@
+{
+  "all_final_checks_passed": true,
+  "events": [
+    {
+      "failure": "Sandbox cache write denied",
+      "operation": "Ruff lint default cache",
+      "repair": "Use --no-cache; lint passed"
+    },
+    {
+      "failure": "Two import ordering violations",
+      "operation": "Ruff lint staged sources",
+      "repair": "Organize imports, format, lint, refresh CPU checks"
+    },
+    {
+      "failure": "PowerShell CLR host crash before tool execution; exit -1073741819",
+      "operation": "PowerShell formatting invocation",
+      "repair": "Retry formatting succeeded; finalized sources passed lint and CPU/CUDA checks"
+    }
+  ],
+  "frozen_profile_source_hashes_match": true,
+  "scope": "Preparation failures before profiling; no numerical kernel failure"
+}

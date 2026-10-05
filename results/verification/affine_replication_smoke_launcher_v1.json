@@ -1,6 +1,0 @@
-{
-  "status": "failed",
-  "shell_exit_code": 1,
-  "observed_output": "Ruff formatting completed; pytest produced no output.",
-  "scope": "No replication training started; failure cause not established."
-}

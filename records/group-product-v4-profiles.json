@@ -1,0 +1,1168 @@
+{
+  "decisions": {
+    "tinystories": {
+      "comparisons": {
+        "full-gelu": {
+          "memory_reduction": 0.2547565897030628,
+          "passes": true,
+          "speed_ratio": 1.0240200528811023
+        },
+        "full-swiglu-fused": {
+          "memory_reduction": 0.283063396656257,
+          "passes": true,
+          "speed_ratio": 1.0651585070085356
+        },
+        "full-swiglu-kernel": {
+          "memory_reduction": 0.25620018395008415,
+          "passes": true,
+          "speed_ratio": 1.0364749811389018
+        }
+      },
+      "passes": true,
+      "stats": {
+        "full-gelu": {
+          "peak_allocated_bytes": 565595136,
+          "tokens_per_second": 48386.873085498184
+        },
+        "full-swiglu-fused": {
+          "peak_allocated_bytes": 587926528,
+          "tokens_per_second": 46518.07971277459
+        },
+        "full-swiglu-kernel": {
+          "peak_allocated_bytes": 566692864,
+          "tokens_per_second": 47805.426312671196
+        },
+        "group-product": {
+          "peak_allocated_bytes": 421506048,
+          "tokens_per_second": 49549.12833576304
+        },
+        "plain-silu": {
+          "peak_allocated_bytes": 420432896,
+          "tokens_per_second": 53057.09653429657
+        }
+      }
+    },
+    "wikitext": {
+      "comparisons": {
+        "full-gelu": {
+          "memory_reduction": 0.2547565897030628,
+          "passes": true,
+          "speed_ratio": 1.012269782788824
+        },
+        "full-swiglu-fused": {
+          "memory_reduction": 0.283063396656257,
+          "passes": true,
+          "speed_ratio": 1.0252656012817505
+        },
+        "full-swiglu-kernel": {
+          "memory_reduction": 0.25620018395008415,
+          "passes": true,
+          "speed_ratio": 1.0096956734541938
+        }
+      },
+      "passes": true,
+      "stats": {
+        "full-gelu": {
+          "peak_allocated_bytes": 565595136,
+          "tokens_per_second": 47992.226009271275
+        },
+        "full-swiglu-fused": {
+          "peak_allocated_bytes": 587926528,
+          "tokens_per_second": 47383.89753564623
+        },
+        "full-swiglu-kernel": {
+          "peak_allocated_bytes": 566692864,
+          "tokens_per_second": 48114.5769712572
+        },
+        "group-product": {
+          "peak_allocated_bytes": 421506048,
+          "tokens_per_second": 48581.080197957184
+        },
+        "plain-silu": {
+          "peak_allocated_bytes": 420432896,
+          "tokens_per_second": 52831.39790612972
+        }
+      }
+    }
+  },
+  "device": "NVIDIA GeForce RTX 4070 Laptop GPU",
+  "passes": true,
+  "profiles": [
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 584551424,
+      "peak_reserved_bytes": 622854144,
+      "round": 0,
+      "seconds": 4.308108899997023,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 47538.25976872161,
+      "variant": "full-swiglu-fused",
+      "warmup_including_cold_compilation_seconds": 1.6053288000002794,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 566692864,
+      "peak_reserved_bytes": 610271232,
+      "round": 0,
+      "seconds": 4.284032500003377,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 47805.426312671196,
+      "variant": "full-swiglu-kernel",
+      "warmup_including_cold_compilation_seconds": 2.8017236000014236,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 0,
+      "seconds": 4.232552900000883,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 48386.873085498184,
+      "variant": "full-gelu",
+      "warmup_including_cold_compilation_seconds": 0.933863599999313,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "plain",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2097152,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8393216
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 420432896,
+      "peak_reserved_bytes": 471859200,
+      "round": 0,
+      "seconds": 3.8599926000024425,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 53057.09653429657,
+      "variant": "plain-silu",
+      "warmup_including_cold_compilation_seconds": 0.8213178000005428,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "fused_group",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2099200,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8395264
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 421506048,
+      "peak_reserved_bytes": 473956352,
+      "round": 0,
+      "seconds": 4.115315700000792,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 49765.3193411044,
+      "variant": "group-product",
+      "warmup_including_cold_compilation_seconds": 0.9906802000004973,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "fused_group",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2099200,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8395264
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 421506048,
+      "peak_reserved_bytes": 473956352,
+      "round": 1,
+      "seconds": 4.161193699997966,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 49216.64665600645,
+      "variant": "group-product",
+      "warmup_including_cold_compilation_seconds": 0.8971927000020514,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "plain",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2097152,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8393216
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 420432896,
+      "peak_reserved_bytes": 471859200,
+      "round": 1,
+      "seconds": 4.016092100002425,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 50994.84645779821,
+      "variant": "plain-silu",
+      "warmup_including_cold_compilation_seconds": 0.8265437000009115,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 1,
+      "seconds": 4.242158900000504,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 48277.305218334855,
+      "variant": "full-gelu",
+      "warmup_including_cold_compilation_seconds": 0.9058012999994389,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 566692864,
+      "peak_reserved_bytes": 610271232,
+      "round": 1,
+      "seconds": 4.48974680000174,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 45615.04448311443,
+      "variant": "full-swiglu-kernel",
+      "warmup_including_cold_compilation_seconds": 0.7753807999979472,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 587926528,
+      "peak_reserved_bytes": 631242752,
+      "round": 1,
+      "seconds": 4.402589299999818,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 46518.07971277459,
+      "variant": "full-swiglu-fused",
+      "warmup_including_cold_compilation_seconds": 0.9055550999983097,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 587926528,
+      "peak_reserved_bytes": 631242752,
+      "round": 2,
+      "seconds": 4.432059599999775,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 46208.76488213525,
+      "variant": "full-swiglu-fused",
+      "warmup_including_cold_compilation_seconds": 0.9016418999999587,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 566692864,
+      "peak_reserved_bytes": 610271232,
+      "round": 2,
+      "seconds": 4.277152200000273,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 47882.32693706502,
+      "variant": "full-swiglu-kernel",
+      "warmup_including_cold_compilation_seconds": 0.8547316000003775,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 2,
+      "seconds": 4.229106499999034,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 48426.30470527209,
+      "variant": "full-gelu",
+      "warmup_including_cold_compilation_seconds": 0.8593510999999125,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "plain",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2097152,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8393216
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 420432896,
+      "peak_reserved_bytes": 471859200,
+      "round": 2,
+      "seconds": 3.8025140999998257,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 53859.10337584531,
+      "variant": "plain-silu",
+      "warmup_including_cold_compilation_seconds": 0.6955888999982562,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "fused_group",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "tinystories",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2099200,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8395264
+      },
+      "dataset_sha256": "c366ef855146266f94f599942af71b36eb576acc2b1363da4a5d6cd2f939d5ed",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 421506048,
+      "peak_reserved_bytes": 473956352,
+      "round": 2,
+      "seconds": 4.133271499998955,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 49549.12833576304,
+      "variant": "group-product",
+      "warmup_including_cold_compilation_seconds": 0.8720887000017683,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 587926528,
+      "peak_reserved_bytes": 631242752,
+      "round": 0,
+      "seconds": 4.34374260000186,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 47148.28176050586,
+      "variant": "full-swiglu-fused",
+      "warmup_including_cold_compilation_seconds": 0.8495603000010306,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 566692864,
+      "peak_reserved_bytes": 610271232,
+      "round": 0,
+      "seconds": 4.256506300000183,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 48114.5769712572,
+      "variant": "full-swiglu-kernel",
+      "warmup_including_cold_compilation_seconds": 0.9129695999981777,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 0,
+      "seconds": 4.34040709999681,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 47184.514097802145,
+      "variant": "full-gelu",
+      "warmup_including_cold_compilation_seconds": 0.8866844999975001,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "plain",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2097152,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8393216
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 420432896,
+      "peak_reserved_bytes": 471859200,
+      "round": 0,
+      "seconds": 3.876482700001361,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 52831.39790612972,
+      "variant": "plain-silu",
+      "warmup_including_cold_compilation_seconds": 0.844978799999808,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "fused_group",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2099200,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8395264
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 421506048,
+      "peak_reserved_bytes": 473956352,
+      "round": 0,
+      "seconds": 4.285919800000556,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 47784.37524658614,
+      "variant": "group-product",
+      "warmup_including_cold_compilation_seconds": 0.9324353000010888,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "fused_group",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2099200,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8395264
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 421506048,
+      "peak_reserved_bytes": 473956352,
+      "round": 1,
+      "seconds": 4.202745999999024,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 48730.04459466443,
+      "variant": "group-product",
+      "warmup_including_cold_compilation_seconds": 0.8497884999997041,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "plain",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2097152,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8393216
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 420432896,
+      "peak_reserved_bytes": 471859200,
+      "round": 1,
+      "seconds": 3.964388599997619,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 51659.920523463064,
+      "variant": "plain-silu",
+      "warmup_including_cold_compilation_seconds": 0.8172459000015806,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 1,
+      "seconds": 4.267357799999445,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 47992.226009271275,
+      "variant": "full-gelu",
+      "warmup_including_cold_compilation_seconds": 0.8705914999991364,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 566692864,
+      "peak_reserved_bytes": 610271232,
+      "round": 1,
+      "seconds": 4.227519799998845,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 48444.48037831921,
+      "variant": "full-swiglu-kernel",
+      "warmup_including_cold_compilation_seconds": 0.936974399999599,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 587926528,
+      "peak_reserved_bytes": 631242752,
+      "round": 1,
+      "seconds": 4.322143400000641,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 47383.89753564623,
+      "variant": "full-swiglu-fused",
+      "warmup_including_cold_compilation_seconds": 0.8359294000001682,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 587926528,
+      "peak_reserved_bytes": 631242752,
+      "round": 2,
+      "seconds": 4.221021599998494,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 48519.05993564996,
+      "variant": "full-swiglu-fused",
+      "warmup_including_cold_compilation_seconds": 0.8875029999981052,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "swiglu_fused",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 1376,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 566692864,
+      "peak_reserved_bytes": 610271232,
+      "round": 2,
+      "seconds": 4.2631351000018185,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 48039.76303728039,
+      "variant": "full-swiglu-kernel",
+      "warmup_including_cold_compilation_seconds": 0.8486879000010958,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "gelu",
+        "groups": 8,
+        "heads": 16,
+        "hidden": 2064,
+        "layers": 4,
+        "loops": 1,
+        "name": "base_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 8454144,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 16908288,
+        "total_parameters": 14750208
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 565595136,
+      "peak_reserved_bytes": 639631360,
+      "round": 2,
+      "seconds": 4.259503000001132,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 48080.72678900463,
+      "variant": "full-gelu",
+      "warmup_including_cold_compilation_seconds": 0.8165154000016628,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "plain",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2097152,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8393216
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 420432896,
+      "peak_reserved_bytes": 471859200,
+      "round": 2,
+      "seconds": 3.8203678999998374,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 53607.402575026535,
+      "variant": "plain-silu",
+      "warmup_including_cold_compilation_seconds": 0.8478313000014168,
+      "warmup_steps": 20
+    },
+    {
+      "config": {
+        "context": 256,
+        "ffn": "fused_group",
+        "groups": 32,
+        "heads": 16,
+        "hidden": 512,
+        "layers": 4,
+        "loops": 1,
+        "name": "polynomial_sketch_transformer",
+        "rope_base": 10000.0,
+        "vocab_size": 4096,
+        "width": 512
+      },
+      "corpus": "wikitext",
+      "counts": {
+        "attention": "full causal multi-head; one pass per block",
+        "ffn_parameters": 2099200,
+        "ffn_passes": 1,
+        "ffn_projection_flops_per_token": 4194304,
+        "total_parameters": 8395264
+      },
+      "dataset_sha256": "3d5d350c132eab6e820675e00f041b509aa96e12bcdcb05a90721e19adc69e4b",
+      "finite": true,
+      "measured_steps": 100,
+      "peak_allocated_bytes": 421506048,
+      "peak_reserved_bytes": 473956352,
+      "round": 2,
+      "seconds": 4.2156328999990365,
+      "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a",
+      "targets_per_second": 48581.080197957184,
+      "variant": "group-product",
+      "warmup_including_cold_compilation_seconds": 0.8825389999983599,
+      "warmup_steps": 20
+    }
+  ],
+  "scope": "short hardware screen, no language quality or confirmed resource claim",
+  "source_files": {
+    "dump\\staging\\check_polynomial_sketch.py": "9870d0005e0b6aef7c1dbe90a2e96134a20b7a5fc61e02b4293820a0e943474b",
+    "dump\\staging\\fused_group_activation.py": "e142b8355deb9845908e8e1b2647f369a288f5799b20aac12d5f1437c4cb4d79",
+    "dump\\staging\\fused_swiglu_activation.py": "9d76be4e240ad43ee86391ac8cafb3503a8140ffce557361af0cb6fba0dccd94",
+    "dump\\staging\\group_product_adjoint.py": "91d6e529f8020482bb525f0094b754e15dd1853afcdb4a0e42d14e74c4646958",
+    "dump\\staging\\polynomial_sketch_transformer.py": "b571db816b37601d0397ee9837a24f47d339456fb4298aadd0c8e9329fdd5143",
+    "dump\\staging\\profile_group_product_v4.py": "4e2d3d10eda9b619b8157cbd687949b1e48733c49ad6482d4af78ceb0dedceb7",
+    "dump\\staging\\single_sketch.py": "cf0c0ec34d8d9776ac7c2ff2cd19e63e661a8ef3b0c62520dbbd1e04f5da9bf7",
+    "src/dataset/loader.py": "ef29e2b4a4cbc9c0aec508818da786f26feece935a7bc30a7fe92e9518343335",
+    "src/dataset/prepare.py": "c0932ea7c0a4c32a0ec6f6140fd062d01b53337e22d2d3d3659bf814d087df9f",
+    "src/dataset/tasks.py": "1af6bf821499dd1ad8f2e1146726cf3a4b3d263a7ef49ae57f21302afb88ae8a",
+    "src/experiments.py": "f86b96444adbbd84ea8d6c8d4a57376185ad678c997b573803f7ea82ae56c27c",
+    "src/main.py": "8c30a3341b65977325ba7e23d55024ef43feaf0027850932e8f0f423ea6f7e1c",
+    "src/models/base_transformer/transformer.py": "54065807642ddc17bb69267862f6097a4254ef32948071ebefcb97a8ff042e29",
+    "src/models/blockshuffle_transformer/transformer.py": "62821effd385466b52bf4da3c83f0abac4d178aa27ee72741b4224bdd2767319",
+    "src/models/components.py": "41bb48f4b979893bef4571fa9ba494947a84df83a4e9908d8fae77c725ba5215",
+    "src/models/looped_blockshuffle_transformer/transformer.py": "6f83a3d3ad9c36ac51162a3ba2ddeaac52e22e7dc51912cc0f1d648faf4cca48",
+    "src/models/maxout_transformer/transformer.py": "2e06865a903a5f2fc3370850035aee45367b4cb083b0dc3dbfa7bf5b52a792da",
+    "src/models/pairflux_transformer/transformer.py": "bfb055a71b3cee5819f05dc2b114b8b6998320f5a0906aeed7369f79325e9ad4",
+    "src/models/shared_basis_transformer/transformer.py": "243daa89caf55109ac15a48b8a1c5f4650ac991f75b24cbdc595f7ac66ecd69c",
+    "src/settings.py": "26e02990877d9658b2b574687298e70e9ded2d5223809207f4e69e6803e3476e",
+    "src/storage.py": "fe4266db8374ac7e6984347a3749a8472c4ee9ed1917b383eaafaa80afafbfdd",
+    "src/trainer.py": "e694aa11714ab0d147abe3354f5c101313aebcb0e3b6942837f3ad7d09a6910b"
+  },
+  "source_sha256": "b5481c1f19a6d0bfe747dcb2c5ac84a8be437de53c9b34c48e411da47031c55a"
+}
