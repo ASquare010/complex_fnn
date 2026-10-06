@@ -271,6 +271,8 @@ resource or synthetic-task results. Execution revisions are not new mathematical
 
 | Recipe | Evidence / status |
 | --- | --- |
+| Step 2 paragraph compressor | [Reconstruction study](step_2_results.md); target-conditioned autoencoding, deliberately excluded from language-NLL rankings |
+| Curve-Wide plain PyTorch v1 | [Numerical and resource checks](../src/models/channel_curve_transformer/result.md); no new language run; ranked Curve-Wide scores above use historical optimized execution |
 | PairFlux (combined), no-exchange, no-curve | [Synthetic-task screen](../dump/old-research-docs/retired_models/pairflux_transformer/result.md); curve-only has separate language rows above |
 | Looped BlockShuffle / repeated dense | [Synthetic and execution checks](../dump/old-research-docs/retired_models/looped_blockshuffle_transformer/result.md) |
 | Shared-basis v1 / gate transport v2 | [Resource screens](../dump/old-research-docs/shared_gate_transport_hypothesis.md); plain sharing and untied controls have language rows above |

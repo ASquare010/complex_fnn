@@ -1,5 +1,11 @@
 # Compact FFN refinement: selected recipe and evidence
 
+**Historical execution:** all language and resource results in this study used
+the optimized implementation. The active code has since been simplified to
+ordinary PyTorch. Parameter counts are unchanged, but the old memory and timing
+claims do not transfer to it. See the [current execution checks](../src/models/channel_curve_transformer/result.md)
+for numerical verification and the measured resource tradeoff.
+
 **Selected recipe: Curve-Wide (`self_curve_wide`).** The three-family screen,
 paired-seed confirmation and registered resource measurements are complete.
 The independent seed509/8000-update evaluation and all eight held-out tests are

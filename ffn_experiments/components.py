@@ -68,7 +68,7 @@ class DenseFFN(nn.Module):
         if self.fused:
             hidden, gate = hidden.chunk(2, dim=-1)
             if self.kernel:
-                from models.activation_kernels import FusedSwiGLU
+                from ffn_experiments.activation_kernels import FusedSwiGLU
 
                 hidden = FusedSwiGLU.apply(hidden, gate)
             else:

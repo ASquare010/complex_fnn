@@ -5,90 +5,14 @@ import math
 import numpy as np
 import torch
 from torch import nn
-from torch.autograd import Function
 from torch.nn import functional as F
 
-from models.channel_curve_transformer.kernels import backward as cuda_backward
-from models.channel_curve_transformer.kernels import forward as cuda_forward
 from models.components import Attention, RMSNorm, counts, initialize, parameter_generator
 
 
-def calibration(width, nodes=128):
-    points, weights = np.polynomial.hermite.hermgauss(nodes)
-    z = torch.from_numpy(points) * math.sqrt(2 * width * 0.02**2)
-    w = torch.from_numpy(weights) / math.sqrt(math.pi)
-    slopes = torch.tensor([0.5, 1.0, 1.5], dtype=torch.float64)
-    offsets = torch.tensor([-1.0, 0.0, 1.0], dtype=torch.float64)
-    branches = F.silu(slopes[:, None] * z + offsets[:, None])
-    variance = width * 0.02**2
-    target = (1376 / 512) * variance * float((w * F.silu(z).square()).sum())
-    raw = z * branches.sum(0) / math.sqrt(3)
-    mean = float((raw * w).sum())
-    initial_variance = float(((raw - mean).square() * w).sum())
-    return mean, math.sqrt(target / initial_variance)
-
-
-def ordinary_curves(z, a, b, c, e, mean, scale):
-    work_dtype = torch.float64 if z.dtype == torch.float64 else torch.float32
-    z = z.to(work_dtype)
-    value = torch.zeros_like(z)
-    for k in range(3):
-        value = value + F.silu(a[k] * z + b[k]) * (c[k] * z + e[k])
-    return scale * (value / math.sqrt(3) - mean)
-
-
-class Curves(Function):
-    @staticmethod
-    def forward(ctx, z, a, b, c, e, mean, scale):
-        ctx.save_for_backward(z, a, b, c, e)
-        ctx.scale = scale
-        if z.is_cuda and z.dtype != torch.float64:
-            return cuda_forward(z, a, b, c, e, True, mean, scale)
-        return ordinary_curves(z, a, b, c, e, mean, scale).to(z.dtype)
-
-    @staticmethod
-    def backward(ctx, gradient):
-        original, a, b, c, e = ctx.saved_tensors
-        if original.is_cuda and original.dtype != torch.float64:
-            return (
-                *cuda_backward(original, gradient, a, b, c, e, True, ctx.scale),
-                None,
-                None,
-            )
-        dtype = torch.float64 if original.dtype == torch.float64 else torch.float32
-        z = original.to(dtype)
-        t = gradient.to(dtype) * (ctx.scale / math.sqrt(3))
-        dz = torch.zeros_like(z)
-        parameter_gradients = [[] for _ in range(4)]
-        reduce_axes = tuple(range(z.ndim - 1))
-        for k in range(3):
-            u = a[k] * z + b[k]
-            gate = c[k] * z + e[k]
-            sigmoid = u.sigmoid()
-            feature = u * sigmoid
-            derivative = sigmoid * (1 + u * (1 - sigmoid))
-            local = t * a[k] * derivative * gate
-            remote = t * feature * c[k]
-            dz.add_(local + remote)
-            for collection, value in zip(
-                parameter_gradients,
-                (
-                    t * z * derivative * gate,
-                    t * derivative * gate,
-                    t * feature * z,
-                    t * feature,
-                ),
-            ):
-                collection.append(value.sum(reduce_axes))
-        return (
-            dz.to(original.dtype),
-            *(torch.stack(v) for v in parameter_gradients),
-            None,
-            None,
-        )
-
-
 class CurveFFN(nn.Module):
+    """Mix features, apply learned curves, then mix features again."""
+
     def __init__(self, config):
         super().__init__()
         self.width = config.width
@@ -98,6 +22,7 @@ class CurveFFN(nn.Module):
         self.initial_offsets = [-1.0, 0.0, 1.0]
         templates = torch.tensor(self.initial_slopes)[:, None].expand(3, config.width).clone()
         offsets = torch.tensor(self.initial_offsets)[:, None].expand(3, config.width).clone()
+        # Keep parameter names compatible with the measured checkpoints.
         self.a = nn.Parameter(templates)
         self.b = nn.Parameter(offsets)
         self.c = nn.Parameter(torch.ones(3, config.width))
@@ -106,9 +31,19 @@ class CurveFFN(nn.Module):
         self.projection_parameters = 2 * config.width**2
 
     def forward(self, x):
-        z = self.up(x)
-        value = Curves.apply(z, self.a, self.b, self.c, self.e, self.initial_mean, self.scale)
-        return self.down(value)
+        z = self.up(x)  # Mix the token's features: width -> width.
+        output_dtype = z.dtype
+        # Keep curve arithmetic in FP32 during mixed-precision training.
+        z = z if z.dtype == torch.float64 else z.float()
+
+        value = torch.zeros_like(z)
+        for branch in range(3):
+            response = F.silu(self.a[branch] * z + self.b[branch])
+            multiplier = self.c[branch] * z + self.e[branch]
+            value = value + response * multiplier
+
+        value = self.scale * (value / math.sqrt(3) - self.initial_mean)
+        return self.down(value.to(output_dtype))  # Mix features back into the output.
 
     @torch.no_grad()
     def initialize(self, seed, prefix, residual_scale):
@@ -155,3 +90,19 @@ class Model(nn.Module):
 
     def counts(self):
         return counts(self)
+
+
+def calibration(width, nodes=128):
+    """Fixed starting mean and scale; preserve the measured initialization."""
+    points, weights = np.polynomial.hermite.hermgauss(nodes)
+    z = torch.from_numpy(points) * math.sqrt(2 * width * 0.02**2)
+    w = torch.from_numpy(weights) / math.sqrt(math.pi)
+    slopes = torch.tensor([0.5, 1.0, 1.5], dtype=torch.float64)
+    offsets = torch.tensor([-1.0, 0.0, 1.0], dtype=torch.float64)
+    branches = F.silu(slopes[:, None] * z + offsets[:, None])
+    variance = width * 0.02**2
+    target = (1376 / 512) * variance * float((w * F.silu(z).square()).sum())
+    raw = z * branches.sum(0) / math.sqrt(3)
+    mean = float((raw * w).sum())
+    initial_variance = float(((raw - mean).square() * w).sum())
+    return mean, math.sqrt(target / initial_variance)

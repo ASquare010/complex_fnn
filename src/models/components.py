@@ -54,7 +54,6 @@ class DenseFFN(nn.Module):
     def __init__(self, config: ModelConfig):
         super().__init__()
         self.fused = config.ffn in ("swiglu_fused", "swiglu_kernel")
-        self.kernel = config.ffn == "swiglu_kernel"
         self.output_init_scale = config.ffn_output_init_scale
         self.up = self.projection(config.width, config.hidden * (2 if self.fused else 1))
         self.down = self.projection(config.hidden, config.width)
@@ -67,12 +66,7 @@ class DenseFFN(nn.Module):
         hidden = self.up(x)
         if self.fused:
             hidden, gate = hidden.chunk(2, dim=-1)
-            if self.kernel:
-                from models.activation_kernels import FusedSwiGLU
-
-                hidden = FusedSwiGLU.apply(hidden, gate)
-            else:
-                hidden = F.silu(hidden) * gate
+            hidden = F.silu(hidden) * gate
         else:
             hidden = F.gelu(hidden) if self.gate is None else F.silu(hidden) * self.gate(x)
         return self.down(hidden)

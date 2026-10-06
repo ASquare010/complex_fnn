@@ -1,0 +1,159 @@
+"""Position-preserving span compression with a small, parallel reconstruction decoder.
+
+There are no encoder-to-decoder skip connections or supplied output tokens.
+Exact token lengths are explicit metadata and must be counted when storing memory.
+"""
+
+import math
+from dataclasses import dataclass
+
+import torch
+from torch import nn
+from torch.nn import functional as F
+
+from models.channel_curve_transformer.transformer import CurveFFN
+from models.components import RMSNorm
+
+
+@dataclass
+class Config:
+    vocab_size: int = 4096
+    width: int = 256
+    heads: int = 4
+    encoder_layers: int = 4
+    decoder_layers: int = 1
+    max_tokens: int = 256
+    span: int = 8
+    pad_id: int = 0
+    bos_id: int = 1
+    eos_id: int = 2
+
+    def __post_init__(self):
+        for name in (
+            "vocab_size",
+            "width",
+            "heads",
+            "encoder_layers",
+            "decoder_layers",
+            "max_tokens",
+            "span",
+        ):
+            if type(getattr(self, name)) is not int or getattr(self, name) < 1:
+                raise ValueError(f"{name} must be positive")
+        if self.width % self.heads or self.span > self.max_tokens:
+            raise ValueError("Width must divide into heads; span must fit max_tokens")
+        if (self.pad_id, self.bos_id, self.eos_id) != (0, 1, 2):
+            raise ValueError("Data format uses pad=0, bos=1, eos=2")
+
+
+class Attention(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.heads = config.heads
+        self.query = nn.Linear(config.width, config.width, bias=False)
+        self.key = nn.Linear(config.width, config.width, bias=False)
+        self.value = nn.Linear(config.width, config.width, bias=False)
+        self.out = nn.Linear(config.width, config.width, bias=False)
+
+    def forward(self, x, context, valid, causal=False):
+        def split(t):
+            b, n, d = t.shape
+            return t.reshape(b, n, self.heads, d // self.heads).transpose(1, 2)
+
+        q, k, v = split(self.query(x)), split(self.key(context)), split(self.value(context))
+        allowed = valid[:, None, None, :]
+        if causal:
+            allowed = (
+                allowed
+                & torch.ones(x.shape[1], context.shape[1], device=x.device, dtype=torch.bool).tril()
+            )
+        y = F.scaled_dot_product_attention(q, k, v, attn_mask=allowed)
+        return self.out(y.transpose(1, 2).reshape_as(x))
+
+
+class EncoderBlock(nn.Module):
+    def __init__(self, config):
+        super().__init__()
+        self.attention_norm = RMSNorm(config.width)
+        self.attention = Attention(config)
+        self.ffn_norm = RMSNorm(config.width)
+        self.ffn = CurveFFN(config)
+
+    def forward(self, x, mask):
+        normalized = self.attention_norm(x)
+        x = x + self.attention(normalized, normalized, mask)
+        return x + self.ffn(self.ffn_norm(x))
+
+
+class Model(nn.Module):
+    """L token features -> ceil(L/span) memories -> L token predictions."""
+
+    def __init__(self, config=None, seed=17):
+        super().__init__()
+        self.config = config or Config()
+        c = self.config
+        with torch.random.fork_rng(devices=[]):
+            torch.manual_seed(seed)
+            self.embedding = nn.Embedding(c.vocab_size, c.width)
+            self.position = nn.Embedding(c.max_tokens, c.width)
+            self.encoder = nn.ModuleList([EncoderBlock(c) for _ in range(c.encoder_layers)])
+            self.encoder_norm = RMSNorm(c.width)
+            # Concatenation preserves the order inside each span, unlike weighted averaging.
+            self.compress = nn.Linear(c.span * c.width, c.width, bias=False)
+            self.expand = nn.Linear(c.width, c.span * c.width, bias=False)
+            self.decoder = nn.ModuleList([EncoderBlock(c) for _ in range(c.decoder_layers)])
+            self.decoder_norm = RMSNorm(c.width)
+            for module in self.modules():
+                if isinstance(module, (nn.Linear, nn.Embedding)):
+                    nn.init.normal_(module.weight, std=0.02)
+            for name, module in self.named_modules():
+                if isinstance(module, CurveFFN):
+                    module.initialize(seed, name, 1 / math.sqrt(2 * c.encoder_layers))
+
+    def encode(self, tokens, mask):
+        c = self.config
+        if tokens.ndim != 2 or mask.shape != tokens.shape or mask.dtype != torch.bool:
+            raise ValueError("Expected token IDs and a same-shaped boolean mask")
+        if not 0 < tokens.shape[1] <= c.max_tokens or not mask.any(1).all():
+            raise ValueError("Input must have 1..max_tokens real tokens")
+        if (mask[:, 1:] & ~mask[:, :-1]).any():
+            raise ValueError("Use right padding")
+        x = self.embedding(tokens) + self.position(
+            torch.arange(tokens.shape[1], device=tokens.device)
+        )
+        for block in self.encoder:
+            x = block(x, mask)
+        x = self.encoder_norm(x) * mask.unsqueeze(-1)
+        x = F.pad(x, (0, 0, 0, (-x.shape[1]) % c.span))
+        z = self.compress(x.reshape(x.shape[0], -1, c.span * c.width))
+        return z, mask.sum(1)
+
+    def decode(self, z, lengths):
+        c = self.config
+        if (
+            z.ndim != 3
+            or z.shape[2] != c.width
+            or lengths.shape != (z.shape[0],)
+            or lengths.dtype != torch.long
+            or (lengths < 1).any()
+            or (lengths > c.max_tokens).any()
+            or (lengths > z.shape[1] * c.span).any()
+        ):
+            raise ValueError("Invalid memories or token-length metadata")
+        x = self.expand(z).reshape(z.shape[0], -1, c.width)[:, : int(lengths.max())]
+        positions = torch.arange(x.shape[1], device=x.device)
+        mask = positions[None] < lengths[:, None]
+        x = x + self.position(positions)
+        for block in self.decoder:
+            x = block(x, mask)
+        return F.linear(self.decoder_norm(x), self.embedding.weight)
+
+    def forward(self, tokens, mask):
+        return self.decode(*self.encode(tokens, mask))
+
+    @torch.no_grad()
+    def generate(self, z, lengths):
+        self.eval()
+        logits = self.decode(z, lengths)
+        logits[..., :3] = -torch.inf
+        return logits.argmax(-1)
