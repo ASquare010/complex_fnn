@@ -13,18 +13,11 @@ class SelectedModelsTests(unittest.TestCase):
         torch.set_num_threads(4)
         saved = torch.load('dump/selected-cleanup-20261007/parity.pt', weights_only=True)
         self.assertEqual(digest(WINNER), saved['branch_hash'])
-        self.assertEqual(digest('dump/compression-span32-v1/encoder.pt'), saved['encoder_hash'])
-        self.assertEqual(digest('dump/compression-span32-v1/last.pt'), saved['full_hash'])
         lm, _ = load_winner()
         self.assertEqual(sum(p.numel() for p in lm.parameters()), 8654208)
         self.assertEqual(sum(p.numel() for b in lm.blocks for p in b.ffn.parameters()),4718592)
         with torch.no_grad():
             torch.testing.assert_close(lm(saved['tokens']), saved['logits'], rtol=0, atol=0)
-        with self.assertRaisesRegex(ValueError, 'Legacy CurveFFN'):
-            Codec.load_encoder('dump/compression-span32-v1/encoder.pt')
-        with self.assertRaisesRegex(ValueError, 'Legacy CurveFFN'):
-            Codec.load('dump/compression-span32-v1/last.pt')
-
     def test_selected_trainer_imports(self):
         from models.branch_sigmoid.training import run, evaluate
         from models.position_compressor.training import Session

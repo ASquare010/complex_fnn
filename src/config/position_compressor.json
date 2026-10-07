@@ -1,9 +1,10 @@
 {
-  "checkpoint": "dump/compression-branch-v2/last.pt",
-  "encoder": "dump/compression-branch-v2/encoder.pt",
+  "checkpoint": "D:/Git/latent-text-compressor/artifacts/runs/branch-rope-v1/span32/last.pt",
+  "encoder": "dump/compression-rope-v1/encoder.pt",
   "span": 32,
   "ffn": "branch_sigmoid_v1",
-  "status": "untrained; legacy CurveFFN weights incompatible",
-  "encoder_parameters": 7407872,
-  "full_parameters": 10554368
+  "status": "complete: 7000 updates; 1000/1000 exact validation; final replay verified",
+  "encoder_parameters": 7342336,
+  "full_parameters": 10488832,
+  "position_encoding": "rope_v1"
 }

@@ -1,3 +1,5 @@
+> Branch Sigmoid + RoPE encoder/decoder training is complete (7,000 updates; 1,000/1,000 exact validation reconstructions): [protocol and status paths](docs/branch_rope_training.md). See the recorded result and its limits.
+
 # Selected models
 
 The active repository contains two models:
@@ -38,7 +40,7 @@ uv run --no-sync python -m main encode "Text to remember" --output dump/my-memor
 uv run --no-sync python -m main reconstruct "Text to remember"
 ```
 
-The `encode` and `reconstruct` commands require new weights in `dump/compression-branch-v2/`; no trained Branch Sigmoid compressor is supplied.
+The `encode` and `reconstruct` commands require new weights in `dump/compression-rope-v1/`; no trained Branch Sigmoid compressor is supplied.
 
 Generation is a small-model smoke/demo interface, not a claim of chatbot ability.
 Step 1 uses at most 256 recent tokens. The two selected models are independent;
@@ -49,7 +51,7 @@ The retained training implementation supports explicit new Branch runs with
 optimizer resumption requires original sources and recipes. The current loader
 supports inference from the exact saved winner and checks its checkpoint hash.
 
-The Step 1 checkpoint remains usable. The two historical CurveFFN checkpoints below are preserved as evidence and are incompatible with the new Step 2 code:
+The Step 1 checkpoint remains usable. The two historical CurveFFN checkpoint paths below have been deleted at the user's request; historical scores remain recorded:
 
 - `dump/ffn-final-10000-s461/branch_sigmoid/last.pt`
 - `dump/compression-span32-v1/encoder.pt`

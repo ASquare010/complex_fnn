@@ -19,6 +19,8 @@ from storage import digest, in_dump
 
 
 def require_branch_config(config):
+    if config.get("position_encoding") != "rope_v1" and config.get("ffn") == "branch_sigmoid_v1":
+        raise ValueError("Non-RoPE checkpoint is incompatible; train the new RoPE compressor")
     if config.get("ffn") != "branch_sigmoid_v1":
         raise ValueError(
             "Legacy CurveFFN checkpoint is incompatible with Branch Sigmoid. "
@@ -47,7 +49,7 @@ class EncoderOnly(nn.Module):
     def __init__(self, full_model):
         super().__init__()
         self.config = full_model.config
-        for name in ("embedding", "position", "encoder", "encoder_norm", "compress"):
+        for name in ("embedding", "encoder", "encoder_norm", "compress"):
             setattr(self, name, getattr(full_model, name))
 
     def forward(self, tokens, mask):

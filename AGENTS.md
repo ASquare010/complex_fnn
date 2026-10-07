@@ -1,3 +1,22 @@
+# RoPE compressor complete (2026-10-07)
+
+All 7000 seed17 updates finished. Full final validation replay: 1000/1000 exact,
+NLL0.00227359, token accuracy100%. Encoder7342336 / full10488832 parameters;
+379.44/470MiB peak allocated/reserved. Checkpoint/encoder/source hashes and record
+verified. Completion receipt dump/rope-compressor-launch/completion.json.
+No new training authorized. One seed, previously used validation; no matched
+RoPE ablation or superiority claim. Sequence shortening is not byte compression.
+Old compressor weights were deleted as requested; Step 1 weights remain.
+
+# Authorized RoPE compressor run (2026-10-07)
+
+Latest user explicitly authorized new encoder training and deleting old compressor
+weights. This supersedes prior no-training and compressor-weight retention rules.
+One fresh seed17 Branch Sigmoid + RoPE run: 7,000 total updates in five stages,
+using the existing 50k paragraph data; no extra experiments. Sources frozen after
+launch; do not retry native failures automatically. See docs/branch_rope_training.md.
+Step 1 Branch Sigmoid weights, datasets, records and source archives are retained.
+
 # Branch compressor migration (2026-10-07)
 
 User explicitly replaced Step 2 CurveFFN with Branch Sigmoid in encoder AND decoder.
