@@ -1,0 +1,29 @@
+{
+  "protocol": "branch-data-decoded-v1",
+  "passed": true,
+  "splits": {
+    "train": {
+      "archive_sha256": "a99d28d09826922c0b9623a39c831348ceec5bc367efef767ecb682bb2c2bd34",
+      "decoded_sha256": "d5277b998f86d82b6fd39035915670fafe423a8f557c54c9dde5906ed825069e",
+      "rows": 24000,
+      "tensors": 72000,
+      "tensor_bytes": 490709453,
+      "pickle_sha256": "6ecfe144886811bd41f1f6708a05613c0c61bfb396dcfbde410e63091e6f6471"
+    },
+    "valid": {
+      "archive_sha256": "02b2a6271c4c8b83e934c2cad10f3a50bc444e9a98402ef0d215b0f036d09337",
+      "decoded_sha256": "de776b444119d6a90668bd99870abf94a4042e371e262286fd6206e2e9f3423e",
+      "rows": 256,
+      "tensors": 768,
+      "tensor_bytes": 5404400,
+      "pickle_sha256": "99f86129e10f6ad37d2e319d41a5275d72e3a276b762ad91451717eca7490801"
+    }
+  },
+  "reference": "Unchanged independent metadata-only pickletools interpreter plus raw CRC-checked ZIP storage bytes; never torch.load or executed GLOBAL/REDUCE",
+  "reference_script": "dump\\build_branch_data_identity.py",
+  "reference_script_sha256": "26c1e3f6cd692915fefd9c7a4c0962a1027a8638eae0fa8385af4a494d3d5912",
+  "interpreter": "C:\\Python314\\python.exe",
+  "interpreter_version": "3.14.7 (tags/v3.14.7:823f032, Aug  5 2026, 10:51:32) [MSC v.1944 64 bit (AMD64)]",
+  "wrapper_script": "D:\\Git\\complex_fnn\\dump\\branch-reference-review\\alternate_interpreter.py",
+  "wrapper_script_sha256": "6f3aff8fde171d1a444e64c998939c89a8957f7b652c3c7581a5b0b7c329c17f"
+}

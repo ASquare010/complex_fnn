@@ -3,11 +3,26 @@
 from pathlib import Path
 
 import torch
-from rapidfuzz.distance import Levenshtein
 from torch.nn import functional as F
 
 from models.position_compressor.data import batch
 from storage import digest
+
+
+class Levenshtein:
+    """Small dependency-free edit distance for reconstruction diagnostics."""
+    @staticmethod
+    def distance(left, right):
+        if len(left) < len(right):
+            left, right = right, left
+        previous = list(range(len(right) + 1))
+        for i, a in enumerate(left, 1):
+            current = [i]
+            for j, b in enumerate(right, 1):
+                current.append(min(current[-1] + 1, previous[j] + 1,
+                                   previous[j - 1] + (a != b)))
+            previous = current
+        return previous[-1]
 
 
 def sources():
@@ -15,7 +30,7 @@ def sources():
     paths = list((root / "src/models/position_compressor").glob("*.py"))
     paths += [
         root / "src/models/components.py",
-        root / "src/models/channel_curve_transformer/transformer.py",
+        root / "src/models/branch_sigmoid/transformer.py",
     ]
     return {str(p.relative_to(root)): digest(p) for p in sorted(paths)}
 

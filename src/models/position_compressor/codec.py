@@ -18,6 +18,20 @@ from models.position_compressor.transformer import Config, Model
 from storage import digest, in_dump
 
 
+def require_branch_config(config):
+    if config.get("ffn") != "branch_sigmoid_v1":
+        raise ValueError(
+            "Legacy CurveFFN checkpoint is incompatible with Branch Sigmoid. "
+            "Train a new compressor; use archived sources for old weights."
+        )
+
+
+def architecture_sources():
+    paths = [Path(__file__).with_name("transformer.py"), Path(__file__).with_name("ffn.py")]
+    paths.append(Path(__file__).parents[1] / "branch_sigmoid/transformer.py")
+    return {str(i): digest(p) for i, p in enumerate(paths)}
+
+
 def state_identity(model):
     h = hashlib.sha256()
     for name, tensor in model.state_dict().items():
@@ -25,10 +39,6 @@ def state_identity(model):
         h.update(tensor.detach().cpu().contiguous().numpy().tobytes())
     h.update(json.dumps(asdict(model.config), sort_keys=True).encode())
     return h.hexdigest()
-
-
-# Pre-cleanup architecture is numerically identical; verified by saved-vector parity.
-LEGACY_ARCHITECTURE_SHA256 = "429534b32680ba2654f72e148c9f173584411c333b1a0c30475869c07a36a542"
 
 
 class EncoderOnly(nn.Module):
@@ -57,6 +67,7 @@ class Codec:
     def load(cls, checkpoint, device="cpu", precision=None):
         # Use only locally generated/trusted training checkpoints.
         state = torch.load(checkpoint, map_location="cpu", weights_only=False)
+        require_branch_config(state["protocol"]["model"])
         config = Config(**state["protocol"]["model"])
         model = Model(config)
         model.load_state_dict(state["model"])
@@ -166,12 +177,12 @@ class Codec:
         encoder = self.model if isinstance(self.model, EncoderOnly) else EncoderOnly(self.model)
         torch.save(
             {
-                "format": "position-encoder-v1",
+                "format": "position-encoder-branch-v2",
                 "config": asdict(encoder.config),
                 "encoder": {k: v.detach().cpu() for k, v in encoder.state_dict().items()},
                 "tokenizer": self.tokenizer.to_str(),
                 "decoder_id": self.decoder_id,
-                "architecture_sha256": digest(Path(__file__).with_name("transformer.py")),
+                "architecture_sources": architecture_sources(),
             },
             path,
         )
@@ -180,12 +191,10 @@ class Codec:
     @classmethod
     def load_encoder(cls, path, device="cpu", precision=None):
         state = torch.load(path, map_location="cpu", weights_only=True)
-        if state["format"] != "position-encoder-v1":
-            raise ValueError("Unexpected encoder format")
-        if state["architecture_sha256"] not in {
-            digest(Path(__file__).with_name("transformer.py")),
-            LEGACY_ARCHITECTURE_SHA256,
-        }:
+        require_branch_config(state["config"])
+        if state["format"] != "position-encoder-branch-v2":
+            raise ValueError("Unexpected encoder format; Branch Sigmoid v2 export required")
+        if state.get("architecture_sources") != architecture_sources():
             raise ValueError("Encoder architecture source changed")
         encoder = EncoderOnly(Model(Config(**state["config"])))
         encoder.load_state_dict(state["encoder"])

@@ -1,4 +1,12 @@
+> Architecture changed to Branch Sigmoid in v0.3.0. All reconstruction scores below are historical CurveFFN evidence, not results for the new encoder.
+
 # Step 2: paragraph reconstruction results
+
+Current active endpoint (2026-10-07 cleanup): span32 only, via
+`src/models/position_compressor` and `notebooks/context_encoder_inference.ipynb`.
+The tables below are historical evidence. Older active-code/document links may
+now refer to files preserved in `dump/selected-cleanup-20261007/before.zip`.
+Step3 integration and the previous span8 notebook default are retired.
 
 **Step 2 officially complete (2026-10-05).** The selected handoff is span 32:
 1,000/1,000 exact development paragraphs and 1,000/1,000 fresh confirmation

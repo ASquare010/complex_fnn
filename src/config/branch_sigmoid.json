@@ -1,0 +1,33 @@
+{
+  "candidates": {
+    "branch_sigmoid": 1534
+  },
+  "data": "dump/data/rolling-lm-v1",
+  "encoder": "dump/compression-span32-v1/encoder.pt",
+  "model": {
+    "context": 256,
+    "ffn": "swiglu_fused",
+    "heads": 6,
+    "hidden": 1024,
+    "layers": 4,
+    "name": "base_transformer",
+    "vocab_size": 4096,
+    "width": 384
+  },
+  "name": "branch-sigmoid",
+  "output": "dump/branch-sigmoid-new-run",
+  "training": {
+    "accumulation": 2,
+    "chat_fraction": 0.5,
+    "clip": 1.0,
+    "device": "cuda",
+    "learning_rate": 0.0003,
+    "log_every": 500,
+    "microbatch": 8,
+    "save_every": 500,
+    "seed": 461,
+    "updates": 10000,
+    "warmup": 100,
+    "weight_decay": 0.01
+  }
+}

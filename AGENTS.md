@@ -1,52 +1,36 @@
-# Current repository scope
+# Branch compressor migration (2026-10-07)
 
-Keep Curve-Wide (`channel_curve_transformer`, `self_curve_wide`) and the dense
-baseline as the active language models. `position_compressor` is the selected
-Step 2 reconstruction model. The failed `paragraph_compressor` is retired. The latest bounded FFN refinement is complete.
-Root `ffn_experiments/` retains the explicitly requested shortlist for later
-research. Do not restore retired code, old research trees, scripts or historical
-study configurations to the active tree. No new kernel optimization.
+User explicitly replaced Step 2 CurveFFN with Branch Sigmoid in encoder AND decoder.
+This supersedes historical internal-curve retention and compatible encoder loading.
+Both selected packages remain active. Step 1 weights and outputs remain unchanged.
+Step 2 is now an UNTRAINED architecture revision: old CurveFFN weights are preserved
+but deliberately rejected, and historical reconstruction scores do not apply.
+No training is authorized by this code migration. See docs/branch_compressor_migration.md.
 
-Do not modify `docs/research_goal.md` when documenting Step 1.
+Active packages: src/models/branch_sigmoid and src/models/position_compressor.
+Keep only their configs plus branch_data_identity.json in src/config. No old
+experiment registry, sweeps, alternative LMs, Step 3 integrations or custom kernels.
+No training is authorized by cleanup; future training needs an explicit budget.
+Use ordinary PyTorch and uv run --no-sync. Do not replace/sync the CUDA environment.
+Do not blindly retry native crashes. Earlier DLL/runtime failures remain unexplained.
 
-# Experiment results
+Preserve selected checkpoints, datasets, historical records/audits and source
+snapshots. Do not restore retired source into the active tree to repair old paths.
+Original sources/recipes are required for historical optimizer resumption. The
+current selected Branch loader verifies the exact winner hash for inference.
+Step 2 exports require current architecture/FFN source hashes and Branch v2 format.
+Do not modify docs/research_goal.md. Research targets remain unachieved; cleanup
+is not a new quality result. Step 2 reconstruction is not next-token LM evidence.
 
-Step 2 is officially complete as a bounded reconstruction milestone (2026-10-05).
-The selected integration handoff is the span-32 `position_compressor`; preserve the
-original 8-token checkpoint and inference notebook default. Keep reconstruction
-metrics in `docs/step_2_results.md`, separate from language-model NLL. Preserve all
-checkpoints, source-provenance checks, failed controls and ignored evidence.
-Historical source cleanup snapshots remain in `dump/step2-cleanup-v1/`.
+Branch Sigmoid: web3.820069/chat2.411506,8,654,208 total/4,718,592 FFN parameters,
+10,000 updates seed461,454.54/480MiB allocated/reserved. All latest branch-next
+variants lose to it on both corpora. One-seed/selection limitations still apply.
+Historical CurveFFN span32 encoder:4,798,720 parameters; full model7,292,928; bounded
+reconstruction success, no universal losslessness or downstream reasoning claim.
 
-Current work is the Step 3 design draft in `docs/step_3_memory_llm.md`: a tiny causal
-language model, external compressed memory with CREATE/READ only, bounded sliding
-encoding, and at most four shared-weight reasoning loops per output token.
-No UPDATE/DELETE memory operations, new kernels or unbounded training runs.
-The current target is <=10M total unique learned system parameters, counting frozen
-encoder, embeddings, core, generator, adapters and any key/query networks. The older
-1M charter is preserved as history; do not claim a 10M core is a 10M complete system.
-Resolve the causal cache contract, dataset and bounded experiment protocol before
-starting integration training. Design preferences in the draft are not proven wins.
-No downstream reasoning, semantic retrieval, universal lossless recovery, raw-byte
-compression or whole-LLM speedup follows from Step 2 alone.
-Preserve the main
-research charter. The active model uses ordinary PyTorch autograd on CPU and GPU;
-custom execution code stays in the archive. Do not restore custom kernels to the
-active model. Historical optimized memory/timing results do not describe this
-plain PyTorch execution revision.
-
-After every new experiment, export completed language runs into local `records/`
-and refresh `docs/leaderboard.md`. **Keep records ignored and untracked; do not
-force-add them.** Raw runs, checkpoints and old documentation remain under
-ignored `dump/`. Current result summaries and the leaderboard stay tracked.
-Links to local evidence are expected to require those files.
-
-Rank full last-checkpoint validation NLL, best first, separately by dataset and
-comparison group. Include baselines and trained controls. Never substitute
-sampled validation or synthetic scores. Preserve model/FFN counts, memory, seed,
-budget and local evidence. Keep stopped-before-language experiments unranked.
-
-Use `uv run --no-sync ...` to preserve the configured GPU environment, or set
-`UV_NO_SYNC=1` before `uv run python -m main leaderboard`. Plain dependency sync
-can replace the measured CUDA PyTorch build. Preserve source-provenance checks;
-historical runs require their original sources for exact resumption.
+No training workers or monitoring automations remain. Archived active-tree snapshot
+and deletion receipt: dump/selected-cleanup-20261007/. See README.md and
+ docs/selected_models_cleanup.md. Historical evidence remains under dump/records;
+keep records ignored/untracked, never force-add. Historical leaderboards are frozen
+references; do not silently recompute old runs using migrated sources. Export any
+new authorized runs and document their distinct source provenance/results.

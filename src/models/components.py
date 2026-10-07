@@ -1,4 +1,4 @@
-"""Reusable normalization, exact attention, and dense FFNs."""
+"""Reusable normalization, exact attention, and deterministic initialization."""
 
 import hashlib
 import math
@@ -48,41 +48,6 @@ class Attention(nn.Module):
 def parameter_generator(seed: int, name: str) -> torch.Generator:
     digest = hashlib.sha256(f"{seed}:{name}".encode()).digest()
     return torch.Generator().manual_seed(int.from_bytes(digest[:8], "little"))
-
-
-class DenseFFN(nn.Module):
-    def __init__(self, config: ModelConfig):
-        super().__init__()
-        self.fused = config.ffn in ("swiglu_fused", "swiglu_kernel")
-        self.output_init_scale = config.ffn_output_init_scale
-        self.up = self.projection(config.width, config.hidden * (2 if self.fused else 1))
-        self.down = self.projection(config.hidden, config.width)
-        self.gate = self.projection(config.width, config.hidden) if config.ffn == "swiglu" else None
-
-    def projection(self, inputs: int, outputs: int) -> nn.Module:
-        return nn.Linear(inputs, outputs, bias=False)
-
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
-        hidden = self.up(x)
-        if self.fused:
-            hidden, gate = hidden.chunk(2, dim=-1)
-            hidden = F.silu(hidden) * gate
-        else:
-            hidden = F.gelu(hidden) if self.gate is None else F.silu(hidden) * self.gate(x)
-        return self.down(hidden)
-
-    @torch.no_grad()
-    def initialize(self, seed: int, prefix: str, residual_scale: float):
-        for name, parameter in self.named_parameters():
-            scale = 0.02 * (residual_scale if name.startswith("down.") else 1)
-            if name.startswith("down."):
-                scale *= self.output_init_scale
-            if self.fused and name == "up.weight":
-                up, gate = parameter.chunk(2, dim=0)
-                up.normal_(0, scale, generator=parameter_generator(seed, f"{prefix}.up.weight"))
-                gate.normal_(0, scale, generator=parameter_generator(seed, f"{prefix}.gate.weight"))
-            else:
-                parameter.normal_(0, scale, generator=parameter_generator(seed, f"{prefix}.{name}"))
 
 
 @torch.no_grad()

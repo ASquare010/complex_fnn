@@ -1,0 +1,9 @@
+{
+  "checkpoint": "dump/compression-branch-v2/last.pt",
+  "encoder": "dump/compression-branch-v2/encoder.pt",
+  "span": 32,
+  "ffn": "branch_sigmoid_v1",
+  "status": "untrained; legacy CurveFFN weights incompatible",
+  "encoder_parameters": 7407872,
+  "full_parameters": 10554368
+}

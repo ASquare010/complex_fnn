@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "complex-fnn"
-version = "0.2.0"
+version = "0.3.0"
 description = "Atlas: controlled experiments on compact reusable computation"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -21,7 +21,7 @@ dev = ["ruff>=0.11,<1"]
 fnnlab = "main:main"
 
 [tool.setuptools]
-py-modules = ["main", "settings", "trainer", "experiments", "storage", "leaderboard"]
+py-modules = ["main", "settings", "storage"]
 package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]

@@ -22,6 +22,12 @@ Refresh: `uv run python -m main leaderboard`. Complete validation through the sh
 trainer and result export both refresh this file automatically. Frozen experimental
 launchers must export their compact evidence and then refresh the table.
 
+Separate [dynamic-filter fresh held-out results](step_1_dynamic_composition.md#dynamic-filter-locked-fresh-held-out-evaluation)
+are excluded from these validation rankings.
+
+Separate [locked fresh held-out results](step_1_dynamic_composition.md#locked-fresh-held-out-evaluation)
+are excluded from these validation rankings.
+
 ## TinyStories
 
 ### Width 512, 4 layers, 2,000 updates
@@ -487,3 +493,2752 @@ interventions on trained checkpoints, not independently trained model entries.
 - signed-v1-wikitext-signed-tanh-s101-lr0.0006: [signed-v1-wikitext-signed-tanh.json](../records/signed-v1-wikitext-signed-tanh.json), [summary.json](../dump/runs/20261004T084906Z-1e367fb8/summary.json)
 
 </details>
+
+
+## Step 3 rolling language models
+
+Last-checkpoint full prepared-validation NLL; lower is better. Each table fixes
+the dataset, parameter configuration and training budget. Loop rows reuse the
+same jointly trained checkpoint: one loop is an inference reference, not an
+independently trained baseline. Reconstruction scores are excluded.
+
+### HuggingFaceTB/smol-smoltalk — cohort `ff04ce44de5a`
+
+| Rank | Run / loops | NLL | Core / encoder params | FFN params | Targets | Peak allocated MiB | Seed / updates | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| 1 | rolling-memory-lm-v1 / 2 | 4.830327 | 39,052,032 / 4,798,720 | 7,133,184 | 115,093 | 4154.8 | 17 / 1200 | [local](../records/rolling-memory-lm-v1-1200.json) |
+| 2 | rolling-memory-lm-v1 / 4 | 4.836622 | 39,052,032 / 4,798,720 | 7,133,184 | 115,093 | 4154.8 | 17 / 1200 | [local](../records/rolling-memory-lm-v1-1200.json) |
+| 3 | rolling-memory-lm-v1 / 1 | 4.845762 | 39,052,032 / 4,798,720 | 7,133,184 | 115,093 | 4154.8 | 17 / 1200 | [local](../records/rolling-memory-lm-v1-1200.json) |
+
+### HuggingFaceFW/fineweb-edu — cohort `ff04ce44de5a`
+
+| Rank | Run / loops | NLL | Core / encoder params | FFN params | Targets | Peak allocated MiB | Seed / updates | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| 1 | rolling-memory-lm-v1 / 2 | 5.871381 | 39,052,032 / 4,798,720 | 7,133,184 | 138,520 | 4154.8 | 17 / 1200 | [local](../records/rolling-memory-lm-v1-1200.json) |
+| 2 | rolling-memory-lm-v1 / 4 | 5.873713 | 39,052,032 / 4,798,720 | 7,133,184 | 138,520 | 4154.8 | 17 / 1200 | [local](../records/rolling-memory-lm-v1-1200.json) |
+| 3 | rolling-memory-lm-v1 / 1 | 5.879878 | 39,052,032 / 4,798,720 | 7,133,184 | 138,520 | 4154.8 | 17 / 1200 | [local](../records/rolling-memory-lm-v1-1200.json) |
+
+Zero/shuffled-memory interventions are reported separately in [Step 3 results](step_3_results.md).
+
+
+## Step 3 dense versus rolling: matched training targets
+
+Both language cores start from scratch. The dense baseline has 256 raw tokens;
+the rolling core additionally sees up to 64 compressed history vectors and a
+separately pretrained encoder. This is approximately core-size-matched, not
+equal-information, equal-system-size or equal-compute. All rows use the entire
+prepared validation split at that checkpoint. Loop rows reuse rolling weights.
+
+[Protocol and interpretation](step_3_comparison.md).
+
+### HuggingFaceTB/smol-smoltalk / 1,200 updates / `3f7f0c7ce8bd`
+
+Identical 4,416,813 scored training targets; schedule `1ef0141e7f73`; seed 17.
+
+| Rank | Model / loops | NLL | Core / encoder params | FFN params | Peak MiB | Training seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dense / 1 | 4.466478 | 38,545,152 / 0 | 21,233,664 | 1253.9 | 134.3 | [local](../records/rolling-vs-dense-3600-v1-dense-1200.json) |
+| 2 | rolling / 2 | 5.575582 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 478.9 | [local](../records/rolling-vs-dense-3600-v1-rolling-1200.json) |
+| 3 | rolling / 1 | 5.583298 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 478.9 | [local](../records/rolling-vs-dense-3600-v1-rolling-1200.json) |
+| 4 | rolling / 4 | 5.588969 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 478.9 | [local](../records/rolling-vs-dense-3600-v1-rolling-1200.json) |
+
+### HuggingFaceTB/smol-smoltalk / 2,400 updates / `c36db97266b8`
+
+Identical 8,834,515 scored training targets; schedule `09e8afdb8226`; seed 17.
+
+| Rank | Model / loops | NLL | Core / encoder params | FFN params | Peak MiB | Training seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dense / 1 | 4.171615 | 38,545,152 / 0 | 21,233,664 | 1253.9 | 279.1 | [local](../records/rolling-vs-dense-3600-v1-dense-2400.json) |
+| 2 | rolling / 2 | 5.133216 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 940.6 | [local](../records/rolling-vs-dense-3600-v1-rolling-2400.json) |
+| 3 | rolling / 4 | 5.144300 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 940.6 | [local](../records/rolling-vs-dense-3600-v1-rolling-2400.json) |
+| 4 | rolling / 1 | 5.152397 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 940.6 | [local](../records/rolling-vs-dense-3600-v1-rolling-2400.json) |
+
+### HuggingFaceTB/smol-smoltalk / 3,600 updates / `08925f1f7fbb`
+
+Identical 12,574,061 scored training targets; schedule `945bb231bf9d`; seed 17.
+
+| Rank | Model / loops | NLL | Core / encoder params | FFN params | Peak MiB | Training seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dense / 1 | 2.693145 | 38,545,152 / 0 | 21,233,664 | 1253.9 | 423.9 | [local](../records/rolling-vs-dense-3600-v1-dense-3600.json) |
+| 2 | rolling / 2 | 3.599201 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 1468.5 | [local](../records/rolling-vs-dense-3600-v1-rolling-3600.json) |
+| 3 | rolling / 4 | 3.616680 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 1468.5 | [local](../records/rolling-vs-dense-3600-v1-rolling-3600.json) |
+| 4 | rolling / 1 | 3.626758 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 1468.5 | [local](../records/rolling-vs-dense-3600-v1-rolling-3600.json) |
+
+### HuggingFaceFW/fineweb-edu / 1,200 updates / `3f7f0c7ce8bd`
+
+Identical 4,416,813 scored training targets; schedule `1ef0141e7f73`; seed 17.
+
+| Rank | Model / loops | NLL | Core / encoder params | FFN params | Peak MiB | Training seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dense / 1 | 4.414330 | 38,545,152 / 0 | 21,233,664 | 1253.9 | 134.3 | [local](../records/rolling-vs-dense-3600-v1-dense-1200.json) |
+| 2 | rolling / 2 | 5.473161 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 478.9 | [local](../records/rolling-vs-dense-3600-v1-rolling-1200.json) |
+| 3 | rolling / 1 | 5.480787 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 478.9 | [local](../records/rolling-vs-dense-3600-v1-rolling-1200.json) |
+| 4 | rolling / 4 | 5.484020 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 478.9 | [local](../records/rolling-vs-dense-3600-v1-rolling-1200.json) |
+
+### HuggingFaceFW/fineweb-edu / 2,400 updates / `c36db97266b8`
+
+Identical 8,834,515 scored training targets; schedule `09e8afdb8226`; seed 17.
+
+| Rank | Model / loops | NLL | Core / encoder params | FFN params | Peak MiB | Training seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dense / 1 | 4.120650 | 38,545,152 / 0 | 21,233,664 | 1253.9 | 279.1 | [local](../records/rolling-vs-dense-3600-v1-dense-2400.json) |
+| 2 | rolling / 2 | 5.097618 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 940.6 | [local](../records/rolling-vs-dense-3600-v1-rolling-2400.json) |
+| 3 | rolling / 1 | 5.110422 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 940.6 | [local](../records/rolling-vs-dense-3600-v1-rolling-2400.json) |
+| 4 | rolling / 4 | 5.113655 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 940.6 | [local](../records/rolling-vs-dense-3600-v1-rolling-2400.json) |
+
+### HuggingFaceFW/fineweb-edu / 3,600 updates / `08925f1f7fbb`
+
+Identical 12,574,061 scored training targets; schedule `945bb231bf9d`; seed 17.
+
+| Rank | Model / loops | NLL | Core / encoder params | FFN params | Peak MiB | Training seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dense / 1 | 4.211167 | 38,545,152 / 0 | 21,233,664 | 1253.9 | 423.9 | [local](../records/rolling-vs-dense-3600-v1-dense-3600.json) |
+| 2 | rolling / 2 | 5.003624 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 1468.5 | [local](../records/rolling-vs-dense-3600-v1-rolling-3600.json) |
+| 3 | rolling / 4 | 5.018080 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 1468.5 | [local](../records/rolling-vs-dense-3600-v1-rolling-3600.json) |
+| 4 | rolling / 1 | 5.019767 | 39,052,032 / 4,798,720 | 7,133,184 | 4154.8 | 1468.5 | [local](../records/rolling-vs-dense-3600-v1-rolling-3600.json) |
+
+
+## Step 3 single-pass memory reader: paired continuation
+
+Both arms start from the same 3,600-update dense checkpoint. The reader adds parameters
+and a separately pretrained frozen encoder. These are continuation results, not fresh runs.
+[Protocol and diagnostics](step_3_memory_reader.md).
+
+### HuggingFaceTB/smol-smoltalk / continuation / `682df8f7f261`
+
+Seed 17; 600 additional updates; 2,009,135 identical scored targets; schedule `aaeac0c8171f`.
+
+| Rank | Model | Full validation NLL | Core / encoder params | FFN params | Peak MiB | Training seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | reader | 2.665881 | 38,824,705 / 4,798,720 | 21,233,664 | 1279.7 | 85.6 | [local](../records/memory-reader-600-v1-reader.json) |
+| 2 | dense | 2.665899 | 38,545,152 / 0 | 21,233,664 | 1253.9 | 76.8 | [local](../records/memory-reader-600-v1-dense.json) |
+
+### HuggingFaceFW/fineweb-edu / continuation / `682df8f7f261`
+
+Seed 17; 600 additional updates; 2,009,135 identical scored targets; schedule `aaeac0c8171f`.
+
+| Rank | Model | Full validation NLL | Core / encoder params | FFN params | Peak MiB | Training seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | reader | 4.128996 | 38,824,705 / 4,798,720 | 21,233,664 | 1279.7 | 85.6 | [local](../records/memory-reader-600-v1-reader.json) |
+| 2 | dense | 4.129006 | 38,545,152 / 0 | 21,233,664 | 1253.9 | 76.8 | [local](../records/memory-reader-600-v1-dense.json) |
+
+
+## Step 3 Curve-Wide: raw versus encoded context
+
+Same source text and prediction targets: 256 older + 256 recent tokens.
+The encoded arm replaces the older chunk with eight frozen encoder vectors.
+Fresh language cores, approximately equal core parameters; dense has six blocks and Curve-Wide ten.
+Encoder pretraining/parameters are additional. [Protocol](step_3_context_comparison.md).
+
+### HuggingFaceTB/smol-smoltalk / 600 updates / `869229a0b3ce`
+
+Seed 17; 2,005,324 identical scored targets; schedule `2e14b0261112`.
+
+| Rank | Model | Full validation NLL | Token accuracy | History-window NLL | Core / encoder params | FFN params | Peak allocated MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dense_raw | 3.755294 | 33.17% | 3.746817 | 38,545,152 / 0 | 21,233,664 | 1201.4 | 118.6 | [local](../records/curve-context-600-v1-dense_raw.json) |
+| 2 | curve_raw | 3.858403 | 32.26% | 3.846981 | 38,643,456 / 0 | 11,888,640 | 1924.3 | 295.6 | [local](../records/curve-context-600-v1-curve_raw.json) |
+| 3 | curve_encoded | 3.895410 | 31.72% | 3.889731 | 38,840,320 / 4,798,720 | 11,888,640 | 1362.1 | 259.3 | [local](../records/curve-context-600-v1-curve_encoded.json) |
+
+### HuggingFaceFW/fineweb-edu / 600 updates / `869229a0b3ce`
+
+Seed 17; 2,005,324 identical scored targets; schedule `2e14b0261112`.
+
+| Rank | Model | Full validation NLL | Token accuracy | History-window NLL | Core / encoder params | FFN params | Peak allocated MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dense_raw | 4.982010 | 17.28% | 4.966479 | 38,545,152 / 0 | 21,233,664 | 1201.4 | 118.6 | [local](../records/curve-context-600-v1-dense_raw.json) |
+| 2 | curve_raw | 5.062317 | 16.97% | 5.046933 | 38,643,456 / 0 | 11,888,640 | 1924.3 | 295.6 | [local](../records/curve-context-600-v1-curve_raw.json) |
+| 3 | curve_encoded | 5.082637 | 16.68% | 5.079356 | 38,840,320 / 4,798,720 | 11,888,640 | 1362.1 | 259.3 | [local](../records/curve-context-600-v1-curve_encoded.json) |
+
+
+## Reopened Step 1: equal-parameter FFNs
+
+Four identical Transformer layers, width 384, 256 raw tokens; no encoder, loops or extra depth.
+Approximately 8.65M parameters each. [Protocol and interpretation](step_1_equal_parameters.md).
+
+### HuggingFaceTB/smol-smoltalk / 600 updates / `8f9afdaa0947`
+
+Seed 17; 2,005,324 identical scored targets; schedule `2e14b0261112`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dense | 4.227783 | 29.03% | 8,654,208 / 4,718,592 | 435.6 | 41.2 | [local](../records/ffn-equal-600-v1-dense.json) |
+| 2 | expanded_curve | 4.230823 | 28.94% | 8,653,056 / 4,717,440 | 876.7 | 56.1 | [local](../records/ffn-equal-600-v1-expanded_curve.json) |
+| 3 | learned_prelu | 4.455010 | 26.77% | 8,654,200 / 4,718,584 | 425.1 | 40.8 | [local](../records/ffn-equal-600-v1-learned_prelu.json) |
+| 4 | fixed_prelu | 4.455579 | 26.80% | 8,654,208 / 4,718,592 | 423.9 | 39.2 | [local](../records/ffn-equal-600-v1-fixed_prelu.json) |
+| 5 | learned_silu_tanh | 4.481004 | 26.43% | 8,654,200 / 4,718,584 | 451.8 | 37.5 | [local](../records/ffn-equal-600-v1-learned_silu_tanh.json) |
+| 6 | wide_silu | 4.481322 | 26.41% | 8,654,208 / 4,718,592 | 423.9 | 41.4 | [local](../records/ffn-equal-600-v1-wide_silu.json) |
+
+### HuggingFaceFW/fineweb-edu / 600 updates / `8f9afdaa0947`
+
+Seed 17; 2,005,324 identical scored targets; schedule `2e14b0261112`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | expanded_curve | 5.296054 | 15.51% | 8,653,056 / 4,717,440 | 876.7 | 56.1 | [local](../records/ffn-equal-600-v1-expanded_curve.json) |
+| 2 | dense | 5.298029 | 15.52% | 8,654,208 / 4,718,592 | 435.6 | 41.2 | [local](../records/ffn-equal-600-v1-dense.json) |
+| 3 | fixed_prelu | 5.463947 | 14.44% | 8,654,208 / 4,718,592 | 423.9 | 39.2 | [local](../records/ffn-equal-600-v1-fixed_prelu.json) |
+| 4 | learned_prelu | 5.464313 | 14.41% | 8,654,200 / 4,718,584 | 425.1 | 40.8 | [local](../records/ffn-equal-600-v1-learned_prelu.json) |
+| 5 | learned_silu_tanh | 5.480683 | 14.18% | 8,654,200 / 4,718,584 | 451.8 | 37.5 | [local](../records/ffn-equal-600-v1-learned_silu_tanh.json) |
+| 6 | wide_silu | 5.480942 | 14.21% | 8,654,208 / 4,718,592 | 423.9 | 41.4 | [local](../records/ffn-equal-600-v1-wide_silu.json) |
+
+
+## Step 1: FFN architecture comparisons, matched parameters
+
+Backbone, parameter budget, data and training schedule are matched within each cohort; no encoder or loops.
+[Single-branch study](step_1_single_curve.md) and [feature-mixing research](step_1_feature_mixing.md). Sizes/budgets remain separate.
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `05df563da10f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | filter_tanh | 3.354039 | 38.92% | 8,654,208 / 4,718,592 | 452.4 | 474.0 | 156.4 | [local](../records/ffn-nonlinear-filter-1800-s461-filter_tanh.json) |
+| 2 | filter_signed_square | 3.370427 | 38.76% | 8,654,208 / 4,718,592 | 456.9 | 474.0 | 159.4 | [local](../records/ffn-nonlinear-filter-1800-s461-filter_signed_square.json) |
+
+### HuggingFaceTB/smol-smoltalk / 5400 updates / `089e67c87f18`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 18,067,829 identical scored targets; schedule `1b98493063b4`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 2.712704 | 47.46% | 8,654,208 / 4,718,592 | 446.9 | 468.0 | 427.3 | [local](../records/ffn-filter-continuation-5400-s461-dynamic_filter.json) |
+| 2 | dense | 2.801623 | 45.74% | 8,654,208 / 4,718,592 | 436.4 | 466.0 | 329.2 | [local](../records/ffn-filter-continuation-5400-s461-dense.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `0a71939a74d8`
+
+4 layers; width 384; 256 raw tokens.
+Seed 239; 6,034,737 identical scored targets; schedule `e11a74cf1f9b`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | relu_squared | 3.361140 | 38.43% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 139.7 | [local](../records/ffn-associative-1800-s239-relu_squared.json) |
+| 2 | shifted_relu_squared | 3.361789 | 38.49% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 113.1 | [local](../records/ffn-associative-1800-s239-shifted_relu_squared.json) |
+| 3 | dense | 3.393559 | 37.99% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 141.4 | [local](../records/ffn-associative-1800-s239-dense.json) |
+| 4 | associative_normalized | 3.414679 | 37.95% | 8,654,208 / 4,718,592 | 476.8 | 498.0 | 172.8 | [local](../records/ffn-associative-1800-s239-associative_normalized.json) |
+| 5 | associative_raw | 3.415693 | 37.88% | 8,654,208 / 4,718,592 | 444.6 | 472.0 | 148.3 | [local](../records/ffn-associative-1800-s239-associative_raw.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `0cd79764e28f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 293; 6,031,843 identical scored targets; schedule `86a09f952724`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | axis_parallel | 3.348746 | 38.83% | 8,654,208 / 4,718,592 | 460.0 | 492.0 | 165.8 | [local](../records/ffn-two-axis-confirm-1800-s293-axis_parallel.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `0f6fb5414f17`
+
+4 layers; width 384; 256 raw tokens.
+Seed 101; 6,027,819 identical scored targets; schedule `c8535b205682`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | relu_squared | 3.356948 | 38.46% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 121.7 | [local](../records/ffn-feature-1800-s101-relu_squared.json) |
+| 2 | group_refine | 3.370661 | 38.29% | 8,646,016 / 4,710,400 | 445.4 | 470.0 | 100.7 | [local](../records/ffn-feature-1800-s101-group_refine.json) |
+| 3 | dense | 3.371073 | 38.34% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 116.3 | [local](../records/ffn-feature-1800-s101-dense.json) |
+| 4 | group_product | 3.371853 | 38.30% | 8,646,016 / 4,710,400 | 467.1 | 490.0 | 115.3 | [local](../records/ffn-feature-1800-s101-group_product.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `14a7ea39034f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.352524 | 39.03% | 8,654,208 / 4,718,592 | 459.4 | 482.0 | 117.8 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | ridge_01 | 3.362974 | 39.02% | 8,654,208 / 4,718,592 | 459.4 | 482.0 | 137.9 | [local](../records/ffn-ridge-1800-s461-ridge_01.json) |
+
+### HuggingFaceTB/smol-smoltalk / 10000 updates / `1631256244b4`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | router_mlp | 2.410576 | 51.64% | 8,654,208 / 4,718,592 | 454.4 | 472.0 | 1042.8 | [local](../records/ffn-branch-refinement-10000-s461-router_mlp.json) |
+| 2 | branch2 | 2.411672 | 51.59% | 8,654,208 / 4,718,592 | 447.0 | 468.0 | 964.4 | [local](../records/ffn-branch-refinement-10000-s461-branch2.json) |
+| 3 | ungated | 2.415453 | 51.50% | 8,654,208 / 4,718,592 | 425.6 | 448.0 | 865.3 | [local](../records/ffn-branch-refinement-10000-s461-ungated.json) |
+| 4 | matrix4x4 | 2.436932 | 51.20% | 8,654,208 / 4,718,592 | 447.0 | 472.0 | 1378.2 | [local](../records/ffn-branch-refinement-10000-s461-matrix4x4.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `16a449d0779f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | reflective | 3.358345 | 38.84% | 8,654,208 / 4,718,592 | 442.0 | 460.0 | 203.5 | [local](../records/ffn-reflective-1800-s461-reflective.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `1dcde507f8a5`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | convolution_raw | 3.354088 | 38.77% | 8,654,208 / 4,718,592 | 448.7 | 468.0 | 167.2 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 2 | convolution_squared | 3.370874 | 38.74% | 8,654,208 / 4,718,592 | 452.7 | 470.0 | 170.4 | [local](../records/ffn-convolution-1800-s461-convolution_squared.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `22d10226d422`
+
+4 layers; width 384; 256 raw tokens.
+Seed 311; 6,017,388 identical scored targets; schedule `ecf60b3e4ff8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.324885 | 39.12% | 8,654,208 / 4,718,592 | 447.4 | 468.0 | 152.0 | [local](../records/ffn-dynamic-filter-confirm-1800-s311-dynamic_filter.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `266a5ebc4d04`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | wide_conv | 3.343073 | 39.10% | 8,654,208 / 4,718,592 | 449.4 | 472.0 | 177.6 | [local](../records/ffn-wide-convolution-1800-s461-wide_conv.json) |
+
+### HuggingFaceTB/smol-smoltalk / 10000 updates / `26d13f07961c`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | attention_energy | 2.411464 | 51.72% | 8,654,208 / 4,718,592 | 460.5 | 488.0 | 1020.9 | [local](../records/ffn-evidence-10000-s461-attention_energy.json) |
+| 2 | evidence_balance | 2.411573 | 51.69% | 8,654,208 / 4,718,592 | 448.1 | 468.0 | 1928.5 | [local](../records/ffn-evidence-10000-s461-evidence_balance.json) |
+| 3 | reaction_catalyst | 2.412067 | 51.65% | 8,654,208 / 4,718,592 | 470.1 | 490.0 | 1385.4 | [local](../records/ffn-evidence-10000-s461-reaction_catalyst.json) |
+| 4 | evidence_support | 2.412164 | 51.71% | 8,654,208 / 4,718,592 | 448.1 | 468.0 | 1123.4 | [local](../records/ffn-evidence-10000-s461-evidence_support.json) |
+| 5 | attention_alignment | 2.412334 | 51.74% | 8,654,208 / 4,718,592 | 463.1 | 488.0 | 1015.4 | [local](../records/ffn-evidence-10000-s461-attention_alignment.json) |
+| 6 | reaction_post | 2.413226 | 51.66% | 8,654,208 / 4,718,592 | 446.9 | 468.0 | 1016.8 | [local](../records/ffn-evidence-10000-s461-reaction_post.json) |
+| 7 | cross_evidence | 2.413500 | 51.49% | 8,654,208 / 4,718,592 | 454.3 | 472.0 | 1924.5 | [local](../records/ffn-evidence-10000-s461-cross_evidence.json) |
+| 8 | learned_evidence | 2.433106 | 51.32% | 8,654,208 / 4,718,592 | 450.9 | 468.0 | 1184.8 | [local](../records/ffn-evidence-10000-s461-learned_evidence.json) |
+
+### HuggingFaceTB/smol-smoltalk / 10000 updates / `2898c8c1d063`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_rich_router | 2.411784 | 51.60% | 8,654,208 / 4,718,592 | 450.4 | 474.0 | 1118.5 | [local](../records/ffn-branch-next-10000-s461-branch_rich_router.json) |
+| 2 | branch_hierarchical | 2.412127 | 51.69% | 8,654,208 / 4,718,592 | 444.6 | 482.0 | 1510.7 | [local](../records/ffn-branch-next-10000-s461-branch_hierarchical.json) |
+| 3 | branch_threshold | 2.425312 | 51.48% | 8,654,208 / 4,718,592 | 451.1 | 472.0 | 1204.0 | [local](../records/ffn-branch-next-10000-s461-branch_threshold.json) |
+| 4 | branch_temperature | 2.431398 | 51.37% | 8,654,208 / 4,718,592 | 450.0 | 472.0 | 1016.0 | [local](../records/ffn-branch-next-10000-s461-branch_temperature.json) |
+| 5 | branch_bipolar | 2.497739 | 50.24% | 8,654,208 / 4,718,592 | 471.5 | 508.0 | 1034.5 | [local](../records/ffn-branch-next-10000-s461-branch_bipolar.json) |
+
+### HuggingFaceTB/smol-smoltalk / 10000 updates / `325904e3a840`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 2.411506 | 51.69% | 8,654,208 / 4,718,592 | 454.5 | 480.0 | 848.8 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 2 | bottleneck_squared | 2.411984 | 51.51% | 8,648,064 / 4,712,448 | 444.1 | 474.0 | 806.9 | [local](../records/ffn-final-10000-s461-bottleneck_squared.json) |
+| 3 | competitive_256 | 2.412565 | 51.51% | 8,654,208 / 4,718,592 | 454.8 | 482.0 | 916.7 | [local](../records/ffn-final-10000-s461-competitive_256.json) |
+| 4 | bottleneck_silu | 2.413933 | 51.57% | 8,648,064 / 4,712,448 | 444.1 | 474.0 | 821.6 | [local](../records/ffn-final-10000-s461-bottleneck_silu.json) |
+| 5 | correlation_diagonal | 2.417012 | 51.45% | 8,654,208 / 4,718,592 | 451.5 | 488.0 | 845.8 | [local](../records/ffn-final-10000-s461-correlation_diagonal.json) |
+| 6 | competitive_diagonal | 2.418648 | 51.41% | 8,654,208 / 4,718,592 | 454.8 | 482.0 | 911.8 | [local](../records/ffn-final-10000-s461-competitive_diagonal.json) |
+| 7 | bottleneck_linear | 2.420762 | 51.39% | 8,648,064 / 4,712,448 | 443.6 | 474.0 | 748.8 | [local](../records/ffn-final-10000-s461-bottleneck_linear.json) |
+| 8 | branch_softmax | 2.426687 | 51.43% | 8,654,208 / 4,718,592 | 454.5 | 480.0 | 785.1 | [local](../records/ffn-final-10000-s461-branch_softmax.json) |
+| 9 | convolution_raw | 2.427686 | 51.40% | 8,654,208 / 4,718,592 | 452.4 | 480.0 | 881.1 | [local](../records/ffn-final-10000-s461-convolution_raw.json) |
+| 10 | convolution_squared | 2.428213 | 51.45% | 8,654,208 / 4,718,592 | 456.4 | 482.0 | 892.5 | [local](../records/ffn-final-10000-s461-convolution_squared.json) |
+| 11 | hybrid_normalized | 2.430317 | 51.32% | 8,654,208 / 4,718,592 | 459.2 | 486.0 | 1318.3 | [local](../records/ffn-final-10000-s461-hybrid_normalized.json) |
+| 12 | dynamic_filter | 2.432455 | 51.34% | 8,654,208 / 4,718,592 | 448.4 | 480.0 | 825.1 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 13 | divisive_16 | 2.438159 | 51.27% | 8,654,208 / 4,718,592 | 451.4 | 482.0 | 686.9 | [local](../records/ffn-final-10000-s461-divisive_16.json) |
+| 14 | cyclic_relu | 2.440047 | 51.17% | 8,654,208 / 4,718,592 | 447.1 | 480.0 | 559.0 | [local](../records/ffn-final-10000-s461-cyclic_relu.json) |
+| 15 | axis_parallel | 2.445161 | 51.21% | 8,654,208 / 4,718,592 | 460.8 | 492.0 | 926.2 | [local](../records/ffn-final-10000-s461-axis_parallel.json) |
+| 16 | contrast32 | 2.483469 | 50.67% | 8,654,208 / 4,718,592 | 420.8 | 460.0 | 780.1 | [local](../records/ffn-final-10000-s461-contrast32.json) |
+| 17 | contrast128 | 2.484188 | 50.63% | 8,654,208 / 4,718,592 | 421.2 | 460.0 | 745.7 | [local](../records/ffn-final-10000-s461-contrast128.json) |
+| 18 | distributed_fixed | 2.492875 | 50.33% | 8,654,208 / 4,718,592 | 476.0 | 500.0 | 671.5 | [local](../records/ffn-final-10000-s461-distributed_fixed.json) |
+| 19 | expanded_curve | 2.526605 | 49.53% | 8,653,056 / 4,717,440 | 875.0 | 920.0 | 1628.0 | [local](../records/ffn-final-10000-s461-expanded_curve.json) |
+| 20 | associative_normalized | 2.532203 | 49.76% | 8,654,208 / 4,718,592 | 472.8 | 498.0 | 927.4 | [local](../records/ffn-final-10000-s461-associative_normalized.json) |
+| 21 | cyclic_signed | 2.537507 | 49.55% | 8,654,208 / 4,718,592 | 448.4 | 480.0 | 672.4 | [local](../records/ffn-final-10000-s461-cyclic_signed.json) |
+| 22 | dense | 2.549469 | 49.40% | 8,654,208 / 4,718,592 | 436.9 | 462.0 | 660.1 | [local](../records/ffn-final-10000-s461-dense.json) |
+| 23 | channel_curve_original | 2.585674 | 49.10% | 5,133,696 / 1,198,080 | 437.4 | 464.0 | 995.9 | [local](../records/ffn-final-10000-s461-channel_curve_original.json) |
+| 24 | associative_raw | 2.590846 | 48.80% | 8,654,208 / 4,718,592 | 447.2 | 472.0 | 1059.8 | [local](../records/ffn-final-10000-s461-associative_raw.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `32675da46b70`
+
+4 layers; width 384; 256 raw tokens.
+Seed 23; 6,004,377 identical scored targets; schedule `68d7786248b5`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | shifted_relu_squared | 3.354515 | 38.66% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 143.8 | [local](../records/ffn-single-confirm-1800-s23-shifted_relu_squared.json) |
+| 2 | relu_squared | 3.361007 | 38.65% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 138.1 | [local](../records/ffn-single-confirm-1800-s23-relu_squared.json) |
+| 3 | self_gate_fixed | 3.361668 | 38.56% | 8,654,208 / 4,718,592 | 447.8 | 468.0 | 139.0 | [local](../records/ffn-single-confirm-1800-s23-self_gate_fixed.json) |
+| 4 | dense | 3.373691 | 38.34% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 142.3 | [local](../records/ffn-single-confirm-1800-s23-dense.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `35d4b2769d86`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | lattice | 3.399442 | 38.16% | 8,653,184 / 4,717,568 | 465.1 | 492.0 | 187.7 | [local](../records/ffn-lattice-1800-s461-lattice.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `36bf279d9fbb`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | fold4 | 3.658606 | 34.76% | 8,654,208 / 4,718,592 | 451.4 | 488.0 | 185.1 | [local](../records/ffn-fold-1800-s461-fold4.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `3a47f9d979d5`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | competitive_diagonal | 3.369100 | 38.55% | 8,654,208 / 4,718,592 | 455.3 | 470.0 | 188.7 | [local](../records/ffn-competitive-1800-s461-competitive_diagonal.json) |
+| 2 | competitive_256 | 3.370112 | 38.57% | 8,654,208 / 4,718,592 | 455.3 | 470.0 | 182.4 | [local](../records/ffn-competitive-1800-s461-competitive_256.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `3efab775b2b9`
+
+4 layers; width 384; 256 raw tokens.
+Seed 311; 6,017,388 identical scored targets; schedule `ecf60b3e4ff8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 3.340158 | 39.13% | 8,654,208 / 4,718,592 | 453.6 | 474.0 | 147.6 | [local](../records/ffn-hybrid-confirm-1800-s311-hybrid_normalized.json) |
+| 2 | relu_squared | 3.357382 | 38.65% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 120.8 | [local](../records/ffn-hybrid-confirm-1800-s311-relu_squared.json) |
+| 3 | shifted_relu_squared | 3.361548 | 38.51% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 133.5 | [local](../records/ffn-hybrid-confirm-1800-s311-shifted_relu_squared.json) |
+| 4 | dense | 3.368282 | 38.53% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 124.5 | [local](../records/ffn-hybrid-confirm-1800-s311-dense.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `40a72d28e862`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | contrast32 | 3.441675 | 37.63% | 8,654,208 / 4,718,592 | 422.4 | 448.0 | 128.4 | [local](../records/ffn-energy-contrast-1800-s461-contrast32.json) |
+| 2 | contrast128 | 3.447880 | 37.53% | 8,654,208 / 4,718,592 | 422.2 | 448.0 | 125.2 | [local](../records/ffn-energy-contrast-1800-s461-contrast128.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `442fa71bc080`
+
+4 layers; width 384; 256 raw tokens.
+Seed 293; 6,031,843 identical scored targets; schedule `86a09f952724`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.344238 | 39.09% | 8,654,208 / 4,718,592 | 459.4 | 482.0 | 173.7 | [local](../records/ffn-ridge-confirm-1800-s293-ridge_1.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `468213268c67`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | symmetric_pairs | 3.368154 | 38.48% | 8,654,208 / 4,718,592 | 430.1 | 454.0 | 172.7 | [local](../records/ffn-exterior-1800-s461-symmetric_pairs.json) |
+| 2 | exterior | 3.369273 | 38.56% | 8,654,208 / 4,718,592 | 429.6 | 454.0 | 176.2 | [local](../records/ffn-exterior-1800-s461-exterior.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `46850c14c66b`
+
+4 layers; width 384; 256 raw tokens.
+Seed 131; 6,036,217 identical scored targets; schedule `f70bb98e4209`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | relu_squared | 3.357899 | 38.65% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 56.0 | [local](../records/ffn-global-1800-s131-relu_squared.json) |
+| 2 | dense | 3.390508 | 38.09% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 55.4 | [local](../records/ffn-global-1800-s131-dense.json) |
+| 3 | global_squared | 3.398010 | 38.12% | 8,654,208 / 4,718,592 | 426.5 | 450.0 | 51.9 | [local](../records/ffn-global-1800-s131-global_squared.json) |
+| 4 | global_silu | 3.620380 | 34.77% | 8,654,208 / 4,718,592 | 431.4 | 450.0 | 57.0 | [local](../records/ffn-global-1800-s131-global_silu.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `473707211823`
+
+4 layers; width 384; 256 raw tokens.
+Seed 47; 6,036,303 identical scored targets; schedule `a9c9d0456ded`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | shifted_relu_squared | 3.345774 | 38.87% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 136.8 | [local](../records/ffn-single-confirm-1800-s47-shifted_relu_squared.json) |
+| 2 | relu_squared | 3.349586 | 38.84% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 156.3 | [local](../records/ffn-single-confirm-1800-s47-relu_squared.json) |
+| 3 | self_gate_fixed | 3.360859 | 38.75% | 8,654,208 / 4,718,592 | 447.8 | 468.0 | 147.0 | [local](../records/ffn-single-confirm-1800-s47-self_gate_fixed.json) |
+| 4 | dense | 3.389255 | 38.15% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 139.4 | [local](../records/ffn-single-confirm-1800-s47-dense.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `4cd587cccc81`
+
+6 layers; width 512; 256 raw tokens.
+Seed 71; 6,009,808 identical scored targets; schedule `9cecb6d433f5`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter_transfer | 3.144704 | 41.21% | 21,076,480 / 12,681,216 | 833.7 | 852.0 | 215.7 | [local](../records/ffn-dynamic-filter-transfer-1800-s71-dynamic_filter_transfer.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `4fe1b6824485`
+
+4 layers; width 384; 256 raw tokens.
+Seed 173; 6,003,971 identical scored targets; schedule `520733d86928`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | relu_squared | 3.352462 | 38.71% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 112.1 | [local](../records/ffn-cyclic-1800-s173-relu_squared.json) |
+| 2 | cyclic_relu | 3.362832 | 38.51% | 8,654,208 / 4,718,592 | 447.3 | 468.0 | 116.8 | [local](../records/ffn-cyclic-1800-s173-cyclic_relu.json) |
+| 3 | cyclic_signed | 3.368954 | 38.41% | 8,654,208 / 4,718,592 | 446.5 | 468.0 | 118.5 | [local](../records/ffn-cyclic-1800-s173-cyclic_signed.json) |
+| 4 | shifted_relu_squared | 3.372779 | 38.27% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 97.1 | [local](../records/ffn-cyclic-1800-s173-shifted_relu_squared.json) |
+| 5 | dense | 3.380961 | 38.34% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 106.7 | [local](../records/ffn-cyclic-1800-s173-dense.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `50e28a6bfaa7`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | post_filter | 3.374329 | 38.35% | 8,654,208 / 4,718,592 | 468.9 | 488.0 | 151.6 | [local](../records/ffn-post-filter-1800-s461-post_filter.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `54f450449db8`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | two_hop | 3.356606 | 39.07% | 8,654,208 / 4,718,592 | 456.9 | 474.0 | 126.1 | [local](../records/ffn-two-hop-filter-1800-s461-two_hop.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `57bbe07938e8`
+
+4 layers; width 384; 256 raw tokens.
+Seed 197; 6,025,451 identical scored targets; schedule `6042d2050765`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | relu_squared | 3.343508 | 38.94% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 65.0 | [local](../records/ffn-bottleneck-1800-s197-relu_squared.json) |
+| 2 | bottleneck_squared | 3.344227 | 38.82% | 8,648,064 / 4,712,448 | 445.1 | 474.0 | 177.2 | [local](../records/ffn-bottleneck-1800-s197-bottleneck_squared.json) |
+| 3 | bottleneck_silu | 3.351270 | 38.76% | 8,648,064 / 4,712,448 | 445.1 | 474.0 | 95.9 | [local](../records/ffn-bottleneck-1800-s197-bottleneck_silu.json) |
+| 4 | bottleneck_linear | 3.351841 | 38.75% | 8,648,064 / 4,712,448 | 444.6 | 474.0 | 136.4 | [local](../records/ffn-bottleneck-1800-s197-bottleneck_linear.json) |
+| 5 | shifted_relu_squared | 3.354247 | 38.62% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 146.7 | [local](../records/ffn-bottleneck-1800-s197-shifted_relu_squared.json) |
+| 6 | dense | 3.389887 | 38.17% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 61.0 | [local](../records/ffn-bottleneck-1800-s197-dense.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `646b457a5f94`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | gatebank_m4 | 3.386655 | 38.49% | 8,651,136 / 4,715,520 | 425.3 | 452.0 | 128.9 | [local](../records/ffn-gatebank-1800-s461-gatebank_m4.json) |
+| 2 | gatebank_m2 | 3.393742 | 38.43% | 8,654,208 / 4,718,592 | 429.3 | 450.0 | 125.8 | [local](../records/ffn-gatebank-1800-s461-gatebank_m2.json) |
+| 3 | gatebank_silu_m4 | 3.397856 | 38.10% | 8,649,600 / 4,713,984 | 427.6 | 452.0 | 123.8 | [local](../records/ffn-gatebank-1800-s461-gatebank_silu_m4.json) |
+| 4 | gatebank_m1 | 3.411986 | 38.13% | 8,654,208 / 4,718,592 | 432.4 | 454.0 | 111.8 | [local](../records/ffn-gatebank-1800-s461-gatebank_m1.json) |
+
+### HuggingFaceTB/smol-smoltalk / 10000 updates / `689cf5f6df86`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dual_plain_quarter | 2.415987 | 51.54% | 8,654,208 / 4,718,592 | 441.8 | 468.0 | 985.7 | [local](../records/ffn-dual-path-10000-s461-dual_plain_quarter.json) |
+| 2 | dual_router_small | 2.416228 | 51.47% | 8,654,208 / 4,718,592 | 452.7 | 470.0 | 1142.3 | [local](../records/ffn-dual-path-10000-s461-dual_router_small.json) |
+| 3 | dual_filter_small | 2.423266 | 51.35% | 8,654,208 / 4,718,592 | 451.5 | 468.0 | 1088.8 | [local](../records/ffn-dual-path-10000-s461-dual_filter_small.json) |
+| 4 | dual_filter_quarter | 2.423454 | 51.49% | 8,654,208 / 4,718,592 | 448.9 | 478.0 | 1090.5 | [local](../records/ffn-dual-path-10000-s461-dual_filter_quarter.json) |
+| 5 | dual_filter_half | 2.424349 | 51.44% | 8,654,208 / 4,718,592 | 450.8 | 474.0 | 1090.3 | [local](../records/ffn-dual-path-10000-s461-dual_filter_half.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `6e867a7fa7bd`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | matrix_chain | 3.407659 | 38.38% | 8,654,208 / 4,718,592 | 424.4 | 452.0 | 177.7 | [local](../records/ffn-matrix-chain-1800-s461-matrix_chain.json) |
+| 2 | matrix_parallel | 3.417661 | 37.94% | 8,654,208 / 4,718,592 | 423.3 | 452.0 | 177.2 | [local](../records/ffn-matrix-chain-1800-s461-matrix_parallel.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `77a6452f8504`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | pair_normalized | 3.353935 | 38.89% | 8,654,208 / 4,718,592 | 433.0 | 482.0 | 185.6 | [local](../records/ffn-pair-1800-s461-pair_normalized.json) |
+| 2 | pair_raw | 3.355598 | 38.81% | 8,654,208 / 4,718,592 | 444.4 | 468.0 | 161.7 | [local](../records/ffn-pair-1800-s461-pair_raw.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `7ad9fed670d6`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | axis_parallel | 3.338122 | 39.13% | 8,654,208 / 4,718,592 | 460.0 | 492.0 | 166.0 | [local](../records/ffn-two-axis-1800-s461-axis_parallel.json) |
+
+### HuggingFaceTB/smol-smoltalk / 600 updates / `7d54fb13c977`
+
+4 layers; width 384; 256 raw tokens.
+Seed 17; 2,005,324 identical scored targets; schedule `2e14b0261112`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | self_gate_learned | 4.212373 | 29.28% | 8,654,176 / 4,718,560 | 469.9 | 508.0 | 50.1 | [local](../records/ffn-single-600-v1-self_gate_learned.json) |
+| 2 | self_gate_fixed | 4.212848 | 29.10% | 8,654,208 / 4,718,592 | 447.8 | 468.0 | 38.4 | [local](../records/ffn-single-600-v1-self_gate_fixed.json) |
+| 3 | dense | 4.227783 | 29.03% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 37.6 | [local](../records/ffn-single-600-v1-dense.json) |
+| 4 | shifted_relu_squared | 4.229148 | 29.48% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 48.5 | [local](../records/ffn-single-600-v1-shifted_relu_squared.json) |
+| 5 | relu_squared | 4.231309 | 29.39% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 47.2 | [local](../records/ffn-single-600-v1-relu_squared.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `a69710c97156`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | divisive_global | 3.359828 | 38.71% | 8,654,208 / 4,718,592 | 445.4 | 470.0 | 150.4 | [local](../records/ffn-divisive-1800-s461-divisive_global.json) |
+| 2 | divisive_16 | 3.396719 | 38.31% | 8,654,208 / 4,718,592 | 452.3 | 470.0 | 154.0 | [local](../records/ffn-divisive-1800-s461-divisive_16.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `a9605ff6ed7f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | distributed_fixed | 3.428987 | 37.52% | 8,654,208 / 4,718,592 | 471.4 | 492.0 | 136.1 | [local](../records/ffn-distributed-curve-1800-s461-distributed_fixed.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `ad4dbc63dd18`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | phase_rotation | 3.345356 | 39.06% | 8,654,208 / 4,718,592 | 460.9 | 474.0 | 169.6 | [local](../records/ffn-phase-1800-s461-phase_rotation.json) |
+| 2 | phase_diagonal | 3.348351 | 38.83% | 8,654,208 / 4,718,592 | 454.1 | 474.0 | 155.2 | [local](../records/ffn-phase-1800-s461-phase_diagonal.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `add6c6661f55`
+
+4 layers; width 384; 256 raw tokens.
+Seed 311; 6,017,388 identical scored targets; schedule `ecf60b3e4ff8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | axis_parallel | 3.328431 | 39.12% | 8,654,208 / 4,718,592 | 464.4 | 492.0 | 163.0 | [local](../records/ffn-two-axis-confirm-1800-s311-axis_parallel.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `b0c31c89b710`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 3.362123 | 38.86% | 8,654,208 / 4,718,592 | 453.6 | 474.0 | 192.9 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 2 | relu_squared | 3.368997 | 38.57% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 83.5 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 3 | shifted_relu_squared | 3.374200 | 38.50% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 102.5 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 4 | dense | 3.375814 | 38.51% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 87.6 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 5 | product_dictionary | 3.463462 | 36.77% | 8,654,208 / 4,718,592 | 421.8 | 452.0 | 157.0 | [local](../records/ffn-dictionary-1800-s461-product_dictionary.json) |
+| 6 | flat_dictionary | 3.532873 | 35.52% | 8,654,208 / 4,718,592 | 448.4 | 468.0 | 149.9 | [local](../records/ffn-dictionary-1800-s461-flat_dictionary.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `b4a47704b9dd`
+
+4 layers; width 384; 256 raw tokens.
+Seed 311; 6,017,388 identical scored targets; schedule `ecf60b3e4ff8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.339692 | 39.07% | 8,654,208 / 4,718,592 | 459.4 | 482.0 | 216.5 | [local](../records/ffn-ridge-confirm-1800-s311-ridge_1.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `b7767ee6f51b`
+
+4 layers; width 384; 256 raw tokens.
+Seed 293; 6,031,843 identical scored targets; schedule `86a09f952724`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 3.351981 | 39.00% | 8,654,208 / 4,718,592 | 453.6 | 474.0 | 173.5 | [local](../records/ffn-hybrid-confirm-1800-s293-hybrid_normalized.json) |
+| 2 | shifted_relu_squared | 3.371116 | 38.40% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 132.4 | [local](../records/ffn-hybrid-confirm-1800-s293-shifted_relu_squared.json) |
+| 3 | relu_squared | 3.375245 | 38.37% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 111.8 | [local](../records/ffn-hybrid-confirm-1800-s293-relu_squared.json) |
+| 4 | dense | 3.387184 | 38.27% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 110.1 | [local](../records/ffn-hybrid-confirm-1800-s293-dense.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `b7bdbd67e33f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 277; 6,030,702 identical scored targets; schedule `45bdbb23ef3f`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 3.337261 | 39.11% | 8,654,208 / 4,718,592 | 453.6 | 474.0 | 161.5 | [local](../records/ffn-hybrid-1800-s277-hybrid_normalized.json) |
+| 2 | shifted_relu_squared | 3.348131 | 38.84% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 124.6 | [local](../records/ffn-hybrid-1800-s277-shifted_relu_squared.json) |
+| 3 | hybrid_local | 3.350322 | 38.80% | 8,654,208 / 4,718,592 | 448.7 | 472.0 | 148.6 | [local](../records/ffn-hybrid-1800-s277-hybrid_local.json) |
+| 4 | relu_squared | 3.355939 | 38.71% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 122.2 | [local](../records/ffn-hybrid-1800-s277-relu_squared.json) |
+| 5 | dense | 3.386486 | 38.13% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 130.9 | [local](../records/ffn-hybrid-1800-s277-dense.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `bf45cc05490d`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 3.359723 | 38.51% | 8,654,208 / 4,718,592 | 448.0 | 468.0 | 170.9 | [local](../records/ffn-branch-1800-s461-branch_sigmoid.json) |
+| 2 | branch_softmax | 3.366048 | 38.57% | 8,654,208 / 4,718,592 | 445.8 | 468.0 | 168.5 | [local](../records/ffn-branch-1800-s461-branch_softmax.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `dae0d7e49b16`
+
+4 layers; width 384; 256 raw tokens.
+Seed 293; 6,031,843 identical scored targets; schedule `86a09f952724`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.347085 | 38.79% | 8,654,208 / 4,718,592 | 446.9 | 468.0 | 147.3 | [local](../records/ffn-dynamic-filter-confirm-1800-s293-dynamic_filter.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `dd25e30aa846`
+
+4 layers; width 384; 256 raw tokens.
+Seed 293; 6,031,843 identical scored targets; schedule `86a09f952724`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | pair_normalized | 3.353779 | 38.71% | 8,654,208 / 4,718,592 | 430.8 | 462.0 | 185.4 | [local](../records/ffn-pair-confirm-1800-s293-pair_normalized.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `e06a4b34c685`
+
+4 layers; width 384; 256 raw tokens.
+Seed 359; 6,036,078 identical scored targets; schedule `8b1b92893968`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 3.344550 | 38.97% | 8,654,208 / 4,718,592 | 453.6 | 474.0 | 171.0 | [local](../records/ffn-linear-feature-1800-s359-hybrid_normalized.json) |
+| 2 | shifted_relu_squared | 3.365062 | 38.50% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 90.8 | [local](../records/ffn-linear-feature-1800-s359-shifted_relu_squared.json) |
+| 3 | relu_squared | 3.368650 | 38.47% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 119.7 | [local](../records/ffn-linear-feature-1800-s359-relu_squared.json) |
+| 4 | dense | 3.375793 | 38.38% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 123.8 | [local](../records/ffn-linear-feature-1800-s359-dense.json) |
+| 5 | feature_linear_squared | 3.386192 | 38.17% | 8,654,208 / 4,718,592 | 460.6 | 478.0 | 180.2 | [local](../records/ffn-linear-feature-1800-s359-feature_linear_squared.json) |
+| 6 | feature_linear_elu | 3.432628 | 37.37% | 8,654,208 / 4,718,592 | 460.6 | 478.0 | 191.8 | [local](../records/ffn-linear-feature-1800-s359-feature_linear_elu.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `e3d09b38e3ef`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | static_wide | 3.376262 | 38.44% | 8,655,232 / 4,719,616 | 447.6 | 468.0 | 146.5 | [local](../records/ffn-static-filter-1800-s461-static_wide.json) |
+| 2 | static_narrow | 3.391998 | 38.15% | 8,262,016 / 4,326,400 | 438.9 | 468.0 | 151.2 | [local](../records/ffn-static-filter-1800-s461-static_narrow.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `e44975432e18`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | maxout_2 | 3.503124 | 36.56% | 8,654,208 / 4,718,592 | 453.6 | 478.0 | 141.8 | [local](../records/ffn-competitive-pool-1800-s461-maxout_2.json) |
+| 2 | maxout_3 | 3.514838 | 36.44% | 8,654,208 / 4,718,592 | 433.7 | 478.0 | 136.3 | [local](../records/ffn-competitive-pool-1800-s461-maxout_3.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `e6da8cfc27eb`
+
+4 layers; width 384; 256 raw tokens.
+Seed 311; 6,017,388 identical scored targets; schedule `ecf60b3e4ff8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | pair_normalized | 3.349054 | 38.85% | 8,654,208 / 4,718,592 | 435.6 | 462.0 | 183.1 | [local](../records/ffn-pair-confirm-1800-s311-pair_normalized.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `e99cbd32b0f3`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | self_correlation | 3.364279 | 38.67% | 8,654,208 / 4,718,592 | 454.1 | 476.0 | 167.2 | [local](../records/ffn-correlation-1800-s461-self_correlation.json) |
+| 2 | correlation_diagonal | 3.367135 | 38.59% | 8,654,208 / 4,718,592 | 453.4 | 476.0 | 167.5 | [local](../records/ffn-correlation-1800-s461-correlation_diagonal.json) |
+
+### HuggingFaceTB/smol-smoltalk / 10000 updates / `ecbf85ac7385`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | gate16 | 2.412582 | 51.76% | 8,654,208 / 4,718,592 | 446.9 | 472.0 | 1365.8 | [local](../records/ffn-evolution-10000-s461-gate16.json) |
+| 2 | partial_positive_sine | 2.413345 | 51.55% | 8,654,208 / 4,718,592 | 457.5 | 484.0 | 1329.8 | [local](../records/ffn-evolution-10000-s461-partial_positive_sine.json) |
+| 3 | partial_rational | 2.413616 | 51.61% | 8,654,208 / 4,718,592 | 457.5 | 484.0 | 1466.2 | [local](../records/ffn-evolution-10000-s461-partial_rational.json) |
+| 4 | gate_sine | 2.418575 | 51.52% | 8,654,208 / 4,718,592 | 448.0 | 468.0 | 1034.4 | [local](../records/ffn-evolution-10000-s461-gate_sine.json) |
+| 5 | partial_sine | 2.422035 | 51.49% | 8,654,208 / 4,718,592 | 457.5 | 482.0 | 1435.7 | [local](../records/ffn-evolution-10000-s461-partial_sine.json) |
+| 6 | gate8 | 2.426850 | 51.31% | 8,654,208 / 4,718,592 | 446.6 | 472.0 | 1104.4 | [local](../records/ffn-evolution-10000-s461-gate8.json) |
+| 7 | filter_updategate | 2.440036 | 51.28% | 8,654,208 / 4,718,592 | 472.3 | 508.0 | 1141.6 | [local](../records/ffn-evolution-10000-s461-filter_updategate.json) |
+| 8 | filter_postgate | 2.451138 | 50.93% | 8,654,208 / 4,718,592 | 469.7 | 508.0 | 1132.1 | [local](../records/ffn-evolution-10000-s461-filter_postgate.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `f08c102ce325`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 39.01% | 8,654,208 / 4,718,592 | 446.9 | 468.0 | 155.2 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `f2b9a6856be2`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | filter_bank16 | 3.347661 | 38.91% | 8,654,208 / 4,718,592 | 449.6 | 472.0 | 157.8 | [local](../records/ffn-filter-bank-1800-s461-filter_bank16.json) |
+| 2 | filter_bank4 | 3.348846 | 39.00% | 8,654,208 / 4,718,592 | 449.6 | 472.0 | 153.2 | [local](../records/ffn-filter-bank-1800-s461-filter_bank4.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `f4c86eb83f20`
+
+6 layers; width 512; 256 raw tokens.
+Seed 71; 6,009,808 identical scored targets; schedule `9cecb6d433f5`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dense | 3.169490 | 40.80% | 21,076,480 / 12,681,216 | 824.1 | 848.0 | 178.3 | [local](../records/ffn-single-scale-1800-s71-dense.json) |
+| 2 | shifted_relu_squared | 3.182611 | 40.66% | 21,076,564 / 12,681,300 | 786.8 | 862.0 | 176.6 | [local](../records/ffn-single-scale-1800-s71-shifted_relu_squared.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `f4d461ea7d29`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | jet_factored | 3.376662 | 38.43% | 8,655,744 / 4,720,128 | 460.1 | 480.0 | 213.8 | [local](../records/ffn-jet-factored-1800-s461-jet_factored.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `f9e40f874579`
+
+6 layers; width 512; 256 raw tokens.
+Seed 71; 6,009,808 identical scored targets; schedule `9cecb6d433f5`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_transfer | 3.140375 | 41.40% | 21,076,480 / 12,681,216 | 850.4 | 878.0 | 278.9 | [local](../records/ffn-hybrid-transfer-1800-s71-hybrid_transfer.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `fa6c0482e1a4`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | tensor_banks | 3.389340 | 38.12% | 8,654,208 / 4,718,592 | 442.5 | 474.0 | 106.4 | [local](../records/ffn-tensor-response-1800-s461-tensor_banks.json) |
+| 2 | tensor_full | 3.413476 | 37.89% | 8,654,208 / 4,718,592 | 421.6 | 474.0 | 140.4 | [local](../records/ffn-tensor-response-1800-s461-tensor_full.json) |
+
+### HuggingFaceTB/smol-smoltalk / 1800 updates / `feb84f4598a1`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | jet_split | 3.397434 | 38.02% | 8,654,208 / 4,718,592 | 430.3 | 450.0 | 160.3 | [local](../records/ffn-jet-1800-s461-jet_split.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `05df563da10f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | filter_tanh | 4.588307 | 21.92% | 8,654,208 / 4,718,592 | 452.4 | 474.0 | 156.4 | [local](../records/ffn-nonlinear-filter-1800-s461-filter_tanh.json) |
+| 2 | filter_signed_square | 4.602801 | 21.73% | 8,654,208 / 4,718,592 | 456.9 | 474.0 | 159.4 | [local](../records/ffn-nonlinear-filter-1800-s461-filter_signed_square.json) |
+
+### HuggingFaceFW/fineweb-edu / 5400 updates / `089e67c87f18`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 18,067,829 identical scored targets; schedule `1b98493063b4`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.060270 | 28.06% | 8,654,208 / 4,718,592 | 446.9 | 468.0 | 427.3 | [local](../records/ffn-filter-continuation-5400-s461-dynamic_filter.json) |
+| 2 | dense | 4.166560 | 25.97% | 8,654,208 / 4,718,592 | 436.4 | 466.0 | 329.2 | [local](../records/ffn-filter-continuation-5400-s461-dense.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `0a71939a74d8`
+
+4 layers; width 384; 256 raw tokens.
+Seed 239; 6,034,737 identical scored targets; schedule `e11a74cf1f9b`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | relu_squared | 4.604727 | 21.52% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 139.7 | [local](../records/ffn-associative-1800-s239-relu_squared.json) |
+| 2 | shifted_relu_squared | 4.605155 | 21.41% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 113.1 | [local](../records/ffn-associative-1800-s239-shifted_relu_squared.json) |
+| 3 | dense | 4.648254 | 20.82% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 141.4 | [local](../records/ffn-associative-1800-s239-dense.json) |
+| 4 | associative_normalized | 4.672715 | 20.80% | 8,654,208 / 4,718,592 | 476.8 | 498.0 | 172.8 | [local](../records/ffn-associative-1800-s239-associative_normalized.json) |
+| 5 | associative_raw | 4.679615 | 20.58% | 8,654,208 / 4,718,592 | 444.6 | 472.0 | 148.3 | [local](../records/ffn-associative-1800-s239-associative_raw.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `0cd79764e28f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 293; 6,031,843 identical scored targets; schedule `86a09f952724`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | axis_parallel | 4.600753 | 21.63% | 8,654,208 / 4,718,592 | 460.0 | 492.0 | 165.8 | [local](../records/ffn-two-axis-confirm-1800-s293-axis_parallel.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `0f6fb5414f17`
+
+4 layers; width 384; 256 raw tokens.
+Seed 101; 6,027,819 identical scored targets; schedule `c8535b205682`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | relu_squared | 4.610242 | 21.49% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 121.7 | [local](../records/ffn-feature-1800-s101-relu_squared.json) |
+| 2 | group_refine | 4.616297 | 21.39% | 8,646,016 / 4,710,400 | 445.4 | 470.0 | 100.7 | [local](../records/ffn-feature-1800-s101-group_refine.json) |
+| 3 | group_product | 4.616769 | 21.39% | 8,646,016 / 4,710,400 | 467.1 | 490.0 | 115.3 | [local](../records/ffn-feature-1800-s101-group_product.json) |
+| 4 | dense | 4.628968 | 21.22% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 116.3 | [local](../records/ffn-feature-1800-s101-dense.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `14a7ea39034f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.590279 | 21.99% | 8,654,208 / 4,718,592 | 459.4 | 482.0 | 117.8 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | ridge_01 | 4.603095 | 21.80% | 8,654,208 / 4,718,592 | 459.4 | 482.0 | 137.9 | [local](../records/ffn-ridge-1800-s461-ridge_01.json) |
+
+### HuggingFaceFW/fineweb-edu / 10000 updates / `1631256244b4`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | router_mlp | 3.828213 | 31.15% | 8,654,208 / 4,718,592 | 454.4 | 472.0 | 1042.8 | [local](../records/ffn-branch-refinement-10000-s461-router_mlp.json) |
+| 2 | branch2 | 3.831924 | 31.05% | 8,654,208 / 4,718,592 | 447.0 | 468.0 | 964.4 | [local](../records/ffn-branch-refinement-10000-s461-branch2.json) |
+| 3 | ungated | 3.831977 | 31.06% | 8,654,208 / 4,718,592 | 425.6 | 448.0 | 865.3 | [local](../records/ffn-branch-refinement-10000-s461-ungated.json) |
+| 4 | matrix4x4 | 3.847200 | 30.80% | 8,654,208 / 4,718,592 | 447.0 | 472.0 | 1378.2 | [local](../records/ffn-branch-refinement-10000-s461-matrix4x4.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `16a449d0779f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | reflective | 4.598324 | 21.64% | 8,654,208 / 4,718,592 | 442.0 | 460.0 | 203.5 | [local](../records/ffn-reflective-1800-s461-reflective.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `1dcde507f8a5`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | convolution_raw | 4.591732 | 21.80% | 8,654,208 / 4,718,592 | 448.7 | 468.0 | 167.2 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 2 | convolution_squared | 4.606602 | 21.73% | 8,654,208 / 4,718,592 | 452.7 | 470.0 | 170.4 | [local](../records/ffn-convolution-1800-s461-convolution_squared.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `22d10226d422`
+
+4 layers; width 384; 256 raw tokens.
+Seed 311; 6,017,388 identical scored targets; schedule `ecf60b3e4ff8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.574550 | 22.09% | 8,654,208 / 4,718,592 | 447.4 | 468.0 | 152.0 | [local](../records/ffn-dynamic-filter-confirm-1800-s311-dynamic_filter.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `266a5ebc4d04`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | wide_conv | 4.588174 | 21.94% | 8,654,208 / 4,718,592 | 449.4 | 472.0 | 177.6 | [local](../records/ffn-wide-convolution-1800-s461-wide_conv.json) |
+
+### HuggingFaceFW/fineweb-edu / 10000 updates / `26d13f07961c`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | evidence_balance | 3.820250 | 31.20% | 8,654,208 / 4,718,592 | 448.1 | 468.0 | 1928.5 | [local](../records/ffn-evidence-10000-s461-evidence_balance.json) |
+| 2 | reaction_catalyst | 3.820372 | 31.22% | 8,654,208 / 4,718,592 | 470.1 | 490.0 | 1385.4 | [local](../records/ffn-evidence-10000-s461-reaction_catalyst.json) |
+| 3 | attention_energy | 3.820679 | 31.25% | 8,654,208 / 4,718,592 | 460.5 | 488.0 | 1020.9 | [local](../records/ffn-evidence-10000-s461-attention_energy.json) |
+| 4 | evidence_support | 3.820992 | 31.20% | 8,654,208 / 4,718,592 | 448.1 | 468.0 | 1123.4 | [local](../records/ffn-evidence-10000-s461-evidence_support.json) |
+| 5 | reaction_post | 3.823193 | 31.29% | 8,654,208 / 4,718,592 | 446.9 | 468.0 | 1016.8 | [local](../records/ffn-evidence-10000-s461-reaction_post.json) |
+| 6 | attention_alignment | 3.825272 | 31.25% | 8,654,208 / 4,718,592 | 463.1 | 488.0 | 1015.4 | [local](../records/ffn-evidence-10000-s461-attention_alignment.json) |
+| 7 | cross_evidence | 3.827581 | 31.25% | 8,654,208 / 4,718,592 | 454.3 | 472.0 | 1924.5 | [local](../records/ffn-evidence-10000-s461-cross_evidence.json) |
+| 8 | learned_evidence | 3.841977 | 30.94% | 8,654,208 / 4,718,592 | 450.9 | 468.0 | 1184.8 | [local](../records/ffn-evidence-10000-s461-learned_evidence.json) |
+
+### HuggingFaceFW/fineweb-edu / 10000 updates / `2898c8c1d063`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_hierarchical | 3.823591 | 31.19% | 8,654,208 / 4,718,592 | 444.6 | 482.0 | 1510.7 | [local](../records/ffn-branch-next-10000-s461-branch_hierarchical.json) |
+| 2 | branch_rich_router | 3.829860 | 31.16% | 8,654,208 / 4,718,592 | 450.4 | 474.0 | 1118.5 | [local](../records/ffn-branch-next-10000-s461-branch_rich_router.json) |
+| 3 | branch_threshold | 3.832266 | 31.05% | 8,654,208 / 4,718,592 | 451.1 | 472.0 | 1204.0 | [local](../records/ffn-branch-next-10000-s461-branch_threshold.json) |
+| 4 | branch_temperature | 3.844234 | 30.89% | 8,654,208 / 4,718,592 | 450.0 | 472.0 | 1016.0 | [local](../records/ffn-branch-next-10000-s461-branch_temperature.json) |
+| 5 | branch_bipolar | 3.897990 | 30.14% | 8,654,208 / 4,718,592 | 471.5 | 508.0 | 1034.5 | [local](../records/ffn-branch-next-10000-s461-branch_bipolar.json) |
+
+### HuggingFaceFW/fineweb-edu / 10000 updates / `325904e3a840`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 3.820069 | 31.29% | 8,654,208 / 4,718,592 | 454.5 | 480.0 | 848.8 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 2 | competitive_256 | 3.828861 | 30.98% | 8,654,208 / 4,718,592 | 454.8 | 482.0 | 916.7 | [local](../records/ffn-final-10000-s461-competitive_256.json) |
+| 3 | correlation_diagonal | 3.831073 | 31.07% | 8,654,208 / 4,718,592 | 451.5 | 488.0 | 845.8 | [local](../records/ffn-final-10000-s461-correlation_diagonal.json) |
+| 4 | bottleneck_squared | 3.831778 | 30.98% | 8,648,064 / 4,712,448 | 444.1 | 474.0 | 806.9 | [local](../records/ffn-final-10000-s461-bottleneck_squared.json) |
+| 5 | competitive_diagonal | 3.832150 | 31.00% | 8,654,208 / 4,718,592 | 454.8 | 482.0 | 911.8 | [local](../records/ffn-final-10000-s461-competitive_diagonal.json) |
+| 6 | bottleneck_silu | 3.832321 | 31.07% | 8,648,064 / 4,712,448 | 444.1 | 474.0 | 821.6 | [local](../records/ffn-final-10000-s461-bottleneck_silu.json) |
+| 7 | bottleneck_linear | 3.834979 | 31.04% | 8,648,064 / 4,712,448 | 443.6 | 474.0 | 748.8 | [local](../records/ffn-final-10000-s461-bottleneck_linear.json) |
+| 8 | convolution_raw | 3.837629 | 31.08% | 8,654,208 / 4,718,592 | 452.4 | 480.0 | 881.1 | [local](../records/ffn-final-10000-s461-convolution_raw.json) |
+| 9 | convolution_squared | 3.838434 | 31.04% | 8,654,208 / 4,718,592 | 456.4 | 482.0 | 892.5 | [local](../records/ffn-final-10000-s461-convolution_squared.json) |
+| 10 | branch_softmax | 3.838659 | 31.00% | 8,654,208 / 4,718,592 | 454.5 | 480.0 | 785.1 | [local](../records/ffn-final-10000-s461-branch_softmax.json) |
+| 11 | dynamic_filter | 3.842274 | 31.09% | 8,654,208 / 4,718,592 | 448.4 | 480.0 | 825.1 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 12 | hybrid_normalized | 3.844517 | 30.93% | 8,654,208 / 4,718,592 | 459.2 | 486.0 | 1318.3 | [local](../records/ffn-final-10000-s461-hybrid_normalized.json) |
+| 13 | divisive_16 | 3.847830 | 30.98% | 8,654,208 / 4,718,592 | 451.4 | 482.0 | 686.9 | [local](../records/ffn-final-10000-s461-divisive_16.json) |
+| 14 | cyclic_relu | 3.859481 | 30.74% | 8,654,208 / 4,718,592 | 447.1 | 480.0 | 559.0 | [local](../records/ffn-final-10000-s461-cyclic_relu.json) |
+| 15 | axis_parallel | 3.862047 | 30.86% | 8,654,208 / 4,718,592 | 460.8 | 492.0 | 926.2 | [local](../records/ffn-final-10000-s461-axis_parallel.json) |
+| 16 | contrast32 | 3.883158 | 30.50% | 8,654,208 / 4,718,592 | 420.8 | 460.0 | 780.1 | [local](../records/ffn-final-10000-s461-contrast32.json) |
+| 17 | contrast128 | 3.889906 | 30.35% | 8,654,208 / 4,718,592 | 421.2 | 460.0 | 745.7 | [local](../records/ffn-final-10000-s461-contrast128.json) |
+| 18 | distributed_fixed | 3.898126 | 30.09% | 8,654,208 / 4,718,592 | 476.0 | 500.0 | 671.5 | [local](../records/ffn-final-10000-s461-distributed_fixed.json) |
+| 19 | associative_normalized | 3.940869 | 29.48% | 8,654,208 / 4,718,592 | 472.8 | 498.0 | 927.4 | [local](../records/ffn-final-10000-s461-associative_normalized.json) |
+| 20 | expanded_curve | 3.947265 | 29.19% | 8,653,056 / 4,717,440 | 875.0 | 920.0 | 1628.0 | [local](../records/ffn-final-10000-s461-expanded_curve.json) |
+| 21 | cyclic_signed | 3.961265 | 28.84% | 8,654,208 / 4,718,592 | 448.4 | 480.0 | 672.4 | [local](../records/ffn-final-10000-s461-cyclic_signed.json) |
+| 22 | channel_curve_original | 3.975031 | 29.25% | 5,133,696 / 1,198,080 | 437.4 | 464.0 | 995.9 | [local](../records/ffn-final-10000-s461-channel_curve_original.json) |
+| 23 | dense | 3.980314 | 28.59% | 8,654,208 / 4,718,592 | 436.9 | 462.0 | 660.1 | [local](../records/ffn-final-10000-s461-dense.json) |
+| 24 | associative_raw | 4.017801 | 28.22% | 8,654,208 / 4,718,592 | 447.2 | 472.0 | 1059.8 | [local](../records/ffn-final-10000-s461-associative_raw.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `32675da46b70`
+
+4 layers; width 384; 256 raw tokens.
+Seed 23; 6,004,377 identical scored targets; schedule `68d7786248b5`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | shifted_relu_squared | 4.603224 | 21.54% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 143.8 | [local](../records/ffn-single-confirm-1800-s23-shifted_relu_squared.json) |
+| 2 | relu_squared | 4.609273 | 21.53% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 138.1 | [local](../records/ffn-single-confirm-1800-s23-relu_squared.json) |
+| 3 | dense | 4.630876 | 21.08% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 142.3 | [local](../records/ffn-single-confirm-1800-s23-dense.json) |
+| 4 | self_gate_fixed | 4.630951 | 21.07% | 8,654,208 / 4,718,592 | 447.8 | 468.0 | 139.0 | [local](../records/ffn-single-confirm-1800-s23-self_gate_fixed.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `35d4b2769d86`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | lattice | 4.634058 | 21.22% | 8,653,184 / 4,717,568 | 465.1 | 492.0 | 187.7 | [local](../records/ffn-lattice-1800-s461-lattice.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `36bf279d9fbb`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | fold4 | 4.855533 | 18.95% | 8,654,208 / 4,718,592 | 451.4 | 488.0 | 185.1 | [local](../records/ffn-fold-1800-s461-fold4.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `3a47f9d979d5`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | competitive_diagonal | 4.608517 | 21.55% | 8,654,208 / 4,718,592 | 455.3 | 470.0 | 188.7 | [local](../records/ffn-competitive-1800-s461-competitive_diagonal.json) |
+| 2 | competitive_256 | 4.609286 | 21.54% | 8,654,208 / 4,718,592 | 455.3 | 470.0 | 182.4 | [local](../records/ffn-competitive-1800-s461-competitive_256.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `3efab775b2b9`
+
+4 layers; width 384; 256 raw tokens.
+Seed 311; 6,017,388 identical scored targets; schedule `ecf60b3e4ff8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.594062 | 21.83% | 8,654,208 / 4,718,592 | 453.6 | 474.0 | 147.6 | [local](../records/ffn-hybrid-confirm-1800-s311-hybrid_normalized.json) |
+| 2 | relu_squared | 4.606856 | 21.44% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 120.8 | [local](../records/ffn-hybrid-confirm-1800-s311-relu_squared.json) |
+| 3 | shifted_relu_squared | 4.610709 | 21.43% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 133.5 | [local](../records/ffn-hybrid-confirm-1800-s311-shifted_relu_squared.json) |
+| 4 | dense | 4.628676 | 21.19% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 124.5 | [local](../records/ffn-hybrid-confirm-1800-s311-dense.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `40a72d28e862`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | contrast32 | 4.662402 | 21.14% | 8,654,208 / 4,718,592 | 422.4 | 448.0 | 128.4 | [local](../records/ffn-energy-contrast-1800-s461-contrast32.json) |
+| 2 | contrast128 | 4.667947 | 21.06% | 8,654,208 / 4,718,592 | 422.2 | 448.0 | 125.2 | [local](../records/ffn-energy-contrast-1800-s461-contrast128.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `442fa71bc080`
+
+4 layers; width 384; 256 raw tokens.
+Seed 293; 6,031,843 identical scored targets; schedule `86a09f952724`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.591870 | 21.93% | 8,654,208 / 4,718,592 | 459.4 | 482.0 | 173.7 | [local](../records/ffn-ridge-confirm-1800-s293-ridge_1.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `468213268c67`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | symmetric_pairs | 4.601977 | 21.61% | 8,654,208 / 4,718,592 | 430.1 | 454.0 | 172.7 | [local](../records/ffn-exterior-1800-s461-symmetric_pairs.json) |
+| 2 | exterior | 4.605759 | 21.58% | 8,654,208 / 4,718,592 | 429.6 | 454.0 | 176.2 | [local](../records/ffn-exterior-1800-s461-exterior.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `46850c14c66b`
+
+4 layers; width 384; 256 raw tokens.
+Seed 131; 6,036,217 identical scored targets; schedule `f70bb98e4209`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | relu_squared | 4.611759 | 21.38% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 56.0 | [local](../records/ffn-global-1800-s131-relu_squared.json) |
+| 2 | global_squared | 4.642904 | 21.08% | 8,654,208 / 4,718,592 | 426.5 | 450.0 | 51.9 | [local](../records/ffn-global-1800-s131-global_squared.json) |
+| 3 | dense | 4.649682 | 20.89% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 55.4 | [local](../records/ffn-global-1800-s131-dense.json) |
+| 4 | global_silu | 4.808214 | 18.78% | 8,654,208 / 4,718,592 | 431.4 | 450.0 | 57.0 | [local](../records/ffn-global-1800-s131-global_silu.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `473707211823`
+
+4 layers; width 384; 256 raw tokens.
+Seed 47; 6,036,303 identical scored targets; schedule `a9c9d0456ded`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | shifted_relu_squared | 4.594372 | 21.69% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 136.8 | [local](../records/ffn-single-confirm-1800-s47-shifted_relu_squared.json) |
+| 2 | relu_squared | 4.594802 | 21.72% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 156.3 | [local](../records/ffn-single-confirm-1800-s47-relu_squared.json) |
+| 3 | self_gate_fixed | 4.622619 | 21.26% | 8,654,208 / 4,718,592 | 447.8 | 468.0 | 147.0 | [local](../records/ffn-single-confirm-1800-s47-self_gate_fixed.json) |
+| 4 | dense | 4.650878 | 20.88% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 139.4 | [local](../records/ffn-single-confirm-1800-s47-dense.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `4cd587cccc81`
+
+6 layers; width 512; 256 raw tokens.
+Seed 71; 6,009,808 identical scored targets; schedule `9cecb6d433f5`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter_transfer | 4.450644 | 22.94% | 21,076,480 / 12,681,216 | 833.7 | 852.0 | 215.7 | [local](../records/ffn-dynamic-filter-transfer-1800-s71-dynamic_filter_transfer.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `4fe1b6824485`
+
+4 layers; width 384; 256 raw tokens.
+Seed 173; 6,003,971 identical scored targets; schedule `520733d86928`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | relu_squared | 4.601715 | 21.56% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 112.1 | [local](../records/ffn-cyclic-1800-s173-relu_squared.json) |
+| 2 | cyclic_relu | 4.614036 | 21.41% | 8,654,208 / 4,718,592 | 447.3 | 468.0 | 116.8 | [local](../records/ffn-cyclic-1800-s173-cyclic_relu.json) |
+| 3 | shifted_relu_squared | 4.621429 | 21.31% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 97.1 | [local](../records/ffn-cyclic-1800-s173-shifted_relu_squared.json) |
+| 4 | cyclic_signed | 4.630289 | 21.19% | 8,654,208 / 4,718,592 | 446.5 | 468.0 | 118.5 | [local](../records/ffn-cyclic-1800-s173-cyclic_signed.json) |
+| 5 | dense | 4.640691 | 20.96% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 106.7 | [local](../records/ffn-cyclic-1800-s173-dense.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `50e28a6bfaa7`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | post_filter | 4.614462 | 21.40% | 8,654,208 / 4,718,592 | 468.9 | 488.0 | 151.6 | [local](../records/ffn-post-filter-1800-s461-post_filter.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `54f450449db8`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | two_hop | 4.590315 | 21.87% | 8,654,208 / 4,718,592 | 456.9 | 474.0 | 126.1 | [local](../records/ffn-two-hop-filter-1800-s461-two_hop.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `57bbe07938e8`
+
+4 layers; width 384; 256 raw tokens.
+Seed 197; 6,025,451 identical scored targets; schedule `6042d2050765`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | bottleneck_squared | 4.604657 | 21.56% | 8,648,064 / 4,712,448 | 445.1 | 474.0 | 177.2 | [local](../records/ffn-bottleneck-1800-s197-bottleneck_squared.json) |
+| 2 | relu_squared | 4.605027 | 21.63% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 65.0 | [local](../records/ffn-bottleneck-1800-s197-relu_squared.json) |
+| 3 | bottleneck_silu | 4.608432 | 21.56% | 8,648,064 / 4,712,448 | 445.1 | 474.0 | 95.9 | [local](../records/ffn-bottleneck-1800-s197-bottleneck_silu.json) |
+| 4 | bottleneck_linear | 4.608804 | 21.54% | 8,648,064 / 4,712,448 | 444.6 | 474.0 | 136.4 | [local](../records/ffn-bottleneck-1800-s197-bottleneck_linear.json) |
+| 5 | shifted_relu_squared | 4.609789 | 21.51% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 146.7 | [local](../records/ffn-bottleneck-1800-s197-shifted_relu_squared.json) |
+| 6 | dense | 4.655772 | 20.73% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 61.0 | [local](../records/ffn-bottleneck-1800-s197-dense.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `646b457a5f94`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | gatebank_m4 | 4.626929 | 21.54% | 8,651,136 / 4,715,520 | 425.3 | 452.0 | 128.9 | [local](../records/ffn-gatebank-1800-s461-gatebank_m4.json) |
+| 2 | gatebank_m2 | 4.638090 | 21.40% | 8,654,208 / 4,718,592 | 429.3 | 450.0 | 125.8 | [local](../records/ffn-gatebank-1800-s461-gatebank_m2.json) |
+| 3 | gatebank_silu_m4 | 4.644421 | 20.94% | 8,649,600 / 4,713,984 | 427.6 | 452.0 | 123.8 | [local](../records/ffn-gatebank-1800-s461-gatebank_silu_m4.json) |
+| 4 | gatebank_m1 | 4.654855 | 21.25% | 8,654,208 / 4,718,592 | 432.4 | 454.0 | 111.8 | [local](../records/ffn-gatebank-1800-s461-gatebank_m1.json) |
+
+### HuggingFaceFW/fineweb-edu / 10000 updates / `689cf5f6df86`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dual_plain_quarter | 3.821241 | 31.12% | 8,654,208 / 4,718,592 | 441.8 | 468.0 | 985.7 | [local](../records/ffn-dual-path-10000-s461-dual_plain_quarter.json) |
+| 2 | dual_router_small | 3.833562 | 31.04% | 8,654,208 / 4,718,592 | 452.7 | 470.0 | 1142.3 | [local](../records/ffn-dual-path-10000-s461-dual_router_small.json) |
+| 3 | dual_filter_quarter | 3.833604 | 31.08% | 8,654,208 / 4,718,592 | 448.9 | 478.0 | 1090.5 | [local](../records/ffn-dual-path-10000-s461-dual_filter_quarter.json) |
+| 4 | dual_filter_half | 3.840192 | 30.97% | 8,654,208 / 4,718,592 | 450.8 | 474.0 | 1090.3 | [local](../records/ffn-dual-path-10000-s461-dual_filter_half.json) |
+| 5 | dual_filter_small | 3.843426 | 30.87% | 8,654,208 / 4,718,592 | 451.5 | 468.0 | 1088.8 | [local](../records/ffn-dual-path-10000-s461-dual_filter_small.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `6e867a7fa7bd`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | matrix_chain | 4.632481 | 21.60% | 8,654,208 / 4,718,592 | 424.4 | 452.0 | 177.7 | [local](../records/ffn-matrix-chain-1800-s461-matrix_chain.json) |
+| 2 | matrix_parallel | 4.645310 | 21.18% | 8,654,208 / 4,718,592 | 423.3 | 452.0 | 177.2 | [local](../records/ffn-matrix-chain-1800-s461-matrix_parallel.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `77a6452f8504`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | pair_normalized | 4.594075 | 21.75% | 8,654,208 / 4,718,592 | 433.0 | 482.0 | 185.6 | [local](../records/ffn-pair-1800-s461-pair_normalized.json) |
+| 2 | pair_raw | 4.594245 | 21.76% | 8,654,208 / 4,718,592 | 444.4 | 468.0 | 161.7 | [local](../records/ffn-pair-1800-s461-pair_raw.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `7ad9fed670d6`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | axis_parallel | 4.572839 | 22.19% | 8,654,208 / 4,718,592 | 460.0 | 492.0 | 166.0 | [local](../records/ffn-two-axis-1800-s461-axis_parallel.json) |
+
+### HuggingFaceFW/fineweb-edu / 600 updates / `7d54fb13c977`
+
+4 layers; width 384; 256 raw tokens.
+Seed 17; 2,005,324 identical scored targets; schedule `2e14b0261112`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | self_gate_fixed | 5.281015 | 15.58% | 8,654,208 / 4,718,592 | 447.8 | 468.0 | 38.4 | [local](../records/ffn-single-600-v1-self_gate_fixed.json) |
+| 2 | self_gate_learned | 5.283186 | 15.55% | 8,654,176 / 4,718,560 | 469.9 | 508.0 | 50.1 | [local](../records/ffn-single-600-v1-self_gate_learned.json) |
+| 3 | dense | 5.298029 | 15.52% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 37.6 | [local](../records/ffn-single-600-v1-dense.json) |
+| 4 | relu_squared | 5.302391 | 15.87% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 47.2 | [local](../records/ffn-single-600-v1-relu_squared.json) |
+| 5 | shifted_relu_squared | 5.303146 | 15.88% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 48.5 | [local](../records/ffn-single-600-v1-shifted_relu_squared.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `a69710c97156`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | divisive_global | 4.599601 | 21.74% | 8,654,208 / 4,718,592 | 445.4 | 470.0 | 150.4 | [local](../records/ffn-divisive-1800-s461-divisive_global.json) |
+| 2 | divisive_16 | 4.633002 | 21.37% | 8,654,208 / 4,718,592 | 452.3 | 470.0 | 154.0 | [local](../records/ffn-divisive-1800-s461-divisive_16.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `a9605ff6ed7f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | distributed_fixed | 4.658676 | 20.79% | 8,654,208 / 4,718,592 | 471.4 | 492.0 | 136.1 | [local](../records/ffn-distributed-curve-1800-s461-distributed_fixed.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `ad4dbc63dd18`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | phase_rotation | 4.584918 | 22.05% | 8,654,208 / 4,718,592 | 460.9 | 474.0 | 169.6 | [local](../records/ffn-phase-1800-s461-phase_rotation.json) |
+| 2 | phase_diagonal | 4.586413 | 21.94% | 8,654,208 / 4,718,592 | 454.1 | 474.0 | 155.2 | [local](../records/ffn-phase-1800-s461-phase_diagonal.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `add6c6661f55`
+
+4 layers; width 384; 256 raw tokens.
+Seed 311; 6,017,388 identical scored targets; schedule `ecf60b3e4ff8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | axis_parallel | 4.589981 | 21.82% | 8,654,208 / 4,718,592 | 464.4 | 492.0 | 163.0 | [local](../records/ffn-two-axis-confirm-1800-s311-axis_parallel.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `b0c31c89b710`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.595735 | 21.88% | 8,654,208 / 4,718,592 | 453.6 | 474.0 | 192.9 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 2 | shifted_relu_squared | 4.603346 | 21.60% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 102.5 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 3 | relu_squared | 4.607443 | 21.61% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 83.5 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 4 | dense | 4.616679 | 21.54% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 87.6 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 5 | product_dictionary | 4.692148 | 20.16% | 8,654,208 / 4,718,592 | 421.8 | 452.0 | 157.0 | [local](../records/ffn-dictionary-1800-s461-product_dictionary.json) |
+| 6 | flat_dictionary | 4.743684 | 19.33% | 8,654,208 / 4,718,592 | 448.4 | 468.0 | 149.9 | [local](../records/ffn-dictionary-1800-s461-flat_dictionary.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `b4a47704b9dd`
+
+4 layers; width 384; 256 raw tokens.
+Seed 311; 6,017,388 identical scored targets; schedule `ecf60b3e4ff8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.594346 | 21.96% | 8,654,208 / 4,718,592 | 459.4 | 482.0 | 216.5 | [local](../records/ffn-ridge-confirm-1800-s311-ridge_1.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `b7767ee6f51b`
+
+4 layers; width 384; 256 raw tokens.
+Seed 293; 6,031,843 identical scored targets; schedule `86a09f952724`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.596793 | 21.90% | 8,654,208 / 4,718,592 | 453.6 | 474.0 | 173.5 | [local](../records/ffn-hybrid-confirm-1800-s293-hybrid_normalized.json) |
+| 2 | shifted_relu_squared | 4.611920 | 21.40% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 132.4 | [local](../records/ffn-hybrid-confirm-1800-s293-shifted_relu_squared.json) |
+| 3 | relu_squared | 4.617303 | 21.28% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 111.8 | [local](../records/ffn-hybrid-confirm-1800-s293-relu_squared.json) |
+| 4 | dense | 4.645015 | 21.00% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 110.1 | [local](../records/ffn-hybrid-confirm-1800-s293-dense.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `b7bdbd67e33f`
+
+4 layers; width 384; 256 raw tokens.
+Seed 277; 6,030,702 identical scored targets; schedule `45bdbb23ef3f`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.587031 | 21.94% | 8,654,208 / 4,718,592 | 453.6 | 474.0 | 161.5 | [local](../records/ffn-hybrid-1800-s277-hybrid_normalized.json) |
+| 2 | shifted_relu_squared | 4.592627 | 21.76% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 124.6 | [local](../records/ffn-hybrid-1800-s277-shifted_relu_squared.json) |
+| 3 | relu_squared | 4.597271 | 21.58% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 122.2 | [local](../records/ffn-hybrid-1800-s277-relu_squared.json) |
+| 4 | hybrid_local | 4.597547 | 21.64% | 8,654,208 / 4,718,592 | 448.7 | 472.0 | 148.6 | [local](../records/ffn-hybrid-1800-s277-hybrid_local.json) |
+| 5 | dense | 4.646887 | 20.99% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 130.9 | [local](../records/ffn-hybrid-1800-s277-dense.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `bf45cc05490d`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 4.594728 | 21.61% | 8,654,208 / 4,718,592 | 448.0 | 468.0 | 170.9 | [local](../records/ffn-branch-1800-s461-branch_sigmoid.json) |
+| 2 | branch_softmax | 4.607250 | 21.54% | 8,654,208 / 4,718,592 | 445.8 | 468.0 | 168.5 | [local](../records/ffn-branch-1800-s461-branch_softmax.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `dae0d7e49b16`
+
+4 layers; width 384; 256 raw tokens.
+Seed 293; 6,031,843 identical scored targets; schedule `86a09f952724`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.596409 | 21.75% | 8,654,208 / 4,718,592 | 446.9 | 468.0 | 147.3 | [local](../records/ffn-dynamic-filter-confirm-1800-s293-dynamic_filter.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `dd25e30aa846`
+
+4 layers; width 384; 256 raw tokens.
+Seed 293; 6,031,843 identical scored targets; schedule `86a09f952724`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | pair_normalized | 4.601568 | 21.62% | 8,654,208 / 4,718,592 | 430.8 | 462.0 | 185.4 | [local](../records/ffn-pair-confirm-1800-s293-pair_normalized.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `e06a4b34c685`
+
+4 layers; width 384; 256 raw tokens.
+Seed 359; 6,036,078 identical scored targets; schedule `8b1b92893968`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.601724 | 21.69% | 8,654,208 / 4,718,592 | 453.6 | 474.0 | 171.0 | [local](../records/ffn-linear-feature-1800-s359-hybrid_normalized.json) |
+| 2 | shifted_relu_squared | 4.617942 | 21.24% | 8,654,200 / 4,718,584 | 421.4 | 448.0 | 90.8 | [local](../records/ffn-linear-feature-1800-s359-shifted_relu_squared.json) |
+| 3 | relu_squared | 4.624365 | 21.25% | 8,654,208 / 4,718,592 | 418.6 | 448.0 | 119.7 | [local](../records/ffn-linear-feature-1800-s359-relu_squared.json) |
+| 4 | feature_linear_squared | 4.635795 | 21.16% | 8,654,208 / 4,718,592 | 460.6 | 478.0 | 180.2 | [local](../records/ffn-linear-feature-1800-s359-feature_linear_squared.json) |
+| 5 | dense | 4.642909 | 20.99% | 8,654,208 / 4,718,592 | 435.6 | 454.0 | 123.8 | [local](../records/ffn-linear-feature-1800-s359-dense.json) |
+| 6 | feature_linear_elu | 4.676605 | 20.32% | 8,654,208 / 4,718,592 | 460.6 | 478.0 | 191.8 | [local](../records/ffn-linear-feature-1800-s359-feature_linear_elu.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `e3d09b38e3ef`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | static_wide | 4.618059 | 21.42% | 8,655,232 / 4,719,616 | 447.6 | 468.0 | 146.5 | [local](../records/ffn-static-filter-1800-s461-static_wide.json) |
+| 2 | static_narrow | 4.626710 | 21.30% | 8,262,016 / 4,326,400 | 438.9 | 468.0 | 151.2 | [local](../records/ffn-static-filter-1800-s461-static_narrow.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `e44975432e18`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | maxout_2 | 4.713439 | 20.22% | 8,654,208 / 4,718,592 | 453.6 | 478.0 | 141.8 | [local](../records/ffn-competitive-pool-1800-s461-maxout_2.json) |
+| 2 | maxout_3 | 4.730428 | 20.08% | 8,654,208 / 4,718,592 | 433.7 | 478.0 | 136.3 | [local](../records/ffn-competitive-pool-1800-s461-maxout_3.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `e6da8cfc27eb`
+
+4 layers; width 384; 256 raw tokens.
+Seed 311; 6,017,388 identical scored targets; schedule `ecf60b3e4ff8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | pair_normalized | 4.603144 | 21.58% | 8,654,208 / 4,718,592 | 435.6 | 462.0 | 183.1 | [local](../records/ffn-pair-confirm-1800-s311-pair_normalized.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `e99cbd32b0f3`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | self_correlation | 4.605401 | 21.59% | 8,654,208 / 4,718,592 | 454.1 | 476.0 | 167.2 | [local](../records/ffn-correlation-1800-s461-self_correlation.json) |
+| 2 | correlation_diagonal | 4.606093 | 21.62% | 8,654,208 / 4,718,592 | 453.4 | 476.0 | 167.5 | [local](../records/ffn-correlation-1800-s461-correlation_diagonal.json) |
+
+### HuggingFaceFW/fineweb-edu / 10000 updates / `ecbf85ac7385`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 33,440,772 identical scored targets; schedule `82811a483a8c`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | gate16 | 3.826844 | 31.14% | 8,654,208 / 4,718,592 | 446.9 | 472.0 | 1365.8 | [local](../records/ffn-evolution-10000-s461-gate16.json) |
+| 2 | gate_sine | 3.827993 | 31.08% | 8,654,208 / 4,718,592 | 448.0 | 468.0 | 1034.4 | [local](../records/ffn-evolution-10000-s461-gate_sine.json) |
+| 3 | partial_rational | 3.829353 | 31.07% | 8,654,208 / 4,718,592 | 457.5 | 484.0 | 1466.2 | [local](../records/ffn-evolution-10000-s461-partial_rational.json) |
+| 4 | partial_positive_sine | 3.830455 | 31.16% | 8,654,208 / 4,718,592 | 457.5 | 484.0 | 1329.8 | [local](../records/ffn-evolution-10000-s461-partial_positive_sine.json) |
+| 5 | partial_sine | 3.833127 | 31.07% | 8,654,208 / 4,718,592 | 457.5 | 482.0 | 1435.7 | [local](../records/ffn-evolution-10000-s461-partial_sine.json) |
+| 6 | gate8 | 3.837566 | 30.96% | 8,654,208 / 4,718,592 | 446.6 | 472.0 | 1104.4 | [local](../records/ffn-evolution-10000-s461-gate8.json) |
+| 7 | filter_updategate | 3.855924 | 30.80% | 8,654,208 / 4,718,592 | 472.3 | 508.0 | 1141.6 | [local](../records/ffn-evolution-10000-s461-filter_updategate.json) |
+| 8 | filter_postgate | 3.865842 | 30.54% | 8,654,208 / 4,718,592 | 469.7 | 508.0 | 1132.1 | [local](../records/ffn-evolution-10000-s461-filter_postgate.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `f08c102ce325`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 22.02% | 8,654,208 / 4,718,592 | 446.9 | 468.0 | 155.2 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `f2b9a6856be2`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | filter_bank4 | 4.586387 | 21.96% | 8,654,208 / 4,718,592 | 449.6 | 472.0 | 153.2 | [local](../records/ffn-filter-bank-1800-s461-filter_bank4.json) |
+| 2 | filter_bank16 | 4.587389 | 21.91% | 8,654,208 / 4,718,592 | 449.6 | 472.0 | 157.8 | [local](../records/ffn-filter-bank-1800-s461-filter_bank16.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `f4c86eb83f20`
+
+6 layers; width 512; 256 raw tokens.
+Seed 71; 6,009,808 identical scored targets; schedule `9cecb6d433f5`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | shifted_relu_squared | 4.476021 | 22.56% | 21,076,564 / 12,681,300 | 786.8 | 862.0 | 176.6 | [local](../records/ffn-single-scale-1800-s71-shifted_relu_squared.json) |
+| 2 | dense | 4.481850 | 22.52% | 21,076,480 / 12,681,216 | 824.1 | 848.0 | 178.3 | [local](../records/ffn-single-scale-1800-s71-dense.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `f4d461ea7d29`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | jet_factored | 4.613338 | 21.51% | 8,655,744 / 4,720,128 | 460.1 | 480.0 | 213.8 | [local](../records/ffn-jet-factored-1800-s461-jet_factored.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `f9e40f874579`
+
+6 layers; width 512; 256 raw tokens.
+Seed 71; 6,009,808 identical scored targets; schedule `9cecb6d433f5`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_transfer | 4.442687 | 23.29% | 21,076,480 / 12,681,216 | 850.4 | 878.0 | 278.9 | [local](../records/ffn-hybrid-transfer-1800-s71-hybrid_transfer.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `fa6c0482e1a4`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | tensor_banks | 4.631435 | 21.15% | 8,654,208 / 4,718,592 | 442.5 | 474.0 | 106.4 | [local](../records/ffn-tensor-response-1800-s461-tensor_banks.json) |
+| 2 | tensor_full | 4.664352 | 20.83% | 8,654,208 / 4,718,592 | 421.6 | 474.0 | 140.4 | [local](../records/ffn-tensor-response-1800-s461-tensor_full.json) |
+
+### HuggingFaceFW/fineweb-edu / 1800 updates / `feb84f4598a1`
+
+4 layers; width 384; 256 raw tokens.
+Seed 461; 6,028,850 identical scored targets; schedule `9bb297e2f1d8`.
+
+| Rank | FFN | Full validation NLL | Token accuracy | Total / FFN params | Peak allocated MiB | Peak reserved MiB | Update seconds | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 1 | jet_split | 4.632504 | 21.29% | 8,654,208 / 4,718,592 | 430.3 | 450.0 | 160.3 | [local](../records/ffn-jet-1800-s461-jet_split.json) |
+
+
+## Step 1: audited reuse of saved controls
+
+These tables reference existing runs; reused rows are not additional training or independent replications.
+
+### Two-hop filter / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-two-hop-filter-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | wide_conv | 4.588174 | 8,654,208 / 4,718,592 | 449.37 | 472.00 | [local](../records/ffn-wide-convolution-1800-s461-wide_conv.json) |
+| 3 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 4 | two_hop | 4.590315 | 8,654,208 / 4,718,592 | 456.88 | 474.00 | [local](../records/ffn-two-hop-filter-1800-s461-two_hop.json) |
+| 5 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 6 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 7 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 8 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 9 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Two-hop filter / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-two-hop-filter-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | wide_conv | 3.343073 | 8,654,208 / 4,718,592 | 449.37 | 472.00 | [local](../records/ffn-wide-convolution-1800-s461-wide_conv.json) |
+| 2 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 3 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 4 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 5 | two_hop | 3.356606 | 8,654,208 / 4,718,592 | 456.88 | 474.00 | [local](../records/ffn-two-hop-filter-1800-s461-two_hop.json) |
+| 6 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 7 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 8 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 9 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Tensor responses / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-tensor-response-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | wide_conv | 4.588174 | 8,654,208 / 4,718,592 | 449.37 | 472.00 | [local](../records/ffn-wide-convolution-1800-s461-wide_conv.json) |
+| 3 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 4 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 5 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 8 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 9 | tensor_banks | 4.631435 | 8,654,208 / 4,718,592 | 442.53 | 474.00 | [local](../records/ffn-tensor-response-1800-s461-tensor_banks.json) |
+| 10 | tensor_full | 4.664352 | 8,654,208 / 4,718,592 | 421.59 | 474.00 | [local](../records/ffn-tensor-response-1800-s461-tensor_full.json) |
+
+### Tensor responses / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-tensor-response-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | wide_conv | 3.343073 | 8,654,208 / 4,718,592 | 449.37 | 472.00 | [local](../records/ffn-wide-convolution-1800-s461-wide_conv.json) |
+| 2 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 3 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 4 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 5 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 8 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 9 | tensor_banks | 3.389340 | 8,654,208 / 4,718,592 | 442.53 | 474.00 | [local](../records/ffn-tensor-response-1800-s461-tensor_banks.json) |
+| 10 | tensor_full | 3.413476 | 8,654,208 / 4,718,592 | 421.59 | 474.00 | [local](../records/ffn-tensor-response-1800-s461-tensor_full.json) |
+
+### Wide generated convolution / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-wide-convolution-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | wide_conv | 4.588174 | 8,654,208 / 4,718,592 | 449.37 | 472.00 | [local](../records/ffn-wide-convolution-1800-s461-wide_conv.json) |
+| 3 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 4 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 5 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 8 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Wide generated convolution / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-wide-convolution-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | wide_conv | 3.343073 | 8,654,208 / 4,718,592 | 449.37 | 472.00 | [local](../records/ffn-wide-convolution-1800-s461-wide_conv.json) |
+| 2 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 3 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 4 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 5 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 8 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Energy contrast / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-energy-contrast-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 6 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 8 | contrast32 | 4.662402 | 8,654,208 / 4,718,592 | 422.40 | 448.00 | [local](../records/ffn-energy-contrast-1800-s461-contrast32.json) |
+| 9 | contrast128 | 4.667947 | 8,654,208 / 4,718,592 | 422.19 | 448.00 | [local](../records/ffn-energy-contrast-1800-s461-contrast128.json) |
+
+### Energy contrast / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-energy-contrast-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 6 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 8 | contrast32 | 3.441675 | 8,654,208 / 4,718,592 | 422.40 | 448.00 | [local](../records/ffn-energy-contrast-1800-s461-contrast32.json) |
+| 9 | contrast128 | 3.447880 | 8,654,208 / 4,718,592 | 422.19 | 448.00 | [local](../records/ffn-energy-contrast-1800-s461-contrast128.json) |
+
+### Parallel two-axis generated filter / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-two-axis-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | axis_parallel | 4.572839 | 8,654,208 / 4,718,592 | 460.00 | 492.00 | [local](../records/ffn-two-axis-1800-s461-axis_parallel.json) |
+| 2 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 3 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 4 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 5 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 8 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Parallel two-axis generated filter / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-two-axis-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | axis_parallel | 3.338122 | 8,654,208 / 4,718,592 | 460.00 | 492.00 | [local](../records/ffn-two-axis-1800-s461-axis_parallel.json) |
+| 2 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 3 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 4 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 5 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 8 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Nonlinear generated coefficients / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-nonlinear-filter-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | filter_tanh | 4.588307 | 8,654,208 / 4,718,592 | 452.41 | 474.00 | [local](../records/ffn-nonlinear-filter-1800-s461-filter_tanh.json) |
+| 3 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 4 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 5 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | filter_signed_square | 4.602801 | 8,654,208 / 4,718,592 | 456.88 | 474.00 | [local](../records/ffn-nonlinear-filter-1800-s461-filter_signed_square.json) |
+| 7 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 8 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 9 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Nonlinear generated coefficients / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-nonlinear-filter-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | filter_tanh | 3.354039 | 8,654,208 / 4,718,592 | 452.41 | 474.00 | [local](../records/ffn-nonlinear-filter-1800-s461-filter_tanh.json) |
+| 4 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 5 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | filter_signed_square | 3.370427 | 8,654,208 / 4,718,592 | 456.88 | 474.00 | [local](../records/ffn-nonlinear-filter-1800-s461-filter_signed_square.json) |
+| 8 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 9 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Post-activation generated filter / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-post-filter-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 6 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | post_filter | 4.614462 | 8,654,208 / 4,718,592 | 468.88 | 488.00 | [local](../records/ffn-post-filter-1800-s461-post_filter.json) |
+| 8 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Post-activation generated filter / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-post-filter-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 6 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | post_filter | 3.374329 | 8,654,208 / 4,718,592 | 468.88 | 488.00 | [local](../records/ffn-post-filter-1800-s461-post_filter.json) |
+| 8 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Multiple generated filters / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-filter-bank-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | filter_bank4 | 4.586387 | 8,654,208 / 4,718,592 | 449.63 | 472.00 | [local](../records/ffn-filter-bank-1800-s461-filter_bank4.json) |
+| 3 | filter_bank16 | 4.587389 | 8,654,208 / 4,718,592 | 449.60 | 472.00 | [local](../records/ffn-filter-bank-1800-s461-filter_bank16.json) |
+| 4 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 5 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 6 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 7 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 8 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 9 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Multiple generated filters / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-filter-bank-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | filter_bank16 | 3.347661 | 8,654,208 / 4,718,592 | 449.60 | 472.00 | [local](../records/ffn-filter-bank-1800-s461-filter_bank16.json) |
+| 3 | filter_bank4 | 3.348846 | 8,654,208 / 4,718,592 | 449.63 | 472.00 | [local](../records/ffn-filter-bank-1800-s461-filter_bank4.json) |
+| 4 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 5 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 6 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 7 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 8 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 9 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Competitive pooling / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-competitive-pool-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 6 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 8 | maxout_2 | 4.713439 | 8,654,208 / 4,718,592 | 453.63 | 478.00 | [local](../records/ffn-competitive-pool-1800-s461-maxout_2.json) |
+| 9 | maxout_3 | 4.730428 | 8,654,208 / 4,718,592 | 433.69 | 478.00 | [local](../records/ffn-competitive-pool-1800-s461-maxout_3.json) |
+
+### Competitive pooling / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-competitive-pool-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 6 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 8 | maxout_2 | 3.503124 | 8,654,208 / 4,718,592 | 453.63 | 478.00 | [local](../records/ffn-competitive-pool-1800-s461-maxout_2.json) |
+| 9 | maxout_3 | 3.514838 | 8,654,208 / 4,718,592 | 433.69 | 478.00 | [local](../records/ffn-competitive-pool-1800-s461-maxout_3.json) |
+
+### Full-width self-correlation / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-correlation-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 6 | self_correlation | 4.605401 | 8,654,208 / 4,718,592 | 454.08 | 476.00 | [local](../records/ffn-correlation-1800-s461-self_correlation.json) |
+| 7 | correlation_diagonal | 4.606093 | 8,654,208 / 4,718,592 | 453.39 | 476.00 | [local](../records/ffn-correlation-1800-s461-correlation_diagonal.json) |
+| 8 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 9 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Full-width self-correlation / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-correlation-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | self_correlation | 3.364279 | 8,654,208 / 4,718,592 | 454.08 | 476.00 | [local](../records/ffn-correlation-1800-s461-self_correlation.json) |
+| 6 | correlation_diagonal | 3.367135 | 8,654,208 / 4,718,592 | 453.39 | 476.00 | [local](../records/ffn-correlation-1800-s461-correlation_diagonal.json) |
+| 7 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 8 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 9 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Dense nonlinear branch routing / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-branch-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | branch_sigmoid | 4.594728 | 8,654,208 / 4,718,592 | 447.97 | 468.00 | [local](../records/ffn-branch-1800-s461-branch_sigmoid.json) |
+| 5 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | branch_softmax | 4.607250 | 8,654,208 / 4,718,592 | 445.84 | 468.00 | [local](../records/ffn-branch-1800-s461-branch_softmax.json) |
+| 8 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 9 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Dense nonlinear branch routing / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-branch-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | branch_sigmoid | 3.359723 | 8,654,208 / 4,718,592 | 447.97 | 468.00 | [local](../records/ffn-branch-1800-s461-branch_sigmoid.json) |
+| 5 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | branch_softmax | 3.366048 | 8,654,208 / 4,718,592 | 445.84 | 468.00 | [local](../records/ffn-branch-1800-s461-branch_softmax.json) |
+| 7 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 8 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 9 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Phase rotations / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-phase-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | phase_rotation | 4.584918 | 8,654,208 / 4,718,592 | 460.88 | 474.00 | [local](../records/ffn-phase-1800-s461-phase_rotation.json) |
+| 3 | phase_diagonal | 4.586413 | 8,654,208 / 4,718,592 | 454.06 | 474.00 | [local](../records/ffn-phase-1800-s461-phase_diagonal.json) |
+| 4 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 5 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 6 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 7 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 8 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 9 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Phase rotations / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-phase-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | phase_rotation | 3.345356 | 8,654,208 / 4,718,592 | 460.88 | 474.00 | [local](../records/ffn-phase-1800-s461-phase_rotation.json) |
+| 3 | phase_diagonal | 3.348351 | 8,654,208 / 4,718,592 | 454.06 | 474.00 | [local](../records/ffn-phase-1800-s461-phase_diagonal.json) |
+| 4 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 5 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 6 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 7 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 8 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 9 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Divisive feature competition / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-divisive-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | divisive_global | 4.599601 | 8,654,208 / 4,718,592 | 445.39 | 470.00 | [local](../records/ffn-divisive-1800-s461-divisive_global.json) |
+| 6 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 8 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 9 | divisive_16 | 4.633002 | 8,654,208 / 4,718,592 | 452.25 | 470.00 | [local](../records/ffn-divisive-1800-s461-divisive_16.json) |
+
+### Divisive feature competition / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-divisive-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | divisive_global | 3.359828 | 8,654,208 / 4,718,592 | 445.39 | 470.00 | [local](../records/ffn-divisive-1800-s461-divisive_global.json) |
+| 5 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 8 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 9 | divisive_16 | 3.396719 | 8,654,208 / 4,718,592 | 452.25 | 470.00 | [local](../records/ffn-divisive-1800-s461-divisive_16.json) |
+
+### Exterior and symmetric pairs / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-exterior-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | symmetric_pairs | 4.601977 | 8,654,208 / 4,718,592 | 430.12 | 454.00 | [local](../records/ffn-exterior-1800-s461-symmetric_pairs.json) |
+| 6 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | exterior | 4.605759 | 8,654,208 / 4,718,592 | 429.62 | 454.00 | [local](../records/ffn-exterior-1800-s461-exterior.json) |
+| 8 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 9 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Exterior and symmetric pairs / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-exterior-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | symmetric_pairs | 3.368154 | 8,654,208 / 4,718,592 | 430.12 | 454.00 | [local](../records/ffn-exterior-1800-s461-symmetric_pairs.json) |
+| 6 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | exterior | 3.369273 | 8,654,208 / 4,718,592 | 429.62 | 454.00 | [local](../records/ffn-exterior-1800-s461-exterior.json) |
+| 8 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 9 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Jet split / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-jet-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 2 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 3 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 4 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 5 | jet_split | 4.632504 | 8,654,208 / 4,718,592 | 430.28 | 450.00 | [local](../records/ffn-jet-1800-s461-jet_split.json) |
+
+### Jet split / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-jet-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 2 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 3 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 4 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 5 | jet_split | 3.397434 | 8,654,208 / 4,718,592 | 430.28 | 450.00 | [local](../records/ffn-jet-1800-s461-jet_split.json) |
+
+### Static filters (narrow: smaller matched-width control) / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-static-filter-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 6 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 8 | static_wide | 4.618059 | 8,655,232 / 4,719,616 | 447.58 | 468.00 | [local](../records/ffn-static-filter-1800-s461-static_wide.json) |
+| 9 | static_narrow | 4.626710 | 8,262,016 / 4,326,400 | 438.93 | 468.00 | [local](../records/ffn-static-filter-1800-s461-static_narrow.json) |
+
+### Static filters (narrow: smaller matched-width control) / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-static-filter-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 6 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 8 | static_wide | 3.376262 | 8,655,232 / 4,719,616 | 447.58 | 468.00 | [local](../records/ffn-static-filter-1800-s461-static_wide.json) |
+| 9 | static_narrow | 3.391998 | 8,262,016 / 4,326,400 | 438.93 | 468.00 | [local](../records/ffn-static-filter-1800-s461-static_narrow.json) |
+
+### Wide dynamic filter / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-dynamic-filter-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.581171 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 6 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Wide dynamic filter / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-dynamic-filter-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.345057 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-1800-s461-dynamic_filter.json) |
+| 2 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 3 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 6 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Four-stage folding / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-fold-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 4 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 5 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 6 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 7 | fold4 | 4.855533 | 8,654,208 / 4,718,592 | 451.38 | 488.00 | [local](../records/ffn-fold-1800-s461-fold4.json) |
+
+### Four-stage folding / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-fold-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 4 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 5 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 6 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 7 | fold4 | 3.658606 | 8,654,208 / 4,718,592 | 451.38 | 488.00 | [local](../records/ffn-fold-1800-s461-fold4.json) |
+
+### Conditional matrix chain / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-matrix-chain-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 4 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 5 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 6 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 7 | matrix_chain | 4.632481 | 8,654,208 / 4,718,592 | 424.38 | 452.00 | [local](../records/ffn-matrix-chain-1800-s461-matrix_chain.json) |
+| 8 | matrix_parallel | 4.645310 | 8,654,208 / 4,718,592 | 423.25 | 452.00 | [local](../records/ffn-matrix-chain-1800-s461-matrix_parallel.json) |
+
+### Conditional matrix chain / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-matrix-chain-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 4 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 5 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 6 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 7 | matrix_chain | 3.407659 | 8,654,208 / 4,718,592 | 424.38 | 452.00 | [local](../records/ffn-matrix-chain-1800-s461-matrix_chain.json) |
+| 8 | matrix_parallel | 3.417661 | 8,654,208 / 4,718,592 | 423.25 | 452.00 | [local](../records/ffn-matrix-chain-1800-s461-matrix_parallel.json) |
+
+### Explicit pair scores / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-pair-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | pair_normalized | 4.594075 | 8,654,208 / 4,718,592 | 433.00 | 482.00 | [local](../records/ffn-pair-1800-s461-pair_normalized.json) |
+| 4 | pair_raw | 4.594245 | 8,654,208 / 4,718,592 | 444.38 | 468.00 | [local](../records/ffn-pair-1800-s461-pair_raw.json) |
+| 5 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 8 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Explicit pair scores / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-pair-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | pair_normalized | 3.353935 | 8,654,208 / 4,718,592 | 433.00 | 482.00 | [local](../records/ffn-pair-1800-s461-pair_normalized.json) |
+| 3 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 4 | pair_raw | 3.355598 | 8,654,208 / 4,718,592 | 444.38 | 468.00 | [local](../records/ffn-pair-1800-s461-pair_raw.json) |
+| 5 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 6 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 8 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Jet geometry / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-jet-factored-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 2 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 3 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 4 | jet_factored | 4.613338 | 8,655,744 / 4,720,128 | 460.14 | 480.00 | [local](../records/ffn-jet-factored-1800-s461-jet_factored.json) |
+| 5 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 6 | jet_split | 4.632504 | 8,654,208 / 4,718,592 | 430.28 | 450.00 | [local](../records/ffn-jet-1800-s461-jet_split.json) |
+
+### Jet geometry / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-jet-factored-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 2 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 3 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 4 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 5 | jet_factored | 3.376662 | 8,655,744 / 4,720,128 | 460.14 | 480.00 | [local](../records/ffn-jet-factored-1800-s461-jet_factored.json) |
+| 6 | jet_split | 3.397434 | 8,654,208 / 4,718,592 | 430.28 | 450.00 | [local](../records/ffn-jet-1800-s461-jet_split.json) |
+
+### GateBank / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-gatebank-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 2 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 3 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 4 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 5 | gatebank_m4 | 4.626929 | 8,651,136 / 4,715,520 | 425.27 | 452.00 | [local](../records/ffn-gatebank-1800-s461-gatebank_m4.json) |
+| 6 | gatebank_m2 | 4.638090 | 8,654,208 / 4,718,592 | 429.31 | 450.00 | [local](../records/ffn-gatebank-1800-s461-gatebank_m2.json) |
+| 7 | gatebank_silu_m4 | 4.644421 | 8,649,600 / 4,713,984 | 427.56 | 452.00 | [local](../records/ffn-gatebank-1800-s461-gatebank_silu_m4.json) |
+| 8 | gatebank_m1 | 4.654855 | 8,654,208 / 4,718,592 | 432.44 | 454.00 | [local](../records/ffn-gatebank-1800-s461-gatebank_m1.json) |
+
+### GateBank / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-gatebank-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 2 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 3 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 4 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 5 | gatebank_m4 | 3.386655 | 8,651,136 / 4,715,520 | 425.27 | 452.00 | [local](../records/ffn-gatebank-1800-s461-gatebank_m4.json) |
+| 6 | gatebank_m2 | 3.393742 | 8,654,208 / 4,718,592 | 429.31 | 450.00 | [local](../records/ffn-gatebank-1800-s461-gatebank_m2.json) |
+| 7 | gatebank_silu_m4 | 3.397856 | 8,649,600 / 4,713,984 | 427.56 | 452.00 | [local](../records/ffn-gatebank-1800-s461-gatebank_silu_m4.json) |
+| 8 | gatebank_m1 | 3.411986 | 8,654,208 / 4,718,592 | 432.44 | 454.00 | [local](../records/ffn-gatebank-1800-s461-gatebank_m1.json) |
+
+### Distributed curves / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-distributed-curve-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 2 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 3 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 4 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 5 | distributed_fixed | 4.658676 | 8,654,208 / 4,718,592 | 471.40 | 492.00 | [local](../records/ffn-distributed-curve-1800-s461-distributed_fixed.json) |
+
+### Distributed curves / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-distributed-curve-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 2 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 3 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 4 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 5 | distributed_fixed | 3.428987 | 8,654,208 / 4,718,592 | 471.40 | 492.00 | [local](../records/ffn-distributed-curve-1800-s461-distributed_fixed.json) |
+
+### Ridge association / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-ridge-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 3 | ridge_01 | 4.603095 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_01.json) |
+| 4 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 5 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 6 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Ridge association / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-ridge-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 3 | ridge_01 | 3.362974 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_01.json) |
+| 4 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 5 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 6 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Circular convolution / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-convolution-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 4 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 5 | convolution_squared | 4.606602 | 8,654,208 / 4,718,592 | 452.66 | 470.00 | [local](../records/ffn-convolution-1800-s461-convolution_squared.json) |
+| 6 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Circular convolution / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-convolution-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 4 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 5 | convolution_squared | 3.370874 | 8,654,208 / 4,718,592 | 452.66 | 470.00 | [local](../records/ffn-convolution-1800-s461-convolution_squared.json) |
+| 6 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Competitive coding / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-competitive-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 4 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 5 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 6 | competitive_diagonal | 4.608517 | 8,654,208 / 4,718,592 | 455.32 | 470.00 | [local](../records/ffn-competitive-1800-s461-competitive_diagonal.json) |
+| 7 | competitive_256 | 4.609286 | 8,654,208 / 4,718,592 | 455.32 | 470.00 | [local](../records/ffn-competitive-1800-s461-competitive_256.json) |
+| 8 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Competitive coding / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-competitive-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 4 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 5 | competitive_diagonal | 3.369100 | 8,654,208 / 4,718,592 | 455.32 | 470.00 | [local](../records/ffn-competitive-1800-s461-competitive_diagonal.json) |
+| 6 | competitive_256 | 3.370112 | 8,654,208 / 4,718,592 | 455.32 | 470.00 | [local](../records/ffn-competitive-1800-s461-competitive_256.json) |
+| 7 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 8 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Reflective mixing / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-reflective-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 4 | reflective | 4.598324 | 8,654,208 / 4,718,592 | 442.00 | 460.00 | [local](../records/ffn-reflective-1800-s461-reflective.json) |
+| 5 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 6 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 7 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Reflective mixing / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-reflective-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | reflective | 3.358345 | 8,654,208 / 4,718,592 | 442.00 | 460.00 | [local](../records/ffn-reflective-1800-s461-reflective.json) |
+| 4 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 5 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 6 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 7 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+
+### Local lattice / saved controls / text
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-lattice-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.590279 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 4.591732 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | hybrid_normalized | 4.595735 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 4 | shifted_relu_squared | 4.603346 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 5 | relu_squared | 4.607443 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 6 | dense | 4.616679 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 7 | lattice | 4.634058 | 8,653,184 / 4,717,568 | 465.09 | 492.00 | [local](../records/ffn-lattice-1800-s461-lattice.json) |
+
+### Local lattice / saved controls / chat
+
+Seed 461; 1,800 updates; 6,028,850 matched targets. [Audit](../records/ffn-lattice-1800-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.352524 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-1800-s461-ridge_1.json) |
+| 2 | convolution_raw | 3.354088 | 8,654,208 / 4,718,592 | 448.66 | 468.00 | [local](../records/ffn-convolution-1800-s461-convolution_raw.json) |
+| 3 | hybrid_normalized | 3.362123 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-dictionary-1800-s461-hybrid_normalized.json) |
+| 4 | relu_squared | 3.368997 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-dictionary-1800-s461-relu_squared.json) |
+| 5 | shifted_relu_squared | 3.374200 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-dictionary-1800-s461-shifted_relu_squared.json) |
+| 6 | dense | 3.375814 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-dictionary-1800-s461-dense.json) |
+| 7 | lattice | 3.399442 | 8,653,184 / 4,717,568 | 465.09 | 492.00 | [local](../records/ffn-lattice-1800-s461-lattice.json) |
+
+### Ridge confirmation seed293 / saved controls / text
+
+Seed 293; 1,800 updates; 6,031,843 matched targets. [Audit](../records/ffn-ridge-confirm-1800-s293-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 4.591870 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-confirm-1800-s293-ridge_1.json) |
+| 2 | hybrid_normalized | 4.596793 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s293-hybrid_normalized.json) |
+| 3 | shifted_relu_squared | 4.611920 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-shifted_relu_squared.json) |
+| 4 | relu_squared | 4.617303 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-relu_squared.json) |
+| 5 | dense | 4.645015 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s293-dense.json) |
+
+### Ridge confirmation seed293 / saved controls / chat
+
+Seed 293; 1,800 updates; 6,031,843 matched targets. [Audit](../records/ffn-ridge-confirm-1800-s293-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.344238 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-confirm-1800-s293-ridge_1.json) |
+| 2 | hybrid_normalized | 3.351981 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s293-hybrid_normalized.json) |
+| 3 | shifted_relu_squared | 3.371116 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-shifted_relu_squared.json) |
+| 4 | relu_squared | 3.375245 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-relu_squared.json) |
+| 5 | dense | 3.387184 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s293-dense.json) |
+
+### Ridge confirmation seed311 / saved controls / text
+
+Seed 311; 1,800 updates; 6,017,388 matched targets. [Audit](../records/ffn-ridge-confirm-1800-s311-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.594062 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s311-hybrid_normalized.json) |
+| 2 | ridge_1 | 4.594346 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-confirm-1800-s311-ridge_1.json) |
+| 3 | relu_squared | 4.606856 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-relu_squared.json) |
+| 4 | shifted_relu_squared | 4.610709 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-shifted_relu_squared.json) |
+| 5 | dense | 4.628676 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s311-dense.json) |
+
+### Ridge confirmation seed311 / saved controls / chat
+
+Seed 311; 1,800 updates; 6,017,388 matched targets. [Audit](../records/ffn-ridge-confirm-1800-s311-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | ridge_1 | 3.339692 | 8,654,208 / 4,718,592 | 459.38 | 482.00 | [local](../records/ffn-ridge-confirm-1800-s311-ridge_1.json) |
+| 2 | hybrid_normalized | 3.340158 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s311-hybrid_normalized.json) |
+| 3 | relu_squared | 3.357382 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-relu_squared.json) |
+| 4 | shifted_relu_squared | 3.361548 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-shifted_relu_squared.json) |
+| 5 | dense | 3.368282 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s311-dense.json) |
+
+### Two-axis confirmation seed293 / saved controls / text
+
+Seed 293; 1,800 updates; 6,031,843 matched targets. [Audit](../records/ffn-two-axis-confirm-1800-s293-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.596409 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-confirm-1800-s293-dynamic_filter.json) |
+| 2 | hybrid_normalized | 4.596793 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s293-hybrid_normalized.json) |
+| 3 | axis_parallel | 4.600753 | 8,654,208 / 4,718,592 | 460.00 | 492.00 | [local](../records/ffn-two-axis-confirm-1800-s293-axis_parallel.json) |
+| 4 | shifted_relu_squared | 4.611920 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-shifted_relu_squared.json) |
+| 5 | relu_squared | 4.617303 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-relu_squared.json) |
+| 6 | dense | 4.645015 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s293-dense.json) |
+
+### Two-axis confirmation seed293 / saved controls / chat
+
+Seed 293; 1,800 updates; 6,031,843 matched targets. [Audit](../records/ffn-two-axis-confirm-1800-s293-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.347085 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-confirm-1800-s293-dynamic_filter.json) |
+| 2 | axis_parallel | 3.348746 | 8,654,208 / 4,718,592 | 460.00 | 492.00 | [local](../records/ffn-two-axis-confirm-1800-s293-axis_parallel.json) |
+| 3 | hybrid_normalized | 3.351981 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s293-hybrid_normalized.json) |
+| 4 | shifted_relu_squared | 3.371116 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-shifted_relu_squared.json) |
+| 5 | relu_squared | 3.375245 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-relu_squared.json) |
+| 6 | dense | 3.387184 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s293-dense.json) |
+
+### Two-axis confirmation seed311 / saved controls / text
+
+Seed 311; 1,800 updates; 6,017,388 matched targets. [Audit](../records/ffn-two-axis-confirm-1800-s311-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.574550 | 8,654,208 / 4,718,592 | 447.38 | 468.00 | [local](../records/ffn-dynamic-filter-confirm-1800-s311-dynamic_filter.json) |
+| 2 | axis_parallel | 4.589981 | 8,654,208 / 4,718,592 | 464.38 | 492.00 | [local](../records/ffn-two-axis-confirm-1800-s311-axis_parallel.json) |
+| 3 | hybrid_normalized | 4.594062 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s311-hybrid_normalized.json) |
+| 4 | relu_squared | 4.606856 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-relu_squared.json) |
+| 5 | shifted_relu_squared | 4.610709 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-shifted_relu_squared.json) |
+| 6 | dense | 4.628676 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s311-dense.json) |
+
+### Two-axis confirmation seed311 / saved controls / chat
+
+Seed 311; 1,800 updates; 6,017,388 matched targets. [Audit](../records/ffn-two-axis-confirm-1800-s311-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.324885 | 8,654,208 / 4,718,592 | 447.38 | 468.00 | [local](../records/ffn-dynamic-filter-confirm-1800-s311-dynamic_filter.json) |
+| 2 | axis_parallel | 3.328431 | 8,654,208 / 4,718,592 | 464.38 | 492.00 | [local](../records/ffn-two-axis-confirm-1800-s311-axis_parallel.json) |
+| 3 | hybrid_normalized | 3.340158 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s311-hybrid_normalized.json) |
+| 4 | relu_squared | 3.357382 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-relu_squared.json) |
+| 5 | shifted_relu_squared | 3.361548 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-shifted_relu_squared.json) |
+| 6 | dense | 3.368282 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s311-dense.json) |
+
+### Dynamic filter confirmation seed293 / saved controls / text
+
+Seed 293; 1,800 updates; 6,031,843 matched targets. [Audit](../records/ffn-dynamic-filter-confirm-1800-s293-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.596409 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-confirm-1800-s293-dynamic_filter.json) |
+| 2 | hybrid_normalized | 4.596793 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s293-hybrid_normalized.json) |
+| 3 | shifted_relu_squared | 4.611920 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-shifted_relu_squared.json) |
+| 4 | relu_squared | 4.617303 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-relu_squared.json) |
+| 5 | dense | 4.645015 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s293-dense.json) |
+
+### Dynamic filter confirmation seed293 / saved controls / chat
+
+Seed 293; 1,800 updates; 6,031,843 matched targets. [Audit](../records/ffn-dynamic-filter-confirm-1800-s293-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.347085 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-dynamic-filter-confirm-1800-s293-dynamic_filter.json) |
+| 2 | hybrid_normalized | 3.351981 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s293-hybrid_normalized.json) |
+| 3 | shifted_relu_squared | 3.371116 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-shifted_relu_squared.json) |
+| 4 | relu_squared | 3.375245 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-relu_squared.json) |
+| 5 | dense | 3.387184 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s293-dense.json) |
+
+### Dynamic filter confirmation seed311 / saved controls / text
+
+Seed 311; 1,800 updates; 6,017,388 matched targets. [Audit](../records/ffn-dynamic-filter-confirm-1800-s311-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.574550 | 8,654,208 / 4,718,592 | 447.38 | 468.00 | [local](../records/ffn-dynamic-filter-confirm-1800-s311-dynamic_filter.json) |
+| 2 | hybrid_normalized | 4.594062 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s311-hybrid_normalized.json) |
+| 3 | relu_squared | 4.606856 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-relu_squared.json) |
+| 4 | shifted_relu_squared | 4.610709 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-shifted_relu_squared.json) |
+| 5 | dense | 4.628676 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s311-dense.json) |
+
+### Dynamic filter confirmation seed311 / saved controls / chat
+
+Seed 311; 1,800 updates; 6,017,388 matched targets. [Audit](../records/ffn-dynamic-filter-confirm-1800-s311-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 3.324885 | 8,654,208 / 4,718,592 | 447.38 | 468.00 | [local](../records/ffn-dynamic-filter-confirm-1800-s311-dynamic_filter.json) |
+| 2 | hybrid_normalized | 3.340158 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s311-hybrid_normalized.json) |
+| 3 | relu_squared | 3.357382 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-relu_squared.json) |
+| 4 | shifted_relu_squared | 3.361548 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-shifted_relu_squared.json) |
+| 5 | dense | 3.368282 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s311-dense.json) |
+
+### Normalized pair confirmation seed293 / saved controls / text
+
+Seed 293; 1,800 updates; 6,031,843 matched targets. [Audit](../records/ffn-pair-confirm-1800-s293-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.596793 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s293-hybrid_normalized.json) |
+| 2 | pair_normalized | 4.601568 | 8,654,208 / 4,718,592 | 430.81 | 462.00 | [local](../records/ffn-pair-confirm-1800-s293-pair_normalized.json) |
+| 3 | shifted_relu_squared | 4.611920 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-shifted_relu_squared.json) |
+| 4 | relu_squared | 4.617303 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-relu_squared.json) |
+| 5 | dense | 4.645015 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s293-dense.json) |
+
+### Normalized pair confirmation seed293 / saved controls / chat
+
+Seed 293; 1,800 updates; 6,031,843 matched targets. [Audit](../records/ffn-pair-confirm-1800-s293-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 3.351981 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s293-hybrid_normalized.json) |
+| 2 | pair_normalized | 3.353779 | 8,654,208 / 4,718,592 | 430.81 | 462.00 | [local](../records/ffn-pair-confirm-1800-s293-pair_normalized.json) |
+| 3 | shifted_relu_squared | 3.371116 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-shifted_relu_squared.json) |
+| 4 | relu_squared | 3.375245 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s293-relu_squared.json) |
+| 5 | dense | 3.387184 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s293-dense.json) |
+
+### Normalized pair confirmation seed311 / saved controls / text
+
+Seed 311; 1,800 updates; 6,017,388 matched targets. [Audit](../records/ffn-pair-confirm-1800-s311-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 4.594062 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s311-hybrid_normalized.json) |
+| 2 | pair_normalized | 4.603144 | 8,654,208 / 4,718,592 | 435.63 | 462.00 | [local](../records/ffn-pair-confirm-1800-s311-pair_normalized.json) |
+| 3 | relu_squared | 4.606856 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-relu_squared.json) |
+| 4 | shifted_relu_squared | 4.610709 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-shifted_relu_squared.json) |
+| 5 | dense | 4.628676 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s311-dense.json) |
+
+### Normalized pair confirmation seed311 / saved controls / chat
+
+Seed 311; 1,800 updates; 6,017,388 matched targets. [Audit](../records/ffn-pair-confirm-1800-s311-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_normalized | 3.340158 | 8,654,208 / 4,718,592 | 453.56 | 474.00 | [local](../records/ffn-hybrid-confirm-1800-s311-hybrid_normalized.json) |
+| 2 | pair_normalized | 3.349054 | 8,654,208 / 4,718,592 | 435.63 | 462.00 | [local](../records/ffn-pair-confirm-1800-s311-pair_normalized.json) |
+| 3 | relu_squared | 3.357382 | 8,654,208 / 4,718,592 | 418.56 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-relu_squared.json) |
+| 4 | shifted_relu_squared | 3.361548 | 8,654,200 / 4,718,584 | 421.39 | 448.00 | [local](../records/ffn-hybrid-confirm-1800-s311-shifted_relu_squared.json) |
+| 5 | dense | 3.368282 | 8,654,208 / 4,718,592 | 435.56 | 454.00 | [local](../records/ffn-hybrid-confirm-1800-s311-dense.json) |
+
+### Larger hybrid transfer seed71 / saved controls / text
+
+Seed 71; 1,800 updates; 6,009,808 matched targets. [Audit](../records/ffn-hybrid-transfer-1800-s71-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_transfer | 4.442687 | 21,076,480 / 12,681,216 | 850.37 | 878.00 | [local](../records/ffn-hybrid-transfer-1800-s71-hybrid_transfer.json) |
+| 2 | shifted_relu_squared | 4.476021 | 21,076,564 / 12,681,300 | 786.75 | 862.00 | [local](../records/ffn-single-scale-1800-s71-shifted_relu_squared.json) |
+| 3 | dense | 4.481850 | 21,076,480 / 12,681,216 | 824.06 | 848.00 | [local](../records/ffn-single-scale-1800-s71-dense.json) |
+
+### Larger hybrid transfer seed71 / saved controls / chat
+
+Seed 71; 1,800 updates; 6,009,808 matched targets. [Audit](../records/ffn-hybrid-transfer-1800-s71-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_transfer | 3.140375 | 21,076,480 / 12,681,216 | 850.37 | 878.00 | [local](../records/ffn-hybrid-transfer-1800-s71-hybrid_transfer.json) |
+| 2 | dense | 3.169490 | 21,076,480 / 12,681,216 | 824.06 | 848.00 | [local](../records/ffn-single-scale-1800-s71-dense.json) |
+| 3 | shifted_relu_squared | 3.182611 | 21,076,564 / 12,681,300 | 786.75 | 862.00 | [local](../records/ffn-single-scale-1800-s71-shifted_relu_squared.json) |
+
+### Larger dynamic filter transfer seed71 / saved controls / text
+
+Seed 71; 1,800 updates; 6,009,808 matched targets. [Audit](../records/ffn-dynamic-filter-transfer-1800-s71-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_transfer | 4.442687 | 21,076,480 / 12,681,216 | 850.37 | 878.00 | [local](../records/ffn-hybrid-transfer-1800-s71-hybrid_transfer.json) |
+| 2 | dynamic_filter_transfer | 4.450644 | 21,076,480 / 12,681,216 | 833.68 | 852.00 | [local](../records/ffn-dynamic-filter-transfer-1800-s71-dynamic_filter_transfer.json) |
+| 3 | shifted_relu_squared | 4.476021 | 21,076,564 / 12,681,300 | 786.75 | 862.00 | [local](../records/ffn-single-scale-1800-s71-shifted_relu_squared.json) |
+| 4 | dense | 4.481850 | 21,076,480 / 12,681,216 | 824.06 | 848.00 | [local](../records/ffn-single-scale-1800-s71-dense.json) |
+
+### Larger dynamic filter transfer seed71 / saved controls / chat
+
+Seed 71; 1,800 updates; 6,009,808 matched targets. [Audit](../records/ffn-dynamic-filter-transfer-1800-s71-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | hybrid_transfer | 3.140375 | 21,076,480 / 12,681,216 | 850.37 | 878.00 | [local](../records/ffn-hybrid-transfer-1800-s71-hybrid_transfer.json) |
+| 2 | dynamic_filter_transfer | 3.144704 | 21,076,480 / 12,681,216 | 833.68 | 852.00 | [local](../records/ffn-dynamic-filter-transfer-1800-s71-dynamic_filter_transfer.json) |
+| 3 | dense | 3.169490 | 21,076,480 / 12,681,216 | 824.06 | 848.00 | [local](../records/ffn-single-scale-1800-s71-dense.json) |
+| 4 | shifted_relu_squared | 3.182611 | 21,076,564 / 12,681,300 | 786.75 | 862.00 | [local](../records/ffn-single-scale-1800-s71-shifted_relu_squared.json) |
+
+### Matched continuation seed461: 1800 parent + 3600 added updates (not fresh) / text
+
+Seed 461; 5,400 updates; 18,067,829 matched targets. [Audit](../records/ffn-filter-continuation-5400-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 4.060270 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-filter-continuation-5400-s461-dynamic_filter.json) |
+| 2 | dense | 4.166560 | 8,654,208 / 4,718,592 | 436.44 | 466.00 | [local](../records/ffn-filter-continuation-5400-s461-dense.json) |
+
+### Matched continuation seed461: 1800 parent + 3600 added updates (not fresh) / chat
+
+Seed 461; 5,400 updates; 18,067,829 matched targets. [Audit](../records/ffn-filter-continuation-5400-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | dynamic_filter | 2.712704 | 8,654,208 / 4,718,592 | 446.88 | 468.00 | [local](../records/ffn-filter-continuation-5400-s461-dynamic_filter.json) |
+| 2 | dense | 2.801623 | 8,654,208 / 4,718,592 | 436.44 | 466.00 | [local](../records/ffn-filter-continuation-5400-s461-dense.json) |
+
+### Evolution seed461: 10,000 fresh updates with three saved matched controls / text
+
+Seed 461; 10,000 updates; 33,440,772 matched targets. [Audit](../records/ffn-evolution-10000-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 3.820069 | 8,654,208 / 4,718,592 | 454.54 | 480.00 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 2 | gate16 | 3.826844 | 8,654,208 / 4,718,592 | 446.92 | 472.00 | [local](../records/ffn-evolution-10000-s461-gate16.json) |
+| 3 | gate_sine | 3.827993 | 8,654,208 / 4,718,592 | 447.97 | 468.00 | [local](../records/ffn-evolution-10000-s461-gate_sine.json) |
+| 4 | partial_rational | 3.829353 | 8,654,208 / 4,718,592 | 457.49 | 484.00 | [local](../records/ffn-evolution-10000-s461-partial_rational.json) |
+| 5 | partial_positive_sine | 3.830455 | 8,654,208 / 4,718,592 | 457.49 | 484.00 | [local](../records/ffn-evolution-10000-s461-partial_positive_sine.json) |
+| 6 | partial_sine | 3.833127 | 8,654,208 / 4,718,592 | 457.49 | 482.00 | [local](../records/ffn-evolution-10000-s461-partial_sine.json) |
+| 7 | gate8 | 3.837566 | 8,654,208 / 4,718,592 | 446.62 | 472.00 | [local](../records/ffn-evolution-10000-s461-gate8.json) |
+| 8 | dynamic_filter | 3.842274 | 8,654,208 / 4,718,592 | 448.38 | 480.00 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 9 | filter_updategate | 3.855924 | 8,654,208 / 4,718,592 | 472.30 | 508.00 | [local](../records/ffn-evolution-10000-s461-filter_updategate.json) |
+| 10 | filter_postgate | 3.865842 | 8,654,208 / 4,718,592 | 469.68 | 508.00 | [local](../records/ffn-evolution-10000-s461-filter_postgate.json) |
+| 11 | dense | 3.980314 | 8,654,208 / 4,718,592 | 436.88 | 462.00 | [local](../records/ffn-final-10000-s461-dense.json) |
+
+### Evolution seed461: 10,000 fresh updates with three saved matched controls / chat
+
+Seed 461; 10,000 updates; 33,440,772 matched targets. [Audit](../records/ffn-evolution-10000-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 2.411506 | 8,654,208 / 4,718,592 | 454.54 | 480.00 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 2 | gate16 | 2.412582 | 8,654,208 / 4,718,592 | 446.92 | 472.00 | [local](../records/ffn-evolution-10000-s461-gate16.json) |
+| 3 | partial_positive_sine | 2.413345 | 8,654,208 / 4,718,592 | 457.49 | 484.00 | [local](../records/ffn-evolution-10000-s461-partial_positive_sine.json) |
+| 4 | partial_rational | 2.413616 | 8,654,208 / 4,718,592 | 457.49 | 484.00 | [local](../records/ffn-evolution-10000-s461-partial_rational.json) |
+| 5 | gate_sine | 2.418575 | 8,654,208 / 4,718,592 | 447.97 | 468.00 | [local](../records/ffn-evolution-10000-s461-gate_sine.json) |
+| 6 | partial_sine | 2.422035 | 8,654,208 / 4,718,592 | 457.49 | 482.00 | [local](../records/ffn-evolution-10000-s461-partial_sine.json) |
+| 7 | gate8 | 2.426850 | 8,654,208 / 4,718,592 | 446.62 | 472.00 | [local](../records/ffn-evolution-10000-s461-gate8.json) |
+| 8 | dynamic_filter | 2.432455 | 8,654,208 / 4,718,592 | 448.38 | 480.00 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 9 | filter_updategate | 2.440036 | 8,654,208 / 4,718,592 | 472.30 | 508.00 | [local](../records/ffn-evolution-10000-s461-filter_updategate.json) |
+| 10 | filter_postgate | 2.451138 | 8,654,208 / 4,718,592 | 469.68 | 508.00 | [local](../records/ffn-evolution-10000-s461-filter_postgate.json) |
+| 11 | dense | 2.549469 | 8,654,208 / 4,718,592 | 436.88 | 462.00 | [local](../records/ffn-final-10000-s461-dense.json) |
+
+### Evidence seed461: 10,000 fresh updates with three saved matched controls / text
+
+Seed 461; 10,000 updates; 33,440,772 matched targets. [Audit](../records/ffn-evidence-10000-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 3.820069 | 8,654,208 / 4,718,592 | 454.54 | 480.00 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 2 | evidence_balance | 3.820250 | 8,654,208 / 4,718,592 | 448.13 | 468.00 | [local](../records/ffn-evidence-10000-s461-evidence_balance.json) |
+| 3 | reaction_catalyst | 3.820372 | 8,654,208 / 4,718,592 | 470.10 | 490.00 | [local](../records/ffn-evidence-10000-s461-reaction_catalyst.json) |
+| 4 | attention_energy | 3.820679 | 8,654,208 / 4,718,592 | 460.50 | 488.00 | [local](../records/ffn-evidence-10000-s461-attention_energy.json) |
+| 5 | evidence_support | 3.820992 | 8,654,208 / 4,718,592 | 448.13 | 468.00 | [local](../records/ffn-evidence-10000-s461-evidence_support.json) |
+| 6 | reaction_post | 3.823193 | 8,654,208 / 4,718,592 | 446.86 | 468.00 | [local](../records/ffn-evidence-10000-s461-reaction_post.json) |
+| 7 | attention_alignment | 3.825272 | 8,654,208 / 4,718,592 | 463.11 | 488.00 | [local](../records/ffn-evidence-10000-s461-attention_alignment.json) |
+| 8 | cross_evidence | 3.827581 | 8,654,208 / 4,718,592 | 454.27 | 472.00 | [local](../records/ffn-evidence-10000-s461-cross_evidence.json) |
+| 9 | learned_evidence | 3.841977 | 8,654,208 / 4,718,592 | 450.94 | 468.00 | [local](../records/ffn-evidence-10000-s461-learned_evidence.json) |
+| 10 | dynamic_filter | 3.842274 | 8,654,208 / 4,718,592 | 448.38 | 480.00 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 11 | dense | 3.980314 | 8,654,208 / 4,718,592 | 436.88 | 462.00 | [local](../records/ffn-final-10000-s461-dense.json) |
+
+### Evidence seed461: 10,000 fresh updates with three saved matched controls / chat
+
+Seed 461; 10,000 updates; 33,440,772 matched targets. [Audit](../records/ffn-evidence-10000-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | attention_energy | 2.411464 | 8,654,208 / 4,718,592 | 460.50 | 488.00 | [local](../records/ffn-evidence-10000-s461-attention_energy.json) |
+| 2 | branch_sigmoid | 2.411506 | 8,654,208 / 4,718,592 | 454.54 | 480.00 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 3 | evidence_balance | 2.411573 | 8,654,208 / 4,718,592 | 448.13 | 468.00 | [local](../records/ffn-evidence-10000-s461-evidence_balance.json) |
+| 4 | reaction_catalyst | 2.412067 | 8,654,208 / 4,718,592 | 470.10 | 490.00 | [local](../records/ffn-evidence-10000-s461-reaction_catalyst.json) |
+| 5 | evidence_support | 2.412164 | 8,654,208 / 4,718,592 | 448.13 | 468.00 | [local](../records/ffn-evidence-10000-s461-evidence_support.json) |
+| 6 | attention_alignment | 2.412334 | 8,654,208 / 4,718,592 | 463.11 | 488.00 | [local](../records/ffn-evidence-10000-s461-attention_alignment.json) |
+| 7 | reaction_post | 2.413226 | 8,654,208 / 4,718,592 | 446.86 | 468.00 | [local](../records/ffn-evidence-10000-s461-reaction_post.json) |
+| 8 | cross_evidence | 2.413500 | 8,654,208 / 4,718,592 | 454.27 | 472.00 | [local](../records/ffn-evidence-10000-s461-cross_evidence.json) |
+| 9 | dynamic_filter | 2.432455 | 8,654,208 / 4,718,592 | 448.38 | 480.00 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 10 | learned_evidence | 2.433106 | 8,654,208 / 4,718,592 | 450.94 | 468.00 | [local](../records/ffn-evidence-10000-s461-learned_evidence.json) |
+| 11 | dense | 2.549469 | 8,654,208 / 4,718,592 | 436.88 | 462.00 | [local](../records/ffn-final-10000-s461-dense.json) |
+
+### Branch refinement seed461: 10,000 fresh updates with three saved matched controls / text
+
+Seed 461; 10,000 updates; 33,440,772 matched targets. [Audit](../records/ffn-branch-refinement-10000-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 3.820069 | 8,654,208 / 4,718,592 | 454.54 | 480.00 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 2 | router_mlp | 3.828213 | 8,654,208 / 4,718,592 | 454.39 | 472.00 | [local](../records/ffn-branch-refinement-10000-s461-router_mlp.json) |
+| 3 | branch2 | 3.831924 | 8,654,208 / 4,718,592 | 446.97 | 468.00 | [local](../records/ffn-branch-refinement-10000-s461-branch2.json) |
+| 4 | ungated | 3.831977 | 8,654,208 / 4,718,592 | 425.63 | 448.00 | [local](../records/ffn-branch-refinement-10000-s461-ungated.json) |
+| 5 | dynamic_filter | 3.842274 | 8,654,208 / 4,718,592 | 448.38 | 480.00 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 6 | matrix4x4 | 3.847200 | 8,654,208 / 4,718,592 | 446.99 | 472.00 | [local](../records/ffn-branch-refinement-10000-s461-matrix4x4.json) |
+| 7 | dense | 3.980314 | 8,654,208 / 4,718,592 | 436.88 | 462.00 | [local](../records/ffn-final-10000-s461-dense.json) |
+
+### Branch refinement seed461: 10,000 fresh updates with three saved matched controls / chat
+
+Seed 461; 10,000 updates; 33,440,772 matched targets. [Audit](../records/ffn-branch-refinement-10000-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | router_mlp | 2.410576 | 8,654,208 / 4,718,592 | 454.39 | 472.00 | [local](../records/ffn-branch-refinement-10000-s461-router_mlp.json) |
+| 2 | branch_sigmoid | 2.411506 | 8,654,208 / 4,718,592 | 454.54 | 480.00 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 3 | branch2 | 2.411672 | 8,654,208 / 4,718,592 | 446.97 | 468.00 | [local](../records/ffn-branch-refinement-10000-s461-branch2.json) |
+| 4 | ungated | 2.415453 | 8,654,208 / 4,718,592 | 425.63 | 448.00 | [local](../records/ffn-branch-refinement-10000-s461-ungated.json) |
+| 5 | dynamic_filter | 2.432455 | 8,654,208 / 4,718,592 | 448.38 | 480.00 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 6 | matrix4x4 | 2.436932 | 8,654,208 / 4,718,592 | 446.99 | 472.00 | [local](../records/ffn-branch-refinement-10000-s461-matrix4x4.json) |
+| 7 | dense | 2.549469 | 8,654,208 / 4,718,592 | 436.88 | 462.00 | [local](../records/ffn-final-10000-s461-dense.json) |
+
+### Independent dual-path seed461: 10,000 fresh updates with three saved matched controls / text
+
+Seed 461; 10,000 updates; 33,440,772 matched targets. [Audit](../records/ffn-dual-path-10000-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 3.820069 | 8,654,208 / 4,718,592 | 454.54 | 480.00 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 2 | dual_plain_quarter | 3.821241 | 8,654,208 / 4,718,592 | 441.80 | 468.00 | [local](../records/ffn-dual-path-10000-s461-dual_plain_quarter.json) |
+| 3 | dual_router_small | 3.833562 | 8,654,208 / 4,718,592 | 452.70 | 470.00 | [local](../records/ffn-dual-path-10000-s461-dual_router_small.json) |
+| 4 | dual_filter_quarter | 3.833604 | 8,654,208 / 4,718,592 | 448.92 | 478.00 | [local](../records/ffn-dual-path-10000-s461-dual_filter_quarter.json) |
+| 5 | dual_filter_half | 3.840192 | 8,654,208 / 4,718,592 | 450.75 | 474.00 | [local](../records/ffn-dual-path-10000-s461-dual_filter_half.json) |
+| 6 | dynamic_filter | 3.842274 | 8,654,208 / 4,718,592 | 448.38 | 480.00 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 7 | dual_filter_small | 3.843426 | 8,654,208 / 4,718,592 | 451.54 | 468.00 | [local](../records/ffn-dual-path-10000-s461-dual_filter_small.json) |
+| 8 | dense | 3.980314 | 8,654,208 / 4,718,592 | 436.88 | 462.00 | [local](../records/ffn-final-10000-s461-dense.json) |
+
+### Independent dual-path seed461: 10,000 fresh updates with three saved matched controls / chat
+
+Seed 461; 10,000 updates; 33,440,772 matched targets. [Audit](../records/ffn-dual-path-10000-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 2.411506 | 8,654,208 / 4,718,592 | 454.54 | 480.00 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 2 | dual_plain_quarter | 2.415987 | 8,654,208 / 4,718,592 | 441.80 | 468.00 | [local](../records/ffn-dual-path-10000-s461-dual_plain_quarter.json) |
+| 3 | dual_router_small | 2.416228 | 8,654,208 / 4,718,592 | 452.70 | 470.00 | [local](../records/ffn-dual-path-10000-s461-dual_router_small.json) |
+| 4 | dual_filter_small | 2.423266 | 8,654,208 / 4,718,592 | 451.54 | 468.00 | [local](../records/ffn-dual-path-10000-s461-dual_filter_small.json) |
+| 5 | dual_filter_quarter | 2.423454 | 8,654,208 / 4,718,592 | 448.92 | 478.00 | [local](../records/ffn-dual-path-10000-s461-dual_filter_quarter.json) |
+| 6 | dual_filter_half | 2.424349 | 8,654,208 / 4,718,592 | 450.75 | 474.00 | [local](../records/ffn-dual-path-10000-s461-dual_filter_half.json) |
+| 7 | dynamic_filter | 2.432455 | 8,654,208 / 4,718,592 | 448.38 | 480.00 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 8 | dense | 2.549469 | 8,654,208 / 4,718,592 | 436.88 | 462.00 | [local](../records/ffn-final-10000-s461-dense.json) |
+
+### Branch-next seed461: 10,000 fresh updates with three saved matched controls / text
+
+Seed 461; 10,000 updates; 33,440,772 matched targets. [Audit](../records/ffn-branch-next-10000-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 3.820069 | 8,654,208 / 4,718,592 | 454.54 | 480.00 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 2 | branch_hierarchical | 3.823591 | 8,654,208 / 4,718,592 | 444.61 | 482.00 | [local](../records/ffn-branch-next-10000-s461-branch_hierarchical.json) |
+| 3 | branch_rich_router | 3.829860 | 8,654,208 / 4,718,592 | 450.41 | 474.00 | [local](../records/ffn-branch-next-10000-s461-branch_rich_router.json) |
+| 4 | branch_threshold | 3.832266 | 8,654,208 / 4,718,592 | 451.13 | 472.00 | [local](../records/ffn-branch-next-10000-s461-branch_threshold.json) |
+| 5 | dynamic_filter | 3.842274 | 8,654,208 / 4,718,592 | 448.38 | 480.00 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 6 | branch_temperature | 3.844234 | 8,654,208 / 4,718,592 | 450.01 | 472.00 | [local](../records/ffn-branch-next-10000-s461-branch_temperature.json) |
+| 7 | branch_bipolar | 3.897990 | 8,654,208 / 4,718,592 | 471.55 | 508.00 | [local](../records/ffn-branch-next-10000-s461-branch_bipolar.json) |
+| 8 | dense | 3.980314 | 8,654,208 / 4,718,592 | 436.88 | 462.00 | [local](../records/ffn-final-10000-s461-dense.json) |
+
+### Branch-next seed461: 10,000 fresh updates with three saved matched controls / chat
+
+Seed 461; 10,000 updates; 33,440,772 matched targets. [Audit](../records/ffn-branch-next-10000-s461-audit.json).
+
+| Rank | FFN | Full final NLL | Core / FFN params | Allocated MiB | Reserved MiB | Evidence |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 1 | branch_sigmoid | 2.411506 | 8,654,208 / 4,718,592 | 454.54 | 480.00 | [local](../records/ffn-final-10000-s461-branch_sigmoid.json) |
+| 2 | branch_rich_router | 2.411784 | 8,654,208 / 4,718,592 | 450.41 | 474.00 | [local](../records/ffn-branch-next-10000-s461-branch_rich_router.json) |
+| 3 | branch_hierarchical | 2.412127 | 8,654,208 / 4,718,592 | 444.61 | 482.00 | [local](../records/ffn-branch-next-10000-s461-branch_hierarchical.json) |
+| 4 | branch_threshold | 2.425312 | 8,654,208 / 4,718,592 | 451.13 | 472.00 | [local](../records/ffn-branch-next-10000-s461-branch_threshold.json) |
+| 5 | branch_temperature | 2.431398 | 8,654,208 / 4,718,592 | 450.01 | 472.00 | [local](../records/ffn-branch-next-10000-s461-branch_temperature.json) |
+| 6 | dynamic_filter | 2.432455 | 8,654,208 / 4,718,592 | 448.38 | 480.00 | [local](../records/ffn-final-10000-s461-dynamic_filter.json) |
+| 7 | branch_bipolar | 2.497739 | 8,654,208 / 4,718,592 | 471.55 | 508.00 | [local](../records/ffn-branch-next-10000-s461-branch_bipolar.json) |
+| 8 | dense | 2.549469 | 8,654,208 / 4,718,592 | 436.88 | 462.00 | [local](../records/ffn-final-10000-s461-dense.json) |

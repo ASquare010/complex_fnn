@@ -11,8 +11,8 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from models.channel_curve_transformer.transformer import CurveFFN
 from models.components import RMSNorm
+from models.position_compressor.ffn import CompressorBranchFFN
 
 
 @dataclass
@@ -23,12 +23,16 @@ class Config:
     encoder_layers: int = 4
     decoder_layers: int = 1
     max_tokens: int = 256
-    span: int = 8
+    span: int = 32
+    hidden: int = 1024
+    ffn: str = "branch_sigmoid_v1"
     pad_id: int = 0
     bos_id: int = 1
     eos_id: int = 2
 
     def __post_init__(self):
+        if self.ffn != "branch_sigmoid_v1" or type(self.hidden) is not int or self.hidden < 1:
+            raise ValueError("Expected branch_sigmoid_v1 and positive hidden calibration width")
         for name in (
             "vocab_size",
             "width",
@@ -77,7 +81,7 @@ class EncoderBlock(nn.Module):
         self.attention_norm = RMSNorm(config.width)
         self.attention = Attention(config)
         self.ffn_norm = RMSNorm(config.width)
-        self.ffn = CurveFFN(config)
+        self.ffn = CompressorBranchFFN(config)
 
     def forward(self, x, mask):
         normalized = self.attention_norm(x)
@@ -107,7 +111,7 @@ class Model(nn.Module):
                 if isinstance(module, (nn.Linear, nn.Embedding)):
                     nn.init.normal_(module.weight, std=0.02)
             for name, module in self.named_modules():
-                if isinstance(module, CurveFFN):
+                if isinstance(module, CompressorBranchFFN):
                     module.initialize(seed, name, 1 / math.sqrt(2 * c.encoder_layers))
 
     def encode(self, tokens, mask):
