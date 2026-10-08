@@ -1,10 +1,14 @@
 {
-  "checkpoint": "D:/Git/latent-text-compressor/artifacts/runs/branch-rope-v1/span32/last.pt",
-  "encoder": "dump/compression-rope-v1/encoder.pt",
-  "span": 32,
+  "checkpoint": "D:\\Git\\latent-text-compressor\\artifacts\\runs\\residual64-long-10000-v1\\continue_plain\\last.pt",
+  "encoder": "dump/selected-residual64-512/encoder.pt",
+  "span": 64,
   "ffn": "branch_sigmoid_v1",
-  "status": "complete: 7000 updates; 1000/1000 exact validation; final replay verified",
-  "encoder_parameters": 7342336,
-  "full_parameters": 10488832,
-  "position_encoding": "rope_v1"
+  "status": "Step 2 selected: 999/1000 short,202/206 packed exact;44000 cumulative updates;not universally lossless",
+  "encoder_parameters": 7327232,
+  "full_parameters": 10456576,
+  "position_encoding": "rope_v1",
+  "variant": "depth_route",
+  "max_tokens": 512,
+  "code_features": 125,
+  "checkpoint_sha256": "2eabeb7bc46654893a17d2cf17838b464d7c8e2318d4fa0deee0c83f22878a24"
 }

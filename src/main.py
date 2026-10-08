@@ -1,4 +1,4 @@
-"""Two selected models: Branch Sigmoid and the span-32 context encoder."""
+"""Two selected models: Branch Sigmoid and the selected64:1 context encoder."""
 import argparse
 import json
 from storage import read_json
@@ -48,7 +48,7 @@ def main():
     from pathlib import Path
     endpoint = config['encoder' if args.command == 'encode' else 'checkpoint']
     if not Path(endpoint).is_file():
-        raise FileNotFoundError('Branch Sigmoid compressor weights are not trained yet. Legacy CurveFFN weights are incompatible.')
+        raise FileNotFoundError('Selected compressor weights are missing. See src/config/position_compressor.json.')
     if args.command == 'encode':
         codec = Codec.load_encoder(config['encoder'],args.device)
         print(codec.save_memory(args.text,args.output))

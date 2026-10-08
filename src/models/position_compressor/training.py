@@ -12,10 +12,9 @@ import torch
 from tokenizers import Tokenizer
 from torch.nn import functional as F
 
-from models.position_compressor.codec import Codec
+from models.position_compressor.codec import Codec, model_from_config
 from models.position_compressor.data import batch
 from models.position_compressor.evaluation import sources
-from models.position_compressor.transformer import Config, Model
 from storage import digest, in_dump
 
 
@@ -39,7 +38,7 @@ class Session:
                 raise ValueError(f"Parent source changed: {path}; use its frozen snapshot")
         if total_steps <= state["step"] or epsilon < 0:
             raise ValueError("Continuation needs more updates and a nonnegative loss coefficient")
-        model = Model(Config(**state["protocol"]["model"])).to(device)
+        model = model_from_config(state["protocol"]["model"]).to(device)
         model.load_state_dict(state["model"])
         protocol = {
             **state["protocol"],
@@ -68,7 +67,7 @@ class Session:
         for path, expected in state["protocol"]["sources"].items():
             if digest(path) != expected:
                 raise ValueError(f"Source changed: {path}")
-        model = Model(Config(**state["protocol"]["model"])).to(device)
+        model = model_from_config(state["protocol"]["model"]).to(device)
         model.load_state_dict(state["model"])
         result = cls(
             model,

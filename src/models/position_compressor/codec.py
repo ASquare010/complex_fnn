@@ -13,6 +13,8 @@ import torch
 from tokenizers import Tokenizer
 from torch import nn
 
+from .residual import Config as ResidualConfig, Model as ResidualModel
+
 from models.position_compressor.data import hash_text, token_ids
 from models.position_compressor.transformer import Config, Model
 from storage import digest, in_dump
@@ -28,9 +30,27 @@ def require_branch_config(config):
         )
 
 
-def architecture_sources():
+def model_from_config(config, seed=17):
+    config = dict(config)
+    routed = config.pop("routed_layers", None)
+    if routed is not None and (routed != 4 or config.get("encoder_layers") != 4
+                               or config.get("variant") != "depth_route"):
+        raise ValueError("Only the selected four-layer residual checkpoint is supported")
+    require_branch_config(config)
+    if config.get("variant") == "depth_route":
+        return ResidualModel(ResidualConfig(**config), seed)
+    return Model(Config(**config), seed)
+
+
+def encoder_format(config):
+    return "position-encoder-residual-v1" if config.get("variant") == "depth_route" else "position-encoder-branch-v2"
+
+
+def architecture_sources(config=None):
     paths = [Path(__file__).with_name("transformer.py"), Path(__file__).with_name("ffn.py")]
     paths.append(Path(__file__).parents[1] / "branch_sigmoid/transformer.py")
+    if config and config.get("variant") == "depth_route":
+        paths.append(Path(__file__).with_name("residual.py"))
     return {str(i): digest(p) for i, p in enumerate(paths)}
 
 
@@ -51,8 +71,14 @@ class EncoderOnly(nn.Module):
         self.config = full_model.config
         for name in ("embedding", "encoder", "encoder_norm", "compress"):
             setattr(self, name, getattr(full_model, name))
+        if hasattr(full_model, "depth_queries"):
+            self.depth_queries = full_model.depth_queries
+
+    mix_depth = ResidualModel.mix_depth
 
     def forward(self, tokens, mask):
+        if hasattr(self, "depth_queries"):
+            return ResidualModel.encode(self, tokens, mask)
         return Model.encode(self, tokens, mask)
 
 
@@ -70,8 +96,7 @@ class Codec:
         # Use only locally generated/trusted training checkpoints.
         state = torch.load(checkpoint, map_location="cpu", weights_only=False)
         require_branch_config(state["protocol"]["model"])
-        config = Config(**state["protocol"]["model"])
-        model = Model(config)
+        model = model_from_config(state["protocol"]["model"])
         model.load_state_dict(state["model"])
         return cls(
             model,
@@ -179,12 +204,12 @@ class Codec:
         encoder = self.model if isinstance(self.model, EncoderOnly) else EncoderOnly(self.model)
         torch.save(
             {
-                "format": "position-encoder-branch-v2",
+                "format": encoder_format(asdict(encoder.config)),
                 "config": asdict(encoder.config),
                 "encoder": {k: v.detach().cpu() for k, v in encoder.state_dict().items()},
                 "tokenizer": self.tokenizer.to_str(),
                 "decoder_id": self.decoder_id,
-                "architecture_sources": architecture_sources(),
+                "architecture_sources": architecture_sources(asdict(encoder.config)),
             },
             path,
         )
@@ -194,11 +219,11 @@ class Codec:
     def load_encoder(cls, path, device="cpu", precision=None):
         state = torch.load(path, map_location="cpu", weights_only=True)
         require_branch_config(state["config"])
-        if state["format"] != "position-encoder-branch-v2":
+        if state["format"] != encoder_format(state["config"]):
             raise ValueError("Unexpected encoder format; Branch Sigmoid v2 export required")
-        if state.get("architecture_sources") != architecture_sources():
+        if state.get("architecture_sources") != architecture_sources(state["config"]):
             raise ValueError("Encoder architecture source changed")
-        encoder = EncoderOnly(Model(Config(**state["config"])))
+        encoder = EncoderOnly(model_from_config(state["config"]))
         encoder.load_state_dict(state["encoder"])
         return cls(
             encoder,
