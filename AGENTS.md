@@ -1,3 +1,186 @@
+# Fresh60k second PC-crash recovery TRAINING (2026-10-08)
+
+User again reported PC crash and explicitly requested continuing. No prior workers
+survived. Recovery-v2 durable logs reached46500 but last.pt and best.pt have missing
+payload/zero tails (not merely missing ZIP directory); unrecoverable as complete
+optimizer checkpoints. Status,best_validation,memory JSON zero-filled. All retained.
+Original best.pt at10000 still matches SHA
+ad6bdbfbf413c135afd66b5dc7d684630c3b856ea6049a965798e65e5f609370 and loads correctly.
+Resume that checkpoint:50000 remaining to60000.36500 logged v2 updates discarded;
+unlogged work unknown,plus previously documented crash/first-attempt discards.
+This is not resumption from46500 and must not be reported as such.
+New sources dump/residual64-fresh10m60k-recovery-v3 and standalone output
+artifacts/runs/residual64-fresh10m-60000-s47-recovery-v3. Restored AdamW10000,
+sampler/CPU/CUDA RNG and reconstructed/verified target prefix. Full independent
+decoded data identities retained. Same model/data/LR schedule and final target.
+Launcher4492;worker17216 verified at10050. Checkpoint saving now flushes/fsyncs,
+verifies ZIP CRC,then Windows write-through replacement; retains previous and
+5000-step milestone backups. This reduces risk,not proof against disk/power loss.
+Original v2 sources/evidence untouched. Prior validation memory peaks unavailable.
+All final/best replay/export/hash checks retained;oneCPU16worker,no env changes,
+extra experiments,automatic retry or automation. Sources frozen at launch.
+
+# Fresh60k reboot recovery TRAINING (2026-10-08)
+
+User reported PC reboot and requested continuation. No surviving Python/uv
+workers. Original last.pt is incomplete (missing ZIP central directory); original
+training log has a null tail,with250 consecutive durable rows after10000. Saved
+status says10300,so at least300 updates were executed after the recovery point;
+exact additional unlogged work unknown. Preserve original files and stale locks.
+Verified best.pt at10000 is readable,finite,and matches exact model/source/data;
+SHA ad6bdbfbf413c135afd66b5dc7d684630c3b856ea6049a965798e65e5f609370.
+Resume only50000 remaining to60000,not a new60000 budget. Restore AdamW10000,
+sampler,CPU/CUDA RNG; reconstruct and verify original target-schedule hash.
+Original model/data/LR schedule unchanged. Frozen recovery sources:
+dump/residual64-fresh10m60k-recovery-v2. Output standalone artifacts/runs/
+residual64-fresh10m-60000-s47-recovery-v2. Original10k log/validation prefix copied
+for full cumulative audits; previous26 discarded first-attempt updates retained.
+Worker25864 verified update10025; independent complete data
+identities and resume checks passed. V1 recovery stopped before updates on damaged memory.json metadata. V2 reconstructs
+training memory from retained logs; prior validation memory peaks unavailable.
+No decoded-data/native failure. Checkpoint
+and null-tail damage diagnosed after reboot; no parser/data-identity bypass.
+OneCPU16worker,uv run --no-sync,no environment changes,extra experiments,automation
+or deletion. Do not alter frozen sources or blindly retry new failures. Full
+final/best validation/export/hash audits retained. No inference promotion.
+
+# Fresh60k user-confirmed restart TRAINING (2026-10-08)
+
+User explicitly confirmed they stopped the first attempt and requested restart.
+This explains missing controller/worker; do not label it an unexplained native
+training crash. First attempt preserved in artifacts/runs/
+residual64-fresh10m-60000-s47-v1-user-stopped-26:26 logged discarded updates,
+possible unlogged in-flight work,no trained checkpoint (initial.pt retained).
+Same frozen sources/recipe restarted fresh60000 updates,launcher28032,
+worker22900 verified at update1. All in-worker identities and both-repo
+fresh output parity passed again. No further weights deleted, no environment
+changes or additional experiments. Previous launch PIDs below are historical.
+Restart receipt:dump/residual64-fresh10m60k-v1/restart_receipt.json.
+
+# Fresh selected 10.46M / 60,000 updates TRAINING (2026-10-08)
+
+Latest user explicitly requested fresh 10M,60000 updates,delete current11M,
+same64:1/context512,selected plain residual attention,and higher then decaying LR.
+One fresh seed47 run:10456576 total/7327232 encoder parameters,code125,width256,
+4encoder/1decoder,Branch Sigmoid/RoPE/depth_route. Zero inherited weights or
+optimizer updates; fresh AdamW. Same25/25/25/25 short/packed/uniform/pattern mix,
+micro2 x accumulation4. Warmup1000 to6e-4 then cosine to1e-5 at60000.
+Launcher24860/controller22044/worker12192 verified past update1. Complete data
+identities,source checks,and exact fresh logits/vector parity across both repos
+passed inside worker. Initial336.04/376MiB allocated/reserved,not final peaks.
+Only four positively verified completed11M checkpoints were deleted:initial,last,
+best,encoder. Result/data/source history and Step1 retained; deletion manifest in
+dump/residual64-fresh10m60k-v1/deleted_11m_weights.json. Earlier113 deletions remain.
+Two conservative process-guard refusals preceded launch; no updates/deletions
+in those attempts. Elevated inspection identified VSCode formatter/Jupyter
+processes and GPU was idle. PowerShell startup failed before commands with
+BadImageFormatException/security configuration read error; unchanged environment,
+existing pinned Python via CMD used instead. Earlier runtime failures unresolved.
+Sources and recipe now frozen. Do not modify or duplicate workers or automatically
+retry new native/data failures. One worker CPU16,uv run --no-sync,no extra probes,
+no additional training or automation. Full final/best replays and hashes retained.
+Output standalone artifacts/runs/residual64-fresh10m-60000-s47-v1. Config points
+to this fresh run; no trained-quality claim or100% guarantee. See
+docs/residual64_fresh10m60k.md. Old999/1000 weights were deleted previously.
+
+# Fresh11.02M residual64 COMPLETE; recovery target FAILED (2026-10-08)
+
+All10000 seed47 fresh updates finished;final=selected best at10000. Short0/1000
+exact,72.2112932%tokens,NLL1.3240414422;packed0/206exact,73.2611724%tokens,
+NLL1.2930058041. Same11022336total/7610112encoder,context512/span64/code142.
+Training434.5425/492MiB allocated/reserved;55.66min summed update-loop time excludes
+validation/preparation. No worker failures;GPUidle. Controller full final/best
+replays,encoder parity and all hashes passed. Independent pinned read-only rehash
+verified result/final/best/encoder/record/frozen-source hashes and10000-step sequence.
+Loss still improving:last shortNLL1.5014at9000,1.4151at9500,1.3240at10000. Cannot
+infer sufficient future budget or guarantee100%. This random-start recipe failed
+the reconstruction target;not comparable to old44k inherited/curriculum result.
+Old999/1000 checkpoint was deleted in user-authorized cleanup;only historical
+records remain. Fresh checkpoint saved;no additional training authorized. Config
+already points to fresh last.pt;do not describe it as high-accuracy or ready
+lossless inference. Product-format encoder export remains pending (research
+encoder.pt exists with audited parity). See docs/residual64_fresh11m.md.
+# Fresh11.02M residual64 TRAINING; old compressor weights deleted (2026-10-08)
+
+User-authorized fresh10K run launched:worker11280,launcher30540,verified50/10000
+updates. Exact11022336total/7610112encoder parameters;seed47,code142,64:1,512ctx,
+zero inherited weights/optimizer/updates. Initialization receipt confirms fresh.
+Full in-worker data/source/parameter checks passed;initial.pt saved before updates.
+Early432.62/476MiB allocated/reserved,GPU635/8188MiB. No launch failure.
+Old continuation stopped at7105 logged recovery updates. After broad-deletion
+rejection,read-only metadata classification positively verified113 compressor
+checkpoints (encoder+compress tensors,positive span,no Step1 blocks tensors).
+Narrow deletion then approved and completed:11635507119bytes,including999/1000
+winner and old encoder exports. Three non-checkpoint files retained. Step1 weights,
+data,logs,records,source snapshots preserved. Old optimizer resumption no longer
+possible from deleted weights;historical scores retained as historical only.
+Manifest dump/residual64-fresh11m-v1/verified_compressor_weights.json and deletion
+log retained. Both repo defaults now target fresh model;no encoder export yet.
+Fresh training sources/recipe frozen;no automatic new failure retry,no extra budget.
+Progress dump/residual64-fresh11m-v1/progress.ps1. See docs/residual64_fresh11m.md.
+# Fresh residual64 approximately11M AUTHORIZED (2026-10-08)
+
+Latest user:from scratch,delete old models,11M with10Kupdates. Supersedes old
+compressor weight-retention rule only for verified compressor weights,including
+999/1000winner;Step1 weights,data,logs,records retained. Old continuation process
+tree stopped at7105 logged recovery updates. No active continuation authorized.
+New one x10000 TOTAL fresh updates,seed47,max1worker,11022336total/7610112encoder
+params. code_features142 vs125;stored vector256,span64,context512,width256,
+4enc/1dec plain residual/BranchSigmoid/RoPE unchanged. No parentweight/optimizer
+transfer. AdamWwarmup250to3e-4,cosine3e-5;usual dataset mixture and memory guards.
+Initial save0,every250 thereafter;validation500,full final/best audits retained.
+No extra probes,environment changes or automatic new native/data failure retries.
+Source dump/residual64-fresh11m-v1;output standalone artifacts/runs/
+residual64-fresh11m-10000-s47-v1. Prepared,launch observation follows.
+Broad cleanup auto-review rejected:scope not proven Step1-safe. Read-only checkpoint
+classification underway;delete only positively verified compressor weights after
+narrow approval. No deletion has occurred yet. See docs/residual64_fresh11m.md.
+# Residual64 recovery TRAINING (2026-10-08)
+
+Worker31944 verified at50/14500 recovery updates (5550/20000 original schedule),
+launcher20524. In-worker complete identities,archived computational sources,parent
+and finite-state checks passed. Resume receipt confirms AdamW19500 and all sampler/
+CPU/CUDA RNG restored. Early425.20/458MiB allocated/reserved;not final peaks.
+No launch failure. Frozen recovery sources and recipe;no automatic new failure retry.
+Previous999/1000 inference model unchanged. Progress dump/residual64-recovery-v1/progress.ps1.
+# Residual64 interrupted-run recovery AUTHORIZED (2026-10-08)
+
+Latest user says run and train longer for100%. Resume remaining14500 updates from
+verified step5500 of interrupted20000 run;49500to64000 cumulative. No new20000
+budget. Original log5545 means45 discarded logged updates will be re-executed;
+possible unlogged work unknown. No original process remains;cause of interruption
+unknown,no native-crash claim. Original checkpoints/logs/locks preserved.
+New sources dump/residual64-recovery-v1;separate standalone output artifacts/runs/
+residual64-recovery-14500-v1. Parent SHA1c2749d12e33854a6ab2b2e6ff55e0507c7d0228a4495d69d63c6ec31448f604.
+Exact model/config/archived sources/finite optimizer checked;restore AdamW19500,
+sampler/CPU/CUDA RNG. Same10456576params,64:1,context512,lr3e-5,data mixture.
+SingleCPU16 worker;uv run --no-sync,no environment changes. All in-worker complete
+identities and final audits retained;no automatic new native/data failure retries.
+Sources freeze at launch. Previous999/1000 selected checkpoint unchanged. No extra
+models,probes or automation. Previous pinnedPowerShell documentation write crashed
+CLR0x80131506 after successful read-only checkpoint check;failure still preserved.
+# Residual64 20,000-step continuation TRAINING (2026-10-08)
+
+Launch verified: worker16392 completed first optimizer update of20000;launcher29372.
+All in-worker data/source/parent checks passed. Resume receipt confirms full AdamW
+state(step14000),sampler and CPU/CUDA RNG restored. Initial GPU627/8188MiB;
+first-update training404.30/448MiB allocated/reserved,not final peaks. No launch
+failure. Notebook training sources and recipe frozen. Progress
+ dump/residual64-20000-v1/progress.ps1. Budget one x20000 additional,44000to64000
+cumulative. No other training or inference promotion;no automation.
+# Residual64 20,000-step continuation AUTHORIZED (2026-10-08)
+
+Latest user explicitly requested onlysame10.46M model,64:1,context512,20000updates.
+One20000 ADDITIONAL run from44000 to64000 cumulative. Previous15000 recipe was
+prepared only and is NOT launched in addition. Run-specific recipe
+ dump/residual64-20000-v1/recipe.json;standalone notebook runner unchanged.
+Restore optimizer/sampler/CPU/CUDA RNG;constant3e-5,same data mixture/model size.
+Full in-worker identities/source/parent/finite-gradient/memory checks and final
+replays/hashes retained. Prior separate probes/initial validation waivers remain.
+Max1worker,pinnedCPU16,uv run --no-sync,no environment changes,no blind new native/
+data failure retries. Output standalone artifacts/runs/residual64-continue-20000-v1.
+Sources/recipe frozen at launch. No model promotion or extra experiments. See
+ docs/residual64_20000.md. No automation. Prepared;launch observation follows.
 # Selected-model handoff COMPLETE (2026-10-08)
 
 User ended research and selected the saved64:1 context512 model in BOTH repos.

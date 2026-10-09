@@ -1,3 +1,9 @@
+# Fresh11.02M replacement in preparation
+
+The user requested fresh training and deletion of old compressor weights. The
+previous64:1/999-of1000 checkpoint is deleted;historical scores below describe
+retired models,not the new model. The new run is10000 fresh updates at64:1/context512.
+See docs/residual64_fresh11m.md. Step1 remains intact.
 # Selected models — Steps1 and2 complete
 
 Step1: **Branch Sigmoid**,8.65M parameters,webNLL3.820069/chat2.411506.
