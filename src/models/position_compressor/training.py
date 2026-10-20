@@ -4,6 +4,14 @@ Poly-1 adds epsilon * (1 - probability_of_correct_token) to token cross-entropy.
 The default epsilon is zero. Exact-match counts remain evaluation metrics.
 """
 
+if __name__ == '__main__':
+    import sys
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+    from models.training_cli import main as training_main
+    training_main(model='compressor')
+    raise SystemExit(0)
+
 import math
 import random
 import time
@@ -154,3 +162,8 @@ class Session:
             self.device.type,
             "bf16" if self.device.type == "cuda" else "fp32",
         )
+
+
+if __name__ == '__main__':
+    from models.training_cli import main
+    main(model='compressor')

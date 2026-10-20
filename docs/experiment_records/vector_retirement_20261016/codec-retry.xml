@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="1.442" timestamp="2026-10-16T14:16:26.084104+05:00" hostname="ROG"><testcase classname="tests.test_branch_compressor.BranchCompressorTests" name="test_codec_roundtrip_and_legacy_rejection" time="1.376" /></testsuite></testsuites>

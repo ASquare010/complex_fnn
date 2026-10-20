@@ -29,6 +29,8 @@ where = ["src"]
 
 [tool.setuptools.package-data]
 config = ["*.json", "data/*.json"]
+"models.raw_transformer" = ["source_migration.json", "chat_entry_migration.json"]
+"chat_data" = ["source_migration.json"]
 
 [tool.ruff]
 line-length = 100

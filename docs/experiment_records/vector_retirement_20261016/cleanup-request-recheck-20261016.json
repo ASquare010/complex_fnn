@@ -1,0 +1,15 @@
+{
+  "verified_utc": "2026-10-16T11:28:42.285982+00:00",
+  "scope": "Repeated growing/vector retirement request; no new model or training changes",
+  "protected_files_checked": 124,
+  "protected_failures": [],
+  "retired_targets_checked": 316,
+  "retired_targets_remaining": [],
+  "retired_source_filename_matches": [],
+  "external_prefix_cache_absent": true,
+  "evidence_archive_entries": 1274,
+  "binary_or_python_evidence_entries": [],
+  "new_deletions": 0,
+  "new_training_updates": 0,
+  "passed": true
+}

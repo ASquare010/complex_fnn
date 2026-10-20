@@ -1,0 +1,498 @@
+{
+  "dump\\data\\unified-chat-v4\\audit.json": {
+    "bytes": 4389,
+    "sha256": "5be907682348a8374b4c91dca44bbacc3bf476b78533a807d8207b76561c0f9a"
+  },
+  "dump\\data\\unified-chat-v4\\dev.jsonl": {
+    "bytes": 14105890,
+    "sha256": "89f18f3f5906afd9c56776280c6c82fb240ab598324148737d6cf2e41146d343"
+  },
+  "dump\\data\\unified-chat-v4\\dev.loss.bin": {
+    "bytes": 3305754,
+    "sha256": "5df5db3d03d284f0bce78e6a67829ce97ab6d825865b88f4b281f500106e22d0"
+  },
+  "dump\\data\\unified-chat-v4\\dev.segments.jsonl": {
+    "bytes": 1237934,
+    "sha256": "c64f7d42ecad5d61b6e00064618866fb97dc442c5686931a21318e7147a8e463"
+  },
+  "dump\\data\\unified-chat-v4\\dev.tokens.bin": {
+    "bytes": 6611508,
+    "sha256": "b4498ef2de8de66511630d805b11cc18d038fb54027ee25c0d9c79eb0d13f8e9"
+  },
+  "dump\\data\\unified-chat-v4\\extension_audit.json": {
+    "bytes": 2750,
+    "sha256": "7c68219a8db4466b2a5b69c7ca6ddca294413e9bcc24e2fce5c7bb00900ff1c0"
+  },
+  "dump\\data\\unified-chat-v4\\manifest.json": {
+    "bytes": 29270,
+    "sha256": "f769f6421a88b416f1c9a9bc13558826c9e17ed10021a7b7d4bd5a9c57cae0c2"
+  },
+  "dump\\data\\unified-chat-v4\\samples.json": {
+    "bytes": 172169,
+    "sha256": "f2bb4dcf4d17f6a663ba9f47eed8a6387a6e9fd066a915f81a4e9b15240d9747"
+  },
+  "dump\\data\\unified-chat-v4\\test.jsonl": {
+    "bytes": 13956381,
+    "sha256": "75fc13a748bf51b2ee651ed2cd839c1f715a6d584b74694ceb56bb0211681bed"
+  },
+  "dump\\data\\unified-chat-v4\\test.loss.bin": {
+    "bytes": 3259780,
+    "sha256": "af69aeb495688fb346a6f5c860b526919c2f4d07ce393ac0719639d6e76ab553"
+  },
+  "dump\\data\\unified-chat-v4\\test.segments.jsonl": {
+    "bytes": 1209034,
+    "sha256": "4544e8e8d8454fd93041befbd439106fc0d2d016979710964976f86c82ec45e0"
+  },
+  "dump\\data\\unified-chat-v4\\test.tokens.bin": {
+    "bytes": 6519560,
+    "sha256": "7d1a8674e076f3b7d5ed71ffd94b6e36c7bf65117e594af87eeac5ab6a93810f"
+  },
+  "dump\\data\\unified-chat-v4\\tokenizer.json": {
+    "bytes": 107248,
+    "sha256": "f7797957af1aa8f77656599def7d31a44062bd800ad8179713a3f3af01b504e5"
+  },
+  "dump\\data\\unified-chat-v4\\train.jsonl": {
+    "bytes": 1426003408,
+    "sha256": "929f5c67e22de0a8e45bf5adfb44e0f79526c5c503c4f52b3c16a96db51c6825"
+  },
+  "dump\\data\\unified-chat-v4\\train.loss.bin": {
+    "bytes": 331750037,
+    "sha256": "1d0b46d821c4e0504c75a3819c9ac8d3da78eaf4a5d15366ae60743cdfecf43b"
+  },
+  "dump\\data\\unified-chat-v4\\train.segments.jsonl": {
+    "bytes": 124873743,
+    "sha256": "93db07d0bbaf0072f3be2173930b9370207493450416238b21e5b04b3d2885b7"
+  },
+  "dump\\data\\unified-chat-v4\\train.tokens.bin": {
+    "bytes": 663500074,
+    "sha256": "17edcd452c73b6365e492aa85a187f34a1e67ed1cf893be839fc1c2faec54454"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\best.pt": {
+    "bytes": 278687163,
+    "sha256": "9a960cfc46034ee9bc9e5403f0d17ef6594cb06a4504883fd32a8b32c234e381"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\best.sha256": {
+    "bytes": 64,
+    "sha256": "d1ba41e8f07d617ec2b9ba31cafb003dc7d89c45b52d4f72f0c73a4508bb1569"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\last.pt": {
+    "bytes": 278687163,
+    "sha256": "70b666f9e601fc33235d16f930a328a24e79062204acd61e20e60300cb7d8a1d"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\last.sha256": {
+    "bytes": 64,
+    "sha256": "b395e9e57d46ee619914c7eb5de41460efce934d26f5e574138c96850634ac09"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\previous.pt": {
+    "bytes": 278687163,
+    "sha256": "70b666f9e601fc33235d16f930a328a24e79062204acd61e20e60300cb7d8a1d"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\previous.sha256": {
+    "bytes": 64,
+    "sha256": "b395e9e57d46ee619914c7eb5de41460efce934d26f5e574138c96850634ac09"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\recipe.json": {
+    "bytes": 1313,
+    "sha256": "c059afa3f4d022917599e578d78cebb0a4370f8a17154f5176824de9d87b3230"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\resume-1791971826825269500.json": {
+    "bytes": 230,
+    "sha256": "7d5738af888b9432af0d99008765e5102c20906d05e887586d7c066950bcd269"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\source.zip": {
+    "bytes": 55820,
+    "sha256": "cacd58f832d16f4e120d2cfd7658f132b82cc58a9c580269aba448a1bc333b86"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\status.json": {
+    "bytes": 216,
+    "sha256": "f037d062161f4d08334870534783265535118f7da112fd19d8f538fe0c04465a"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\training.jsonl": {
+    "bytes": 18069484,
+    "sha256": "148c7fec807a8565411f0b5d5791f6e2e7ab0e7b6553a269d51d761ad05ffcf4"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\training.jsonl.discarded-1791971826746267300": {
+    "bytes": 47962,
+    "sha256": "372c2d350f90fb8e4248465c20d28f5a6013dfa6c2c2e6d82ac222b68bc8002c"
+  },
+  "dump\\encoder-memory-64-attnres-unified-v4\\validation.jsonl": {
+    "bytes": 67865,
+    "sha256": "4043a710a9d5b502a154a36592fbf8ccf2cf74421387ce12e6a3f4906db198cb"
+  },
+  "dump\\encoder-memory-64-crossattn-unified-v4\\best.pt": {
+    "bytes": 278606787,
+    "sha256": "9f96ae069dc5d7afd71d39f3024e57888e82b960a3f2230aaa35a07a6f94a1e6"
+  },
+  "dump\\encoder-memory-64-crossattn-unified-v4\\best.sha256": {
+    "bytes": 64,
+    "sha256": "bbbccfdbfd10e17c41cfc202ec7219287440b3fcde5eb0c4d47a55c3bbcf835f"
+  },
+  "dump\\encoder-memory-64-crossattn-unified-v4\\last.pt": {
+    "bytes": 278606787,
+    "sha256": "9f96ae069dc5d7afd71d39f3024e57888e82b960a3f2230aaa35a07a6f94a1e6"
+  },
+  "dump\\encoder-memory-64-crossattn-unified-v4\\last.sha256": {
+    "bytes": 64,
+    "sha256": "bbbccfdbfd10e17c41cfc202ec7219287440b3fcde5eb0c4d47a55c3bbcf835f"
+  },
+  "dump\\encoder-memory-64-crossattn-unified-v4\\previous.pt": {
+    "bytes": 278606787,
+    "sha256": "4273067dcebb916931233c7c2547943352ba44c6dc97c3f99e741074173b2a2a"
+  },
+  "dump\\encoder-memory-64-crossattn-unified-v4\\previous.sha256": {
+    "bytes": 64,
+    "sha256": "3648d34a73d49ba8bf0358c1a93e423b19f24d9ed60fef76d78f1c732a6ab75f"
+  },
+  "dump\\encoder-memory-64-crossattn-unified-v4\\recipe.json": {
+    "bytes": 1472,
+    "sha256": "9b1916b82174e7a7e8ac4ca87e55402ffca9b8a4d499ed95267135de5231e795"
+  },
+  "dump\\encoder-memory-64-crossattn-unified-v4\\source.zip": {
+    "bytes": 57747,
+    "sha256": "a4194ac6880dd3392a82021611d5a09cda6f8759558e909cf28283a6343dee3d"
+  },
+  "dump\\encoder-memory-64-crossattn-unified-v4\\status.json": {
+    "bytes": 2568,
+    "sha256": "86e97589cd2386031de18810ff45622c908390c6480571f20b6d6594e47a27cd"
+  },
+  "dump\\encoder-memory-64-crossattn-unified-v4\\training.jsonl": {
+    "bytes": 23800256,
+    "sha256": "b129ac1a62d1e2781cf262fddbabb4e48efb286b1a5531873096c3bf537749e2"
+  },
+  "dump\\encoder-memory-64-crossattn-unified-v4\\validation.jsonl": {
+    "bytes": 89353,
+    "sha256": "079e471c462f3208ba0e618d0ab8b6b01fe9178502ece3a19e2904c23390a12b"
+  },
+  "dump\\encoder-memory-64-unified-v4\\best.pt": {
+    "bytes": 278586883,
+    "sha256": "047d5bc295e837663fd294ffa968c6286198211cd73c25141063dc0ff88a1cb0"
+  },
+  "dump\\encoder-memory-64-unified-v4\\best.sha256": {
+    "bytes": 64,
+    "sha256": "dc18490a77704608d385baabf2bfed742384a991a1e34686c1694f937686043b"
+  },
+  "dump\\encoder-memory-64-unified-v4\\last.pt": {
+    "bytes": 278586883,
+    "sha256": "047d5bc295e837663fd294ffa968c6286198211cd73c25141063dc0ff88a1cb0"
+  },
+  "dump\\encoder-memory-64-unified-v4\\last.sha256": {
+    "bytes": 64,
+    "sha256": "dc18490a77704608d385baabf2bfed742384a991a1e34686c1694f937686043b"
+  },
+  "dump\\encoder-memory-64-unified-v4\\previous.pt": {
+    "bytes": 278586883,
+    "sha256": "96693c631f6adc9a08414f3c49327956eed86e25ce27affaf2a638180f2b8f7e"
+  },
+  "dump\\encoder-memory-64-unified-v4\\previous.sha256": {
+    "bytes": 64,
+    "sha256": "92f4afd4142c8d4bc10a20df6d09d0d31279260589069366a254754cc367252c"
+  },
+  "dump\\encoder-memory-64-unified-v4\\recipe.json": {
+    "bytes": 1109,
+    "sha256": "937874f3fd68c93cb148cba6944b0d33c15e2947e1442985ed857cd7cd7e6ab4"
+  },
+  "dump\\encoder-memory-64-unified-v4\\source.zip": {
+    "bytes": 45101,
+    "sha256": "7613e802ee3970467c5d1e690f5b5108072cc63ae1a9f495190a768ce0a6471b"
+  },
+  "dump\\encoder-memory-64-unified-v4\\status.json": {
+    "bytes": 2565,
+    "sha256": "149f9b7e8e9ab1f61df4eee61016372fc52a1bdf3c561b5b6ac134fdec454a2f"
+  },
+  "dump\\encoder-memory-64-unified-v4\\training.jsonl": {
+    "bytes": 23800652,
+    "sha256": "af7bd6e53806ba32d532ba01109e6061412077d7d6fc7fbac172e78a8917d159"
+  },
+  "dump\\encoder-memory-64-unified-v4\\validation.jsonl": {
+    "bytes": 89360,
+    "sha256": "979f27ac8450e35343e8a515c5dbf952636e261a1afce038ebeb2830764fae3c"
+  },
+  "dump\\encoder-memory-unified-v4\\best.pt": {
+    "bytes": 278586499,
+    "sha256": "e17b9a8469b5a8c996cc64ff0677eb1c8f52410af52c1c179fd317263b4d9e2d"
+  },
+  "dump\\encoder-memory-unified-v4\\best.sha256": {
+    "bytes": 64,
+    "sha256": "b9ce337ce520bad8d3e51c9f535f387c3b63f876b952bd887e3c8e19b129bd1f"
+  },
+  "dump\\encoder-memory-unified-v4\\last.pt": {
+    "bytes": 278586499,
+    "sha256": "e17b9a8469b5a8c996cc64ff0677eb1c8f52410af52c1c179fd317263b4d9e2d"
+  },
+  "dump\\encoder-memory-unified-v4\\last.sha256": {
+    "bytes": 64,
+    "sha256": "b9ce337ce520bad8d3e51c9f535f387c3b63f876b952bd887e3c8e19b129bd1f"
+  },
+  "dump\\encoder-memory-unified-v4\\previous.pt": {
+    "bytes": 278586499,
+    "sha256": "8b130001f63e41d8e5671018977a0ba51d9591377820204426f73b08648b6eee"
+  },
+  "dump\\encoder-memory-unified-v4\\previous.sha256": {
+    "bytes": 64,
+    "sha256": "182e9b9aa13a8ef74894294ea5ec1f8cea5090930057c4bcecd948f1314659c2"
+  },
+  "dump\\encoder-memory-unified-v4\\recipe.json": {
+    "bytes": 795,
+    "sha256": "79adbdb95bc5d9ed5106106068703ffe28c13b1c9a1d7f98261f40aa9ceec053"
+  },
+  "dump\\encoder-memory-unified-v4\\source.zip": {
+    "bytes": 33013,
+    "sha256": "a4ca5bb0abaf1df3c7328d8aeddb614dccf9bcbe51bd5e9469a4543cbfb1f9ea"
+  },
+  "dump\\encoder-memory-unified-v4\\status.json": {
+    "bytes": 2494,
+    "sha256": "9878b4334671b3865685ce424bed24535ed7a75fbf2257f54db289e736f57ba6"
+  },
+  "dump\\encoder-memory-unified-v4\\training.jsonl": {
+    "bytes": 23806833,
+    "sha256": "d0c974c5f6258ce327a24b8318c31b77fc58e698a4dbadba5c94ed9407c3c626"
+  },
+  "dump\\encoder-memory-unified-v4\\validation.jsonl": {
+    "bytes": 89335,
+    "sha256": "241c50e2d2e6f0fcf93785cae2351be286a6cac0e6654fd83dfec3c500ee1ea5"
+  },
+  "dump\\pretrained-latent64-fced6bd\\encoder.pt": {
+    "bytes": 37831922,
+    "sha256": "96f3b38735355cec0f0e8693232f3fd3f80bc411fd4e06b8218449cc35949bd7"
+  },
+  "dump\\pretrained-latent64-fced6bd\\model.pt": {
+    "bytes": 50352564,
+    "sha256": "abc271f5d1de3f8168ed07a5c0351e71def86c849745791d230f0b02efad91f6"
+  },
+  "dump\\pretrained-latent64-fced6bd\\prepare_encoder.py": {
+    "bytes": 2773,
+    "sha256": "9ac4905029ba3c7c1f60fd815ef5ffbb7e46e39b33681eca6dd276a234f71d93"
+  },
+  "dump\\pretrained-latent64-fced6bd\\tokenizer.json": {
+    "bytes": 107248,
+    "sha256": "f7797957af1aa8f77656599def7d31a44062bd800ad8179713a3f3af01b504e5"
+  },
+  "dump\\pretrained-latent64-fced6bd\\verification.json": {
+    "bytes": 1757,
+    "sha256": "51b412868811bc4448d3d845028d8f97e2a52eeb0a855e4089f6103f83b84849"
+  },
+  "dump\\token-memory-64-cache-v4\\dev.f32": {
+    "bytes": 50348032,
+    "sha256": "7f211094630e0dacf15958b519941f147f676698c30cc35c9701013b69d40b99"
+  },
+  "dump\\token-memory-64-cache-v4\\dev.json": {
+    "bytes": 760,
+    "sha256": "6248042e5dce0e26e4a2be0081878963fbe5a3fb031a7ed3727d8b3ba3cf4492"
+  },
+  "dump\\token-memory-64-cache-v4\\train.f32": {
+    "bytes": 5056403456,
+    "sha256": "8ec4f1237488aafaa7bdf36b48cab16d9873c98108fddc084ae927a2eb7d0191"
+  },
+  "dump\\token-memory-64-cache-v4\\train.json": {
+    "bytes": 765,
+    "sha256": "c07fdbdd5850b6dda7accde791ce67aad5b38edb11744949531c8d973c0b8b9c"
+  },
+  "src\\chat_data\\__init__.py": {
+    "bytes": 78,
+    "sha256": "15547d640aff83cc0ed8e55afa1823bacde34e6b0e0f7097d6d3b8fdab1b3c83"
+  },
+  "src\\chat_data\\dataset.py": {
+    "bytes": 3168,
+    "sha256": "00aeb5162876f889b2d3a7a20d28ac9fe218cbb589555fe658f19fbd3b7a68fd"
+  },
+  "src\\chat_data\\format.py": {
+    "bytes": 1621,
+    "sha256": "86fd6aec52d99785cce27e8a6dab508faa0e1b7c651fdf7c44f0d44d5d3d7415"
+  },
+  "src\\chat_data\\training.py": {
+    "bytes": 18933,
+    "sha256": "0bfac7cd338d96ddee766080bb1552a0db30aefb5ef2080a8e3084983ff8ff0c"
+  },
+  "src\\chat_data\\unified_format.py": {
+    "bytes": 1860,
+    "sha256": "59dd012cafe8037b401233a50b562889223c662b45b3b84e5b95e1652d39d403"
+  },
+  "src\\models\\branch_sigmoid\\__init__.py": {
+    "bytes": 32,
+    "sha256": "43023cefd0ef3e82472a3ae74e692ec3e993f4ebf8d7e7896c6e2d5cc8a3f640"
+  },
+  "src\\models\\branch_sigmoid\\cli.py": {
+    "bytes": 159,
+    "sha256": "fe148c36ba37ff10149275c6534cc2a74333b9bde3008fdba32a17c49462d1ac"
+  },
+  "src\\models\\branch_sigmoid\\data.py": {
+    "bytes": 3672,
+    "sha256": "7f798360df77774082eb1734cd6a8f890c0ee899ca957f95ed80ec11f2e9b5b5"
+  },
+  "src\\models\\branch_sigmoid\\data_identity.py": {
+    "bytes": 4687,
+    "sha256": "f8e60fab4c8279f30e9e5f877a129fe4bfebb3be035d1b47510f31170ff728cc"
+  },
+  "src\\models\\branch_sigmoid\\loader.py": {
+    "bytes": 1781,
+    "sha256": "a6533b3d57e3eca571ed08f0bda8efc80bd46c1b36207eec08d36418b2087b4b"
+  },
+  "src\\models\\branch_sigmoid\\runtime.py": {
+    "bytes": 360,
+    "sha256": "334d84255285f0dfbf0a08946fdbfb34a9ed97d37296ea779307684ab43d758c"
+  },
+  "src\\models\\branch_sigmoid\\training.py": {
+    "bytes": 9604,
+    "sha256": "765a6f154dc7deb9252b9e3adf0d6db241dad9e3798fd13047feb32bf786eb55"
+  },
+  "src\\models\\branch_sigmoid\\transformer.py": {
+    "bytes": 3741,
+    "sha256": "871aaeb110dd0e39ef182179f226e543657421ab77c1985fafc9c774c751aeaa"
+  },
+  "src\\models\\components.py": {
+    "bytes": 3251,
+    "sha256": "8e51e5de2b316ad921c83cb98afe135a871767b87addcdb0884e36344b11a44a"
+  },
+  "src\\models\\position_compressor\\cli.py": {
+    "bytes": 168,
+    "sha256": "a6a58e74007a41e96d7205926846f916015b0d7f4ee8f3d95abf40b370e0a7ac"
+  },
+  "src\\models\\position_compressor\\codec.py": {
+    "bytes": 9936,
+    "sha256": "2d4b3cd74397490c454fb3881b9cd04fa87ccad90520e14e0193abfd8a06041a"
+  },
+  "src\\models\\position_compressor\\data.py": {
+    "bytes": 6915,
+    "sha256": "0a18c304b3fdea98c1db8cf85b9ce3cdc95bcacbe596ce1bf3eb3c50cf12041c"
+  },
+  "src\\models\\position_compressor\\evaluation.py": {
+    "bytes": 3769,
+    "sha256": "ab78bafeab923f9c3e6a575f48b39aefa1a92d476ef350d0c85bb71a2540e5eb"
+  },
+  "src\\models\\position_compressor\\ffn.py": {
+    "bytes": 757,
+    "sha256": "4e0727eda0b05968669c9e41dc06e53293b42766ce60f205a0e7529b8e496f7e"
+  },
+  "src\\models\\position_compressor\\residual.py": {
+    "bytes": 4258,
+    "sha256": "43ef05532eb1c733e40e41b07271451701d73760890e9173be3134ffcd8d41cc"
+  },
+  "src\\models\\position_compressor\\training.py": {
+    "bytes": 6746,
+    "sha256": "42b3b3577e799a058cd16e683be6adf01ed2807af3561c8db7a9bc18e6130184"
+  },
+  "src\\models\\position_compressor\\transformer.py": {
+    "bytes": 7665,
+    "sha256": "40fd21f56f4ca11a331e9f9f413c0f4dad03c7e233c5c246d57df1026e935161"
+  },
+  "src\\models\\raw_transformer\\__init__.py": {
+    "bytes": 69,
+    "sha256": "731745b4c081ef9feec8fa3c6f5cc62013fde047fe9ca2a149a941cbe0b23098"
+  },
+  "src\\models\\raw_transformer\\data.py": {
+    "bytes": 566,
+    "sha256": "f74f11e9bf8c1bf0f58cd3f44227f6f2ccd2ae4d9b142164f7fe2153b0b053d0"
+  },
+  "src\\models\\raw_transformer\\generation.py": {
+    "bytes": 750,
+    "sha256": "e11773b844ea6a38c9bca8b193a8923478ad9ac34e39df2c7f5b89e832554b3e"
+  },
+  "src\\models\\raw_transformer\\layers.py": {
+    "bytes": 1163,
+    "sha256": "9514b84c9927df04c6b8be669659e7f970c24d46774f9bbc3623393db4d11bff"
+  },
+  "src\\models\\raw_transformer\\runtime.py": {
+    "bytes": 965,
+    "sha256": "36a8960c053702b361380f606e4bc31908a1fe3c43a392560c10e9198c6cfe22"
+  },
+  "src\\models\\raw_transformer\\trainer.py": {
+    "bytes": 17549,
+    "sha256": "dc68c130d5283dbbfb45f84ea5bcb89b4a881f95f453fe097a48b89175d667a9"
+  },
+  "src\\models\\raw_transformer\\training.py": {
+    "bytes": 260,
+    "sha256": "108b68e907169928e6b6e3a9d3c9d3d0d31ec298c178bfd92f9d9e8484579e0f"
+  },
+  "src\\models\\raw_transformer\\transformer.py": {
+    "bytes": 1369,
+    "sha256": "1419c20ecce50b193d28c25754b380dca66ca87dac0316dace62fe8af94e9a7b"
+  },
+  "src\\models\\token_memory\\__init__.py": {
+    "bytes": 83,
+    "sha256": "b86b3dd295aa4261fec2aaf0d892417f471c54aa4eca946a575518d698dd2f53"
+  },
+  "src\\models\\token_memory\\data.py": {
+    "bytes": 2711,
+    "sha256": "8e75178a1f1d60f5266bb1c2fbe81db967889de07a939b67e28d5a4f0f81bc17"
+  },
+  "src\\models\\token_memory\\generation.py": {
+    "bytes": 990,
+    "sha256": "68a7258791a2074435fd97ee1ba43bebb922b7592a0916b2ee6ffdfe7a503bf2"
+  },
+  "src\\models\\token_memory\\prepare_data.py": {
+    "bytes": 3048,
+    "sha256": "6a79f229f9f447a083b7c6f7ab36b64df4a8ffccc0fa68785a094ed8af864126"
+  },
+  "src\\models\\token_memory\\runtime.py": {
+    "bytes": 2896,
+    "sha256": "e6b463e103b5388058c0000bceed3e03be518d2d45cd77b5e305fd3d578a3b25"
+  },
+  "src\\models\\token_memory\\training.py": {
+    "bytes": 14395,
+    "sha256": "7c83e9717537bcfa3e42486d97794af7177c1a5c66ea6ff70b8755e79aaceb76"
+  },
+  "src\\models\\token_memory\\transformer.py": {
+    "bytes": 3459,
+    "sha256": "94a6154b6e40b05597a67be4defb1b637a78f0ea240ea7b6e74dc4451dbb9666"
+  },
+  "src\\models\\token_memory_64\\__init__.py": {
+    "bytes": 85,
+    "sha256": "44b22a7ff440daca22794e889cb289f9ec2086675d321b3eaf9acad0ef891fac"
+  },
+  "src\\models\\token_memory_64\\cache.py": {
+    "bytes": 3627,
+    "sha256": "75764c20bfc94d5b7a013c13c6fda5d4be0aa8692c297fb1badfa1069ec578a4"
+  },
+  "src\\models\\token_memory_64\\data.py": {
+    "bytes": 4874,
+    "sha256": "126c1e6f4179242ff0a03d4a45c58efcfb1d8ff2e3bbb5ca332604cc07ab08c6"
+  },
+  "src\\models\\token_memory_64\\generation.py": {
+    "bytes": 1594,
+    "sha256": "a208c6487a3c202a7574b499902edfbbcd871d8fc92b8529701445c0aca5d038"
+  },
+  "src\\models\\token_memory_64\\preflight.py": {
+    "bytes": 8044,
+    "sha256": "ccfdd7bd92611033d7280e9fa01f08b14d3aa2586d2991733bce0fb1fea411e0"
+  },
+  "src\\models\\token_memory_64\\training.py": {
+    "bytes": 17696,
+    "sha256": "8c265f1d3d90d913790675af9f3c9e6ee21272987377fab1351bf8909bcb6bf4"
+  },
+  "src\\models\\token_memory_64\\transformer.py": {
+    "bytes": 4496,
+    "sha256": "8b5dc598ab8177bb741f5a2a9e9bea51c6926aa2a2549c687e83a6dc7c34cb7a"
+  },
+  "src\\models\\token_memory_64_crossattn\\__init__.py": {
+    "bytes": 76,
+    "sha256": "a6eb372ccb8fe058962c6bf1191b49dd99ad8018b197625ca3d515e3618525cf"
+  },
+  "src\\models\\token_memory_64_crossattn\\generation.py": {
+    "bytes": 1320,
+    "sha256": "f256e6d422968de6b46d960310b01a66011a9c21db3e52aaee0f0021cfd382f2"
+  },
+  "src\\models\\token_memory_64_crossattn\\preflight.py": {
+    "bytes": 4347,
+    "sha256": "f61a89e4b9027a990e15a886aaa116f28752869d3a16b29fde355cbdd193e840"
+  },
+  "src\\models\\token_memory_64_crossattn\\training.py": {
+    "bytes": 17969,
+    "sha256": "506c9cd5469777e9ff1ab21d6bf6be496cf1be93a2f65133a2c931dfe228c3ee"
+  },
+  "src\\models\\token_memory_64_crossattn\\transformer.py": {
+    "bytes": 12552,
+    "sha256": "f81733de87e7ba9be8f66a926a4ab68512e188e7ec2c56da99597b69963b413a"
+  },
+  "src\\models\\training_cli.py": {
+    "bytes": 26732,
+    "sha256": "4b38943f436e51c3a466193434db466407ab346f200914662d5b8ae688fc4b09"
+  },
+  "src\\models\\training_data.py": {
+    "bytes": 3483,
+    "sha256": "e0ebdfdc7ceb06a17de7ce08143aaef052f9beca9fa8053b58c216ca7cf931fe"
+  },
+  "src\\models\\training_tasks.py": {
+    "bytes": 3676,
+    "sha256": "1656ebaa583dc5ad8584dc2af8658b3019ebefdedfc84191787e0a9091e8e28f"
+  }
+}

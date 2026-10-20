@@ -1,0 +1,3673 @@
+{
+  "workspace": "D:\\Git\\complex_fnn",
+  "targets": [
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f",
+      "kind": "directory",
+      "bytes": 700640,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1791985930650595200
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1791985930651592800
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1791985930650595200
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1791985930669592600
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1791985930649592800
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1791985930649592800
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1791985930648592900
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1791985930797592600
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\cache\\completed\\dev.json",
+          "bytes": 759,
+          "mtime_ns": 1791985930799593000
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1791985930754592300
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\cache\\completed\\train.json",
+          "bytes": 745,
+          "mtime_ns": 1791985930764594200
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1791985930801595800
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1791985930814595200
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\cache\\dev\\identity.json",
+          "bytes": 542,
+          "mtime_ns": 1791985930792592200
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1791985930766593600
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1791985930789593900
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f\\cache\\train\\identity.json",
+          "bytes": 545,
+          "mtime_ns": 1791985930748592600
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full",
+      "kind": "directory",
+      "bytes": 3930267,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full\\best.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985932201623100
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985932220627000
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full\\last.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985932231625300
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985932270625400
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full\\previous.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985932174626800
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985932192626100
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full\\recipe.json",
+          "bytes": 1183,
+          "mtime_ns": 1791985931600105600
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full\\source.zip",
+          "bytes": 47109,
+          "mtime_ns": 1791985931595104500
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1791985932327623100
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full\\training.jsonl",
+          "bytes": 1341,
+          "mtime_ns": 1791985932114627100
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-full\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1791985932196625900
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause",
+      "kind": "directory",
+      "bytes": 3930564,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\best.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985933286139700
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985933305138300
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\last.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985933316136300
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985933335139300
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\previous.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985933256136100
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985933276142100
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\recipe.json",
+          "bytes": 1183,
+          "mtime_ns": 1791985933019624400
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\resume-1791985933017626100.json",
+          "bytes": 265,
+          "mtime_ns": 1791985933017626100
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\source.zip",
+          "bytes": 47109,
+          "mtime_ns": 1791985932552623300
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1791985933390136700
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\training.jsonl",
+          "bytes": 1341,
+          "mtime_ns": 1791985933193137000
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\training.jsonl.discarded-1791985933015624200",
+          "bytes": 32,
+          "mtime_ns": 1791985933015624200
+        },
+        {
+          "path": "dump\\token-memory-64-test-0275794ab64e444daca817e8df7a285f-pause\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1791985933281139400
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4",
+      "kind": "directory",
+      "bytes": 700639,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1791985711769116500
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1791985711769116500
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1791985711768117900
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1791985711788115700
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1791985711767118100
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1791985711767118100
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1791985711766116000
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1791985711947114400
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\cache\\completed\\dev.json",
+          "bytes": 758,
+          "mtime_ns": 1791985711957120100
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1791985711897115600
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\cache\\completed\\train.json",
+          "bytes": 745,
+          "mtime_ns": 1791985711908113900
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1791985711958119400
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1791985711971629400
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\cache\\dev\\identity.json",
+          "bytes": 542,
+          "mtime_ns": 1791985711942114700
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1791985711910115400
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1791985711938114600
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4\\cache\\train\\identity.json",
+          "bytes": 545,
+          "mtime_ns": 1791985711892115900
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full",
+      "kind": "directory",
+      "bytes": 3930272,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full\\best.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985713783144400
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985713801146800
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full\\last.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985713811145400
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985713829145500
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full\\previous.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985713754144300
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985713773147200
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full\\recipe.json",
+          "bytes": 1182,
+          "mtime_ns": 1791985713093144700
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full\\source.zip",
+          "bytes": 47116,
+          "mtime_ns": 1791985713092145800
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full\\status.json",
+          "bytes": 459,
+          "mtime_ns": 1791985713886144300
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full\\training.jsonl",
+          "bytes": 1341,
+          "mtime_ns": 1791985713694145500
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-full\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1791985713777144100
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause",
+      "kind": "directory",
+      "bytes": 3930571,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\best.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985714972180400
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985714992182100
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\last.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985715004180100
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985715023179300
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\previous.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985714939664300
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985714961668200
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\recipe.json",
+          "bytes": 1183,
+          "mtime_ns": 1791985714687663300
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\resume-1791985714684664000.json",
+          "bytes": 265,
+          "mtime_ns": 1791985714684664000
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\source.zip",
+          "bytes": 47116,
+          "mtime_ns": 1791985714165663300
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1791985715080180700
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\training.jsonl",
+          "bytes": 1341,
+          "mtime_ns": 1791985714876663500
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\training.jsonl.discarded-1791985714676663500",
+          "bytes": 32,
+          "mtime_ns": 1791985714676663500
+        },
+        {
+          "path": "dump\\token-memory-64-test-19e2dd4b3a00472792cdac0aba22d7a4-pause\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1791985714967179500
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf",
+      "kind": "directory",
+      "bytes": 702449,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792123124093242700
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792123124094244000
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792123124092243700
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792123124130310800
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792123124091238400
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792123124092243700
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792123124090231300
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792123124223479700
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1792123124226479100
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792123124156365100
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\cache\\completed\\train.json",
+          "bytes": 761,
+          "mtime_ns": 1792123124190919700
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792123124228479700
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792123124238996600
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792123124216962300
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792123124193925400
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792123124208441700
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792123124152365600
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full",
+      "kind": "directory",
+      "bytes": 3094149,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full\\best.pt",
+          "bytes": 439012,
+          "mtime_ns": 1792123124442800000
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123124457315900
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full\\last.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792123127011155700
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123127033191600
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full\\previous.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792123126879844000
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123126902487500
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full\\recipe.json",
+          "bytes": 1516,
+          "mtime_ns": 1792123124330140700
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full\\source.zip",
+          "bytes": 61958,
+          "mtime_ns": 1792123124329140900
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full\\status.json",
+          "bytes": 499,
+          "mtime_ns": 1792123127153868000
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full\\training.jsonl",
+          "bytes": 459,
+          "mtime_ns": 1792123126802731300
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-full\\validation.jsonl",
+          "bytes": 411,
+          "mtime_ns": 1792123126996130600
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause",
+      "kind": "directory",
+      "bytes": 3094425,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\best.pt",
+          "bytes": 439012,
+          "mtime_ns": 1792123127380720800
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123127396748800
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\last.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792123130143724400
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123130167755600
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\previous.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792123129998441300
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123130021995900
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\recipe.json",
+          "bytes": 1518,
+          "mtime_ns": 1792123127918577200
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\resume-1792123127915576200.json",
+          "bytes": 274,
+          "mtime_ns": 1792123127915576200
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\source.zip",
+          "bytes": 61958,
+          "mtime_ns": 1792123127238490100
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\status.json",
+          "bytes": 499,
+          "mtime_ns": 1792123130227370100
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\training.jsonl",
+          "bytes": 459,
+          "mtime_ns": 1792123129982414300
+        },
+        {
+          "path": "dump\\token-memory-64-test-2eaeb2baac984888a767c18b5a4172bf-unpacked-pause\\validation.jsonl",
+          "bytes": 411,
+          "mtime_ns": 1792123130118169500
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8",
+      "kind": "directory",
+      "bytes": 702450,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792138227125418000
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792138227126417500
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792138227125418000
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792138227146414700
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792138227123417600
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792138227124417800
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792138227123417600
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792138227306930600
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1792138227309928900
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792138227247418100
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\cache\\completed\\train.json",
+          "bytes": 762,
+          "mtime_ns": 1792138227280418900
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792138227323930400
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792138227332927500
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792138227301930400
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792138227282423800
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792138227296930300
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792138227243414600
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full",
+      "kind": "directory",
+      "bytes": 3956383,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full\\best.pt",
+          "bytes": 1294222,
+          "mtime_ns": 1792138229458971700
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138229480973700
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full\\last.pt",
+          "bytes": 1294222,
+          "mtime_ns": 1792138229494972600
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138229514974300
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full\\previous.pt",
+          "bytes": 1294222,
+          "mtime_ns": 1792138229418973100
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138229441974000
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full\\recipe.json",
+          "bytes": 1474,
+          "mtime_ns": 1792138228502449600
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full\\source.zip",
+          "bytes": 69833,
+          "mtime_ns": 1792138228501450000
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full\\status.json",
+          "bytes": 458,
+          "mtime_ns": 1792138229582971500
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full\\training.jsonl",
+          "bytes": 1342,
+          "mtime_ns": 1792138229349972400
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-full\\validation.jsonl",
+          "bytes": 418,
+          "mtime_ns": 1792138229450975400
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause",
+      "kind": "directory",
+      "bytes": 3956840,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\best.pt",
+          "bytes": 1294286,
+          "mtime_ns": 1792138231049491900
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138231073494000
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\last.pt",
+          "bytes": 1294286,
+          "mtime_ns": 1792138231088490200
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138231110492700
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\previous.pt",
+          "bytes": 1294286,
+          "mtime_ns": 1792138231012491300
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138231032493100
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\recipe.json",
+          "bytes": 1474,
+          "mtime_ns": 1792138230603492400
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\resume-1792138230596491500.json",
+          "bytes": 265,
+          "mtime_ns": 1792138230596491500
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\source.zip",
+          "bytes": 69833,
+          "mtime_ns": 1792138229880971600
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\status.json",
+          "bytes": 458,
+          "mtime_ns": 1792138231180490100
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\training.jsonl",
+          "bytes": 1342,
+          "mtime_ns": 1792138230936490600
+        },
+        {
+          "path": "dump\\token-memory-64-test-49edd652f4a041b7849f06cd778035f8-pause\\validation.jsonl",
+          "bytes": 418,
+          "mtime_ns": 1792138231042492000
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c",
+      "kind": "directory",
+      "bytes": 702467,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792055461314766700
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792055461315767000
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792055461314766700
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792055461330765100
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792055461313766200
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792055461313766200
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792055461312766400
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792055461528290300
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\cache\\completed\\dev.json",
+          "bytes": 759,
+          "mtime_ns": 1792055461537290100
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792055461495290900
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\cache\\completed\\train.json",
+          "bytes": 762,
+          "mtime_ns": 1792055461505289100
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792055461539288400
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792055461550288900
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792055461524289200
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792055461507289200
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792055461519290500
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792055461490288900
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full",
+      "kind": "directory",
+      "bytes": 3930892,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full\\best.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1792055463542318600
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792055463560322200
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full\\last.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1792055463570318700
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792055463589320300
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full\\previous.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1792055463515318500
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792055463534322200
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full\\recipe.json",
+          "bytes": 1183,
+          "mtime_ns": 1792055462813801900
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full\\source.zip",
+          "bytes": 47734,
+          "mtime_ns": 1792055462813801900
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1792055463645323100
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full\\training.jsonl",
+          "bytes": 1341,
+          "mtime_ns": 1792055463437318500
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-full\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792055463538321500
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause",
+      "kind": "directory",
+      "bytes": 3931191,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\best.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1792055464632834900
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792055464651834800
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\last.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1792055464662832500
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792055464680833400
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\previous.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1792055464606832300
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792055464622834200
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\recipe.json",
+          "bytes": 1184,
+          "mtime_ns": 1792055464370324300
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\resume-1792055464366320000.json",
+          "bytes": 265,
+          "mtime_ns": 1792055464366320000
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\source.zip",
+          "bytes": 47734,
+          "mtime_ns": 1792055463891319900
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\status.json",
+          "bytes": 461,
+          "mtime_ns": 1792055464734832400
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\training.jsonl",
+          "bytes": 1341,
+          "mtime_ns": 1792055464543835300
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\training.jsonl.discarded-1792055464358318600",
+          "bytes": 32,
+          "mtime_ns": 1792055464359321100
+        },
+        {
+          "path": "dump\\token-memory-64-test-4db578a770ce480eb47b58e5e1b3464c-pause\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792055464627832800
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa",
+      "kind": "directory",
+      "bytes": 700623,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1791985793463259400
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1791985793463259400
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1791985793462259000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1791985793481258200
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1791985793461259300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1791985793462259000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1791985793461259300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1791985793612258700
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1791985793615256100
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1791985793565259300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\cache\\completed\\train.json",
+          "bytes": 745,
+          "mtime_ns": 1791985793576257400
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1791985793616256200
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1791985793628256200
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\cache\\dev\\identity.json",
+          "bytes": 542,
+          "mtime_ns": 1791985793607260900
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1791985793578258900
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1791985793604257600
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa\\cache\\train\\identity.json",
+          "bytes": 545,
+          "mtime_ns": 1791985793559257000
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full",
+      "kind": "directory",
+      "bytes": 3930254,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full\\best.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985795049287000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985795068288500
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full\\last.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985795078286100
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985795096287300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full\\previous.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985795021286800
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985795040290100
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full\\recipe.json",
+          "bytes": 1183,
+          "mtime_ns": 1791985794424771700
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full\\source.zip",
+          "bytes": 47096,
+          "mtime_ns": 1791985794424771700
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1791985795151288300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full\\training.jsonl",
+          "bytes": 1341,
+          "mtime_ns": 1791985794960771400
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-full\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1791985795044288100
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause",
+      "kind": "directory",
+      "bytes": 3930519,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\best.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985796172798500
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985796191801300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\last.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985796201802300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985796219799000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\previous.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791985796143799900
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791985796162799900
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\recipe.json",
+          "bytes": 1167,
+          "mtime_ns": 1791985795898285800
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\resume-1791985795895288600.json",
+          "bytes": 265,
+          "mtime_ns": 1791985795895288600
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\source.zip",
+          "bytes": 47096,
+          "mtime_ns": 1791985795418286700
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\status.json",
+          "bytes": 444,
+          "mtime_ns": 1791985796275799000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\training.jsonl",
+          "bytes": 1341,
+          "mtime_ns": 1791985796081799300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\training.jsonl.discarded-1791985795893287200",
+          "bytes": 32,
+          "mtime_ns": 1791985795894285500
+        },
+        {
+          "path": "dump\\token-memory-64-test-5a1515d173ed4d498df221c50d7adeaa-pause\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1791985796167802400
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761",
+      "kind": "directory",
+      "bytes": 702433,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792138233116524000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792138233116524000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792138233115525200
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792138233132522300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792138233114525800
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792138233114525800
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792138233113522600
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792138233276522800
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1792138233280530200
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792138233238525000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\cache\\completed\\train.json",
+          "bytes": 745,
+          "mtime_ns": 1792138233249522700
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792138233281530100
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792138233293038400
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792138233271522900
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792138233251524000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792138233265522300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792138233233523500
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full",
+      "kind": "directory",
+      "bytes": 3949199,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full\\best.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792138234097042100
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138234121041400
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full\\last.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792138234138039900
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138234162040000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full\\previous.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792138234058039100
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138234081039000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full\\recipe.json",
+          "bytes": 1537,
+          "mtime_ns": 1792138233457043300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full\\source.zip",
+          "bytes": 51241,
+          "mtime_ns": 1792138233456040600
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1792138234240041000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full\\training.jsonl",
+          "bytes": 1339,
+          "mtime_ns": 1792138233973040900
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-full\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792138234089038600
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause",
+      "kind": "directory",
+      "bytes": 3949690,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\best.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792138235758080900
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138235780081800
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\last.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792138235794082600
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138235816084000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\previous.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792138235720085000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792138235743081600
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\recipe.json",
+          "bytes": 1538,
+          "mtime_ns": 1792138235337087800
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\resume-1792138235334084800.json",
+          "bytes": 265,
+          "mtime_ns": 1792138235335082900
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\source.zip",
+          "bytes": 51241,
+          "mtime_ns": 1792138234597566900
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\status.json",
+          "bytes": 461,
+          "mtime_ns": 1792138235884081000
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\training.jsonl",
+          "bytes": 1339,
+          "mtime_ns": 1792138235642081900
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\training.jsonl.discarded-1792138235324084300",
+          "bytes": 32,
+          "mtime_ns": 1792138235324084300
+        },
+        {
+          "path": "dump\\token-memory-64-test-5b8970bd109a4f94a819029d1c65a761-pause\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792138235751081500
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3",
+      "kind": "directory",
+      "bytes": 702449,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792132300311580800
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792132300311580800
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792132300310575800
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792132300326094800
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792132300309569300
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792132300310575800
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792132300309569300
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792132300465802700
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1792132300469307200
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792132300429233500
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\cache\\completed\\train.json",
+          "bytes": 761,
+          "mtime_ns": 1792132300440262700
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792132300475320000
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792132300485836600
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792132300461802300
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792132300442267900
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792132300456287000
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792132300424231000
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full",
+      "kind": "directory",
+      "bytes": 3948776,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full\\best.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792132302658117100
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132302681663100
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full\\last.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792132302697179200
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132302719711000
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full\\previous.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792132302616562200
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132302641095100
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full\\recipe.json",
+          "bytes": 1536,
+          "mtime_ns": 1792132301724813800
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full\\source.zip",
+          "bytes": 50819,
+          "mtime_ns": 1792132301723814200
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1792132302791832800
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full\\training.jsonl",
+          "bytes": 1339,
+          "mtime_ns": 1792132302537895900
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-full\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792132302650607600
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause",
+      "kind": "directory",
+      "bytes": 3949267,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\best.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792132304347851400
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132304369902200
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\last.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792132304386425700
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132304406456400
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\previous.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792132304309295800
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132304331332500
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\recipe.json",
+          "bytes": 1537,
+          "mtime_ns": 1792132303915564000
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\resume-1792132303912565700.json",
+          "bytes": 265,
+          "mtime_ns": 1792132303913567300
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\source.zip",
+          "bytes": 50819,
+          "mtime_ns": 1792132303089754500
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\status.json",
+          "bytes": 461,
+          "mtime_ns": 1792132304475072900
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\training.jsonl",
+          "bytes": 1339,
+          "mtime_ns": 1792132304232678300
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\training.jsonl.discarded-1792132303910560100",
+          "bytes": 32,
+          "mtime_ns": 1792132303910560100
+        },
+        {
+          "path": "dump\\token-memory-64-test-6719e4789e8f453abf6b5623a2e47ac3-pause\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792132304341850100
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec",
+      "kind": "directory",
+      "bytes": 702433,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792132433510011800
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792132433511016100
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792132433510011800
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792132433524525500
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792132433508002400
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792132433509007900
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792132433508002400
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792132433684768000
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1792132433688276900
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792132433647710300
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\cache\\completed\\train.json",
+          "bytes": 745,
+          "mtime_ns": 1792132433657728700
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792132433690291600
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792132433700802300
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792132433679763600
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792132433659733900
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792132433674251900
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792132433642201700
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full",
+      "kind": "directory",
+      "bytes": 3949199,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full\\best.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792132435686232200
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132435709766000
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full\\last.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792132435725285500
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132435746320900
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full\\previous.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792132435649682400
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132435669704200
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full\\recipe.json",
+          "bytes": 1537,
+          "mtime_ns": 1792132434894975800
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full\\source.zip",
+          "bytes": 51241,
+          "mtime_ns": 1792132434894975800
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1792132435816419500
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full\\training.jsonl",
+          "bytes": 1339,
+          "mtime_ns": 1792132435578063000
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-full\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792132435676709400
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause",
+      "kind": "directory",
+      "bytes": 3949688,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\best.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792132437119787900
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132437143819700
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\last.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792132437160355500
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132437182383600
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\previous.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792132437082742000
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132437105769200
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\recipe.json",
+          "bytes": 1537,
+          "mtime_ns": 1792132436744228900
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\resume-1792132436741230800.json",
+          "bytes": 265,
+          "mtime_ns": 1792132436742229800
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\source.zip",
+          "bytes": 51241,
+          "mtime_ns": 1792132436080782000
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1792132437259005700
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\training.jsonl",
+          "bytes": 1339,
+          "mtime_ns": 1792132437007622900
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\training.jsonl.discarded-1792132436739224300",
+          "bytes": 32,
+          "mtime_ns": 1792132436739224300
+        },
+        {
+          "path": "dump\\token-memory-64-test-74b323daf1d74ebaa81d49d1f3f474ec-pause\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792132437113279100
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111",
+      "kind": "directory",
+      "bytes": 702449,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1791986028762339600
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1791986028763338600
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1791986028761337900
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1791986028783338500
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1791986028760340000
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1791986028761337900
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1791986028760340000
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1791986028919337900
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1791986028922338300
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1791986028874341400
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\cache\\completed\\train.json",
+          "bytes": 761,
+          "mtime_ns": 1791986028885339500
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1791986028924339900
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1791986028941339400
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1791986028915337500
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1791986028887342400
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1791986028909339400
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1791986028870341900
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full",
+      "kind": "directory",
+      "bytes": 3930372,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full\\best.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791986030380375200
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791986030398376400
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full\\last.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791986030409375300
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791986030429378300
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full\\previous.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791986030353380100
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791986030371380000
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full\\recipe.json",
+          "bytes": 1183,
+          "mtime_ns": 1791986029745854900
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full\\source.zip",
+          "bytes": 47214,
+          "mtime_ns": 1791986029744853000
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1791986030486375400
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full\\training.jsonl",
+          "bytes": 1341,
+          "mtime_ns": 1791986030295374600
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-full\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1791986030376374500
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause",
+      "kind": "directory",
+      "bytes": 3930671,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\best.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791986031452887700
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791986031471890200
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\last.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791986031481887500
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791986031500891000
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\previous.pt",
+          "bytes": 1293198,
+          "mtime_ns": 1791986031420887600
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1791986031439888000
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\recipe.json",
+          "bytes": 1184,
+          "mtime_ns": 1791986031189889500
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\resume-1791986031186888800.json",
+          "bytes": 265,
+          "mtime_ns": 1791986031187889900
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\source.zip",
+          "bytes": 47214,
+          "mtime_ns": 1791986030725378800
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\status.json",
+          "bytes": 461,
+          "mtime_ns": 1791986031554887800
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\training.jsonl",
+          "bytes": 1341,
+          "mtime_ns": 1791986031361887500
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\training.jsonl.discarded-1791986031185888200",
+          "bytes": 32,
+          "mtime_ns": 1791986031185888200
+        },
+        {
+          "path": "dump\\token-memory-64-test-9d55c5913a204c4a9b4ef30b4061a111-pause\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1791986031444887600
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707",
+      "kind": "directory",
+      "bytes": 702450,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792131982252725000
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792131982253731900
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792131982252725000
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792131982266248700
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792131982251218400
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792131982251218400
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792131982250218700
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792131982423478800
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1792131982426489300
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792131982385433000
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\cache\\completed\\train.json",
+          "bytes": 762,
+          "mtime_ns": 1792131982397946200
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792131982428489900
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792131982439004500
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792131982418974600
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792131982399948300
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792131982412964100
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792131982379917700
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full",
+      "kind": "directory",
+      "bytes": 3948776,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full\\best.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792131984648138000
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792131984668170400
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full\\last.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792131984682693900
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792131984706733700
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full\\previous.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792131984607086400
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792131984629114100
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full\\recipe.json",
+          "bytes": 1536,
+          "mtime_ns": 1792131983720599500
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full\\source.zip",
+          "bytes": 50819,
+          "mtime_ns": 1792131983719598300
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1792131984776826900
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full\\training.jsonl",
+          "bytes": 1339,
+          "mtime_ns": 1792131984528965500
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-full\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792131984638626800
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause",
+      "kind": "directory",
+      "bytes": 3949265,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\best.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792131986163572900
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792131986186112400
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\last.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792131986201624200
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792131986234675900
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\previous.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792131986125515400
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792131986146553000
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\recipe.json",
+          "bytes": 1536,
+          "mtime_ns": 1792131985756957400
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\resume-1792131985752946500.json",
+          "bytes": 265,
+          "mtime_ns": 1792131985753953000
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\source.zip",
+          "bytes": 50819,
+          "mtime_ns": 1792131985066760200
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1792131986307784000
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\training.jsonl",
+          "bytes": 1339,
+          "mtime_ns": 1792131986054934500
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\training.jsonl.discarded-1792131985745442000",
+          "bytes": 32,
+          "mtime_ns": 1792131985746441800
+        },
+        {
+          "path": "dump\\token-memory-64-test-c3fdcbbbeb704240b4187a5b3279a707-pause\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792131986154059200
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-cc346094262740228ced587a877f701c",
+      "kind": "directory",
+      "bytes": 702450,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792122863784892400
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792122863784892400
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792122863783888800
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792122863806921600
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792122863782883300
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792122863783888800
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792122863781378600
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792122863885033100
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1792122863889032600
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792122863830950700
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\cache\\completed\\train.json",
+          "bytes": 762,
+          "mtime_ns": 1792122863855488400
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792122863891033800
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792122863899546200
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792122863880518200
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792122863857489300
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792122863872000200
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792122863824948700
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full",
+      "kind": "directory",
+      "bytes": 3094181,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full\\best.pt",
+          "bytes": 439012,
+          "mtime_ns": 1792122864135199300
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122864150712200
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full\\last.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122866680880800
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122866705957400
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full\\previous.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122866537171300
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122866560199800
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full\\recipe.json",
+          "bytes": 1532,
+          "mtime_ns": 1792122864007014400
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full\\source.zip",
+          "bytes": 61958,
+          "mtime_ns": 1792122864006015100
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full\\status.json",
+          "bytes": 515,
+          "mtime_ns": 1792122866770059600
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full\\training.jsonl",
+          "bytes": 459,
+          "mtime_ns": 1792122866456523200
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-full\\validation.jsonl",
+          "bytes": 411,
+          "mtime_ns": 1792122866667364900
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause",
+      "kind": "directory",
+      "bytes": 3094425,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\best.pt",
+          "bytes": 439012,
+          "mtime_ns": 1792122866999431900
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122867015464100
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\last.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122869563950800
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122869584983100
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\previous.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122869424246100
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122869447285500
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\recipe.json",
+          "bytes": 1518,
+          "mtime_ns": 1792122867536354500
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\resume-1792122867531830400.json",
+          "bytes": 274,
+          "mtime_ns": 1792122867532832900
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\source.zip",
+          "bytes": 61958,
+          "mtime_ns": 1792122866857208300
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\status.json",
+          "bytes": 499,
+          "mtime_ns": 1792122869648567300
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\training.jsonl",
+          "bytes": 459,
+          "mtime_ns": 1792122869403711000
+        },
+        {
+          "path": "dump\\token-memory-64-test-cc346094262740228ced587a877f701c-unpacked-pause\\validation.jsonl",
+          "bytes": 411,
+          "mtime_ns": 1792122869539414200
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db",
+      "kind": "directory",
+      "bytes": 702449,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792122937100503500
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792122937102010500
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792122937100503500
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792122937124050900
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792122937099502300
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792122937100503500
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792122937098506000
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792122937204679800
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1792122937207681600
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792122937142069000
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\cache\\completed\\train.json",
+          "bytes": 761,
+          "mtime_ns": 1792122937173616400
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792122937209680200
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792122937220197400
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792122937200159300
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792122937176622100
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792122937192642200
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792122937136565500
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full",
+      "kind": "directory",
+      "bytes": 3094181,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full\\best.pt",
+          "bytes": 439012,
+          "mtime_ns": 1792122937413020200
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122937428535200
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full\\last.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122940058892800
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122940082424500
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full\\previous.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122939918690800
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122939940718500
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full\\recipe.json",
+          "bytes": 1532,
+          "mtime_ns": 1792122937311848500
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full\\source.zip",
+          "bytes": 61958,
+          "mtime_ns": 1792122937310344500
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full\\status.json",
+          "bytes": 515,
+          "mtime_ns": 1792122940202620000
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full\\training.jsonl",
+          "bytes": 459,
+          "mtime_ns": 1792122939845082900
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-full\\validation.jsonl",
+          "bytes": 411,
+          "mtime_ns": 1792122940044376900
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause",
+      "kind": "directory",
+      "bytes": 3094459,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\best.pt",
+          "bytes": 439012,
+          "mtime_ns": 1792122940425499400
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122940442525700
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\last.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122943065381800
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122943084413000
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\previous.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122942936156400
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122942957189000
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\recipe.json",
+          "bytes": 1535,
+          "mtime_ns": 1792122940976354700
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\resume-1792122940973346800.json",
+          "bytes": 274,
+          "mtime_ns": 1792122940973346800
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\source.zip",
+          "bytes": 61958,
+          "mtime_ns": 1792122940288753200
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\status.json",
+          "bytes": 516,
+          "mtime_ns": 1792122943136506800
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\training.jsonl",
+          "bytes": 459,
+          "mtime_ns": 1792122942923634800
+        },
+        {
+          "path": "dump\\token-memory-64-test-d5cf81f5e7bb41318f6e2866d843a1db-unpacked-pause\\validation.jsonl",
+          "bytes": 411,
+          "mtime_ns": 1792122943039826900
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611",
+      "kind": "directory",
+      "bytes": 702450,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792122777360602800
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792122777361601700
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792122777360602800
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792122777391140900
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792122777359605100
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792122777359605100
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792122777358602100
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792122777515841000
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1792122777529354300
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792122777434710600
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\cache\\completed\\train.json",
+          "bytes": 762,
+          "mtime_ns": 1792122777459746000
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792122777536867900
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792122777551380900
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792122777499802500
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792122777465255800
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792122777484277400
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792122777406175400
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full",
+      "kind": "directory",
+      "bytes": 3094187,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full\\best.pt",
+          "bytes": 439012,
+          "mtime_ns": 1792122777832792400
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122777862337500
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full\\last.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122780339949600
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122780361979700
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full\\previous.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122780189179800
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122780209724800
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full\\recipe.json",
+          "bytes": 1409,
+          "mtime_ns": 1792122777692083800
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full\\source.zip",
+          "bytes": 62124,
+          "mtime_ns": 1792122777683571000
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full\\status.json",
+          "bytes": 478,
+          "mtime_ns": 1792122780419572700
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full\\training.jsonl",
+          "bytes": 459,
+          "mtime_ns": 1792122780114057400
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-full\\validation.jsonl",
+          "bytes": 411,
+          "mtime_ns": 1792122780325426800
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause",
+      "kind": "directory",
+      "bytes": 3094465,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\best.pt",
+          "bytes": 439012,
+          "mtime_ns": 1792122780632393900
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122780648423800
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\last.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122783076082400
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122783098112400
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\previous.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792122782937883500
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792122782960914600
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\recipe.json",
+          "bytes": 1412,
+          "mtime_ns": 1792122781134718200
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\resume-1792122781131208500.json",
+          "bytes": 274,
+          "mtime_ns": 1792122781132208300
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\source.zip",
+          "bytes": 62124,
+          "mtime_ns": 1792122780508713300
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\status.json",
+          "bytes": 479,
+          "mtime_ns": 1792122783162200000
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\training.jsonl",
+          "bytes": 459,
+          "mtime_ns": 1792122782916855100
+        },
+        {
+          "path": "dump\\token-memory-64-test-e2a1fbe5f9b349988dcc019839dc3611-unpacked-pause\\validation.jsonl",
+          "bytes": 411,
+          "mtime_ns": 1792122783050538000
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74",
+      "kind": "directory",
+      "bytes": 702433,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792132582605034100
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792132582605034100
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792132582604034600
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792132582620059000
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792132582603034500
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792132582604034600
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792132582603034500
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792132582756752400
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1792132582759763200
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792132582720703500
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\cache\\completed\\train.json",
+          "bytes": 745,
+          "mtime_ns": 1792132582730217300
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792132582761763000
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792132582770879700
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792132582752248500
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792132582732218600
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792132582747244200
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792132582715190700
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full",
+      "kind": "directory",
+      "bytes": 3949199,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full\\best.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792132584941046900
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132584959077100
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full\\last.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792132584976098400
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132585001649500
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full\\previous.pt",
+          "bytes": 1298014,
+          "mtime_ns": 1792132584904980200
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132584926013500
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full\\recipe.json",
+          "bytes": 1537,
+          "mtime_ns": 1792132584036768100
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full\\source.zip",
+          "bytes": 51241,
+          "mtime_ns": 1792132584036264200
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1792132585072775300
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full\\training.jsonl",
+          "bytes": 1339,
+          "mtime_ns": 1792132584833871500
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-full\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792132584932532700
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause",
+      "kind": "directory",
+      "bytes": 3949688,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\best.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792132586375012100
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132586400569200
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\last.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792132586416088600
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132586439644500
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\previous.pt",
+          "bytes": 1298078,
+          "mtime_ns": 1792132586337943300
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792132586357977300
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\recipe.json",
+          "bytes": 1537,
+          "mtime_ns": 1792132585995331500
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\resume-1792132585992330600.json",
+          "bytes": 265,
+          "mtime_ns": 1792132585993332000
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\source.zip",
+          "bytes": 51241,
+          "mtime_ns": 1792132585356266900
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\status.json",
+          "bytes": 460,
+          "mtime_ns": 1792132586507765600
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\training.jsonl",
+          "bytes": 1339,
+          "mtime_ns": 1792132586257288200
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\training.jsonl.discarded-1792132585990330400",
+          "bytes": 32,
+          "mtime_ns": 1792132585991330500
+        },
+        {
+          "path": "dump\\token-memory-64-test-ef77484d13ca413994780937f1c34b74-pause\\validation.jsonl",
+          "bytes": 388,
+          "mtime_ns": 1792132586366490800
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6",
+      "kind": "directory",
+      "bytes": 702449,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\data\\dev.loss.bin",
+          "bytes": 131,
+          "mtime_ns": 1792123618252377200
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\data\\dev.segments.jsonl",
+          "bytes": 88,
+          "mtime_ns": 1792123618253377100
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\data\\dev.tokens.bin",
+          "bytes": 262,
+          "mtime_ns": 1792123618251377900
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\data\\manifest.json",
+          "bytes": 740,
+          "mtime_ns": 1792123618274405200
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\data\\tokenizer.json",
+          "bytes": 107248,
+          "mtime_ns": 1791542943637280000
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\data\\train.loss.bin",
+          "bytes": 727,
+          "mtime_ns": 1792123618250379100
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\data\\train.segments.jsonl",
+          "bytes": 446,
+          "mtime_ns": 1792123618251377900
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\data\\train.tokens.bin",
+          "bytes": 1454,
+          "mtime_ns": 1792123618250379100
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\cache\\completed\\dev.f32",
+          "bytes": 2048,
+          "mtime_ns": 1792123618350031000
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\cache\\completed\\dev.json",
+          "bytes": 742,
+          "mtime_ns": 1792123618353031400
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\cache\\completed\\train.f32",
+          "bytes": 11264,
+          "mtime_ns": 1792123618296950600
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\cache\\completed\\train.json",
+          "bytes": 761,
+          "mtime_ns": 1792123618318976200
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\cache\\dev\\000000000.f32",
+          "bytes": 87040,
+          "mtime_ns": 1792123618355540900
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\cache\\dev\\000000000.json",
+          "bytes": 100,
+          "mtime_ns": 1792123618365049800
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\cache\\dev\\identity.json",
+          "bytes": 1447,
+          "mtime_ns": 1792123618346026700
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\cache\\train\\000000000.f32",
+          "bytes": 486400,
+          "mtime_ns": 1792123618320975000
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\cache\\train\\000000000.json",
+          "bytes": 101,
+          "mtime_ns": 1792123618337516900
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6\\cache\\train\\identity.json",
+          "bytes": 1450,
+          "mtime_ns": 1792123618291434200
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full",
+      "kind": "directory",
+      "bytes": 3094507,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full\\best.pt",
+          "bytes": 439012,
+          "mtime_ns": 1792123618580387300
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123618595410500
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full\\last.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792123620514608500
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123620536141600
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full\\previous.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792123620411457500
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123620433484100
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full\\recipe.json",
+          "bytes": 1532,
+          "mtime_ns": 1792123618467226500
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full\\source.zip",
+          "bytes": 62282,
+          "mtime_ns": 1792123618466221300
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full\\status.json",
+          "bytes": 515,
+          "mtime_ns": 1792123620598228100
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full\\training.jsonl",
+          "bytes": 459,
+          "mtime_ns": 1792123620336844100
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-full\\validation.jsonl",
+          "bytes": 413,
+          "mtime_ns": 1792123620502092000
+        }
+      ]
+    },
+    {
+      "path": "D:\\Git\\complex_fnn\\dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause",
+      "kind": "directory",
+      "bytes": 3094751,
+      "files": [
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\best.pt",
+          "bytes": 439012,
+          "mtime_ns": 1792123620792046900
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\best.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123620807077200
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\last.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792123622806044600
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\last.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123622827074200
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\previous.pt",
+          "bytes": 1295051,
+          "mtime_ns": 1792123622684369000
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\previous.sha256",
+          "bytes": 64,
+          "mtime_ns": 1792123622702896300
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\recipe.json",
+          "bytes": 1518,
+          "mtime_ns": 1792123621285437100
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\resume-1792123621281923000.json",
+          "bytes": 274,
+          "mtime_ns": 1792123621282926500
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\source.zip",
+          "bytes": 62282,
+          "mtime_ns": 1792123620687408100
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\status.json",
+          "bytes": 499,
+          "mtime_ns": 1792123622888669000
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\training.jsonl",
+          "bytes": 459,
+          "mtime_ns": 1792123622667350800
+        },
+        {
+          "path": "dump\\token-memory-64-test-feb857ff95454c24b06e6a686e588bc6-unpacked-pause\\validation.jsonl",
+          "bytes": 413,
+          "mtime_ns": 1792123622783509800
+        }
+      ]
+    }
+  ],
+  "total_bytes": 128888986,
+  "reason": "Synthetic growing/unpacking fixtures used the plain64 test directory prefix; identified by their archived model source paths."
+}

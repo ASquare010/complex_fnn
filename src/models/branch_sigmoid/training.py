@@ -1,5 +1,13 @@
 """Equal-parameter, equal-depth FFN screen on current language datasets."""
 
+if __name__ == '__main__':
+    import sys
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+    from models.training_cli import main as training_main
+    training_main(model='branch')
+    raise SystemExit(0)
+
 import argparse
 import hashlib
 import json
@@ -223,3 +231,8 @@ def run(recipe, kind, resume=False, stop_after=None):
     write_json(Path("records") / f"{recipe['name']}-{kind}.json", record)
     print("FULL VALIDATION", kind, json.dumps(evaluation), flush=True)
     return output / "last.pt"
+
+
+if __name__ == '__main__':
+    from models.training_cli import main
+    main(model='branch')

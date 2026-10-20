@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="2" tests="25" time="11.867" timestamp="2026-10-16T14:15:00.720973+05:00" hostname="ROG"><testcase classname="tests.test_token_memory_64" name="test_full_parameter_and_initial_weight_identity" time="1.066" /><testcase classname="tests.test_token_memory_64" name="test_packed_logits_all_gradients_and_future_isolation" time="1.772" /><testcase classname="tests.test_token_memory_64" name="test_targets_cached_codes_and_shift_preserve_original_segments" time="0.072" /><testcase classname="tests.test_token_memory_64" name="test_persistent_cache_reuse_and_corruption_guard" time="0.062" /><testcase classname="tests.test_token_memory_64" name="test_generation_empties_raw_at_64_and_encodes_actual_committed_tokens" time="0.008" /><testcase classname="tests.test_token_memory_64" name="test_actual_training_pause_resume_and_exact_two_epoch_coverage" time="3.341" /><testcase classname="tests.test_token_memory_64" name="test_resume_recipe_guards_and_same_baseline_schedule" time="0.005" /><testcase classname="tests.test_token_memory_64_crossattn" name="test_full_budget_fresh_core_identity_and_zero_gate_initialization" time="1.183" /><testcase classname="tests.test_token_memory_64_crossattn" name="test_full_size_packed_reference_zero_update" time="0.714" /><testcase classname="tests.test_token_memory_64_crossattn" name="test_packed_reference_all_parameter_and_input_gradients" time="0.110" /><testcase classname="tests.test_token_memory_64_crossattn" name="test_no_future_other_window_or_padding_leakage_and_empty_memory" time="0.060" /><testcase classname="tests.test_token_memory_64_crossattn" name="test_zero_gate_blocks_memory_then_adam_opens_reader" time="0.057" /><testcase classname="tests.test_token_memory_64_crossattn" name="test_cached_append_and_live_generation_match_public_forward" time="0.424" /><testcase classname="tests.test_token_memory_64_crossattn" name="test_tiny_two_epoch_training_serialized_resume_and_format_guards" time="2.420" /><testcase classname="tests.test_token_memory.MemoryTests" name="test_boundary_targets_and_no_future_encoder_input" time="0.003" /><testcase classname="tests.test_token_memory.MemoryTests" name="test_causal_and_padding_invariance" time="0.020" /><testcase classname="tests.test_token_memory.MemoryTests" name="test_conversion_reuses_ids_without_tokenizing" time="0.071" /><testcase classname="tests.test_token_memory.MemoryTests" name="test_generation_rollover_including_partial_prompts" time="0.005" /><testcase classname="tests.test_token_memory.MemoryTests" name="test_gradients_and_checkpoint" time="0.034" /><testcase classname="tests.test_token_memory.MemoryTests" name="test_memmap_segments_cover_every_target_once" time="0.020" /><testcase classname="tests.test_branch_compressor.BranchCompressorTests" name="test_codec_roundtrip_and_legacy_rejection" time="0.003"><failure message="PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ROG\\AppData\\Local\\Temp\\tmp3koam4qy'">self = &lt;test_branch_compressor.BranchCompressorTests testMethod=test_codec_roundtrip_and_legacy_rejection&gt;
+
+    def test_codec_roundtrip_and_legacy_rejection(self):
+        original = Path.cwd()
+        with tempfile.TemporaryDirectory() as folder:
+            try:
+&gt;               os.chdir(folder)
+E               PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ROG\\AppData\\Local\\Temp\\tmp3koam4qy'
+
+tests\test_branch_compressor.py:56: PermissionError
+
+During handling of the above exception, another exception occurred:
+
+top = 'C:\\Users\\ROG\\AppData\\Local\\Temp\\tmp3koam4qy', topdown = False
+onerror = &lt;function _rmtree_unsafe.&lt;locals&gt;.onerror at 0x0000018883FA87C0&gt;
+followlinks = &lt;object object at 0x000001889F798220&gt;
+
+&gt;   ???
+E   PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ROG\\AppData\\Local\\Temp\\tmp3koam4qy'
+
+&lt;frozen os&gt;:366: PermissionError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;test_branch_compressor.BranchCompressorTests testMethod=test_codec_roundtrip_and_legacy_rejection&gt;
+
+    def test_codec_roundtrip_and_legacy_rejection(self):
+        original = Path.cwd()
+&gt;       with tempfile.TemporaryDirectory() as folder:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_branch_compressor.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\ROG\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\tempfile.py:950: in __exit__
+    self.cleanup()
+C:\Users\ROG\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\tempfile.py:954: in cleanup
+    self._rmtree(self.name, ignore_errors=self._ignore_cleanup_errors)
+C:\Users\ROG\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\tempfile.py:934: in _rmtree
+    _shutil.rmtree(name, onexc=onexc)
+C:\Users\ROG\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\shutil.py:781: in rmtree
+    return _rmtree_unsafe(path, onexc)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\ROG\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\shutil.py:623: in _rmtree_unsafe
+    for dirpath, dirnames, filenames in results:
+                                        ^^^^^^^
+&lt;frozen os&gt;:369: in walk
+    ???
+C:\Users\ROG\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\shutil.py:621: in onerror
+    onexc(os.scandir, err.filename, err)
+C:\Users\ROG\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\tempfile.py:906: in onexc
+    _resetperms(path)
+C:\Users\ROG\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\tempfile.py:286: in _resetperms
+    _dont_follow_symlinks(_os.chmod, path, 0o700)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+func = &lt;built-in function chmod&gt;
+path = 'C:\\Users\\ROG\\AppData\\Local\\Temp\\tmp3koam4qy', args = (448,)
+
+    def _dont_follow_symlinks(func, path, *args):
+        # Pass follow_symlinks=False, unless not supported on this platform.
+        if func in _os.supports_follow_symlinks:
+            func(path, *args, follow_symlinks=False)
+        elif _os.name == 'nt' or not _os.path.islink(path):
+&gt;           func(path, *args)
+E           PermissionError: [WinError 5] Access is denied: 'C:\\Users\\ROG\\AppData\\Local\\Temp\\tmp3koam4qy'
+
+C:\Users\ROG\AppData\Roaming\uv\python\cpython-3.12-windows-x86_64-none\Lib\tempfile.py:277: PermissionError</failure></testcase><testcase classname="tests.test_branch_compressor.BranchCompressorTests" name="test_padding_gradients_and_saved_calibration" time="0.095" /><testcase classname="tests.test_selected_models.SelectedModelsTests" name="test_original_checkpoint_outputs_and_counts" time="0.001"><skipped type="pytest.skip" message="Local historical weights and parity receipt required">D:\Git\complex_fnn\tests\test_selected_models.py:11: Local historical weights and parity receipt required</skipped></testcase><testcase classname="tests.test_selected_models.SelectedModelsTests" name="test_selected_trainer_imports" time="0.023" /><testcase classname="tests.test_selected_models.SelectedModelsTests" name="test_token_batches_preserve_targets_without_memory_input" time="0.001"><skipped type="pytest.skip" message="Local historical source archive required">D:\Git\complex_fnn\tests\test_selected_models.py:26: Local historical source archive required</skipped></testcase></testsuite></testsuites>

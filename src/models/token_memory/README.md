@@ -34,10 +34,14 @@ unproven. No inference vocabulary-table cache is added in this change.
 Set-Location D:\Git\complex_fnn
 & .\.venv-cuda64\Scripts\python.exe .\src\models\token_memory\training.py `
   --name token-memory-native256-v1 `
-  --data .\dump\data\unified-chat-v4 `
-  --cache-dir .\dump\token-memory-64-cache-v4 `
-  --epochs 2 --batch-size 32 --microbatch 4 --eval-every 1000
+  --epochs 2 --batch-size 32 --microbatch 4
 ```
+
+The data defaults to `dump/data/unified-chat-v4`, the cache to
+`dump/token-memory-64-cache-v4`, and evaluation to every1,000 updates.
+Paths resolve from the repository root. These flags may be omitted; explicit
+`--data`, `--cache-dir` and `--eval-every` values still override the defaults.
+On resume, omitted data/cache options retain the saved run's paths.
 
 Fresh seed47; exactly48,762 original updates /361,357,104 assistant-label exposures.
 The original effective32 sample orders and assistant targets are retained.
@@ -54,7 +58,7 @@ the current update and checkpoints. Resume without resetting optimizer/schedule:
 
 ```powershell
 & .\.venv-cuda64\Scripts\python.exe .\src\models\token_memory\training.py `
-  --resume .\dump\token-memory-native256-v1 --microbatch 4 --eval-every 1000
+  --resume .\dump\token-memory-native256-v1 --microbatch 4
 ```
 
 Resume verifies format, recipe, source hashes, input hashes, sampler-file hash and

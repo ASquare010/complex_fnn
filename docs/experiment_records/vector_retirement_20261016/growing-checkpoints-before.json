@@ -1,0 +1,20 @@
+[
+  {
+    "run": "growing-token-unified-v4",
+    "checkpoint_step": 35472,
+    "sha256": "258608da21116a436bdac8939f52a786a1bf3332811fffac431c7945bf936dda",
+    "format": "growing-token-memory-full-v1"
+  },
+  {
+    "run": "growing-token-query-reader-v1",
+    "checkpoint_step": 6834,
+    "sha256": "c4f0eca9f23f5103e7da8b95483a69105b8c73c77a27ced19b1daed343cb4192",
+    "format": "growing-token-memory-query-reader-v1"
+  },
+  {
+    "run": "growing-token-readout4-v1",
+    "checkpoint_step": 2000,
+    "sha256": "de61f8d5d869ace716ef83c0722f9b05563256b804d4626309ca382dc9fbc135",
+    "format": "growing-token-memory-readout4-v1"
+  }
+]
