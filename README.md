@@ -1,4 +1,4 @@
-# Atlas: native256 token memory
+# Atlas: native 256 token memory
 
 The single active compressed-memory model is
 [token_memory](src/models/token_memory/README.md): native256 tokens and memory,
