@@ -1,31 +1,26 @@
-# Fresh11.02M replacement in preparation
+# Atlas: native256 token memory
 
-The user requested fresh training and deletion of old compressor weights. The
-previous64:1/999-of1000 checkpoint is deleted;historical scores below describe
-retired models,not the new model. The new run is10000 fresh updates at64:1/context512.
-See docs/residual64_fresh11m.md. Step1 remains intact.
-# Selected models — Steps1 and2 complete
+The single active compressed-memory model is
+[token_memory](src/models/token_memory/README.md): native256 tokens and memory,
+23,209,216 trainable reader parameters, raw64 rollover, and one global position
+per64 old tokens. It keeps the FP32 low-bit payload and query-conditioned local
+reader. No256-to512 memory projection is present.
 
-Step1: **Branch Sigmoid**,8.65M parameters,webNLL3.820069/chat2.411506.
-Step2: **plain residual attention + Branch Sigmoid + RoPE**,64tokens/vector,
-context512,7.33M encoder/10.46M total parameters. Saved final model achieves
-999/1000 short and202/206 packed exact reconstruction on reused validation.
-This closes the selected-model handoff,not the original ambitious research targets.
+Use the [PowerShell training command](src/models/token_memory/README.md#train-in-powershell)
+for fresh seed47 training on two original unified-v4 epochs. Progress and periodic
+full-development evaluation print readable summaries. Training has not been
+started by the cleanup.
 
-- [Handoff and limitations](docs/selected_handoff.md)
-- [Latest compressor results](docs/residual64_long.md)
-- `notebooks/branch_sigmoid_inference.ipynb`:saved Step1 inference.
-- `notebooks/context_encoder_inference.ipynb`:saved Step2 inference.
-- `notebooks/residual64_training.ipynb`:optional15000-update continuation in
-  D:/Git/latent-text-compressor,configured but not launched.
+The frozen [position codec](src/models/position_compressor/README.md), its
+branch-sigmoid dependency, original datasets/cache, completed checkpoints and
+[raw baseline](src/models/raw_transformer/README.md) are retained. Old compressed
+model variants and their dedicated experiment helpers were archived and removed.
+[Cleanup record](docs/token_memory_native256_cleanup_20261020.md).
 
-```powershell
-uv run --no-sync python -m main inspect
-uv run --no-sync python -m main reconstruct "Text to remember"
-uv run --no-sync python -m main encode "Text to remember" --output dump/memory.pt
-```
-
-Defaults live insrc/config. Weights/data/records stay local and ignored;fresh clones
-do not include trained weights. Historical source snapshots and negative results
-are retained. No CurveFFN/custom-kernel/Step3 integration is active. Base transformer
-modules remain because the selected model uses them. No automatic model training.
+The [completed matched wide512 comparison](docs/wide512_completed_comparison_20261020.md)
+used23M readers and two original epochs. Compressed64 had67/285 familiar exact
+fact answers versus27/285 for its raw1 control, and23.27x smaller total KV at2,048
+old tokens. Language accuracy was62.323% versus63.710%, transfer was weak, and
+requests were0.10–3.68% slower. This establishes useful compact storage and some
+reading, not perfect recovery or a universal quality/speed win. The new native256
+model still needs its own training and evaluation.

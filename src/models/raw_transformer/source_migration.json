@@ -1,0 +1,24 @@
+{
+  "before": {
+    "src/models/comparison/compare.py": "fe52bc54fae78a8979248bc2026c441447bb7eef1aa3d6ab61ffc2dd2ba424b9",
+    "src/models/comparison/layers.py": "9514b84c9927df04c6b8be669659e7f970c24d46774f9bbc3623393db4d11bff",
+    "src/models/comparison/runtime.py": "36a8960c053702b361380f606e4bc31908a1fe3c43a392560c10e9198c6cfe22",
+    "src/models/comparison/training.py": "c0e46c0e8d8bd078b420ae56671c8003b895384e140db4329374a1b5274e3582",
+    "src/models/comparison/__init__.py": "726cefba1c80022cf87a0cd0c904ca5e8cd943a34ad153613521e277267ca7b4",
+    "src/models/raw_transformer/data.py": "f74f11e9bf8c1bf0f58cd3f44227f6f2ccd2ae4d9b142164f7fe2153b0b053d0",
+    "src/models/raw_transformer/generation.py": "e11773b844ea6a38c9bca8b193a8923478ad9ac34e39df2c7f5b89e832554b3e",
+    "src/models/raw_transformer/training.py": "124f66fd46c10795d0d05f7398620c0b9b579e955acc3c4911745fcbeb339cf3",
+    "src/models/raw_transformer/transformer.py": "e4545da03b7e56e1ab2ef2ec8b71f3e3182555956cbbdf1d815ccd267d8c3c5b",
+    "src/models/raw_transformer/__init__.py": "731745b4c081ef9feec8fa3c6f5cc62013fde047fe9ca2a149a941cbe0b23098"
+  },
+  "after": {
+    "src/models/raw_transformer/data.py": "f74f11e9bf8c1bf0f58cd3f44227f6f2ccd2ae4d9b142164f7fe2153b0b053d0",
+    "src/models/raw_transformer/generation.py": "e11773b844ea6a38c9bca8b193a8923478ad9ac34e39df2c7f5b89e832554b3e",
+    "src/models/raw_transformer/layers.py": "9514b84c9927df04c6b8be669659e7f970c24d46774f9bbc3623393db4d11bff",
+    "src/models/raw_transformer/runtime.py": "36a8960c053702b361380f606e4bc31908a1fe3c43a392560c10e9198c6cfe22",
+    "src/models/raw_transformer/trainer.py": "d5c532c4a14c8420d530621fdb8a44be0a1b357cb856a402cdf217712450917c",
+    "src/models/raw_transformer/training.py": "108b68e907169928e6b6e3a9d3c9d3d0d31ec298c178bfd92f9d9e8484579e0f",
+    "src/models/raw_transformer/transformer.py": "1419c20ecce50b193d28c25754b380dca66ca87dac0316dace62fe8af94e9a7b",
+    "src/models/raw_transformer/__init__.py": "731745b4c081ef9feec8fa3c6f5cc62013fde047fe9ca2a149a941cbe0b23098"
+  }
+}

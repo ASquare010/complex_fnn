@@ -1,3 +1,34 @@
+# Latest: canonical native256 low-bit memory cleanup (2026-10-20)
+
+User explicitly requested removal of memory variants, native256 without256-to512
+projection, exact23,209,216 reader budget, fresh47/twooriginalepochs and commit.
+Active model src/models/token_memory:256-wide/8blocks/4heads/FFNtotal38062,
+readlayers2/5/raw64/1globalposper64. Low-bit payload retained. FrozenE separate.
+No production training started. Full command in src/models/token_memory/README.md.
+Trainer readable logs/fullDEV every1000/save250; strict resume format/source/input/
+recipe/sampler/cursor checks. New run name token-memory-native256-v1 (not created).
+Old512 weights cannot be resumed into new256 architecture. No perfect recovery
+or retained-quality/speed claim. Earlier freeze directives are superseded ONLY
+for this user-requested canonical source migration; original data/E/cache/weights
+remain untouched. Native2568750 and wide512 checkpoints preserved, never resumed.
+
+Verified576-file local source archive +SHA manifest BEFORE cleanup under
+ dump/token-memory-cleanup-20261020. Removed16 memory variant directories and278
+associated obsolete helpers/tests, preserving experiment .md and completed run
+sources.zip/receipts/checkpoints. Old chat CLI redirects to canonical trainer;
+raw baseline/codec/corpus utilities retained. Broader cleanup rejected by automatic
+review, narrowed to verified memory-specific targets and completed safely.
+CPU model/objective and real tiny-CLI resume checks PASS; max-shape GPU micro4
+zero-update capacity PASS, peak2.684GiB/cold1.858s; original corpus/cache/label
+hash verification PASS. Final results doc records exact validation. No agents.
+
+Step3A: compact storage and some reading established, perfect factual recovery
+UNMET. Completed wide512: comp67/285 vsraw27/285 familiar exact facts, language
+62.322818vs63.709511%, totalKV23.27xsmaller at2k, requests0.10–3.68%slower, transfer
+weak/reserved0 includingknown. Its old results do not describe newnative256.
+
+# Earlier completed study (historical source paths now archived)
+
 # Fresh60k second PC-crash recovery TRAINING (2026-10-08)
 
 User again reported PC crash and explicitly requested continuing. No prior workers
